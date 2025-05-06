@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="SikuliLibrary" type="LIBRARY" format="ROBOT" scope="GLOBAL" generated="2025-04-11T12:11:00+00:00" specversion="6" source="c:\ProgramData\Jenkins\.jenkins\workspace\Robot\RobotFramework\.venv\lib\site-packages\SikuliLibrary\sikuli.py" lineno="34">
+<version>2.0.3</version>
+<doc>Documentation for library ``SikuliLibrary``.</doc>
+<tags>
+</tags>
+<inits>
+<init name="__init__" lineno="38">
+<arguments repr="port=0, timeout=3.0, mode=OLD">
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="port=0">
+<name>port</name>
+<default>0</default>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="timeout=3.0">
+<name>timeout</name>
+<default>3.0</default>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="mode=OLD">
+<name>mode</name>
+<default>OLD</default>
+</arg>
+</arguments>
+<doc>
+        @port: sikuli java process socket port
+        @timeout: Timeout of waiting java process started
+        @mode: if set as 'DOC',  will stop java process automatically, 
+               if set as 'PYTHON', means library is running out of robot environment
+               if set as 'CREATE', it is only for mvn package usage, will create keywords.py file
+               if set as 'OLD'(default), sikuli java process will be started when library is inited
+               if set as 'NEW', user should use 'start_sikuli_process' to start java process</doc>
+<shortdoc/>
+</init>
+</inits>
+<keywords>
+<kw name="Add Image Path">
+<arguments repr="path">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="path">
+<name>path</name>
+</arg>
+</arguments>
+<doc>Add image path</doc>
+<shortdoc>Add image path</shortdoc>
+</kw>
+<kw name="Capture Region">
+<arguments repr="coordinates">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="coordinates">
+<name>coordinates</name>
+</arg>
+</arguments>
+<doc>Capture region
+
+
+Capture region passed
+Examples:
+| ${coor} | Create List | x | y | w | h |
+| ${screenshotname}= | Capture region | ${coor} |</doc>
+<shortdoc>Capture region</shortdoc>
+</kw>
+<kw name="Capture Roi">
+<arguments repr="">
+</arguments>
+<doc>Capture Roi</doc>
+<shortdoc>Capture Roi</shortdoc>
+</kw>
+<kw name="Capture Screen">
+<arguments repr="">
+</arguments>
+<doc>Capture whole screen, file name is returned</doc>
+<shortdoc>Capture whole screen, file name is returned</shortdoc>
+</kw>
+<kw name="Change Screen Id">
+<arguments repr="screenId">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="screenId">
+<name>screenId</name>
+</arg>
+</arguments>
+<doc>Change screen id
+ For multi display, user could use this keyword to switch to the correct screen
+
+ Examples:
+ | Change screen id | 1 |</doc>
+<shortdoc>Change screen id  For multi display, user could use this keyword to switch to the correct screen</shortdoc>
+</kw>
+<kw name="Clear All Highlights">
+<arguments repr="">
+</arguments>
+<doc>Clear all highlights from screen</doc>
+<shortdoc>Clear all highlights from screen</shortdoc>
+</kw>
+<kw name="Clear Highlight">
+<arguments repr="image">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+</arguments>
+<doc>Clear highlight from screen</doc>
+<shortdoc>Clear highlight from screen</shortdoc>
+</kw>
+<kw name="Click">
+<arguments repr="image, xOffset=0, yOffset=0">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="xOffset=0">
+<name>xOffset</name>
+<default>0</default>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="yOffset=0">
+<name>yOffset</name>
+<default>0</default>
+</arg>
+</arguments>
+<doc>Click
+
+Click on an image with similarity and offset.
+Examples:
+| Click | hello.png |</doc>
+<shortdoc>Click</shortdoc>
+</kw>
+<kw name="Click In">
+<arguments repr="areaImage, targetImage">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="areaImage">
+<name>areaImage</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="targetImage">
+<name>targetImage</name>
+</arg>
+</arguments>
+<doc>Click in. 
+Click target image in area image.</doc>
+<shortdoc>Click in.  Click target image in area image.</shortdoc>
+</kw>
+<kw name="Click Nth">
+<arguments repr="image, index, sortByColumn=true">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="index">
+<name>index</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="sortByColumn=true">
+<name>sortByColumn</name>
+<default>true</default>
+</arg>
+</arguments>
+<doc>Click nth
+
+ Click on specific image.
+ Optionally pass similarity and sort by column or row.
+
+ Examples:
+ | Click on nth image in region | image.png | 1 |
+ | Click on nth image in region | image.png | 1 | ${FALSE} |</doc>
+<shortdoc>Click nth</shortdoc>
+</kw>
+<kw name="Click On Match">
+<arguments repr="match">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="match">
+<name>match</name>
+</arg>
+</arguments>
+<doc>Click On Match
+ there's no offset to be configured
+ works with the keyword Return Match From Region</doc>
+<shortdoc>Click On Match  there's no offset to be configured  works with the keyword Return Match From Region</shortdoc>
+</kw>
+<kw name="Click On Region">
+<arguments repr="region">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="region">
+<name>region</name>
+</arg>
+</arguments>
+<doc>Click On Region
+ there's no offset to be configured
+ works with the keyword Get Extended Region From</doc>
+<shortdoc>Click On Region  there's no offset to be configured  works with the keyword Get Extended Region From</shortdoc>
+</kw>
+<kw name="Click Region">
+<arguments repr="coordinates, waitChange=0, timeout=0">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="coordinates">
+<name>coordinates</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="waitChange=0">
+<name>waitChange</name>
+<default>0</default>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="timeout=0">
+<name>timeout</name>
+<default>0</default>
+</arg>
+</arguments>
+<doc>Click region
+
+ Click on defined region cooridinates.
+ Optionally Wait for specified time to ensure region has changed.
+ Also, optionally set highlight
+
+ Examples:
+ | ${coor} | Create List | 0 | 0 | 100 | 100 |
+ | Click Region | ${coor} |
+ | Click Region | ${coor} | 0 |
+ | Click Region | ${coor} | 0 | 2 |</doc>
+<shortdoc>Click region</shortdoc>
+</kw>
+<kw name="Click Text">
+<arguments repr="text">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="text">
+<name>text</name>
+</arg>
+</arguments>
+<doc>Click Text
+
+Click on text.
+Examples:
+| Click Text | Hello |</doc>
+<shortdoc>Click Text</shortdoc>
+</kw>
+<kw name="Close Application">
+<arguments repr="name">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="name">
+<name>name</name>
+</arg>
+</arguments>
+<doc>Close application</doc>
+<shortdoc>Close application</shortdoc>
+</kw>
+<kw name="Double Click">
+<arguments repr="image, xOffset=0, yOffset=0">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="xOffset=0">
+<name>xOffset</name>
+<default>0</default>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="yOffset=0">
+<name>yOffset</name>
+<default>0</default>
+</arg>
+</arguments>
+<doc>Double click</doc>
+<shortdoc>Double click</shortdoc>
+</kw>
+<kw name="Double Click In">
+<arguments repr="areaImage, targetImage">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="areaImage">
+<name>areaImage</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="targetImage">
+<name>targetImage</name>
+</arg>
+</arguments>
+<doc>Double click in. 
+Double click target image in area image.</doc>
+<shortdoc>Double click in.  Double click target image in area image.</shortdoc>
+</kw>
+<kw name="Double Click On Match">
+<arguments repr="match">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="match">
+<name>match</name>
+</arg>
+</arguments>
+<doc>Double Click On Match
+ there's no offset to be configured
+ works with the keyword Return Match From Region</doc>
+<shortdoc>Double Click On Match  there's no offset to be configured  works with the keyword Return Match From Region</shortdoc>
+</kw>
+<kw name="Double Click On Region">
+<arguments repr="region">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="region">
+<name>region</name>
+</arg>
+</arguments>
+<doc>Double Click On Region
+ there's no offset to be configured
+ works with the keyword Get Extended Region From</doc>
+<shortdoc>Double Click On Region  there's no offset to be configured  works with the keyword Get Extended Region From</shortdoc>
+</kw>
+<kw name="Drag And Drop">
+<arguments repr="srcImage, targetImage">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="srcImage">
+<name>srcImage</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="targetImage">
+<name>targetImage</name>
+</arg>
+</arguments>
+<doc>Drag the source image to target image.
+If source image is empty, drag the last match and drop at given target</doc>
+<shortdoc>Drag the source image to target image. If source image is empty, drag the last match and drop at given target</shortdoc>
+</kw>
+<kw name="Drag And Drop By Offset">
+<arguments repr="srcImage, xOffset, yOffset">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="srcImage">
+<name>srcImage</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="xOffset">
+<name>xOffset</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="yOffset">
+<name>yOffset</name>
+</arg>
+</arguments>
+<doc>Drag the source image to target by offset.
+If source image is empty, drag the last match and drop at given target</doc>
+<shortdoc>Drag the source image to target by offset. If source image is empty, drag the last match and drop at given target</shortdoc>
+</kw>
+<kw name="Exists">
+<arguments repr="image, timeout=">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="timeout=">
+<name>timeout</name>
+<default/>
+</arg>
+</arguments>
+<doc>Exists
+
+ Check whether image exists in screen
+ @image: expected image in screen
+ @timeout: wait seconds
+
+ Examples:
+ | ${is_exist}=  | Exists | image.png | 0 |</doc>
+<shortdoc>Exists</shortdoc>
+</kw>
+<kw name="From Region Jump To">
+<arguments repr="region, direction, jumps, margin">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="region">
+<name>region</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="direction">
+<name>direction</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="jumps">
+<name>jumps</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="margin">
+<name>margin</name>
+</arg>
+</arguments>
+<doc>From Region Jump To
+ Create a region and translate it related to the given region, the created region will have the exactly same height and width as the passed one 
+ ${jumps} = number of 'jumps' to move, like on a chess game, jumps will be the number of squares a piece moves 
+ ${direction} = | below | above | left | right | 
+ ${margem} = add a space between jumps, must be &gt;= 1 
+ |${translated_region} =    |    From Region Jump To  |  ${original_region}  |    below   |   4   |    1   |</doc>
+<shortdoc>From Region Jump To  Create a region and translate it related to the given region, the created region will have the exactly same height and width as the passed one   ${jumps} = number of 'jumps' to move, like on a chess game, jumps will be the number of squares a piece moves   ${direction} = | below | above | left | right |   ${margem} = add a space between jumps, must be &gt;= 1   |${translated_region} =    |    From Region Jump To  |  ${original_region}  |    below   |   4   |    1   |</shortdoc>
+</kw>
+<kw name="Get Current Screen Id">
+<arguments repr="">
+</arguments>
+<doc>Get current screen id</doc>
+<shortdoc>Get current screen id</shortdoc>
+</kw>
+<kw name="Get Extended Region From">
+<arguments repr="image, direction, number_of_times_to_repeat">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="direction">
+<name>direction</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="number_of_times_to_repeat">
+<name>number_of_times_to_repeat</name>
+</arg>
+</arguments>
+<doc>Get extended region from
+ Extended the given image creating a region above or below with the same width
+ The height can change using the multiplier @number_of_times_to_repeat, if 2 is given the new region will have twice the height of the orignalge</doc>
+<shortdoc>Get extended region from  Extended the given image creating a region above or below with the same width  The height can change using the multiplier @number_of_times_to_repeat, if 2 is given the new region will have twice the height of the orignalge</shortdoc>
+</kw>
+<kw name="Get Extended Region From Image">
+<arguments repr="image, direction, number of times to repeat">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="direction">
+<name>direction</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="number of times to repeat">
+<name>number of times to repeat</name>
+</arg>
+</arguments>
+<doc>Get Extended Region From Image
+ Extended the given image creating a new region above, below, on the left or on the right side, with the same height and width
+ The height and width can change using the multiplier @number_of_times_to_repeat 
+ If orginal if giver as arguments, the region will be exactly the same location as the image, last argument is ignored 
+ Ex: If 2 is given and direction = below the new region will have twice the height of the given image and will be located right below it
+ |${region} =    |    Get Extended Region From Image  |  image.png  |    below   |   1   |
+ |${region} =    |    Get Extended Region From Image  |  image.png  |    original   |   1 #this argument is ignored   |</doc>
+<shortdoc>Get Extended Region From Image  Extended the given image creating a new region above, below, on the left or on the right side, with the same height and width  The height and width can change using the multiplier @number_of_times_to_repeat   If orginal if giver as arguments, the region will be exactly the same location as the image, last argument is ignored   Ex: If 2 is given and direction = below the new region will have twice the height of the given image and will be located right below it  |${region} =    |    Get Extended Region From Image  |  image.png  |    below   |   1   |  |${region} =    |    Get Extended Region From Image  |  image.png  |    original   |   1 #this argument is ignored   |</shortdoc>
+</kw>
+<kw name="Get Extended Region From Region">
+<arguments repr="image, direction, number of times to repeat">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="direction">
+<name>direction</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="number of times to repeat">
+<name>number of times to repeat</name>
+</arg>
+</arguments>
+<doc>Get Extended Region From Region
+ Extended the given image creating a region above, below, in the left side or on the right, with the same height and width
+ The height and width can change using the multiplier @number_of_times_to_repeat 
+ If 2 is given and direction = below the new region will have twice the height of the orignal and will be located right below it
+ |${below_region} =    |    Get Extended Region From Region  |  ${another_region}  |    below   |   1   |</doc>
+<shortdoc>Get Extended Region From Region  Extended the given image creating a region above, below, in the left side or on the right, with the same height and width  The height and width can change using the multiplier @number_of_times_to_repeat   If 2 is given and direction = below the new region will have twice the height of the orignal and will be located right below it  |${below_region} =    |    Get Extended Region From Region  |  ${another_region}  |    below   |   1   |</shortdoc>
+</kw>
+<kw name="Get Image Coordinates">
+<arguments repr="image, coordinates=[]">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="coordinates=[]">
+<name>coordinates</name>
+<default>[]</default>
+</arg>
+</arguments>
+<doc>Get Image Coordinates
+
+ Return image coordinates, within region
+ Examples:
+ | ${imageCoordinates}= | Get Image Coordinates | image.png=0.75 |
+ | ${imageCoordinates}= | Get Image Coordinates | image.png=0.75 | [x, y, w, z] |</doc>
+<shortdoc>Get Image Coordinates</shortdoc>
+</kw>
+<kw name="Get Match Score">
+<arguments repr="image">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+</arguments>
+<doc>Get match scoreTries to find the image on the screen, returns accuracy score (0-1)
+
+ Examples:
+ | ${score} = | Get Match Score |  somethingThatMayExist.png |
+ | Run Keyword if | ${score} &gt; 0.95 | keyword1 | ELSE | keyword2 |</doc>
+<shortdoc>Get match scoreTries to find the image on the screen, returns accuracy score (0-1)</shortdoc>
+</kw>
+<kw name="Get Number Of Screens">
+<arguments repr="">
+</arguments>
+<doc>Get number of screens</doc>
+<shortdoc>Get number of screens</shortdoc>
+</kw>
+<kw name="Get Screen Coordinates">
+<arguments repr="">
+</arguments>
+<doc>Get screen coordinates
+
+Return screen coordinates for active screen
+
+Examples:
+| @{coordinates}=  | Get Screen Coordinates | 0 |</doc>
+<shortdoc>Get screen coordinates</shortdoc>
+</kw>
+<kw name="Get Text">
+<arguments repr="image=">
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="image=">
+<name>image</name>
+<default/>
+</arg>
+</arguments>
+<doc>Get text
+
+ If image is not given, keyword will get text from whole Screen
+ If image is given, keyword will get text from matched region
+ Call keyword setOcrTextRead to set OcrTextRead as true, before using text recognition keywords
+
+ Examples:
+ | Set Ocr Text Read  | true       |
+ | Get Text           |
+ | Get Text           | test.png   |</doc>
+<shortdoc>Get text</shortdoc>
+</kw>
+<kw name="Highlight">
+<arguments repr="image, secs=">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="secs=">
+<name>secs</name>
+<default/>
+</arg>
+</arguments>
+<doc>Highlight matched image.
+ If secs is set, highlight will vanish automatically after setted seconds</doc>
+<shortdoc>Highlight matched image.  If secs is set, highlight will vanish automatically after setted seconds</shortdoc>
+</kw>
+<kw name="Highlight Region">
+<arguments repr="coordinates, timeout">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="coordinates">
+<name>coordinates</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="timeout">
+<name>timeout</name>
+</arg>
+</arguments>
+<doc>Highlight region</doc>
+<shortdoc>Highlight region</shortdoc>
+</kw>
+<kw name="Highlight Roi">
+<arguments repr="timeout">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="timeout">
+<name>timeout</name>
+</arg>
+</arguments>
+<doc>Highlight ROI</doc>
+<shortdoc>Highlight ROI</shortdoc>
+</kw>
+<kw name="Image Count">
+<arguments repr="image">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+</arguments>
+<doc>Image Count
+ Count how many times the same picture is detected in screen.
+
+ Examples:
+ | ${image_cnt}=  |  Image Count  | test.png  |</doc>
+<shortdoc>Image Count  Count how many times the same picture is detected in screen.</shortdoc>
+</kw>
+<kw name="Input Text">
+<arguments repr="image, text">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="text">
+<name>text</name>
+</arg>
+</arguments>
+<doc>Input text.
+ Image could be empty
+
+ Examples:
+ | Input text | image.png | Sikuli |
+ | Input text | ${EMPTY} | Sikuli |</doc>
+<shortdoc>Input text.  Image could be empty</shortdoc>
+</kw>
+<kw name="Key Down">
+<arguments repr="keyConstant">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="keyConstant">
+<name>keyConstant</name>
+</arg>
+</arguments>
+<doc>Key down
+ Press keyboard key and hold it.
+
+ For a list of possible Keys view docs for org.sikuli.script.Key .
+
+ Examples:
+ | Key down | CTRL | 
+ | Click | textFieldWithDefaultText.png |</doc>
+<shortdoc>Key down  Press keyboard key and hold it.</shortdoc>
+</kw>
+<kw name="Key Up">
+<arguments repr="keyConstant">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="keyConstant">
+<name>keyConstant</name>
+</arg>
+</arguments>
+<doc>Key up
+ Release keyboard key.
+
+ For a list of possible Keys view docs for org.sikuli.script.Key .
+
+ Examples:
+ | Click | textFieldWithDefaultText.png | 
+ | Key UP | CTRL |</doc>
+<shortdoc>Key up  Release keyboard key.</shortdoc>
+</kw>
+<kw name="Mouse Down">
+<arguments repr="*mouseButtons">
+<arg kind="VAR_POSITIONAL" required="false" repr="*mouseButtons">
+<name>mouseButtons</name>
+</arg>
+</arguments>
+<doc>Mouse down
+ Press and hold the specified buttons
+
+ @mouseButtons: Could be LEFT, MIDDLE, RIGHT
+
+ Examples:
+ | Mouse Move   | test.png | 
+ | Mouse Down   | LEFT     | RIGHT |
+ | Mouse Up     |</doc>
+<shortdoc>Mouse down  Press and hold the specified buttons</shortdoc>
+</kw>
+<kw name="Mouse Move">
+<arguments repr="image=">
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="image=">
+<name>image</name>
+<default/>
+</arg>
+</arguments>
+<doc>Mouse moveMove the mouse pointer to the target
+
+ @image: if image is empty, will move mouse to the last matched.
+
+ Examples:
+ | Mouse Move              | test.png | 
+ | Screen Should Contain   | test.png | 
+ | Mouse Move |</doc>
+<shortdoc>Mouse moveMove the mouse pointer to the target</shortdoc>
+</kw>
+<kw name="Mouse Move Location">
+<arguments repr="x=0, y=0">
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="x=0">
+<name>x</name>
+<default>0</default>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="y=0">
+<name>y</name>
+<default>0</default>
+</arg>
+</arguments>
+<doc>Mouse move locationMove the mouse pointer to the target location
+
+ @x: x cooridnate where mouse should move
+
+ @y: y cooridnate where mouse should move
+
+ Examples:
+ | Mouse Move Location | 20 | 20 |</doc>
+<shortdoc>Mouse move locationMove the mouse pointer to the target location</shortdoc>
+</kw>
+<kw name="Mouse Move Region">
+<arguments repr="coordinates, highlight_timeout">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="coordinates">
+<name>coordinates</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="highlight_timeout">
+<name>highlight_timeout</name>
+</arg>
+</arguments>
+<doc>Mouse move regionMove the mouse pointer to the target region
+
+ @coordinates: coordinates where mouse should move
+
+ Examples:
+ | Mouse Move region | [20, 20, 20, 20] |</doc>
+<shortdoc>Mouse move regionMove the mouse pointer to the target region</shortdoc>
+</kw>
+<kw name="Mouse Up">
+<arguments repr="*mouseButtons">
+<arg kind="VAR_POSITIONAL" required="false" repr="*mouseButtons">
+<name>mouseButtons</name>
+</arg>
+</arguments>
+<doc>Mouse up
+ Release the specified mouse buttons
+
+ @mouseButtons: Could be LEFT, MIDDLE, RIGHT. If empty, all currently held buttons are released
+
+ Examples:
+ | Mouse Move   | test.png | 
+ | Mouse Down   | LEFT     | RIGHT |
+ | Mouse Up     | LEFT     | RIGHT |</doc>
+<shortdoc>Mouse up  Release the specified mouse buttons</shortdoc>
+</kw>
+<kw name="Open Application">
+<arguments repr="path">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="path">
+<name>path</name>
+</arg>
+</arguments>
+<doc>Open application
+ To open app with parameters, refer:
+ https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</doc>
+<shortdoc>Open application  To open app with parameters, refer:  https://sikulix-2014.readthedocs.io/en/latest/appclass.html#App.App</shortdoc>
+</kw>
+<kw name="Paste Text">
+<arguments repr="image, text">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="text">
+<name>text</name>
+</arg>
+</arguments>
+<doc>Paste text. Image could be empty</doc>
+<shortdoc>Paste text. Image could be empty</shortdoc>
+</kw>
+<kw name="Press Special Key">
+<arguments repr="keyConstant">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="keyConstant">
+<name>keyConstant</name>
+</arg>
+</arguments>
+<doc>Press special key
+ Presses a special keyboard key.
+
+ For a list of possible Keys view docs for org.sikuli.script.Key .
+
+ Examples:
+ | Double Click | textFieldWithDefaultText.png | 
+ | Press Special Key | DELETE |</doc>
+<shortdoc>Press special key  Presses a special keyboard key.</shortdoc>
+</kw>
+<kw name="Read Text From Region">
+<arguments repr="reg">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="reg">
+<name>reg</name>
+</arg>
+</arguments>
+<doc>Read text from region</doc>
+<shortdoc>Read text from region</shortdoc>
+</kw>
+<kw name="Region Click Text">
+<arguments repr="text">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="text">
+<name>text</name>
+</arg>
+</arguments>
+<doc>Region Click Text
+
+Click on text in region.
+Set a region before.
+Examples:
+| Region Click Text | Hello |</doc>
+<shortdoc>Region Click Text</shortdoc>
+</kw>
+<kw name="Remove Image Path">
+<arguments repr="path">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="path">
+<name>path</name>
+</arg>
+</arguments>
+<doc>Remove image path</doc>
+<shortdoc>Remove image path</shortdoc>
+</kw>
+<kw name="Reset Roi">
+<arguments repr="">
+</arguments>
+<doc>Reset Roi
+ Set Region of interest to full screen
+
+ Examples:
+ | Reset roi |</doc>
+<shortdoc>Reset Roi  Set Region of interest to full screen</shortdoc>
+</kw>
+<kw name="Return Match From Region">
+<arguments repr="region, target">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="region">
+<name>region</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="target">
+<name>target</name>
+</arg>
+</arguments>
+<doc>Return Match From Region
+ expect a region (from keyword Get Extended Region From) and a target to be search for (an image.png)
+ returns the target as a object (string), it can be used with Click On Match keywords</doc>
+<shortdoc>Return Match From Region  expect a region (from keyword Get Extended Region From) and a target to be search for (an image.png)  returns the target as a object (string), it can be used with Click On Match keywords</shortdoc>
+</kw>
+<kw name="Right Click">
+<arguments repr="image, xOffset=0, yOffset=0">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="xOffset=0">
+<name>xOffset</name>
+<default>0</default>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="yOffset=0">
+<name>yOffset</name>
+<default>0</default>
+</arg>
+</arguments>
+<doc>Right click
+
+Click on an image with similarity and offset.
+Examples:
+| Click | hello.png |</doc>
+<shortdoc>Right click</shortdoc>
+</kw>
+<kw name="Right Click In">
+<arguments repr="areaImage, targetImage">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="areaImage">
+<name>areaImage</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="targetImage">
+<name>targetImage</name>
+</arg>
+</arguments>
+<doc>Right click in. 
+Right click target image in area image.</doc>
+<shortdoc>Right click in.  Right click target image in area image.</shortdoc>
+</kw>
+<kw name="Screen Should Contain">
+<arguments repr="image">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+</arguments>
+<doc>Screen should contain</doc>
+<shortdoc>Screen should contain</shortdoc>
+</kw>
+<kw name="Screen Should Not Contain">
+<arguments repr="image">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+</arguments>
+<doc>Screen should not contain
+ Screen should not contain image
+
+ Examples:
+ | Screen should not contain | image.png |</doc>
+<shortdoc>Screen should not contain  Screen should not contain image</shortdoc>
+</kw>
+<kw name="Select Region">
+<arguments repr="message">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="message">
+<name>message</name>
+</arg>
+</arguments>
+<doc>Select Region
+
+ Allow user to select a region and capture it.
+ Return array of [capturedImagePath, x, y, w, h]
+
+ Examples:
+ | @{SelectedRegion}= | Select region |</doc>
+<shortdoc>Select Region</shortdoc>
+</kw>
+<kw name="Set Always Resize">
+<arguments repr="resize">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="resize">
+<name>resize</name>
+</arg>
+</arguments>
+<doc>Set Always Resize
+A decimal value greater 0 and not equal to 1 to switch the feature on.
+With this setting you can tell SikuliX to generally resize all given images before a search operation using the given factor, which is applied to both width and height. The implementation internally uses the standard behavior of resizing a Java-AWT-BufferedImage.
+
+To switch the feature off again, just assign 0 or 1.</doc>
+<shortdoc>Set Always Resize A decimal value greater 0 and not equal to 1 to switch the feature on. With this setting you can tell SikuliX to generally resize all given images before a search operation using the given factor, which is applied to both width and height. The implementation internally uses the standard behavior of resizing a Java-AWT-BufferedImage.</shortdoc>
+</kw>
+<kw name="Set Capture Folder">
+<arguments repr="path">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="path">
+<name>path</name>
+</arg>
+</arguments>
+<doc>Set captured folder
+
+Set folder for captured images
+Examples:
+| Set captured folder | PATH |</doc>
+<shortdoc>Set captured folder</shortdoc>
+</kw>
+<kw name="Set Capture Matched Image">
+<arguments repr="value">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="value">
+<name>value</name>
+</arg>
+</arguments>
+<doc>Set capture matched image
+
+Set capture matched images, the default value is true
+Examples:
+| Set Capture Matched Image | false |</doc>
+<shortdoc>Set capture matched image</shortdoc>
+</kw>
+<kw name="Set Min Similarity">
+<arguments repr="minSimilarity">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="minSimilarity">
+<name>minSimilarity</name>
+</arg>
+</arguments>
+<doc>Set min similarity (accuracy of matching elements).
+
+minSimilarity can be a decimal number between 0 and 1
+
+Example:
+
+| Set Min Similarity | 0.85 |</doc>
+<shortdoc>Set min similarity (accuracy of matching elements).</shortdoc>
+</kw>
+<kw name="Set Move Mouse Delay">
+<arguments repr="delay">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="delay">
+<name>delay</name>
+</arg>
+</arguments>
+<doc>Set move mouse delay</doc>
+<shortdoc>Set move mouse delay</shortdoc>
+</kw>
+<kw name="Set Ocr Language">
+<arguments repr="ocrTextLanguage">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="ocrTextLanguage">
+<name>ocrTextLanguage</name>
+</arg>
+</arguments>
+<doc>Set OCR language
+
+Set OCR language
+Three letters parameter
+Default : eng for English language
+Examples:
+| Set OCR Language | eng |
+| Set OCR Language | fra |</doc>
+<shortdoc>Set OCR language</shortdoc>
+</kw>
+<kw name="Set Ocr Text Read">
+<arguments repr="ocrTextRead">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="ocrTextRead">
+<name>ocrTextRead</name>
+</arg>
+</arguments>
+<doc>OCR text read
+If needed use Set OCR Language before.`
+Default language : English (eng).</doc>
+<shortdoc>OCR text read If needed use Set OCR Language before.` Default language : English (eng).</shortdoc>
+</kw>
+<kw name="Set Roi">
+<arguments repr="coordinates, timeout=0">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="coordinates">
+<name>coordinates</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="timeout=0">
+<name>timeout</name>
+<default>0</default>
+</arg>
+</arguments>
+<doc>Set ROI
+
+ Set region of interest on screen
+ Optionally pass highlight timeout.
+
+ Examples:${coordinates} | set variable | @{x, y, w, h] |
+ | Set ROI | ${coordinates} |
+ | Set ROI | ${coordinates} | 2 |</doc>
+<shortdoc>Set ROI</shortdoc>
+</kw>
+<kw name="Set Show Actions">
+<arguments repr="showActions">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="showActions">
+<name>showActions</name>
+</arg>
+</arguments>
+<doc>Set show actions</doc>
+<shortdoc>Set show actions</shortdoc>
+</kw>
+<kw name="Set Slow Motion Delay">
+<arguments repr="delay">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="delay">
+<name>delay</name>
+</arg>
+</arguments>
+<doc>Set slow motion delay
+ Control the duration of the visual effect (seconds).</doc>
+<shortdoc>Set slow motion delay  Control the duration of the visual effect (seconds).</shortdoc>
+</kw>
+<kw name="Set Timeout">
+<arguments repr="timeout">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="timeout">
+<name>timeout</name>
+</arg>
+</arguments>
+<doc>Set timeout
+
+Set Sikuli timeout(seconds)
+Examples:
+| Set timeout | 10 |</doc>
+<shortdoc>Set timeout</shortdoc>
+</kw>
+<kw name="Set Wait Scan Rate">
+<arguments repr="delay">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="delay">
+<name>delay</name>
+</arg>
+</arguments>
+<doc>Set wait scan rate
+ Specify the number of times actual search operations are performed per second while waiting for a pattern to appear or vanish.</doc>
+<shortdoc>Set wait scan rate  Specify the number of times actual search operations are performed per second while waiting for a pattern to appear or vanish.</shortdoc>
+</kw>
+<kw name="Start Sikuli Process">
+<arguments repr="port=None">
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="port=None">
+<name>port</name>
+<default>None</default>
+</arg>
+</arguments>
+<doc>
+        This keyword is used to start sikuli java process.
+        If library is inited with mode "OLD", sikuli java process is started automatically.
+        If library is inited with mode "NEW", this keyword should be used.
+
+        :param port: port of sikuli java process, if value is None or 0, a random free port will be used
+        :return: None</doc>
+<shortdoc/>
+</kw>
+<kw name="Stop Remote Server">
+<arguments repr="">
+</arguments>
+<doc>Stops the remote server.
+
+The server may be configured so that users cannot stop it.</doc>
+<shortdoc>Stops the remote server.</shortdoc>
+</kw>
+<kw name="Type With Modifiers">
+<arguments repr="text, *modifiers">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="text">
+<name>text</name>
+</arg>
+<arg kind="VAR_POSITIONAL" required="false" repr="*modifiers">
+<name>modifiers</name>
+</arg>
+</arguments>
+<doc>Type with modifiers
+
+ Examples:
+ |Type With Modifiers| A | CTRL |</doc>
+<shortdoc>Type with modifiers</shortdoc>
+</kw>
+<kw name="Wait For Image">
+<arguments repr="wantedImage, notWantedImage, timeout">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="wantedImage">
+<name>wantedImage</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="notWantedImage">
+<name>notWantedImage</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="timeout">
+<name>timeout</name>
+</arg>
+</arguments>
+<doc>Wait For Image
+
+ Check wantedImage exist. If notWantedImage appear or timeout happened, throw exception
+
+ @wantedImage: expected image in screen
+
+ @notWantedImage: unexpected image in screen
+
+ @timeout: wait seconds
+
+ Examples:
+ | Wait For Image  | wanted.png | notWanted.png | 5 |</doc>
+<shortdoc>Wait For Image</shortdoc>
+</kw>
+<kw name="Wait For Multiple Images">
+<arguments repr="timeout, pollingInterval, expectedImages, notExpectedImages">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="timeout">
+<name>timeout</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="pollingInterval">
+<name>pollingInterval</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="expectedImages">
+<name>expectedImages</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="notExpectedImages">
+<name>notExpectedImages</name>
+</arg>
+</arguments>
+<doc>Wait For Multiple Images
+
+ Check if images exists in expectedImages or notExpectedImages list. If image appears that is listed in notExpectedImages list or timeout happened, throw exception If image appears that is listed in expectedImageslist return succesfully. 
+
+ @timeout: wait seconds
+
+ @pollingInterval: time in seconds between screen checks
+
+ @expectedImages: list of expected images in screen
+
+ @notExpectedImages: list of not expected images in screen
+
+ Examples:
+ | @{wanted_images} =  | Create List | wanted_image1.png | wanted_image2.png |
+ | @{not_wanted_images} =  | Create List | not_wanted_image1.png | not_wanted_image2.png | not_wanted_image3.png |
+ | Wait For Multiple Images | 900 | 10 | ${wanted_images} | ${not_wanted_images} |</doc>
+<shortdoc>Wait For Multiple Images</shortdoc>
+</kw>
+<kw name="Wait Until Screen Contain">
+<arguments repr="image, timeout">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="timeout">
+<name>timeout</name>
+</arg>
+</arguments>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<shortdoc>Wait until screen contain  Wait until image shown in screen</shortdoc>
+</kw>
+<kw name="Wait Until Screen Not Contain">
+<arguments repr="image, timeout">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="image">
+<name>image</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="timeout">
+<name>timeout</name>
+</arg>
+</arguments>
+<doc>Wait until screen not contain
+ Wait until image not in screen</doc>
+<shortdoc>Wait until screen not contain  Wait until image not in screen</shortdoc>
+</kw>
+<kw name="Wheel Down">
+<arguments repr="steps, image=">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="steps">
+<name>steps</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="image=">
+<name>image</name>
+<default/>
+</arg>
+</arguments>
+<doc>Wheel down
+ Move mouse to the target, and wheel down with give steps
+
+ Examples:
+ | Wheel Down     | 5   | 
+ | Wheel Down     | 5   |  test.png   |</doc>
+<shortdoc>Wheel down  Move mouse to the target, and wheel down with give steps</shortdoc>
+</kw>
+<kw name="Wheel Up">
+<arguments repr="steps, image=">
+<arg kind="POSITIONAL_OR_NAMED" required="true" repr="steps">
+<name>steps</name>
+</arg>
+<arg kind="POSITIONAL_OR_NAMED" required="false" repr="image=">
+<name>image</name>
+<default/>
+</arg>
+</arguments>
+<doc>Wheel up
+ Move mouse to the target, and wheel up with give steps
+
+ Examples:
+ | Wheel Up     | 5   | 
+ | Wheel Up     | 5   |  test.png   |</doc>
+<shortdoc>Wheel up  Move mouse to the target, and wheel up with give steps</shortdoc>
+</kw>
+</keywords>
+<typedocs>
+</typedocs>
+</keywordspec>

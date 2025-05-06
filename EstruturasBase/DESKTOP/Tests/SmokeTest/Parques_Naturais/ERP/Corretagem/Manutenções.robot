@@ -1,0 +1,100 @@
+*** Settings ***
+Documentation    Smoke Test: Corretagem
+Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
+Suite Setup      Iniciar sessao  cde_win_crt
+
+
+*** Variables ***
+
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Corretagem/Manutenções/    
+
+*** Keywords ***
+
+Manutenções
+    Cadastros 
+    repetidor de teclas    right    1
+
+*** Test Cases ***
+
+Confirmação de Negócio
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Confirmação de Negócio
+    Manutenções
+    RPA.Windows.Click         Confirmação de Negócio
+    RPA.Windows.Get Text      Confirmação de Negócio (1)
+    BaseDesktop.Screenshot    Confirmação de Negócio (1)      ${Caminho_Screenshots}Confirmação de Negócio
+    Fechar janela
+
+Emissão de NFS-e sobre Confirmações de Negócios
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Confirmação de Negócio
+    Manutenções
+    RPA.Windows.Click         Emissão de NFS-e sobre Confirmações de Negócios
+    RPA.Windows.Get Text      Emissão de NFS-e sobre Confirmações de Negócios (1)  
+    BaseDesktop.Screenshot    Emissão de NFS-e sobre Confirmações de Negócios (1)      ${Caminho_Screenshots}Confirmação de Negócio
+    Fechar janela
+
+Pedidos > Pedidos de Compra
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Pedidos de Compra
+    Manutenções
+    RPA.Windows.Click         Pedidos
+    RPA.Desktop.Press Keys    P
+    RPA.Windows.Get Text      Pedidos de Compra (1)  
+    BaseDesktop.Screenshot    Pedidos de Compra (1)      ${Caminho_Screenshots}Pedidos de Compra
+    Fechar janela
+
+Pedidos > Pedidos de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Pedidos de Venda
+    Manutenções
+    RPA.Windows.Click         Pedidos
+    RPA.Desktop.Press Keys    E
+    RPA.Windows.Get Text      Pedidos de Venda (1)  
+    BaseDesktop.Screenshot    Pedidos de Venda (1)      ${Caminho_Screenshots}Pedidos de Venda
+    Fechar janela
+
+Entradas/Compras > Incluir/Alterar
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/             ERRO Incluir_Alterar
+    Manutenções
+    RPA.Windows.Click       Entradas/Compras
+    RPA.Desktop.Press Keys  I
+    RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
+    BaseDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)   ${Caminho_Screenshots}Entradas_Compras/Incluir_Alterar 
+    Fechar janela
+
+Entradas/Compras > Consultar
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/             ERRO Consultar
+    Manutenções
+    RPA.Windows.Click       Entradas/Compras
+    RPA.Desktop.Press Keys  C
+    RPA.Windows.Get Text    Entradas/Compras - Consultar (1)
+    BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
+    Fechar janela
+
+Saídas/Vendas > Incluir Saídas/Vendas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Alterar Saídas_Vendas
+    Manutenções
+    RPA.Windows.Click         Saídas/Vendas
+    RPA.Desktop.Press Keys    I
+    RPA.Windows.Get Text      Saidas/Vendas - Produtos - Com Fechamento (1)
+    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
+    Fechar janela
+
+
+Saídas/Vendas > Alterar Saídas/Vendas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Alterar Saídas_Vendas
+    Manutenções
+    RPA.Windows.Click         Saídas/Vendas
+    RPA.Desktop.Press Keys    A
+    RPA.Windows.Get Text      Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)
+    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
+    Fechar janela
+
+Saídas/Vendas > Consultar Saídas/Vendas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Consultar Saídas_Vendas
+    Manutenções
+    RPA.Windows.Click         Saídas/Vendas
+    RPA.Desktop.Press Keys    C
+    RPA.Windows.Get Text      Saidas/Vendas - Produtos - Consulta (1)
+    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Consulta (1)    ${Caminho_Screenshots}Saídas_Vendas/Consultar Saídas_Vendas
+    Fechar janela
+
+Encerrar
+    Encerrar tudo
