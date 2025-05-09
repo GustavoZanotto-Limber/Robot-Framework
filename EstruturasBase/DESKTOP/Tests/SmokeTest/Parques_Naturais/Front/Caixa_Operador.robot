@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Smoke Test: Front
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_frontR10-25
+Suite Setup      Iniciar sessao Front
 
 *** Variables ***
 
@@ -47,8 +47,11 @@ Suprimento / Sangria
     Caixa Operador
     RPA.Windows.Click       Suprimento / Sangria
     RPA.Windows.Get Text    Movimento de Caixa (1)
-    BaseDesktop.Screenshot              Movimento de Caixa (1)    ${Caminho_Screenshots}Consultas Personalizadas
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Movimento de Caixa (1)    ${Caminho_Screenshots}Consultas Personalizadas
     Fechar janela
+    RPA.Windows.Click       Sim
+
 
 Encerrar
     Encerrar tudo

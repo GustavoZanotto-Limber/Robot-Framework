@@ -22,6 +22,7 @@ Romaneios
     Consultas
     RPA.Windows.Click         Romaneios 
     RPA.Windows.Get Text      Consulta de Romaneios (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Consulta de Romaneios (1)    ${Caminho_Screenshots}Romaneios
     Fechar janela
 

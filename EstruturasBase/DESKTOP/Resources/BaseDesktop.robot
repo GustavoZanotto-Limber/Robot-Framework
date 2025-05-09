@@ -35,11 +35,11 @@ Fechar janela
 Iniciar sessao        
     [Arguments]    ${nome_exe} 
     Carregar os elementos do app
-    RPA.Desktop.Open Application    C:\\Limber\\ERP 8.009R2\\${nome_exe}.exe
+    RPA.Desktop.Open Application    C:\\Limber\\ERP Executaveis\\${nome_exe}.exe
     RPA.Windows.Click    Abrir
     Sleep                           2s
     RPA.Desktop.Press keys                      enter
-    Sleep                           3s                              Carregando a base...
+    Sleep                           5s                              Carregando a base...
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
@@ -47,13 +47,15 @@ Iniciar sessao
 Iniciar sessao Front     
     Carregar os elementos do app
     RPA.Desktop.Open Application    C:\\Limber\\Turismo-PARQUES-NATURAIS\\cde_win_bca_frontR10-25.exe
+    Sleep                           1s
     RPA.Windows.Click    Abrir
     Sleep                           2s
     RPA.Desktop.Press keys                      enter
-    Sleep                           3s                              Carregando a base...
+    Sleep                           10s                              Carregando a base...
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
+    Sleep                           3s
     
 Screenshot
     [Arguments]               ${janela}    ${Caminho}
