@@ -21,7 +21,9 @@ Compras/Aquisição de Serviços - Evolução Diária
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Diária
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Diária. (1)
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Compras/Aquisição de Serviços - Evolução Diária. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Diária
+    RPA.Windows.Click       OK
     Fechar janela
 
 Compras/Aquisição de Serviços - Evolução Mensal
@@ -29,7 +31,9 @@ Compras/Aquisição de Serviços - Evolução Mensal
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Mensal
     RPA.Windows.Get Text    Compras - Evolução Mensal. (1)
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Compras - Evolução Mensal. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Mensal
+    RPA.Windows.Click       OK
     Fechar janela
 
 Compras/Aquisição de Serviços - Evolução Anual
@@ -37,7 +41,9 @@ Compras/Aquisição de Serviços - Evolução Anual
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Anual
     RPA.Windows.Get Text    Compras - Evolução Anual. (1)
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Compras - Evolução Anual. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Anual
+    RPA.Windows.Click       OK
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Fornecedor
@@ -45,6 +51,7 @@ Compras/Aquisição de Serviços - Sintético/Fornecedor
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Fornecedor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor. (1)
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Fornecedor
     Fechar janela
 
@@ -53,6 +60,7 @@ Compras/Aquisição de Serviços - Sintético/Setor
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Setor
     RPA.Windows.Get Text    Compras - Aquisição de Serviços Sintético / Setor. (1)
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Compras - Aquisição de Serviços Sintético / Setor. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Setor
     Fechar janela
 
