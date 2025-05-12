@@ -1,6 +1,0 @@
-WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
-11:34:39.060 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1314ms to org.robotframework.remoteserver.logging.Jetty2Log4J
-11:34:39.204 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.31.v20200723; built: 2020-07-23T17:57:36.812Z; git: 450ba27947e13e66baa8cd1ce7e85a4461cacc1d; jvm 21.0.7+6-LTS
-11:34:39.332 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@aba625{/,null,AVAILABLE}
-11:34:39.581 [main] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@77eca502{HTTP/1.1, (http/1.1)}{0.0.0.0:64457}
-11:34:39.582 [main] INFO  org.eclipse.jetty.server.Server - Started @1864ms
