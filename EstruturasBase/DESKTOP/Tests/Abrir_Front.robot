@@ -6,7 +6,7 @@ Resource        C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/
 #Resource é basicamente onde fazemos o carregamento das imagens o inicio e o termino da sessao de testes.
 #
 
-Suite Setup         Iniciar sessao  cde_win_frontR10-25      #È possivel fazer um setup que iniciará sempre que o programa começar
+Suite Setup         Iniciar sessao  cde_win_frontR20      #È possivel fazer um setup que iniciará sempre que o programa começar
                                                 #Ele executa antes dos testes como uma preparação de ambiente
 #Suite Teardown      Encerrar tudo               #Existe também o que ocorre após a execução dos testes para normalemente fechar
             

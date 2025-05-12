@@ -20,8 +20,10 @@ Cadastro de Eleições
     Eleições 
     RPA.Windows.Click       Cadastro de Eleições
     RPA.Windows.Get Text    Cadastro de Eleições (1)
+    RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Eleições (1)   ${Caminho_Screenshots}Cadastro de Eleições
-    Fechar janela 
+    Fechar janela
+    RPA.Windows.Click       Sim 
 
 Verificação/Votação de Eleitores
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Verificação_Validação de Eleitores
@@ -36,5 +38,8 @@ Relação de Sócios que votaram
     Eleições 
     RPA.Windows.Click       Relação de Sócios que votaram
     RPA.Windows.Get Text    Relação de Sócios que votaram (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Relação de Sócios que votaram (1)   ${Caminho_Screenshots}Relação de Sócios que votaram
+    RPA.Windows.Click       Confirmar
     RPA.Windows.Click       Fechar 

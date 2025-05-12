@@ -21,7 +21,8 @@ Produtos
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Itens (1)    ${Caminho_Screenshots}Produtos
     Fechar janela
-
+    RPA.Windows.Click         Sim
+    
 Terceiros
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Terceiros
     Cadastros

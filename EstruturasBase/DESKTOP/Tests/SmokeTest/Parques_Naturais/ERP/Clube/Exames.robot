@@ -20,5 +20,10 @@ Validar Exames
     Exames 
     RPA.Windows.Click       Validar Exames
     RPA.Windows.Get Text    Validação de Exames (1)
+    RPA.Windows.Click       Atualizar Exame
     BaseDesktop.Screenshot  Validação de Exames (1)   ${Caminho_Screenshots}Validar Exames
+    RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar    
+
+Encerrar
+    Encerrar tudo

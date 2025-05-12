@@ -20,6 +20,7 @@ Impressão
     Cartões 
     RPA.Windows.Click       Impressão
     RPA.Windows.Get Text    Impressão de Carteirinhas (1)
+    RPA.Windows.Click       Adicionar
     BaseDesktop.Screenshot  Impressão de Carteirinhas (1)   ${Caminho_Screenshots}Impressão
     Fechar janela 
 
@@ -28,5 +29,6 @@ Entrega de Cartões
     Cartões 
     RPA.Windows.Click       Entrega de Cartões
     RPA.Windows.Get Text    Controle de Entrega de Cartões (1)
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Controle de Entrega de Cartões (1)   ${Caminho_Screenshots}Entrega de Cartões
     Fechar janela 

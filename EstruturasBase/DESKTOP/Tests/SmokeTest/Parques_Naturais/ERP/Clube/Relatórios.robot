@@ -20,7 +20,10 @@ Sócios
     Relatórios 
     RPA.Windows.Click       Sócios
     RPA.Windows.Get Text    Relação de Sócios (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Relação de Sócios (1)   ${Caminho_Screenshots}Sócios
+    RPA.Windows.Click       Confirmar
     Fechar janela
 
 Sócios/Agências Bancárias
@@ -28,7 +31,10 @@ Sócios/Agências Bancárias
     Relatórios 
     RPA.Windows.Click       Sócios/Agências Bancárias
     RPA.Windows.Get Text    Sócios/Agências Bancárias (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Sócios/Agências Bancárias (1)   ${Caminho_Screenshots}Sócios_Agências Bancárias
+    RPA.Windows.Click       Confirmar
     Fechar janela      
 
 Sócios/Aniversariantes
@@ -36,14 +42,16 @@ Sócios/Aniversariantes
     Relatórios 
     RPA.Windows.Click       Sócios/Aniversariantes
     RPA.Windows.Get Text    Relatório de Sócios Aniversariantes (1)
+    RPA.Windows.Click       Data Nascimento
     BaseDesktop.Screenshot  Relatório de Sócios Aniversariantes (1)   ${Caminho_Screenshots}Sócios_Aniversariantes
-    Fechar janela   
+    Fechar janela
 
 Sócios/Atividades
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Sócios_Atividades
     Relatórios 
     RPA.Windows.Click       Sócios/Atividades
     RPA.Windows.Get Text    Relatório de Atividades (1)
+    RPA.Windows.Click       Nome/Sócio
     BaseDesktop.Screenshot  Relatório de Atividades (1)   ${Caminho_Screenshots}Sócios_Atividades
     Fechar janela  
 
@@ -52,6 +60,7 @@ Sócios/Local Acesso
     Relatórios 
     RPA.Windows.Click       Sócios/Local Acesso
     RPA.Windows.Get Text    Relatório de Sócios Presentes/Local de Acesso (1)
+    RPA.Windows.Click       Nome/Sócio
     BaseDesktop.Screenshot  Relatório de Sócios Presentes/Local de Acesso (1)   ${Caminho_Screenshots}Sócios_Local Acesso
     Fechar janela    
 
@@ -60,6 +69,7 @@ Sócios/Contagem de Acessos
     Relatórios 
     RPA.Windows.Click       Sócios/Contagem de Acessos
     RPA.Windows.Get Text    Relatório de Contagem de Acessos (1)
+    RPA.Windows.Click       Listar Dependentes
     BaseDesktop.Screenshot  Relatório de Contagem de Acessos (1)   ${Caminho_Screenshots}Sócios_Contagem de Acessos
     Fechar janela   
 
@@ -68,6 +78,7 @@ Reservas
     Relatórios 
     RPA.Windows.Click       Reservas
     RPA.Windows.Get Text    Relatório de Reservas (1)
+    RPA.Windows.Click       Código
     BaseDesktop.Screenshot  Relatório de Reservas (1)   ${Caminho_Screenshots}Reservas
     Fechar janela   
 
@@ -76,15 +87,22 @@ Relatório de Exames
     Relatórios 
     RPA.Windows.Click       Relatório de Exames
     RPA.Windows.Get Text    Relatório de Exames (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Relatório de Exames (1)   ${Caminho_Screenshots}Relatório de Exames
-    Fechar janela   
+    RPA.Windows.Click       OK
+    Fechar janela
+    RPA.Windows.Click       OK   
 
 Relatório de Mensalidades Recebidas
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Relatório de Mensalidades Recebidas
     Relatórios 
     RPA.Windows.Click       Relatório de Mensalidades Recebidas
     RPA.Windows.Get Text    Relatório de Mensalidades Recebidas (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Relatório de Mensalidades Recebidas (1)   ${Caminho_Screenshots}Relatório de Mensalidades Recebidas
+    RPA.Windows.Click       Confirmar
     Fechar janela   
 
 Quadro Social
@@ -100,7 +118,10 @@ Lista de Presença de Atividades
     Relatórios 
     RPA.Windows.Click       Lista de Presença de Atividades
     RPA.Windows.Get Text    Relatório de Presença de Atividades (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Relatório de Presença de Atividades (1)   ${Caminho_Screenshots}Lista de Presença de Atividades
+    RPA.Windows.Click       Confirmar
     Fechar janela   
 
 Encerrar

@@ -31,7 +31,10 @@ Romaneios Excluídos
     Consultas
     RPA.Windows.Click         Romaneios Excluídos
     RPA.Windows.Get Text      Consulta Romaneios Excluídos (1)
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Consulta Romaneios Excluídos (1)    ${Caminho_Screenshots}Romaneios Excluídos
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Movimentações da Balança
@@ -39,7 +42,9 @@ Movimentações da Balança
     Consultas
     RPA.Windows.Click         Movimentações da Balança
     RPA.Windows.Get Text      Movimentação da Balança (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Movimentação da Balança (1)    ${Caminho_Screenshots}Movimentações da Balança
+    RPA.Windows.Click         OK
     Fechar janela
 
 Lançamentos de Saída
@@ -47,6 +52,7 @@ Lançamentos de Saída
     Consultas
     RPA.Windows.Click         Lançamentos de Saída
     RPA.Windows.Get Text      Lançamentos de Saída (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Lançamentos de Saída (1)    ${Caminho_Screenshots}Lançamentos de Saída
     Fechar janela
 
@@ -55,7 +61,9 @@ Consultas Personalizadas
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
+    RPA.Windows.Click         Cadastrar Nova Consulta
     BaseDesktop.Screenshot    Consultas Personalizadas (1)    ${Caminho_Screenshots}Consultas Personalizadas
+    RPA.Windows.Click         Fechar
     Fechar janela
 
 Saldo de Terceiro
@@ -63,6 +71,7 @@ Saldo de Terceiro
     Consultas
     RPA.Windows.Click         Saldo de Terceiro 
     RPA.Windows.Get Text      Saldos de Terceiros (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Saldos de Terceiros (1)    ${Caminho_Screenshots}Saldo de Terceiro
     Fechar janela
 
@@ -71,7 +80,9 @@ Movimentação de Terceiro
     Consultas
     RPA.Windows.Click         Movimentação de Terceiro 
     RPA.Windows.Get Text      Movimentação de Terceiros (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Movimentação de Terceiros (1)    ${Caminho_Screenshots}Movimentação de Terceiro
+    RPA.Windows.Click         OK
     Fechar janela
 
 Encerrar
