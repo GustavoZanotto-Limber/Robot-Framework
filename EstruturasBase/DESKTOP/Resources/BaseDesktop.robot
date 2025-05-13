@@ -28,10 +28,15 @@ Cadastros
     SikuliLibrary.Click    Cadastros.png
 
 Fechar janela
-    Run Keyword And Ignore Error    RPA.Windows.Click    Maximizar
+    ${Erro}=     Run Keyword And Ignore error    RPA.Windows.Get Text    Erro
+    Run Keyword And Ignore error    RPA.Windows.Click    Maximizar
     Set Anchor           Aplicativo
-    Run Keyword And Ignore Error  RPA.Windows.Click    Fechar
-    Clear Anchor
+    RPA.Windows.Click    Fechar
+    Clear Anchor 
+    IF    ${Erro} != (\'FAIL\', "ElementNotFound: Element not found with locator \'Erro\'")
+        Fail        Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.
+
+    END
 
 Iniciar sessao        
     [Arguments]    ${nome_exe} 
@@ -82,4 +87,10 @@ repetidor de teclas
 
 Caso aconteça erro
     [Arguments]     ${Caminho_Screenshots}        ${nome_print}
-    Run Keywords    Run Keyword If Test Failed    Take Screenshot    ${Caminho_Screenshots}${nome_print}.png    AND    Run Keyword If Test Failed    Run Keyword And Ignore Error    Fechar janela    AND    Run Keyword If Test Failed    RPA.Desktop.Press Keys    Enter
+    Run Keyword And Ignore error    Remove File                   ${Caminho_Screenshots}${nome_print}.png
+    Run Keyword If Test Failed      Take Screenshot    ${Caminho_Screenshots}Erro ${nome_print}.png   
+    Run Keyword If Test Failed      Run Keyword And Ignore error    Fechar janela
+    Run Keyword If Test Failed      RPA.Desktop.Press Keys    Enter
+    Run Keyword If Test Failed      Run Keyword And Ignore error  RPA.Windows.Click    OK
+    
+    

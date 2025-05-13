@@ -16,7 +16,7 @@ Manutenções
 *** Test Cases    ***
 
 Emissão de Bilhetes
-    [Teardown]                Caso aconteça erro         ${Caminho_Screenshots}                       ERRO Emissão de Bilhetes
+    [Teardown]                Caso aconteça erro         ${Caminho_Screenshots}                        Emissão de Bilhetes
     Manutenções
     RPA.Windows.Click         Emissão de Bilhetes
     Sleep                     2s
@@ -27,7 +27,7 @@ Emissão de Bilhetes
     RPA.Windows.Click         Sim
 
 Reimpressão de Bilhetes
-    [Teardown]              Caso aconteça erro             ${Caminho_Screenshots}                           ERRO Reimpressão de Bilhetes
+    [Teardown]              Caso aconteça erro             ${Caminho_Screenshots}                            Reimpressão de Bilhetes
     Manutenções
     RPA.Windows.Click       Reimpressão de Bilhetes
     RPA.Windows.Get Text    Reimpressão de Bilhetes (1)
@@ -38,7 +38,7 @@ Reimpressão de Bilhetes
     Fechar janela
 
 Cancelamentos de Bilhetes
-    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                            ERRO Cancelamento de Bilhetes
+    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                             Cancelamento de Bilhetes
     Manutenções
     RPA.Windows.Click       Cancelamento de Bilhetes
     Sleep                   1s
@@ -50,7 +50,7 @@ Cancelamentos de Bilhetes
     RPA.Windows.Click       Fechar
 
 Remarcações de Visitas
-    [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}                          ERRO Remarcações de Visitas
+    [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}                           Remarcações de Visitas
     Manutenções
     RPA.Windows.Click       Remarcação de Visitas
     Sleep                   1s
@@ -60,7 +60,7 @@ Remarcações de Visitas
     RPA.Windows.Click       Fechar
 
 Reservas -> Lançamentos
-    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Reservas/                          ERRO Lançamento de Reservas
+    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Reservas/                           Lançamento de Reservas
     Manutenções
     RPA.Windows.Click         Reservas
     RPA.Desktop.Press Keys    l
@@ -71,7 +71,7 @@ Reservas -> Lançamentos
     RPA.Windows.Click         Sim
 
 Reservas -> Cancelamento
-    [Teardown]                Caso aconteça erro              ${Caminho_Screenshots}Reservas/                            ERRO Cancelamento de Reservas
+    [Teardown]                Caso aconteça erro              ${Caminho_Screenshots}Reservas/                             Cancelamento de Reservas
     Manutenções
     RPA.Windows.Click       Reservas
     RPA.Desktop.Press Keys  c
@@ -83,7 +83,7 @@ Reservas -> Cancelamento
     Fechar janela
 
 Reservas -> Alteração
-    [Teardown]                Caso aconteça erro                        ${Caminho_Screenshots}Reservas/                         ERRO Alteração de Reservas
+    [Teardown]                Caso aconteça erro                        ${Caminho_Screenshots}Reservas/                          Alteração de Reservas
     Manutenções
     RPA.Windows.Click         Reservas
     RPA.Desktop.Press Keys    a
@@ -95,7 +95,7 @@ Reservas -> Alteração
     Fechar janela
 
 Reservas -> Remarcação de Visitas
-    [Teardown]                Caso aconteça erro          ${Caminho_Screenshots}Reservas/                         ERRO Remarcação de Visitas
+    [Teardown]                Caso aconteça erro          ${Caminho_Screenshots}Reservas/                          Remarcação de Visitas
     Manutenções
     RPA.Windows.Click         Reservas
     RPA.Desktop.Press Keys    r
@@ -106,7 +106,7 @@ Reservas -> Remarcação de Visitas
     RPA.Windows.Click         Fechar
 
 Lançamento de Isenções
-    [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}                          ERRO Lançamento de Isenções
+    [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}                           Lançamento de Isenções
     Manutenções
     RPA.Windows.Click       Lançamento de Isenções
     RPA.Windows.Get Text    Lançamento de Isenção (1)
@@ -117,7 +117,7 @@ Lançamento de Isenções
 
 
 Lançamento de Veículos
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                          ERRO Lançamento de Veículos
+    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                           Lançamento de Veículos
     Manutenções
     RPA.Windows.Click       Lançamento de Veículos
     RPA.Windows.Get Text    Lançamento de Veiculos (1)
@@ -129,7 +129,7 @@ Lançamento de Veículos
     RPA.Windows.Click       Sim
 
 Lançamento de Vouchers Pendentes
-    [Teardown]              Caso aconteça erro                  ${Caminho_Screenshots}                                    ERRO Lançamento de Vouchers Pendentes
+    [Teardown]              Caso aconteça erro                  ${Caminho_Screenshots}                                     Lançamento de Vouchers Pendentes
     Manutenções
     RPA.Windows.Click       Lançamento de Vouchers Pendentes
     RPA.Windows.Get Text    Alteração de Vouchers Bilhete
@@ -138,7 +138,7 @@ Lançamento de Vouchers Pendentes
     RPA.Windows.Click       Fechar
 
 Comissões de Guias -> Pagamento
-    [Teardown]                Caso aconteça erro        ${Caminho_Screenshots}Comissões de Guias/             ERRO Pagamento
+    [Teardown]                Caso aconteça erro        ${Caminho_Screenshots}Comissões de Guias/              Pagamento
     Manutenções
     RPA.Windows.Click         Comissões de Guias
     RPA.Desktop.Press Keys    p
@@ -149,7 +149,7 @@ Comissões de Guias -> Pagamento
     Fechar janela
 
 Comissões de Guias -> Estorno
-    [Teardown]                Caso aconteça erro          ${Caminho_Screenshots}Comissões de Guias/           ERRO Estorno
+    [Teardown]                Caso aconteça erro          ${Caminho_Screenshots}Comissões de Guias/            Estorno
     Manutenções
     RPA.Windows.Click         Comissões de Guias
     RPA.Desktop.Press Keys    e
@@ -159,7 +159,7 @@ Comissões de Guias -> Estorno
     Fechar janela
 
 Comissões de Guias -> Vincular Guia em Venda
-    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Comissões de Guias/                          ERRO Vincular Guia em Venda
+    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Comissões de Guias/                           Vincular Guia em Venda
     Manutenções
     RPA.Windows.Click         Comissões de Guias
     RPA.Desktop.Press Keys    v
@@ -169,7 +169,7 @@ Comissões de Guias -> Vincular Guia em Venda
     Fechar janela
 
 Comissões de Guias -> Relatório
-    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Comissões de Guias/             ERRO Relatório
+    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Comissões de Guias/              Relatório
     Manutenções
     RPA.Windows.Click         Comissões de Guias
     RPA.Desktop.Press Keys    r
@@ -181,7 +181,7 @@ Comissões de Guias -> Relatório
     Fechar janela
 
 Devoluções de Vendas
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                        ERRO Devoluções de Vendas
+    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                         Devoluções de Vendas
     Manutenções
     RPA.Windows.Click       Devoluções de Vendas
     RPA.Windows.Get Text    Devolução de Vendas (1)
@@ -190,7 +190,7 @@ Devoluções de Vendas
     Fechar janela
 
 Configurações Totem
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                       ERRO Configurações Totem
+    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                        Configurações Totem
     Manutenções
     RPA.Windows.Click       Configurações Totem
     RPA.Windows.Get Text    Configurações Totem (1)

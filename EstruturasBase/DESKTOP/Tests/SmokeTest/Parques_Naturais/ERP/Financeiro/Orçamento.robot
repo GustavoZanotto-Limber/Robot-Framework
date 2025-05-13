@@ -17,7 +17,7 @@ Orçamentos
 *** Test Cases ***
 
 Liberação Orçamentária
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Liberação Orçamentária
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Liberação Orçamentária
     Orçamentos
     RPA.Windows.Click         Liberação Orçamentária
     RPA.Windows.Get Text      Liberação Orçamentária (1)
@@ -25,7 +25,7 @@ Liberação Orçamentária
     Fechar janela
 
 Previsão Orçamentária
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Previsão Orçamentária
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Previsão Orçamentária
     Orçamentos
     RPA.Windows.Click         Previsão Orçamentária
     RPA.Windows.Get Text      Previsão Orçamentária (1)
@@ -33,7 +33,7 @@ Previsão Orçamentária
     Fechar janela
 
 Transferência de Orçamentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Transferência de Orçamentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Transferência de Orçamentos
     Orçamentos
     RPA.Windows.Click         Transferência de Orçamentos
     RPA.Windows.Get Text      Transferência de Orçamentos (1)
@@ -41,7 +41,7 @@ Transferência de Orçamentos
     Fechar janela
 
 Consultas > Previsão X Realizado
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Consultas/                        ERRO Previsão X Realizado
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Consultas/                         Previsão X Realizado
     Orçamentos
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    P
@@ -50,7 +50,7 @@ Consultas > Previsão X Realizado
     Fechar janela
 
 Consultas > Previsão X Realizado 2
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Previsão X Realizado 2
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Previsão X Realizado 2
     Orçamentos
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    R

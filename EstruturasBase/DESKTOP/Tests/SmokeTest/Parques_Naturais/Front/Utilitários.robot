@@ -16,7 +16,7 @@ Utilitários
 *** Test Cases    ***
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Utilitários
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Utilitários
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração dos Favoritos (1)
@@ -25,7 +25,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                   ERRO Papel de Parede
+    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
     Utilitários
     RPA.Windows.Click       Papel de Parede
     RPA.Windows.Get Text    Seleção de Papel de Parede
@@ -33,7 +33,7 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Estilo do Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Estilo do Menu Principal
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -42,7 +42,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Controle de Acessos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Controle de Acessos
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -52,7 +52,7 @@ Controle de Acessos
     Fechar janela
 
 Relatórios Personalizados > Cadastro de Categorias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                            ERRO Cadastro de Categorias
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                             Cadastro de Categorias
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -65,7 +65,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Windows.Click       Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                              ERRO Cadastro de Relatórios
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -79,7 +79,7 @@ Relatórios Personalizados > Cadastro de Relatórios
 
 
 Layout de Bilhetes
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Layout de Bilhetes
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Layout de Bilhetes
     Utilitários
     RPA.Windows.Click       Layout de Bilhetes
     RPA.Windows.Get Text    Layout de Bilhetes (1)
@@ -91,7 +91,7 @@ Layout de Bilhetes
     RPA.Windows.Click       Sim
 
 Configuração de Impressoras
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configuração de Impressoras
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configuração de Impressoras
     Utilitários
     RPA.Windows.Click       Configuração de Impressoras
     RPA.Windows.Get Text    Configuração Impressoras (1)
@@ -102,7 +102,7 @@ Configuração de Impressoras
     RPA.Desktop.Press Keys  Enter
 
 Observações Padrão
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Observações Padrão
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Observações Padrão
     Utilitários
     RPA.Windows.Click       Observações Padrão
     RPA.Windows.Get Text    Cadastro de Observações Padrão (1)
@@ -113,7 +113,7 @@ Observações Padrão
     Fechar janela
 
 Criar Usuario de Log
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Criar Usuario de Log
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
     Utilitários
     RPA.Windows.Click       Criar Usuário de Log
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
@@ -121,7 +121,7 @@ Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Verifica transações abertas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Verifica transações abertas
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
@@ -130,7 +130,7 @@ Verifica transações abertas
     Fechar janela
 
 Abrir Gaveta
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Abrir Gaveta
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Abrir Gaveta
     Utilitários
     RPA.Windows.Click       Abrir Gaveta
     RPA.Windows.Get Text    Salvar Saída de Impressão como
@@ -138,7 +138,7 @@ Abrir Gaveta
     RPA.Windows.Click       Fechar
 
 Metas Orçamento/Previsão
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Metas Orçamento_Previsão
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Metas Orçamento_Previsão
     Utilitários
     RPA.Windows.Click       Metas Orçamento/Previsão
     RPA.Windows.Get Text    Cadastro de Metas para BI (1)
@@ -150,7 +150,7 @@ Metas Orçamento/Previsão
     RPA.Windows.Click       Sim
 
 Metas Realizadas Adicionais
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Metas Realizadas Adicionais
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Metas Realizadas Adicionais
     Utilitários
     RPA.Windows.Click       Metas Realizadas Adicionais
     RPA.Windows.Get Text    Lançamentos de Metas Realizadas (1)

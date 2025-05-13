@@ -17,7 +17,7 @@ Movimentação
 *** Test Cases ***
 
 Lançamentos Contábeis
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Lançamentos Contábeis
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Lançamentos Contábeis
     Movimentação
     RPA.Windows.Click         Lançamentos Contábeis
     RPA.Windows.Get Text      Lançamentos Contábeis (1)  
@@ -27,7 +27,7 @@ Lançamentos Contábeis
     RPA.Windows.Click         Sim
 
 Lançamentos Contábeis por Lote
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Lançamentos Contábeis por Lote
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Lançamentos Contábeis por Lote
     Movimentação
     RPA.Windows.Click         Lançamentos Contábeis por Lote
     RPA.Windows.Get Text      Lançamento contabil por lote (1)  
@@ -36,7 +36,7 @@ Lançamentos Contábeis por Lote
     Fechar janela
 
 Manutenção de Lançamentos contábeis
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Manutenção de Lançamentos contábeis
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Manutenção de Lançamentos contábeis
     Movimentação
     RPA.Windows.Click         Manutenção de Lançamentos contábeis
     RPA.Windows.Get Text      Manutenção de Lançamentos contábeis (1)
@@ -46,7 +46,7 @@ Manutenção de Lançamentos contábeis
     Fechar janela
 
 Liberação de Lançamentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Liberação de Lançamentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Liberação de Lançamentos
     Movimentação
     RPA.Windows.Click         Liberação de Lançamentos
     RPA.Windows.Get Text      Liberação de Lançamentos (1) 
@@ -55,7 +55,7 @@ Liberação de Lançamentos
     Fechar janela
 
 Estornar Liberação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Estornar Liberação
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Estornar Liberação
     Movimentação
     RPA.Windows.Click         Estornar Liberação
     RPA.Windows.Get Text      Estorno de Liberação de Lançamentos (1)
@@ -65,7 +65,7 @@ Estornar Liberação
     Fechar janela
 
 Zeramento de Contas > Zeramento de Contas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Zeramento de Contas/                       ERRO Zeramento de Contas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Zeramento de Contas/                        Zeramento de Contas
     Movimentação
     RPA.Windows.Click         Zeramento de Contas
     RPA.Desktop.Press Keys    Z
@@ -77,7 +77,7 @@ Zeramento de Contas > Zeramento de Contas
     RPA.Windows.Click         Fechar
 
 Zeramento de Contas > Estornar Zeramento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Zeramento de Contas/                        ERRO Estornar Zeramento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Zeramento de Contas/                         Estornar Zeramento
     Movimentação
     RPA.Windows.Click         Zeramento de Contas
     RPA.Desktop.Press Keys    E
@@ -89,7 +89,7 @@ Zeramento de Contas > Estornar Zeramento
     RPA.Windows.Click         Fechar
 
 Zeramento de Contas > Parâmetros Zeramento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Zeramento de Contas/                        ERRO Parâmetros Zeramento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Zeramento de Contas/                         Parâmetros Zeramento
     Movimentação
     RPA.Windows.Click         Zeramento de Contas
     RPA.Desktop.Press Keys    P
@@ -103,7 +103,7 @@ Zeramento de Contas > Parâmetros Zeramento
     RPA.Windows.Click         Sim
 
 Conciliação de Cheques Emitidos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Conciliação de Cheques Emitidos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Conciliação de Cheques Emitidos
     Movimentação
     repetidor de teclas   Down       7
     RPA.Desktop.Press Keys    Enter
@@ -114,7 +114,7 @@ Conciliação de Cheques Emitidos
     Fechar janela
 
 Estorna Conciliação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Estorna Conciliação
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Estorna Conciliação
     Movimentação
     repetidor de teclas   Down       8
     RPA.Desktop.Press Keys    Enter
@@ -125,7 +125,7 @@ Estorna Conciliação
     Fechar janela
 
 Apropriação de custos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Apropriação de custos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Apropriação de custos
     Movimentação
     RPA.Windows.Click         Apropriação de custos
     RPA.Windows.Get Text      Apropriação de Custos (1) 
@@ -135,7 +135,7 @@ Apropriação de custos
     Fechar janela
 
 Apropriação de consumo de adiantamentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Apropriação de consumo de adiantamentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Apropriação de consumo de adiantamentos
     Movimentação
     RPA.Windows.Click         Apropriação de consumo de adiantamentos
     RPA.Windows.Get Text      Apropriação de consumo de adiantamento (1)  
@@ -144,7 +144,7 @@ Apropriação de consumo de adiantamentos
     Fechar janela
 
 Apropriação de despesas antecipadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Apropriação de despesas antecipadas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Apropriação de despesas antecipadas
     Movimentação
     RPA.Windows.Click         Apropriação de despesas antecipadas
     RPA.Windows.Get Text      Apropriação de Despesas Antecipadas (1)  
@@ -154,7 +154,7 @@ Apropriação de despesas antecipadas
     Fechar janela
 
 Estornar Apropriação por Rateio de Contas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Estornar Apropriação por Rateio de Contas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Estornar Apropriação por Rateio de Contas
     Movimentação
     RPA.Windows.Click         Estornar Apropriação por Rateio de Contas
     RPA.Windows.Get Text      Estornar Apropriação por Rateio de Contas (1)  
@@ -165,7 +165,7 @@ Estornar Apropriação por Rateio de Contas
     RPA.Windows.Click         Fechar
 
 Rateio Cooperativismo > Método 1
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Rateio Cooperativismo/                       ERRO Método 1
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Rateio Cooperativismo/                        Método 1
     Movimentação
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    1
@@ -177,7 +177,7 @@ Rateio Cooperativismo > Método 1
     RPA.Windows.Click         Fechar
     
 Rateio Cooperativismo > Método 2
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Rateio Cooperativismo/                       ERRO Método 2
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Rateio Cooperativismo/                        Método 2
     Movimentação
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    2
@@ -190,7 +190,7 @@ Rateio Cooperativismo > Método 2
     RPA.Windows.Click         OK
 
 Rateio Cooperativismo > Método 3 - Setor
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Rateio Cooperativismo/                       ERRO Método 3 - Setor
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Rateio Cooperativismo/                        Método 3 - Setor
     Movimentação
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    M
@@ -200,7 +200,7 @@ Rateio Cooperativismo > Método 3 - Setor
     Fechar janela
 
 Bloqueia Lançamentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                 ERRO Bloqueia Lançamentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                  Bloqueia Lançamentos
     Movimentação
     RPA.Windows.Click         Bloqueia Lançamentos
     RPA.Windows.Get Text      Bloqueia Lançamentos (1)  
@@ -212,7 +212,7 @@ Bloqueia Lançamentos
     Fechar janela
 
 Controle Patrimonial > Cálculo/Geração da Depreciação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Cálculo_Geração da Depreciação
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                        Cálculo_Geração da Depreciação
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    C
@@ -226,7 +226,7 @@ Controle Patrimonial > Cálculo/Geração da Depreciação
     Fechar janela
 
 Controle Patrimonial > Consulta de Depreciação
-    [Teardown]                Caso aconteça erro               ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Consulta de Depreciação
+    [Teardown]                Caso aconteça erro               ${Caminho_Screenshots}Controle Patrimonial/                        Consulta de Depreciação
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    O
@@ -239,7 +239,7 @@ Controle Patrimonial > Consulta de Depreciação
     Fechar janela
 
 Controle Patrimonial > Estornar Depreciação
-    [Teardown]                Caso aconteça erro               ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Estornar Depreciação
+    [Teardown]                Caso aconteça erro               ${Caminho_Screenshots}Controle Patrimonial/                        Estornar Depreciação
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    E
@@ -252,7 +252,7 @@ Controle Patrimonial > Estornar Depreciação
     Fechar janela
 
 Controle Patrimonial > Consulta da Ficha CIAP
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Consulta da Ficha CIAP
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                        Consulta da Ficha CIAP
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    N
@@ -264,7 +264,7 @@ Controle Patrimonial > Consulta da Ficha CIAP
     Fechar janela
 
 Controle Patrimonial > Emissão de Crédito do CIAP
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Emissão de Crédito do CIAP
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                        Emissão de Crédito do CIAP
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    M
@@ -275,7 +275,7 @@ Controle Patrimonial > Emissão de Crédito do CIAP
     RPA.Windows.Click         Fechar
 
 Controle Patrimonial > Estorno de Crédito do CIAP
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Estorno de Crédito do CIAP
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                        Estorno de Crédito do CIAP
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    S
@@ -286,7 +286,7 @@ Controle Patrimonial > Estorno de Crédito do CIAP
     RPA.Windows.Click         Fechar
 
 Controle Patrimonial > Ajuste de Fator do CIAP
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Ajuste de Fator do CIAP
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                        Ajuste de Fator do CIAP
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    A
@@ -298,7 +298,7 @@ Controle Patrimonial > Ajuste de Fator do CIAP
     RPA.Windows.Click         Fechar
 
 Controle Patrimonial > Consulta Fator CIAP
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Consulta Fator CIAP
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                        Consulta Fator CIAP
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    U
@@ -311,7 +311,7 @@ Controle Patrimonial > Consulta Fator CIAP
     Fechar janela
 
 CMV > Cálculo/Geração do CMV
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}CMV/                       ERRO Cálculo_Geração do CMV
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}CMV/                        Cálculo_Geração do CMV
     Movimentação
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    C
@@ -323,7 +323,7 @@ CMV > Cálculo/Geração do CMV
     Fechar janela
 
 CMV > Preço de Mercado
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}CMV/                       ERRO Preço de Mercado
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}CMV/                        Preço de Mercado
     Movimentação
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    P
@@ -332,7 +332,7 @@ CMV > Preço de Mercado
     Fechar janela
 
 CMV > Cálculo/Geração do CMV por período
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}CMV/                       ERRO Cálculo/Geração do CMV por período
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}CMV/                        Cálculo/Geração do CMV por período
     Movimentação
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    L
@@ -341,7 +341,7 @@ CMV > Cálculo/Geração do CMV por período
     Fechar janela
 
 CMV > Estorna CMV por período
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}CMV/                       ERRO Estorna CMV por período
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}CMV/                        Estorna CMV por período
     Movimentação
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    E
@@ -350,7 +350,7 @@ CMV > Estorna CMV por período
     Fechar janela
 
 Processos Personalizados
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Processos Personalizados
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Processos Personalizados
     Movimentação
     RPA.Windows.Click         Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
@@ -359,7 +359,7 @@ Processos Personalizados
 
 
 Ajuste a Valor Presente > Configuração
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ajuste a Valor Presente/                       ERRO Configuração
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ajuste a Valor Presente/                        Configuração
     Movimentação
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    C
@@ -368,7 +368,7 @@ Ajuste a Valor Presente > Configuração
     Fechar janela
 
 Ajuste a Valor Presente > Execução do Ajuste
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ajuste a Valor Presente/                       ERRO Execução do Ajuste
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ajuste a Valor Presente/                        Execução do Ajuste
     Movimentação
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    E
@@ -377,7 +377,7 @@ Ajuste a Valor Presente > Execução do Ajuste
     Fechar janela
 
 Ajuste a Valor Presente > Consulta do Ajuste
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ajuste a Valor Presente/                       ERRO Consulta do Ajuste
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ajuste a Valor Presente/                        Consulta do Ajuste
     Movimentação
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    O

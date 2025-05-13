@@ -14,7 +14,7 @@ ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTe
 *** Test Cases ***
 
 Produtos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Produtos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Produtos
     Cadastros
     RPA.Windows.Click         Produtos
     RPA.Windows.Get Text      Cadastro de Itens (1)
@@ -24,7 +24,7 @@ Produtos
     RPA.Windows.Click         Sim
     
 Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Terceiros
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Terceiros
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
@@ -35,7 +35,7 @@ Terceiros
     RPA.Windows.Click         Sim
 
 Operações Fiscais
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Operações Fiscais
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Operações Fiscais
     Cadastros
     RPA.Windows.Click         Operações Fiscais
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
@@ -45,7 +45,7 @@ Operações Fiscais
     RPA.Windows.Click         Sim
 
 Descontos/Classificações para Grãos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Descontos_Classificações para Grãos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Descontos_Classificações para Grãos
     Cadastros
     RPA.Windows.Click         Descontos/Classificações para Grãos
     RPA.Windows.Get Text      Cadastro de Descontos/Classificações para Grãos (1)
@@ -55,7 +55,7 @@ Descontos/Classificações para Grãos
     RPA.Windows.Click         Sim
 
 Classificação de Grãos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Classificação de Grãos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Classificação de Grãos
     Cadastros
     RPA.Windows.Click         Classificação de Grãos
     RPA.Windows.Get Text      Cadastro de Classificação de Grãos (1)
@@ -65,7 +65,7 @@ Classificação de Grãos
     RPA.Windows.Click         Sim
 
 Tabela de Índices de Descontos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Tabela de Índices de Descontos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Tabela de Índices de Descontos
     Cadastros
     RPA.Windows.Click         Tabela de Índices de Descontos
     RPA.Windows.Get Text      Cadastro de Índices de Descontos (1)
@@ -75,7 +75,7 @@ Tabela de Índices de Descontos
     RPA.Windows.Click         Sim
 
 Melhorias do Peso Hectolítrico
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Melhorias do Peso Hectolítrico
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Melhorias do Peso Hectolítrico
     Cadastros
     RPA.Windows.Click         Melhorias do Peso Hectolítrico
     RPA.Windows.Get Text      Cadastro de Melhorias do Peso Hectolítrico (PH) (1)
@@ -85,7 +85,7 @@ Melhorias do Peso Hectolítrico
     RPA.Windows.Click         Sim
 
 Tipos de Romaneio
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Tipos de Romaneio
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Tipos de Romaneio
     Cadastros
     RPA.Windows.Click         Tipos de Romaneio
     RPA.Windows.Get Text      Cadastro de Tipos de Romaneio (1)
@@ -95,7 +95,7 @@ Tipos de Romaneio
     RPA.Windows.Click         Sim
 
 Conf. Modelos Impressao de Processos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Conf. Modelos Impressao de Processos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Conf. Modelos Impressao de Processos
     Cadastros
     RPA.Windows.Click         Conf. Modelos Impressao de Processos
     RPA.Windows.Get Text      Conf. Modelos Impressão de Processos (1)
@@ -108,7 +108,7 @@ Conf. Modelos Impressao de Processos
     RPA.Windows.Click         Sim
 
 Conf. Movimentação de Estoque de Produtos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Conf. Movimentação de Estoque de Produtos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Conf. Movimentação de Estoque de Produtos
     Cadastros
     RPA.Windows.Click         Conf. Movimentação de Estoque de Produto
     RPA.Windows.Get Text      Configuração de Movimentação de Estoque de Produto (1)
@@ -120,7 +120,7 @@ Conf. Movimentação de Estoque de Produtos
     Fechar janela
 
 Configuração de Troca de Produto p/ emissão de NF
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Configuração de Troca de Produto p_ emissão de NF
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Configuração de Troca de Produto p_ emissão de NF
     Cadastros
     RPA.Windows.Click         Configuração de Troca de Produto p/ emissão de NF
     RPA.Windows.Get Text      Configuração de Troca de Produto p/ emissão de NF (1)
@@ -130,7 +130,7 @@ Configuração de Troca de Produto p/ emissão de NF
     RPA.Windows.Click         Sim
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Empresas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Empresas
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -141,7 +141,7 @@ Parâmetros > Empresas
     RPA.Windows.Click         Sim
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Estabelecimentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Estabelecimentos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -152,7 +152,7 @@ Parâmetros > Estabelecimentos
     RPA.Windows.Click         Sim
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Usuários
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
@@ -161,7 +161,7 @@ Parâmetros > Usuários
     Fechar janela
 
 Parâmetros > Grupo de Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Grupo de Usuários
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Grupo de Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -172,7 +172,7 @@ Parâmetros > Grupo de Usuários
     RPA.Windows.Click         Sim
 
 Parâmetros > Configurações da Estação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Configurações da Estação
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Configurações da Estação
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    C

@@ -17,7 +17,7 @@ Manutenções
 *** Test Cases ***
 
 Saídas/Vendas > Incluir/Alterar - Sem Fechamento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Incluir_Alterar - Sem Fechamento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Incluir_Alterar - Sem Fechamento
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    S
@@ -26,7 +26,7 @@ Saídas/Vendas > Incluir/Alterar - Sem Fechamento
     Fechar janela
 
 Saídas/Vendas > Incluir - Com Fechamento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Incluir - Com Fechamento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Incluir - Com Fechamento
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    O
@@ -35,7 +35,7 @@ Saídas/Vendas > Incluir - Com Fechamento
     Fechar janela
 
 Saídas/Vendas > Fechar Saídas/Vendas Abertas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Fechar Saídas_Vendas Abertas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Fechar Saídas_Vendas Abertas
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    F
@@ -44,7 +44,7 @@ Saídas/Vendas > Fechar Saídas/Vendas Abertas
     Fechar janela
 
 Saídas/Vendas > Alterar Saídas/Vendas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Alterar Saídas_Vendas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Alterar Saídas_Vendas
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    A
@@ -53,7 +53,7 @@ Saídas/Vendas > Alterar Saídas/Vendas
     Fechar janela
 
 Saídas/Vendas > Consultar Saídas/Vendas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Consultar Saídas_Vendas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Consultar Saídas_Vendas
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    C
@@ -62,7 +62,7 @@ Saídas/Vendas > Consultar Saídas/Vendas
     Fechar janela
 
 Saídas/Vendas > Excluir Saídas/Vendas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Excluir Saídas_Vendas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Excluir Saídas_Vendas
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    E
@@ -71,7 +71,7 @@ Saídas/Vendas > Excluir Saídas/Vendas
     Fechar janela
 
 Saídas/Vendas > Venda Simplificada
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Venda Simplificada
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Venda Simplificada
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    V
@@ -80,7 +80,7 @@ Saídas/Vendas > Venda Simplificada
     Fechar janela
 
 Ordem de Serviço > Abrir Ordem de Serviço
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                        ERRO Abrir Ordem de Serviço
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                         Abrir Ordem de Serviço
     Manutenções
     RPA.Windows.Click         Ordem de Serviço
     RPA.Desktop.Press Keys    A
@@ -89,7 +89,7 @@ Ordem de Serviço > Abrir Ordem de Serviço
     Fechar janela
 
 Ordem de Serviço > Movimentar Ordem de Serviço
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                        ERRO Movimentar Ordem de Serviço
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                         Movimentar Ordem de Serviço
     Manutenções
     RPA.Windows.Click         Ordem de Serviço
     RPA.Desktop.Press Keys    M
@@ -98,7 +98,7 @@ Ordem de Serviço > Movimentar Ordem de Serviço
     Fechar janela
 
 Ordem de Serviço > Fechar Ordem de Serviço
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                        ERRO Fechar Ordem de Serviço
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                         Fechar Ordem de Serviço
     Manutenções
     RPA.Windows.Click         Ordem de Serviço
     RPA.Desktop.Press Keys    F
@@ -107,7 +107,7 @@ Ordem de Serviço > Fechar Ordem de Serviço
     Fechar janela
 
 Ordem de Serviço > Alterar Ordem de Serviço
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                        ERRO Alterar Ordem de Serviço
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                         Alterar Ordem de Serviço
     Manutenções
     RPA.Windows.Click         Ordem de Serviço
     RPA.Desktop.Press Keys    L
@@ -116,7 +116,7 @@ Ordem de Serviço > Alterar Ordem de Serviço
     Fechar janela
 
 Ordem de Serviço > Consultar Ordem de Serviço
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                        ERRO Consultar Ordem de Serviço
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                         Consultar Ordem de Serviço
     Manutenções
     RPA.Windows.Click         Ordem de Serviço
     RPA.Desktop.Press Keys    C
@@ -125,7 +125,7 @@ Ordem de Serviço > Consultar Ordem de Serviço
     Fechar janela
 
 Ordem de Serviço > Excluir Ordem de Serviço
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                        ERRO Excluir Ordem de Serviço
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                         Excluir Ordem de Serviço
     Manutenções
     RPA.Windows.Click         Ordem de Serviço
     RPA.Desktop.Press Keys    E
@@ -134,7 +134,7 @@ Ordem de Serviço > Excluir Ordem de Serviço
     Fechar janela
 
 Saídas para Venda Ambulante > Cadastro de Motivo de Retorno de Vendas Ambulantes
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas para Venda Ambulante/                        ERRO Cadastro de Motivo de Retorno de Vendas Ambulantes
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas para Venda Ambulante/                         Cadastro de Motivo de Retorno de Vendas Ambulantes
     Manutenções
     RPA.Windows.Click         Saídas para Venda Ambulante
     RPA.Desktop.Press Keys    C
@@ -143,7 +143,7 @@ Saídas para Venda Ambulante > Cadastro de Motivo de Retorno de Vendas Ambulante
     Fechar janela
 
 Saídas para Venda Ambulante > Saídas para Venda Ambulante
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas para Venda Ambulante/                        ERRO Saídas para Venda Ambulante
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas para Venda Ambulante/                         Saídas para Venda Ambulante
     Manutenções
     RPA.Windows.Click         Saídas para Venda Ambulante
     RPA.Desktop.Press Keys    S
@@ -152,7 +152,7 @@ Saídas para Venda Ambulante > Saídas para Venda Ambulante
     Fechar janela
 
 Saídas para Venda Ambulante > Controle de Venda e Devoluções de Saídas para Venda Ambulante
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas para Venda Ambulante/                        ERRO Controle de Venda e Devoluções de Saídas para Venda Ambulante
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas para Venda Ambulante/                         Controle de Venda e Devoluções de Saídas para Venda Ambulante
     Manutenções
     RPA.Windows.Click         Saídas para Venda Ambulante
     RPA.Desktop.Press Keys    O
@@ -161,7 +161,7 @@ Saídas para Venda Ambulante > Controle de Venda e Devoluções de Saídas para 
     Fechar janela
 
 Saídas para Venda Ambulante > Excluir Venda Ambulante
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas para Venda Ambulante/                        ERRO Excluir Venda Ambulante
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas para Venda Ambulante/                         Excluir Venda Ambulante
     Manutenções
     RPA.Windows.Click         Saídas para Venda Ambulante
     RPA.Desktop.Press Keys    E
@@ -170,7 +170,7 @@ Saídas para Venda Ambulante > Excluir Venda Ambulante
     Fechar janela
 
 Demais Operações de Saída > Manutenção de Devolução de Compra
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                        ERRO Manutenção de Devolução de Compra
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                         Manutenção de Devolução de Compra
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Desktop.Press Keys    M
@@ -179,7 +179,7 @@ Demais Operações de Saída > Manutenção de Devolução de Compra
     Fechar janela
 
 Demais Operações de Saída > Manutenção de Entrega Futura
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                        ERRO Manutenção de Entrega Futura
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                         Manutenção de Entrega Futura
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Desktop.Press Keys    A
@@ -188,7 +188,7 @@ Demais Operações de Saída > Manutenção de Entrega Futura
     Fechar janela
 
 Demais Operações de Saída > Manutenção de Saídas Diversas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                        ERRO Manutenção de Saídas Diversas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                         Manutenção de Saídas Diversas
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Desktop.Press Keys    N
@@ -197,7 +197,7 @@ Demais Operações de Saída > Manutenção de Saídas Diversas
     Fechar janela
 
 Demais Operações de Saída > Emissão de notas fiscais sobre Saídas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                        ERRO Emissão de notas fiscais sobre Saídas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                         Emissão de notas fiscais sobre Saídas
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Desktop.Press Keys    I
@@ -206,7 +206,7 @@ Demais Operações de Saída > Emissão de notas fiscais sobre Saídas
     Fechar janela
 
 Demais Operações de Saída > Estornar Fechamentos Vendas/Ordens de Serviços
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                        ERRO Estornar Fechamentos Vendas_Ordens de Serviços
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                         Estornar Fechamentos Vendas_Ordens de Serviços
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Desktop.Press Keys    E
@@ -215,7 +215,7 @@ Demais Operações de Saída > Estornar Fechamentos Vendas/Ordens de Serviços
     Fechar janela
 
 Demais Operações de Saída > Agendamentos > Tipo Contato
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                        ERRO Tipo Contato
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                         Tipo Contato
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Agendamentos
@@ -225,7 +225,7 @@ Demais Operações de Saída > Agendamentos > Tipo Contato
     Fechar janela
 
 Demais Operações de Saída > Agendamentos > Contato
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                        ERRO Contato
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                         Contato
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Agendamentos
@@ -235,7 +235,7 @@ Demais Operações de Saída > Agendamentos > Contato
     Fechar janela
 
 Demais Operações de Saída > Agendamentos > Agendamento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                        ERRO Agendamento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                         Agendamento
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Agendamentos
@@ -245,7 +245,7 @@ Demais Operações de Saída > Agendamentos > Agendamento
     Fechar janela
 
 Demais Operações de Saída > Agendamentos > Consultar Agendamentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                        ERRO Consultar Agendamentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                         Consultar Agendamentos
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Agendamentos
@@ -255,7 +255,7 @@ Demais Operações de Saída > Agendamentos > Consultar Agendamentos
     Fechar janela
 
 Demais Operações de Saída > Agendamentos > Relatório de Contatos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                        ERRO Relatório de Contatos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                         Relatório de Contatos
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Agendamentos
@@ -265,7 +265,7 @@ Demais Operações de Saída > Agendamentos > Relatório de Contatos
     Fechar janela
 
 Demais Operações de Saída > Agendamentos > Relatório de Agendamentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                        ERRO Relatório de Agendamentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                         Relatório de Agendamentos
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Agendamentos
@@ -275,7 +275,7 @@ Demais Operações de Saída > Agendamentos > Relatório de Agendamentos
     Fechar janela
 
 Demais Operações de Saída > Condicional > Inclusão de Saídas em Condicional
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Condicional/                        ERRO Inclusão de Saídas em Condicional
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Condicional/                         Inclusão de Saídas em Condicional
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Condicional
@@ -285,7 +285,7 @@ Demais Operações de Saída > Condicional > Inclusão de Saídas em Condicional
     Fechar janela
 
 Demais Operações de Saída > Condicional > Manutenção/consulta de saídas em condicional
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Condicional/                        ERRO Manutenção_consulta de saídas em condicional
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Condicional/                         Manutenção_consulta de saídas em condicional
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Condicional
@@ -295,7 +295,7 @@ Demais Operações de Saída > Condicional > Manutenção/consulta de saídas em
     Fechar janela
 
 Demais Operações de Saída > Condicional > Saldo de saídas em condicional
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Condicional/                        ERRO Saldo de saídas em condicional
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Condicional/                         Saldo de saídas em condicional
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Condicional
@@ -305,7 +305,7 @@ Demais Operações de Saída > Condicional > Saldo de saídas em condicional
     Fechar janela
 
 Demais Operações de Saída > Fixação de vendas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                        ERRO Fixação de vendas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/                         Fixação de vendas
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Desktop.Press Keys    F
@@ -314,7 +314,7 @@ Demais Operações de Saída > Fixação de vendas
     Fechar janela
 
 Demais Operações de Saída > Exportação > Venda para exportação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Exportação/                        ERRO Venda para exportação
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Exportação/                         Venda para exportação
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Exportação
@@ -324,7 +324,7 @@ Demais Operações de Saída > Exportação > Venda para exportação
     Fechar janela
 
 Demais Operações de Saída > Exportação > Venda para Exportação - Pendentes
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Exportação/                        ERRO Venda para Exportação - Pendentes
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Exportação/                         Venda para Exportação - Pendentes
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Exportação
@@ -334,7 +334,7 @@ Demais Operações de Saída > Exportação > Venda para Exportação - Pendente
     Fechar janela
 
 Demais Operações de Saída > Exportação > Relatório de Movimentação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Exportação/                        ERRO Relatório de Movimentação
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Exportação/                         Relatório de Movimentação
     Manutenções
     RPA.Windows.Click         Demais Operações de Saída
     RPA.Windows.Click         Exportação
@@ -344,7 +344,7 @@ Demais Operações de Saída > Exportação > Relatório de Movimentação
     BaseDesktop.Screenshot    Vendas para Exportação - Relatório (1)    ${Caminho_Screenshots}Demais Operações de Saída/Exportação/Relatório de Movimentação
     Fechar janela
 Documentos Fiscais > NF-e > Emissão de Notas Fiscais Eletrônicas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                        ERRO Emissão de Notas Fiscais Eletrônicas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                         Emissão de Notas Fiscais Eletrônicas
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         NF-e
@@ -354,7 +354,7 @@ Documentos Fiscais > NF-e > Emissão de Notas Fiscais Eletrônicas
     Fechar janela
 
 Documentos Fiscais > NF-e > Monitorar NFe's
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                        ERRO Monitorar NFe's
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                         Monitorar NFe's
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         NF-e
@@ -364,7 +364,7 @@ Documentos Fiscais > NF-e > Monitorar NFe's
     Fechar janela
 
 Documentos Fiscais > NF-e > Inutilização de Numeração
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                        ERRO Inutilização de Numeração
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                         Inutilização de Numeração
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         NF-e
@@ -374,7 +374,7 @@ Documentos Fiscais > NF-e > Inutilização de Numeração
     RPA.Windows.Click         Fechar
 
 Documentos Fiscais > NF-e > Inutilização de Numeração(Envio Rápido)
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                        ERRO Inutilização de Numeração(Envio Rápido)
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                         Inutilização de Numeração(Envio Rápido)
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         NF-e
@@ -384,7 +384,7 @@ Documentos Fiscais > NF-e > Inutilização de Numeração(Envio Rápido)
     Fechar janela
 
 Documentos Fiscais > NF-e > Carta de Correção Eletrônica
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                        ERRO Carta de Correção Eletrônica
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                         Carta de Correção Eletrônica
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         NF-e
@@ -394,7 +394,7 @@ Documentos Fiscais > NF-e > Carta de Correção Eletrônica
     RPA.Windows.Click         Fechar
 
 Documentos Fiscais > NF-e > Insucesso de Entrega da NF-e
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                        ERRO Insucesso de Entrega da NF-e
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/NF-e/                         Insucesso de Entrega da NF-e
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         NF-e
@@ -404,7 +404,7 @@ Documentos Fiscais > NF-e > Insucesso de Entrega da NF-e
     Fechar janela
 
 Documentos Fiscais > Monitorar NFSE's
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/                     ERRO Monitorar NFSE's
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/                      Monitorar NFSE's
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Desktop.Press Keys    M
@@ -413,7 +413,7 @@ Documentos Fiscais > Monitorar NFSE's
     Fechar janela
 
 Documentos Fiscais > Monitorar GNRE
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/                     ERRO Monitorar GNRE
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/                      Monitorar GNRE
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Desktop.Press Keys    O
@@ -422,7 +422,7 @@ Documentos Fiscais > Monitorar GNRE
     Fechar janela
 
 Documentos Fiscais > ECF > Leitura X
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/ECF/                        ERRO Leitura X
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/ECF/                         Leitura X
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         ECF
@@ -432,7 +432,7 @@ Documentos Fiscais > ECF > Leitura X
     Fechar janela
 
 Documentos Fiscais > ECF > Redução Z
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/ECF/                        ERRO Redução Z
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/ECF/                         Redução Z
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         ECF
@@ -442,7 +442,7 @@ Documentos Fiscais > ECF > Redução Z
     Fechar janela
 
 Documentos Fiscais > ECF > Relatório Gerencial
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/ECF/                        ERRO Relatório Gerencial
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/ECF/                         Relatório Gerencial
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         ECF
@@ -452,7 +452,7 @@ Documentos Fiscais > ECF > Relatório Gerencial
     Fechar janela
 
 Documentos Fiscais > ECF > Cancelar Último Cupom
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/ECF/                        ERRO Cancelar Último Cupom
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/ECF/                         Cancelar Último Cupom
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         ECF
@@ -462,7 +462,7 @@ Documentos Fiscais > ECF > Cancelar Último Cupom
     Fechar janela
 
 Documentos Fiscais > ECF > Mapa Resumo (Redução Z)
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/ECF/                        ERRO Mapa Resumo (Redução Z)
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/ECF/                         Mapa Resumo (Redução Z)
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         ECF
@@ -472,7 +472,7 @@ Documentos Fiscais > ECF > Mapa Resumo (Redução Z)
     Fechar janela
 
 Documentos Fiscais > MDF-e > Manifesto de Documentos Fiscais
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/MDF-e/                        ERRO Manifesto de Documentos Fiscais
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/MDF-e/                         Manifesto de Documentos Fiscais
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         MDF-e
@@ -482,7 +482,7 @@ Documentos Fiscais > MDF-e > Manifesto de Documentos Fiscais
     Fechar janela
 
 Documentos Fiscais > MDF-e > Monitor - MDF-e
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/MDF-e/                        ERRO Monitor - MDF-e
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/MDF-e/                         Monitor - MDF-e
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         MDF-e
@@ -492,7 +492,7 @@ Documentos Fiscais > MDF-e > Monitor - MDF-e
     Fechar janela
 
 Documentos Fiscais > MDF-e > Importar NF-e para MDF-e
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/MDF-e/                        ERRO Importar NF-e para MDF-e
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/MDF-e/                         Importar NF-e para MDF-e
     Manutenções
     RPA.Windows.Click         Documentos Fiscais
     RPA.Windows.Click         MDF-e
@@ -502,7 +502,7 @@ Documentos Fiscais > MDF-e > Importar NF-e para MDF-e
     Fechar janela
 
 Pedidos > Pedidos de Venda > Pedido de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Pedido de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Pedido de Venda
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -512,7 +512,7 @@ Pedidos > Pedidos de Venda > Pedido de Venda
     Fechar janela
 
 Pedidos > Pedidos de Venda > Zeramento de Pedido
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Zeramento de Pedido
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Zeramento de Pedido
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -522,7 +522,7 @@ Pedidos > Pedidos de Venda > Zeramento de Pedido
     Fechar janela
 
 Pedidos > Pedidos de Venda > Pré Zeramento de Pedido
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Pré Zeramento de Pedido
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Pré Zeramento de Pedido
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -532,7 +532,7 @@ Pedidos > Pedidos de Venda > Pré Zeramento de Pedido
     Fechar janela
 
 Pedidos > Pedidos de Venda > Gerar Venda por Pedido de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Gerar Venda por Pedido de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Gerar Venda por Pedido de Venda
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -542,7 +542,7 @@ Pedidos > Pedidos de Venda > Gerar Venda por Pedido de Venda
     Fechar janela
 
 Pedidos > Pedidos de Venda > Pedido de Venda Simplificado
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Pedido de Venda Simplificado
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Pedido de Venda Simplificado
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -552,7 +552,7 @@ Pedidos > Pedidos de Venda > Pedido de Venda Simplificado
     Fechar janela
 
 Pedidos > Pedidos de Venda > Manutenção de Pedido de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Manutenção de Pedido de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Manutenção de Pedido de Venda
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -562,7 +562,7 @@ Pedidos > Pedidos de Venda > Manutenção de Pedido de Venda
     Fechar janela
 
 Pedidos > Pedidos de Venda > Cadastro de Status
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Cadastro de Status
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Cadastro de Status
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -572,7 +572,7 @@ Pedidos > Pedidos de Venda > Cadastro de Status
     Fechar janela
 
 Pedidos > Pedidos de Venda > Aprovação/Rejeição
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Aprovação_Rejeição
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Aprovação_Rejeição
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -582,7 +582,7 @@ Pedidos > Pedidos de Venda > Aprovação/Rejeição
     Fechar janela
 
 Pedidos > Pedidos de Venda > Estorno da Aprovação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Estorno da Aprovação
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Estorno da Aprovação
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -592,7 +592,7 @@ Pedidos > Pedidos de Venda > Estorno da Aprovação
     RPA.Windows.Click         Fechar
 
 Pedidos > Pedidos de Venda > Enviar Email para Aprovação/Rejeição Pedido de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Enviar Email para Aprovação_Rejeição Pedido de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Enviar Email para Aprovação_Rejeição Pedido de Venda
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -602,7 +602,7 @@ Pedidos > Pedidos de Venda > Enviar Email para Aprovação/Rejeição Pedido de 
     Fechar janela
 
 Pedidos > Pedidos de Venda > Definir lotes - Expedição
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Definir lotes - Expedição
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Definir lotes - Expedição
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -612,7 +612,7 @@ Pedidos > Pedidos de Venda > Definir lotes - Expedição
     Fechar janela
 
 Pedidos > Pedidos de Venda > Modelo de Impressão
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Modelo de Impressão
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Modelo de Impressão
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -623,7 +623,7 @@ Pedidos > Pedidos de Venda > Modelo de Impressão
     RPA.Windows.Click         Sim    
     
 Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Agrupar Pedidos de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/                      ERRO Agrupar Pedidos de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/                       Agrupar Pedidos de Venda
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -634,7 +634,7 @@ Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Agrupar Pedidos d
     RPA.Windows.Click         Fechar  
 
 Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Estornar Pedidos de Venda Agrupados
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/                      ERRO Estornar Pedidos de Venda Agrupados
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/                       Estornar Pedidos de Venda Agrupados
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -645,7 +645,7 @@ Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Estornar Pedidos 
     Fechar janela
 
 Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Relatório de Pedidos de Venda Agrupados
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/                      ERRO Relatório de Pedidos de Venda Agrupados
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/                       Relatório de Pedidos de Venda Agrupados
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -656,7 +656,7 @@ Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Relatório de Ped
     Fechar janela
 
 Pedidos > Pedidos de Venda > Reprocessamento de Custos Gerenciais de Pedido de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Reprocessamento de Custos Gerenciais de Pedido de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Reprocessamento de Custos Gerenciais de Pedido de Venda
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Windows.Click         Pedidos de Venda
@@ -666,7 +666,7 @@ Pedidos > Pedidos de Venda > Reprocessamento de Custos Gerenciais de Pedido de V
     Fechar janela
 
 Pedidos > Pedidos de Transferência
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                      ERRO Pedidos de Transferência
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Pedidos de Transferência
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Desktop.Press Keys    P
@@ -675,7 +675,7 @@ Pedidos > Pedidos de Transferência
     Fechar janela
 
 Orçamentos > Orçamentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Orçamentos/                     ERRO Orçamentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Orçamentos/                      Orçamentos
     Manutenções
     RPA.Windows.Click         Orçamentos
     RPA.Desktop.Press Keys    O
@@ -684,7 +684,7 @@ Orçamentos > Orçamentos
     Fechar janela
 
 Orçamentos > Consulta
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Orçamentos/                     ERRO Consulta
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Orçamentos/                      Consulta
     Manutenções
     RPA.Windows.Click         Orçamentos
     RPA.Desktop.Press Keys    C
@@ -693,7 +693,7 @@ Orçamentos > Consulta
     Fechar janela
 
 Pesagem Geral
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Pesagem Geral
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Pesagem Geral
     Manutenções
     RPA.Windows.Click         Pesagem Geral
     RPA.Windows.Get Text      Consulta de Pesagem Geral (1)
@@ -701,7 +701,7 @@ Pesagem Geral
     Fechar janela
 
 Controle de Viagens de Vendedores > Lançamento de Viagens
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle de Viagens de Vendedores/                     ERRO Lançamento de Viagens
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle de Viagens de Vendedores/                      Lançamento de Viagens
     Manutenções
     RPA.Windows.Click         Controle de Viagens de Vendedores
     RPA.Desktop.Press Keys    L
@@ -710,7 +710,7 @@ Controle de Viagens de Vendedores > Lançamento de Viagens
     Fechar janela
 
 Controle de Viagens de Vendedores > Lançamento de Despesas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle de Viagens de Vendedores/                     ERRO Lançamento de Despesas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle de Viagens de Vendedores/                      Lançamento de Despesas
     Manutenções
     RPA.Windows.Click         Controle de Viagens de Vendedores
     RPA.Desktop.Press Keys    A
@@ -719,7 +719,7 @@ Controle de Viagens de Vendedores > Lançamento de Despesas
     Fechar janela
 
 Controle de Viagens de Vendedores > Relatório de Despesas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle de Viagens de Vendedores/                     ERRO Relatório de Despesas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle de Viagens de Vendedores/                      Relatório de Despesas
     Manutenções
     RPA.Windows.Click         Controle de Viagens de Vendedores
     RPA.Desktop.Press Keys    R
@@ -728,7 +728,7 @@ Controle de Viagens de Vendedores > Relatório de Despesas
     Fechar janela
 
 Gerenciamento de Preços > Formação de Preços de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Gerenciamento de Preços/                     ERRO Formação de Preços de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Gerenciamento de Preços/                      Formação de Preços de Venda
     Manutenções
     RPA.Windows.Click         Gerenciamento de Preços
     RPA.Desktop.Press Keys    F
@@ -737,7 +737,7 @@ Gerenciamento de Preços > Formação de Preços de Venda
     Fechar janela
 
 Gerenciamento de Preços > Tabela de Preços Condicionais
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Gerenciamento de Preços/                     ERRO Tabela de Preços Condicionais
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Gerenciamento de Preços/                      Tabela de Preços Condicionais
     Manutenções
     RPA.Windows.Click         Gerenciamento de Preços
     RPA.Desktop.Press Keys    T
@@ -746,7 +746,7 @@ Gerenciamento de Preços > Tabela de Preços Condicionais
     Fechar janela
 
 Gerenciamento de Preços > Tabela de Preços de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Gerenciamento de Preços/                     ERRO Tabela de Preços de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Gerenciamento de Preços/                      Tabela de Preços de Venda
     Manutenções
     RPA.Windows.Click         Gerenciamento de Preços
     RPA.Desktop.Press Keys    A
@@ -755,7 +755,7 @@ Gerenciamento de Preços > Tabela de Preços de Venda
     Fechar janela
 
 Caixa Operador > Abertura
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                     ERRO Abertura
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                      Abertura
     Manutenções
     RPA.Windows.Click         Caixa Operador
     RPA.Desktop.Press Keys    A
@@ -766,7 +766,7 @@ Caixa Operador > Abertura
     Fechar janela
 
 Caixa Operador > Suprimento/Entradas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                     ERRO Suprimento_Entradas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                      Suprimento_Entradas
     Manutenções
     RPA.Windows.Click         Caixa Operador
     RPA.Desktop.Press Keys    S
@@ -775,7 +775,7 @@ Caixa Operador > Suprimento/Entradas
     Fechar janela
 
 Caixa Operador > Sangria/Saídas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                     ERRO Sangria_Saídas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                      Sangria_Saídas
     Manutenções
     RPA.Windows.Click         Caixa Operador
     RPA.Desktop.Press Keys    N
@@ -784,7 +784,7 @@ Caixa Operador > Sangria/Saídas
     Fechar janela
 
 Caixa Operador > Fechamento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                     ERRO Fechamento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                      Fechamento
     Manutenções
     RPA.Windows.Click         Caixa Operador
     RPA.Desktop.Press Keys    F
@@ -795,7 +795,7 @@ Caixa Operador > Fechamento
     Fechar janela
 
 Caixa Operador > Relatório
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                     ERRO Relatório
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                      Relatório
     Manutenções
     RPA.Windows.Click         Caixa Operador
     RPA.Desktop.Press Keys    R
@@ -804,7 +804,7 @@ Caixa Operador > Relatório
     Fechar janela
 
 Processos Personalizados
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                     ERRO Processos Personalizados
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                      Processos Personalizados
     Manutenções
     RPA.Windows.Click         Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
@@ -812,7 +812,7 @@ Processos Personalizados
     Fechar janela
 
 Controle de Recorrências
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                     ERRO Controle de Recorrências
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                      Controle de Recorrências
     Manutenções
     RPA.Windows.Click         Controle de Recorrências
     RPA.Windows.Get Text      Consulta de Recorrências (1)

@@ -18,7 +18,7 @@ Manutenções
 *** Test Cases ***
 
 Romaneios Entrada/Saída > Inclusão de Romaneios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                        ERRO Inclusão de Romaneios
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Inclusão de Romaneios
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    I
@@ -29,7 +29,7 @@ Romaneios Entrada/Saída > Inclusão de Romaneios
     Fechar janela
 
 Romaneios Entrada/Saída > Alteração de Romaneios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                        ERRO Alteração de Romaneios
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Alteração de Romaneios
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    A
@@ -40,7 +40,7 @@ Romaneios Entrada/Saída > Alteração de Romaneios
     Fechar janela
 
 Romaneios Entrada/Saída > Consulta de Romaneios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                        ERRO Consulta de Romaneios
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Consulta de Romaneios
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    C
@@ -51,7 +51,7 @@ Romaneios Entrada/Saída > Consulta de Romaneios
     Fechar janela
 
 Romaneios Entrada/Saída > Alteração de Romaneios - Classificação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                        ERRO Alteração de Romaneios - Classificação
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Alteração de Romaneios - Classificação
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    L
@@ -62,7 +62,7 @@ Romaneios Entrada/Saída > Alteração de Romaneios - Classificação
     Fechar janela
 
 Romaneios Entrada/Saída > Alteração de Romaneios - Endereço
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                        ERRO Alteração de Romaneios - Endereço
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Alteração de Romaneios - Endereço
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    T
@@ -72,7 +72,7 @@ Romaneios Entrada/Saída > Alteração de Romaneios - Endereço
     Fechar janela
 
 Romaneios Entrada/Saída > Gerenciamentos de Romaneios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                        ERRO Gerenciamentos de Romaneios
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Gerenciamentos de Romaneios
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    G
@@ -82,7 +82,7 @@ Romaneios Entrada/Saída > Gerenciamentos de Romaneios
     Fechar janela
 
 Pesagem para Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Pesagem para Terceiros
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pesagem para Terceiros
     Manutenções
     RPA.Windows.Click         Pesagem para Terceiros
     RPA.Windows.Get Text      Pesagem para Terceiros (1)
@@ -93,7 +93,7 @@ Pesagem para Terceiros
     Fechar janela
 
 Emissão de Nota Fiscal
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Emissão de Nota Fiscal
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Emissão de Nota Fiscal
     Manutenções
     RPA.Windows.Click         Emissão de Nota Fiscal
     RPA.Windows.Get Text      Emissão de Nota Fiscal (1)
@@ -102,7 +102,7 @@ Emissão de Nota Fiscal
     Fechar janela
 
 Documentos emitidos contra o estabelecimento p/ entrada
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Documentos emitidos contra o estabelecimento p_ entrada
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Documentos emitidos contra o estabelecimento p_ entrada
     Manutenções
     RPA.Windows.Click         Documentos emitidos contra o estabelecimento p/ entrada
     RPA.Windows.Get Text      Documentos emitidos contra o estabelecimento p/ entrada (1)
@@ -111,7 +111,7 @@ Documentos emitidos contra o estabelecimento p/ entrada
     Fechar janela
 
 Pesagem Geral
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Pesagem Geral
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pesagem Geral
     Manutenções
     RPA.Windows.Click         Pesagem Geral
     RPA.Windows.Get Text      Pesagem Geral (1)
@@ -121,7 +121,7 @@ Pesagem Geral
     RPA.Windows.Click         Sim
 
 Processos Personalizados
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Processos Personalizados
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Processos Personalizados
     Manutenções
     RPA.Windows.Click         Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
@@ -131,7 +131,7 @@ Processos Personalizados
     Fechar janela
 
 Pesagem de Descarga - Romaneio
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Pesagem de Descarga - Romaneio
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pesagem de Descarga - Romaneio
     Manutenções
     RPA.Windows.Click         Pesagem de Descarga - Romaneio
     RPA.Windows.Get Text      Pesagem Romaneio Descarga (1)
@@ -142,7 +142,7 @@ Pesagem de Descarga - Romaneio
     Fechar janela
 
 Consulta/Manutenção Ordem Tickets Descarga
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Consulta_Manutenção Ordem Tickets Descarga
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Consulta_Manutenção Ordem Tickets Descarga
     Manutenções
     RPA.Windows.Click         Consulta/Manutenção Ordem Tickets Descarga
     RPA.Windows.Get Text      Consulta/Manutenção Ordem Ticket Descarga (1)
@@ -151,7 +151,7 @@ Consulta/Manutenção Ordem Tickets Descarga
     Fechar janela
 
 Pesagem de Descarga - Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Pesagem de Descarga - Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pesagem de Descarga - Venda
     Manutenções
     RPA.Windows.Click         Pesagem de Descarga - Venda
     RPA.Windows.Get Text      Pesagem Romaneio Descarga - Venda (1)
@@ -161,7 +161,7 @@ Pesagem de Descarga - Venda
     RPA.Windows.Click         Sim
 
 Pesagem - Ordem de Carregamento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Pesagem - Ordem de Carregamento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pesagem - Ordem de Carregamento
     Manutenções
     RPA.Windows.Click         Pesagem - Ordem de Carregamento
     RPA.Windows.Get Text      Pesagem - Ordem de Carregamento (1)

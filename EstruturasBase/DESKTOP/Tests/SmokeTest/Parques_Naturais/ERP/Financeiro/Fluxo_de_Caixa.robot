@@ -17,7 +17,7 @@ Fluxo de Caixa
 *** Test Cases ***
 
 Fluxo de Caixa a Realizar (Projetado)
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Fluxo de Caixa a Realizar (Projetado)
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Fluxo de Caixa a Realizar (Projetado)
     Fluxo de Caixa
     RPA.Windows.Click         Fluxo de Caixa a Realizar (Projetado)
     RPA.Windows.Get Text      Fluxo de Caixa Projetado (A Realizar) (1)
@@ -25,7 +25,7 @@ Fluxo de Caixa a Realizar (Projetado)
     Fechar janela
 
 Fluxo de Caixa Realizado    
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Fluxo de Caixa Realizado
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Fluxo de Caixa Realizado
     Fluxo de Caixa
     RPA.Windows.Click         Fluxo de Caixa Realizado
     RPA.Windows.Get Text      Fluxo de Caixa a Realizado (1)

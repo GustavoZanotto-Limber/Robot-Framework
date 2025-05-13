@@ -17,7 +17,7 @@ Manutenções
 *** Test Cases ***
 
 Confirmação de Negócio
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Confirmação de Negócio
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Confirmação de Negócio
     Manutenções
     RPA.Windows.Click         Confirmação de Negócio
     RPA.Windows.Get Text      Confirmação de Negócio (1)
@@ -25,7 +25,7 @@ Confirmação de Negócio
     Fechar janela
 
 Emissão de NFS-e sobre Confirmações de Negócios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Confirmação de Negócio
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Confirmação de Negócio
     Manutenções
     RPA.Windows.Click         Emissão de NFS-e sobre Confirmações de Negócios
     RPA.Windows.Get Text      Emissão de NFS-e sobre Confirmações de Negócios (1)  
@@ -33,7 +33,7 @@ Emissão de NFS-e sobre Confirmações de Negócios
     Fechar janela
 
 Pedidos > Pedidos de Compra
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Pedidos de Compra
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Pedidos de Compra
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Desktop.Press Keys    P
@@ -42,7 +42,7 @@ Pedidos > Pedidos de Compra
     Fechar janela
 
 Pedidos > Pedidos de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Pedidos de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Pedidos de Venda
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Desktop.Press Keys    E
@@ -51,7 +51,7 @@ Pedidos > Pedidos de Venda
     Fechar janela
 
 Entradas/Compras > Incluir/Alterar
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/             ERRO Incluir_Alterar
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/              Incluir_Alterar
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  I
@@ -60,7 +60,7 @@ Entradas/Compras > Incluir/Alterar
     Fechar janela
 
 Entradas/Compras > Consultar
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/             ERRO Consultar
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/              Consultar
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  C
@@ -69,7 +69,7 @@ Entradas/Compras > Consultar
     Fechar janela
 
 Saídas/Vendas > Incluir Saídas/Vendas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Alterar Saídas_Vendas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Alterar Saídas_Vendas
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    I
@@ -79,7 +79,7 @@ Saídas/Vendas > Incluir Saídas/Vendas
 
 
 Saídas/Vendas > Alterar Saídas/Vendas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Alterar Saídas_Vendas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Alterar Saídas_Vendas
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    A
@@ -88,7 +88,7 @@ Saídas/Vendas > Alterar Saídas/Vendas
     Fechar janela
 
 Saídas/Vendas > Consultar Saídas/Vendas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                        ERRO Consultar Saídas_Vendas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Consultar Saídas_Vendas
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    C

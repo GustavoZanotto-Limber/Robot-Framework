@@ -78,7 +78,7 @@ Cenário 2: Teste abrir a tela de login do card
 # Apenas escrevendo ele ja indentifica como diferentes cenarios assim mesmo declarando um cenario abaixo do outro
 # Ele consegue separar os casos entre si e executa-los de forma individual sem um cenario interferir no outro.
 # Os nomes podem ser colocados oq quiser porem é sempre preferivel colocar bem explicado o que aquele caso de teste ira fazer
-# assim fica mais facil saber qual codigo está com erro ou precisa ser ajustado
+# assim fica mais facil saber qual codigo está com  ou precisa ser ajustado
 
 Cenario 3: Teste de logar no card
     Abrir pagina login card
@@ -92,7 +92,7 @@ Cenario 3: Teste de logar no card
 
 
 
-#Esse teste deverá aparecer como erro no relatório com a mensagem: Test cannot be empty.
+#Esse teste deverá aparecer como  no relatório com a mensagem: Test cannot be empty.
 
 # ***EXECUTAR UM TESTE***
 # Para se executar um teste no robot basta abrir o terminal pelo VsCode (Ou pela ferramenta que estiver utilizando)

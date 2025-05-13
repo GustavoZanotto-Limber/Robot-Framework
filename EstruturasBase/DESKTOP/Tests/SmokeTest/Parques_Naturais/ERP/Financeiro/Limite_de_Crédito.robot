@@ -18,7 +18,7 @@ Limite de Crédito
 *** Test Cases ***
 
 Limite de Crédito
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Limite de Crédito
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Limite de Crédito
     Limite de Crédito
     RPA.Windows.Click         Limite de Crédito
     RPA.Windows.Get Text      Limite de Crédito (1)

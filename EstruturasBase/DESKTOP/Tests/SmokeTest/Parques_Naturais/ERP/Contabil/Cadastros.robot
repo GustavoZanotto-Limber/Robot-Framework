@@ -14,7 +14,7 @@ ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTe
 *** Test Cases ***
 
 Plano de Contas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Plano de Contas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Plano de Contas
     Cadastros
     RPA.Windows.Click         Plano de Contas
     RPA.Windows.Get Text      Cadastro do Plano de Contas (1)  
@@ -24,7 +24,7 @@ Plano de Contas
     RPA.Windows.Click         Sim
 
 Plano de Contas X Plano Referencial
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Plano de Contas X Plano Referencial
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Plano de Contas X Plano Referencial
     Cadastros
     RPA.Windows.Click         Plano de Contas x Plano Referencial
     RPA.Windows.Get Text      Relacionamento Plano de Contas x Plano Referencial
@@ -33,7 +33,7 @@ Plano de Contas X Plano Referencial
     RPA.Windows.Click         Fechar
 
 Balancete X Plano Referencial
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Balancete X Plano Referencial
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Balancete X Plano Referencial
     Cadastros
     RPA.Windows.Click         Balancete x Plano Referencial
     RPA.Windows.Get Text      Balancete x Plano Referencial (1)
@@ -43,7 +43,7 @@ Balancete X Plano Referencial
     Fechar janela
 
 Notas Explicativas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Notas Explicativas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Notas Explicativas
     Cadastros
     RPA.Windows.Click         Notas Explicativas
     RPA.Windows.Get Text      Cadastro de Notas Explicativas (1)
@@ -53,7 +53,7 @@ Notas Explicativas
     RPA.Windows.Click         Sim
 
 Históricos Contábeis
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Históricos Contábeis
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Históricos Contábeis
     Cadastros
     RPA.Windows.Click         Históricos Contábeis
     RPA.Windows.Get Text      Cadastro de Históricos Contábeis (1)
@@ -63,7 +63,7 @@ Históricos Contábeis
     RPA.Windows.Click         Sim
 
 Centro de Custos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Centro de Custos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Centro de Custos
     Cadastros
     RPA.Windows.Click         Centro de Custos
     RPA.Windows.Get Text      Cadastro de Centros de Custos (1)
@@ -73,7 +73,7 @@ Centro de Custos
     RPA.Windows.Click         Sim
 
 Indexadores
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Indexadores
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Indexadores
     Cadastros
     RPA.Windows.Click         Indexadores
     RPA.Windows.Get Text      Cadastro de Indexadores (1)
@@ -83,7 +83,7 @@ Indexadores
     RPA.Windows.Click         Sim
 
 Contabilistas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Contabilistas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Contabilistas
     Cadastros
     RPA.Windows.Click         Contabilistas
     RPA.Windows.Get Text      Cadastro de Contabilistas (1)
@@ -93,7 +93,7 @@ Contabilistas
     RPA.Windows.Click         Sim
 
 Montagem do Demonstrativo DRE
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Montagem do Demonstrativo DRE
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Montagem do Demonstrativo DRE
     Cadastros
     RPA.Windows.Click         Montagem do Demonstrativo DRE
     RPA.Windows.Get Text      Montagem do Demonstrativo (1)
@@ -103,7 +103,7 @@ Montagem do Demonstrativo DRE
     Fechar janela
 
 Montagem do Demonstrativo DFC
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Montagem do Demonstrativo DFC
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Montagem do Demonstrativo DFC
     Cadastros
     RPA.Windows.Click         Montagem do Demonstrativo DFC
     RPA.Windows.Get Text      Montagem do Demonstrativo - DFC (1)
@@ -113,7 +113,7 @@ Montagem do Demonstrativo DFC
     Fechar janela
 
 Configuração Int. Contabil
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Configuração Int. Contabil
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Configuração Int. Contabil
     Cadastros
     RPA.Windows.Click         Configuração Int. Contabil
     RPA.Windows.Get Text      Configuração para Integração Contábil (1)
@@ -123,7 +123,7 @@ Configuração Int. Contabil
     RPA.Windows.Click         Sim
 
 Composição de Custos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Composição de Custos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Composição de Custos
     Cadastros
     RPA.Windows.Click         Composição de Custos
     RPA.Windows.Get Text      Configuração de Composição de Custos (1)
@@ -133,7 +133,7 @@ Composição de Custos
     RPA.Windows.Click         Sim
 
 Despesas antecipadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Despesas antecipadas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Despesas antecipadas
     Cadastros
     RPA.Windows.Click         Despesas antecipadas
     RPA.Windows.Get Text      Cadastro de Despesas Antecipadas (1)
@@ -143,7 +143,7 @@ Despesas antecipadas
     RPA.Windows.Click         Sim
 
 Países
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Países
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Países
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -153,7 +153,7 @@ Países
     RPA.Windows.Click       Sim
 
 Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Estados
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Estados
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -163,7 +163,7 @@ Estados
     RPA.Windows.Click         Sim
 
 Municípios
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Municípios
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Municípios
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -173,7 +173,7 @@ Municípios
     RPA.Windows.Click       Sim
 
 Localidades
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Localidades
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Localidades
     Cadastros
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
@@ -183,7 +183,7 @@ Localidades
     RPA.Windows.Click       Sim
 
 Regiões
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Regiões
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Regiões
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -193,7 +193,7 @@ Regiões
     RPA.Windows.Click       Sim
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Empresas
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Empresas
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -204,7 +204,7 @@ Parâmetros > Empresas
     RPA.Windows.Click       Sim
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Estabelecimentos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Estabelecimentos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
@@ -215,7 +215,7 @@ Parâmetros > Estabelecimentos
     RPA.Windows.Click       Sim
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Usuários
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
@@ -226,7 +226,7 @@ Parâmetros > Usuários
     RPA.Windows.Click       Sim
 
 Parâmetros > Grupos Usuários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Grupos Usuários
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Grupos Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    g
@@ -237,7 +237,7 @@ Parâmetros > Grupos Usuários
     RPA.Windows.Click       Sim
 
 Parâmetros > Configurações de Estação
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Configurações de Estação
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Configurações de Estação
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    c

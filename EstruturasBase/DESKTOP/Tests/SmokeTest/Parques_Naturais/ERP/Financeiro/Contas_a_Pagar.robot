@@ -19,7 +19,7 @@ Contas a Pagar
 *** Test Cases ***
 
 Lançamentos > Lançamento - Simplificado
-    [Teardown]                Caso aconteça erro                 ${Caminho_Screenshots}Lançamentos/                             ERRO Lançamento - Simplificado
+    [Teardown]                Caso aconteça erro                 ${Caminho_Screenshots}Lançamentos/                              Lançamento - Simplificado
     Contas a Pagar
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    l
@@ -28,7 +28,7 @@ Lançamentos > Lançamento - Simplificado
     Fechar janela
 
 Lançamentos > Lançamento - Múltiplas Parcelas
-    [Teardown]                Caso aconteça erro                                       ${Caminho_Screenshots}Lançamentos/                                   ERRO Lançamento - Múltiplas Parcelas
+    [Teardown]                Caso aconteça erro                                       ${Caminho_Screenshots}Lançamentos/                                    Lançamento - Múltiplas Parcelas
     Contas a Pagar
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    a
@@ -37,7 +37,7 @@ Lançamentos > Lançamento - Múltiplas Parcelas
     Fechar janela
 
 Lançamentos > Lançamento - Com Baixa Automática
-    [Teardown]                Caso aconteça erro                                    ${Caminho_Screenshots}Lançamentos/                                     ERRO Lançamento - Com Baixa Automática
+    [Teardown]                Caso aconteça erro                                    ${Caminho_Screenshots}Lançamentos/                                      Lançamento - Com Baixa Automática
     Contas a Pagar
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    n
@@ -46,7 +46,7 @@ Lançamentos > Lançamento - Com Baixa Automática
     Fechar janela
 
 Financiamento
-    [Teardown]              Caso aconteça erro                           ${Caminho_Screenshots}                 ERRO Financiamento
+    [Teardown]              Caso aconteça erro                           ${Caminho_Screenshots}                  Financiamento
     Contas a Pagar
     RPA.Windows.Click       Financiamento
     RPA.Windows.Get Text    Cronograma de Liberação e Amortização (1)
@@ -54,7 +54,7 @@ Financiamento
     Fechar janela
 
 Baixas
-    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}          ERRO Baixas
+    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}           Baixas
     Contas a Pagar
     RPA.Windows.Click       Baixas
     RPA.Windows.Get Text    Baixas do Contas a Pagar (1)
@@ -63,7 +63,7 @@ Baixas
 
 Estornar Baixas
 
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                   ERRO Extornar Baixas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                    Extornar Baixas
     Contas a Pagar
     RPA.Windows.Click       Estornar Baixas
     RPA.Windows.Get Text    Estorno de Baixas do Contas a Pagar (1)
@@ -71,7 +71,7 @@ Estornar Baixas
     Fechar janela
 
 Renegociações
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}                 ERRO Renegociações
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}                  Renegociações
     Contas a Pagar
     RPA.Windows.Click       Renegociações
     RPA.Windows.Get Text    Renegociação do Contas a Pagar (1)
@@ -79,7 +79,7 @@ Renegociações
     Fechar janela
 
 Estornar Renegociações
-    [Teardown]              Caso aconteça erro                                ${Caminho_Screenshots}                          ERRO Extornar Renegociações
+    [Teardown]              Caso aconteça erro                                ${Caminho_Screenshots}                           Extornar Renegociações
     Contas a Pagar
     RPA.Windows.Click       Estornar Renegociações
     RPA.Windows.Get Text    Estorno de Renegociações do Contas a Pagar (1)
@@ -87,7 +87,7 @@ Estornar Renegociações
     Fechar janela
 
 Alterar Vencimento/Portador
-    [Teardown]              Caso aconteça erro                                        ${Caminho_Screenshots}                               ERRO Alterar Vencimento_Portador
+    [Teardown]              Caso aconteça erro                                        ${Caminho_Screenshots}                                Alterar Vencimento_Portador
     Contas a Pagar
     RPA.Windows.Click       Alterar Vencimento/Portador
     RPA.Windows.Get Text    Alteração de Vencimento/Portador do Contas a Pagar (1)
@@ -95,7 +95,7 @@ Alterar Vencimento/Portador
     Fechar janela
 
 Adiantamentos > Adiantamento a Fornecedores
-    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Adiantamentos/                               ERRO Adiantamento a Fornecedores
+    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Adiantamentos/                                Adiantamento a Fornecedores
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    a
@@ -104,7 +104,7 @@ Adiantamentos > Adiantamento a Fornecedores
     Fechar janela
 
 Adiantamentos > Extrato dos Adiantamentos/Fornecedor
-    [Teardown]                Caso aconteça erro                                ${Caminho_Screenshots}Adiantamentos/                                        ERRO Extrato dos Adiantamentos_Fornecedor
+    [Teardown]                Caso aconteça erro                                ${Caminho_Screenshots}Adiantamentos/                                         Extrato dos Adiantamentos_Fornecedor
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    e
@@ -113,7 +113,7 @@ Adiantamentos > Extrato dos Adiantamentos/Fornecedor
     Fechar janela
 
 Adiantamentos > Saldo de Adiantamentos Fornecedores
-    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Adiantamentos/                                       ERRO Saldo de Adiantamentos Fornecedores
+    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Adiantamentos/                                        Saldo de Adiantamentos Fornecedores
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    s
@@ -122,7 +122,7 @@ Adiantamentos > Saldo de Adiantamentos Fornecedores
     Fechar janela
 
 Adiantamentos > Adiantamento a Funcionários
-    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Adiantamentos/                               ERRO Adiantamento a Funcionários
+    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Adiantamentos/                                Adiantamento a Funcionários
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    d
@@ -131,7 +131,7 @@ Adiantamentos > Adiantamento a Funcionários
     Fechar janela
 
 Adiantamentos > Extrato dos Adiantamentos/Funcionário
-    [Teardown]                Caso aconteça erro                           ${Caminho_Screenshots}Adiantamentos/                                         ERRO Extrato dos Adiantamentos_Funcionário
+    [Teardown]                Caso aconteça erro                           ${Caminho_Screenshots}Adiantamentos/                                          Extrato dos Adiantamentos_Funcionário
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    x
@@ -140,7 +140,7 @@ Adiantamentos > Extrato dos Adiantamentos/Funcionário
     Fechar janela
 
 Adiantamentos > Saldo de Adiantamentos Funcionários
-    [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}Adiantamentos/                                       ERRO Saldo de Adiantamentos Funcionários
+    [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}Adiantamentos/                                        Saldo de Adiantamentos Funcionários
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    l
@@ -149,7 +149,7 @@ Adiantamentos > Saldo de Adiantamentos Funcionários
     Fechar janela
 
 Adiantamentos > Relatório de Lançamento
-    [Teardown]                Caso aconteça erro                                              ${Caminho_Screenshots}Adiantamentos/                           ERRO Relatório de Lançamento
+    [Teardown]                Caso aconteça erro                                              ${Caminho_Screenshots}Adiantamentos/                            Relatório de Lançamento
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    r
@@ -158,7 +158,7 @@ Adiantamentos > Relatório de Lançamento
     Fechar janela
 
 Adiantamentos > Antecipação de Pedido de Compras
-    [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}                                                  ERRO Antecipação de Pedido de Compras
+    [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}                                                   Antecipação de Pedido de Compras
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    n
@@ -167,7 +167,7 @@ Adiantamentos > Antecipação de Pedido de Compras
     Fechar janela
 
 Empenhos
-    [Teardown]              Caso aconteça erro          ${Caminho_Screenshots}            ERRO Empenhos
+    [Teardown]              Caso aconteça erro          ${Caminho_Screenshots}             Empenhos
     Contas a Pagar
     RPA.Windows.Click       Empenhos
     RPA.Windows.Get Text    Cadastro de Empenhos (1)
@@ -175,7 +175,7 @@ Empenhos
     Fechar janela
 
 Recibos Avulsos
-    [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}                   ERRO Recibos Avulsos
+    [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}                    Recibos Avulsos
     Contas a Pagar
     RPA.Windows.Click       Recibos Avulsos
     RPA.Windows.Get Text    Emissão de Recibo - Contas a Pagar (1)
@@ -183,7 +183,7 @@ Recibos Avulsos
     Fechar janela
 
 Consultas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Consultas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Consultas
     Contas a Pagar
     RPA.Windows.Click       Consultas
     RPA.Windows.Get Text    Consulta do Contas a Pagar (1)
@@ -191,7 +191,7 @@ Consultas
     Fechar janela
 
 Relatórios > Contas a Pagar
-    [Teardown]                Caso aconteça erro                 ${Caminho_Screenshots}Relatórios/                  ERRO Contas a Pagar
+    [Teardown]                Caso aconteça erro                 ${Caminho_Screenshots}Relatórios/                   Contas a Pagar
     Contas a Pagar
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    c
@@ -200,7 +200,7 @@ Relatórios > Contas a Pagar
     Fechar janela
 
 Relatórios > Contas a Pagar a Prazo Resumido
-    [Teardown]                Caso aconteça erro                         ${Caminho_Screenshots}Relatórios/                                   ERRO Contas a Pagar a Prazo Resumido
+    [Teardown]                Caso aconteça erro                         ${Caminho_Screenshots}Relatórios/                                    Contas a Pagar a Prazo Resumido
     Contas a Pagar
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    o
@@ -209,7 +209,7 @@ Relatórios > Contas a Pagar a Prazo Resumido
     Fechar janela
 
 Relatórios > Pagamentos
-    [Teardown]                Caso aconteça erro                           ${Caminho_Screenshots}Relatórios/              ERRO Pagamentos
+    [Teardown]                Caso aconteça erro                           ${Caminho_Screenshots}Relatórios/               Pagamentos
     Contas a Pagar
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    p
@@ -218,7 +218,7 @@ Relatórios > Pagamentos
     Fechar janela
 
 Relatórios > Empenhos/Credor
-    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Relatórios/                   ERRO Empenhos_Credor
+    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Relatórios/                    Empenhos_Credor
     Contas a Pagar
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    e
@@ -227,7 +227,7 @@ Relatórios > Empenhos/Credor
     Fechar janela
 
 Comissões de Venda > Manutenção de Pagamento de Comissões
-    [Teardown]                Caso aconteça erro                          ${Caminho_Screenshots}Comissões de Venda/                                        ERRO Manutenção de Pagamento de Comissões
+    [Teardown]                Caso aconteça erro                          ${Caminho_Screenshots}Comissões de Venda/                                         Manutenção de Pagamento de Comissões
     Contas a Pagar
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    m
@@ -236,7 +236,7 @@ Comissões de Venda > Manutenção de Pagamento de Comissões
     Fechar janela
 
 Comissões de Venda > Provisionamento de Pagamento
-    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Comissões de Venda/                                ERRO Provisionamento de Pagamento
+    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Comissões de Venda/                                 Provisionamento de Pagamento
     Contas a Pagar
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    p
@@ -245,7 +245,7 @@ Comissões de Venda > Provisionamento de Pagamento
     Fechar janela
 
 Comissões de Venda > Relatório de Comissões
-    [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}Comissões de Venda/                          ERRO Relatório de Comissões
+    [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}Comissões de Venda/                           Relatório de Comissões
     Contas a Pagar
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    r
@@ -254,7 +254,7 @@ Comissões de Venda > Relatório de Comissões
     Fechar janela
 
 Comissões de Venda > Relatório de Comissões por Vendedor
-    [Teardown]                Caso aconteça erro                         ${Caminho_Screenshots}Comissões de Venda/                                       ERRO Relatório de Comissõesvpor Vendedor
+    [Teardown]                Caso aconteça erro                         ${Caminho_Screenshots}Comissões de Venda/                                        Relatório de Comissõesvpor Vendedor
     Contas a Pagar 
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    e
@@ -263,7 +263,7 @@ Comissões de Venda > Relatório de Comissões por Vendedor
     Fechar janela
 
 Comissões de Venda > Reprocessar Valores da Comissão
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Comissões de Venda/                                   ERRO Reprocessar Valores da Comissão
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Comissões de Venda/                                    Reprocessar Valores da Comissão
     Contas a Pagar 
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    o
@@ -272,7 +272,7 @@ Comissões de Venda > Reprocessar Valores da Comissão
     Fechar janela
 
 Comissões de Venda > Cadastro De Comissão por Faixa de Descontos
-    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Comissões de Venda/                                               ERRO Cadastro De Comissão por Faixa de Descontos
+    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Comissões de Venda/                                                Cadastro De Comissão por Faixa de Descontos
     Contas a Pagar 
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    c
@@ -281,7 +281,7 @@ Comissões de Venda > Cadastro De Comissão por Faixa de Descontos
     Fechar janela
 
 Pagamentos Eletrônicos > Pagamentos a Fornecedores > Remessa
-    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Pagamentos Eletrônicos/Pagamentos a Fornecedores                                             ERRO Remessa
+    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Pagamentos Eletrônicos/Pagamentos a Fornecedores                                              Remessa
     Contas a Pagar 
     RPA.Windows.Click         Pagamentos Eletrônicos
     RPA.Windows.Click         Pagamentos a Fornecedores
@@ -291,7 +291,7 @@ Pagamentos Eletrônicos > Pagamentos a Fornecedores > Remessa
     Fechar janela
 
 Pagamentos Eletrônicos > Pagamentos a Fornecedores > Retorno
-    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Pagamentos Eletrônicos/Pagamentos a Fornecedores                                             ERRO Retorno
+    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Pagamentos Eletrônicos/Pagamentos a Fornecedores                                              Retorno
     Contas a Pagar 
     RPA.Windows.Click         Pagamentos Eletrônicos
     RPA.Windows.Click         Pagamentos a Fornecedores
@@ -301,7 +301,7 @@ Pagamentos Eletrônicos > Pagamentos a Fornecedores > Retorno
     Fechar janela
 
 Pagamentos Eletrônicos > Pagamentos a Funcionarios
-    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Pagamentos Eletrônicos/                                            ERRO Pagamentos a Funcionarios
+    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Pagamentos Eletrônicos/                                             Pagamentos a Funcionarios
     Contas a Pagar 
     RPA.Windows.Click         Pagamentos Eletrônicos
     RPA.Desktop.Press Keys    a

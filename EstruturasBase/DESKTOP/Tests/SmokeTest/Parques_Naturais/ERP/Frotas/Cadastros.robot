@@ -14,7 +14,7 @@ ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTe
 *** Test Cases ***
 
 Terceiros > Cadastro de Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Terceiros/                        ERRO Cadastro de Terceiros
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Terceiros/                         Cadastro de Terceiros
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Desktop.Press Keys    C
@@ -23,7 +23,7 @@ Terceiros > Cadastro de Terceiros
     Fechar janela
 
 Terceiros > Categorias de Terceiros
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Terceiros/                            ERRO Categorias de Terceiros
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Terceiros/                             Categorias de Terceiros
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  A
@@ -32,7 +32,7 @@ Terceiros > Categorias de Terceiros
     Fechar janela
 
 Terceiros > Grupo de Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Terceiros/             ERRO Grupo de Terceiros
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Terceiros/              Grupo de Terceiros
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  G
@@ -41,7 +41,7 @@ Terceiros > Grupo de Terceiros
     Fechar Janela
 
 Terceiros > Registro de Contatos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Terceiros/             ERRO Registro de Contatos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Terceiros/              Registro de Contatos
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  R
@@ -50,7 +50,7 @@ Terceiros > Registro de Contatos
     Fechar Janela
 
 Terceiros > Tipo de registro de Contatos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Terceiros/             ERRO Tipo de registro de Contatos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Terceiros/              Tipo de registro de Contatos
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  T
@@ -59,7 +59,7 @@ Terceiros > Tipo de registro de Contatos
     Fechar Janela
 
 Itens > Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/             ERRO Produtos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Produtos
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  P
@@ -68,7 +68,7 @@ Itens > Produtos
     Fechar Janela
 
 Itens > Pneus
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/             ERRO Pneus
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Pneus
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  N
@@ -77,7 +77,7 @@ Itens > Pneus
     Fechar Janela
 
 Natureza de Cargas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Natureza de Cargas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Natureza de Cargas
     Cadastros
     RPA.Windows.Click       Natureza de Cargas
     RPA.Windows.Get Text    Cadastro de Natureza de Carga (1)
@@ -85,7 +85,7 @@ Natureza de Cargas
     Fechar Janela
 
 Veículos > Veículos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/             ERRO Veículos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/              Veículos
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  V
@@ -94,7 +94,7 @@ Veículos > Veículos
     Fechar Janela
 
 Veículos > Tipos de Veículos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/             ERRO Tipos de Veículos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/              Tipos de Veículos
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  T
@@ -103,7 +103,7 @@ Veículos > Tipos de Veículos
     Fechar Janela
 
 Veículos > Tipos de Chassi
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/             ERRO Tipos de Chassi
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/              Tipos de Chassi
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  I
@@ -112,7 +112,7 @@ Veículos > Tipos de Chassi
     Fechar Janela
 
 Tanques de Combustíveis
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Tanques de Combustíveis
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tanques de Combustíveis
     Cadastros
     RPA.Windows.Click       Tanques de Combustíveis
     RPA.Windows.Get Text    Cadastro de Tanques Combustíveis (1)
@@ -120,7 +120,7 @@ Tanques de Combustíveis
     Fechar Janela
 
 Navios
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}            ERRO Navios
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Navios
     Cadastros
     RPA.Windows.Click       Navios
     RPA.Windows.Get Text    Cadastro de Navios (1)
@@ -128,7 +128,7 @@ Navios
     Fechar Janela
 
 Tipo de Despesa Viagem
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Tipo de Despesa Viagem
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tipo de Despesa Viagem
     Cadastros
     RPA.Windows.Click       Tipo de Despesa Viagem
     RPA.Windows.Get Text    Cadastro de Tipo de Despesa de Viagem (1)
@@ -136,7 +136,7 @@ Tipo de Despesa Viagem
     Fechar Janela
 
 Seguro de Cargas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Seguro de Cargas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Seguro de Cargas
     Cadastros
     RPA.Windows.Click       Seguro de Cargas
     RPA.Windows.Get Text    Cadastro de Seguro de Carga (1)
@@ -144,7 +144,7 @@ Seguro de Cargas
     Fechar Janela
 
 Infrações de Trânsito
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Infrações de Trânsito
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Infrações de Trânsito
     Cadastros
     RPA.Windows.Click       Infrações de Trânsito
     RPA.Windows.Get Text    Cadastro de Infrações de Trânsito (1)
@@ -152,7 +152,7 @@ Infrações de Trânsito
     Fechar Janela
 
 Despesas de Viagens
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Despesas de Viagens
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Despesas de Viagens
     Cadastros
     RPA.Windows.Click       Despesas de Viagens
     RPA.Windows.Get Text    Cadastro de Despesas de Viagens (1)
@@ -160,7 +160,7 @@ Despesas de Viagens
     Fechar Janela
 
 Tipo Carga
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Tipo Carga
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tipo Carga
     Cadastros
     RPA.Windows.Click       Tipo Carga
     RPA.Windows.Get Text    Cadastro de Tipo de Carga (1)
@@ -168,7 +168,7 @@ Tipo Carga
     Fechar Janela
 
 Tipo Serviço
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Tipo Serviço
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tipo Serviço
     Cadastros
     RPA.Windows.Click       Tipo Serviço
     RPA.Windows.Get Text    Cadastro de Tipo de Serviço (1)
@@ -176,7 +176,7 @@ Tipo Serviço
     Fechar Janela
 
 Status de Pedido
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Status de Pedido
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Status de Pedido
     Cadastros
     RPA.Windows.Click       Status de Pedido
     RPA.Windows.Get Text    Cadastro de Status de Pedido (1)
@@ -184,7 +184,7 @@ Status de Pedido
     Fechar Janela
 
 Tipo Despesas Viagens
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Tipo Despesas Viagens
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tipo Despesas Viagens
     Cadastros
     RPA.Windows.Click       Tipo Despesas Viagens
     RPA.Windows.Get Text    Cadastro de Despesas de Viagens (1)
@@ -192,7 +192,7 @@ Tipo Despesas Viagens
     Fechar Janela
 
 Configuração Layout Personalizado
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Configuração Layout Personalizado
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Configuração Layout Personalizado
     Cadastros
     RPA.Windows.Click       Configuração Layout Personalizado
     RPA.Windows.Get Text    Configuração Layout Personalizado (1)
@@ -201,7 +201,7 @@ Configuração Layout Personalizado
     RPA.Windows.Click       Sim
     
 Tabela de Frete
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Tabela de Frete
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tabela de Frete
     Cadastros
     RPA.Windows.Click       Tabela de Frete
     RPA.Windows.Get Text    Cadastro de Tabela de Frete (1)
@@ -210,7 +210,7 @@ Tabela de Frete
     RPA.Windows.Click       Sim
 
 Documentos > Tipos de Documentos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Documentos/             ERRO Tipos de Documentos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Documentos/              Tipos de Documentos
     Cadastros
     RPA.Windows.Click       Documentos
     RPA.Desktop.Press Keys  T
@@ -219,7 +219,7 @@ Documentos > Tipos de Documentos
     Fechar Janela
 
 Países
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Países
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Países
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -227,7 +227,7 @@ Países
     Fechar janela
 
 Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Estados
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Estados
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -235,7 +235,7 @@ Estados
     Fechar janela
 
 Municípios
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Municípios
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Municípios
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -243,7 +243,7 @@ Municípios
     Fechar janela
 
 Regiões
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Regiões
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Regiões
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -251,7 +251,7 @@ Regiões
     Fechar janela
 
 Históricos Contábeis
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Históricos Contábeis
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Históricos Contábeis
     Cadastros
     RPA.Windows.Click         Históricos Contábeis
     RPA.Windows.Get Text      Cadastro de Históricos Contábeis (1)
@@ -259,7 +259,7 @@ Históricos Contábeis
     Fechar janela
 
 Financeiro > Forma de Pagamento
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Financeiro/             ERRO Forma de Pagamento
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Financeiro/              Forma de Pagamento
     Cadastros
     RPA.Windows.Click       Financeiro
     RPA.Desktop.Press Keys  F
@@ -268,7 +268,7 @@ Financeiro > Forma de Pagamento
     Fechar Janela
 
 Financeiro > Descontos Motorista
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Financeiro/             ERRO Descontos Motorista
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Financeiro/              Descontos Motorista
     Cadastros
     RPA.Windows.Click       Financeiro
     RPA.Desktop.Press Keys  D
@@ -277,7 +277,7 @@ Financeiro > Descontos Motorista
     Fechar Janela
 
 Financeiro > Moedas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Financeiro/             ERRO Moedas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Financeiro/              Moedas
     Cadastros
     RPA.Windows.Click       Financeiro
     RPA.Desktop.Press Keys  M
@@ -286,7 +286,7 @@ Financeiro > Moedas
     Fechar Janela
 
 Fiscal > Classificações Fiscais
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/          ERRO Classificações Fiscais
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Classificações Fiscais
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    A
@@ -295,7 +295,7 @@ Fiscal > Classificações Fiscais
     Fechar janela
 
 Fiscal > Mensagem de Notas Fiscais
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/          ERRO Mensagem de Notas Fiscais
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Mensagem de Notas Fiscais
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    N
@@ -304,7 +304,7 @@ Fiscal > Mensagem de Notas Fiscais
     Fechar janela
 
 Fiscal > Espécies de Documentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/          ERRO Espécies de Documentos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Espécies de Documentos
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    E
@@ -313,7 +313,7 @@ Fiscal > Espécies de Documentos
     Fechar janela
 
 Fiscal > Operações Fiscais
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/          ERRO Operações Fiscais
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Operações Fiscais
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    R
@@ -322,7 +322,7 @@ Fiscal > Operações Fiscais
     Fechar janela
 
 Fiscal > Séries
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/          ERRO Séries
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Séries
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    S
@@ -331,7 +331,7 @@ Fiscal > Séries
     Fechar janela
 
 Fiscal > Simples Nacional > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Simples Nacional/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Simples Nacional/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Simples Nacional
@@ -341,7 +341,7 @@ Fiscal > Simples Nacional > Tabela Tributária
     Fechar janela
 
 Fiscal > Simples Nacional > Situação Tributária (CSOSN)
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Simples Nacional/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Simples Nacional/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Simples Nacional
@@ -351,7 +351,7 @@ Fiscal > Simples Nacional > Situação Tributária (CSOSN)
     Fechar janela
 
 Fiscal > CFOP's
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/          ERRO CFOP's
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           CFOP's
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    F
@@ -360,7 +360,7 @@ Fiscal > CFOP's
     Fechar janela
 
 Fiscal > IPI > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IPI
@@ -370,7 +370,7 @@ Fiscal > IPI > Tabela Tributária
     Fechar janela
 
 Fiscal > IPI > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/          ERRO Situação Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/           Situação Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IPI
@@ -380,7 +380,7 @@ Fiscal > IPI > Situação Tributária
     Fechar janela
 
 Fiscal > ICMS > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -390,7 +390,7 @@ Fiscal > ICMS > Tabela Tributária
     Fechar janela
 
 Fiscal > ICMS > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/          ERRO Situação Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Situação Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -400,7 +400,7 @@ Fiscal > ICMS > Situação Tributária
     Fechar janela
 
 Fiscal > ICMS > Tabela Tributária - FCP
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/          ERRO Tabela Tributária - FCP
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária - FCP
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -410,7 +410,7 @@ Fiscal > ICMS > Tabela Tributária - FCP
     Fechar janela
 
 Fiscal > PIS > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/PIS/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/PIS/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         PIS
@@ -420,7 +420,7 @@ Fiscal > PIS > Tabela Tributária
     Fechar janela
 
 Fiscal > PIS > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/PIS/          ERRO Situação Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/PIS/           Situação Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         PIS
@@ -430,7 +430,7 @@ Fiscal > PIS > Situação Tributária
     Fechar janela
 
 Fiscal > COFINS > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/COFINS/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/COFINS/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         COFINS
@@ -440,7 +440,7 @@ Fiscal > COFINS > Tabela Tributária
     Fechar janela
 
 Fiscal > COFINS > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/COFINS/          ERRO Situação Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/COFINS/           Situação Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         COFINS
@@ -450,7 +450,7 @@ Fiscal > COFINS > Situação Tributária
     Fechar janela
 
 Fiscal > CSLL > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/CSLL/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/CSLL/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         CSLL
@@ -460,7 +460,7 @@ Fiscal > CSLL > Tabela Tributária
     Fechar janela
 
 Fiscal > CSLL > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/CSLL/          ERRO Situação Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/CSLL/           Situação Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         CSLL
@@ -470,7 +470,7 @@ Fiscal > CSLL > Situação Tributária
     Fechar janela
 
 Fiscal > IRPJ > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IRPJ/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IRPJ/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IRPJ
@@ -480,7 +480,7 @@ Fiscal > IRPJ > Tabela Tributária
     Fechar janela
 
 Fiscal > IRPJ > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IRPJ/          ERRO Situação Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IRPJ/           Situação Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IRPJ
@@ -489,7 +489,7 @@ Fiscal > IRPJ > Situação Tributária
     BaseDesktop.Screenshot    Cadastro de Situação Tributária IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Situação Tributária
     Fechar janela
 Fiscal > ISSQN > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ISSQN/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ISSQN/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ISSQN
@@ -499,7 +499,7 @@ Fiscal > ISSQN > Tabela Tributária
     Fechar janela
 
 Fiscal > Tabela de Alíquota Nacional de Impostos por NCM
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/          ERRO Tabela de Alíquota Nacional de Impostos por NCM
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Tabela de Alíquota Nacional de Impostos por NCM
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    T
@@ -508,7 +508,7 @@ Fiscal > Tabela de Alíquota Nacional de Impostos por NCM
     Fechar janela
 
 Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa jurídica
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/          ERRO Tabela Tributária - Pessoa jurídica
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/           Tabela Tributária - Pessoa jurídica
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -519,7 +519,7 @@ Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa jurídica
     Fechar janela
 
 Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa Física
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/          ERRO Tabela Tributária - Pessoa Física
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/           Tabela Tributária - Pessoa Física
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -530,7 +530,7 @@ Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa Física
     Fechar janela
 
 Fiscal > Impostos Retidos > IR > Cadastro de Serviço
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/          ERRO Cadastro de Serviço
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/           Cadastro de Serviço
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -541,7 +541,7 @@ Fiscal > Impostos Retidos > IR > Cadastro de Serviço
     Fechar janela
 
 Fiscal > Impostos Retidos > CSRF > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -552,7 +552,7 @@ Fiscal > Impostos Retidos > CSRF > Tabela Tributária
     Fechar janela
 
 Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/          ERRO Cadastro de Serviços
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/           Cadastro de Serviços
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -563,7 +563,7 @@ Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
     Fechar janela
 
 Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa jurídica
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/          ERRO Tabela Tributária - Pessoa jurídica
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/           Tabela Tributária - Pessoa jurídica
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -574,7 +574,7 @@ Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa jurídica
     Fechar janela
 
 Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa Física
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/          ERRO Tabela Tributária - Pessoa Física
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/           Tabela Tributária - Pessoa Física
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -585,7 +585,7 @@ Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa Física
     Fechar janela
 
 Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/          ERRO Cadastro de Serviços
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/           Cadastro de Serviços
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -595,7 +595,7 @@ Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
     BaseDesktop.Screenshot    Cadastro de Serviços para Retenção de INSSRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/Cadastro de Serviços
     Fechar janela
 Fiscal > Impostos Retidos > SEST/SENAT
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/         ERRO SEST_SENAT
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/          SEST_SENAT
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -605,7 +605,7 @@ Fiscal > Impostos Retidos > SEST/SENAT
     Fechar janela
 
 Fiscal > Classificações de Serviços Prestado - REINF
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/      ERRO Classificações de Serviços Prestado - REINF
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/       Classificações de Serviços Prestado - REINF
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    V
@@ -614,7 +614,7 @@ Fiscal > Classificações de Serviços Prestado - REINF
     Fechar janela
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Empresas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Empresas
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -623,7 +623,7 @@ Parâmetros > Empresas
     Fechar janela
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Estabelecimentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Estabelecimentos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -632,7 +632,7 @@ Parâmetros > Estabelecimentos
     Fechar janela
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Usuários
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
@@ -641,7 +641,7 @@ Parâmetros > Usuários
     Fechar janela
 
 Parâmetros > Grupo de Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Grupo de Usuários
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Grupo de Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -650,7 +650,7 @@ Parâmetros > Grupo de Usuários
     Fechar janela
 
 Parâmetros > Configurações da Estação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Configurações da Estação
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Configurações da Estação
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    C

@@ -16,7 +16,7 @@ Eleições
 *** Test Cases ***
 
 Cadastro de Eleições
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Cadastro de Eleições
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Cadastro de Eleições
     Eleições 
     RPA.Windows.Click       Cadastro de Eleições
     RPA.Windows.Get Text    Cadastro de Eleições (1)
@@ -26,7 +26,7 @@ Cadastro de Eleições
     RPA.Windows.Click       Sim 
 
 Verificação/Votação de Eleitores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Verificação_Validação de Eleitores
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Verificação_Validação de Eleitores
     Eleições 
     RPA.Windows.Click       Verificação/Votação de Eleitores
     RPA.Windows.Get Text    Verificação de Eleitores (1)
@@ -34,7 +34,7 @@ Verificação/Votação de Eleitores
     RPA.Windows.Click       Fechar 
 
 Relação de Sócios que votaram
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Relação de Sócios que votaram
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Relação de Sócios que votaram
     Eleições 
     RPA.Windows.Click       Relação de Sócios que votaram
     RPA.Windows.Get Text    Relação de Sócios que votaram (1)
