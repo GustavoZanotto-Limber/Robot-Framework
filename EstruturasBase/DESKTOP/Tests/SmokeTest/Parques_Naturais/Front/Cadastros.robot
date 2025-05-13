@@ -186,6 +186,7 @@ Parâmetros -> Estabelecimentos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
+    Sleep                     2s
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
@@ -229,6 +230,7 @@ Parâmetros -> Configurações de Bilheteria
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    o
+    Sleep                     1s
     RPA.Windows.Get Text      Configurações Bilheteria (1)
     RPA.Windows.Click         Emissão de Bilhete
     BaseDesktop.Screenshot    Configurações Bilheteria (1)    ${Caminho_Screenshots}Parâmetros/Configurações Bilheteria

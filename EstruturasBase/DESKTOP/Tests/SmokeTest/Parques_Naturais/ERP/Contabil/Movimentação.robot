@@ -21,14 +21,17 @@ Lançamentos Contábeis
     Movimentação
     RPA.Windows.Click         Lançamentos Contábeis
     RPA.Windows.Get Text      Lançamentos Contábeis (1)  
+    RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Lançamentos Contábeis (1)      ${Caminho_Screenshots}Lançamentos Contábeis
     Fechar janela
+    RPA.Windows.Click         Sim
 
 Lançamentos Contábeis por Lote
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Lançamentos Contábeis por Lote
     Movimentação
     RPA.Windows.Click         Lançamentos Contábeis por Lote
     RPA.Windows.Get Text      Lançamento contabil por lote (1)  
+     RPA.Windows.Click        Novo Lote
     BaseDesktop.Screenshot    Lançamento contabil por lote (1)      ${Caminho_Screenshots}Lançamentos Contábeis por Lote
     Fechar janela
 
@@ -37,7 +40,9 @@ Manutenção de Lançamentos contábeis
     Movimentação
     RPA.Windows.Click         Manutenção de Lançamentos contábeis
     RPA.Windows.Get Text      Manutenção de Lançamentos contábeis (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Manutenção de Lançamentos contábeis (1)      ${Caminho_Screenshots}Manutenção de Lançamentos contábeis
+    RPA.Windows.Click         OK
     Fechar janela
 
 Liberação de Lançamentos
@@ -45,6 +50,7 @@ Liberação de Lançamentos
     Movimentação
     RPA.Windows.Click         Liberação de Lançamentos
     RPA.Windows.Get Text      Liberação de Lançamentos (1) 
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Liberação de Lançamentos (1)     ${Caminho_Screenshots}Liberação de Lançamentos
     Fechar janela
 
@@ -52,25 +58,49 @@ Estornar Liberação
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Estornar Liberação
     Movimentação
     RPA.Windows.Click         Estornar Liberação
-    RPA.Windows.Get Text      Estorno de Liberação de Lançamentos (1)  
+    RPA.Windows.Get Text      Estorno de Liberação de Lançamentos (1)
+    RPA.Windows.Click         Executar
     BaseDesktop.Screenshot    Estorno de Liberação de Lançamentos (1)      ${Caminho_Screenshots}Estornar Liberação
+    RPA.Windows.Click         OK
     Fechar janela
 
-Zeramento de Contas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Zeramento de Contas
+Zeramento de Contas > Zeramento de Contas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Zeramento de Contas/                       ERRO Zeramento de Contas
     Movimentação
     RPA.Windows.Click         Zeramento de Contas
+    RPA.Desktop.Press Keys    Z
     RPA.Windows.Get Text      Zeramento de Contas (1) 
-    BaseDesktop.Screenshot    Zeramento de Contas (1)      ${Caminho_Screenshots}Zeramento de Contas
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    BaseDesktop.Screenshot    Zeramento de Contas (1)      ${Caminho_Screenshots}Zeramento de Contas/Zeramento de Contas
+    RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
 
-Estornar Zeramento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Estornar Zeramento
+Zeramento de Contas > Estornar Zeramento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Zeramento de Contas/                        ERRO Estornar Zeramento
     Movimentação
-    RPA.Windows.Click         Estornar Zeramento
+    RPA.Windows.Click         Zeramento de Contas
+    RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Estornar Zeramento de Contas (1) 
-    BaseDesktop.Screenshot    Estornar Zeramento de Contas (1)      ${Caminho_Screenshots}Estornar Zeramento
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    BaseDesktop.Screenshot    Estornar Zeramento de Contas (1)      ${Caminho_Screenshots}Zeramento de Contas/Estornar Zeramento
+    RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
+
+Zeramento de Contas > Parâmetros Zeramento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Zeramento de Contas/                        ERRO Parâmetros Zeramento
+    Movimentação
+    RPA.Windows.Click         Zeramento de Contas
+    RPA.Desktop.Press Keys    P
+    RPA.Windows.Get Text      Estornar Zeramento de Contas (1) 
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    BaseDesktop.Screenshot    Estornar Zeramento de Contas (1)      ${Caminho_Screenshots}Zeramento de Contas/Parâmetros Zeramento
+    RPA.Windows.Click         Confirmar
+    RPA.Windows.Click         Sim
+    RPA.Windows.Click         Fechar
+    RPA.Windows.Click         Sim
 
 Conciliação de Cheques Emitidos
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Conciliação de Cheques Emitidos
@@ -78,7 +108,9 @@ Conciliação de Cheques Emitidos
     repetidor de teclas   Down       7
     RPA.Desktop.Press Keys    Enter
     RPA.Windows.Get Text      Conciliação de Cheques Emitidos 
+    RPA.Windows.Click         Executar
     BaseDesktop.Screenshot    Conciliação de Cheques Emitidos      ${Caminho_Screenshots}Conciliação de Cheques Emitidos
+    RPA.Windows.Click         OK
     Fechar janela
 
 Estorna Conciliação
@@ -87,7 +119,9 @@ Estorna Conciliação
     repetidor de teclas   Down       8
     RPA.Desktop.Press Keys    Enter
     RPA.Windows.Get Text      Estorna Conciliação de Lançamentos Bancários (1) 
+    RPA.Windows.Click         Executar
     BaseDesktop.Screenshot    Estorna Conciliação de Lançamentos Bancários (1)      ${Caminho_Screenshots}Estorna Conciliação
+    RPA.Windows.Click         OK
     Fechar janela
 
 Apropriação de custos
@@ -95,7 +129,9 @@ Apropriação de custos
     Movimentação
     RPA.Windows.Click         Apropriação de custos
     RPA.Windows.Get Text      Apropriação de Custos (1) 
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Apropriação de Custos (1)      ${Caminho_Screenshots}Apropriação de custos
+    RPA.Windows.Click         OK
     Fechar janela
 
 Apropriação de consumo de adiantamentos
@@ -103,6 +139,7 @@ Apropriação de consumo de adiantamentos
     Movimentação
     RPA.Windows.Click         Apropriação de consumo de adiantamentos
     RPA.Windows.Get Text      Apropriação de consumo de adiantamento (1)  
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Apropriação de consumo de adiantamento (1)     ${Caminho_Screenshots}Apropriação de consumo de adiantamentos
     Fechar janela
 
@@ -111,7 +148,9 @@ Apropriação de despesas antecipadas
     Movimentação
     RPA.Windows.Click         Apropriação de despesas antecipadas
     RPA.Windows.Get Text      Apropriação de Despesas Antecipadas (1)  
+    RPA.Windows.Click         Gerar
     BaseDesktop.Screenshot    Apropriação de Despesas Antecipadas (1)      ${Caminho_Screenshots}Apropriação de despesas antecipadas
+    RPA.Windows.Click         OK
     Fechar janela
 
 Estornar Apropriação por Rateio de Contas
@@ -119,7 +158,10 @@ Estornar Apropriação por Rateio de Contas
     Movimentação
     RPA.Windows.Click         Estornar Apropriação por Rateio de Contas
     RPA.Windows.Get Text      Estornar Apropriação por Rateio de Contas (1)  
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Estornar Apropriação por Rateio de Contas (1)     ${Caminho_Screenshots}Estornar Apropriação por Rateio de Contas
+    RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
 
 Rateio Cooperativismo > Método 1
@@ -128,7 +170,10 @@ Rateio Cooperativismo > Método 1
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    1
     RPA.Windows.Get Text      Apropriação por Rateio de Contas - Método 1 (1) 
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Apropriação por Rateio de Contas - Método 1 (1)      ${Caminho_Screenshots}Rateio Cooperativismo/Método 1
+    RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
     
 Rateio Cooperativismo > Método 2
@@ -137,8 +182,12 @@ Rateio Cooperativismo > Método 2
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    2
     RPA.Windows.Get Text      Apropriação por Rateio de Contas - Método 2 (1)
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Apropriação por Rateio de Contas - Método 2 (1)      ${Caminho_Screenshots}Rateio Cooperativismo/Método 2
+    RPA.Windows.Click         OK
     Fechar janela
+    RPA.Windows.Click         OK
 
 Rateio Cooperativismo > Método 3 - Setor
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Rateio Cooperativismo/                       ERRO Método 3 - Setor
@@ -146,6 +195,7 @@ Rateio Cooperativismo > Método 3 - Setor
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Rateio Cooperativismo - Método 3 Setor (1) 
+    RPA.Windows.Click         Rateio Cooperado
     BaseDesktop.Screenshot    Rateio Cooperativismo - Método 3 Setor (1)      ${Caminho_Screenshots}Rateio Cooperativismo/Método 3 - Setor
     Fechar janela
 
@@ -154,7 +204,11 @@ Bloqueia Lançamentos
     Movimentação
     RPA.Windows.Click         Bloqueia Lançamentos
     RPA.Windows.Get Text      Bloqueia Lançamentos (1)  
+    repetidor de teclas       tab        2     
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Bloqueia Lançamentos (1)      ${Caminho_Screenshots}Bloqueia Lançamentos
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Controle Patrimonial > Cálculo/Geração da Depreciação
@@ -163,25 +217,38 @@ Controle Patrimonial > Cálculo/Geração da Depreciação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cálculo/Geração da Depreciação (1) 
+    repetidor de teclas       tab        2   
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Cálculo/Geração da Depreciação (1)      ${Caminho_Screenshots}Controle Patrimonial/Cálculo_Geração da Depreciação
+    RPA.Windows.Click         Confirmar
+    RPA.Windows.Click         OK
     Fechar janela
 
 Controle Patrimonial > Consulta de Depreciação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Consulta de Depreciação
+    [Teardown]                Caso aconteça erro               ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Consulta de Depreciação
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Consulta de Depreciação (1)  
+    repetidor de teclas       tab        4   
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Consulta de Depreciação (1)      ${Caminho_Screenshots}Controle Patrimonial/Consulta de Depreciação
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Controle Patrimonial > Estornar Depreciação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Estornar Depreciação
+    [Teardown]                Caso aconteça erro               ${Caminho_Screenshots}Controle Patrimonial/                       ERRO Estornar Depreciação
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    E
-    RPA.Windows.Get Text      Estorno de Depreciação (1)  
+    RPA.Windows.Get Text      Estorno de Depreciação (1) 
+    RPA.Desktop.Press Keys    Tab
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter 
     BaseDesktop.Screenshot    Estorno de Depreciação (1)      ${Caminho_Screenshots}Controle Patrimonial/Estornar Depreciação
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Controle Patrimonial > Consulta da Ficha CIAP
@@ -190,7 +257,10 @@ Controle Patrimonial > Consulta da Ficha CIAP
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    N
     RPA.Windows.Get Text      Consulta da Ficha CIAP (1)  
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Consulta da Ficha CIAP (1)      ${Caminho_Screenshots}Controle Patrimonial/Consulta da Ficha CIAP
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Controle Patrimonial > Emissão de Crédito do CIAP
@@ -198,8 +268,10 @@ Controle Patrimonial > Emissão de Crédito do CIAP
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    M
-    RPA.Windows.Get Text      Emissão do Crédito CIAP (1)  
+    RPA.Windows.Get Text      Emissão do Crédito CIAP (1)
+    RPA.Windows.Click         Gerar Crédito  
     BaseDesktop.Screenshot    Emissão do Crédito CIAP (1)      ${Caminho_Screenshots}Controle Patrimonial/Emissão de Crédito do CIAP
+    RPA.Windows.Click         OK
     RPA.Windows.Click         Fechar
 
 Controle Patrimonial > Estorno de Crédito do CIAP
@@ -207,9 +279,10 @@ Controle Patrimonial > Estorno de Crédito do CIAP
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    S
-    Sleep                     1s
     RPA.Windows.Get Text      Estorno de Crédito CIAP 
+    RPA.Windows.Click         Estorno de Crédito
     BaseDesktop.Screenshot    Estorno de Crédito CIAP      ${Caminho_Screenshots}Controle Patrimonial/Estorno de Crédito do CIAP
+    RPA.Windows.Click         OK
     RPA.Windows.Click         Fechar
 
 Controle Patrimonial > Ajuste de Fator do CIAP
@@ -218,7 +291,10 @@ Controle Patrimonial > Ajuste de Fator do CIAP
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Ajuste do Fator do Crédito CIAP (1) 
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Ajuste do Fator do Crédito CIAP (1)      ${Caminho_Screenshots}Controle Patrimonial/Ajuste de Fator do CIAP
+    RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
 
 Controle Patrimonial > Consulta Fator CIAP
@@ -227,7 +303,11 @@ Controle Patrimonial > Consulta Fator CIAP
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    U
     RPA.Windows.Get Text      Consulta Fator CIAP (1) 
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Consulta Fator CIAP (1)      ${Caminho_Screenshots}Controle Patrimonial/Consulta Fator CIAP
+    RPA.Windows.Click         Confirmar
+    RPA.Windows.Click         OK
     Fechar janela
 
 CMV > Cálculo/Geração do CMV
@@ -236,7 +316,10 @@ CMV > Cálculo/Geração do CMV
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cálculo/Geração do CMV (1)  
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Cálculo/Geração do CMV (1)      ${Caminho_Screenshots}CMV/Cálculo_Geração do CMV
+    RPA.Windows.Click         OK
     Fechar janela
 
 CMV > Preço de Mercado

@@ -132,13 +132,13 @@ Produtos/Fornecedor
     Fechar janela
 
 Fornecedor/Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}            ERRO Fornecedor/Produtos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}            ERRO Fornecedor_Produtos
     Relatórios
     RPA.Windows.Click       Fornecedor/Produtos
     RPA.Windows.Get Text    Relatório de fornecedores por produto (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de fornecedores por produto (1)   ${Caminho_Screenshots}Fornecedor/Produtos
+    BaseDesktop.Screenshot  Relatório de fornecedores por produto (1)   ${Caminho_Screenshots}Fornecedor_Produtos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
