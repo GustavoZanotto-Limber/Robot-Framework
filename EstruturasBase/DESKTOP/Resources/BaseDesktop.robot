@@ -28,8 +28,9 @@ Cadastros
     SikuliLibrary.Click    Cadastros.png
 
 Fechar janela
+    Run Keyword And Ignore Error    RPA.Windows.Click    Maximizar
     Set Anchor           Aplicativo
-    RPA.Windows.Click    Fechar
+    Run Keyword And Ignore Error  RPA.Windows.Click    Fechar
     Clear Anchor
 
 Iniciar sessao        
@@ -46,8 +47,8 @@ Iniciar sessao
 
 Iniciar sessao Front     
     Carregar os elementos do app
-    RPA.Desktop.Open Application    C:\\Limber\\Turismo-PARQUES-NATURAIS\\cde_win_bca_frontR20.exe
-    Sleep                           1s
+    RPA.Desktop.Open Application    C:\\Limber\\Turismo-PARQUES-NATURAIS\\cde_win_bca_front6228.exe
+    Sleep                           4s
     RPA.Windows.Click    Abrir
     Sleep                           2s
     RPA.Desktop.Press keys                      enter

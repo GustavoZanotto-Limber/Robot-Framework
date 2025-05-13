@@ -14,7 +14,7 @@ Caixa Operador
     repetidor de teclas    right    4
 
 Fechar caixa caso esteja aberto
-    ${caixa_aberto}=          Run Keyword And Ignore Error                                                                         RPA.Windows.Get Text    Fechar Caixa
+    ${caixa_aberto}=          Run Keyword And Ignore Error              RPA.Windows.Get Text    Fechar Caixa
     IF                        ${caixa_aberto} != (\'FAIL\', "ElementNotFound: Element not found with locator \'Fechar Caixa\'")
     RPA.Windows.Click         Fechar Caixa
     RPA.Windows.Click         Sim
@@ -24,7 +24,6 @@ Fechar caixa caso esteja aberto
     RPA.Desktop.Press Keys    Enter                                                                                                
     Caixa Operador            
     RPA.Windows.Click         Abertura / Fechamento                                                                                
-
     END
 
 *** Test Cases    ***

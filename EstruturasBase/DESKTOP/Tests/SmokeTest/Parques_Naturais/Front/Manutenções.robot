@@ -19,6 +19,7 @@ Emissão de Bilhetes
     [Teardown]                Caso aconteça erro         ${Caminho_Screenshots}                       ERRO Emissão de Bilhetes
     Manutenções
     RPA.Windows.Click         Emissão de Bilhetes
+    Sleep                     2s
     RPA.Windows.Get Text      Emissão de Bilhetes (1)
     RPA.Windows.Click         (F8) Novo
     BaseDesktop.Screenshot    Emissão de Bilhetes (1)    ${Caminho_Screenshots}Emissão de Bilhetes
@@ -40,6 +41,7 @@ Cancelamentos de Bilhetes
     [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                            ERRO Cancelamento de Bilhetes
     Manutenções
     RPA.Windows.Click       Cancelamento de Bilhetes
+    Sleep                   1s
     RPA.Windows.Get Text    Cancelamento de Bilhetes (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
@@ -51,6 +53,7 @@ Remarcações de Visitas
     [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}                          ERRO Remarcações de Visitas
     Manutenções
     RPA.Windows.Click       Remarcação de Visitas
+    Sleep                   1s
     RPA.Windows.Get Text    Remarcação de Vendas
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Remarcação de Vendas     ${Caminho_Screenshots}Remarcações de Visitas

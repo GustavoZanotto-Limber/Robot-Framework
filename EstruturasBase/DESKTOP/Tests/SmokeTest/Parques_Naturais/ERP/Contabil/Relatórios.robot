@@ -20,7 +20,10 @@ Livro Diário
     Relatórios
     RPA.Windows.Click         Livro Diário
     RPA.Windows.Get Text      Livro Diário (1) 
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Livro Diário (1)     ${Caminho_Screenshots}Livro Diário
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Razão
@@ -28,7 +31,11 @@ Razão
     Relatórios
     RPA.Windows.Click         Razão
     RPA.Windows.Get Text      Razão Contabil (1) 
+    RPA.Desktop.Press Keys  Shift    Tab
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Razão Contabil (1)     ${Caminho_Screenshots}Razão
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Balancete
@@ -36,7 +43,10 @@ Balancete
     Relatórios
     RPA.Windows.Click         Balancete
     RPA.Windows.Get Text      Balancete (1) 
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Balancete (1)     ${Caminho_Screenshots}Balancete
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Balancete por Plano de Contas Referencial
@@ -44,6 +54,7 @@ Balancete por Plano de Contas Referencial
     Relatórios
     RPA.Windows.Click         Balancete por Plano de Contas Referencial
     RPA.Windows.Get Text      Balancete por Plano de Contas Referencial (1) 
+    RPA.Windows.Click         Liberados
     BaseDesktop.Screenshot    Balancete por Plano de Contas Referencial (1)     ${Caminho_Screenshots}Balancete por Plano de Contas Referencial
     Fechar janela
 
@@ -52,7 +63,10 @@ Balanço Patrimonial/Demonstrativo DRE
     Relatórios
     RPA.Windows.Click         Balanço Patrimonial/Demonstrativo DRE
     RPA.Windows.Get Text      Balanço/Demonstrativo Integrado (1) 
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Balanço/Demonstrativo Integrado (1)     ${Caminho_Screenshots}Balanço Patrimonial_Demonstrativo DRE
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Demonstrativo de Fluxo de Caixa - DFC
@@ -60,7 +74,10 @@ Demonstrativo de Fluxo de Caixa - DFC
     Relatórios
     RPA.Windows.Click         Demonstrativo de Fluxo de Caixa - DFC
     RPA.Windows.Get Text      Demonstrativo de Fluxo de Caixa - DFC (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Demonstrativo de Fluxo de Caixa - DFC (1)       ${Caminho_Screenshots}Demonstrativo de Fluxo de Caixa - DFC
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Balanço Patrimonial Comparado
@@ -68,6 +85,8 @@ Balanço Patrimonial Comparado
     Relatórios
     RPA.Windows.Click         Balanço Patrimonial Comparado
     RPA.Windows.Get Text      Balanço Patrimonial Comparado (1) 
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Balanço Patrimonial Comparado (1)     ${Caminho_Screenshots}Balanço Patrimonial Comparado
     Fechar janela
 
