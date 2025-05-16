@@ -4,13 +4,17 @@
 #que otimiza a utilização do aplicativo.
 Library    SikuliLibrary
 Library    RPA.Desktop
-Library    RPA.Windows
+Library    RPA.Windows    timeout=1s
 Library    OperatingSystem
+Library    SeleniumLibrary 
+
 
 
 *** Variables ***
 ${front}
 ${nome_exe}
+${achou}
+
 *** Keywords ***
 #As keywords e a setting funcionam basicamente de forma igual tanto no web quanto no desktop
 #a mudança de um para o outro é na forma de pegar os elementos em tela, no web é muito mais facil pois temos
@@ -26,22 +30,19 @@ Carregar os elementos do app
 
 Cadastros
     SikuliLibrary.Click    Cadastros.png
-
+    
 Fechar janela
-    ${Erro}=     Run Keyword And Ignore error    RPA.Windows.Get Text    Erro
-    Run Keyword And Ignore error    RPA.Windows.Click    Maximizar
-    Set Anchor           Aplicativo
-    RPA.Windows.Click    Fechar
-    Clear Anchor 
-    IF    ${Erro} != (\'FAIL\', "ElementNotFound: Element not found with locator \'Erro\'")
-        Fail        Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.
+    Run Keyword And Ignore error   RPA.Windows.Click                 Maximizar    
+    Set Anchor                     Aplicativo
+    RPA.Windows.Click              Fechar
+    Clear Anchor
 
-    END
-
+    
 Iniciar sessao        
     [Arguments]    ${nome_exe} 
     Carregar os elementos do app
     RPA.Desktop.Open Application    C:\\Limber\\ERP Executaveis\\${nome_exe}.exe
+    Sleep                           1s 
     RPA.Windows.Click               Abrir
     Sleep                           2s
     RPA.Desktop.Press keys                      enter
@@ -61,7 +62,7 @@ Iniciar sessao Front
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
-    Sleep                           3s
+    Sleep                           5s
     
 Screenshot
     [Arguments]               ${janela}    ${Caminho}
@@ -87,10 +88,19 @@ repetidor de teclas
 
 Caso aconteça erro
     [Arguments]     ${Caminho_Screenshots}        ${nome_print}
+    Set Global Timeout    0.5
+    Set Wait Time    0.1 
+    ${Erro}=                       Run Keyword And Ignore error      RPA.Windows.Get Text       Erro
+    IF    ${Erro} != ('FAIL', "ElementNotFound: Element not found with locator 'Erro'")
+         Fail        Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.
+    END   
+    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Maximizar
     Run Keyword And Ignore error    Remove File                   ${Caminho_Screenshots}${nome_print}.png
-    Run Keyword If Test Failed      Take Screenshot    ${Caminho_Screenshots}Erro ${nome_print}.png   
-    Run Keyword If Test Failed      Run Keyword And Ignore error    Fechar janela
-    Run Keyword If Test Failed      RPA.Desktop.Press Keys    Enter
-    Run Keyword If Test Failed      Run Keyword And Ignore error  RPA.Windows.Click    OK
+    Run Keyword If Test Failed      Take Screenshot    ${Caminho_Screenshots}Erro ${nome_print}.png  
+    Run Keyword If Test Failed      RPA.Desktop.Press Keys          Enter
+    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               OK    
+    Set Anchor                      Aplicativo
+    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Fechar
+    Clear Anchor
     
     

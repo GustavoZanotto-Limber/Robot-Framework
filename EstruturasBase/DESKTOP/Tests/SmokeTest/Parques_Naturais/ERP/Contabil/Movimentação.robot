@@ -93,10 +93,10 @@ Zeramento de Contas > Parâmetros Zeramento
     Movimentação
     RPA.Windows.Click         Zeramento de Contas
     RPA.Desktop.Press Keys    P
-    RPA.Windows.Get Text      Estornar Zeramento de Contas (1) 
+    RPA.Windows.Get Text      Parâmetros Zeramento (1) 
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Estornar Zeramento de Contas (1)      ${Caminho_Screenshots}Zeramento de Contas/Parâmetros Zeramento
+    BaseDesktop.Screenshot    Parâmetros Zeramento (1)      ${Caminho_Screenshots}Zeramento de Contas/Parâmetros Zeramento
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Sim
     RPA.Windows.Click         Fechar
@@ -328,6 +328,7 @@ CMV > Preço de Mercado
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    P
     RPA.Windows.Get Text      Cadastro Preço de Mercado (1)  
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Cadastro Preço de Mercado (1)      ${Caminho_Screenshots}CMV/Preço de Mercado
     Fechar janela
 
@@ -336,8 +337,10 @@ CMV > Cálculo/Geração do CMV por período
     Movimentação
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    L
-    RPA.Windows.Get Text      Cálculo/Geração do CMV por período (1)  
+    RPA.Windows.Get Text      Cálculo/Geração do CMV por período (1) 
+    RPA.Windows.Click         Processar 
     BaseDesktop.Screenshot    Cálculo/Geração do CMV por período (1)      ${Caminho_Screenshots}CMV/Cálculo/Geração do CMV por período
+    RPA.Windows.Click         OK
     Fechar janela
 
 CMV > Estorna CMV por período
@@ -346,7 +349,10 @@ CMV > Estorna CMV por período
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Estorna CMV por Período (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Estorna CMV por Período (1)     ${Caminho_Screenshots}CMV/Estorna CMV por período
+    RPA.Windows.Click         Confirmar
     Fechar janela
 
 Processos Personalizados
@@ -354,7 +360,9 @@ Processos Personalizados
     Movimentação
     RPA.Windows.Click         Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
+    RPA.Windows.Click         Cadastrar Novo Processo
     BaseDesktop.Screenshot    Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
+    RPA.Windows.Click         Fechar
     Fechar janela
 
 
@@ -364,16 +372,22 @@ Ajuste a Valor Presente > Configuração
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de configuração de ajuste a valor Presente (1) 
+    RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de configuração de ajuste a valor Presente (1)     ${Caminho_Screenshots}Ajuste a Valor Presente/Configuração
     Fechar janela
+    RPA.Windows.Click         Sim
 
 Ajuste a Valor Presente > Execução do Ajuste
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ajuste a Valor Presente/                        Execução do Ajuste
     Movimentação
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    E
-    RPA.Windows.Get Text      Execução do ajuste a valor presente (1)  
+    RPA.Windows.Get Text      Execução do ajuste a valor presente (1) 
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot    Execução do ajuste a valor presente (1)      ${Caminho_Screenshots}Ajuste a Valor Presente/Execução do Ajuste
+    RPA.Windows.Click         Confirmar
+    RPA.Windows.Click         OK
     Fechar janela
 
 Ajuste a Valor Presente > Consulta do Ajuste
@@ -382,7 +396,11 @@ Ajuste a Valor Presente > Consulta do Ajuste
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Consulta de ajuste a valor presente (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot    Consulta de ajuste a valor presente (1)      ${Caminho_Screenshots}Ajuste a Valor Presente/Consulta do Ajuste
+    RPA.Windows.Click         Confirmar
+    RPA.Windows.Click         OK
     Fechar janela
 
 Encerrar

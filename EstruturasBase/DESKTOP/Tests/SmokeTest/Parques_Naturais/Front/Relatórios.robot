@@ -141,7 +141,7 @@ Bilhetes por Tipo de Autorização
     Fechar janela
 
 Guias
-    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}                     : Guias
+    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}                     Guias
     Relatorios              Guias
     RPA.Windows.Get Text    Relatório de Guias (1)
     repetidor de teclas     Tab    2    

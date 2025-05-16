@@ -31,7 +31,6 @@ Isentos
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Isento (1)    ${Caminho_Screenshots}Isentos
     Fechar janela
-    Fechar janela
     RPA.Windows.Click       Sim
 
 Agências -> Agências
@@ -41,6 +40,7 @@ Agências -> Agências
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
     RPA.Windows.Click         Novo
+    Sleep                     1s
     BaseDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Agências/Agências
     RPA.Windows.Click         Fechar
     Fechar janela
@@ -108,7 +108,6 @@ Tipos de Documentos
     RPA.Windows.Click       Sim
 
 Pessoas Autorizadas
-
     [Teardown]              Caso aconteça erro               ${Caminho_Screenshots}     Pessoas Autorizadas    
     Cadastros
     RPA.Windows.Click       Pessoas Autorizadas

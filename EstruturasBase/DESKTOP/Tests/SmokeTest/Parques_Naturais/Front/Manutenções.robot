@@ -19,11 +19,12 @@ Emissão de Bilhetes
     [Teardown]                Caso aconteça erro         ${Caminho_Screenshots}                        Emissão de Bilhetes
     Manutenções
     RPA.Windows.Click         Emissão de Bilhetes
-    Sleep                     2s
+    Sleep                     10s
     RPA.Windows.Get Text      Emissão de Bilhetes (1)
     RPA.Windows.Click         (F8) Novo
     BaseDesktop.Screenshot    Emissão de Bilhetes (1)    ${Caminho_Screenshots}Emissão de Bilhetes
     Fechar janela
+    Sleep                     1s
     RPA.Windows.Click         Sim
 
 Reimpressão de Bilhetes
@@ -41,10 +42,11 @@ Cancelamentos de Bilhetes
     [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                             Cancelamento de Bilhetes
     Manutenções
     RPA.Windows.Click       Cancelamento de Bilhetes
-    Sleep                   1s
+    Sleep                   4s
     RPA.Windows.Get Text    Cancelamento de Bilhetes (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
+    Sleep                   1s
     RPA.Windows.Click       Cancelar
     BaseDesktop.Screenshot  Cancelamento de Bilhetes (1)    ${Caminho_Screenshots}Cancelamento de Bilhetes
     RPA.Windows.Click       Fechar
@@ -53,7 +55,7 @@ Remarcações de Visitas
     [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}                           Remarcações de Visitas
     Manutenções
     RPA.Windows.Click       Remarcação de Visitas
-    Sleep                   1s
+    Sleep                   4s
     RPA.Windows.Get Text    Remarcação de Vendas
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Remarcação de Vendas     ${Caminho_Screenshots}Remarcações de Visitas
@@ -99,7 +101,7 @@ Reservas -> Remarcação de Visitas
     Manutenções
     RPA.Windows.Click         Reservas
     RPA.Desktop.Press Keys    r
-    Sleep                     1s
+    Sleep                     2s
     RPA.Windows.Get Text      Consulta de Reservas (1)
     RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Consulta de Reservas (1)    ${Caminho_Screenshots}Reservas/Remarcação de Visitas
@@ -132,6 +134,7 @@ Lançamento de Vouchers Pendentes
     [Teardown]              Caso aconteça erro                  ${Caminho_Screenshots}                                     Lançamento de Vouchers Pendentes
     Manutenções
     RPA.Windows.Click       Lançamento de Vouchers Pendentes
+    Sleep                   1s
     RPA.Windows.Get Text    Alteração de Vouchers Bilhete
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Alteração de Vouchers Bilhete       ${Caminho_Screenshots}Lançamento de Vouchers Pendentes

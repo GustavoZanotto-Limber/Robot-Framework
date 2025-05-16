@@ -27,6 +27,7 @@ Favoritos
 Papel de Parede
     [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
     Utilitários
+    Sleep                   1s
     RPA.Windows.Click       Papel de Parede
     RPA.Windows.Get Text    Seleção de Papel de Parede
     BaseDesktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
@@ -62,7 +63,6 @@ Relatórios Personalizados > Cadastro de Categorias
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar janela
-    RPA.Windows.Click       Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
@@ -75,8 +75,6 @@ Relatórios Personalizados > Cadastro de Relatórios
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar janela
-    RPA.Windows.Click       Sim
-
 
 Layout de Bilhetes
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Layout de Bilhetes
