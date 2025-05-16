@@ -17,7 +17,7 @@ Movimentos
 *** Test Cases ***
 
 Movimentações de Produtos - Agrupados
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Movimentações de Produtos - Agrupados
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Movimentações de Produtos - Agrupados
     Movimentos
     RPA.Windows.Click       Movimentações de Produtos - Agrupados
     RPA.Windows.Get Text    Movimentações de Produtos Agrupados (1)
@@ -25,7 +25,7 @@ Movimentações de Produtos - Agrupados
     Fechar janela
 
 Movimentações de Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Movimentações de Produtos 
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Movimentações de Produtos 
     Movimentos
     RPA.Windows.Click       Movimentações de Produtos 
     RPA.Windows.Get Text    Movimentações de Produtos (1)
@@ -33,7 +33,7 @@ Movimentações de Produtos
     Fechar janela
 
 Ajuste/Contagem de Estoque
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Ajuste_Contagem de Estoque 
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Ajuste_Contagem de Estoque 
     Movimentos
     RPA.Windows.Click       Ajuste/Contagem de Estoque 
     RPA.Windows.Get Text    Ajuste/Contagem de Estoque (1)
@@ -41,7 +41,7 @@ Ajuste/Contagem de Estoque
     Fechar janela
 
 Balanço de Estoque
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Balanço de Estoque 
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Balanço de Estoque 
     Movimentos
     RPA.Windows.Click       Balanço de Estoque 
     RPA.Windows.Get Text    Balanço de Estoque (1)
@@ -49,7 +49,7 @@ Balanço de Estoque
     Fechar janela
 
 Quantidade Mínima/Máxima de Itens por Estabelecimento
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Quantidade Mínima_Máxima de Itens por Estabelecimento
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Quantidade Mínima_Máxima de Itens por Estabelecimento
     Movimentos
     RPA.Windows.Click       Quantidade Mínima/Máxima de Itens por Estabelecimento
     RPA.Windows.Get Text    Cadastro de Quantidade Mínima/Máxima de Itens por Estabelecimento (1)
@@ -57,7 +57,7 @@ Quantidade Mínima/Máxima de Itens por Estabelecimento
     Fechar janela
 
 Alocação de Setores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Alocação de Setores
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Alocação de Setores
     Movimentos
     RPA.Windows.Click       Alocação de Setores
     RPA.Windows.Get Text    Alocação de Setores (1)
@@ -65,7 +65,7 @@ Alocação de Setores
     Fechar janela
 
 Transferências entre Depósitos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Transferências entre Depósitos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Transferências entre Depósitos
     Movimentos
     RPA.Windows.Click       Transferências entre Depósitos
     RPA.Windows.Get Text    Transferências de Depósito (1)
@@ -73,7 +73,7 @@ Transferências entre Depósitos
     Fechar janela
 
 Pré Transferências entre Depósitos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Pré Transferências entre Depósitos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Pré Transferências entre Depósitos
     Movimentos
     RPA.Desktop.Press Keys  P 
     RPA.Windows.Get Text    Pré - Transferências de Depósito (1)
@@ -82,7 +82,7 @@ Pré Transferências entre Depósitos
 
 
 Aprovação de Pré Transferências entre Depósitos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Aprovação de Pré Transferências entre Depósitos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Aprovação de Pré Transferências entre Depósitos
     Movimentos
     RPA.Windows.Click       Aprovação de Pré Transferência entre Depósitos
     RPA.Windows.Get Text    Consulta/Aprovação/Rejeição de Pré transferência entre depósitos (1)
@@ -90,7 +90,7 @@ Aprovação de Pré Transferências entre Depósitos
     Fechar janela
 
 Tranferência entre Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Tranferência entre Produtos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tranferência entre Produtos
     Movimentos
     RPA.Windows.Click       Transferência entre Produtos
     RPA.Windows.Get Text    Transferência entre Produtos (1)
@@ -98,7 +98,7 @@ Tranferência entre Produtos
     Fechar janela
 
 Bloqueio de Movimentos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Bloqueio de Movimentos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Bloqueio de Movimentos
     Movimentos
     RPA.Windows.Click       Bloqueio de Movimentos
     RPA.Windows.Get Text    Bloqueio de Movimento (1)
@@ -106,7 +106,7 @@ Bloqueio de Movimentos
     Fechar janela
 
 Inventário Manual
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Inventário Manual
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Inventário Manual
     Movimentos
     RPA.Windows.Click       Inventário Manual
     RPA.Windows.Get Text    Inventário Manual (1)
@@ -114,7 +114,7 @@ Inventário Manual
     Fechar janela
 
 Tranferência entre Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Tranferência entre Terceiros
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tranferência entre Terceiros
     Movimentos
     RPA.Windows.Click       Transferência entre Terceiros
     RPA.Windows.Get Text    Transferência de depósitos entre terceiros (1)
@@ -122,7 +122,7 @@ Tranferência entre Terceiros
     Fechar janela
 
 Bloqueio de Saldo de Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Bloqueio de Saldo de Terceiros
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Bloqueio de Saldo de Terceiros
     Movimentos
     RPA.Windows.Click       Bloqueio de Saldo de Terceiros
     RPA.Windows.Get Text    Bloqueio de Saldo de Terceiros (1)
@@ -130,7 +130,7 @@ Bloqueio de Saldo de Terceiros
     Fechar janela
 
 Controle de Empréstimos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Controle de Empréstimos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Controle de Empréstimos
     Movimentos
     RPA.Windows.Click       Controle de Empréstimos
     RPA.Windows.Get Text    Controle de Empréstimos de Grãos (1)
@@ -138,7 +138,7 @@ Controle de Empréstimos
     Fechar janela
 
 Requisição de Compra/Transferência > Manutenção
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Compra_Transferência/             ERRO Manutenção
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Compra_Transferência/              Manutenção
     Movimentos
     RPA.Windows.Click       Requisição de Compra/Transferência
     RPA.Desktop.Press Keys  M
@@ -147,7 +147,7 @@ Requisição de Compra/Transferência > Manutenção
     Fechar janela
 
 Requisição de Compra/Transferência > Consultar
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Compra_Transferência/             ERRO Consultar
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Compra_Transferência/              Consultar
     Movimentos
     RPA.Windows.Click       Requisição de Compra/Transferência
     RPA.Desktop.Press Keys  C
@@ -156,7 +156,7 @@ Requisição de Compra/Transferência > Consultar
     Fechar janela
 
 Requisição de Compra/Transferência > Aprovação/Rejeição de Requisição
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Compra_Transferência/             ERRO Aprovação_Rejeição de Requisição
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Compra_Transferência/              Aprovação_Rejeição de Requisição
     Movimentos
     RPA.Windows.Click       Requisição de Compra/Transferência
     RPA.Desktop.Press Keys  A
@@ -165,7 +165,7 @@ Requisição de Compra/Transferência > Aprovação/Rejeição de Requisição
     Fechar janela
 
 Requisição de Movimentos > Emissão/Manutenção
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Movimentos/             ERRO Emissão_Manutenção
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Movimentos/              Emissão_Manutenção
     Movimentos
     RPA.Windows.Click       Requisição de Movimentos
     RPA.Desktop.Press Keys  E
@@ -174,7 +174,7 @@ Requisição de Movimentos > Emissão/Manutenção
     Fechar janela
 
 Requisição de Movimentos > Consulta
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Movimentos/             ERRO Consulta
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Movimentos/              Consulta
     Movimentos
     RPA.Windows.Click       Requisição de Movimentos
     RPA.Desktop.Press Keys  C
@@ -183,7 +183,7 @@ Requisição de Movimentos > Consulta
     Fechar janela
 
 Requisição de Movimentos > Aprovação/Rejeição
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Movimentos/             ERRO Aprovação_Rejeição
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Movimentos/              Aprovação_Rejeição
     Movimentos
     RPA.Windows.Click       Requisição de Movimentos
     RPA.Desktop.Press Keys  A
@@ -192,7 +192,7 @@ Requisição de Movimentos > Aprovação/Rejeição
     Fechar janela
 
 Controle de Vasilhames > Lançamento Inicial/Ajuste
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle de Vasilhames/             ERRO Lançamento Inicial_Ajuste
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle de Vasilhames/              Lançamento Inicial_Ajuste
     Movimentos
     RPA.Windows.Click       Controle de Vasilhames
     RPA.Desktop.Press Keys  L
@@ -201,7 +201,7 @@ Controle de Vasilhames > Lançamento Inicial/Ajuste
     Fechar janela
 
 Controle de Vasilhames > Movimentação de Vasilhames
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle de Vasilhames/             ERRO Movimentação de Vasilhames
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle de Vasilhames/              Movimentação de Vasilhames
     Movimentos
     RPA.Windows.Click       Controle de Vasilhames
     RPA.Desktop.Press Keys  M
@@ -210,7 +210,7 @@ Controle de Vasilhames > Movimentação de Vasilhames
     Fechar janela
 
 Processos Personalizados
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Processos Personalizados
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Processos Personalizados
     Movimentos
     RPA.Windows.Click       Processos Personalizados
     RPA.Windows.Get Text    Processos Personalizados (1)

@@ -16,7 +16,7 @@ Exames
 *** Test Cases ***
 
 Validar Exames
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Validar Exames
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Validar Exames
     Exames 
     RPA.Windows.Click       Validar Exames
     RPA.Windows.Get Text    Validação de Exames (1)

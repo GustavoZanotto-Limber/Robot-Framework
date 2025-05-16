@@ -17,7 +17,7 @@ Cheques
 *** Test Cases ***
 
 Cheques Emitidos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Cheques Emitidos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Cheques Emitidos
     Cheques
     RPA.Windows.Click         Cheques Emitidos
     RPA.Windows.Get Text      Manutenção de Cheques (1)
@@ -25,7 +25,7 @@ Cheques Emitidos
     Fechar janela
 
 Cheques de Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Cheques de Terceiros
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Cheques de Terceiros
     Cheques
     RPA.Windows.Click         Cheques de Terceiros
     RPA.Windows.Get Text      Movimentação de Cheques de Terceiros (1)
@@ -33,7 +33,7 @@ Cheques de Terceiros
     Fechar janela
 
 Relatório de Cheque de Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Relatório de Cheque de Terceiros
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatório de Cheque de Terceiros
     Cheques
     RPA.Windows.Click         Relatório de Cheques de Terceiros
     RPA.Windows.Get Text      Relatório de Cheque de Terceiros (1)
@@ -41,7 +41,7 @@ Relatório de Cheque de Terceiros
     Fechar janela
 
 Relatório de Cheques Emitidos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Relatório de Cheques Emitidos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatório de Cheques Emitidos
     Cheques
     RPA.Windows.Click         Relatório de Cheques Emitidos
     RPA.Windows.Get Text      Relatório de Cheques (1)
@@ -49,7 +49,7 @@ Relatório de Cheques Emitidos
     Fechar janela
 
 Relatórios de Cheques Cancelados/Excluídos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Relatórios de Cheques Cancelados_Excluídos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatórios de Cheques Cancelados_Excluídos
     Cheques
     RPA.Windows.Click         Relatório de Cheques Cancelados/Excluídos
     RPA.Windows.Get Text      Relatório de cheques cancelados (1)
@@ -57,7 +57,7 @@ Relatórios de Cheques Cancelados/Excluídos
     Fechar janela
 
 Layouts de Cheques para Emissão
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Layouts de Cheques para Emissão
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Layouts de Cheques para Emissão
     Cheques
     RPA.Windows.Click         Layouts de Cheques para Emissão
     RPA.Windows.Get Text      Configuração de Cheques (1)
@@ -65,7 +65,7 @@ Layouts de Cheques para Emissão
     Fechar janela
 
 Imprimir Multiplos Cheques
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Imprimir Multiplos Cheques
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Imprimir Multiplos Cheques
     Cheques
     RPA.Windows.Click         Imprimir Multiplos Cheques
     RPA.Windows.Get Text      Imprimir Cheques (1)

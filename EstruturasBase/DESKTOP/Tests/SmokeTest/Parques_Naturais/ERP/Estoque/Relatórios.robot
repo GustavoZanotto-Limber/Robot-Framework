@@ -19,7 +19,7 @@ Relatórios
 *** Test Cases ***
 
 Inventário de Estoque
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Inventário de Estoque
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Inventário de Estoque
     Relatórios
     RPA.Windows.Click       Inventário de Estoque
     RPA.Windows.Get Text    Inventário de Estoque (1)
@@ -27,7 +27,7 @@ Inventário de Estoque
     Fechar janela
 
 Relatório de Estoque Simplificado
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Relatório de Estoque Simplificado
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Relatório de Estoque Simplificado
     Relatórios
     RPA.Windows.Click       Relatório de Estoque Simplificado
     RPA.Windows.Get Text    Relatório Simplificado de Estoque (1)
@@ -35,7 +35,7 @@ Relatório de Estoque Simplificado
     Fechar janela
 
 Resumo Apuração Custo Médio
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Resumo Apuração Custo Médio
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Resumo Apuração Custo Médio
     Relatórios
     RPA.Windows.Click       Resumo Apuração Custo Médio
     RPA.Windows.Get Text    Resumo da Apuração do Custo Médio (1)
@@ -43,7 +43,7 @@ Resumo Apuração Custo Médio
     Fechar janela
 
 Saldos de Lotes/Sintético
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Saldos de Lotes_Sintético
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Saldos de Lotes_Sintético
     Relatórios
     RPA.Windows.Click       Saldos de Lotes/Sintético
     RPA.Windows.Get Text    Relatório de Saldo de Lotes/Sintético (1)
@@ -51,7 +51,7 @@ Saldos de Lotes/Sintético
     Fechar janela
 
 Análise de Disponibilidade do Estoque
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Análise de Disponibilidade do Estoque
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Análise de Disponibilidade do Estoque
     Relatórios
     RPA.Windows.Click       Análise da Disponibilidade do Estoque
     RPA.Windows.Get Text    Análise da Disponibilidade do Estoque (1)
@@ -59,7 +59,7 @@ Análise de Disponibilidade do Estoque
     Fechar janela
 
 Movimentação de Depósitos/Compras
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Movimentação de Depósitos_Compras
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Movimentação de Depósitos_Compras
     Relatórios
     RPA.Windows.Click       Movimentação de Depósitos/Compras
     RPA.Windows.Get Text    Movimentação de Depósitos/Compras (1)
@@ -67,7 +67,7 @@ Movimentação de Depósitos/Compras
     Fechar janela
 
 Rentabilidade de Estoque
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Rentabilidade de Estoque
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Rentabilidade de Estoque
     Relatórios
     RPA.Windows.Click       Rentabilidade de Estoque
     RPA.Windows.Get Text    Relatório de Rentabilidade de Estoque (1)
@@ -75,7 +75,7 @@ Rentabilidade de Estoque
     Fechar janela
 
 Movimentação de produtos - Operacional
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Movimentação de produtos - Operacional
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Movimentação de produtos - Operacional
     Relatórios
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Movimentação de produtos (1)
@@ -83,7 +83,7 @@ Movimentação de produtos - Operacional
     Fechar janela
 
 Movimentação de Produtos - Lançamentos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Movimentação de Produtos - Lançamentos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Movimentação de Produtos - Lançamentos
     Relatórios
     RPA.Windows.Click       Movimentação de Produtos - Lançamentos
     RPA.Windows.Get Text    Movimentação de Produtos - Lançamentos (1)
@@ -91,7 +91,7 @@ Movimentação de Produtos - Lançamentos
     Fechar janela
 
 Requisições de Compra/Transferência
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Requisições de Compra_Transferência
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Requisições de Compra_Transferência
     Relatórios
     RPA.Windows.Click       Requisições de Compra/Transferência
     RPA.Windows.Get Text    Relatório de Requições/Status (1)
@@ -99,7 +99,7 @@ Requisições de Compra/Transferência
     Fechar janela
 
 Valor do Estoque Atual
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Valor do Estoque Atual
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Valor do Estoque Atual
     Relatórios
     RPA.Windows.Click       Valor do Estoque Atual
     RPA.Windows.Get Text    Relatório de Valor do Estoque Atual (1)
@@ -107,7 +107,7 @@ Valor do Estoque Atual
     Fechar janela
 
 Análise de Estoque
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Análise de Estoque
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Análise de Estoque
     Relatórios
     RPA.Windows.Click       Análise de Estoque
     RPA.Windows.Get Text    Análise de Estoque (1)
@@ -115,7 +115,7 @@ Análise de Estoque
     Fechar janela
 
 Resumo Geral de Movimentos/Saldos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Resumo Geral de Movimentos_Saldos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Resumo Geral de Movimentos_Saldos
     Relatórios
     RPA.Windows.Click       Resumo Geral de Movimentos/Saldos
     RPA.Windows.Get Text    Resumo Geral de Movimentos/Saldos (1)
@@ -123,7 +123,7 @@ Resumo Geral de Movimentos/Saldos
     Fechar janela
 
 Cadastros > Setores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/             ERRO Setores
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/              Setores
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  S
@@ -132,7 +132,7 @@ Cadastros > Setores
     Fechar janela
 
 Cadastros > Produtos > Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Produtos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Produtos
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -142,7 +142,7 @@ Cadastros > Produtos > Produtos
     Fechar janela
 
 Cadastros > Produtos > Tabela de Umidade
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Tabela de Umidade
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Tabela de Umidade
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -152,7 +152,7 @@ Cadastros > Produtos > Tabela de Umidade
     Fechar janela
 
 Cadastros > Produtos > Cores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Cores
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Cores
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -162,7 +162,7 @@ Cadastros > Produtos > Cores
     Fechar janela
 
 Cadastros > Produtos > Unidades
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Unidades
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Unidades
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -172,7 +172,7 @@ Cadastros > Produtos > Unidades
     Fechar janela
 
 Cadastros > Produtos > Marcas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Marcas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Marcas
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -182,7 +182,7 @@ Cadastros > Produtos > Marcas
     Fechar janela
 
 Cadastros > Produtos > Estampas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Estampas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Estampas
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -192,7 +192,7 @@ Cadastros > Produtos > Estampas
     Fechar janela
 
 Cadastros > Produtos > Tamanhos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Tamanhos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Tamanhos
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -202,7 +202,7 @@ Cadastros > Produtos > Tamanhos
     Fechar janela
 
 Cadastros > Tabela Tributária
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/             ERRO Tabela Tributária
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/              Tabela Tributária
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  T
@@ -211,7 +211,7 @@ Cadastros > Tabela Tributária
     Fechar janela
 
 Cadastros > CFOP
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/             ERRO CFOP
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/              CFOP
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  C
@@ -220,7 +220,7 @@ Cadastros > CFOP
     Fechar janela
 
 Cadastros > Estabelecimento
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/             ERRO Estabelecimento
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/              Estabelecimento
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  E
@@ -229,7 +229,7 @@ Cadastros > Estabelecimento
     Fechar janela
 
 Cadastros > Países
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/          ERRO Países
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/           Países
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  A
@@ -238,7 +238,7 @@ Cadastros > Países
     Fechar janela
 
 Cadastros > Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/          ERRO Estados
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/           Estados
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  D
@@ -247,7 +247,7 @@ Cadastros > Estados
     Fechar janela
 
 Cadastros > Municípios
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/          ERRO Municípios
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/           Municípios
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  M
@@ -256,7 +256,7 @@ Cadastros > Municípios
     Fechar janela
 
 Cadastros > Regiões
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/         ERRO Regiões
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/          Regiões
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  R
@@ -265,7 +265,7 @@ Cadastros > Regiões
     Fechar janela
 
 Customizados > Relatório Simplificado de Estoque 2
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Customizados/         ERRO Relatório Simplificado de Estoque 2
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Customizados/          Relatório Simplificado de Estoque 2
     Relatórios
     RPA.Windows.Click         Customizados
     RPA.Desktop.Press Keys    R
@@ -274,7 +274,7 @@ Customizados > Relatório Simplificado de Estoque 2
     Fechar janela
 
 Customizados > Relatório Simplificado / Depósito
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Customizados/         ERRO Relatório Simplificado _ Depósito
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Customizados/          Relatório Simplificado _ Depósito
     Relatórios
     RPA.Windows.Click         Customizados
     RPA.Desktop.Press Keys    E

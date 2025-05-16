@@ -16,7 +16,7 @@ Cartões
 *** Test Cases ***
 
 Impressão
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Impressão
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Impressão
     Cartões 
     RPA.Windows.Click       Impressão
     RPA.Windows.Get Text    Impressão de Carteirinhas (1)
@@ -25,7 +25,7 @@ Impressão
     Fechar janela 
 
 Entrega de Cartões
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Entrega de Cartões
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Entrega de Cartões
     Cartões 
     RPA.Windows.Click       Entrega de Cartões
     RPA.Windows.Get Text    Controle de Entrega de Cartões (1)

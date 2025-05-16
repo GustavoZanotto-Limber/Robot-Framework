@@ -17,7 +17,7 @@ Utilitários
 *** Test Cases ***
 
 Configurar Nota Fiscal
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Configurar Nota Fiscal
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Configurar Nota Fiscal
     Utilitários
     RPA.Windows.Click       Configurar Nota Fiscal
     RPA.Windows.Get Text    Configuração da Nota Fiscal (1)
@@ -25,7 +25,7 @@ Configurar Nota Fiscal
     Fechar janela
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Favoritos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Favoritos
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -33,7 +33,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                   ERRO Papel de Parede
+    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -42,7 +42,7 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configurar Menu Principal
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Menu Principal
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -50,7 +50,7 @@ Configurar Menu Principal
     Fechar janela
 
 Configurar Barra de Atalhos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configurar Barra de Atalhos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
     Utilitários
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
@@ -58,7 +58,7 @@ Configurar Barra de Atalhos
     Fechar Janela
 
 Estilo do Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Estilo do Menu Principal
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -66,7 +66,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Controle de Acessos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Controle de Acessos
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -74,7 +74,7 @@ Controle de Acessos
     Fechar janela
 
 Configuração de Liberação
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configuração de Liberação
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configuração de Liberação
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -82,7 +82,7 @@ Configuração de Liberação
     Fechar janela
 
 Relatórios Personalizados > Cadastro de Categorias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                            ERRO Cadastro de Categorias
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                             Cadastro de Categorias
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -91,7 +91,7 @@ Relatórios Personalizados > Cadastro de Categorias
     Fechar janela
     
 Relatórios Personalizados > Cadastro de Relatórios
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                              ERRO Cadastro de Relatórios
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -100,7 +100,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     Fechar janela
 
 Criar Usuario de Log
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Criar Usuario de Log
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
     Utilitários
     RPA.Windows.Click       Criar Usuário de Log
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
@@ -108,7 +108,7 @@ Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Verifica transações abertas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Verifica transações abertas
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
@@ -116,7 +116,7 @@ Verifica transações abertas
     Fechar janela
 
 Impressão de Etiquetas/Produtos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Impressão de Etiquetas_Produtos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Impressão de Etiquetas_Produtos
     Utilitários
     RPA.Windows.Click       Impressão de Etiquetas/Produtos
     RPA.Windows.Get Text    Emissão de Etiquetas (1)
@@ -124,7 +124,7 @@ Impressão de Etiquetas/Produtos
     Fechar janela  
 
 Etiquetas (Terceiros)
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}            ERRO Etiquetas (Terceiros)
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Etiquetas (Terceiros)
     Utilitários
     RPA.Windows.Click       Etiquetas (Terceiros)
     RPA.Windows.Get Text    Emissão de Etiquetas de Terceiros (1)
@@ -132,14 +132,14 @@ Etiquetas (Terceiros)
     Fechar janela
 
 Impressão de Etiquetas de Entrega
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Impressão de Etiquetas de Entregas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Impressão de Etiquetas de Entregas
     Utilitários
     RPA.Windows.Click       Impressão de Etiquetas de Entrega
     RPA.Windows.Get Text    Impressão de Etiquetas de Entrega (1)
     BaseDesktop.Screenshot  Impressão de Etiquetas de Entrega (1)    ${Caminho_Screenshots}Impressão de Etiquetas de Entregas
     Fechar janela 
 PDV > Atualizar Produtos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}PDV/          ERRO Atualizar Produtos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}PDV/           Atualizar Produtos
     Utilitários
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    A
@@ -148,7 +148,7 @@ PDV > Atualizar Produtos
     Fechar janela
 
 PDV > Atualizar Balança
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}PDV/          ERRO Atualizar Balança
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}PDV/           Atualizar Balança
     Utilitários
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    T
@@ -157,7 +157,7 @@ PDV > Atualizar Balança
     Fechar janela
 
 Agenda > Agendamentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/          ERRO Agendamentos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/           Agendamentos
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    A
@@ -166,7 +166,7 @@ Agenda > Agendamentos
     Fechar janela
 
 Agenda > Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/          ERRO Estados
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/           Estados
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    E
@@ -175,7 +175,7 @@ Agenda > Estados
     Fechar janela
 
 Agenda > Consulta
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/          ERRO Consulta
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/           Consulta
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    C
@@ -184,7 +184,7 @@ Agenda > Consulta
     Fechar janela
 
 Agenda > Calendários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/          ERRO Calendários
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/           Calendários
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    L
@@ -193,7 +193,7 @@ Agenda > Calendários
     RPA.Windows.Click         Fechar
 
 Agenda Telefônica
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Agenda Telefônica
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Agenda Telefônica
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
@@ -201,7 +201,7 @@ Agenda Telefônica
     Fechar janela
 
 Integração WhatsApp > Configuração para Integração
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Integração WhatsApp/          ERRO Configuração para Integração
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Integração WhatsApp/           Configuração para Integração
     Utilitários
     RPA.Windows.Click         Integração WhatsApp
     RPA.Desktop.Press Keys    C
@@ -210,7 +210,7 @@ Integração WhatsApp > Configuração para Integração
     Fechar janela
 
 Integração WhatsApp > Envio de Mensagens
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Integração WhatsApp/          ERRO Envio de Mensagens
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Integração WhatsApp/           Envio de Mensagens
     Utilitários
     RPA.Windows.Click         Integração WhatsApp
     RPA.Desktop.Press Keys    E
@@ -219,7 +219,7 @@ Integração WhatsApp > Envio de Mensagens
     Fechar janela
 
 Geração de Arquivos > Projeto Cultivar
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/          ERRO Projeto Cultivar
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/           Projeto Cultivar
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    P
@@ -228,7 +228,7 @@ Geração de Arquivos > Projeto Cultivar
     RPA.Windows.Click         Fechar
 
 Geração de Arquivos > Projeto Pegasus
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/          ERRO Projeto Pegasus
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/           Projeto Pegasus
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    R
@@ -237,7 +237,7 @@ Geração de Arquivos > Projeto Pegasus
     RPA.Windows.Click         Fechar
 
 Geração de Arquivos > Accera Bayer
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/          ERRO Accera Bayer
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/           Accera Bayer
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    A
@@ -246,7 +246,7 @@ Geração de Arquivos > Accera Bayer
     Fechar janela
 
 Geração de Arquivos > Projeto Cultivar (Fase II)
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/          ERRO Projeto Cultivar (Fase II)
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/           Projeto Cultivar (Fase II)
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    O
@@ -255,7 +255,7 @@ Geração de Arquivos > Projeto Cultivar (Fase II)
     RPA.Windows.Click         Fechar
 
 Geração de Arquivos > Histórico de Geracao de Arquivos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/          ERRO Histórico de Geracao de Arquivos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/           Histórico de Geracao de Arquivos
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    H
@@ -264,7 +264,7 @@ Geração de Arquivos > Histórico de Geracao de Arquivos
     Fechar janela
 
 Exportação de arquivos > Salvar arquivo XML NFe Própria
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Exportação de arquivos/          ERRO Salvar arquivo XML NFe Própria
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Exportação de arquivos/           Salvar arquivo XML NFe Própria
     Utilitários
     RPA.Windows.Click         Exportação de arquivos
     RPA.Desktop.Press Keys    S
@@ -273,7 +273,7 @@ Exportação de arquivos > Salvar arquivo XML NFe Própria
     Fechar janela
 
 Exportação de arquivos > CRM Cloud > Integração
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Exportação de arquivos/CRM Cloud/          ERRO Integração
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Exportação de arquivos/CRM Cloud/           Integração
     Utilitários
     RPA.Windows.Click         Exportação de arquivos
     RPA.Windows.Click         CRM Cloud
@@ -284,7 +284,7 @@ Exportação de arquivos > CRM Cloud > Integração
     Fechar janela
 
 Exportação de arquivos > CRM Cloud > Configuração
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Exportação de arquivos/CRM Cloud/          ERRO Configuração
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Exportação de arquivos/CRM Cloud/           Configuração
     Utilitários
     RPA.Windows.Click         Exportação de arquivos
     RPA.Windows.Click         CRM Cloud
@@ -294,7 +294,7 @@ Exportação de arquivos > CRM Cloud > Configuração
     RPA.Windows.Click         Fechar
 
 Integradores > Integração Padrão
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Integradores/         ERRO Integração Padrão
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Integradores/          Integração Padrão
     Utilitários
     RPA.Windows.Click         Integradores
     RPA.Desktop.Press Keys    I
@@ -303,7 +303,7 @@ Integradores > Integração Padrão
     Fechar janela
 
 Importação de Planilha Excel Personalizada
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}         ERRO Importação de Planilha Excel Personalizada
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          Importação de Planilha Excel Personalizada
     Utilitários
     RPA.Windows.Click         Importação de Planilha Excel Personalizada
     RPA.Windows.Get Text      Importação de Planilha Excel Personalizada (1)
@@ -311,7 +311,7 @@ Importação de Planilha Excel Personalizada
     Fechar janela
 
 Gerador de Vendas por XML
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}         ERRO Gerador de Vendas por XML
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          Gerador de Vendas por XML
     Utilitários
     RPA.Windows.Click         Gerador de Vendas por XML
     RPA.Windows.Get Text      Importação de Nota Fiscal (1)

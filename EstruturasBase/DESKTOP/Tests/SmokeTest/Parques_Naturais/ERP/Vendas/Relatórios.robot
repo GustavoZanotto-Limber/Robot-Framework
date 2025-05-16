@@ -17,7 +17,7 @@ Relatórios
 *** Test Cases ***
 
 Vendas/Prestação de Serviços > Lançamentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Lançamentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Lançamentos
     Relatórios                 
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    L
@@ -26,7 +26,7 @@ Vendas/Prestação de Serviços > Lançamentos
     Fechar janela
 
 Vendas/Prestação de Serviços > Sintético/Item
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Sintético_Item
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Sintético_Item
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    S
@@ -35,7 +35,7 @@ Vendas/Prestação de Serviços > Sintético/Item
     Fechar janela
 
 Vendas/Prestação de Serviços > Sintético/Cliente
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Sintético_Cliente
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Sintético_Cliente
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    I
@@ -44,7 +44,7 @@ Vendas/Prestação de Serviços > Sintético/Cliente
     Fechar janela
 
 Vendas/Prestação de Serviços > Sintético/Setor
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Sintético_Setor
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Sintético_Setor
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    N
@@ -53,7 +53,7 @@ Vendas/Prestação de Serviços > Sintético/Setor
     Fechar janela
 
 Vendas/Prestação de Serviços > Evolução Diária
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Evolução Diária
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Evolução Diária
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    D
@@ -62,7 +62,7 @@ Vendas/Prestação de Serviços > Evolução Diária
     Fechar janela
 
 Vendas/Prestação de Serviços > Evolução Mensal
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Evolução Mensal
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Evolução Mensal
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    M
@@ -71,7 +71,7 @@ Vendas/Prestação de Serviços > Evolução Mensal
     Fechar janela
 
 Vendas/Prestação de Serviços > Evolução Anual
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Evolução Anual
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Evolução Anual
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    A
@@ -80,7 +80,7 @@ Vendas/Prestação de Serviços > Evolução Anual
     Fechar janela
 
 Vendas/Prestação de Serviços > Mapa Resumo
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Mapa Resumo
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Mapa Resumo
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    P
@@ -89,7 +89,7 @@ Vendas/Prestação de Serviços > Mapa Resumo
     Fechar janela
 
 Vendas/Prestação de Serviços > Agrupado/Número
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Agrupado_Número
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Agrupado_Número
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    G
@@ -98,7 +98,7 @@ Vendas/Prestação de Serviços > Agrupado/Número
     Fechar janela
 
 Vendas/Prestação de Serviços > Movimento de Vendedores
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Movimento de Vendedores
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Movimento de Vendedores
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    O
@@ -107,7 +107,7 @@ Vendas/Prestação de Serviços > Movimento de Vendedores
     Fechar janela
 
 Vendas/Prestação de Serviços > Análise de Recebimento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Análise de Recebimento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Análise de Recebimento
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    E
@@ -116,7 +116,7 @@ Vendas/Prestação de Serviços > Análise de Recebimento
     Fechar janela
 
 Vendas/Prestação de Serviços > Sintético/Vendedor/Item
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Sintético_Vendedor_Item
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Sintético_Vendedor_Item
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    T
@@ -125,7 +125,7 @@ Vendas/Prestação de Serviços > Sintético/Vendedor/Item
     Fechar janela
 
 Vendas/Prestação de Serviços > Cancelamentos de itens de pré-venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/PDV/                        ERRO Cancelamentos de itens de pré-venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/PDV/                         Cancelamentos de itens de pré-venda
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Windows.Click         PDV
@@ -135,7 +135,7 @@ Vendas/Prestação de Serviços > Cancelamentos de itens de pré-venda
     Fechar janela
 
 Vendas/Prestação de Serviços > Vendas/Aquisição de Serviços - CFOP
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Vendas_Aquisição de Serviços - CFOP
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Vendas_Aquisição de Serviços - CFOP
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    Q
@@ -144,7 +144,7 @@ Vendas/Prestação de Serviços > Vendas/Aquisição de Serviços - CFOP
     Fechar janela
 
 Vendas/Prestação de Serviços > Vendas com Conversão de Unidades
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                        ERRO Vendas com Conversão de Unidades
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Vendas_Prestação de Serviços/                         Vendas com Conversão de Unidades
     Relatórios
     RPA.Desktop.Press Keys    Right  
     RPA.Desktop.Press Keys    C
@@ -153,7 +153,7 @@ Vendas/Prestação de Serviços > Vendas com Conversão de Unidades
     Fechar janela
 
 Análise de Rentabilidade
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Análise de Rentabilidade
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Análise de Rentabilidade
     Relatórios
     RPA.Windows.Click         Análise de Rentabilidade  
     RPA.Windows.Get Text      Relatório de Rentabilidade (1)
@@ -161,7 +161,7 @@ Análise de Rentabilidade
     Fechar janela
 
 Lançamentos de Saídas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Lançamentos de Saídas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Lançamentos de Saídas
     Relatórios
     RPA.Windows.Click         Lançamentos de Saídas  
     RPA.Windows.Get Text      Lançamentos de Saídas (1)
@@ -169,7 +169,7 @@ Lançamentos de Saídas
     Fechar janela
 
 Produtos / Fornecedor
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Produtos _ Fornecedor
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Produtos _ Fornecedor
     Relatórios
     RPA.Windows.Click         Produtos / Fornecedor  
     RPA.Windows.Get Text      Relatório Ultimo Fornecedor (1)
@@ -177,7 +177,7 @@ Produtos / Fornecedor
     Fechar janela
 
 Notas Fiscais Emitidas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}            ERRO Notas Fiscais Emitidas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Notas Fiscais Emitidas
     Relatórios
     RPA.Windows.Click       Notas Fiscais Emitidas
     RPA.Windows.Get Text    Relatório de Notas Fiscais Emitidas (1)
@@ -185,7 +185,7 @@ Notas Fiscais Emitidas
     Fechar janela
 
 Notas Fiscais Inutilizadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Notas Fiscais Inutilizadas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Notas Fiscais Inutilizadas
     Relatórios
     RPA.Windows.Click         Notas Fiscais Inutilizadas  
     RPA.Windows.Get Text      Relatório de Notas Fiscais Inutilizadas (1)
@@ -193,7 +193,7 @@ Notas Fiscais Inutilizadas
     Fechar janela
 
 Pedido de Venda > Pedidos de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedido de Venda/                      ERRO Pedidos de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedido de Venda/                       Pedidos de Venda
     Relatórios
     RPA.Windows.Click         Pedido de Venda
     RPA.Desktop.Press Keys    P
@@ -202,7 +202,7 @@ Pedido de Venda > Pedidos de Venda
     Fechar janela
 
 Pedido de Venda > Pedidos de Venda Agrupados por Setor
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedido de Venda/                      ERRO Pedidos de Venda Agrupados por Setor
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedido de Venda/                       Pedidos de Venda Agrupados por Setor
     Relatórios
     RPA.Windows.Click         Pedido de Venda
     RPA.Desktop.Press Keys    E  
@@ -211,7 +211,7 @@ Pedido de Venda > Pedidos de Venda Agrupados por Setor
     Fechar janela
 
 Pedido de Venda > Rentabilidade de Pedidos de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedido de Venda/                      ERRO Rentabilidade de Pedidos de Venda
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedido de Venda/                       Rentabilidade de Pedidos de Venda
     Relatórios
     RPA.Windows.Click         Pedido de Venda
     RPA.Desktop.Press Keys    R  
@@ -220,7 +220,7 @@ Pedido de Venda > Rentabilidade de Pedidos de Venda
     Fechar janela
 
 Vendas em Condicional
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Vendas em Condicional
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Vendas em Condicional
     Relatórios
     RPA.Windows.Click         Vendas em Condicional  
     RPA.Windows.Get Text      Relatório de Condicionais (1)
@@ -228,7 +228,7 @@ Vendas em Condicional
     Fechar janela
 
 Disponibilidade em Estoque (Condicionais)
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Disponibilidade em Estoque (Condicionais)
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Disponibilidade em Estoque (Condicionais)
     Relatórios
     RPA.Windows.Click         Disponibilidade em Estoque (Condicionais)  
     RPA.Windows.Get Text      Disponibilidade de Estoque (Condicionais) (1)
@@ -236,7 +236,7 @@ Disponibilidade em Estoque (Condicionais)
     Fechar janela
 
 Giro de Clientes
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Giro de Clientes
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Giro de Clientes
     Relatórios
     RPA.Windows.Click         Giro de Clientes  
     RPA.Windows.Get Text      Relatório Giro de Clientes (1)
@@ -244,7 +244,7 @@ Giro de Clientes
     Fechar janela
 
 Giro de Produtos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Giro de Produtos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Giro de Produtos
     Relatórios
     RPA.Windows.Click         Giro de Produtos  
     RPA.Windows.Get Text      Relatório Giro de Produtos (1)
@@ -252,7 +252,7 @@ Giro de Produtos
     Fechar janela
 
 Resumo Retenção Monsanto
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Resumo Retenção Monsanto
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Resumo Retenção Monsanto
     Relatórios
     RPA.Windows.Click         Resumo Retenção Monsanto  
     RPA.Windows.Get Text      Consulta Monsanto (1)
@@ -260,7 +260,7 @@ Resumo Retenção Monsanto
     Fechar janela
 
 Horas Trabalhadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Horas Trabalhadas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Horas Trabalhadas
     Relatórios
     RPA.Windows.Click         Horas Trabalhadas
     RPA.Windows.Get Text      Relatório de Horas Trabalhadas (1)
@@ -268,7 +268,7 @@ Horas Trabalhadas
     Fechar janela
 
 Resumo Geral por Forma de Pagamento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Resumo Geral por Forma de Pagamento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Resumo Geral por Forma de Pagamento
     Relatórios
     RPA.Windows.Click         Resumo Geral por Forma de Pagamento  
     RPA.Windows.Get Text      Resumo Geral por Forma de Pagamento (1)
@@ -276,7 +276,7 @@ Resumo Geral por Forma de Pagamento
     Fechar janela
 
 Resumo Geral de Movimentos/Saldos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Resumo Geral de Movimentos_Saldos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Resumo Geral de Movimentos_Saldos
     Relatórios
     RPA.Windows.Click         Resumo Geral de Movimentos/Saldos  
     RPA.Windows.Get Text      Resumo Geral de Movimentos/Saldos (1)
@@ -284,7 +284,7 @@ Resumo Geral de Movimentos/Saldos
     Fechar janela
 
 Saldo Vendas Entrega Futura
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Saldo Vendas Entrega Futura
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Saldo Vendas Entrega Futura
     Relatórios
     RPA.Windows.Click         Saldo Vendas Entrega Futura  
     RPA.Windows.Get Text      Saldo Vendas Entrega Futura (1)
@@ -292,7 +292,7 @@ Saldo Vendas Entrega Futura
     Fechar janela
 
 Saídas/ Cidades (IAP)
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Saídas_ Cidades (IAP)
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Saídas_ Cidades (IAP)
     Relatórios
     RPA.Windows.Click         Saídas/ Cidades (IAP)  
     RPA.Windows.Get Text      Saídas/Cidades (IAP)". (1)
@@ -300,7 +300,7 @@ Saídas/ Cidades (IAP)
     Fechar janela
 
 Receituários Agrônomicos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       ERRO Receituários Agrônomicos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Receituários Agrônomicos
     Relatórios
     RPA.Windows.Click         Receituários Agrônomicos  
     RPA.Windows.Get Text      Relatório de Receituários Agronômicos (1)
@@ -308,7 +308,7 @@ Receituários Agrônomicos
     Fechar janela
     
 Relatórios ADAPAR > Relatório de Sementes
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Relatórios ADAPAR/                       ERRO Relatório de Sementes
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Relatórios ADAPAR/                        Relatório de Sementes
     Relatórios
     RPA.Windows.Click         Relatórios ADAPAR 
     RPA.Desktop.Press Keys    R 
@@ -317,7 +317,7 @@ Relatórios ADAPAR > Relatório de Sementes
     Fechar janela
 
 Relatórios ADAPAR > Relatório de Fertilizantes
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Relatórios ADAPAR/                       ERRO Relatório de Fertilizantes
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Relatórios ADAPAR/                        Relatório de Fertilizantes
     Relatórios
     RPA.Windows.Click         Relatórios ADAPAR 
     RPA.Desktop.Press Keys    E 
@@ -326,7 +326,7 @@ Relatórios ADAPAR > Relatório de Fertilizantes
     Fechar janela
 
 Cadastros > Setores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/             ERRO Setores
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/              Setores
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  S
@@ -335,7 +335,7 @@ Cadastros > Setores
     Fechar janela
 
 Cadastros > Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Cadastros/                       ERRO Terceiros
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Cadastros/                        Terceiros
     Relatórios
     RPA.Windows.Click         Cadastros 
     RPA.Desktop.Press Keys    T 
@@ -344,7 +344,7 @@ Cadastros > Terceiros
     Fechar janela
 
 Cadastros > Produtos > Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Produtos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Produtos
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -354,7 +354,7 @@ Cadastros > Produtos > Produtos
     Fechar janela
 
 Cadastros > Produtos > Tabela de Umidade
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Tabela de Umidade
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Tabela de Umidade
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -364,7 +364,7 @@ Cadastros > Produtos > Tabela de Umidade
     Fechar janela
 
 Cadastros > Produtos > Cores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Cores
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Cores
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -374,7 +374,7 @@ Cadastros > Produtos > Cores
     Fechar janela
 
 Cadastros > Produtos > Unidades
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Unidades
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Unidades
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -384,7 +384,7 @@ Cadastros > Produtos > Unidades
     Fechar janela
 
 Cadastros > Produtos > Marcas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Marcas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Marcas
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -394,7 +394,7 @@ Cadastros > Produtos > Marcas
     Fechar janela
 
 Cadastros > Produtos > Estampas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Estampas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Estampas
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -404,7 +404,7 @@ Cadastros > Produtos > Estampas
     Fechar janela
 
 Cadastros > Produtos > Tamanhos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Tamanhos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Tamanhos
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -414,7 +414,7 @@ Cadastros > Produtos > Tamanhos
     Fechar janela
 
 Cadastros > Produtos > Ingredientes/Informações Nutricionais
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/             ERRO Ingredientes_Informações Nutricionais
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/Produtos/              Ingredientes_Informações Nutricionais
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -424,7 +424,7 @@ Cadastros > Produtos > Ingredientes/Informações Nutricionais
     Fechar janela
 
 Cadastros > Tabela Tributária
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/             ERRO Tabela Tributária
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/              Tabela Tributária
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  A
@@ -433,7 +433,7 @@ Cadastros > Tabela Tributária
     Fechar janela
 
 Cadastros > CFOP
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/             ERRO CFOP
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/              CFOP
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  C
@@ -442,7 +442,7 @@ Cadastros > CFOP
     Fechar janela
 
 Cadastros > Estabelecimento
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/             ERRO Estabelecimento
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Cadastros/              Estabelecimento
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  E
@@ -451,7 +451,7 @@ Cadastros > Estabelecimento
     Fechar janela
 
 Cadastros > Operações Fiscais
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Cadastros/                        ERRO Operações Fiscais
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Cadastros/                         Operações Fiscais
     Relatórios
     RPA.Windows.Click         Cadastros
     RPA.Desktop.Press Keys    O
@@ -460,7 +460,7 @@ Cadastros > Operações Fiscais
     Fechar janela
 
 Cadastros > Aniversariantes
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Cadastros/                        ERRO Aniversariantes
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Cadastros/                         Aniversariantes
     Relatórios
     RPA.Windows.Click         Cadastros
     RPA.Desktop.Press Keys    N
@@ -469,7 +469,7 @@ Cadastros > Aniversariantes
     Fechar janela
 
 Cadastros > Países
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/          ERRO Países
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/           Países
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  P
@@ -478,7 +478,7 @@ Cadastros > Países
     Fechar janela
 
 Cadastros > Municípios
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/          ERRO Municípios
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/           Municípios
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  M
@@ -487,7 +487,7 @@ Cadastros > Municípios
     Fechar janela
 
 Cadastros > Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/          ERRO Estados
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/           Estados
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  D
@@ -496,7 +496,7 @@ Cadastros > Estados
     Fechar janela
 
 Cadastros > Regiões
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/         ERRO Regiões
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Cadastros/          Regiões
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  G
@@ -505,7 +505,7 @@ Cadastros > Regiões
     Fechar janela
 
 ECF > Relatório Mapa Resumo
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}ECF/         ERRO Relatório Mapa Resumo
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}ECF/          Relatório Mapa Resumo
     Relatórios
     RPA.Windows.Click       ECF
     RPA.Desktop.Press Keys  R
@@ -514,7 +514,7 @@ ECF > Relatório Mapa Resumo
     Fechar janela
 
 Relatório de Previsão de Pensões X Realizado
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      ERRO Relatório de Previsão de Pensões X Realizado
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Relatório de Previsão de Pensões X Realizado
     Relatórios
     RPA.Windows.Click         Relatório de Previsão de Pensões X Realizado 
     RPA.Windows.Get Text      Relatório de Totais Pensão (1)
@@ -522,7 +522,7 @@ Relatório de Previsão de Pensões X Realizado
     RPA.Windows.Click         Fechar
 
 Customizados > Relatório de Analise de Vendas por Setor
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Customizados/         ERRO Relatório de Analise de Vendas por Setor
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Customizados/          Relatório de Analise de Vendas por Setor
     Relatórios
     RPA.Windows.Click       Customizados
     RPA.Desktop.Press Keys  R
@@ -531,7 +531,7 @@ Customizados > Relatório de Analise de Vendas por Setor
     Fechar janela
     
 Customizados > Relatório de Taxa de Serviço Restaurante
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Customizados/         ERRO Relatório de Taxa de Serviço Restaurante
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Customizados/          Relatório de Taxa de Serviço Restaurante
     Relatórios
     RPA.Windows.Click       Customizados
     RPA.Desktop.Press Keys  E
@@ -540,7 +540,7 @@ Customizados > Relatório de Taxa de Serviço Restaurante
     Fechar janela
 
 Customizados > Borderô de Entregas
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Customizados/         ERRO Borderô de Entregas
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Customizados/          Borderô de Entregas
     Relatórios
     RPA.Windows.Click       Customizados
     RPA.Desktop.Press Keys  B

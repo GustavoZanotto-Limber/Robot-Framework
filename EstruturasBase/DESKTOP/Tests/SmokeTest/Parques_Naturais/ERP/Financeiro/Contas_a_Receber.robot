@@ -19,7 +19,7 @@ Contas a Receber
 *** Test Cases ***
 
 Lançamentos > Lançamento - Simplificado
-    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Lançamentos/                             ERRO Lançamento - Simplificado
+    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Lançamentos/                              Lançamento - Simplificado
     Contas a Receber
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    l
@@ -28,7 +28,7 @@ Lançamentos > Lançamento - Simplificado
     Fechar janela
 
 Lançamentos > Lançamento - Múltiplas Parcelas
-    [Teardown]                Caso aconteça erro                                         ${Caminho_Screenshots}Lançamentos/                                   ERRO Lançamento - Múltiplas Parcelas
+    [Teardown]                Caso aconteça erro                                         ${Caminho_Screenshots}Lançamentos/                                    Lançamento - Múltiplas Parcelas
     Contas a Receber
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    a
@@ -37,7 +37,7 @@ Lançamentos > Lançamento - Múltiplas Parcelas
     Fechar janela
 
 Lançamentos > Lançamento - Com Baixa Automática
-    [Teardown]                Caso aconteça erro                                      ${Caminho_Screenshots}Lançamentos/                                     ERRO Lançamento - Com Baixa Automática
+    [Teardown]                Caso aconteça erro                                      ${Caminho_Screenshots}Lançamentos/                                      Lançamento - Com Baixa Automática
     Contas a Receber
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    n
@@ -46,7 +46,7 @@ Lançamentos > Lançamento - Com Baixa Automática
     Fechar janela
 
 Baixas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}          ERRO Baixas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}           Baixas
     Contas a Receber
     RPA.Windows.Click       Baixas
     RPA.Windows.Get Text    Baixas do Contas a Receber (1)
@@ -54,7 +54,7 @@ Baixas
     Fechar janela
 
 Estornar Baixas
-    [Teardown]              Caso aconteça erro                           ${Caminho_Screenshots}                   ERRO Extornar Baixas
+    [Teardown]              Caso aconteça erro                           ${Caminho_Screenshots}                    Extornar Baixas
     Contas a Receber
     RPA.Windows.Click       Estornar Baixas
     RPA.Windows.Get Text    Estorno de Baixas do Contas a Receber (1)
@@ -62,7 +62,7 @@ Estornar Baixas
     Fechar janela
 
 Cobrança de Dívida
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                      ERRO Cobrança de Dívida
+    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                       Cobrança de Dívida
     Contas a Receber
     RPA.Windows.Click       Cobrança de Dívida
     RPA.Windows.Get Text    Cobrança de Dívidas (1)
@@ -70,7 +70,7 @@ Cobrança de Dívida
     Fechar janela           
 
 Renegociações
-    [Teardown]              Caso aconteça erro                      ${Caminho_Screenshots}                 ERRO Renegociações
+    [Teardown]              Caso aconteça erro                      ${Caminho_Screenshots}                  Renegociações
     Contas a Receber
     RPA.Windows.Click       Renegociações
     RPA.Windows.Get Text    Renegociação do Contas a Receber (1)
@@ -78,7 +78,7 @@ Renegociações
     Fechar janela
 
 Renegociações de Multiplos Clientes
-    [Teardown]              Caso aconteça erro                                         ${Caminho_Screenshots}                                       ERRO Renegociações de Multiplos Clientes
+    [Teardown]              Caso aconteça erro                                         ${Caminho_Screenshots}                                        Renegociações de Multiplos Clientes
     Contas a Receber
     RPA.Windows.Click       Renegociações de Multiplos Clientes
     RPA.Windows.Get Text    Renegociação do Contas a Receber Multiplos Clientes (1)
@@ -86,7 +86,7 @@ Renegociações de Multiplos Clientes
     Fechar janela
 
 Estornar Renegociações
-    [Teardown]              Caso aconteça erro                                  ${Caminho_Screenshots}                          ERRO Extornar Renegociações
+    [Teardown]              Caso aconteça erro                                  ${Caminho_Screenshots}                           Extornar Renegociações
     Contas a Receber
     RPA.Windows.Click       Estornar Renegociações
     RPA.Windows.Get Text    Estorno de Renegociações do Contas a Receber (1)
@@ -94,7 +94,7 @@ Estornar Renegociações
     Fechar janela
 
 Alterar Vencimento/Portador
-    [Teardown]              Caso aconteça erro                                          ${Caminho_Screenshots}                               ERRO Alterar Vencimento_Portador
+    [Teardown]              Caso aconteça erro                                          ${Caminho_Screenshots}                                Alterar Vencimento_Portador
     Contas a Receber
     RPA.Windows.Click       Alterar Vencimento/Portador
     RPA.Windows.Get Text    Alteração de Vencimento/Portador do Contas a Receber (1)
@@ -102,7 +102,7 @@ Alterar Vencimento/Portador
     Fechar janela
 
 Transferência entre Clientes
-    [Teardown]              Caso aconteça erro                            ${Caminho_Screenshots}                                ERRO Transferência entre Clientes
+    [Teardown]              Caso aconteça erro                            ${Caminho_Screenshots}                                 Transferência entre Clientes
     Contas a Receber
     RPA.Windows.Click       Transferência entre Clientes
     RPA.Windows.Get Text    Transferência de Contas entre Clientes (1)
@@ -110,7 +110,7 @@ Transferência entre Clientes
     Fechar janela
 
 Alterar Contas a Receber
-    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                            ERRO Alterar Contas a Receber
+    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                             Alterar Contas a Receber
     Contas a Receber
     RPA.Windows.Click       Alterar Contas a Receber
     RPA.Windows.Get Text    Alterar Contas a Receber (1)
@@ -118,7 +118,7 @@ Alterar Contas a Receber
     Fechar janela
 
 Estorno Alteração de Contas a Receber
-    [Teardown]              Caso aconteça erro                           ${Caminho_Screenshots}                                    ERRO Estorno Alteraração de Contas a Receber
+    [Teardown]              Caso aconteça erro                           ${Caminho_Screenshots}                                     Estorno Alteraração de Contas a Receber
     Contas a Receber
     RPA.Windows.Click       Estorno Alteração de Contas a Receber
     RPA.Windows.Get Text    Estorno de alterações de contas a receber
@@ -126,7 +126,7 @@ Estorno Alteração de Contas a Receber
     Fechar janela
 
 Adiantamentos > Adiantamento de Clientes
-    [Teardown]                Caso aconteça erro               ${Caminho_Screenshots}Adiantamentos/                            ERRO Adiantamento de Clientes
+    [Teardown]                Caso aconteça erro               ${Caminho_Screenshots}Adiantamentos/                             Adiantamento de Clientes
     Contas a Receber
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    a
@@ -135,7 +135,7 @@ Adiantamentos > Adiantamento de Clientes
     Fechar janela
 
 Adiantamentos > Extrato dos Adiantamentos/Cliente
-    [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}Adiantamentos/                                      ERRO Extrato dos Adiantamentos_Clientes
+    [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}Adiantamentos/                                       Extrato dos Adiantamentos_Clientes
     Contas a Receber
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    e
@@ -144,7 +144,7 @@ Adiantamentos > Extrato dos Adiantamentos/Cliente
     Fechar janela
 
 Adiantamentos > Saldo de Adiantamentos Clientes
-    [Teardown]                Caso aconteça erro                ${Caminho_Screenshots}Adiantamentos/                                   ERRO Saldo de Adiantamentos Clientes
+    [Teardown]                Caso aconteça erro                ${Caminho_Screenshots}Adiantamentos/                                    Saldo de Adiantamentos Clientes
     Contas a Receber
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    s
@@ -153,7 +153,7 @@ Adiantamentos > Saldo de Adiantamentos Clientes
     Fechar janela
 
 Adiantamentos > Relatório de Lançamento
-    [Teardown]                Caso aconteça erro                                           ${Caminho_Screenshots}Adiantamentos/                           ERRO Relatório de Lançamento
+    [Teardown]                Caso aconteça erro                                           ${Caminho_Screenshots}Adiantamentos/                            Relatório de Lançamento
     Contas a Receber
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    r
@@ -162,7 +162,7 @@ Adiantamentos > Relatório de Lançamento
     Fechar janela
 
 Adiantamentos > Adiantamento de Pedidos de Venda
-    [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}Adiantamentos/                                    ERRO Adiantamento de Pedidos de Venda
+    [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}Adiantamentos/                                     Adiantamento de Pedidos de Venda
     Contas a Receber
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    d
@@ -171,7 +171,7 @@ Adiantamentos > Adiantamento de Pedidos de Venda
     Fechar janela
 
 Adiantamentos > Antecipação de Pedido de Venda Parcial
-    [Teardown]                Caso aconteça erro                     ${Caminho_Screenshots}Adiantamentos/                                           ERRO Antecipação de Pedido de Vendas Parcial
+    [Teardown]                Caso aconteça erro                     ${Caminho_Screenshots}Adiantamentos/                                            Antecipação de Pedido de Vendas Parcial
     Contas a Receber
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    n
@@ -181,7 +181,7 @@ Adiantamentos > Antecipação de Pedido de Venda Parcial
 
 
 Recibos Avulsos
-    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}                   ERRO Recibos Avulsos
+    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}                    Recibos Avulsos
     Contas a Receber
     RPA.Windows.Click       Recibos Avulsos
     RPA.Windows.Get Text    Emissão de Recibos (1)
@@ -189,7 +189,7 @@ Recibos Avulsos
     Fechar janela
 
 Recibos Avulsos - Múltiplas Contas
-    [Teardown]              Caso aconteça erro                           ${Caminho_Screenshots}                                      ERRO Recibos Avulsos - Múltiplas Contas
+    [Teardown]              Caso aconteça erro                           ${Caminho_Screenshots}                                       Recibos Avulsos - Múltiplas Contas
     Contas a Receber
     RPA.Windows.Click       Recibos Avulsos - Múltiplas Contas
     RPA.Windows.Get Text    Emissão de Recibos - Múltiplas Contas (1)
@@ -197,7 +197,7 @@ Recibos Avulsos - Múltiplas Contas
     Fechar janela
 
 Consultas
-    [Teardown]              Caso aconteça erro                  ${Caminho_Screenshots}             ERRO Consultas
+    [Teardown]              Caso aconteça erro                  ${Caminho_Screenshots}              Consultas
     Contas a Receber
     RPA.Windows.Click       Consultas
     RPA.Windows.Get Text    Consulta do Contas a Receber (1)
@@ -205,7 +205,7 @@ Consultas
     Fechar janela
 
 Emissão de Documentos
-    [Teardown]              Caso aconteça erro                          ${Caminho_Screenshots}                         ERRO Emissão de Documentos
+    [Teardown]              Caso aconteça erro                          ${Caminho_Screenshots}                          Emissão de Documentos
     Contas a Receber
     RPA.Windows.Click       Emissão de Documentos
     RPA.Windows.Get Text    Emissão de Duplicatas/Boletos/Carnês (1)
@@ -213,7 +213,7 @@ Emissão de Documentos
     Fechar janela
 
 Relatórios > Contas a Receber
-    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Relatórios/                    ERRO Contas a Receber
+    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Relatórios/                     Contas a Receber
     Contas a Receber
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    c
@@ -222,7 +222,7 @@ Relatórios > Contas a Receber
     Fechar janela
 
 Relatórios > Contas a Receber Prazo
-    [Teardown]                Caso aconteça erro                           ${Caminho_Screenshots}Relatórios/                          ERRO Contas a Receber Prazo
+    [Teardown]                Caso aconteça erro                           ${Caminho_Screenshots}Relatórios/                           Contas a Receber Prazo
     Contas a Receber
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    o
@@ -231,7 +231,7 @@ Relatórios > Contas a Receber Prazo
     Fechar janela
 
 Relatórios > Recebimento do contas a receber
-    [Teardown]                Caso aconteça erro                                   ${Caminho_Screenshots}Relatórios/                                   ERRO Recebimento do contas a receber
+    [Teardown]                Caso aconteça erro                                   ${Caminho_Screenshots}Relatórios/                                    Recebimento do contas a receber
     Contas a Receber
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    r
@@ -240,7 +240,7 @@ Relatórios > Recebimento do contas a receber
     Fechar janela
 
 Relatórios > Posição Financeira/Vendedor/Terceiro > Consulta
-    [Teardown]                Caso aconteça erro                       ${Caminho_Screenshots}Relatórios/Posição Financeira_Vendedor_Terceiro/            ERRO Consulta
+    [Teardown]                Caso aconteça erro                       ${Caminho_Screenshots}Relatórios/Posição Financeira_Vendedor_Terceiro/             Consulta
     Contas a Receber
     RPA.Windows.Click         Relatórios
     RPA.Windows.Click         Posição Financeira/Vendedor/Terceiro 
@@ -250,7 +250,7 @@ Relatórios > Posição Financeira/Vendedor/Terceiro > Consulta
     Fechar janela
 
 Relatórios > Posição Financeira/Vendedor/Terceiro > Relatório
-    [Teardown]                Caso aconteça erro                                   ${Caminho_Screenshots}Relatórios/Posição Financeira_Vendedor_Terceiro/             ERRO Relatório
+    [Teardown]                Caso aconteça erro                                   ${Caminho_Screenshots}Relatórios/Posição Financeira_Vendedor_Terceiro/              Relatório
     Contas a Receber
     RPA.Windows.Click         Relatórios
     RPA.Windows.Click         Posição Financeira/Vendedor/Terceiro 
@@ -260,7 +260,7 @@ Relatórios > Posição Financeira/Vendedor/Terceiro > Relatório
     Fechar janela
 
 Relatórios > Relatório de Cobrança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Relatórios/                         ERRO Relatório de Cobrança
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Relatórios/                          Relatório de Cobrança
     Contas a Receber
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    e
@@ -269,7 +269,7 @@ Relatórios > Relatório de Cobrança
     Fechar janela
 
 Contratos de Terceiros > Emissão/Manutenção
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Contratos de Terceiros/                      ERRO Emissão_Manutenção
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Contratos de Terceiros/                       Emissão_Manutenção
     Contas a Receber
     RPA.Windows.Click         Contratos de Terceiros       
     RPA.Desktop.Press Keys    e
@@ -278,7 +278,7 @@ Contratos de Terceiros > Emissão/Manutenção
     Fechar janela
 
 Contratos de Terceiros > Assinatura
-    [Teardown]                Caso aconteça erro                          ${Caminho_Screenshots}Contratos de Terceiros/              ERRO Assinatura
+    [Teardown]                Caso aconteça erro                          ${Caminho_Screenshots}Contratos de Terceiros/               Assinatura
     Contas a Receber
     RPA.Windows.Click         Contratos de Terceiros                      
     RPA.Desktop.Press Keys    a
@@ -287,7 +287,7 @@ Contratos de Terceiros > Assinatura
     Fechar janela
 
 Contratos de Terceiros > Cancelamento/Baixa
-    [Teardown]                Caso aconteça erro                             ${Caminho_Screenshots}Contratos de Terceiros/                      ERRO Cancelamento_Baixa
+    [Teardown]                Caso aconteça erro                             ${Caminho_Screenshots}Contratos de Terceiros/                       Cancelamento_Baixa
     Contas a Receber
     RPA.Windows.Click         Contratos de Terceiros                         
     RPA.Desktop.Press Keys    c
@@ -296,7 +296,7 @@ Contratos de Terceiros > Cancelamento/Baixa
     Fechar janela
 
 Contratos de Terceiros > Estorno de Cancelamento
-    [Teardown]                Caso aconteça erro                         ${Caminho_Screenshots}Contratos de Terceiros/                           ERRO Estorno de Cancelamento
+    [Teardown]                Caso aconteça erro                         ${Caminho_Screenshots}Contratos de Terceiros/                            Estorno de Cancelamento
     Contas a Receber
     RPA.Windows.Click         Contratos de Terceiros                     
     RPA.Desktop.Press Keys    s
@@ -305,7 +305,7 @@ Contratos de Terceiros > Estorno de Cancelamento
     Fechar janela
 
 Contratos de Terceiros > Consulta
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Contratos de Terceiros/                          ERRO Estorno de Cancelmento
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Contratos de Terceiros/                           Estorno de Cancelmento
     Contas a Receber
     RPA.Windows.Click         Contratos de Terceiros       
     RPA.Desktop.Press Keys    o
@@ -314,7 +314,7 @@ Contratos de Terceiros > Consulta
     Fechar janela
 
 Contratos de Terceiros > Relatório
-    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Contratos de Terceiros/             ERRO Relatório
+    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Contratos de Terceiros/              Relatório
     Contas a Receber
     RPA.Windows.Click         Contratos de Terceiros        
     RPA.Desktop.Press Keys    R
@@ -323,7 +323,7 @@ Contratos de Terceiros > Relatório
     Fechar janela
 
 Contratos de Pestação de Serviços > Manutenção de Contratos
-    [Teardown]                Caso aconteça erro                                     ${Caminho_Screenshots}Contratos de Pestação de Serviços /                           ERRO Manutenção de Contratos
+    [Teardown]                Caso aconteça erro                                     ${Caminho_Screenshots}Contratos de Pestação de Serviços /                            Manutenção de Contratos
     Contas a Receber
     RPA.Windows.Click         Contratos de Prestação de Serviços
     RPA.Desktop.Press Keys    m
@@ -332,7 +332,7 @@ Contratos de Pestação de Serviços > Manutenção de Contratos
     Fechar janela
 
 Contratos de Pestação de Serviços > Consulta / Emissão de NF
-    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Contratos de Pestação de Serviços /                          ERRO Consulta_Emissão de NF
+    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Contratos de Pestação de Serviços /                           Consulta_Emissão de NF
     Contas a Receber
     RPA.Windows.Click         Contratos de Prestação de Serviços    
     RPA.Desktop.Press Keys    c
@@ -341,7 +341,7 @@ Contratos de Pestação de Serviços > Consulta / Emissão de NF
     Fechar janela
 
 Reajuste de Valores
-    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}                        ERRO Reajuste de Valores
+    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}                         Reajuste de Valores
     Contas a Receber
     RPA.Windows.Click         Reajuste de Valores   
     RPA.Windows.Get Text      Reajuste de Valores (1)
@@ -349,7 +349,7 @@ Reajuste de Valores
     Fechar janela
 
 Faturamento de Agências > Geração de Faturas
-    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Faturamento de Agências/                          ERRO Geração de Faturas
+    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Faturamento de Agências/                           Geração de Faturas
     Contas a Receber
     RPA.Windows.Click         Faturamento de Agências    
     RPA.Desktop.Press Keys    g
@@ -358,7 +358,7 @@ Faturamento de Agências > Geração de Faturas
     Fechar janela
 
 Faturamento de Agências > Estorno de Faturas
-    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Faturamento de Agências/                          ERRO Estorno de Faturas
+    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Faturamento de Agências/                           Estorno de Faturas
     Contas a Receber
     RPA.Windows.Click         Faturamento de Agências    
     RPA.Desktop.Press Keys    e
@@ -367,7 +367,7 @@ Faturamento de Agências > Estorno de Faturas
     Fechar janela
 
 Faturamento de Agências > Troca de Agências
-    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Faturamento de Agências/                          ERRO Troca de Agências
+    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Faturamento de Agências/                           Troca de Agências
     Contas a Receber
     RPA.Windows.Click         Faturamento de Agências    
     RPA.Desktop.Press Keys    t
@@ -376,7 +376,7 @@ Faturamento de Agências > Troca de Agências
     Fechar janela
 
 Faturamento de Agências > Lançamento de Vouchers Venda
-    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Faturamento de Agências/                          ERRO Lançamento de Vouchers Venda
+    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Faturamento de Agências/                           Lançamento de Vouchers Venda
     Contas a Receber
     RPA.Windows.Click         Faturamento de Agências    
     RPA.Desktop.Press Keys    l

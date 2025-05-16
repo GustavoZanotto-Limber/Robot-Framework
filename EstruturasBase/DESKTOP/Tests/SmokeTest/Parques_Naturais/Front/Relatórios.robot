@@ -20,7 +20,7 @@ Relatorios
 
 *** Test Cases ***
 Resumo Geral
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                          ERRO Resumo Geral  
+    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                          Resumo Geral  
     Relatorios              Resumo Geral
     RPA.Windows.Get Text    Resumo de Movimentação (1)
     repetidor de teclas     Tab    3
@@ -31,7 +31,7 @@ Resumo Geral
     Fechar janela
 
 Fechamento de Caixa
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                       ERRO Fechamento de Caixa   
+    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                       Fechamento de Caixa   
     Relatorios              Fechamento de Caixa
     RPA.Windows.Get Text    Fechamento de Caixa (1)
     repetidor de teclas     Tab    2
@@ -41,7 +41,7 @@ Fechamento de Caixa
     Fechar janela
 
 Formas de Pagamento
-    [Teardown]              Caso aconteça erro                      ${Caminho_Screenshots}                                    ERRO Formas de Pagamento  
+    [Teardown]              Caso aconteça erro                      ${Caminho_Screenshots}                                    Formas de Pagamento  
     Relatorios              Formas de Pagamento
     RPA.Windows.Get Text    Relatório de Formas de Pagamento (1)
     repetidor de teclas     Tab    3
@@ -52,7 +52,7 @@ Formas de Pagamento
     Fechar janela
 
 Formas de Pagamento Agrupada
-    [Teardown]              Caso aconteça erro                                ${Caminho_Screenshots}                                              ERRO Formas de Pagamento Agrupada   
+    [Teardown]              Caso aconteça erro                                ${Caminho_Screenshots}                                              Formas de Pagamento Agrupada   
     Relatorios              Formas de Pagamento Agrupada
     RPA.Windows.Get Text    Relatório de Formas de Pagamento Agrupadas (1)
     repetidor de teclas     Tab    2
@@ -63,7 +63,7 @@ Formas de Pagamento Agrupada
     Fechar janela
 
 Bilhetes Isentos
-    [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                                 ERRO Catracas_Terminais de Acesso    
+    [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                                 Catracas_Terminais de Acesso    
     Relatorios              Bilhetes Isentos
     RPA.Windows.Get Text    Relátorio de Bilhetes Isentos (1)
     repetidor de teclas     Tab    2
@@ -74,7 +74,7 @@ Bilhetes Isentos
     Fechar janela
 
 Lançamento de Isenções
-    [Teardown]              Caso aconteça erro                          ${Caminho_Screenshots}                                        ERRO Lançamentos de Isenções    
+    [Teardown]              Caso aconteça erro                          ${Caminho_Screenshots}                                        Lançamentos de Isenções    
     Relatorios              Lançamentos de Isenções
     RPA.Windows.Get Text    Relatório de Lançamentos de Isenções (1)
     repetidor de teclas     Tab    2
@@ -85,7 +85,7 @@ Lançamento de Isenções
     Fechar janela
 
 Lançamentos de Reservas
-    [Teardown]              Caso aconteça erro                          ${Caminho_Screenshots}                                       ERRO Lançamentos de Reservas    
+    [Teardown]              Caso aconteça erro                          ${Caminho_Screenshots}                                       Lançamentos de Reservas    
     Sleep                   1s
     Relatorios              Lançamentos de Reservas
     RPA.Windows.Get Text    Relatório de Lançamentos de Reservas (1)
@@ -96,7 +96,7 @@ Lançamentos de Reservas
     Fechar janela
 
 Bilhetes Reimpressos
-    [Teardown]              Caso aconteça erro                       ${Caminho_Screenshots}                                     ERRO Bilhetes Reimpressos   
+    [Teardown]              Caso aconteça erro                       ${Caminho_Screenshots}                                     Bilhetes Reimpressos   
     Relatorios              Bilhetes Reimpressos
     RPA.Windows.Get Text    Relatório de Bilhetes Reimpressos (1)
     repetidor de teclas     Tab    2
@@ -107,7 +107,7 @@ Bilhetes Reimpressos
     Fechar janela
 
 Bilhetes Cancelados
-    [Teardown]              Caso aconteça erro                      ${Caminho_Screenshots}                                    ERRO Bilhetes Cancelados    
+    [Teardown]              Caso aconteça erro                      ${Caminho_Screenshots}                                    Bilhetes Cancelados    
     Relatorios              Bilhetes Cancelados
     RPA.Windows.Get Text    Relatório de Bilhetes Cancelados (1)
     repetidor de teclas     Tab    2
@@ -118,7 +118,7 @@ Bilhetes Cancelados
     Fechar janela
 
 Desconto de Venda
-    [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}                                   ERRO Desconto de Venda    
+    [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}                                   Desconto de Venda    
     Relatorios              Desconto de Venda
     RPA.Windows.Get Text    Relatório de Desconto por Venda (1)
     repetidor de teclas     Tab    2
@@ -129,7 +129,7 @@ Desconto de Venda
     Fechar janela
 
 Bilhetes por Tipo de Autorização
-    [Teardown]              Caso aconteça erro                                                       ${Caminho_Screenshots}               ERRO Bilhetes por Tipo de Autorização 
+    [Teardown]              Caso aconteça erro                                                       ${Caminho_Screenshots}               Bilhetes por Tipo de Autorização 
     Sleep                   1s
     Relatorios              Bilhetes por Tipo de Autorização
     RPA.Windows.Get Text    Relatório de Bilhetes Isentos por Tipo de Isenção/Grupo/Categoria (1)
@@ -141,7 +141,7 @@ Bilhetes por Tipo de Autorização
     Fechar janela
 
 Guias
-    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}                     ERRO: Guias
+    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}                     Guias
     Relatorios              Guias
     RPA.Windows.Get Text    Relatório de Guias (1)
     repetidor de teclas     Tab    2    

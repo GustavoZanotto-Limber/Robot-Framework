@@ -17,7 +17,7 @@ Utilitários
 *** Test Cases ***
 
 Configurar Nota Fiscal
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Configurar Nota Fiscal
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Configurar Nota Fiscal
     Utilitários
     RPA.Windows.Click       Configurar Nota Fiscal
     RPA.Windows.Get Text    Configuração da Nota Fiscal (1)
@@ -26,7 +26,7 @@ Configurar Nota Fiscal
     Fechar janela
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Utilitários
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Utilitários
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -36,7 +36,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                   ERRO Papel de Parede
+    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -45,7 +45,7 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Pincipal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configurar Barra de Atalhos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -57,7 +57,7 @@ Configurar Menu Pincipal
     RPA.Windows.Click       Sim
 
 Configurar Barra de Atalhos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configurar Barra de Atalhos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
     Utilitários
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
@@ -67,7 +67,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Click       Sim
 
 Estilo do Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Estilo do Menu Principal
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -76,7 +76,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Controle de Acessos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Controle de Acessos
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -86,7 +86,7 @@ Controle de Acessos
     Fechar janela
 
 Configuração de Liberação
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configuração de Liberação
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configuração de Liberação
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -99,7 +99,7 @@ Configuração de Liberação
 
 
 Relatórios Personalizados > Cadastro de Categorias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                            ERRO Cadastro de Categorias
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                             Cadastro de Categorias
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -112,7 +112,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Windows.Click       Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                              ERRO Cadastro de Relatórios
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -125,7 +125,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Click       Sim
 
 Configurador de Impressões > Ordem se Serviço
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                              ERRO Ordem se Serviço
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Ordem se Serviço
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  O
@@ -136,7 +136,7 @@ Configurador de Impressões > Ordem se Serviço
     RPA.Windows.Click       Sim
 
 Configurador de Impressões > Saídas Vendas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                              ERRO Saídas Vendas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Saídas Vendas
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  S
@@ -147,7 +147,7 @@ Configurador de Impressões > Saídas Vendas
     RPA.Windows.Click       Sim
 
 Configurador de Impressões > Ordem de Fixação
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                              ERRO Ordem de Fixação
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Ordem de Fixação
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  R
@@ -158,7 +158,7 @@ Configurador de Impressões > Ordem de Fixação
     RPA.Windows.Click       Sim
 
 Configurador de Impressões > Fixação de Produtos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                              ERRO Fixação de Produtos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Fixação de Produtos
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  F
@@ -169,7 +169,7 @@ Configurador de Impressões > Fixação de Produtos
     RPA.Windows.Click       Sim
 
 Configurador de Impressões > Entradas/Compras
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                              ERRO Entradas_Compras
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Entradas_Compras
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  E
@@ -180,7 +180,7 @@ Configurador de Impressões > Entradas/Compras
     RPA.Windows.Click       Sim
 
 Configurador de Impressões > Transferência entre Terceiros
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                              ERRO Transferência entre Terceiros
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Transferência entre Terceiros
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  T
@@ -191,7 +191,7 @@ Configurador de Impressões > Transferência entre Terceiros
     RPA.Windows.Click       Sim
 
 Criar Usuario de Log
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Criar Usuario de Log
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
     Utilitários
     RPA.Windows.Click       Criar Usuário de Log
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
@@ -199,7 +199,7 @@ Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Verifica transações abertas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Verifica transações abertas
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
@@ -208,7 +208,7 @@ Verifica transações abertas
     Fechar janela
 
 Etiquetas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Etiquetas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Etiquetas
     Utilitários
     RPA.Windows.Click       Etiquetas
     RPA.Windows.Get Text    Emissão de Etiquetas (1)
@@ -219,7 +219,7 @@ Etiquetas
     
 
 Etiquetas (Terceiros)
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}            ERRO Etiquetas (Terceiros)
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Etiquetas (Terceiros)
     Utilitários
     RPA.Windows.Click       Etiquetas (Terceiros)
     RPA.Windows.Get Text    Emissão de Etiquetas (1)
@@ -229,7 +229,7 @@ Etiquetas (Terceiros)
     Fechar janela
 
 Registro Magnético
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Registro Magnético
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Registro Magnético
     Utilitários
     RPA.Windows.Click       Registro Magnético
     RPA.Windows.Get Text    Registro Magnético (1)
@@ -239,7 +239,7 @@ Registro Magnético
     Fechar janela
 
 Agenda Telefônica
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Agenda Telefônica
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Agenda Telefônica
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
@@ -249,7 +249,7 @@ Agenda Telefônica
     RPA.Windows.Click       Sim
 
 Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Exportação de Arquivos/            ERRO Salvar arquivo XML NFe de Terceiros
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Exportação de Arquivos/             Salvar arquivo XML NFe de Terceiros
     Utilitários
     RPA.Windows.Click       Exportação de Arquivos
     RPA.Desktop.Press Keys  S
@@ -260,7 +260,7 @@ Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
     Fechar janela
 
 Exportação de Arquivos > Salvar o Arquivo XML NFe Própria
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Exportação de Arquivos/            ERRO Salvar o arquivo XML NFe Própria
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Exportação de Arquivos/             Salvar o arquivo XML NFe Própria
     Utilitários
     RPA.Windows.Click       Exportação de Arquivos
     RPA.Desktop.Press Keys  A

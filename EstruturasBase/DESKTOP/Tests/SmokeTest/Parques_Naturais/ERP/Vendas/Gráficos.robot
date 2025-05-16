@@ -17,7 +17,7 @@ Gráficos
 *** Test Cases ***
 
 Vendas/Prestação de Serviços - Evolução Diária
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      ERRO Vendas_Prestação de Serviços Evolução Diária
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Vendas_Prestação de Serviços Evolução Diária
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Diária
     RPA.Windows.Get Text      Evolução Diária. (1)
@@ -25,7 +25,7 @@ Vendas/Prestação de Serviços - Evolução Diária
     Fechar janela
 
 Vendas/Prestação de Serviços - Evolução Mensal
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Vendas_Prestação de Serviços Evolução Mensal
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Vendas_Prestação de Serviços Evolução Mensal
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Mensal
     RPA.Windows.Get Text      Evolução Mensal. (1)
@@ -33,7 +33,7 @@ Vendas/Prestação de Serviços - Evolução Mensal
     Fechar janela
 
 Vendas/Prestação de Serviços - Evolução Anual
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Vendas_Prestação de Serviços Evolução Anual
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Vendas_Prestação de Serviços Evolução Anual
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Anual 
     RPA.Windows.Get Text      Evolução Anual. (1)
@@ -41,7 +41,7 @@ Vendas/Prestação de Serviços - Evolução Anual
     Fechar janela
 
 Vendas/Prestação de Serviços - Sintético/Cliente
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Vendas_Prestação de Serviços Sintético_Cliente
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Vendas_Prestação de Serviços Sintético_Cliente
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Cliente
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Cliente (1)
@@ -49,7 +49,7 @@ Vendas/Prestação de Serviços - Sintético/Cliente
     Fechar janela
 
 Vendas/Prestação de Serviços - Sintético/Setor
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Vendas_Prestação de Serviços Sintético_Setor
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Vendas_Prestação de Serviços Sintético_Setor
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Setor
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Setor (1)
@@ -57,7 +57,7 @@ Vendas/Prestação de Serviços - Sintético/Setor
     Fechar janela
 
 Vendas/Prestação de Serviços - Sintético/Item
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Vendas_Prestação de Serviços Sintético_Item
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Vendas_Prestação de Serviços Sintético_Item
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Item
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Item (1)

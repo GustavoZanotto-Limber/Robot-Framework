@@ -14,7 +14,7 @@ ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTe
 *** Test Cases ***
 
 Itens > Itens
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                       ERRO Itens
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                        Itens
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    I
@@ -23,7 +23,7 @@ Itens > Itens
     Fechar janela
 
 Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Terceiros
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Terceiros
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
@@ -31,7 +31,7 @@ Terceiros
     Fechar janela
 
 Contrato > Configuração de Contrato
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Contrato/                        ERRO Configuração de Contrato
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Contrato/                         Configuração de Contrato
     Cadastros
     RPA.Windows.Click         Contrato
     RPA.Desktop.Press Keys    C
@@ -41,7 +41,7 @@ Contrato > Configuração de Contrato
     RPA.Windows.Click         Sim
 
 Contrato > Mensagens para Contrato
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Contrato/                        ERRO Mensagens para Contrato
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Contrato/                         Mensagens para Contrato
     Cadastros
     RPA.Windows.Click         Contrato
     RPA.Desktop.Press Keys    M
@@ -50,7 +50,7 @@ Contrato > Mensagens para Contrato
     Fechar janela
 
 Confirmação de Negócio > Configuração de Confirmação de Negócio
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Confirmação de Negócio/                        ERRO Configuração de Confirmação de Negócio
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Confirmação de Negócio/                         Configuração de Confirmação de Negócio
     Cadastros
     RPA.Windows.Click         Confirmação de Negócio 
     RPA.Desktop.Press Keys    C
@@ -60,7 +60,7 @@ Confirmação de Negócio > Configuração de Confirmação de Negócio
     RPA.Windows.Click         Sim
 
 Confirmação de Negócio > Status de Confirmação de Negócio
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Confirmação de Negócio/                        ERRO Status de Confirmação de Negócio
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Confirmação de Negócio/                         Status de Confirmação de Negócio
     Cadastros
     RPA.Windows.Click         Confirmação de Negócio 
     RPA.Desktop.Press Keys    S
@@ -69,7 +69,7 @@ Confirmação de Negócio > Status de Confirmação de Negócio
     Fechar janela
 
 Confirmação de Negócio > Motivos Acrésc/Descontos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Confirmação de Negócio/                        ERRO Motivos Acrésc_Descontos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Confirmação de Negócio/                         Motivos Acrésc_Descontos
     Cadastros
     RPA.Windows.Click         Confirmação de Negócio 
     RPA.Desktop.Press Keys    M
@@ -78,7 +78,7 @@ Confirmação de Negócio > Motivos Acrésc/Descontos
     Fechar janela
 
 Confirmação de Negócio > Cadastro Tipo de Custos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Confirmação de Negócio/                        ERRO Cadastro Tipo de Custos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Confirmação de Negócio/                         Cadastro Tipo de Custos
     Cadastros
     RPA.Windows.Click         Confirmação de Negócio 
     RPA.Desktop.Press Keys    A
@@ -87,7 +87,7 @@ Confirmação de Negócio > Cadastro Tipo de Custos
     Fechar janela
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Empresas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Empresas
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -96,7 +96,7 @@ Parâmetros > Empresas
     Fechar janela
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Estabelecimentos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Estabelecimentos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -105,7 +105,7 @@ Parâmetros > Estabelecimentos
     Fechar janela
 
 Parâmetros > Grupo de Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Grupo de Usuários
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Grupo de Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -114,7 +114,7 @@ Parâmetros > Grupo de Usuários
     Fechar janela
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                        ERRO Usuários
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U

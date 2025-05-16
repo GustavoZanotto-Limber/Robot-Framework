@@ -14,7 +14,7 @@ ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTe
 *** Test Cases ***
 
 Guias
-    [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}         ERRO Guias
+    [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}          Guias
     Cadastros
     RPA.Windows.Click       Guias
     RPA.Windows.Get Text    Cadastro de Guias (1)
@@ -24,30 +24,30 @@ Guias
     RPA.Windows.Click       Sim
 
 Isentos
-    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}           ERRO Isentos
+    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}            Isentos
     Cadastros
     RPA.Windows.Click       Isentos
     RPA.Windows.Get Text    Cadastro de Isento (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Isento (1)    ${Caminho_Screenshots}Isentos
     Fechar janela
-    Fechar janela
     RPA.Windows.Click       Sim
 
 Agências -> Agências
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Agências/    ERRO Agências
+    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Agências/     Agências
     Cadastros
     RPA.Windows.Click         Agências
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
     RPA.Windows.Click         Novo
+    Sleep                     1s
     BaseDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Agências/Agências
     RPA.Windows.Click         Fechar
     Fechar janela
     RPA.Windows.Click         Sim
 
 Agências -> Grupo de Agências
-    [Teardown]    Caso aconteça erro        ${Caminho_Screenshots}/Agências          ERRO Grupo de Agências
+    [Teardown]    Caso aconteça erro        ${Caminho_Screenshots}/Agências           Grupo de Agências
     Cadastros
     RPA.Windows.Click         Agências
     RPA.Desktop.Press Keys    G
@@ -58,7 +58,7 @@ Agências -> Grupo de Agências
     RPA.Windows.Click         Sim
 
 Locais Estacionamento
-    [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}             ERRO Locais Estacionamento
+    [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}              Locais Estacionamento
     Cadastros
     RPA.Windows.Click       Locais Estacionamento
     RPA.Windows.Get Text    Cadastro Locais de Estacionamento (1)
@@ -68,7 +68,7 @@ Locais Estacionamento
     RPA.Windows.Click         Sim
 
 Grupos de Bilhetes Totem
-    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                ERRO Grupo Bilhetes Totem
+    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                 Grupo Bilhetes Totem
     Cadastros
     RPA.Windows.Click       Grupo Bilhetes Totem
     RPA.Windows.Get Text    Cadastro de Grupos de Bilhetes Totem (1)
@@ -78,7 +78,7 @@ Grupos de Bilhetes Totem
     RPA.Windows.Click         Sim
 
 Grupos de Isenção
-    [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}         ERRO Grupos de Isenção
+    [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}          Grupos de Isenção
     Cadastros
     RPA.Windows.Click        Grupos de Isenção
     RPA.Windows.Get Text     Cadastro de Grupos de Isenção (1)
@@ -88,7 +88,7 @@ Grupos de Isenção
     RPA.Windows.Click         Sim
 
 Tipos de Autorização
-    [Teardown]              Caso aconteça erro          ${Caminho_Screenshots}            ERRO Tipos de Autorização
+    [Teardown]              Caso aconteça erro          ${Caminho_Screenshots}             Tipos de Autorização
     Cadastros
     RPA.Windows.Click       Tipos de Autorização
     RPA.Windows.Get Text    Cadastro de Tipos de Autorização (1)
@@ -98,7 +98,7 @@ Tipos de Autorização
     RPA.Windows.Click       Sim
 
 Tipos de Documentos
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}           ERRO Tipos de Documentos
+    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}            Tipos de Documentos
     Cadastros
     RPA.Windows.Click       Tipos de Documentos
     RPA.Windows.Get Text    Cadastro de Tipos de Documentos (1)
@@ -108,8 +108,7 @@ Tipos de Documentos
     RPA.Windows.Click       Sim
 
 Pessoas Autorizadas
-
-    [Teardown]              Run Keyword If Test Failed             Caso aconteça erro               ${Caminho_Screenshots}    ERRO Pessoas Autorizadas    
+    [Teardown]              Caso aconteça erro               ${Caminho_Screenshots}     Pessoas Autorizadas    
     Cadastros
     RPA.Windows.Click       Pessoas Autorizadas
     RPA.Windows.Get Text    Cadastro de Pessoas Autorizadas (1)
@@ -119,7 +118,7 @@ Pessoas Autorizadas
     RPA.Windows.Click       Sim
 
 Acesso por aproximação
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}              ERRO Acesso por Aproximação
+    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}               Acesso por Aproximação
     Cadastros
     RPA.Windows.Click       Acesso por Aproximação
     RPA.Windows.Get Text    Cadastro de Acesso por Aproximação (1)
@@ -129,7 +128,7 @@ Acesso por aproximação
     RPA.Windows.Click       Sim
 
 Catracas / Terminais de Acesso
-    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}        ERRO Catracas_Terminais de Acesso
+    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}         Catracas_Terminais de Acesso
     Cadastros
     RPA.Windows.Click       Catracas / Terminais de Acesso
     RPA.Windows.Get Text    Cadastro de Catracas / Terminais de Acesso (1)
@@ -139,7 +138,7 @@ Catracas / Terminais de Acesso
     RPA.Windows.Click       Sim
 
 PDV -> Locais de Venda
-    [Teardown]    Caso aconteça erro     ${Caminho_Screenshots}PDV/       ERRO Locais de Venda
+    [Teardown]    Caso aconteça erro     ${Caminho_Screenshots}PDV/        Locais de Venda
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    l
@@ -150,7 +149,7 @@ PDV -> Locais de Venda
     RPA.Windows.Click       Sim
 
 PDV -> PDV
-    [Teardown]    Caso aconteça erro     ${Caminho_Screenshots}PDV/       ERRO PDV
+    [Teardown]    Caso aconteça erro     ${Caminho_Screenshots}PDV/        PDV
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    p
@@ -161,7 +160,7 @@ PDV -> PDV
     RPA.Windows.Click         Sim
 
 Câmeras de Contagem
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}           ERRO Câmeras de Contagem
+    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}            Câmeras de Contagem
     Cadastros
     RPA.Windows.Click       Câmeras de Contagem
     RPA.Windows.Get Text    Cadastro de Câmeras de Contagem (1)
@@ -171,7 +170,7 @@ Câmeras de Contagem
     RPA.Windows.Click       Sim
 
 Parâmetros -> Empresas
-    [Teardown]    Caso aconteça erro          ${Caminho_Screenshots}Parâmetros/            ERRO Empresas
+    [Teardown]    Caso aconteça erro          ${Caminho_Screenshots}Parâmetros/             Empresas
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -182,7 +181,7 @@ Parâmetros -> Empresas
     RPA.Windows.Click       Sim
 
 Parâmetros -> Estabelecimentos
-    [Teardown]    Caso aconteça erro      ${Caminho_Screenshots}Parâmetros/        ERRO Estabelecimentos
+    [Teardown]    Caso aconteça erro      ${Caminho_Screenshots}Parâmetros/         Estabelecimentos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
@@ -194,7 +193,7 @@ Parâmetros -> Estabelecimentos
     RPA.Windows.Click         Sim
 
 Parâmetros -> Usuários
-    [Teardown]    Caso aconteça erro          ${Caminho_Screenshots}Parâmetros/           ERRO Usuários
+    [Teardown]    Caso aconteça erro          ${Caminho_Screenshots}Parâmetros/            Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
@@ -205,7 +204,7 @@ Parâmetros -> Usuários
      RPA.Windows.Click         Sim
 
 Parâmetros -> Grupos de Usuários
-    [Teardown]    Caso aconteça erro        ${Caminho_Screenshots}Parâmetros/          ERRO Grupos de Usuários
+    [Teardown]    Caso aconteça erro        ${Caminho_Screenshots}Parâmetros/           Grupos de Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    g
@@ -216,7 +215,7 @@ Parâmetros -> Grupos de Usuários
      RPA.Windows.Click         Sim
 
 Parâmetros -> Configurações de Estação
-    [Teardown]    Caso aconteça erro              ${Caminho_Screenshots}Parâmetros/                ERRO Configurações de Estação
+    [Teardown]    Caso aconteça erro              ${Caminho_Screenshots}Parâmetros/                 Configurações de Estação
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    c
@@ -226,7 +225,7 @@ Parâmetros -> Configurações de Estação
     Fechar janela
 
 Parâmetros -> Configurações de Bilheteria
-    [Teardown]    Caso aconteça erro              ${Caminho_Screenshots}Parâmetros/                ERRO Configurações de Bilheteria
+    [Teardown]    Caso aconteça erro              ${Caminho_Screenshots}Parâmetros/                 Configurações de Bilheteria
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    o

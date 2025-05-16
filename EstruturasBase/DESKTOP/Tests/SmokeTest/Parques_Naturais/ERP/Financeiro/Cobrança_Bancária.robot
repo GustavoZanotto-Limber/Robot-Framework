@@ -19,7 +19,7 @@ Cobrança Bancária
 *** Test Cases ***
 
 Emissão de Boletos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Emissão de Boletos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Emissão de Boletos
     Cobrança Bancária
     RPA.Windows.Click         Emissão de Boletos
     RPA.Windows.Get Text      Emissão de Duplicatas/Boletos/Carnês (1)
@@ -27,7 +27,7 @@ Emissão de Boletos
     Fechar janela
 
 Carteiras de Cobrança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Carteiras de Cobrança
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Carteiras de Cobrança
     Cobrança Bancária
     RPA.Windows.Click         Carteiras de Cobrança
     RPA.Windows.Get Text      Cadastro de Carteiras de Cobranças (1)
@@ -35,7 +35,7 @@ Carteiras de Cobrança
     Fechar janela
 
 Tipos de Cobrança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Tipos de Cobrança
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Tipos de Cobrança
     Cobrança Bancária
     RPA.Windows.Click         Tipos de Cobrança
     RPA.Windows.Get Text      Cadastro de Tipos de Cobrança (1)
@@ -43,7 +43,7 @@ Tipos de Cobrança
     Fechar janela
 
 Geração de Remessas > Débito em C_C
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                        ERRO Débito em C_C
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                         Débito em C_C
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    d
@@ -52,7 +52,7 @@ Geração de Remessas > Débito em C_C
     Fechar janela
 
 Geração de Remessas > Cobrança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                        ERRO Cobrança
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                         Cobrança
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    C
@@ -61,7 +61,7 @@ Geração de Remessas > Cobrança
     Fechar janela
 
 Geração de Remessas > Consulta
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                        ERRO Consulta
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                         Consulta
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    O
@@ -70,7 +70,7 @@ Geração de Remessas > Consulta
     Fechar janela
 
 Geração de Remessas > Manutenção
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                        ERRO Manutenção
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                         Manutenção
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    M
@@ -79,7 +79,7 @@ Geração de Remessas > Manutenção
     Fechar janela
 
 Recepção de Arquivos Retornos > Débito em C_C
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                        ERRO Débito em C_C
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                         Débito em C_C
     Cobrança Bancária
     RPA.Windows.Click         Recepção de Arquivos Retornos
     RPA.Desktop.Press Keys    D
@@ -88,7 +88,7 @@ Recepção de Arquivos Retornos > Débito em C_C
     Fechar janela
 
 Recepção de Arquivos Retornos > Cobrança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                        ERRO Cobrança
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                         Cobrança
     Cobrança Bancária
     RPA.Windows.Click         Recepção de Arquivos Retornos
     RPA.Desktop.Press Keys    C
@@ -97,7 +97,7 @@ Recepção de Arquivos Retornos > Cobrança
     Fechar janela
 
 Recepção de Arquivos Retornos > Log Arquivos de Retorno
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                        ERRO Log Arquivos de Retorno
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                         Log Arquivos de Retorno
     Cobrança Bancária
     RPA.Windows.Click         Recepção de Arquivos Retornos
     RPA.Desktop.Press Keys    L
@@ -106,7 +106,7 @@ Recepção de Arquivos Retornos > Log Arquivos de Retorno
     Fechar janela
 
 Duplicatas Descontadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Duplicatas Descontadas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Duplicatas Descontadas
     Cobrança Bancária
     RPA.Windows.Click         Duplicatas Descontadas
     RPA.Windows.Get Text      Duplicatas Descontadas (1)
@@ -114,7 +114,7 @@ Duplicatas Descontadas
     Fechar janela
 
 Extorno de Duplicatas Descontadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Extorno de Duplicatas Descontadas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Extorno de Duplicatas Descontadas
     Cobrança Bancária
     RPA.Windows.Click         Estorno Duplicatas Descontadas
     RPA.Windows.Get Text      Estorno - Duplicatas Descontadas (1)
@@ -122,7 +122,7 @@ Extorno de Duplicatas Descontadas
     Fechar janela
 
 Desvincular Boletos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Desvincular Boletos
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Desvincular Boletos
     Cobrança Bancária
     RPA.Windows.Click         Desvincular Boletos
     RPA.Windows.Get Text      Desvincular Boletos (1)

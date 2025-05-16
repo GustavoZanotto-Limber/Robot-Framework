@@ -16,7 +16,7 @@ Consultas
 *** Test Cases ***
 
 Mensalidades Pendentes/Pagas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Mensalidades Pendentes_Pagas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Mensalidades Pendentes_Pagas
     Consultas 
     RPA.Windows.Click       Mensalidades Pendentes/Pagas
     RPA.Windows.Get Text    Consulta do Contas a Receber (1)
@@ -26,7 +26,7 @@ Mensalidades Pendentes/Pagas
     RPA.Windows.Click       Não
 
 Sócios/Dependentes
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Sócios_Dependentes
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Sócios_Dependentes
     Consultas
     RPA.Windows.Click       Sócios/Dependentes
     RPA.Windows.Get Text    Sócios/Dependentes
@@ -35,7 +35,7 @@ Sócios/Dependentes
     
 
 Controle Acessos > Status do Cartão
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle Acessos/             ERRO Status do Cartão
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle Acessos/              Status do Cartão
     Consultas
     RPA.Windows.Click       Controle Acessos 
     RPA.Desktop.Press Keys  S
@@ -47,7 +47,7 @@ Controle Acessos > Status do Cartão
     Fechar janela
 
 Controle Acessos > Extrato/Local Acesso
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle Acessos/             ERRO Extrato/Local Acesso
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle Acessos/              Extrato/Local Acesso
     Consultas
     RPA.Windows.Click       Controle Acessos 
     RPA.Desktop.Press Keys  E
@@ -59,7 +59,7 @@ Controle Acessos > Extrato/Local Acesso
     Fechar janela
 
 Controle Acessos > Extrato do Cartão
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle Acessos/             ERRO Extrato do Cartão
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle Acessos/              Extrato do Cartão
     Consultas
     RPA.Windows.Click       Controle Acessos 
     RPA.Desktop.Press Keys  X
@@ -71,7 +71,7 @@ Controle Acessos > Extrato do Cartão
     Fechar janela
 
 Reservas (Listagem)
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Reservas (Listagem)
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Reservas (Listagem)
     Consultas
     RPA.Windows.Click       Reservas (Listagem)
     RPA.Windows.Get Text    Consulta de Reservas (1)
@@ -80,7 +80,7 @@ Reservas (Listagem)
     Fechar janela
 
 Reservas (Calendário)
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Reservas (Calendário)
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Reservas (Calendário)
     Consultas
     RPA.Windows.Click       Reservas (Calendário)
     RPA.Windows.Get Text    Consulta Reservas/Dependência (1)
@@ -90,7 +90,7 @@ Reservas (Calendário)
     RPA.Windows.Click       Fechar
     
 Consultas Personalizadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        ERRO Consultas Personalizadas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Consultas Personalizadas
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)

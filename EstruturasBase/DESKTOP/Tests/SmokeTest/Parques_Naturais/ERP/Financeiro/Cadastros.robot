@@ -14,7 +14,7 @@ ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTe
 *** Test Cases ***
 
 Terceiros > Cadastro de Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Terceiros/                         ERRO Cadastro de Terceiros
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Terceiros/                          Cadastro de Terceiros
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Desktop.Press Keys    C
@@ -23,7 +23,7 @@ Terceiros > Cadastro de Terceiros
     Fechar janela
 
 Terceiros > Contatos > Registros de Contatos
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}Terceiros/Contatos/                         ERRO Registros de Contatos
+    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}Terceiros/Contatos/                          Registros de Contatos
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -33,7 +33,7 @@ Terceiros > Contatos > Registros de Contatos
     RPA.Windows.Click       Fechar
 
 Terceiros > Contatos > Tipo de Histórico de Contatos
-    [Teardown]              Caso aconteça erro                               ${Caminho_Screenshots}Terceiros/Contatos/                                   ERRO Tipo de Histórico de Contatos
+    [Teardown]              Caso aconteça erro                               ${Caminho_Screenshots}Terceiros/Contatos/                                    Tipo de Histórico de Contatos
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -43,7 +43,7 @@ Terceiros > Contatos > Tipo de Histórico de Contatos
     Fechar janela
 
 Terceiros > Contatos > Atividades de Contatos
-    [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}Terceiros/Contatos/                            ERRO Atividades de Contatos
+    [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}Terceiros/Contatos/                             Atividades de Contatos
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -53,7 +53,7 @@ Terceiros > Contatos > Atividades de Contatos
     Fechar janela
 
 Terceiros > Contatos > Consulta de contatos realizados
-    [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}Terceiros/Contatos/                                     ERRO Consulta de contatos realizados
+    [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}Terceiros/Contatos/                                      Consulta de contatos realizados
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -63,7 +63,7 @@ Terceiros > Contatos > Consulta de contatos realizados
     Fechar janela
 
 Categorias de Terceiros
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                           ERRO Categorias de Terceiros
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            Categorias de Terceiros
     Cadastros
     RPA.Windows.Click       Categorias de Terceiros
     RPA.Windows.Get Text    Cadastro de Categorias de Terceiros (1)
@@ -71,7 +71,7 @@ Categorias de Terceiros
     Fechar janela
 
 Grupos de Terceiros
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}                       ERRO Grupos de Terceiros
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}                        Grupos de Terceiros
     Cadastros
     RPA.Windows.Click       Grupos de Terceiros
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
@@ -79,7 +79,7 @@ Grupos de Terceiros
     Fechar janela
 
 Limite de Crédito
-    [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                     ERRO Limite de Crédito
+    [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                      Limite de Crédito
     Cadastros
     RPA.Windows.Click       Limite de Crédito
     RPA.Windows.Get Text    Cadastro de Limite de Crédito (1)
@@ -87,7 +87,7 @@ Limite de Crédito
     Fechar janela
 
 Planos de Contas
-    [Teardown]              Caso aconteça erro                 ${Caminho_Screenshots}                    ERRO Planos de Contas
+    [Teardown]              Caso aconteça erro                 ${Caminho_Screenshots}                     Planos de Contas
     Cadastros
     RPA.Windows.Click       Plano de Contas
     RPA.Windows.Get Text    Cadastro do Plano de Contas (1)
@@ -95,7 +95,7 @@ Planos de Contas
     Fechar janela
 
 Tipos de Documento
-    [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}                       ERRO Tipos de Documentos
+    [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}                        Tipos de Documentos
     Cadastros
     RPA.Windows.Click       Tipos de Documento
     RPA.Windows.Get Text    Cadastro de Tipos de Documentos (1)
@@ -103,7 +103,7 @@ Tipos de Documento
     Fechar janela
 
 Tipo de Financiamento
-    [Teardown]              Caso aconteça erro                       ${Caminho_Screenshots}                         ERRO Tipo de Financiamento
+    [Teardown]              Caso aconteça erro                       ${Caminho_Screenshots}                          Tipo de Financiamento
     Cadastros
     RPA.Windows.Click       Tipo de Financiamento
     RPA.Windows.Get Text    Cadastro de Tipo de Financiamento (1)
@@ -111,7 +111,7 @@ Tipo de Financiamento
     Fechar janela
 
 Portadores
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}              ERRO Portadores
+    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}               Portadores
     Cadastros
     RPA.Windows.Click       Portadores
     RPA.Windows.Get Text    Cadastro de Portadores (1)
@@ -119,7 +119,7 @@ Portadores
     Fechar janela
 
 Carteiras de Cobranças
-    [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}                          ERRO Carteiras de Cobranças
+    [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}                           Carteiras de Cobranças
     Cadastros
     RPA.Windows.Click       Carteiras de Cobrança
     RPA.Windows.Get Text    Cadastro de Carteiras de Cobranças (1)
@@ -127,7 +127,7 @@ Carteiras de Cobranças
     Fechar janela
 
 Tipos de Cobrança
-    [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                     ERRO Tipos de Cobrança
+    [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                      Tipos de Cobrança
     Cadastros
     RPA.Windows.Click       Tipos de Cobrança
     RPA.Windows.Get Text    Cadastro de Tipos de Cobrança (1)
@@ -135,7 +135,7 @@ Tipos de Cobrança
     Fechar janela
 
 Bancos
-    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}          ERRO Bancos
+    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}           Bancos
     Cadastros
     RPA.Windows.Click       Bancos
     RPA.Windows.Get Text    Cadastro de Bancos (1)
@@ -143,7 +143,7 @@ Bancos
     Fechar janela
 
 Formas de Pagamento
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                       ERRO Formas de Pagamento
+    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                        Formas de Pagamento
     Cadastros
     RPA.Windows.Click       Formas de Pagamento
     RPA.Windows.Get Text    Formas de Pagamento (1)
@@ -151,7 +151,7 @@ Formas de Pagamento
     Fechar janela
 
 Formas de Pagamento (SISPAG)
-    [Teardown]              Caso aconteça erro                              ${Caminho_Screenshots}                                ERRO Formas de Pagamento (SISPAG)
+    [Teardown]              Caso aconteça erro                              ${Caminho_Screenshots}                                 Formas de Pagamento (SISPAG)
     Cadastros
     RPA.Windows.Click       Formas de Pagamento (SISPAG)
     RPA.Windows.Get Text    Cadastro de Formas de Pagamento (SISPAG) (1)
@@ -159,7 +159,7 @@ Formas de Pagamento (SISPAG)
     Fechar janela
 
 Bandeiras de Cartões
-    [Teardown]              Caso aconteça erro                  ${Caminho_Screenshots}                        ERRO Bandeiras de Cartões
+    [Teardown]              Caso aconteça erro                  ${Caminho_Screenshots}                         Bandeiras de Cartões
     Cadastros
     RPA.Windows.Click       Bandeiras de Cartões
     RPA.Windows.Get Text    Cadastro de Bandeiras Cartão (1)
@@ -167,7 +167,7 @@ Bandeiras de Cartões
     Fechar janela
 
 Autorizadoras de Cartões
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Autorizadoras de Cartões
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Autorizadoras de Cartões
     Cadastros
     RPA.Windows.Click       Autorizadoras de Cartões
     RPA.Windows.Get Text    Cadastro de Autorizadoras de Cartão (1)
@@ -175,7 +175,7 @@ Autorizadoras de Cartões
     Fechar janela
 
 Centros de Custos
-    [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                     ERRO Centros de Custos
+    [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                      Centros de Custos
     Cadastros
     RPA.Windows.Click       Centros de Custos
     RPA.Windows.Get Text    Cadastro de Centros de Custos (1)
@@ -183,7 +183,7 @@ Centros de Custos
     Fechar janela
 
 Históricos Contábeis
-    [Teardown]              Caso aconteça erro                      ${Caminho_Screenshots}                        ERRO Históricos Contábeis
+    [Teardown]              Caso aconteça erro                      ${Caminho_Screenshots}                         Históricos Contábeis
     Cadastros
     RPA.Windows.Click       Históricos Contábeis
     RPA.Windows.Get Text    Cadastro de Históricos Contábeis (1)
@@ -191,7 +191,7 @@ Históricos Contábeis
     Fechar janela
 
 Indexadores
-    [Teardown]              Caso aconteça erro             ${Caminho_Screenshots}               ERRO Indexadores
+    [Teardown]              Caso aconteça erro             ${Caminho_Screenshots}                Indexadores
     Cadastros
     RPA.Windows.Click       Indexadores
     RPA.Windows.Get Text    Cadastro de Indexadores (1)
@@ -199,7 +199,7 @@ Indexadores
     Fechar janela
 
 Índices Financeiros
-    [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}                       ERRO Índices Financeiros
+    [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}                        Índices Financeiros
     Cadastros
     RPA.Windows.Click       Índices Financeiros
     RPA.Windows.Get Text    Cadastro de Índices Financeiros (1)
@@ -207,7 +207,7 @@ Indexadores
     Fechar janela
 
 Limite de Crédito > Documentos
-    [Teardown]                Caso aconteça erro                       ${Caminho_Screenshots}Limite de Crédito/              ERRO Documentos
+    [Teardown]                Caso aconteça erro                       ${Caminho_Screenshots}Limite de Crédito/               Documentos
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Windows.Click         Documentos
@@ -216,7 +216,7 @@ Limite de Crédito > Documentos
     Fechar janela
 
 Limite de Crédito > Tipos Aprovação
-    [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}Limite de Crédito/                   ERRO Tipos Aprovação
+    [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}Limite de Crédito/                    Tipos Aprovação
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    t
@@ -226,7 +226,7 @@ Limite de Crédito > Tipos Aprovação
 
 
 Limite de Crédito > Níveis de Aprovação
-    [Teardown]                Caso aconteça erro                                             ${Caminho_Screenshots}Limite de Crédito/                       ERRO Níveis de Aprovação
+    [Teardown]                Caso aconteça erro                                             ${Caminho_Screenshots}Limite de Crédito/                        Níveis de Aprovação
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    n
@@ -235,7 +235,7 @@ Limite de Crédito > Níveis de Aprovação
     Fechar janela
 
 Limite de Crédito > Dados para Análise
-    [Teardown]                Caso aconteça erro                              ${Caminho_Screenshots}Limite de Crédito/                      ERRO Dados para Análise
+    [Teardown]                Caso aconteça erro                              ${Caminho_Screenshots}Limite de Crédito/                       Dados para Análise
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    a
@@ -244,7 +244,7 @@ Limite de Crédito > Dados para Análise
     Fechar janela
 
 Limite de Crédito > Tipos de Cálculos/Fórmulas
-    [Teardown]                Caso aconteça erro                                          ${Caminho_Screenshots}Limite de Crédito/                              ERRO Tipos de Cálculos_Fórmulas
+    [Teardown]                Caso aconteça erro                                          ${Caminho_Screenshots}Limite de Crédito/                               Tipos de Cálculos_Fórmulas
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    i
@@ -253,7 +253,7 @@ Limite de Crédito > Tipos de Cálculos/Fórmulas
     Fechar janela
 
 Limite de Crédito > Estrutura Análise
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Limite de Crédito/                     ERRO Estrutura Análise
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Limite de Crédito/                      Estrutura Análise
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    e
@@ -262,7 +262,7 @@ Limite de Crédito > Estrutura Análise
     Fechar janela
 
 Limite de Crédito > Fórmulas/Cálculo Limite de crédito
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Limite de Crédito/                     ERRO Fórmulas_Cálculo Limite de crédito
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Limite de Crédito/                      Fórmulas_Cálculo Limite de crédito
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    f
@@ -271,7 +271,7 @@ Limite de Crédito > Fórmulas/Cálculo Limite de crédito
     Fechar janela
 
 Países
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Países
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Países
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -279,7 +279,7 @@ Países
     Fechar janela
 
 Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Estados
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Estados
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -287,7 +287,7 @@ Estados
     Fechar janela
 
 Regiões
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Regiões
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Regiões
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -295,7 +295,7 @@ Regiões
     Fechar janela
 
 Municípios
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Municípios
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Municípios
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -303,7 +303,7 @@ Municípios
     Fechar janela
 
 Localidades
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Localidades
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Localidades
     Cadastros
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
@@ -311,7 +311,7 @@ Localidades
     Fechar janela
 
 Relatórios > Terceiros
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Terceiros
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Terceiros
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    t
@@ -320,7 +320,7 @@ Relatórios > Terceiros
     Fechar janela
 
 Relatórios > Tipos de Documentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Tipos de Documentos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Tipos de Documentos
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    i
@@ -329,7 +329,7 @@ Relatórios > Tipos de Documentos
     Fechar janela
 
 Relatórios > Portadores
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Portadores
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Portadores
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    p
@@ -338,7 +338,7 @@ Relatórios > Portadores
     Fechar janela
 
 Relatórios > Plano de Contas
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Plano de Contas
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Plano de Contas
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    l
@@ -347,7 +347,7 @@ Relatórios > Plano de Contas
     Fechar janela
 
 Relatórios > Históricos Contábeis
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Históricos Contábeis
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Históricos Contábeis
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    h
@@ -356,7 +356,7 @@ Relatórios > Históricos Contábeis
     Fechar janela
 
 Relatórios > Centros de Custos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Centros de Custos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Centros de Custos
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    c
@@ -365,7 +365,7 @@ Relatórios > Centros de Custos
     Fechar janela
 
 Relatórios > Países
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Países
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Países
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    a
@@ -374,7 +374,7 @@ Relatórios > Países
     Fechar janela
 
 Relatórios > Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Estados
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Estados
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    e
@@ -383,7 +383,7 @@ Relatórios > Estados
     Fechar janela
 
 Relatórios > Municípios
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Municípios
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Municípios
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    m
@@ -392,7 +392,7 @@ Relatórios > Municípios
     Fechar janela
 
 Relatórios > Regiões
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Regiões
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Regiões
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    r
@@ -401,7 +401,7 @@ Relatórios > Regiões
     Fechar janela
 
 Relatórios > Localidades
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Localidades
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Localidades
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    o
@@ -410,7 +410,7 @@ Relatórios > Localidades
     Fechar janela
 
 Relatórios > Estabelecimentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/          ERRO Estabelecimentos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Estabelecimentos
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    s
@@ -419,7 +419,7 @@ Relatórios > Estabelecimentos
     Fechar janela
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Empresas
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Empresas
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -428,7 +428,7 @@ Parâmetros > Empresas
     Fechar janela
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Estabelecimentos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Estabelecimentos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
@@ -437,7 +437,7 @@ Parâmetros > Estabelecimentos
     Fechar janela
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Usuários
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
@@ -446,7 +446,7 @@ Parâmetros > Usuários
     Fechar janela
 
 Parâmetros > Grupos Usuários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Grupos Usuários
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Grupos Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    g
@@ -455,7 +455,7 @@ Parâmetros > Grupos Usuários
     Fechar janela
 
 Parâmetros > Configurações de Estação
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Configurações de Estação
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Configurações de Estação
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    c

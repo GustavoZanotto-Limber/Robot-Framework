@@ -17,7 +17,7 @@ Consultas
 *** Test Cases ***
 
 Consultas Personalizadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Consultas Personalizadas
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Consultas Personalizadas
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
@@ -25,7 +25,7 @@ Consultas Personalizadas
     Fechar janela
 
 Log de Alterações
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                     ERRO Log de Alterações
+    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Log de Alterações
     Consultas
     RPA.Windows.Click         Log de Alterações
     RPA.Windows.Get Text      Consulta Log de Alterações (1)

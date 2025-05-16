@@ -14,7 +14,7 @@ ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTe
 *** Test Cases ***
 
 Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Terceiros
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Terceiros
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Get Text    Cadastro de Terceiros (1)
@@ -22,7 +22,7 @@ Terceiros
     Fechar janela
 
 Grupo de Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Grupo de Terceiros
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Grupo de Terceiros
     Cadastros
     RPA.Windows.Click       Grupo de Terceiros
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
@@ -30,7 +30,7 @@ Grupo de Terceiros
     Fechar Janela
 
 Setores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Setores
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Setores
     Cadastros
     RPA.Windows.Click       Setores
     RPA.Windows.Get Text    Cadastro de Setores (1)
@@ -38,7 +38,7 @@ Setores
     Fechar Janela
 
 Safras
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Safras
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Safras
     Cadastros
     RPA.Windows.Click       Safras
     RPA.Windows.Get Text    Cadastro de Safras (1)
@@ -47,7 +47,7 @@ Safras
 
 
 Produtos > Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/             ERRO Produtos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Produtos
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  P
@@ -56,7 +56,7 @@ Produtos > Produtos
     Fechar Janela
 
 Produtos > Depósitos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/             ERRO Depósitos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Depósitos
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  D
@@ -65,7 +65,7 @@ Produtos > Depósitos
     Fechar Janela
 
 Produtos > Unidades
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/             ERRO Unidades
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Unidades
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  U
@@ -74,7 +74,7 @@ Produtos > Unidades
     Fechar Janela
 
 Produtos > Marcas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/             ERRO Marcas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Marcas
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  M
@@ -83,7 +83,7 @@ Produtos > Marcas
     Fechar Janela
 
 Produtos > Cores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/             ERRO Cores
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Cores
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  C
@@ -92,7 +92,7 @@ Produtos > Cores
     Fechar Janela
 
 Produtos > Tamanhos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/             ERRO Tamanhos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Tamanhos
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  T
@@ -101,7 +101,7 @@ Produtos > Tamanhos
     Fechar Janela
 
 Produtos > Estampas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/             ERRO Estampas
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Estampas
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  E
@@ -110,7 +110,7 @@ Produtos > Estampas
     Fechar Janela
 
 Produtos > Categorias
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/             ERRO Categorias
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Categorias
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  A
@@ -119,7 +119,7 @@ Produtos > Categorias
     Fechar Janela
 
 Veículos > Veículos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/             ERRO Veículos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/              Veículos
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  V
@@ -128,7 +128,7 @@ Veículos > Veículos
     Fechar Janela
 
 Veículos > Tipos de Veículos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/             ERRO Tipos de Veículos
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/              Tipos de Veículos
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  T
@@ -137,7 +137,7 @@ Veículos > Tipos de Veículos
     Fechar Janela
 
 Tipo Movimentação
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}            ERRO Tipo Movimentação
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Tipo Movimentação
     Cadastros
     RPA.Windows.Click       Tipo Movimentação
     RPA.Windows.Get Text    Cadastro de Tipos de Movimentação (1)
@@ -145,7 +145,7 @@ Tipo Movimentação
     Fechar Janela
 
 Categoria de Lote
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}            ERRO Categoria de Lote
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Categoria de Lote
     Cadastros
     RPA.Windows.Click       Categoria de Lote
     RPA.Windows.Get Text    Cadastro de Categoria de Lote (1)
@@ -153,7 +153,7 @@ Categoria de Lote
     Fechar Janela
 
 Tipo de Teste Lotes
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}            ERRO Tipo De Teste Lotes
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Tipo De Teste Lotes
     Cadastros
     repetidor de teclas     down    9
     RPA.Desktop.Press Keys  ENTER
@@ -162,7 +162,7 @@ Tipo de Teste Lotes
     Fechar Janela
 
 Países
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Países
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Países
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -170,7 +170,7 @@ Países
     Fechar janela
 
 Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Estados
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Estados
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -178,7 +178,7 @@ Estados
     Fechar janela
 
 Regiões
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Regiões
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Regiões
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -186,7 +186,7 @@ Regiões
     Fechar janela
 
 Municípios
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Municípios
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Municípios
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -194,7 +194,7 @@ Municípios
     Fechar janela
 
 Localidades
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          ERRO Localidades
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Localidades
     Cadastros
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
@@ -202,7 +202,7 @@ Localidades
     Fechar janela
 
 Fiscais > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/          ERRO Tabela Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Tabela Tributária
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    T
@@ -211,7 +211,7 @@ Fiscais > Tabela Tributária
     Fechar janela
 
 Fiscais > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/          ERRO Situação Tributária
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Situação Tributária
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    S
@@ -220,7 +220,7 @@ Fiscais > Situação Tributária
     Fechar janela
 
 Fiscais > Operações Fiscais
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/          ERRO Operações Fiscais
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Operações Fiscais
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    O
@@ -230,7 +230,7 @@ Fiscais > Operações Fiscais
 
 
 Fiscais > Classificações Fiscais
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/          ERRO Classificações Fiscais
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Classificações Fiscais
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    C
@@ -239,7 +239,7 @@ Fiscais > Classificações Fiscais
     Fechar janela
 
 Fiscais > Classificações de Serviços Prestado - REINF
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/          ERRO Classificações de Serviços Prestado - REINF
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Classificações de Serviços Prestado - REINF
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    L
@@ -249,7 +249,7 @@ Fiscais > Classificações de Serviços Prestado - REINF
 
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Empresas
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Empresas
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -258,7 +258,7 @@ Parâmetros > Empresas
     Fechar janela
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Estabelecimentos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Estabelecimentos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
@@ -267,7 +267,7 @@ Parâmetros > Estabelecimentos
     Fechar janela
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Usuários
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
@@ -276,7 +276,7 @@ Parâmetros > Usuários
     Fechar janela
 
 Parâmetros > Grupos Usuários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Grupos Usuários
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Grupos Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    g
@@ -285,7 +285,7 @@ Parâmetros > Grupos Usuários
     Fechar janela
 
 Parâmetros > Configurações de Estação
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/          ERRO Configurações de Estação
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Configurações de Estação
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    c

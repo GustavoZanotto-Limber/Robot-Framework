@@ -46,7 +46,7 @@ abrindo caixa operador
         Clear Anchor
         RPA.Windows.Click                       Abertura / Fechamento
         Sleep                                   2s
-        ${caixa_aberto}=    Run Keyword And Ignore Error      RPA.Windows.Get Text              Fechar Caixa
+        ${caixa_aberto}=    Run Keyword And Ignore error      RPA.Windows.Get Text              Fechar Caixa
     
     
         IF  ${caixa_aberto} != (\'FAIL\', "ElementNotFound: Element not found with locator \'Fechar Caixa\'")

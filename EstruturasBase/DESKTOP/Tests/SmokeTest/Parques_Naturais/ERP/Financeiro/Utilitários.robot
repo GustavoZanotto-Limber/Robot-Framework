@@ -18,7 +18,7 @@ Utilitários
 *** Test Cases    ***
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             ERRO Utilitários
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Utilitários
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -26,7 +26,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                   ERRO Papel de Parede
+    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -35,7 +35,7 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configurar Menu Principal
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Menu Principal
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -43,7 +43,7 @@ Configurar Menu Principal
     Fechar janela
 
 Configurar Barra de Atalhos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configurar Barra de Atalhos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
     Utilitários
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
@@ -51,7 +51,7 @@ Configurar Barra de Atalhos
     Fechar Janela
 
 Estilo do Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Estilo do Menu Principal
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -59,7 +59,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Controle de Acessos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Controle de Acessos
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -67,7 +67,7 @@ Controle de Acessos
     Fechar janela
 
 Configuração de Liberação
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configuração de Liberação
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configuração de Liberação
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -75,7 +75,7 @@ Configuração de Liberação
     Fechar janela
 
 Relatórios Personalizados > Cadastro de Categorias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                            ERRO Cadastro de Categorias
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                             Cadastro de Categorias
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -84,7 +84,7 @@ Relatórios Personalizados > Cadastro de Categorias
     Fechar janela
     
 Relatórios Personalizados > Cadastro de Relatórios
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                              ERRO Cadastro de Relatórios
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -93,7 +93,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     Fechar janela
 
 Configurador de Impressões > Relatórios > Contas a Pagar
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Relatórios/                            ERRO Contas a Pagar
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Relatórios/                             Contas a Pagar
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  R
@@ -103,7 +103,7 @@ Configurador de Impressões > Relatórios > Contas a Pagar
     Fechar janela
 
 Configurador de Impressões > Relatórios > Contas a Receber
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Relatórios/                            ERRO Contas a Receber
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Relatórios/                             Contas a Receber
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  R
@@ -113,7 +113,7 @@ Configurador de Impressões > Relatórios > Contas a Receber
     Fechar janela
 
 Configurador de Impressões > Recibos > Contas a Pagar
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Recibos/                            ERRO Contas a Pagar
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Recibos/                             Contas a Pagar
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  E
@@ -123,7 +123,7 @@ Configurador de Impressões > Recibos > Contas a Pagar
     Fechar janela
 
 Configurador de Impressões > Recibos > Contas a Receber
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Recibos/                            ERRO Contas a Receber
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Recibos/                             Contas a Receber
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  E
@@ -133,7 +133,7 @@ Configurador de Impressões > Recibos > Contas a Receber
     Fechar janela
 
 Criar Usuario de Log
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Criar Usuario de Log
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
     Utilitários
     RPA.Windows.Click       Criar Usuário de Log
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
@@ -141,7 +141,7 @@ Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Verifica transações abertas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Verifica transações abertas
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
@@ -149,7 +149,7 @@ Verifica transações abertas
     Fechar janela
 
 Configurar de Dup/Boletos/Carnês
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Configurar de Dup_Boletos_Carnês
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar de Dup_Boletos_Carnês
     Utilitários
     RPA.Windows.Click       Configurar de Dup/Boletos/Carnês
     RPA.Windows.Get Text    Configuração de Duplicatas/Carnes/Boletos (1)
@@ -157,7 +157,7 @@ Configurar de Dup/Boletos/Carnês
     Fechar janela
 
 Importador Extrato Bancário (OFX)
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Importador Extrato Bancário (OFX)
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Importador Extrato Bancário (OFX)
     Utilitários
     RPA.Windows.Click       Importador Extrato Bancário (OFX)
     RPA.Windows.Get Text    Importador de Extrato Bancário (OFX) (1)
@@ -165,7 +165,7 @@ Importador Extrato Bancário (OFX)
     Fechar janela
 
 Arquivo Relato - Serasa
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Arquivo Relato - Serasa
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Arquivo Relato - Serasa
     Utilitários
     RPA.Windows.Click       Arquivo Relato - Serasa
     RPA.Windows.Get Text    ARQUIVO RELATO - SERASA (1)
@@ -173,7 +173,7 @@ Arquivo Relato - Serasa
     Fechar janela
 
 Agenda Telefônica
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            ERRO Agenda Telefônica
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Agenda Telefônica
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
@@ -181,7 +181,7 @@ Agenda Telefônica
     Fechar janela
 
 Faturamento de Agências - Bilheteria > Geração de Faturas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Faturamento de Agências - Bilheteria/                            ERRO Geração de Faturas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Faturamento de Agências - Bilheteria/                             Geração de Faturas
     Utilitários
     RPA.Windows.Click       Faturamento de Agências - Bilheteria
     RPA.Desktop.Press Keys  G
@@ -190,7 +190,7 @@ Faturamento de Agências - Bilheteria > Geração de Faturas
     Fechar janela
 
 Faturamento de Agências - Bilheteria > Estorno de Faturas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Faturamento de Agências - Bilheteria/                            ERRO Estorno de Faturas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Faturamento de Agências - Bilheteria/                             Estorno de Faturas
     Utilitários
     RPA.Windows.Click       Faturamento de Agências - Bilheteria
     RPA.Desktop.Press Keys  E
@@ -199,7 +199,7 @@ Faturamento de Agências - Bilheteria > Estorno de Faturas
     Fechar janela
 
 Cadastro de Bilheterias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                          ERRO Cadastro de Bilheterias
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                           Cadastro de Bilheterias
     Utilitários
     RPA.Windows.Click       Cadastro de Bilheterias
     RPA.Windows.Get Text    Cadastro de Bilheterias (1)
@@ -207,7 +207,7 @@ Cadastro de Bilheterias
     Fechar janela
 
 Processos Personalizados
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                          ERRO Processos Personalizados
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                           Processos Personalizados
     Utilitários
     RPA.Windows.Click       Processos Personalizados
     RPA.Windows.Get Text    Processos Personalizados (1)
@@ -215,7 +215,7 @@ Processos Personalizados
     Fechar janela
 
 Relatório de Análise de Veículos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                          ERRO Relatório de Análise de Veículos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                           Relatório de Análise de Veículos
     Utilitários
     RPA.Windows.Click       Relatório de Análise de Veículos
     RPA.Windows.Get Text    Relatório de Análise de Veículos (1)
@@ -223,7 +223,7 @@ Relatório de Análise de Veículos
     Fechar janela
 
 Importação de Planilha Excel Personalizada
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                          ERRO Importação de Planilha Excel Personalizada
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                           Importação de Planilha Excel Personalizada
     Utilitários
     RPA.Windows.Click       Importação de Planilha Excel Personalizada
     RPA.Windows.Get Text    Importação de Planilha Excel Personalizada (1)
@@ -231,7 +231,7 @@ Importação de Planilha Excel Personalizada
     Fechar janela
 
 Bilheteria > Cadastro de Tipos de Receita
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Bilheteria/                          ERRO Cadastro de Tipos de Receita
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Bilheteria/                           Cadastro de Tipos de Receita
     Utilitários
     RPA.Windows.Click       Bilheteria
     RPA.Desktop.Press Keys  T
@@ -240,7 +240,7 @@ Bilheteria > Cadastro de Tipos de Receita
     Fechar janela
 
 Bilheteria > Config. Plano Contas X Produtos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Bilheteria/                          ERRO Config. Plano Contas X Produtos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Bilheteria/                           Config. Plano Contas X Produtos
     Utilitários
     RPA.Windows.Click       Bilheteria
     RPA.Desktop.Press Keys  C
@@ -250,7 +250,7 @@ Bilheteria > Config. Plano Contas X Produtos
     RPA.Windows.Click       Sim
     
 Bilheteria > Config. Tipo Receita Trib.
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Bilheteria/                          ERRO Config. Tipo Receita Trib.
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Bilheteria/                           Config. Tipo Receita Trib.
     Utilitários
     RPA.Windows.Click       Bilheteria
     RPA.Desktop.Press Keys  O
