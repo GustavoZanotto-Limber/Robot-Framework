@@ -21,14 +21,17 @@ Confirmação de Negócio
     Manutenções
     RPA.Windows.Click         Confirmação de Negócio
     RPA.Windows.Get Text      Confirmação de Negócio (1)
+    RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Confirmação de Negócio (1)      ${Caminho_Screenshots}Confirmação de Negócio
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Emissão de NFS-e sobre Confirmações de Negócios
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Confirmação de Negócio
     Manutenções
     RPA.Windows.Click         Emissão de NFS-e sobre Confirmações de Negócios
-    RPA.Windows.Get Text      Emissão de NFS-e sobre Confirmações de Negócios (1)  
+    RPA.Windows.Get Text      Emissão de NFS-e sobre Confirmações de Negócios (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Emissão de NFS-e sobre Confirmações de Negócios (1)      ${Caminho_Screenshots}Confirmação de Negócio
     Fechar janela
 
@@ -37,9 +40,11 @@ Pedidos > Pedidos de Compra
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Desktop.Press Keys    P
-    RPA.Windows.Get Text      Pedidos de Compra (1)  
+    RPA.Windows.Get Text      Pedidos de Compra (1)
+    RPA.Windows.Click         Novo  
     BaseDesktop.Screenshot    Pedidos de Compra (1)      ${Caminho_Screenshots}Pedidos de Compra
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Pedidos > Pedidos de Venda
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Pedidos de Venda
@@ -47,8 +52,10 @@ Pedidos > Pedidos de Venda
     RPA.Windows.Click         Pedidos
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Pedidos de Venda (1)  
+    RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Pedidos de Venda (1)      ${Caminho_Screenshots}Pedidos de Venda
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Entradas/Compras > Incluir/Alterar
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/              Incluir_Alterar
@@ -56,8 +63,10 @@ Entradas/Compras > Incluir/Alterar
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  I
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
+    RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)   ${Caminho_Screenshots}Entradas_Compras/Incluir_Alterar 
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Entradas/Compras > Consultar
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/              Consultar
@@ -65,8 +74,10 @@ Entradas/Compras > Consultar
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Entradas/Compras - Consultar (1)
+    RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Saídas/Vendas > Incluir Saídas/Vendas
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Alterar Saídas_Vendas
@@ -74,8 +85,10 @@ Saídas/Vendas > Incluir Saídas/Vendas
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    I
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Com Fechamento (1)
+    RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
     Fechar janela
+    RPA.Windows.Click       Sim
 
 
 Saídas/Vendas > Alterar Saídas/Vendas
@@ -84,7 +97,10 @@ Saídas/Vendas > Alterar Saídas/Vendas
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
+    RPA.Windows.Click       Cancelar
     Fechar janela
 
 Saídas/Vendas > Consultar Saídas/Vendas
@@ -93,7 +109,10 @@ Saídas/Vendas > Consultar Saídas/Vendas
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Consulta (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Consulta (1)    ${Caminho_Screenshots}Saídas_Vendas/Consultar Saídas_Vendas
+    RPA.Windows.Click       Cancelar
     Fechar janela
 
 Encerrar

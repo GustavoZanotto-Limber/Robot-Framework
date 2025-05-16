@@ -21,7 +21,9 @@ Consultas Personalizadas
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
+    RPA.Windows.Click         Cadastrar Nova Consulta
     BaseDesktop.Screenshot    Consultas Personalizadas (1)      ${Caminho_Screenshots}Consultas Personalizadas
+    RPA.Windows.Click         Fechar
     Fechar janela
 
 Log de Alterações
@@ -29,6 +31,7 @@ Log de Alterações
     Consultas
     RPA.Windows.Click         Log de Alterações
     RPA.Windows.Get Text      Consulta Log de Alterações (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Consulta Log de Alterações (1)      ${Caminho_Screenshots}Log de Alterações
     Fechar janela
 
