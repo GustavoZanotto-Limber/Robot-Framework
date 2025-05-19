@@ -63,7 +63,7 @@ Entradas/Compras > Incluir/Alterar
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  I
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
-    RPA.Windows.Click         Novo
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)   ${Caminho_Screenshots}Entradas_Compras/Incluir_Alterar 
     Fechar janela
     RPA.Windows.Click       Sim
@@ -74,7 +74,7 @@ Entradas/Compras > Consultar
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Entradas/Compras - Consultar (1)
-    RPA.Windows.Click         Novo
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
     Fechar janela
     RPA.Windows.Click       Sim
@@ -88,7 +88,7 @@ Saídas/Vendas > Incluir Saídas/Vendas
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
     Fechar janela
-    RPA.Windows.Click       Sim
+    RPA.Windows.Click         Sim
 
 
 Saídas/Vendas > Alterar Saídas/Vendas

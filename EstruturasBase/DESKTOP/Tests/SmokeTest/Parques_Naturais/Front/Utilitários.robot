@@ -27,8 +27,8 @@ Favoritos
 Papel de Parede
     [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
     Utilitários
-    Sleep                   1s
     RPA.Windows.Click       Papel de Parede
+    Sleep                   1s
     RPA.Windows.Get Text    Seleção de Papel de Parede
     BaseDesktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
     RPA.Windows.Click       Fechar
