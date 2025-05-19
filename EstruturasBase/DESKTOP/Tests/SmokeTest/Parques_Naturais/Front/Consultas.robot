@@ -76,6 +76,7 @@ Consulta Passaporte
     [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                        Consulta Passaporte
     Manutenções
     RPA.Windows.Click       Consulta Passaporte
+    Sleep                   1s
     RPA.Windows.Get Text    Consulta de Passaporte (1)
     RPA.Windows.Click       LOCALIZAR PASSAPORTE
     BaseDesktop.Screenshot  Consulta de Passaporte (1)    ${Caminho_Screenshots}Consulta Passaporte

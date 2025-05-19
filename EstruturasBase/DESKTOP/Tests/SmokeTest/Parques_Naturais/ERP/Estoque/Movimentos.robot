@@ -21,39 +21,50 @@ Movimentações de Produtos - Agrupados
     Movimentos
     RPA.Windows.Click       Movimentações de Produtos - Agrupados
     RPA.Windows.Get Text    Movimentações de Produtos Agrupados (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Movimentações de Produtos Agrupados (1)    ${Caminho_Screenshots}Movimentações de Produtos - Agrupados
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Movimentações de Produtos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Movimentações de Produtos 
     Movimentos
     RPA.Windows.Click       Movimentações de Produtos 
     RPA.Windows.Get Text    Movimentações de Produtos (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Movimentações de Produtos (1)    ${Caminho_Screenshots}Movimentações de Produtos 
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Ajuste/Contagem de Estoque
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Ajuste_Contagem de Estoque 
     Movimentos
     RPA.Windows.Click       Ajuste/Contagem de Estoque 
     RPA.Windows.Get Text    Ajuste/Contagem de Estoque (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Ajuste/Contagem de Estoque (1)    ${Caminho_Screenshots}Ajuste_Contagem de Estoque
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Balanço de Estoque
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Balanço de Estoque 
     Movimentos
     RPA.Windows.Click       Balanço de Estoque 
     RPA.Windows.Get Text    Balanço de Estoque (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Balanço de Estoque (1)    ${Caminho_Screenshots}Balanço de Estoque
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Quantidade Mínima/Máxima de Itens por Estabelecimento
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Quantidade Mínima_Máxima de Itens por Estabelecimento
     Movimentos
     RPA.Windows.Click       Quantidade Mínima/Máxima de Itens por Estabelecimento
     RPA.Windows.Get Text    Cadastro de Quantidade Mínima/Máxima de Itens por Estabelecimento (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Cadastro de Quantidade Mínima/Máxima de Itens por Estabelecimento (1)    ${Caminho_Screenshots}Quantidade Mínima_Máxima de Itens por Estabelecimento
+    RPA.Windows.Click       Confirmar
     Fechar janela
 
 Alocação de Setores
@@ -61,7 +72,10 @@ Alocação de Setores
     Movimentos
     RPA.Windows.Click       Alocação de Setores
     RPA.Windows.Get Text    Alocação de Setores (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Alocação de Setores (1)    ${Caminho_Screenshots}Alocação de Setores
+    RPA.Windows.Click       Fechar
     Fechar janela
 
 Transferências entre Depósitos
@@ -69,40 +83,50 @@ Transferências entre Depósitos
     Movimentos
     RPA.Windows.Click       Transferências entre Depósitos
     RPA.Windows.Get Text    Transferências de Depósito (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Transferências de Depósito (1)    ${Caminho_Screenshots}Transferências entre Depósitos
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Pré Transferências entre Depósitos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Pré Transferências entre Depósitos
     Movimentos
     RPA.Desktop.Press Keys  P 
     RPA.Windows.Get Text    Pré - Transferências de Depósito (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Pré - Transferências de Depósito (1)    ${Caminho_Screenshots}Pré Transferências entre Depósitos
     Fechar janela
-
+    RPA.Windows.Click       Sim
 
 Aprovação de Pré Transferências entre Depósitos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Aprovação de Pré Transferências entre Depósitos
     Movimentos
     RPA.Windows.Click       Aprovação de Pré Transferência entre Depósitos
     RPA.Windows.Get Text    Consulta/Aprovação/Rejeição de Pré transferência entre depósitos (1)
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Consulta/Aprovação/Rejeição de Pré transferência entre depósitos (1)      ${Caminho_Screenshots}Aprovação de Pré Transferências entre Depósitos
     Fechar janela
+    
 
 Tranferência entre Produtos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tranferência entre Produtos
     Movimentos
     RPA.Windows.Click       Transferência entre Produtos
     RPA.Windows.Get Text    Transferência entre Produtos (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Transferência entre Produtos (1)    ${Caminho_Screenshots}Tranferência entre Produtos
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Bloqueio de Movimentos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Bloqueio de Movimentos
     Movimentos
     RPA.Windows.Click       Bloqueio de Movimentos
     RPA.Windows.Get Text    Bloqueio de Movimento (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Bloqueio de Movimento (1)    ${Caminho_Screenshots}Bloqueio de Movimentos
+    RPA.Windows.Click       Confirmar
     Fechar janela
 
 Inventário Manual
@@ -110,7 +134,10 @@ Inventário Manual
     Movimentos
     RPA.Windows.Click       Inventário Manual
     RPA.Windows.Get Text    Inventário Manual (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Inventário Manual (1)    ${Caminho_Screenshots}Inventário Manual
+    RPA.Windows.Click       Confirmar
     Fechar janela
 
 Tranferência entre Terceiros
@@ -118,23 +145,31 @@ Tranferência entre Terceiros
     Movimentos
     RPA.Windows.Click       Transferência entre Terceiros
     RPA.Windows.Get Text    Transferência de depósitos entre terceiros (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Transferência de depósitos entre terceiros (1)    ${Caminho_Screenshots}Tranferência entre Terceiros
+    RPA.Windows.Click       Confirmar
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Bloqueio de Saldo de Terceiros
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Bloqueio de Saldo de Terceiros
     Movimentos
     RPA.Windows.Click       Bloqueio de Saldo de Terceiros
     RPA.Windows.Get Text    Bloqueio de Saldo de Terceiros (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Bloqueio de Saldo de Terceiros (1)    ${Caminho_Screenshots}Bloqueio de Saldo de Terceiros
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Controle de Empréstimos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Controle de Empréstimos
     Movimentos
     RPA.Windows.Click       Controle de Empréstimos
     RPA.Windows.Get Text    Controle de Empréstimos de Grãos (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Controle de Empréstimos de Grãos (1)    ${Caminho_Screenshots}Controle de Empréstimos
+    RPA.Windows.Click       Confirmar
     Fechar janela
 
 Requisição de Compra/Transferência > Manutenção
@@ -143,8 +178,10 @@ Requisição de Compra/Transferência > Manutenção
     RPA.Windows.Click       Requisição de Compra/Transferência
     RPA.Desktop.Press Keys  M
     RPA.Windows.Get Text    Requisição de Compras (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Requisição de Compras (1)    ${Caminho_Screenshots}Requisição de Compra_Transferência/Manutenção
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Requisição de Compra/Transferência > Consultar
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Compra_Transferência/              Consultar
@@ -152,7 +189,10 @@ Requisição de Compra/Transferência > Consultar
     RPA.Windows.Click       Requisição de Compra/Transferência
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Consulta de Requisição de Compra (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Consulta de Requisição de Compra (1)    ${Caminho_Screenshots}Requisição de Compra_Transferência/Consultar
+    RPA.Windows.Click       Confirmar
     Fechar janela
 
 Requisição de Compra/Transferência > Aprovação/Rejeição de Requisição
@@ -161,7 +201,10 @@ Requisição de Compra/Transferência > Aprovação/Rejeição de Requisição
     RPA.Windows.Click       Requisição de Compra/Transferência
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Aprovação/Rejeição de Requisição de Compra (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Aprovação/Rejeição de Requisição de Compra (1)    ${Caminho_Screenshots}Requisição de Compra_Transferência/Aprovação_Rejeição de Requisição
+    RPA.Windows.Click       Confirmar
     Fechar janela
 
 Requisição de Movimentos > Emissão/Manutenção
@@ -170,8 +213,10 @@ Requisição de Movimentos > Emissão/Manutenção
     RPA.Windows.Click       Requisição de Movimentos
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Requisição de Movimentos (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Requisição de Movimentos (1)    ${Caminho_Screenshots}Requisição de Movimentos/Emissão_Manutenção
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Requisição de Movimentos > Consulta
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Movimentos/              Consulta
@@ -179,6 +224,7 @@ Requisição de Movimentos > Consulta
     RPA.Windows.Click       Requisição de Movimentos
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Consulta de Requisição de Movimentos (1)
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Consulta de Requisição de Movimentos (1)    ${Caminho_Screenshots}Requisição de Movimentos/Consulta
     Fechar janela
 
@@ -188,6 +234,7 @@ Requisição de Movimentos > Aprovação/Rejeição
     RPA.Windows.Click       Requisição de Movimentos
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Aprovação/Rejeição de Requisição de Movimentos
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Aprovação/Rejeição de Requisição de Movimentos    ${Caminho_Screenshots}Requisição de Movimentos/Aprovação_Rejeição
     Fechar janela
 
@@ -197,8 +244,10 @@ Controle de Vasilhames > Lançamento Inicial/Ajuste
     RPA.Windows.Click       Controle de Vasilhames
     RPA.Desktop.Press Keys  L
     RPA.Windows.Get Text    Lançamento Inicial/Ajuste de Vasilhames (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Lançamento Inicial/Ajuste de Vasilhames (1)    ${Caminho_Screenshots}Controle de Vasilhames/Lançamento Inicial_Ajuste
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Controle de Vasilhames > Movimentação de Vasilhames
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle de Vasilhames/              Movimentação de Vasilhames
@@ -206,15 +255,19 @@ Controle de Vasilhames > Movimentação de Vasilhames
     RPA.Windows.Click       Controle de Vasilhames
     RPA.Desktop.Press Keys  M
     RPA.Windows.Get Text    Movimentação de Vasilhames (1)
+    RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Movimentação de Vasilhames (1)    ${Caminho_Screenshots}Controle de Vasilhames/Movimentação de Vasilhames
     Fechar janela
+    RPA.Windows.Click       Sim
 
 Processos Personalizados
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Processos Personalizados
     Movimentos
     RPA.Windows.Click       Processos Personalizados
     RPA.Windows.Get Text    Processos Personalizados (1)
+    RPA.Windows.Click       Cadastrar Novo Processo
     BaseDesktop.Screenshot  Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
+    RPA.Windows.Click       Sair
     Fechar janela
 
 Encerrar 
