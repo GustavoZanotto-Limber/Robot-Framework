@@ -87,7 +87,6 @@ Imprimir Multiplos Cheques
     RPA.Windows.Click         Imprimir Multiplos Cheques
     RPA.Windows.Get Text      Imprimir Cheques (1)
     RPA.Windows.Click         Carregar
-    
     BaseDesktop.Screenshot    Imprimir Cheques (1)    ${Caminho_Screenshots}Imprimir Multiplos Cheques
     Fechar janela
 
