@@ -32,12 +32,13 @@ Cadastros
     SikuliLibrary.Click    Cadastros.png
     
 Fechar janela
-    Set Global Timeout    0.001
-    Set Wait Time    0.001
+    Set Global Timeout    0.01
+    Set Wait Time         0.01
     Run Keyword And Ignore error   RPA.Windows.Click                 Maximizar    
     Set Anchor                     Aplicativo
     RPA.Windows.Click              Fechar
     Clear Anchor
+    Sleep                 0.2
 
     
 Iniciar sessao        
@@ -90,8 +91,8 @@ repetidor de teclas
 
 Caso aconteça erro
     [Arguments]     ${Caminho_Screenshots}        ${nome_print}
-    Set Global Timeout    0.001
-    Set Wait Time    0.001
+    Set Global Timeout    0.01
+    Set Wait Time    0.01
     ${Erro}=                       Run Keyword And Ignore error     RPA.Windows.Get Text            Erro
     IF    ${Erro} != ('FAIL', "ElementNotFound: Element not found with locator 'Erro'")
          Fail                       Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.
