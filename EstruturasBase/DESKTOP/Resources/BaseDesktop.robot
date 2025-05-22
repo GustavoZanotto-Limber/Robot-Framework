@@ -101,12 +101,12 @@ Caso aconteça erro
     Run Keyword If Test Failed      Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
     Run Keyword If Test Failed      Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Cancelar
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          Enter
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               OK       
+    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               OK     
     Set Anchor                      Aplicativo
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Fechar
     Clear Anchor
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Sim
+    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          Enter  
     
     
     

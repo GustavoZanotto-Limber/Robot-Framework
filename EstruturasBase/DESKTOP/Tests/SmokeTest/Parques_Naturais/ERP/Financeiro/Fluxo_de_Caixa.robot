@@ -21,7 +21,9 @@ Fluxo de Caixa a Realizar (Projetado)
     Fluxo de Caixa
     RPA.Windows.Click         Fluxo de Caixa a Realizar (Projetado)
     RPA.Windows.Get Text      Fluxo de Caixa Projetado (A Realizar) (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Fluxo de Caixa Projetado (A Realizar) (1)    ${Caminho_Screenshots}Fluxo de Caixa a Realizar (Projetado)
+    RPA.Windows.Click         OK
     Fechar janela
 
 Fluxo de Caixa Realizado    
@@ -29,7 +31,9 @@ Fluxo de Caixa Realizado
     Fluxo de Caixa
     RPA.Windows.Click         Fluxo de Caixa Realizado
     RPA.Windows.Get Text      Fluxo de Caixa a Realizado (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Fluxo de Caixa a Realizado (1)    ${Caminho_Screenshots}Fluxo de Caixa Realizado
+    RPA.Windows.Click         OK
     Fechar janela
 
 Encerrar

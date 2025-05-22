@@ -46,7 +46,7 @@ Terceiros > Categorias de Terceiros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Cadastro de Categorias de Terceiros (1)
-    BaseDesktop.Screenshot  Cadastro de Categorias de Terceiros (1)    ${Caminho_Screenshots}Terceiros/ Categorias de Terceiros
+    BaseDesktop.Screenshot  Cadastro de Categorias de Terceiros (1)    ${Caminho_Screenshots}Terceiros/Categorias de Terceiros
     Fechar janela
 
 Terceiros > Grupo de Terceiros
@@ -55,7 +55,7 @@ Terceiros > Grupo de Terceiros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  G
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
-    BaseDesktop.Screenshot  Cadastro de Grupo de Terceiros (1)    ${Caminho_Screenshots}Terceiros/ Grupo de Terceiros
+    BaseDesktop.Screenshot  Cadastro de Grupo de Terceiros (1)    ${Caminho_Screenshots}Terceiros/Grupo de Terceiros
     Fechar Janela
 
 Terceiros > Grupo de Terceiros Fidelizados
@@ -64,7 +64,7 @@ Terceiros > Grupo de Terceiros Fidelizados
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  R
     RPA.Windows.Get Text    Grupo de Terceiros Fidelizados (1)
-    BaseDesktop.Screenshot  Grupo de Terceiros Fidelizados (1)    ${Caminho_Screenshots}Terceiros/ Grupo de Terceiros Fidelizados
+    BaseDesktop.Screenshot  Grupo de Terceiros Fidelizados (1)    ${Caminho_Screenshots}Terceiros/Grupo de Terceiros Fidelizados
     Fechar Janela
 
 Terceiros > Contatos > Registros de Contatos
@@ -1162,84 +1162,84 @@ Parâmetros > Configurações da Estação
     Fechar janela
 
 Parâmetros > Configurações de E-Mail > Servidores
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Configurações de E-Mail/       Servidores
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/       Servidores
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Configurações de E-mail
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Servidores (1)
-    BaseDesktop.Screenshot    Cadastro de Servidores (1)    ${Caminho_Screenshots}Fiscal/Configurações de E-Mail/Servidores
+    BaseDesktop.Screenshot    Cadastro de Servidores (1)    ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/Servidores
     Fechar janela
 
 Parâmetros > Configurações de E-Mail > Contas
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Configurações de E-Mail/       Contas
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/       Contas
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Configurações de E-mail
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de Contas de e-mail (1)
-    BaseDesktop.Screenshot    Cadastro de Contas de e-mail (1)    ${Caminho_Screenshots}Fiscal/Configurações de E-Mail/Contas
+    BaseDesktop.Screenshot    Cadastro de Contas de e-mail (1)    ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/Contas
     Fechar janela
 
 Parâmetros > Configurações de E-Mail > Modelos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Configurações de E-Mail/       Modelos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/       Modelos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Configurações de E-mail
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Cadastro de Modelo de e-mails (1)
-    BaseDesktop.Screenshot    Cadastro de Modelo de e-mails (1)    ${Caminho_Screenshots}Fiscal/Configurações de E-Mail/Modelos
+    BaseDesktop.Screenshot    Cadastro de Modelo de e-mails (1)    ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/Modelos
     Fechar janela
 
 Parâmetros > Configurações de E-Mail > Opções de Envio
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Configurações de E-Mail/       Opções de Envio
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/       Opções de Envio
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Configurações de E-mail
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Cadastro de Opções de Envio (1)
-    BaseDesktop.Screenshot    Cadastro de Opções de Envio (1)    ${Caminho_Screenshots}Fiscal/Configurações de E-Mail/Opções de Envio
+    BaseDesktop.Screenshot    Cadastro de Opções de Envio (1)    ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/Opções de Envio
     Fechar janela
 
 Parâmetros > Força de Vendas > Cadastro de Dispositivos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Força de Vendas/       Cadastro de Dispositivos
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/Força de Vendas/       Cadastro de Dispositivos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Força de Vendas
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Configuração de Dispositivos (1)
-    BaseDesktop.Screenshot    Configuração de Dispositivos (1)    ${Caminho_Screenshots}Fiscal/Força de Vendas/Cadastro de Dispositivos
+    BaseDesktop.Screenshot    Configuração de Dispositivos (1)    ${Caminho_Screenshots}Parâmetros/Força de Vendas/Cadastro de Dispositivos
     Fechar janela
 
 Parâmetros > Força de Vendas > Cadastro de Metas
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Força de Vendas/       Cadastro de Metas
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/Força de Vendas/       Cadastro de Metas
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Força de Vendas
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Cadastro de Metas (1)
-    BaseDesktop.Screenshot    Cadastro de Metas (1)    ${Caminho_Screenshots}Fiscal/Força de Vendas/Cadastro de Metas
+    BaseDesktop.Screenshot    Cadastro de Metas (1)    ${Caminho_Screenshots}Parâmetros/Força de Vendas/Cadastro de Metas
     Fechar janela
 
 Parâmetros > Força de Vendas > Metas dos Vendedores
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Força de Vendas/       Metas dos Vendedores
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/Força de Vendas/       Metas dos Vendedores
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Força de Vendas
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Cadastro das Metas do Vendedor (1)
-    BaseDesktop.Screenshot    Cadastro das Metas do Vendedor (1)    ${Caminho_Screenshots}Fiscal/Força de Vendas/Metas dos Vendedores
+    BaseDesktop.Screenshot    Cadastro das Metas do Vendedor (1)    ${Caminho_Screenshots}Parâmetros/Força de Vendas/Metas dos Vendedores
     Fechar janela
     RPA.Windows.Click         Sim
 
 Parâmetros > Força de Vendas > Configurações de Tabela de Preço
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Força de Vendas/       Configurações de Tabela de Preço
+    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/Força de Vendas/       Configurações de Tabela de Preço
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Força de Vendas
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Configuração de Tabela de Preço (1)
-    BaseDesktop.Screenshot    Configuração de Tabela de Preço (1)    ${Caminho_Screenshots}Fiscal/Força de Vendas/Configurações de Tabela de Preço
+    BaseDesktop.Screenshot    Configuração de Tabela de Preço (1)    ${Caminho_Screenshots}Parâmetros/Força de Vendas/Configurações de Tabela de Preço
     Fechar janela
 
 Parâmetros > Sistema Web
