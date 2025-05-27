@@ -138,6 +138,29 @@ Impressão de Etiquetas de Entrega
     RPA.Windows.Get Text    Impressão de Etiquetas de Entrega (1)
     BaseDesktop.Screenshot  Impressão de Etiquetas de Entrega (1)    ${Caminho_Screenshots}Impressão de Etiquetas de Entregas
     Fechar janela 
+
+Configurador de Impressões > Ordem se Serviço
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Ordem se Serviço
+    Utilitários
+    RPA.Windows.Click       Configurador de Impressões
+    RPA.Desktop.Press Keys  O
+    RPA.Windows.Get Text    Configurador de Impressões - Ordem de Serviço (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Configurador de Impressões - Ordem de Serviço (1)    ${Caminho_Screenshots}Configurador de Impressões/Ordem se Serviço
+    Fechar janela
+    RPA.Windows.Click       Sim
+
+Configurador de Impressões > Saídas Vendas
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Saídas Vendas
+    Utilitários
+    RPA.Windows.Click       Configurador de Impressões
+    RPA.Desktop.Press Keys  S
+    RPA.Windows.Get Text    Configurador de Impressões - Saídas/Vendas (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Configurador de Impressões - Saídas/Vendas (1)    ${Caminho_Screenshots}Configurador de Impressões/Saídas Vendas
+    Fechar janela
+    RPA.Windows.Click       Sim
+
 PDV > Atualizar Produtos
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}PDV/           Atualizar Produtos
     Utilitários
