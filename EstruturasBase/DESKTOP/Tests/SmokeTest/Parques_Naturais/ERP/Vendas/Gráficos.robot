@@ -21,7 +21,9 @@ Vendas/Prestação de Serviços - Evolução Diária
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Diária
     RPA.Windows.Get Text      Evolução Diária. (1)
+    RPA.Windows.Click         Carregar 
     BaseDesktop.Screenshot    Evolução Diária. (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Evolução Diária
+    RPA.Windows.Click         OK
     Fechar janela
 
 Vendas/Prestação de Serviços - Evolução Mensal
@@ -29,7 +31,9 @@ Vendas/Prestação de Serviços - Evolução Mensal
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Mensal
     RPA.Windows.Get Text      Evolução Mensal. (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Evolução Mensal. (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Evolução Mensal
+    RPA.Windows.Click         OK
     Fechar janela
 
 Vendas/Prestação de Serviços - Evolução Anual
@@ -37,7 +41,9 @@ Vendas/Prestação de Serviços - Evolução Anual
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Anual 
     RPA.Windows.Get Text      Evolução Anual. (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Evolução Anual. (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Evolução Anual
+    RPA.Windows.Click         OK
     Fechar janela
 
 Vendas/Prestação de Serviços - Sintético/Cliente
@@ -45,7 +51,9 @@ Vendas/Prestação de Serviços - Sintético/Cliente
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Cliente
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Cliente (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Vendas/Prestação de Serviços / Cliente (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Sintético_Cliente
+    RPA.Windows.Click         OK
     Fechar janela
 
 Vendas/Prestação de Serviços - Sintético/Setor
@@ -53,6 +61,7 @@ Vendas/Prestação de Serviços - Sintético/Setor
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Setor
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Setor (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Vendas/Prestação de Serviços / Setor (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Sintético_Setor
     Fechar janela
 
@@ -61,6 +70,7 @@ Vendas/Prestação de Serviços - Sintético/Item
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Item
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Item (1)
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Vendas/Prestação de Serviços / Item (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Sintético_Item
     Fechar janela
 
