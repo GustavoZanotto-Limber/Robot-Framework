@@ -83,11 +83,18 @@ Encerrar teste front
 Encerrar tudo
     RPA.Desktop.Close all applications
 
-repetidor de teclas
+Repetidor de teclas
     [Arguments]               ${tecla}                   ${quantidade_de_clicks}    
     FOR                       ${quantidade_de_clicks}    IN RANGE                   1    ${quantidade_de_clicks}+1
-    RPA.Desktop.Press Keys    ${tecla}
+    RPA.Desktop.Press Keys    ${tecla}     
     END
+
+Repetidor de 2 teclas
+    [Arguments]               ${tecla}             ${tecla2}                             ${quantidade_de_clicks}    
+    FOR                       ${quantidade_de_clicks}    IN RANGE                   1    ${quantidade_de_clicks}+1
+    RPA.Desktop.Press Keys    ${tecla}             ${tecla2}
+    END
+
 
 Caso aconteça erro
     [Arguments]     ${Caminho_Screenshots}        ${nome_print}
@@ -98,7 +105,7 @@ Caso aconteça erro
          Fail                       Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.
     END   
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Maximizar
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          escape
+    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          Enter
     Run Keyword If Test Failed      Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
     Run Keyword If Test Failed      Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Cancelar
