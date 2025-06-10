@@ -112,7 +112,7 @@ Caso aconteça erro
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Cancel
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          ESC
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               OK     
-    Set Anchor                      Aplicativo
+    Run Keyword And Ignore error    Set Anchor                      Aplicativo
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Fechar
     Clear Anchor
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Sim
