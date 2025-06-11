@@ -34,6 +34,7 @@ Cadastros
 Fechar janela
     Set Global Timeout    0.01
     Set Wait Time         0.01
+    Run Keyword And Ignore error    RPA.Windows.Click               Maximizar
     Set Anchor                     Aplicativo
     RPA.Windows.Click              Fechar
     Clear Anchor
@@ -102,10 +103,10 @@ Caso aconteça erro
     ${Erro}=                       Run Keyword And Ignore error     RPA.Windows.Get Text            Erro
     IF    ${Erro} != ('FAIL', "ElementNotFound: Element not found with locator 'Erro'")
          Fail                       Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.
-    END   
-    Run Keyword And Ignore error    RPA.Windows.Click               Maximizar
+    END
+    Run Keyword And Ignore error    RPA.Windows.Click               Maximizar   
     Sleep                           0.4
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          Enter
+    Run Keyword And Ignore error    RPA.Desktop.Press Keys          esc
     Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Confirmar
     Run Keyword If Test Failed      Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
     Run Keyword If Test Failed      Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
