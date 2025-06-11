@@ -1,581 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.9.13 on win32)" generated="2025-06-10T17:27:22.513305" rpa="false" schemaversion="5">
-<suite id="s1" name="Controle de CIOT" source="c:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\ERP\Frotas\Controle de CIOT.robot">
+<robot generator="Robot 7.2.2 (Python 3.9.13 on win32)" generated="2025-06-11T10:41:27.237401" rpa="false" schemaversion="5">
+<suite id="s1" name="Consultas" source="c:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\ERP\Frotas\Consultas.robot">
 <kw name="Iniciar sessao" owner="BaseDesktop" type="SETUP">
 <kw name="Carregar os elementos do app" owner="BaseDesktop">
 <kw name="Add Image Path" owner="SikuliLibrary">
 <arg>${EXECDIR}\\EstruturasBase\\DESKTOP\\Elements</arg>
 <doc>Add image path</doc>
-<status status="PASS" start="2025-06-10T17:27:38.657436" elapsed="0.084775"/>
+<status status="PASS" start="2025-06-11T10:41:37.184958" elapsed="0.074799"/>
 </kw>
-<status status="PASS" start="2025-06-10T17:27:38.654445" elapsed="0.087766"/>
+<status status="PASS" start="2025-06-11T10:41:37.182964" elapsed="0.077790"/>
 </kw>
 <kw name="Open Application" owner="RPA.Desktop">
-<msg time="2025-06-10T17:27:38.744207" level="INFO">Starting application: C:\Limber\ERP Executaveis\cde_win_frotas.exe</msg>
+<msg time="2025-06-11T10:41:37.263747" level="INFO">Starting application: C:\Limber\ERP Executaveis\cde_win_frotas.exe</msg>
 <arg>C:\\Limber\\ERP Executaveis\\${nome_exe}.exe</arg>
 <doc>Start a given application by name (if in PATH),
 or by path to executable.</doc>
-<status status="PASS" start="2025-06-10T17:27:38.743207" elapsed="0.038896"/>
+<status status="PASS" start="2025-06-11T10:41:37.260754" elapsed="0.026924"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-10T17:27:39.793858" level="INFO">Slept 1 second.</msg>
+<msg time="2025-06-11T10:41:38.303621" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-10T17:27:38.783100" elapsed="1.011754"/>
+<status status="PASS" start="2025-06-11T10:41:37.288675" elapsed="1.015952"/>
 </kw>
 <kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-10T17:27:39.798845" level="INFO">Getting element with locator: Abrir</msg>
-<msg time="2025-06-10T17:27:39.835745" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:27:39.836744" level="INFO">Locator 'Abrir' produced matcher: MatchObject(locators=[('Name', 'Abrir', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:27:40.482802" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId=DropDown Rect=(1029,204,1044,224)[15x20] Name='Abrir' Handle=0x0(0)&gt;, locator='Abrir', name='Abrir', automation_id='DropDown', control_type='ButtonControl', class_name='', left=1029, right=1044, top=204, bottom=224, width=15, height=20, xcenter=1036, ycenter=214)</msg>
+<msg time="2025-06-11T10:41:38.306618" level="INFO">Getting element with locator: Abrir</msg>
+<msg time="2025-06-11T10:41:38.339055" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg time="2025-06-11T10:41:38.339055" level="INFO">Locator 'Abrir' produced matcher: MatchObject(locators=[('Name', 'Abrir', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-06-11T10:41:39.357477" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId=DropDown Rect=(1029,204,1044,224)[15x20] Name='Abrir' Handle=0x0(0)&gt;, locator='Abrir', name='Abrir', automation_id='DropDown', control_type='ButtonControl', class_name='', left=1029, right=1044, top=204, bottom=224, width=15, height=20, xcenter=1036, ycenter=214)</msg>
 <arg>Abrir</arg>
 <tag>action</tag>
 <tag>mouse</tag>
 <doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-10T17:27:39.795855" elapsed="1.272667"/>
+<status status="PASS" start="2025-06-11T10:41:38.304627" elapsed="1.638726"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-10T17:27:43.082727" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-06-11T10:41:41.954932" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-10T17:27:41.075538" elapsed="2.009128"/>
+<status status="PASS" start="2025-06-11T10:41:39.945343" elapsed="2.010505"/>
 </kw>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:27:43.088654" level="INFO">Pressing keys: Key.enter</msg>
+<msg time="2025-06-11T10:41:41.958879" level="INFO">Pressing keys: Key.enter</msg>
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:27:43.086660" elapsed="0.006935"/>
+<status status="PASS" start="2025-06-11T10:41:41.956884" elapsed="0.004945"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-10T17:27:48.104655" level="INFO">Slept 5 seconds.</msg>
-<msg time="2025-06-10T17:27:48.105662" level="INFO">Carregando a base...</msg>
+<msg time="2025-06-11T10:41:46.967919" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-06-11T10:41:46.968925" level="INFO">Carregando a base...</msg>
 <arg>5s</arg>
 <arg>Carregando a base...</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-10T17:27:43.096587" elapsed="5.009075"/>
+<status status="PASS" start="2025-06-11T10:41:41.963823" elapsed="5.006098"/>
 </kw>
 <kw name="Type Text" owner="RPA.Desktop">
 <arg>1</arg>
 <doc>Type text one letter at a time.</doc>
-<status status="PASS" start="2025-06-10T17:27:48.106659" elapsed="0.001993"/>
+<status status="PASS" start="2025-06-11T10:41:46.970918" elapsed="0.002993"/>
 </kw>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:27:48.110647" level="INFO">Pressing keys: Key.enter</msg>
+<msg time="2025-06-11T10:41:46.977901" level="INFO">Pressing keys: Key.enter</msg>
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:27:48.109651" elapsed="0.107186"/>
+<status status="PASS" start="2025-06-11T10:41:46.975904" elapsed="0.101328"/>
 </kw>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:27:48.224816" level="INFO">Pressing keys: Key.enter</msg>
+<msg time="2025-06-11T10:41:47.079230" level="INFO">Pressing keys: Key.enter</msg>
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:27:48.220822" elapsed="0.102716"/>
+<status status="PASS" start="2025-06-11T10:41:47.078233" elapsed="0.108710"/>
 </kw>
 <arg>cde_win_frotas</arg>
-<status status="PASS" start="2025-06-10T17:27:38.620246" elapsed="9.704291"/>
+<status status="PASS" start="2025-06-11T10:41:37.181967" elapsed="10.005974"/>
 </kw>
-<test id="s1-t1" name="Lançamento de CIOT" line="20">
-<kw name="Controle de CIOT">
+<test id="s1-t1" name="Consulta de Infrações de Trânsito" line="64">
+<kw name="Consultas">
 <kw name="Cadastros" owner="BaseDesktop">
 <kw name="Click" owner="SikuliLibrary">
-<msg time="2025-06-10T17:27:51.535670" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1749587270660.png'/&gt;
-[log] CLICK on L[32,33]@S(0) (610 msec)</msg>
+<msg time="2025-06-11T10:41:49.321096" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1749649308481.png'/&gt;
+[log] CLICK on L[32,33]@S(0) (602 msec)</msg>
 <arg>Cadastros.png</arg>
 <doc>Click</doc>
-<status status="PASS" start="2025-06-10T17:27:48.332515" elapsed="3.204152"/>
+<status status="PASS" start="2025-06-11T10:41:47.196918" elapsed="2.124178"/>
 </kw>
-<status status="PASS" start="2025-06-10T17:27:48.330519" elapsed="3.207143"/>
+<status status="PASS" start="2025-06-11T10:41:47.195921" elapsed="2.126173"/>
 </kw>
 <kw name="Repetidor de teclas" owner="BaseDesktop">
 <for flavor="IN RANGE">
 <iter>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:27:51.541651" level="INFO">Pressing keys: Key.right</msg>
+<msg time="2025-06-11T10:41:49.327080" level="INFO">Pressing keys: Key.right</msg>
 <arg>${tecla}</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:27:51.540653" elapsed="0.005985"/>
+<status status="PASS" start="2025-06-11T10:41:49.326082" elapsed="0.007980"/>
 </kw>
 <var name="${quantidade_de_clicks}">1</var>
-<status status="PASS" start="2025-06-10T17:27:51.539659" elapsed="0.006979"/>
+<status status="PASS" start="2025-06-11T10:41:49.325086" elapsed="0.008976"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:27:51.549630" level="INFO">Pressing keys: Key.right</msg>
+<msg time="2025-06-11T10:41:49.338051" level="INFO">Pressing keys: Key.right</msg>
 <arg>${tecla}</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:27:51.548634" elapsed="0.106713"/>
+<status status="PASS" start="2025-06-11T10:41:49.336056" elapsed="0.105363"/>
 </kw>
 <var name="${quantidade_de_clicks}">2</var>
-<status status="PASS" start="2025-06-10T17:27:51.547636" elapsed="0.107711"/>
+<status status="PASS" start="2025-06-11T10:41:49.335058" elapsed="0.107355"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:27:51.658340" level="INFO">Pressing keys: Key.right</msg>
+<msg time="2025-06-11T10:41:49.446402" level="INFO">Pressing keys: Key.right</msg>
 <arg>${tecla}</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:27:51.657341" elapsed="0.107712"/>
+<status status="PASS" start="2025-06-11T10:41:49.444408" elapsed="0.104296"/>
 </kw>
 <var name="${quantidade_de_clicks}">3</var>
-<status status="PASS" start="2025-06-10T17:27:51.656345" elapsed="0.109705"/>
+<status status="PASS" start="2025-06-11T10:41:49.443410" elapsed="0.106163"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:27:51.768045" level="INFO">Pressing keys: Key.right</msg>
+<msg time="2025-06-11T10:41:49.552514" level="INFO">Pressing keys: Key.right</msg>
 <arg>${tecla}</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:27:51.767048" elapsed="0.105457"/>
+<status status="PASS" start="2025-06-11T10:41:49.551517" elapsed="0.114978"/>
 </kw>
 <var name="${quantidade_de_clicks}">4</var>
-<status status="PASS" start="2025-06-10T17:27:51.766050" elapsed="0.106455"/>
+<status status="PASS" start="2025-06-11T10:41:49.550520" elapsed="0.116966"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:27:51.874502" level="INFO">Pressing keys: Key.right</msg>
+<msg time="2025-06-11T10:41:49.676463" level="INFO">Pressing keys: Key.right</msg>
 <arg>${tecla}</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:27:51.873505" elapsed="0.110867"/>
+<status status="PASS" start="2025-06-11T10:41:49.670479" elapsed="0.112562"/>
 </kw>
 <var name="${quantidade_de_clicks}">5</var>
-<status status="PASS" start="2025-06-10T17:27:51.872505" elapsed="0.112866"/>
+<status status="PASS" start="2025-06-11T10:41:49.668484" elapsed="0.115555"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:27:51.992344" level="INFO">Pressing keys: Key.right</msg>
+<msg time="2025-06-11T10:41:49.795010" level="INFO">Pressing keys: Key.right</msg>
 <arg>${tecla}</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:27:51.988357" elapsed="0.102845"/>
+<status status="PASS" start="2025-06-11T10:41:49.788028" elapsed="0.105689"/>
 </kw>
 <var name="${quantidade_de_clicks}">6</var>
-<status status="PASS" start="2025-06-10T17:27:51.987358" elapsed="0.104843"/>
+<status status="PASS" start="2025-06-11T10:41:49.786034" elapsed="0.109680"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-06-11T10:41:49.901732" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-06-11T10:41:49.898707" elapsed="0.099489"/>
+</kw>
+<var name="${quantidade_de_clicks}">7</var>
+<status status="PASS" start="2025-06-11T10:41:49.897710" elapsed="0.101449"/>
 </iter>
 <var>${quantidade_de_clicks}</var>
 <value>1</value>
 <value>${quantidade_de_clicks}+1</value>
-<status status="PASS" start="2025-06-10T17:27:51.538660" elapsed="0.553541"/>
+<status status="PASS" start="2025-06-11T10:41:49.323090" elapsed="0.677066"/>
 </for>
 <arg>right</arg>
-<arg>6</arg>
-<status status="PASS" start="2025-06-10T17:27:51.537662" elapsed="0.555535"/>
+<arg>7</arg>
+<status status="PASS" start="2025-06-11T10:41:49.322094" elapsed="0.679062"/>
 </kw>
 <kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-10T17:27:52.096190" level="INFO">Getting element with locator: Lançamento de CIOT</msg>
-<msg time="2025-06-10T17:27:52.116137" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:27:52.116137" level="INFO">Locator 'Lançamento de CIOT' produced matcher: MatchObject(locators=[('Name', 'Lançamento de CIOT', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:27:52.602033" level="INFO">Returning element: WindowsElement(item=&lt;MenuItemControl ClassName='' AutomationId=193 Rect=(559,45,753,67)[194x22] Name='Lançamento de CIOT' Handle=0x0(0)&gt;, locator='Lançamento de CIOT', name='Lançamento de CIOT', automation_id='193', control_type='MenuItemControl', class_name='', left=559, right=753, top=45, bottom=67, width=194, height=22, xcenter=656, ycenter=56)</msg>
+<msg time="2025-06-11T10:41:50.003148" level="INFO">Getting element with locator: Consulta de Infrações de Trânsito</msg>
+<msg time="2025-06-11T10:41:50.021105" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg time="2025-06-11T10:41:50.024092" level="INFO">Locator 'Consulta de Infrações de Trânsito' produced matcher: MatchObject(locators=[('Name', 'Consulta de Infrações de Trânsito', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-06-11T10:41:50.948134" level="INFO">Returning element: WindowsElement(item=&lt;MenuItemControl ClassName='' AutomationId=201 Rect=(663,155,958,177)[295x22] Name='Consulta de Infrações de Trânsito' Handle=0x0(0)&gt;, locator='Consulta de Infrações de Trânsito', name='Consulta de Infrações de Trânsito', automation_id='201', control_type='MenuItemControl', class_name='', left=663, right=958, top=155, bottom=177, width=295, height=22, xcenter=810, ycenter=166)</msg>
 <arg>${nome}</arg>
 <tag>action</tag>
 <tag>mouse</tag>
 <doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-10T17:27:52.094195" elapsed="1.090182"/>
+<status status="PASS" start="2025-06-11T10:41:50.001156" elapsed="1.537738"/>
 </kw>
-<arg>Lançamento de CIOT</arg>
-<status status="PASS" start="2025-06-10T17:27:48.328525" elapsed="8.323176"/>
-</kw>
-<kw name="Get Text" owner="RPA.Windows">
-<msg time="2025-06-10T17:27:56.655686" level="INFO">Getting element with locator: CIOT (1)</msg>
-<msg time="2025-06-10T17:27:56.664661" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:27:56.665658" level="INFO">Locator 'CIOT (1)' produced matcher: MatchObject(locators=[('Name', 'CIOT (1)', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:27:59.670242" level="INFO">Returning element: WindowsElement(item=&lt;WindowControl ClassName='TFrmFroCiot' AutomationId=65280 Rect=(-8,55,1374,716)[1382x661] Name='CIOT (1)' Handle=0xD9080A(14223370)&gt;, locator='CIOT (1)', name='CIOT (1)', automation_id='65280', control_type='WindowControl', class_name='TFrmFroCiot', left=-8, right=1374, top=55, bottom=716, width=1382, height=661, xcenter=683, ycenter=385)</msg>
-<arg>CIOT (1)</arg>
-<tag>action</tag>
-<doc>Get text from Control element defined by the locator.</doc>
-<status status="PASS" start="2025-06-10T17:27:56.653693" elapsed="3.020538"/>
-</kw>
-<kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-10T17:27:59.678220" level="INFO">Getting element with locator: Novo</msg>
-<msg time="2025-06-10T17:27:59.688196" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:27:59.688196" level="INFO">Locator 'Novo' produced matcher: MatchObject(locators=[('Name', 'Novo', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:00.212826" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='TBitBtn' AutomationId=11209512 Rect=(1,87,91,118)[90x31] Name='Novo' Handle=0xAB0B28(11209512)&gt;, locator='Novo', name='Novo', automation_id='11209512', control_type='ButtonControl', class_name='TBitBtn', left=1, right=91, top=87, bottom=118, width=90, height=31, xcenter=46, ycenter=102)</msg>
-<arg>Novo</arg>
-<tag>action</tag>
-<tag>mouse</tag>
-<doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-10T17:27:59.676226" elapsed="1.120204"/>
-</kw>
-<kw name="Screenshot" owner="BaseDesktop">
-<kw name="Screenshot" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:00.806400" level="INFO">Getting element with locator: CIOT (1)</msg>
-<msg time="2025-06-10T17:28:00.821359" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:00.822357" level="INFO">Locator 'CIOT (1)' produced matcher: MatchObject(locators=[('Name', 'CIOT (1)', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:01.314740" level="INFO">Returning element: WindowsElement(item=&lt;WindowControl ClassName='TFrmFroCiot' AutomationId=65280 Rect=(-8,55,1374,716)[1382x661] Name='CIOT (1)' Handle=0xD9080A(14223370)&gt;, locator='CIOT (1)', name='CIOT (1)', automation_id='65280', control_type='WindowControl', class_name='TFrmFroCiot', left=-8, right=1374, top=55, bottom=716, width=1382, height=661, xcenter=683, ycenter=385)</msg>
-<arg>${janela}</arg>
-<arg>${Caminho}.png</arg>
-<tag>action</tag>
-<doc>Take a screenshot of the element defined by the locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:00.804405" elapsed="0.664924"/>
-</kw>
-<arg>CIOT (1)</arg>
-<arg>${Caminho_Screenshots}Lançamento de CIOT</arg>
-<status status="PASS" start="2025-06-10T17:28:00.801413" elapsed="0.668913"/>
-</kw>
-<kw name="Fechar janela" owner="BaseDesktop">
-<kw name="Set Global Timeout" owner="RPA.Windows">
-<arg>0.01</arg>
-<tag>action</tag>
-<doc>Set global timeout for element search. Applies also
-to ``Control Window`` keyword.</doc>
-<status status="PASS" start="2025-06-10T17:28:01.473322" elapsed="0.000992"/>
-</kw>
-<kw name="Set Wait Time" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:01.476309" level="INFO">Previous wait time: 0.500000</msg>
-<msg time="2025-06-10T17:28:01.477306" level="INFO">Current wait time: 0.010000</msg>
-<arg>0.01</arg>
-<tag>action</tag>
-<doc>Set library wait time for action keywords.</doc>
-<status status="PASS" start="2025-06-10T17:28:01.475312" elapsed="0.002992"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:01.481297" level="INFO">Getting element with locator: Maximizar</msg>
-<msg time="2025-06-10T17:28:01.496255" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:01.497255" level="INFO">Locator 'Maximizar' produced matcher: MatchObject(locators=[('Name', 'Maximizar', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:04.531419" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId=Maximize-Restore Rect=(-31940,-31999,-31894,-31972)[46x27] Name='Maximizar' Handle=0x0(0)&gt;, locator='Maximizar', name='Maximizar', automation_id='Maximize-Restore', control_type='ButtonControl', class_name='', left=-31940, right=-31894, top=-31999, bottom=-31972, width=46, height=27, xcenter=-31917, ycenter=-31986)</msg>
-<arg>Maximizar</arg>
-<tag>action</tag>
-<tag>mouse</tag>
-<doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:01.479303" elapsed="3.137898"/>
-</kw>
-<arg>RPA.Windows.Click</arg>
-<arg>Maximizar</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-06-10T17:28:01.479303" elapsed="3.138870"/>
-</kw>
-<kw name="Set Anchor" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:04.624160" level="INFO">Getting element with locator: Aplicativo</msg>
-<msg time="2025-06-10T17:28:04.643106" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:04.644105" level="INFO">Locator 'Aplicativo' produced matcher: MatchObject(locators=[('Name', 'Aplicativo', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:05.926019" level="INFO">Returning element: WindowsElement(item=&lt;MenuBarControl ClassName='' AutomationId=MenuBar Rect=(0,23,1366,42)[1366x19] Name='Aplicativo' Handle=0x0(0)&gt;, locator='Aplicativo', name='Aplicativo', automation_id='MenuBar', control_type='MenuBarControl', class_name='', left=0, right=1366, top=23, bottom=42, width=1366, height=19, xcenter=683, ycenter=32)</msg>
-<arg>Aplicativo</arg>
-<doc>Set anchor to an element specified by the locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:04.621169" elapsed="1.305848"/>
-</kw>
-<kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:05.928014" level="INFO">Getting element with locator: Fechar</msg>
-<msg time="2025-06-10T17:28:05.935993" level="INFO">Resulted root element: WindowsElement(item=&lt;MenuBarControl ClassName='' AutomationId=MenuBar Rect=(0,23,1366,42)[1366x19] Name='Aplicativo' Handle=0x0(0)&gt;, locator='Aplicativo', name='Aplicativo', automation_id='MenuBar', control_type='MenuBarControl', class_name='', left=0, right=1366, top=23, bottom=42, width=1366, height=19, xcenter=683, ycenter=32)</msg>
-<msg time="2025-06-10T17:28:05.937024" level="INFO">Locator 'Fechar' produced matcher: MatchObject(locators=[('Name', 'Fechar', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:06.835587" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId= Rect=(1347,23,1366,42)[19x19] Name='Fechar' Handle=0x0(0)&gt;, locator='Fechar', name='Fechar', automation_id='', control_type='ButtonControl', class_name='', left=1347, right=1366, top=23, bottom=42, width=19, height=19, xcenter=1356, ycenter=32)</msg>
-<arg>Fechar</arg>
-<tag>action</tag>
-<tag>mouse</tag>
-<doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:05.927017" elapsed="0.999177"/>
-</kw>
-<kw name="Clear Anchor" owner="RPA.Windows">
-<doc>Clears control anchor set by ``Set Anchor``</doc>
-<status status="PASS" start="2025-06-10T17:28:06.928189" elapsed="0.005984"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-10T17:28:07.142590" level="INFO">Slept 200 milliseconds.</msg>
-<arg>0.2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-10T17:28:06.935169" elapsed="0.208337"/>
-</kw>
-<status status="PASS" start="2025-06-10T17:28:01.471323" elapsed="5.673180"/>
-</kw>
-<kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:07.153479" level="INFO">Getting element with locator: Sim</msg>
-<msg time="2025-06-10T17:28:07.186391" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:07.187389" level="INFO">Locator 'Sim' produced matcher: MatchObject(locators=[('Name', 'Sim', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:07.455502" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='TBitBtn' AutomationId=24513396 Rect=(591,390,666,415)[75x25] Name='Sim' Handle=0x1760B74(24513396)&gt;, locator='Sim', name='Sim', automation_id='24513396', control_type='ButtonControl', class_name='TBitBtn', left=591, right=666, top=390, bottom=415, width=75, height=25, xcenter=628, ycenter=402)</msg>
-<arg>Sim</arg>
-<tag>action</tag>
-<tag>mouse</tag>
-<doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:07.147495" elapsed="0.385258"/>
-</kw>
-<kw name="Caso aconteça erro" owner="BaseDesktop" type="TEARDOWN">
-<kw name="Set Global Timeout" owner="RPA.Windows">
-<arg>0.01</arg>
-<tag>action</tag>
-<doc>Set global timeout for element search. Applies also
-to ``Control Window`` keyword.</doc>
-<status status="PASS" start="2025-06-10T17:28:07.812686" elapsed="0.000998"/>
-</kw>
-<kw name="Set Wait Time" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:07.815678" level="INFO">Previous wait time: 0.010000</msg>
-<msg time="2025-06-10T17:28:07.816676" level="INFO">Current wait time: 0.010000</msg>
-<arg>0.01</arg>
-<tag>action</tag>
-<doc>Set library wait time for action keywords.</doc>
-<status status="PASS" start="2025-06-10T17:28:07.814680" elapsed="0.001996"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="Get Text" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:07.820665" level="INFO">Getting element with locator: Erro</msg>
-<msg time="2025-06-10T17:28:07.863550" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:07.863550" level="INFO">Locator 'Erro' produced matcher: MatchObject(locators=[('Name', 'Erro', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:15.703048" level="INFO">2025-06-10 17:28:15.700 locators.py[278] _get_control_from_params -&gt; Find Control Timeout(0.01s): {Name: 'Erro'}</msg>
-<msg time="2025-06-10T17:28:15.704054" level="FAIL">ElementNotFound: Element not found with locator 'Erro'</msg>
-<arg>Erro</arg>
-<tag>action</tag>
-<doc>Get text from Control element defined by the locator.</doc>
-<status status="FAIL" start="2025-06-10T17:28:07.819668" elapsed="7.935249">ElementNotFound: Element not found with locator 'Erro'</status>
-</kw>
-<msg time="2025-06-10T17:28:15.754917" level="INFO">${Erro} = ('FAIL', "ElementNotFound: Element not found with locator 'Erro'")</msg>
-<var>${Erro}</var>
-<arg>RPA.Windows.Get Text</arg>
-<arg>Erro</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-06-10T17:28:07.817673" elapsed="7.938241"/>
-</kw>
-<if>
-<branch type="IF" condition="${Erro} != ('FAIL', &quot;ElementNotFound: Element not found with locator 'Erro'&quot;)">
-<kw name="Fail" owner="BuiltIn">
-<arg>Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2025-06-10T17:28:15.756912" elapsed="0.000996"/>
-</kw>
-<status status="NOT RUN" start="2025-06-10T17:28:15.755914" elapsed="0.002992"/>
-</branch>
-<status status="PASS" start="2025-06-10T17:28:15.755914" elapsed="0.002992"/>
-</if>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>RPA.Windows.Click</arg>
-<arg>Maximizar</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:15.759904" elapsed="0.000998"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>RPA.Desktop.Press Keys</arg>
-<arg>Enter</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:15.760902" elapsed="0.000996"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>Remove File</arg>
-<arg>${Caminho_Screenshots}${nome_print}.png</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:15.762895" elapsed="0.000997"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Take Screenshot</arg>
-<arg>${Caminho_Screenshots}Erro ${nome_print}.png</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:15.764889" elapsed="0.000998"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>RPA.Windows.Click</arg>
-<arg>Cancelar</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:15.766885" elapsed="0.000997"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>RPA.Windows.Click</arg>
-<arg>Cancel</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:15.767882" elapsed="0.000998"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>RPA.Desktop.Press Keys</arg>
-<arg>ESC</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:15.769877" elapsed="0.000996"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>RPA.Windows.Click</arg>
-<arg>OK</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:15.770873" elapsed="0.000999"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="Set Anchor" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:15.775862" level="INFO">Getting element with locator: Aplicativo</msg>
-<msg time="2025-06-10T17:28:15.824730" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:15.825728" level="INFO">Locator 'Aplicativo' produced matcher: MatchObject(locators=[('Name', 'Aplicativo', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:16.790140" level="INFO">Returning element: WindowsElement(item=&lt;MenuBarControl ClassName='' AutomationId=MenuBar Rect=(0,23,1366,42)[1366x19] Name='Aplicativo' Handle=0x0(0)&gt;, locator='Aplicativo', name='Aplicativo', automation_id='MenuBar', control_type='MenuBarControl', class_name='', left=0, right=1366, top=23, bottom=42, width=1366, height=19, xcenter=683, ycenter=32)</msg>
-<arg>Aplicativo</arg>
-<doc>Set anchor to an element specified by the locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:15.773867" elapsed="1.017271"/>
-</kw>
-<arg>Set Anchor</arg>
-<arg>Aplicativo</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-06-10T17:28:15.772870" elapsed="1.018268"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>RPA.Windows.Click</arg>
-<arg>Fechar</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:16.792136" elapsed="0.000000"/>
-</kw>
-<kw name="Clear Anchor" owner="RPA.Windows">
-<doc>Clears control anchor set by ``Set Anchor``</doc>
-<status status="PASS" start="2025-06-10T17:28:16.793133" elapsed="0.000997"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>RPA.Windows.Click</arg>
-<arg>Sim</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:16.795131" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>RPA.Desktop.Press Keys</arg>
-<arg>Enter</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:16.796126" elapsed="0.000997"/>
-</kw>
-<arg>${Caminho_Screenshots}</arg>
-<arg>Lançamento de CIOT</arg>
-<status status="PASS" start="2025-06-10T17:28:07.810179" elapsed="8.987941"/>
-</kw>
-<status status="PASS" start="2025-06-10T17:27:48.324537" elapsed="28.476574"/>
-</test>
-<test id="s1-t2" name="Monitor de CIOT" line="29">
-<kw name="Controle de CIOT">
-<kw name="Cadastros" owner="BaseDesktop">
-<kw name="Click" owner="SikuliLibrary">
-<msg time="2025-06-10T17:28:17.894206" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1749587297075.png'/&gt;
-[log] CLICK on L[32,33]@S(0) (580 msec)</msg>
-<arg>Cadastros.png</arg>
-<doc>Click</doc>
-<status status="PASS" start="2025-06-10T17:28:16.811085" elapsed="1.085120"/>
-</kw>
-<status status="PASS" start="2025-06-10T17:28:16.809090" elapsed="1.089103"/>
-</kw>
-<kw name="Repetidor de teclas" owner="BaseDesktop">
-<for flavor="IN RANGE">
-<iter>
-<kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:28:17.904189" level="INFO">Pressing keys: Key.right</msg>
-<arg>${tecla}</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:28:17.903192" elapsed="0.008980"/>
-</kw>
-<var name="${quantidade_de_clicks}">1</var>
-<status status="PASS" start="2025-06-10T17:28:17.901198" elapsed="0.011968"/>
-</iter>
-<iter>
-<kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:28:17.916157" level="INFO">Pressing keys: Key.right</msg>
-<arg>${tecla}</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:28:17.915160" elapsed="0.102882"/>
-</kw>
-<var name="${quantidade_de_clicks}">2</var>
-<status status="PASS" start="2025-06-10T17:28:17.914162" elapsed="0.104882"/>
-</iter>
-<iter>
-<kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:28:18.021042" level="INFO">Pressing keys: Key.right</msg>
-<arg>${tecla}</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:28:18.020042" elapsed="0.108026"/>
-</kw>
-<var name="${quantidade_de_clicks}">3</var>
-<status status="PASS" start="2025-06-10T17:28:18.019044" elapsed="0.110027"/>
-</iter>
-<iter>
-<kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:28:18.131065" level="INFO">Pressing keys: Key.right</msg>
-<arg>${tecla}</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:28:18.130069" elapsed="0.105537"/>
-</kw>
-<var name="${quantidade_de_clicks}">4</var>
-<status status="PASS" start="2025-06-10T17:28:18.129071" elapsed="0.107532"/>
-</iter>
-<iter>
-<kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:28:18.239592" level="INFO">Pressing keys: Key.right</msg>
-<arg>${tecla}</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:28:18.237598" elapsed="0.110949"/>
-</kw>
-<var name="${quantidade_de_clicks}">5</var>
-<status status="PASS" start="2025-06-10T17:28:18.237598" elapsed="0.111946"/>
-</iter>
-<iter>
-<kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:28:18.353534" level="INFO">Pressing keys: Key.right</msg>
-<arg>${tecla}</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:28:18.351541" elapsed="0.116667"/>
-</kw>
-<var name="${quantidade_de_clicks}">6</var>
-<status status="PASS" start="2025-06-10T17:28:18.350542" elapsed="0.118668"/>
-</iter>
-<var>${quantidade_de_clicks}</var>
-<value>1</value>
-<value>${quantidade_de_clicks}+1</value>
-<status status="PASS" start="2025-06-10T17:28:17.900207" elapsed="0.569003"/>
-</for>
-<arg>right</arg>
-<arg>6</arg>
-<status status="PASS" start="2025-06-10T17:28:17.899191" elapsed="0.571017"/>
-</kw>
-<kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:18.474196" level="INFO">Getting element with locator: Monitor de CIOT</msg>
-<msg time="2025-06-10T17:28:18.492148" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:18.493146" level="INFO">Locator 'Monitor de CIOT' produced matcher: MatchObject(locators=[('Name', 'Monitor de CIOT', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:18.774664" level="INFO">Returning element: WindowsElement(item=&lt;MenuItemControl ClassName='' AutomationId=194 Rect=(559,67,753,89)[194x22] Name='Monitor de CIOT' Handle=0x0(0)&gt;, locator='Monitor de CIOT', name='Monitor de CIOT', automation_id='194', control_type='MenuItemControl', class_name='', left=559, right=753, top=67, bottom=89, width=194, height=22, xcenter=656, ycenter=78)</msg>
-<arg>${nome}</arg>
-<tag>action</tag>
-<tag>mouse</tag>
-<doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:18.471206" elapsed="0.396206"/>
-</kw>
-<arg>Monitor de CIOT</arg>
-<status status="PASS" start="2025-06-10T17:28:16.807095" elapsed="2.255280"/>
+<arg>Consulta de Infrações de Trânsito</arg>
+<status status="PASS" start="2025-06-11T10:41:47.193924" elapsed="4.411798"/>
 </kw>
 <kw name="Get Text" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:19.065363" level="INFO">Getting element with locator: Monitor CIOT (1)</msg>
-<msg time="2025-06-10T17:28:19.079321" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:19.079321" level="INFO">Locator 'Monitor CIOT (1)' produced matcher: MatchObject(locators=[('Name', 'Monitor CIOT (1)', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:19.947393" level="INFO">Returning element: WindowsElement(item=&lt;WindowControl ClassName='TfrmFroConsultaCIOT' AutomationId=65280 Rect=(-8,55,1374,716)[1382x661] Name='Monitor CIOT (1)' Handle=0x10B0BF2(17501170)&gt;, locator='Monitor CIOT (1)', name='Monitor CIOT (1)', automation_id='65280', control_type='WindowControl', class_name='TfrmFroConsultaCIOT', left=-8, right=1374, top=55, bottom=716, width=1382, height=661, xcenter=683, ycenter=385)</msg>
-<arg>Monitor CIOT (1)</arg>
+<msg time="2025-06-11T10:41:51.609704" level="INFO">Getting element with locator: Consulta de Infrações de Trânsito (1)</msg>
+<msg time="2025-06-11T10:41:51.626659" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg time="2025-06-11T10:41:51.627653" level="INFO">Locator 'Consulta de Infrações de Trânsito (1)' produced matcher: MatchObject(locators=[('Name', 'Consulta de Infrações de Trânsito (1)', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-06-11T10:41:52.596590" level="INFO">Returning element: WindowsElement(item=&lt;WindowControl ClassName='TfrmConsultaInfracoesRelatorios' AutomationId=65280 Rect=(-8,55,1374,716)[1382x661] Name='Consulta de Infrações de Trânsito (1)' Handle=0x2E093A(3017018)&gt;, locator='Consulta de Infrações de Trânsito (1)', name='Consulta de Infrações de Trânsito (1)', automation_id='65280', control_type='WindowControl', class_name='TfrmConsultaInfracoesRelatorios', left=-8, right=1374, top=55, bottom=716, width=1382, height=661, xcenter=683, ycenter=385)</msg>
+<arg>Consulta de Infrações de Trânsito (1)</arg>
 <tag>action</tag>
 <doc>Get text from Control element defined by the locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:19.063365" elapsed="0.888018"/>
+<status status="PASS" start="2025-06-11T10:41:51.607708" elapsed="0.990877"/>
 </kw>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:28:19.954374" level="INFO">Pressing keys: '0'</msg>
+<msg time="2025-06-11T10:41:52.602575" level="INFO">Pressing keys: Key.tab</msg>
+<arg>tab</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-06-11T10:41:52.601578" elapsed="0.002991"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-06-11T10:41:52.608560" level="INFO">Pressing keys: '0'</msg>
 <arg>0</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:28:19.953377" elapsed="0.003989"/>
+<status status="PASS" start="2025-06-11T10:41:52.606564" elapsed="0.112702"/>
 </kw>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-10T17:28:19.964347" level="INFO">Pressing keys: Key.enter</msg>
+<msg time="2025-06-11T10:41:52.724249" level="INFO">Pressing keys: Key.enter</msg>
 <arg>Enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-10T17:28:19.963351" elapsed="0.098245"/>
-</kw>
-<kw name="Screenshot" owner="BaseDesktop">
-<kw name="Screenshot" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:20.067580" level="INFO">Getting element with locator: Monitor CIOT (1)</msg>
-<msg time="2025-06-10T17:28:20.090518" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:20.091515" level="INFO">Locator 'Monitor CIOT (1)' produced matcher: MatchObject(locators=[('Name', 'Monitor CIOT (1)', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:20.647540" level="INFO">Returning element: WindowsElement(item=&lt;WindowControl ClassName='TfrmFroConsultaCIOT' AutomationId=65280 Rect=(-8,55,1374,716)[1382x661] Name='Monitor CIOT (1)' Handle=0x10B0BF2(17501170)&gt;, locator='Monitor CIOT (1)', name='Monitor CIOT (1)', automation_id='65280', control_type='WindowControl', class_name='TfrmFroConsultaCIOT', left=-8, right=1374, top=55, bottom=716, width=1382, height=661, xcenter=683, ycenter=385)</msg>
-<arg>${janela}</arg>
-<arg>${Caminho}.png</arg>
-<tag>action</tag>
-<doc>Take a screenshot of the element defined by the locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:20.066583" elapsed="0.659208"/>
-</kw>
-<arg>Monitor CIOT (1)</arg>
-<arg>${Caminho_Screenshots}Monitor de CIOT</arg>
-<status status="PASS" start="2025-06-10T17:28:20.065586" elapsed="0.660205"/>
+<status status="PASS" start="2025-06-11T10:41:52.723253" elapsed="0.099161"/>
 </kw>
 <kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:20.728791" level="INFO">Getting element with locator: Confirmar</msg>
-<msg time="2025-06-10T17:28:20.739755" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:20.740752" level="INFO">Locator 'Confirmar' produced matcher: MatchObject(locators=[('Name', 'Confirmar', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:21.026722" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='TBitBtn' AutomationId=12192580 Rect=(1164,616,1264,642)[100x26] Name='Confirmar' Handle=0xBA0B44(12192580)&gt;, locator='Confirmar', name='Confirmar', automation_id='12192580', control_type='ButtonControl', class_name='TBitBtn', left=1164, right=1264, top=616, bottom=642, width=100, height=26, xcenter=1214, ycenter=629)</msg>
+<msg time="2025-06-11T10:41:52.825406" level="INFO">Getting element with locator: Confirmar</msg>
+<msg time="2025-06-11T10:41:52.842361" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg time="2025-06-11T10:41:52.843358" level="INFO">Locator 'Confirmar' produced matcher: MatchObject(locators=[('Name', 'Confirmar', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-06-11T10:42:01.679305" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='TBitBtn' AutomationId=199150 Rect=(878,576,975,604)[97x28] Name='Confirmar' Handle=0x309EE(199150)&gt;, locator='Confirmar', name='Confirmar', automation_id='199150', control_type='ButtonControl', class_name='TBitBtn', left=878, right=975, top=576, bottom=604, width=97, height=28, xcenter=926, ycenter=590)</msg>
 <arg>Confirmar</arg>
 <tag>action</tag>
 <tag>mouse</tag>
 <doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:20.727787" elapsed="0.383633"/>
+<status status="PASS" start="2025-06-11T10:41:52.823411" elapsed="9.443324"/>
+</kw>
+<kw name="Screenshot" owner="BaseDesktop">
+<kw name="Screenshot" owner="RPA.Windows">
+<msg time="2025-06-11T10:42:02.278703" level="INFO">Getting element with locator: Consulta de Infrações de Trânsito (1)</msg>
+<msg time="2025-06-11T10:42:02.293663" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg time="2025-06-11T10:42:02.294660" level="INFO">Locator 'Consulta de Infrações de Trânsito (1)' produced matcher: MatchObject(locators=[('Name', 'Consulta de Infrações de Trânsito (1)', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-06-11T10:42:03.409573" level="INFO">Returning element: WindowsElement(item=&lt;WindowControl ClassName='TfrmConsultaInfracoesRelatorios' AutomationId=65280 Rect=(-8,55,1374,716)[1382x661] Name='Consulta de Infrações de Trânsito (1)' Handle=0x2E093A(3017018)&gt;, locator='Consulta de Infrações de Trânsito (1)', name='Consulta de Infrações de Trânsito (1)', automation_id='65280', control_type='WindowControl', class_name='TfrmConsultaInfracoesRelatorios', left=-8, right=1374, top=55, bottom=716, width=1382, height=661, xcenter=683, ycenter=385)</msg>
+<arg>${janela}</arg>
+<arg>${Caminho}.png</arg>
+<tag>action</tag>
+<doc>Take a screenshot of the element defined by the locator.</doc>
+<status status="PASS" start="2025-06-11T10:42:02.276713" elapsed="1.267503"/>
+</kw>
+<arg>Consulta de Infrações de Trânsito (1)</arg>
+<arg>${Caminho_Screenshots}Consulta de Infrações de Trânsito</arg>
+<status status="PASS" start="2025-06-11T10:42:02.275712" elapsed="1.269498"/>
 </kw>
 <kw name="Fechar janela" owner="BaseDesktop">
 <kw name="Set Global Timeout" owner="RPA.Windows">
@@ -583,64 +242,47 @@ to ``Control Window`` keyword.</doc>
 <tag>action</tag>
 <doc>Set global timeout for element search. Applies also
 to ``Control Window`` keyword.</doc>
-<status status="PASS" start="2025-06-10T17:28:21.193833" elapsed="0.000000"/>
+<status status="PASS" start="2025-06-11T10:42:03.553191" elapsed="0.000997"/>
 </kw>
 <kw name="Set Wait Time" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:21.194835" level="INFO">Previous wait time: 0.010000</msg>
-<msg time="2025-06-10T17:28:21.195827" level="INFO">Current wait time: 0.010000</msg>
+<msg time="2025-06-11T10:42:03.556183" level="INFO">Previous wait time: 0.500000</msg>
+<msg time="2025-06-11T10:42:03.557182" level="INFO">Current wait time: 0.010000</msg>
 <arg>0.01</arg>
 <tag>action</tag>
 <doc>Set library wait time for action keywords.</doc>
-<status status="PASS" start="2025-06-10T17:28:21.194835" elapsed="0.000992"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:21.197821" level="INFO">Getting element with locator: Maximizar</msg>
-<msg time="2025-06-10T17:28:21.227742" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:21.229736" level="INFO">Locator 'Maximizar' produced matcher: MatchObject(locators=[('Name', 'Maximizar', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:24.317151" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId=Maximize-Restore Rect=(-31940,-31999,-31894,-31972)[46x27] Name='Maximizar' Handle=0x0(0)&gt;, locator='Maximizar', name='Maximizar', automation_id='Maximize-Restore', control_type='ButtonControl', class_name='', left=-31940, right=-31894, top=-31999, bottom=-31972, width=46, height=27, xcenter=-31917, ycenter=-31986)</msg>
-<arg>Maximizar</arg>
-<tag>action</tag>
-<tag>mouse</tag>
-<doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:21.196823" elapsed="3.200122"/>
-</kw>
-<arg>RPA.Windows.Click</arg>
-<arg>Maximizar</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-06-10T17:28:21.195827" elapsed="3.202111"/>
+<status status="PASS" start="2025-06-11T10:42:03.554188" elapsed="0.003990"/>
 </kw>
 <kw name="Set Anchor" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:24.401929" level="INFO">Getting element with locator: Aplicativo</msg>
-<msg time="2025-06-10T17:28:24.423450" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:24.424469" level="INFO">Locator 'Aplicativo' produced matcher: MatchObject(locators=[('Name', 'Aplicativo', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:25.975395" level="INFO">Returning element: WindowsElement(item=&lt;MenuBarControl ClassName='' AutomationId=MenuBar Rect=(0,23,1366,42)[1366x19] Name='Aplicativo' Handle=0x0(0)&gt;, locator='Aplicativo', name='Aplicativo', automation_id='MenuBar', control_type='MenuBarControl', class_name='', left=0, right=1366, top=23, bottom=42, width=1366, height=19, xcenter=683, ycenter=32)</msg>
+<msg time="2025-06-11T10:42:03.560172" level="INFO">Getting element with locator: Aplicativo</msg>
+<msg time="2025-06-11T10:42:03.575132" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg time="2025-06-11T10:42:03.576128" level="INFO">Locator 'Aplicativo' produced matcher: MatchObject(locators=[('Name', 'Aplicativo', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-06-11T10:42:05.104060" level="INFO">Returning element: WindowsElement(item=&lt;MenuBarControl ClassName='' AutomationId=MenuBar Rect=(0,23,1366,42)[1366x19] Name='Aplicativo' Handle=0x0(0)&gt;, locator='Aplicativo', name='Aplicativo', automation_id='MenuBar', control_type='MenuBarControl', class_name='', left=0, right=1366, top=23, bottom=42, width=1366, height=19, xcenter=683, ycenter=32)</msg>
 <arg>Aplicativo</arg>
 <doc>Set anchor to an element specified by the locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:24.398939" elapsed="1.577454"/>
+<status status="PASS" start="2025-06-11T10:42:03.559174" elapsed="1.544886"/>
 </kw>
 <kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:25.979384" level="INFO">Getting element with locator: Fechar</msg>
-<msg time="2025-06-10T17:28:25.989359" level="INFO">Resulted root element: WindowsElement(item=&lt;MenuBarControl ClassName='' AutomationId=MenuBar Rect=(0,23,1366,42)[1366x19] Name='Aplicativo' Handle=0x0(0)&gt;, locator='Aplicativo', name='Aplicativo', automation_id='MenuBar', control_type='MenuBarControl', class_name='', left=0, right=1366, top=23, bottom=42, width=1366, height=19, xcenter=683, ycenter=32)</msg>
-<msg time="2025-06-10T17:28:25.990356" level="INFO">Locator 'Fechar' produced matcher: MatchObject(locators=[('Name', 'Fechar', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:26.985173" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId= Rect=(1347,23,1366,42)[19x19] Name='Fechar' Handle=0x0(0)&gt;, locator='Fechar', name='Fechar', automation_id='', control_type='ButtonControl', class_name='', left=1347, right=1366, top=23, bottom=42, width=19, height=19, xcenter=1356, ycenter=32)</msg>
+<msg time="2025-06-11T10:42:05.106052" level="INFO">Getting element with locator: Fechar</msg>
+<msg time="2025-06-11T10:42:05.115030" level="INFO">Resulted root element: WindowsElement(item=&lt;MenuBarControl ClassName='' AutomationId=MenuBar Rect=(0,23,1366,42)[1366x19] Name='Aplicativo' Handle=0x0(0)&gt;, locator='Aplicativo', name='Aplicativo', automation_id='MenuBar', control_type='MenuBarControl', class_name='', left=0, right=1366, top=23, bottom=42, width=1366, height=19, xcenter=683, ycenter=32)</msg>
+<msg time="2025-06-11T10:42:05.116028" level="INFO">Locator 'Fechar' produced matcher: MatchObject(locators=[('Name', 'Fechar', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-06-11T10:42:06.158327" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId= Rect=(1347,23,1366,42)[19x19] Name='Fechar' Handle=0x0(0)&gt;, locator='Fechar', name='Fechar', automation_id='', control_type='ButtonControl', class_name='', left=1347, right=1366, top=23, bottom=42, width=19, height=19, xcenter=1356, ycenter=32)</msg>
 <arg>Fechar</arg>
 <tag>action</tag>
 <tag>mouse</tag>
 <doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:25.977393" elapsed="1.095742"/>
+<status status="PASS" start="2025-06-11T10:42:05.105056" elapsed="1.151010"/>
 </kw>
 <kw name="Clear Anchor" owner="RPA.Windows">
 <doc>Clears control anchor set by ``Set Anchor``</doc>
-<status status="PASS" start="2025-06-10T17:28:27.076133" elapsed="0.002995"/>
+<status status="PASS" start="2025-06-11T10:42:06.257066" elapsed="0.004988"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-10T17:28:27.288365" level="INFO">Slept 200 milliseconds.</msg>
+<msg time="2025-06-11T10:42:06.473335" level="INFO">Slept 200 milliseconds.</msg>
 <arg>0.2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-10T17:28:27.080122" elapsed="0.210249"/>
+<status status="PASS" start="2025-06-11T10:42:06.263047" elapsed="0.211285"/>
 </kw>
-<status status="PASS" start="2025-06-10T17:28:21.191847" elapsed="6.101516"/>
+<status status="PASS" start="2025-06-11T10:42:03.552195" elapsed="2.922137"/>
 </kw>
 <kw name="Caso aconteça erro" owner="BaseDesktop" type="TEARDOWN">
 <kw name="Set Global Timeout" owner="RPA.Windows">
@@ -648,168 +290,175 @@ to ``Control Window`` keyword.</doc>
 <tag>action</tag>
 <doc>Set global timeout for element search. Applies also
 to ``Control Window`` keyword.</doc>
-<status status="PASS" start="2025-06-10T17:28:27.303344" elapsed="0.007972"/>
+<status status="PASS" start="2025-06-11T10:42:06.485303" elapsed="0.000998"/>
 </kw>
 <kw name="Set Wait Time" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:27.315304" level="INFO">Previous wait time: 0.010000</msg>
-<msg time="2025-06-10T17:28:27.317299" level="INFO">Current wait time: 0.010000</msg>
+<msg time="2025-06-11T10:42:06.489292" level="INFO">Previous wait time: 0.010000</msg>
+<msg time="2025-06-11T10:42:06.490289" level="INFO">Current wait time: 0.010000</msg>
 <arg>0.01</arg>
 <tag>action</tag>
 <doc>Set library wait time for action keywords.</doc>
-<status status="PASS" start="2025-06-10T17:28:27.313310" elapsed="0.004986"/>
+<status status="PASS" start="2025-06-11T10:42:06.488295" elapsed="0.001994"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Get Text" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:27.321290" level="INFO">Getting element with locator: Erro</msg>
-<msg time="2025-06-10T17:28:27.338241" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:27.339240" level="INFO">Locator 'Erro' produced matcher: MatchObject(locators=[('Name', 'Erro', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:35.198580" level="INFO">2025-06-10 17:28:35.196 locators.py[278] _get_control_from_params -&gt; Find Control Timeout(0.01s): {Name: 'Erro'}</msg>
-<msg time="2025-06-10T17:28:35.198580" level="FAIL">ElementNotFound: Element not found with locator 'Erro'</msg>
+<msg time="2025-06-11T10:42:06.495276" level="INFO">Getting element with locator: Erro</msg>
+<msg time="2025-06-11T10:42:06.542152" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg time="2025-06-11T10:42:06.543150" level="INFO">Locator 'Erro' produced matcher: MatchObject(locators=[('Name', 'Erro', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-06-11T10:42:17.521208" level="INFO">2025-06-11 10:42:17.520 locators.py[278] _get_control_from_params -&gt; Find Control Timeout(0.01s): {Name: 'Erro'}</msg>
+<msg time="2025-06-11T10:42:17.522206" level="FAIL">ElementNotFound: Element not found with locator 'Erro'</msg>
 <arg>Erro</arg>
 <tag>action</tag>
 <doc>Get text from Control element defined by the locator.</doc>
-<status status="FAIL" start="2025-06-10T17:28:27.320287" elapsed="7.881300">ElementNotFound: Element not found with locator 'Erro'</status>
+<status status="FAIL" start="2025-06-11T10:42:06.493282" elapsed="11.040891">ElementNotFound: Element not found with locator 'Erro'</status>
 </kw>
-<msg time="2025-06-10T17:28:35.203582" level="INFO">${Erro} = ('FAIL', "ElementNotFound: Element not found with locator 'Erro'")</msg>
+<msg time="2025-06-11T10:42:17.535171" level="INFO">${Erro} = ('FAIL', "ElementNotFound: Element not found with locator 'Erro'")</msg>
 <var>${Erro}</var>
 <arg>RPA.Windows.Get Text</arg>
 <arg>Erro</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-06-10T17:28:27.318296" elapsed="7.885286"/>
+<status status="PASS" start="2025-06-11T10:42:06.491287" elapsed="11.043884"/>
 </kw>
 <if>
 <branch type="IF" condition="${Erro} != ('FAIL', &quot;ElementNotFound: Element not found with locator 'Erro'&quot;)">
 <kw name="Fail" owner="BuiltIn">
 <arg>Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2025-06-10T17:28:35.206575" elapsed="0.003023"/>
+<status status="NOT RUN" start="2025-06-11T10:42:17.536169" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-06-10T17:28:35.204583" elapsed="0.005978"/>
+<status status="NOT RUN" start="2025-06-11T10:42:17.535171" elapsed="0.000998"/>
 </branch>
-<status status="PASS" start="2025-06-10T17:28:35.204583" elapsed="0.006977"/>
+<status status="PASS" start="2025-06-11T10:42:17.535171" elapsed="0.001994"/>
 </if>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-06-11T10:42:17.538163" level="INFO">Getting element with locator: Maximizar</msg>
+<msg time="2025-06-11T10:42:17.552128" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg time="2025-06-11T10:42:17.553124" level="INFO">Locator 'Maximizar' produced matcher: MatchObject(locators=[('Name', 'Maximizar', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-06-11T10:42:22.465942" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId= Rect=(0,0,0,0)[0x0] Name='Maximizar' Handle=0x0(0)&gt;, locator='Maximizar', name='Maximizar', automation_id='', control_type='ButtonControl', class_name='', left=0, right=0, top=0, bottom=0, width=0, height=0, xcenter=0, ycenter=0)</msg>
+<msg time="2025-06-11T10:42:22.467935" level="FAIL">ActionNotPossible: Element WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId= Rect=(0,0,0,0)[0x0] Name='Maximizar' Handle=0x0(0)&gt;, locator='Maximizar', name='Maximizar', automation_id='', control_type='ButtonControl', class_name='', left=0, right=0, top=0, bottom=0, width=0, height=0, xcenter=0, ycenter=0) is not visible for clicking, use a string locator and ensure the root window is in focus</msg>
+<arg>Maximizar</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="FAIL" start="2025-06-11T10:42:17.538163" elapsed="4.931767">ActionNotPossible: Element WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId= Rect=(0,0,0,0)[0x0] Name='Maximizar' Handle=0x0(0)&gt;, locator='Maximizar', name='Maximizar', automation_id='', control_type='ButtonControl', class_name='', left=0, right=0, top=0, bottom=0, width=0, height=0, xcenter=0, ycenter=0) is not visible for clicking, use a string locator and ensure the root window is in focus</status>
+</kw>
 <arg>RPA.Windows.Click</arg>
 <arg>Maximizar</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:35.211560" elapsed="0.000997"/>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-06-11T10:42:17.537165" elapsed="4.932765"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-11T10:42:22.876898" level="INFO">Slept 400 milliseconds.</msg>
+<arg>0.4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-11T10:42:22.470934" elapsed="0.406874"/>
 </kw>
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Run Keyword And Ignore error</arg>
 <arg>RPA.Desktop.Press Keys</arg>
 <arg>Enter</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:35.212557" elapsed="0.000997"/>
+<status status="PASS" start="2025-06-11T10:42:22.879802" elapsed="0.002992"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Run Keyword And Ignore error</arg>
+<arg>RPA.Windows.Click</arg>
+<arg>Confirmar</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2025-06-11T10:42:22.884788" elapsed="0.001993"/>
 </kw>
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Run Keyword And Ignore error</arg>
 <arg>Remove File</arg>
 <arg>${Caminho_Screenshots}${nome_print}.png</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:35.214551" elapsed="0.000000"/>
+<status status="PASS" start="2025-06-11T10:42:22.889772" elapsed="0.001995"/>
 </kw>
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Take Screenshot</arg>
 <arg>${Caminho_Screenshots}Erro ${nome_print}.png</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:35.215549" elapsed="0.000997"/>
+<status status="PASS" start="2025-06-11T10:42:22.892763" elapsed="0.005988"/>
 </kw>
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Run Keyword And Ignore error</arg>
 <arg>RPA.Windows.Click</arg>
 <arg>Cancelar</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:35.216546" elapsed="0.000000"/>
+<status status="PASS" start="2025-06-11T10:42:22.901740" elapsed="0.001000"/>
 </kw>
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Run Keyword And Ignore error</arg>
 <arg>RPA.Windows.Click</arg>
 <arg>Cancel</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:35.217543" elapsed="0.000000"/>
+<status status="PASS" start="2025-06-11T10:42:22.903735" elapsed="0.000996"/>
 </kw>
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Run Keyword And Ignore error</arg>
 <arg>RPA.Desktop.Press Keys</arg>
 <arg>ESC</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:35.217543" elapsed="0.000997"/>
+<status status="PASS" start="2025-06-11T10:42:22.905732" elapsed="0.001996"/>
 </kw>
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Run Keyword And Ignore error</arg>
 <arg>RPA.Windows.Click</arg>
 <arg>OK</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:35.218540" elapsed="0.000997"/>
+<status status="PASS" start="2025-06-11T10:42:22.908722" elapsed="0.002990"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Set Anchor" owner="RPA.Windows">
-<msg time="2025-06-10T17:28:35.220534" level="INFO">Getting element with locator: Aplicativo</msg>
-<msg time="2025-06-10T17:28:35.242477" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-10T17:28:35.243476" level="INFO">Locator 'Aplicativo' produced matcher: MatchObject(locators=[('Name', 'Aplicativo', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-10T17:28:36.240733" level="INFO">Returning element: WindowsElement(item=&lt;MenuBarControl ClassName='' AutomationId=MenuBar Rect=(0,23,1366,42)[1366x19] Name='Aplicativo' Handle=0x0(0)&gt;, locator='Aplicativo', name='Aplicativo', automation_id='MenuBar', control_type='MenuBarControl', class_name='', left=0, right=1366, top=23, bottom=42, width=1366, height=19, xcenter=683, ycenter=32)</msg>
+<msg time="2025-06-11T10:42:22.916699" level="INFO">Getting element with locator: Aplicativo</msg>
+<msg time="2025-06-11T10:42:22.939638" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg time="2025-06-11T10:42:22.940637" level="INFO">Locator 'Aplicativo' produced matcher: MatchObject(locators=[('Name', 'Aplicativo', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-06-11T10:42:24.286440" level="INFO">Returning element: WindowsElement(item=&lt;MenuBarControl ClassName='' AutomationId=MenuBar Rect=(0,23,1366,42)[1366x19] Name='Aplicativo' Handle=0x0(0)&gt;, locator='Aplicativo', name='Aplicativo', automation_id='MenuBar', control_type='MenuBarControl', class_name='', left=0, right=1366, top=23, bottom=42, width=1366, height=19, xcenter=683, ycenter=32)</msg>
 <arg>Aplicativo</arg>
 <doc>Set anchor to an element specified by the locator.</doc>
-<status status="PASS" start="2025-06-10T17:28:35.219537" elapsed="1.022193"/>
+<status status="PASS" start="2025-06-11T10:42:22.914705" elapsed="1.372731"/>
 </kw>
 <arg>Set Anchor</arg>
 <arg>Aplicativo</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-06-10T17:28:35.219537" elapsed="1.023192"/>
+<status status="PASS" start="2025-06-11T10:42:22.912713" elapsed="1.374723"/>
 </kw>
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Run Keyword And Ignore error</arg>
 <arg>RPA.Windows.Click</arg>
 <arg>Fechar</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:36.243725" elapsed="0.000000"/>
+<status status="PASS" start="2025-06-11T10:42:24.288434" elapsed="0.000000"/>
 </kw>
 <kw name="Clear Anchor" owner="RPA.Windows">
 <doc>Clears control anchor set by ``Set Anchor``</doc>
-<status status="PASS" start="2025-06-10T17:28:36.244723" elapsed="0.000997"/>
+<status status="PASS" start="2025-06-11T10:42:24.288434" elapsed="0.001995"/>
 </kw>
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Run Keyword And Ignore error</arg>
 <arg>RPA.Windows.Click</arg>
 <arg>Sim</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:36.246718" elapsed="0.000998"/>
-</kw>
-<kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<arg>Run Keyword And Ignore error</arg>
-<arg>RPA.Desktop.Press Keys</arg>
-<arg>Enter</arg>
-<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2025-06-10T17:28:36.247716" elapsed="0.000996"/>
+<status status="PASS" start="2025-06-11T10:42:24.290429" elapsed="0.000999"/>
 </kw>
 <arg>${Caminho_Screenshots}</arg>
-<arg>Monitor de CIOT</arg>
-<status status="PASS" start="2025-06-10T17:28:27.298347" elapsed="8.951363"/>
+<arg>Consulta de Infrações de Trânsito</arg>
+<status status="PASS" start="2025-06-11T10:42:06.483309" elapsed="17.809121"/>
 </kw>
-<status status="PASS" start="2025-06-10T17:28:16.805104" elapsed="19.447596"/>
-</test>
-<test id="s1-t3" name="Encerrar" line="39">
-<kw name="Encerrar tudo" owner="BaseDesktop">
-<kw name="Close All Applications" owner="RPA.Desktop">
-<doc>Close all opened applications.</doc>
-<status status="PASS" start="2025-06-10T17:28:36.261677" elapsed="0.002991"/>
-</kw>
-<status status="PASS" start="2025-06-10T17:28:36.256690" elapsed="0.007978"/>
-</kw>
-<status status="PASS" start="2025-06-10T17:28:36.254695" elapsed="0.018950"/>
+<status status="PASS" start="2025-06-11T10:41:47.187941" elapsed="37.110467"/>
 </test>
 <doc>Smoke Test: Frotas</doc>
-<status status="PASS" start="2025-06-10T17:27:22.584116" elapsed="73.735407"/>
+<status status="PASS" start="2025-06-11T10:41:27.255355" elapsed="57.048041"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Controle de CIOT" id="s1" pass="3" fail="0" skip="0">Controle de CIOT</stat>
+<stat name="Consultas" id="s1" pass="1" fail="0" skip="0">Consultas</stat>
 </suite>
 </statistics>
 <errors>
