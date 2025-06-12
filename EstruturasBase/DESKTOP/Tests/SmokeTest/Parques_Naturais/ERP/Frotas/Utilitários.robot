@@ -24,7 +24,7 @@ Utilitários com tecla
 *** Test Cases ***
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Utilitários
+    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Favoritos
     Utilitários             Favoritos       
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
