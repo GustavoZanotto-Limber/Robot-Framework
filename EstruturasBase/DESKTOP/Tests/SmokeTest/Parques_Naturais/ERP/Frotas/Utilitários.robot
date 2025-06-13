@@ -157,38 +157,38 @@ Leiaute Carta Frete
     RPA.Windows.Click         Sim
 
 Integrações > Importação de CT-e/MDF-e
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\                    Importação de CT-e_MDF-e            
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/                    Importação de CT-e_MDF-e            
     Utilitários com tecla   T 
     RPA.Desktop.Press Keys  I
     RPA.Windows.Get Text    Importação de XML de Conhecimento de Transporte Eletrônico (1) 
     RPA.Windows.Click       Atualizar
-    BaseDesktop.Screenshot  Importação de XML de Conhecimento de Transporte Eletrônico (1)                              ${Caminho_Screenshots}Integrações\Importação de CT-e_MDF-e
+    BaseDesktop.Screenshot  Importação de XML de Conhecimento de Transporte Eletrônico (1)                              ${Caminho_Screenshots}Integrações/Importação de CT-e_MDF-e
     RPA.Windows.Click       OK
     Fechar Janela
 
 Integrações > Vincular Valores MDF-e
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\                    Vincular Valores MDF-e          
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/                    Vincular Valores MDF-e          
     Utilitários com tecla   T 
     RPA.Desktop.Press Keys  V
     RPA.Windows.Get Text    Vincular Valores Viagens - MDFe (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Vincular Valores Viagens - MDFe (1)                              ${Caminho_Screenshots}Integrações\Vincular Valores MDF-e
+    BaseDesktop.Screenshot  Vincular Valores Viagens - MDFe (1)                              ${Caminho_Screenshots}Integrações/Vincular Valores MDF-e
     Fechar Janela
     RPA.Windows.Click       Sim
 
 Integrações > Sênior > Configurações
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\Sênior\             Configurações
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Sênior/             Configurações
     Utilitários com tecla   T 
     RPA.Windows.Click       Sênior
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text   	Cadastro Configuração Integração Sênior (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot 	Cadastro Configuração Integração Sênior (1)                              ${Caminho_Screenshots}Integrações\Sênior\Configurações
+    BaseDesktop.Screenshot 	Cadastro Configuração Integração Sênior (1)                              ${Caminho_Screenshots}Integrações/Sênior/Configurações
     Fechar Janela
     RPA.Windows.Click       Sim
 
 Integrações > Sênior > RPAs > Envio
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\Sênior\RPAs\             Envio
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Sênior/RPAs/             Envio
     Utilitários com tecla   T 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs
@@ -196,12 +196,12 @@ Integrações > Sênior > RPAs > Envio
     RPA.Windows.Get Text   	Sênior - Envio RPAs
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot 	Sênior - Envio RPAs                          ${Caminho_Screenshots}Integrações\Sênior\RPAs\Envio
+    BaseDesktop.Screenshot 	Sênior - Envio RPAs                          ${Caminho_Screenshots}Integrações/Sênior/RPAs/Envio
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
 Integrações > Sênior > RPAs > Exclusão
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\Sênior\RPAs\             Exclusão
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Sênior/RPAs/             Exclusão
     Utilitários com tecla   T 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs
@@ -209,12 +209,12 @@ Integrações > Sênior > RPAs > Exclusão
     RPA.Windows.Get Text   	Sênior - Exclusão RPAs
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot 	Sênior - Exclusão RPAs                          ${Caminho_Screenshots}Integrações\Sênior\RPAs\Exclusão
+    BaseDesktop.Screenshot 	Sênior - Exclusão RPAs                          ${Caminho_Screenshots}Integrações/Sênior/RPAs/Exclusão
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
 Integrações > Sênior > RPAs > Consulta
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\Sênior\RPAs\             Consulta
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Sênior/RPAs/             Consulta
     Utilitários com tecla   T 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs
@@ -222,23 +222,23 @@ Integrações > Sênior > RPAs > Consulta
     RPA.Windows.Get Text   	Sênior - Consulta de Envio RPAs
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot 	Sênior - Consulta de Envio RPAs                          ${Caminho_Screenshots}Integrações\Sênior\RPAs\Consulta
+    BaseDesktop.Screenshot 	Sênior - Consulta de Envio RPAs                          ${Caminho_Screenshots}Integrações/Sênior/RPAs/Consulta
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
 Integrações > Poli Frotas > Configuração
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\Poli Frotas\             Configuração
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Poli Frotas/             Configuração
     Utilitários com tecla   T 
     RPA.Windows.Click       Poli Frotas
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text   	PoliFrotas - Configurações Integração (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot 	PoliFrotas - Configurações Integração (1)                        ${Caminho_Screenshots}Integrações\Poli Frotas\Configuração
+    BaseDesktop.Screenshot 	PoliFrotas - Configurações Integração (1)                        ${Caminho_Screenshots}Integrações/Poli Frotas/Configuração
     Fechar Janela
     RPA.Windows.Click       Sim
 
 Integrações > Poli Frotas > Abastecidas > Importar
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\Poli Frotas\Abastecidas             Importar
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Poli Frotas/Abastecidas             Importar
     Utilitários com tecla   T 
     RPA.Windows.Click       Poli Frotas
     RPA.Windows.Click       Abastecidas
@@ -247,12 +247,12 @@ Integrações > Poli Frotas > Abastecidas > Importar
     repetidor de teclas     tab      2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot 	PoliFrotas - Importar Abastecidas                        ${Caminho_Screenshots}Integrações\Poli Frotas\Abastecidas\Importar
+    BaseDesktop.Screenshot 	PoliFrotas - Importar Abastecidas                        ${Caminho_Screenshots}Integrações/Poli Frotas/Abastecidas/Importar
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
 Integrações > Poli Frotas > Abastecidas > Consultar
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\Poli Frotas\Abastecidas             Consultar
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Poli Frotas/Abastecidas             Consultar
     Utilitários com tecla   T 
     RPA.Windows.Click       Poli Frotas
     RPA.Windows.Click       Abastecidas
@@ -261,12 +261,12 @@ Integrações > Poli Frotas > Abastecidas > Consultar
     repetidor de teclas     tab      2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot 	Polifrotas - Consulta de Importação de Abastecidas                      ${Caminho_Screenshots}Integrações\Poli Frotas\Abastecidas\Consultar
+    BaseDesktop.Screenshot 	Polifrotas - Consulta de Importação de Abastecidas                      ${Caminho_Screenshots}Integrações/Poli Frotas/Abastecidas/Consultar
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
 Integrações > Poli Frotas > Abastecidas > Relatório
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\Poli Frotas\Abastecidas             Relatório
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Poli Frotas/Abastecidas             Relatório
     Utilitários com tecla   T 
     RPA.Windows.Click       Poli Frotas
     RPA.Windows.Click       Abastecidas
@@ -275,19 +275,19 @@ Integrações > Poli Frotas > Abastecidas > Relatório
     repetidor de teclas     tab      4
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot 	Relatório Integração PoliFrotas (1)                        ${Caminho_Screenshots}Integrações\Poli Frotas\Abastecidas\Relatório
+    BaseDesktop.Screenshot 	Relatório Integração PoliFrotas (1)                        ${Caminho_Screenshots}Integrações/Poli Frotas/Abastecidas/Relatório
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
 Integrações > Exportação de Arquivos > Salvar o Arquivo de XML NFe Própria
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações\Exportação de Arquivos\                        	Salvar o Arquivo de XML NFe Própria      
+    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Exportação de Arquivos/                        	Salvar o Arquivo de XML NFe Própria      
     Utilitários             Exportação de Arquivos  
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text   	Salvar arquivo XML NF-e / NFS-e / CT-e / SAT própria(o) (1)
     repetidor de teclas     tab      3
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot 	Salvar arquivo XML NF-e / NFS-e / CT-e / SAT própria(o) (1)                        ${Caminho_Screenshots}Integrações\Exportação de Arquivos\Salvar o Arquivo de XML NFe Própria
+    BaseDesktop.Screenshot 	Salvar arquivo XML NF-e / NFS-e / CT-e / SAT própria(o) (1)                        ${Caminho_Screenshots}Integrações/Exportação de Arquivos/Salvar o Arquivo de XML NFe Própria
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
