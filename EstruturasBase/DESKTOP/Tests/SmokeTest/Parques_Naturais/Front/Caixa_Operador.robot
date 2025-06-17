@@ -31,6 +31,7 @@ Fechar caixa caso esteja aberto
 Abertura / Fechamento
 
     [Teardown]                          Caso aconteça erro       ${Caminho_Screenshots}                       Abertura_Fechamento
+    [Tags]    SmokeTest        Front      SmokeTestFront
     Caixa Operador
     RPA.Windows.Click                   Abertura / Fechamento
     Fechar caixa caso esteja aberto 
@@ -40,9 +41,9 @@ Abertura / Fechamento
     BaseDesktop.Screenshot                          Controle de Caixa (1)    ${Caminho_Screenshots}Abertura_Fechamento
     RPA.Windows.Click                   OK
 
-
 Suprimento / Sangria
     [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}                            Suprimento_Sangria
+    [Tags]    SmokeTest        Front      SmokeTestFront
     Caixa Operador
     RPA.Windows.Click       Suprimento / Sangria
     RPA.Windows.Get Text    Movimento de Caixa (1)
