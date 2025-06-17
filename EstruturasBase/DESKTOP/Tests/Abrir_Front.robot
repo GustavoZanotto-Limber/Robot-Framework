@@ -18,12 +18,12 @@ ${aba_a_ser_testada}
 ${caixa_aberto}                              
 
 *** Keywords ***
-Abrindo cadastros
-        Sleep                               2s
-        [Arguments]                         ${aba_a_ser_testada}
-        SikuliLibrary.Click                 Cadastros.png
-        Sleep                               1s
-        SikuliLibrary.Click Text            ${aba_a_ser_testada}
+# Abrindo cadastros
+#         Sleep                               2s
+#         [Arguments]                         ${aba_a_ser_testada}
+#         SikuliLibrary.Click                 Cadastros.png
+#         Sleep                               1s
+#         SikuliLibrary.Click Text            ${aba_a_ser_testada}
 
 selecionando dentro de manutenções
         Sleep                               2s
@@ -32,7 +32,7 @@ selecionando dentro de manutenções
         #O arguments funciona como um valor a ser passado para uma função ou seja você pode pedir
         #nome de algum campo para poder reutilizar o codigo.
         Sleep                               1s
-        SikuliLibrary.Click                 Manutenções
+        # SikuliLibrary.Click                 Manutenções
         Clear Anchor
         Sleep                               1s
         RPA.Windows.Click                   ${aba_a_ser_testada}
@@ -40,7 +40,7 @@ selecionando dentro de manutenções
 
 abrindo caixa operador
         Sleep                                     2s
-        SikuliLibrary.Click               Cadastros.png
+        # SikuliLibrary.Click               Cadastros.png
         repetidor de teclas                     right      4
         Sleep                                   2s
         Clear Anchor
@@ -59,7 +59,7 @@ abrindo caixa operador
         
         END
 
-        SikuliLibrary.Click                     Cadastros.png
+        # SikuliLibrary.Click                     Cadastros.png
         repetidor de teclas                     right      4
         Sleep                                   2s
         Clear Anchor

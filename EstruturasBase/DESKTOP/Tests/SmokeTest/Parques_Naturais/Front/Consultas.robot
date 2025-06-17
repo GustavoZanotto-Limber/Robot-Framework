@@ -13,7 +13,7 @@ Manutenções
     Cadastros
     repetidor de teclas    right    2
 
-*** Test Cases    ***
+*** Test Cases ***
 
 Consulta de Vendas
     [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}                       Consulta de Vendas

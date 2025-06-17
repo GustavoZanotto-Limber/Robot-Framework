@@ -9,7 +9,7 @@ Suite Setup      Iniciar sessao  cde_win_ctb
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Contábil/Cadastros/    
 
 *** Keywords ***
-
+    
 
 *** Test Cases ***
 

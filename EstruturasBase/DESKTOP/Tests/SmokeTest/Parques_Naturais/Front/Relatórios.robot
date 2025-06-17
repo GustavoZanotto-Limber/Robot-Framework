@@ -14,7 +14,7 @@ ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTe
 #TODO: Da pra usar essa bomba aqui nos outros pra otimizar :)
 Relatorios
     [Arguments]            ${janela}
-    SikuliLibrary.Click    Cadastros
+    Cadastros
     repetidor de teclas    right        3
     RPA.Windows.Click      ${janela}
 

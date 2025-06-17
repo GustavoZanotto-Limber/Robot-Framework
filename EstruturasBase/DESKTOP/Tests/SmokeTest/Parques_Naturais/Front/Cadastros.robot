@@ -3,16 +3,13 @@ Documentation    Smoke Test: Front
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao Front
 
-
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/Front/Cadastros/    
 
 *** Keywords ***
 
-
 *** Test Cases ***
-
 Guias
     [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}          Guias
     Cadastros
