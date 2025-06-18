@@ -32,3 +32,6 @@ Entrega de Cartões
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Controle de Entrega de Cartões (1)   ${Caminho_Screenshots}Entrega de Cartões
     Fechar janela 
+
+Encerrar
+    Encerrar tudo

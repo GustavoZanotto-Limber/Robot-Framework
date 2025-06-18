@@ -27,9 +27,6 @@ ${achou}
 #     #dessa biblioteca no link: https://rainmanwy.github.io/robotframework-SikuliLibrary/doc/SikuliLibrary.html
 #     Add Image Path    ${EXECDIR}\\EstruturasBase\\DESKTOP\\Elements
 
-Abrir app em sessão interativa
-    Run Process    psexec -i 1 C:\\Limber\\Turismo_PARQUES_NATURAIS\\cde_win_bca_frontR30.exe
-
 Cadastros
     RPA.Desktop.Press Keys    Alt
     RPA.Desktop.Press Keys    Enter
