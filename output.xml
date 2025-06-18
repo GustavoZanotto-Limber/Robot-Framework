@@ -1,448 +1,603 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.9.13 on win32)" generated="2025-06-17T13:46:28.199843" rpa="false" schemaversion="5">
-<suite id="s1" name="Cadastros &amp; Caixa Operador &amp; Consultas &amp; Manutenções &amp; Relatórios &amp; Utilitários">
-<suite id="s1-s1" name="Cadastros" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\Front\Cadastros.robot">
-<kw name="Iniciar sessao Front" owner="BaseDesktop" type="SETUP">
+<robot generator="Robot 7.2.2 (Python 3.9.13 on win32)" generated="2025-06-18T14:37:24.538416" rpa="false" schemaversion="5">
+<suite id="s1" name="Cadastros &amp; Consultas &amp; Movimentação &amp; Relatórios &amp; Utilitários">
+<suite id="s1-s1" name="Cadastros" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\ERP\Contabil\Cadastros.robot">
+<kw name="Iniciar sessao" owner="BaseDesktop" type="SETUP">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-17T13:46:31.476487" level="INFO">Slept 1 second.</msg>
+<msg time="2025-06-18T14:37:28.028195" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-17T13:46:30.467446" elapsed="1.009041"/>
+<status status="PASS" start="2025-06-18T14:37:27.022217" elapsed="1.005978"/>
 </kw>
 <kw name="Open Application" owner="RPA.Desktop">
-<msg time="2025-06-17T13:46:31.478466" level="INFO">Starting application: C:\Limber\Turismo_PARQUES_NATURAIS\cde_win_bca_frontR30.exe</msg>
-<arg>C:\\Limber\\Turismo_PARQUES_NATURAIS\\cde_win_bca_frontR30.exe</arg>
+<msg time="2025-06-18T14:37:28.030251" level="INFO">Starting application: C:\Limber\ERP Executaveis\cde_win_ctb.exe</msg>
+<arg>C:\\Limber\\ERP Executaveis\\${nome_exe}.exe</arg>
 <doc>Start a given application by name (if in PATH),
 or by path to executable.</doc>
-<status status="PASS" start="2025-06-17T13:46:31.477464" elapsed="0.040057"/>
+<status status="PASS" start="2025-06-18T14:37:28.029218" elapsed="1.412941"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-17T13:46:35.521966" level="INFO">Slept 4 seconds.</msg>
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-17T13:46:31.517521" elapsed="4.004445"/>
+<status status="FAIL" start="2025-06-18T14:37:29.442159" elapsed="0.108209">Execution terminated by signal</status>
 </kw>
 <kw name="Click" owner="RPA.Windows">
-<msg time="2025-06-17T13:46:35.522988" level="INFO">Getting element with locator: Abrir</msg>
-<msg time="2025-06-17T13:46:35.544059" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1366,768)[1366x768] Name='Área de Trabalho 1' Handle=0x10010(65552)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
-<msg time="2025-06-17T13:46:35.545090" level="INFO">Locator 'Abrir' produced matcher: MatchObject(locators=[('Name', 'Abrir', 0)], _classes=set(), max_level=0)</msg>
-<msg time="2025-06-17T13:46:38.002230" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId=DropDown Rect=(1029,204,1044,224)[15x20] Name='Abrir' Handle=0x0(0)&gt;, locator='Abrir', name='Abrir', automation_id='DropDown', control_type='ButtonControl', class_name='', left=1029, right=1044, top=204, bottom=224, width=15, height=20, xcenter=1036, ycenter=214)</msg>
 <arg>Abrir</arg>
 <tag>action</tag>
 <tag>mouse</tag>
 <doc>Mouse click on element matching given locator.</doc>
-<status status="PASS" start="2025-06-17T13:46:35.521966" elapsed="3.063540"/>
+<status status="NOT RUN" start="2025-06-18T14:37:29.550368" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-17T13:46:40.590148" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-17T13:46:38.587467" elapsed="2.004675"/>
+<status status="NOT RUN" start="2025-06-18T14:37:29.552366" elapsed="0.000000"/>
 </kw>
 <kw name="Press Keys" owner="RPA.Desktop">
-<msg time="2025-06-17T13:46:40.594183" level="INFO">Pressing keys: Key.enter</msg>
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="PASS" start="2025-06-17T13:46:40.593145" elapsed="0.003487"/>
+<status status="NOT RUN" start="2025-06-18T14:37:29.553360" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<arg>10s</arg>
+<arg>5s</arg>
 <arg>Carregando a base...</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="FAIL" start="2025-06-17T13:46:40.597632" elapsed="7.718936">Execution terminated by signal</status>
+<status status="NOT RUN" start="2025-06-18T14:37:29.571311" elapsed="0.000000"/>
 </kw>
 <kw name="Type Text" owner="RPA.Desktop">
 <arg>1</arg>
 <doc>Type text one letter at a time.</doc>
-<status status="NOT RUN" start="2025-06-17T13:46:48.317565" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-06-18T14:37:29.573306" elapsed="0.000000"/>
 </kw>
 <kw name="Press Keys" owner="RPA.Desktop">
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="NOT RUN" start="2025-06-17T13:46:48.317565" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-06-18T14:37:29.574304" elapsed="0.000000"/>
 </kw>
 <kw name="Press Keys" owner="RPA.Desktop">
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<status status="NOT RUN" start="2025-06-17T13:46:48.318562" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-06-18T14:37:29.575301" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-06-17T13:46:48.319559" elapsed="0.000000"/>
+<arg>cde_win_ctb</arg>
+<status status="FAIL" start="2025-06-18T14:37:27.011950" elapsed="2.564348">Execution terminated by signal</status>
 </kw>
-<status status="FAIL" start="2025-06-17T13:46:30.465452" elapsed="17.854107">Execution terminated by signal</status>
-</kw>
-<test id="s1-s1-t1" name="Guias" line="13">
+<test id="s1-s1-t1" name="Plano de Contas" line="16">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.320557" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.576298" elapsed="0.001996">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t2" name="Isentos" line="23">
+<test id="s1-s1-t2" name="Plano de Contas X Plano Referencial" line="26">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.322552" elapsed="0.002995">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.579290" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t3" name="Agências -&gt; Agências" line="33">
+<test id="s1-s1-t3" name="Balancete X Plano Referencial" line="35">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.328538" elapsed="0.000995">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.582284" elapsed="0.003989">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t4" name="Agências -&gt; Grupo de Agências" line="46">
+<test id="s1-s1-t4" name="Notas Explicativas" line="45">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.330531" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.588267" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t5" name="Locais Estacionamento" line="57">
+<test id="s1-s1-t5" name="Históricos Contábeis" line="55">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.333522" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.591259" elapsed="0.002992">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t6" name="Grupos de Bilhetes Totem" line="67">
+<test id="s1-s1-t6" name="Centro de Custos" line="65">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.335517" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.595250" elapsed="0.005982">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t7" name="Grupos de Isenção" line="77">
+<test id="s1-s1-t7" name="Indexadores" line="75">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.337512" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.603227" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t8" name="Tipos de Autorização" line="87">
+<test id="s1-s1-t8" name="Contabilistas" line="85">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.339506" elapsed="0.003990">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.605748" elapsed="0.001980">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t9" name="Tipos de Documentos" line="97">
+<test id="s1-s1-t9" name="Montagem do Demonstrativo DRE" line="95">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.344493" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.608728" elapsed="0.000995">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t10" name="Pessoas Autorizadas" line="107">
+<test id="s1-s1-t10" name="Montagem do Demonstrativo DFC" line="105">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.347486" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.611723" elapsed="0.005979">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t11" name="Acesso por aproximação" line="117">
+<test id="s1-s1-t11" name="Configuração Int. Contabil" line="115">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.349479" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.618700" elapsed="0.002991">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t12" name="Catracas / Terminais de Acesso" line="127">
+<test id="s1-s1-t12" name="Composição de Custos" line="125">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.351474" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.623686" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t13" name="PDV -&gt; Locais de Venda" line="137">
+<test id="s1-s1-t13" name="Despesas antecipadas" line="135">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.353468" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.626677" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t14" name="PDV -&gt; PDV" line="148">
+<test id="s1-s1-t14" name="Países" line="145">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.354465" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.631667" elapsed="0.002990">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t15" name="Câmeras de Contagem" line="159">
+<test id="s1-s1-t15" name="Estados" line="155">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.356464" elapsed="0.002990">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.635654" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t16" name="Parâmetros -&gt; Empresas" line="169">
+<test id="s1-s1-t16" name="Municípios" line="165">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.361448" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.638646" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t17" name="Parâmetros -&gt; Estabelecimentos" line="180">
+<test id="s1-s1-t17" name="Localidades" line="175">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.364441" elapsed="0.001993">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.641638" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t18" name="Parâmetros -&gt; Usuários" line="192">
+<test id="s1-s1-t18" name="Regiões" line="185">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.367432" elapsed="0.003990">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.645628" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t19" name="Parâmetros -&gt; Grupos de Usuários" line="203">
+<test id="s1-s1-t19" name="Parâmetros &gt; Empresas" line="195">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.372419" elapsed="0.004986">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.650615" elapsed="0.001993">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t20" name="Parâmetros -&gt; Configurações de Estação" line="214">
+<test id="s1-s1-t20" name="Parâmetros &gt; Estabelecimentos" line="206">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.380398" elapsed="0.001001">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.654604" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t21" name="Parâmetros -&gt; Configurações de Bilheteria" line="224">
+<test id="s1-s1-t21" name="Parâmetros &gt; Usuários" line="217">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.382392" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.657596" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s1-t22" name="Encerrar" line="237">
+<test id="s1-s1-t22" name="Parâmetros &gt; Grupos Usuários" line="228">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.384386" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.659590" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<doc>Smoke Test: Front</doc>
-<status status="FAIL" start="2025-06-17T13:46:28.259683" elapsed="20.127695">Suite setup failed:
+<test id="s1-s1-t23" name="Parâmetros &gt; Configurações de Estação" line="239">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.662581" elapsed="0.005987">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-t24" name="Encerrar" line="249">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.670560" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Smoke Test: Contábil</doc>
+<status status="FAIL" start="2025-06-18T14:37:24.619198" elapsed="5.055351">Suite setup failed:
 Execution terminated by signal</status>
 </suite>
-<suite id="s1-s2" name="Caixa Operador" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\Front\Caixa_Operador.robot">
-<test id="s1-s2-t1" name="Abertura / Fechamento" line="31">
-<tag>Front</tag>
+<suite id="s1-s2" name="Consultas" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\ERP\Contabil\Consultas.robot">
+<test id="s1-s2-t1" name="Lançamentos Diários" line="19">
 <tag>robot:exit</tag>
-<tag>SmokeTest</tag>
-<tag>SmokeTestFront</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.396655" elapsed="0.001023">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.679536" elapsed="0.001997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s2-t2" name="Suprimento / Sangria" line="44">
-<tag>Front</tag>
+<test id="s1-s2-t2" name="Diferenças do Diário" line="29">
 <tag>robot:exit</tag>
-<tag>SmokeTest</tag>
-<tag>SmokeTestFront</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.398672" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.683526" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s2-t3" name="Encerrar" line="56">
+<test id="s1-s2-t3" name="Planos de Contas" line="38">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.399669" elapsed="0.001009">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.686517" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
 </test>
-<doc>Smoke Test: Front</doc>
-<status status="FAIL" start="2025-06-17T13:46:48.394358" elapsed="0.006320"/>
+<test id="s1-s2-t4" name="Razão de Contas" line="47">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.688513" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t5" name="Balancete" line="57">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.690507" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t6" name="Depreciação de Bens do Ativo Imobilizado" line="67">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.692501" elapsed="0.001997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t7" name="Centro de Custos" line="76">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.695493" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t8" name="Rateio de Centro de Custos" line="86">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.697488" elapsed="0.001999">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t9" name="Consumo de Adiantamentos" line="96">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.701479" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t10" name="Consultas Personalizadas" line="105">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.704470" elapsed="0.001523">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t11" name="Sped Contábil &gt; Gerar Sped Contábil" line="115">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.706980" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t12" name="Sped Contábil &gt; Conglomerados Econômicos" line="125">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.709972" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t13" name="Sped Contábil &gt; Conglomerados Eliminações" line="136">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.712966" elapsed="0.003988">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t14" name="Sped Contábil &gt; Cadastro de SCP" line="147">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.717954" elapsed="0.001991">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t15" name="Sped Contábil &gt; Transferência de Plano de Contas" line="160">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.720943" elapsed="0.001993">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t16" name="Consulta CMV por período" line="173">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.723934" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t17" name="Consulta de Alterações de Lançamentos" line="183">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.725930" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s2-t18" name="Encerrar" line="192">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.727924" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Smoke Test: Contábil</doc>
+<status status="FAIL" start="2025-06-18T14:37:29.677541" elapsed="0.055370"/>
 </suite>
-<suite id="s1-s3" name="Consultas" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\Front\Consultas.robot">
-<test id="s1-s3-t1" name="Consulta de Vendas" line="18">
+<suite id="s1-s3" name="Movimentação" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\ERP\Contabil\Movimentação.robot">
+<test id="s1-s3-t1" name="Lançamentos Contábeis" line="19">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.402681" elapsed="0.000991">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.740889" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s3-t2" name="Consulta de Reservas" line="27">
+<test id="s1-s3-t2" name="Lançamentos Contábeis por Lote" line="29">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.403672" elapsed="0.001000">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.743881" elapsed="0.004987">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s3-t3" name="Consulta de Voucher" line="36">
+<test id="s1-s3-t3" name="Manutenção de Lançamentos contábeis" line="38">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.405668" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.750864" elapsed="0.001993">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s3-t4" name="Consulta de Lançamento de Veículos" line="45">
+<test id="s1-s3-t4" name="Liberação de Lançamentos" line="48">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.406665" elapsed="0.004234">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.753854" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s3-t5" name="Consulta de Bilhetes" line="54">
+<test id="s1-s3-t5" name="Estornar Liberação" line="57">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.411651" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.755848" elapsed="0.001996">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s3-t6" name="Leitor de Bilhetes" line="65">
+<test id="s1-s3-t6" name="Zeramento de Contas &gt; Zeramento de Contas" line="67">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.412648" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.758841" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s3-t7" name="Consulta Passaporte" line="75">
+<test id="s1-s3-t7" name="Zeramento de Contas &gt; Estornar Zeramento" line="79">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.413645" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.760835" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s3-t8" name="Consultas Personalizadas" line="87">
+<test id="s1-s3-t8" name="Zeramento de Contas &gt; Parâmetros Zeramento" line="91">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.414642" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.761832" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s3-t9" name="Encerrar" line="97">
+<test id="s1-s3-t9" name="Conciliação de Cheques Emitidos" line="105">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.415640" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.765826" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
 </test>
-<doc>Smoke Test: Front</doc>
-<status status="FAIL" start="2025-06-17T13:46:48.401671" elapsed="0.014966"/>
+<test id="s1-s3-t10" name="Estorna Conciliação" line="116">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.768817" elapsed="0.001992">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t11" name="Apropriação de custos" line="127">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.771807" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t12" name="Apropriação de consumo de adiantamentos" line="137">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.773802" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t13" name="Apropriação de despesas antecipadas" line="146">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.776793" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t14" name="Estornar Apropriação por Rateio de Contas" line="156">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.782777" elapsed="0.004989">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t15" name="Rateio Cooperativismo &gt; Método 1" line="167">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.788761" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t16" name="Rateio Cooperativismo &gt; Método 2" line="179">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.791753" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t17" name="Rateio Cooperativismo &gt; Método 3 - Setor" line="192">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.794745" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t18" name="Bloqueia Lançamentos" line="202">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.796739" elapsed="0.002993">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t19" name="Controle Patrimonial &gt; Cálculo/Geração da Depreciação" line="214">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.800731" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t20" name="Controle Patrimonial &gt; Consulta de Depreciação" line="228">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.804718" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t21" name="Controle Patrimonial &gt; Estornar Depreciação" line="241">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.807710" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t22" name="Controle Patrimonial &gt; Consulta da Ficha CIAP" line="254">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.809705" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t23" name="Controle Patrimonial &gt; Emissão de Crédito do CIAP" line="266">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.810701" elapsed="0.001996">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t24" name="Controle Patrimonial &gt; Estorno de Crédito do CIAP" line="277">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.812697" elapsed="0.002993">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t25" name="Controle Patrimonial &gt; Ajuste de Fator do CIAP" line="288">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.817685" elapsed="0.000995">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t26" name="Controle Patrimonial &gt; Consulta Fator CIAP" line="300">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.819677" elapsed="0.001000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t27" name="CMV &gt; Cálculo/Geração do CMV" line="313">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.821673" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t28" name="CMV &gt; Preço de Mercado" line="325">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.823668" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t29" name="CMV &gt; Cálculo/Geração do CMV por período" line="335">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.825662" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t30" name="CMV &gt; Estorna CMV por período" line="346">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.826659" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t31" name="Processos Personalizados" line="358">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.828654" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t32" name="Ajuste a Valor Presente &gt; Configuração" line="369">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.832643" elapsed="0.001997">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t33" name="Ajuste a Valor Presente &gt; Execução do Ajuste" line="380">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.835729" elapsed="0.001951">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t34" name="Ajuste a Valor Presente &gt; Consulta do Ajuste" line="393">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.837680" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s3-t35" name="Encerrar" line="406">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.839677" elapsed="0.000995">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Smoke Test: Contábil</doc>
+<status status="FAIL" start="2025-06-18T14:37:29.736901" elapsed="0.104768"/>
 </suite>
-<suite id="s1-s4" name="Manutenções" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\Front\Manutenções.robot">
-<test id="s1-s4-t1" name="Emissão de Bilhetes" line="18">
+<suite id="s1-s4" name="Relatórios" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\ERP\Contabil\Relatórios.robot">
+<test id="s1-s4-t1" name="Livro Diário" line="18">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.419631" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.844660" elapsed="0.000999">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t2" name="Reimpressão de Bilhetes" line="30">
+<test id="s1-s4-t2" name="Razão" line="29">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.420628" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.846657" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t3" name="Cancelamentos de Bilhetes" line="41">
+<test id="s1-s4-t3" name="Balancete" line="41">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.422623" elapsed="0.005984">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.848651" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t4" name="Remarcações de Visitas" line="54">
+<test id="s1-s4-t4" name="Balancete por Plano de Contas Referencial" line="52">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.429605" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.852640" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t5" name="Reservas -&gt; Lançamentos" line="64">
+<test id="s1-s4-t5" name="Balanço Patrimonial/Demonstrativo DRE" line="61">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.431598" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.854635" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t6" name="Reservas -&gt; Cancelamento" line="75">
+<test id="s1-s4-t6" name="Demonstrativo de Fluxo de Caixa - DFC" line="72">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.432595" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.857627" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t7" name="Reservas -&gt; Alteração" line="87">
+<test id="s1-s4-t7" name="Balanço Patrimonial Comparado" line="83">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.434590" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.861616" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t8" name="Reservas -&gt; Remarcação de Visitas" line="99">
+<test id="s1-s4-t8" name="DMPL/DMPS" line="94">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.435587" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.866604" elapsed="0.002991">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t9" name="Lançamento de Isenções" line="110">
+<test id="s1-s4-t9" name="Extrato de Conta" line="105">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.437582" elapsed="0.000999">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.871589" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t10" name="Lançamento de Veículos" line="121">
+<test id="s1-s4-t10" name="Lançamentos" line="114">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.439578" elapsed="0.003992">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.875578" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t11" name="Lançamento de Vouchers Pendentes" line="133">
+<test id="s1-s4-t11" name="Termos" line="123">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.444565" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.878570" elapsed="0.001996">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t12" name="Comissões de Guias -&gt; Pagamento" line="143">
+<test id="s1-s4-t12" name="Cadastros &gt; Plano de Contas" line="135">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.446558" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.882561" elapsed="0.002992">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t13" name="Comissões de Guias -&gt; Estorno" line="154">
+<test id="s1-s4-t13" name="Cadastros &gt; Históricos" line="145">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.447555" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.886549" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t14" name="Comissões de Guias -&gt; Vincular Guia em Venda" line="164">
+<test id="s1-s4-t14" name="Cadastros &gt; Centros de Custos" line="155">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.449552" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.889541" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t15" name="Comissões de Guias -&gt; Relatório" line="174">
+<test id="s1-s4-t15" name="Cadastros &gt; Estabelecimento" line="165">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.451545" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.891535" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t16" name="Devoluções de Vendas" line="186">
+<test id="s1-s4-t16" name="Cadastros &gt; Países" line="175">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.452542" elapsed="0.000999">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.893529" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t17" name="Configurações Totem" line="195">
+<test id="s1-s4-t17" name="Cadastros &gt; Estados" line="185">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.454537" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.895524" elapsed="0.002994">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s4-t18" name="Encerrar" line="204">
+<test id="s1-s4-t18" name="Cadastros &gt; Municípios" line="195">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.455534" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.901509" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
 </test>
-<doc>Smoke Test: Front</doc>
-<status status="FAIL" start="2025-06-17T13:46:48.418633" elapsed="0.041180"/>
+<test id="s1-s4-t19" name="Cadastros &gt; Regiões" line="205">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.905500" elapsed="0.001993">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t20" name="Cadastros &gt; Localidades" line="215">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.909490" elapsed="0.002989">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t21" name="Cadastros &gt; Terceiros" line="225">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.915471" elapsed="0.003990">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t22" name="Informativo de Rendimentos" line="238">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.921457" elapsed="0.002991">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t23" name="Customizados &gt; Relatório de Imobilização" line="247">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.925445" elapsed="0.003989">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t24" name="Receitas / Despesas" line="259">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.933424" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t25" name="Despesas Antecipadas" line="270">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.937414" elapsed="0.001993">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t26" name="Centro de Custos (Borderô)" line="282">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.940405" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t27" name="Faturamento" line="294">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.942401" elapsed="0.001000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s4-t28" name="Encerrar" line="305">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.943401" elapsed="0.001976">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Smoke Test: Contábil</doc>
+<status status="FAIL" start="2025-06-18T14:37:29.843664" elapsed="0.104649"/>
 </suite>
-<suite id="s1-s5" name="Relatórios" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\Front\Relatórios.robot">
-<test id="s1-s5-t1" name="Resumo Geral" line="22">
+<suite id="s1-s5" name="Utilitários" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\ERP\Contabil\Utilitários.robot">
+<test id="s1-s5-t1" name="Favoritos" line="18">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.462516" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.954295" elapsed="0.000999">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t2" name="Fechamento de Caixa" line="33">
+<test id="s1-s5-t2" name="Papel de Parede" line="28">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.463513" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.956292" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t3" name="Formas de Pagamento" line="43">
+<test id="s1-s5-t3" name="Configurar Menu Pincipal" line="37">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.464510" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.957289" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t4" name="Formas de Pagamento Agrupada" line="54">
+<test id="s1-s5-t4" name="Configurar Barra de Atalhos" line="49">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.465507" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.959282" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t5" name="Bilhetes Isentos" line="65">
+<test id="s1-s5-t5" name="Estilo do Menu Principal" line="59">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.466505" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.960279" elapsed="0.001996">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t6" name="Lançamento de Isenções" line="76">
+<test id="s1-s5-t6" name="Controle de Acessos" line="68">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.467502" elapsed="0.001001">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.962275" elapsed="0.005984">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t7" name="Lançamentos de Reservas" line="87">
+<test id="s1-s5-t7" name="Configuração de Liberação" line="78">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.469497" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.970253" elapsed="0.000999">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t8" name="Bilhetes Reimpressos" line="98">
+<test id="s1-s5-t8" name="Relatórios Personalizados &gt; Cadastro de Categorias" line="91">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.470494" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.972249" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t9" name="Bilhetes Cancelados" line="109">
+<test id="s1-s5-t9" name="Relatórios Personalizados &gt; Cadastro de Relatórios" line="104">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.472489" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.974243" elapsed="0.000999">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t10" name="Desconto de Venda" line="120">
+<test id="s1-s5-t10" name="Criar Usuario de Log" line="117">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.476478" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.976237" elapsed="0.001996">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t11" name="Bilhetes por Tipo de Autorização" line="131">
+<test id="s1-s5-t11" name="Verifica transações abertas" line="125">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.478475" elapsed="0.000995">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.982225" elapsed="0.001991">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t12" name="Guias" line="143">
+<test id="s1-s5-t12" name="Integrações &gt; SCPH" line="134">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.479470" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.985213" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
 </test>
-<test id="s1-s5-t13" name="Encerrar" line="154">
+<test id="s1-s5-t13" name="Integrações &gt; Sênior &gt; Importação" line="144">
 <tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.480468" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
+<status status="FAIL" start="2025-06-18T14:37:29.987208" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
 </test>
-<doc>Smoke Test: Front</doc>
-<status status="FAIL" start="2025-06-17T13:46:48.461520" elapsed="0.019945"/>
+<test id="s1-s5-t14" name="Integrações &gt; Sênior &gt; Configuração" line="156">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.990201" elapsed="0.001996">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s5-t15" name="Integrações &gt; DPPH &gt; Lançamentos Funcionários" line="170">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.992197" elapsed="0.001993">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s5-t16" name="Integrações &gt; Folhas de Pagamento" line="183">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:29.995187" elapsed="0.001995">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s5-t17" name="Integrações &gt; Ocepar" line="194">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:30.000174" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s5-t18" name="Agenda Telefônica" line="205">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:30.003167" elapsed="0.001994">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s5-t19" name="Upload de Arquivos" line="217">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:30.007154" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s5-t20" name="Encerrar" line="227">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-06-18T14:37:30.010153" elapsed="0.001988">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>Smoke Test: Contábil</doc>
+<status status="FAIL" start="2025-06-18T14:37:29.952301" elapsed="0.064829"/>
 </suite>
-<suite id="s1-s6" name="Utilitários" source="C:\Users\Gustavo Zanotto\AppData\Local\Programs\Python\Python39\Scripts\RobotFramework\EstruturasBase\DESKTOP\Tests\SmokeTest\Parques_Naturais\Front\Utilitários.robot">
-<test id="s1-s6-t1" name="Favoritos" line="18">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.484457" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t2" name="Papel de Parede" line="27">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.486451" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t3" name="Estilo do Menu Principal" line="36">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.488447" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t4" name="Controle de Acessos" line="45">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.489444" elapsed="0.002994">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t5" name="Relatórios Personalizados &gt; Cadastro de Categorias" line="55">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.493433" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t6" name="Relatórios Personalizados &gt; Cadastro de Relatórios" line="67">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.495427" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t7" name="Layout de Bilhetes" line="79">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.497422" elapsed="0.000999">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t8" name="Configuração de Impressoras" line="91">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.498421" elapsed="0.001993">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t9" name="Observações Padrão" line="102">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.500414" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t10" name="Criar Usuario de Log" line="113">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.502408" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t11" name="Verifica transações abertas" line="121">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.503405" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t12" name="Abrir Gaveta" line="130">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.504402" elapsed="0.000997">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t13" name="Metas Orçamento/Previsão" line="138">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.505399" elapsed="0.000998">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t14" name="Metas Realizadas Adicionais" line="150">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.507395" elapsed="0.002993">Test execution stopped due to a fatal error.</status>
-</test>
-<test id="s1-s6-t15" name="Encerrar" line="160">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2025-06-17T13:46:48.511386" elapsed="0.000996">Test execution stopped due to a fatal error.</status>
-</test>
-<doc>Smoke Test: Front</doc>
-<status status="FAIL" start="2025-06-17T13:46:48.483460" elapsed="0.029920"/>
-</suite>
-<status status="FAIL" start="2025-06-17T13:46:28.208819" elapsed="20.308551"/>
+<status status="FAIL" start="2025-06-18T14:37:24.549383" elapsed="5.473729"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="80" skip="0">All Tests</stat>
+<stat pass="0" fail="125" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat info="combined" combined="NOT robot:exit" pass="0" fail="0" skip="0">NOT robot:exit</stat>
-<stat pass="0" fail="2" skip="0">Front</stat>
-<stat pass="0" fail="2" skip="0">SmokeTest</stat>
-<stat pass="0" fail="2" skip="0">SmokeTestFront</stat>
 </tag>
 <suite>
-<stat name="Cadastros &amp; Caixa Operador &amp; Consultas &amp; Manutenções &amp; Relatórios &amp; Utilitários" id="s1" pass="0" fail="80" skip="0">Cadastros &amp; Caixa Operador &amp; Consultas &amp; Manutenções &amp; Relatórios &amp; Utilitários</stat>
-<stat name="Cadastros" id="s1-s1" pass="0" fail="22" skip="0">Cadastros &amp; Caixa Operador &amp; Consultas &amp; Manutenções &amp; Relatórios &amp; Utilitários.Cadastros</stat>
-<stat name="Caixa Operador" id="s1-s2" pass="0" fail="3" skip="0">Cadastros &amp; Caixa Operador &amp; Consultas &amp; Manutenções &amp; Relatórios &amp; Utilitários.Caixa Operador</stat>
-<stat name="Consultas" id="s1-s3" pass="0" fail="9" skip="0">Cadastros &amp; Caixa Operador &amp; Consultas &amp; Manutenções &amp; Relatórios &amp; Utilitários.Consultas</stat>
-<stat name="Manutenções" id="s1-s4" pass="0" fail="18" skip="0">Cadastros &amp; Caixa Operador &amp; Consultas &amp; Manutenções &amp; Relatórios &amp; Utilitários.Manutenções</stat>
-<stat name="Relatórios" id="s1-s5" pass="0" fail="13" skip="0">Cadastros &amp; Caixa Operador &amp; Consultas &amp; Manutenções &amp; Relatórios &amp; Utilitários.Relatórios</stat>
-<stat name="Utilitários" id="s1-s6" pass="0" fail="15" skip="0">Cadastros &amp; Caixa Operador &amp; Consultas &amp; Manutenções &amp; Relatórios &amp; Utilitários.Utilitários</stat>
+<stat name="Cadastros &amp; Consultas &amp; Movimentação &amp; Relatórios &amp; Utilitários" id="s1" pass="0" fail="125" skip="0">Cadastros &amp; Consultas &amp; Movimentação &amp; Relatórios &amp; Utilitários</stat>
+<stat name="Cadastros" id="s1-s1" pass="0" fail="24" skip="0">Cadastros &amp; Consultas &amp; Movimentação &amp; Relatórios &amp; Utilitários.Cadastros</stat>
+<stat name="Consultas" id="s1-s2" pass="0" fail="18" skip="0">Cadastros &amp; Consultas &amp; Movimentação &amp; Relatórios &amp; Utilitários.Consultas</stat>
+<stat name="Movimentação" id="s1-s3" pass="0" fail="35" skip="0">Cadastros &amp; Consultas &amp; Movimentação &amp; Relatórios &amp; Utilitários.Movimentação</stat>
+<stat name="Relatórios" id="s1-s4" pass="0" fail="28" skip="0">Cadastros &amp; Consultas &amp; Movimentação &amp; Relatórios &amp; Utilitários.Relatórios</stat>
+<stat name="Utilitários" id="s1-s5" pass="0" fail="20" skip="0">Cadastros &amp; Consultas &amp; Movimentação &amp; Relatórios &amp; Utilitários.Utilitários</stat>
 </suite>
 </statistics>
 <errors>

@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Smoke Test: Front
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
+Resource         ../../../../Resources/Keywords.robot
 Suite Setup      Iniciar sessao Front
 
 *** Variables ***
@@ -13,25 +14,13 @@ Caixa Operador
     Cadastros
     repetidor de teclas    right    4
 
-Fechar caixa caso esteja aberto
-    ${caixa_aberto}=          Run Keyword And Ignore error              RPA.Windows.Get Text    Fechar Caixa
-    IF                        ${caixa_aberto} != (\'FAIL\', "ElementNotFound: Element not found with locator \'Fechar Caixa\'")
-    RPA.Windows.Click         Fechar Caixa
-    RPA.Windows.Click         Sim
-    Sleep                     2s
-    RPA.Desktop.Press Keys    Esc
-    Sleep                     2s
-    RPA.Desktop.Press Keys    Enter                                                                                                
-    Caixa Operador            
-    RPA.Windows.Click         Abertura / Fechamento                                                                                
-    END
+
 
 *** Test Cases    ***
 
 Abertura / Fechamento
 
     [Teardown]                          Caso aconteça erro       ${Caminho_Screenshots}                       Abertura_Fechamento
-    [Tags]    SmokeTest        Front      SmokeTestFront
     Caixa Operador
     RPA.Windows.Click                   Abertura / Fechamento
     Fechar caixa caso esteja aberto 
@@ -43,7 +32,6 @@ Abertura / Fechamento
 
 Suprimento / Sangria
     [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}                            Suprimento_Sangria
-    [Tags]    SmokeTest        Front      SmokeTestFront
     Caixa Operador
     RPA.Windows.Click       Suprimento / Sangria
     RPA.Windows.Get Text    Movimento de Caixa (1)
