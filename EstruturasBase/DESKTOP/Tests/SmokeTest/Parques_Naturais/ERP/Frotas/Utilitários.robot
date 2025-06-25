@@ -33,7 +33,7 @@ Favoritos
     RPA.Windows.Click       Fechar
 
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Papel de Parede
     Utilitários             Papel de Parede     
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
@@ -48,8 +48,7 @@ Configurar Menu Pincipal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurar Barra de Atalhos
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
@@ -57,8 +56,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estilo do Menu Principal
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
@@ -85,8 +83,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Relatórios Personalizados > Cadastro de Categorias
@@ -98,8 +95,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Relatórios Personalizados > Cadastro de Relatórios
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
@@ -110,8 +106,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Criar Usuario de Log
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
@@ -135,8 +130,7 @@ Configurador de Impressões > Ordem se Interna
     RPA.Windows.Get Text    Configurador de Impressões - Ordem de Serviço Interna (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Ordem de Serviço Interna (1)    ${Caminho_Screenshots}Configurador de Impressões/Ordem se Serviço Interna
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Processos Personalizados
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Processos Personalizados
@@ -173,8 +167,7 @@ Integrações > Vincular Valores MDF-e
     RPA.Windows.Get Text    Vincular Valores Viagens - MDFe (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Vincular Valores Viagens - MDFe (1)                              ${Caminho_Screenshots}Integrações/Vincular Valores MDF-e
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Integrações > Sênior > Configurações
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Sênior/            Configurações
@@ -184,8 +177,7 @@ Integrações > Sênior > Configurações
     RPA.Windows.Get Text   	Cadastro Configuração Integração Sênior (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot 	Cadastro Configuração Integração Sênior (1)                              ${Caminho_Screenshots}Integrações/Sênior/Configurações
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Integrações > Sênior > RPAs > Envio
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Sênior/RPAs/             Envio
@@ -234,8 +226,7 @@ Integrações > Poli Frotas > Configuração
     RPA.Windows.Get Text   	PoliFrotas - Configurações Integração (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot 	PoliFrotas - Configurações Integração (1)                        ${Caminho_Screenshots}Integrações/Poli Frotas/Configuração
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Integrações > Poli Frotas > Abastecidas > Importar
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Integrações/Poli Frotas/Abastecidas             Importar
@@ -291,5 +282,5 @@ Integrações > Exportação de Arquivos > Salvar o Arquivo de XML NFe Própria
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
-Encerrar
-    Encerrar tudo
+
+    

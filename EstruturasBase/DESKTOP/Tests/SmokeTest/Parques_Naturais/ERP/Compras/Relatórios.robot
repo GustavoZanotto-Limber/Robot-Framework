@@ -210,5 +210,5 @@ Customizados > Projeção de Compras
     RPA.Windows.Click       Confirmar
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

@@ -2,7 +2,7 @@
 Documentation    Smoke Test: Corretagem
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_crt
-
+Suite Teardown   Encerrar Tudo
 
 *** Variables ***
 
@@ -23,8 +23,7 @@ Confirmação de Negócio
     RPA.Windows.Get Text      Confirmação de Negócio (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Confirmação de Negócio (1)      ${Caminho_Screenshots}Confirmação de Negócio
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Emissão de NFS-e sobre Confirmações de Negócios
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Confirmação de Negócio
@@ -43,8 +42,7 @@ Pedidos > Pedidos de Compra
     RPA.Windows.Get Text      Pedidos de Compra (1)
     RPA.Windows.Click         Novo  
     BaseDesktop.Screenshot    Pedidos de Compra (1)      ${Caminho_Screenshots}Pedidos de Compra
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Pedidos > Pedidos de Venda
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Pedidos de Venda
@@ -54,8 +52,7 @@ Pedidos > Pedidos de Venda
     RPA.Windows.Get Text      Pedidos de Venda (1)  
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Pedidos de Venda (1)      ${Caminho_Screenshots}Pedidos de Venda
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Entradas/Compras > Incluir/Alterar
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/              Incluir_Alterar
@@ -65,8 +62,7 @@ Entradas/Compras > Incluir/Alterar
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)   ${Caminho_Screenshots}Entradas_Compras/Incluir_Alterar 
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Entradas/Compras > Consultar
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/              Consultar
@@ -76,8 +72,7 @@ Entradas/Compras > Consultar
     RPA.Windows.Get Text    Entradas/Compras - Consultar (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Saídas/Vendas > Incluir Saídas/Vendas
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Alterar Saídas_Vendas
@@ -115,5 +110,5 @@ Saídas/Vendas > Consultar Saídas/Vendas
     RPA.Windows.Click       Cancelar
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

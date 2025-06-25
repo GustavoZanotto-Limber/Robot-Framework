@@ -2,6 +2,7 @@
 Documentation    Smoke Test: Frotas
 Resource          C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_VENDEDOR
+Suite Teardown   Encerrar Tudo
 
 *** Variables ***
 
@@ -27,7 +28,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Papel de Parede
     Utilitários             Papel de Parede     
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
@@ -59,8 +60,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Relatórios Personalizados > Cadastro de Categorias
@@ -72,8 +72,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
@@ -84,8 +83,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Criar Usuario de Log
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
@@ -102,5 +100,5 @@ Verifica transações abertas
     BaseDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

@@ -2,6 +2,7 @@
 Documentation    Smoke Test: Contábil
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_ctb
+Suite Teardown   Encerrar Tudo
 
 
 *** Variables ***
@@ -23,8 +24,7 @@ Lançamentos Contábeis
     RPA.Windows.Get Text      Lançamentos Contábeis (1)  
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Lançamentos Contábeis (1)      ${Caminho_Screenshots}Lançamentos Contábeis
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Lançamentos Contábeis por Lote
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Lançamentos Contábeis por Lote
@@ -231,7 +231,7 @@ Controle Patrimonial > Consulta de Depreciação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Consulta de Depreciação (1)  
-    repetidor de teclas       tab        4   
+    repetidor de teclas       tab        3   
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Consulta de Depreciação (1)      ${Caminho_Screenshots}Controle Patrimonial/Consulta de Depreciação
@@ -374,8 +374,7 @@ Ajuste a Valor Presente > Configuração
     RPA.Windows.Get Text      Cadastro de configuração de ajuste a valor Presente (1) 
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de configuração de ajuste a valor Presente (1)     ${Caminho_Screenshots}Ajuste a Valor Presente/Configuração
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Ajuste a Valor Presente > Execução do Ajuste
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ajuste a Valor Presente/                        Execução do Ajuste
@@ -403,6 +402,6 @@ Ajuste a Valor Presente > Consulta do Ajuste
     RPA.Windows.Click         OK
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    
     

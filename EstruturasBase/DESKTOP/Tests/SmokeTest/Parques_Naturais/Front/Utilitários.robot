@@ -1,11 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Front
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao Front
+Suite Setup      Iniciar sessao     cde_win_bca_frontR30
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/Front/Utilitários/ 
+${nome_print}
+${nome_exe}=    cde_win_bca_frontR30
 
 *** Keywords ***
 
@@ -16,7 +20,7 @@ Utilitários
 *** Test Cases    ***
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Utilitários
+    ${nome_print}=     Set Variable     Favoritos
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração dos Favoritos (1)
@@ -25,7 +29,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
+    ${nome_print}=     Set Variable     Papel de Parede
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   1s
@@ -34,7 +38,7 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Estilo do Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
+    ${nome_print}=     Set Variable     Estilo do Menu Principal
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -43,7 +47,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Controle de Acessos
+    ${nome_print}=     Set Variable     Controle de Acessos
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -53,7 +57,7 @@ Controle de Acessos
     Fechar janela
 
 Relatórios Personalizados > Cadastro de Categorias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                             Cadastro de Categorias
+    ${nome_print}=     Set Variable      Cadastro de Categorias
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -62,11 +66,10 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
+    ${nome_print}=     Set Variable     Cadastro de Relatórios
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -75,10 +78,10 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar janela
+    Fechar com Sim
 
 Layout de Bilhetes
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Layout de Bilhetes
+    ${nome_print}=     Set Variable     Layout de Bilhetes
     Utilitários
     RPA.Windows.Click       Layout de Bilhetes
     RPA.Windows.Get Text    Layout de Bilhetes (1)
@@ -86,11 +89,10 @@ Layout de Bilhetes
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Layout de Bilhetes (1)    ${Caminho_Screenshots}Layout de Bilhetes
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configuração de Impressoras
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configuração de Impressoras
+    ${nome_print}=     Set Variable     Configuração de Impressoras
     Utilitários
     RPA.Windows.Click       Configuração de Impressoras
     RPA.Windows.Get Text    Configuração Impressoras (1)
@@ -101,7 +103,7 @@ Configuração de Impressoras
     RPA.Desktop.Press Keys  Enter
 
 Observações Padrão
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Observações Padrão
+    ${nome_print}=     Set Variable     Observações Padrão
     Utilitários
     RPA.Windows.Click       Observações Padrão
     RPA.Windows.Get Text    Cadastro de Observações Padrão (1)
@@ -112,7 +114,7 @@ Observações Padrão
     Fechar janela
 
 Criar Usuario de Log
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
+    ${nome_print}=     Set Variable     Criar Usuario de Log
     Utilitários
     RPA.Windows.Click       Criar Usuário de Log
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
@@ -120,16 +122,16 @@ Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Verifica transações abertas
+    ${nome_print}=     Set Variable     Verifica transações abertas
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
-     RPA.Windows.Click      Carregar
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
 
 Abrir Gaveta
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Abrir Gaveta
+    ${nome_print}=     Set Variable     Abrir Gaveta
     Utilitários
     RPA.Windows.Click       Abrir Gaveta
     RPA.Windows.Get Text    Salvar Saída de Impressão como
@@ -137,7 +139,7 @@ Abrir Gaveta
     RPA.Windows.Click       Fechar
 
 Metas Orçamento/Previsão
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Metas Orçamento_Previsão
+    ${nome_print}=     Set Variable     Metas Orçamento/Previsão
     Utilitários
     RPA.Windows.Click       Metas Orçamento/Previsão
     RPA.Windows.Get Text    Cadastro de Metas para BI (1)
@@ -145,18 +147,13 @@ Metas Orçamento/Previsão
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Metas para BI (1)    ${Caminho_Screenshots}Metas Orçamento_Previsão
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Metas Realizadas Adicionais
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Metas Realizadas Adicionais
+    ${nome_print}=     Set Variable     Metas Realizadas Adicionais
     Utilitários
     RPA.Windows.Click       Metas Realizadas Adicionais
     RPA.Windows.Get Text    Lançamentos de Metas Realizadas (1)
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Lançamentos de Metas Realizadas (1)    ${Caminho_Screenshots}Metas Realizadas Adicionais
     Fechar janela
-
-
-Encerrar
-    Encerrar tudo

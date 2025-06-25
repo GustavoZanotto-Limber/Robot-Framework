@@ -74,5 +74,5 @@ Vendas/Prestação de Serviços - Sintético/Item
     BaseDesktop.Screenshot    Vendas/Prestação de Serviços / Item (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Sintético_Item
     Fechar janela
 
-Encerrar 
-    Encerrar tudo
+ 
+    

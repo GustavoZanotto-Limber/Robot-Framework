@@ -72,7 +72,7 @@ Estornar Baixas
     Fechar janela
 
 Cobrança de Dívida
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                       Cobrança de Dívida
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            Cobrança de Dívida
     Contas a Receber
     RPA.Windows.Click       Cobrança de Dívida
     RPA.Windows.Get Text    Cobrança de Dívidas (1)
@@ -134,7 +134,7 @@ Transferência entre Clientes
     Fechar janela
 
 Alterar Contas a Receber
-    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                             Alterar Contas a Receber
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                                  Alterar Contas a Receber
     Contas a Receber
     RPA.Windows.Click       Alterar Contas a Receber
     RPA.Windows.Get Text    Alterar Contas a Receber (1)
@@ -161,8 +161,7 @@ Adiantamentos > Adiantamento de Clientes
     RPA.Windows.Get Text      Adiantamentos de Clientes (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Adiantamentos de Clientes (1)    ${Caminho_Screenshots}Adiantamentos/Adiantamento de Clientes
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Adiantamentos > Extrato dos Adiantamentos/Cliente
     [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}Adiantamentos/                                       Extrato dos Adiantamentos_Clientes
@@ -222,14 +221,13 @@ Adiantamentos > Antecipação de Pedido de Venda Parcial
 
 
 Recibos Avulsos
-    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}                    Recibos Avulsos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Recibos Avulsos
     Contas a Receber
     RPA.Windows.Click       Recibos Avulsos
     RPA.Windows.Get Text    Emissão de Recibos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Emissão de Recibos (1)    ${Caminho_Screenshots}Recibos Avulsos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Recibos Avulsos - Múltiplas Contas
     [Teardown]              Caso aconteça erro                           ${Caminho_Screenshots}                                       Recibos Avulsos - Múltiplas Contas
@@ -238,8 +236,7 @@ Recibos Avulsos - Múltiplas Contas
     RPA.Windows.Get Text    Emissão de Recibos - Múltiplas Contas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Emissão de Recibos - Múltiplas Contas (1)    ${Caminho_Screenshots}Recibos Avulsos - Múltiplas Contas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Consultas
     [Teardown]              Caso aconteça erro                  ${Caminho_Screenshots}              Consultas
@@ -485,5 +482,5 @@ Faturamento de Agências > Lançamento de Vouchers Venda
     Fechar janela
 
 
-Encerrar
-    Encerrar tudo
+
+    

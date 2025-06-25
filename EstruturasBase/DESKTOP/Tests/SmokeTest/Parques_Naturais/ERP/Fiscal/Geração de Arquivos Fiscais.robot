@@ -92,8 +92,7 @@ GIA-PR
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Guia de Informação e Apuração do ICMS - Paraná (GIA-PR) (1)    ${Caminho_Screenshots}GIA-PR
     RPA.Windows.Click         Confirmar
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 GIA-MS
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        GIA-MS
@@ -172,8 +171,7 @@ DIME-SC > Geração
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Declaração do ICMS e do Movimento Econômico (DIME) (1)    ${Caminho_Screenshots}DIME-SC/Geração
     RPA.Windows.Click         Confirmar 
-    Fechar janela
-    RPA.Windows.Click         Sim 
+    Fechar com Sim 
 
 DIME-SC > Montagem
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}DIME-SC/        Montagem
@@ -183,8 +181,7 @@ DIME-SC > Montagem
     RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Montagem DIME SC (1)    ${Caminho_Screenshots}DIME-SC/Montagem
     RPA.Windows.Click         OK
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 DFC GI/ICMS - PR
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        DFC GI_ICMS - PR
@@ -194,8 +191,7 @@ DFC GI/ICMS - PR
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    DFC e GI/ICMS (1)    ${Caminho_Screenshots}DFC GI_ICMS - PR
     RPA.Windows.Click         Confirmar
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 DEISS
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        DEISS
@@ -205,8 +201,7 @@ DEISS
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Declaração Eletrônica de Imposto Sobre Serviço (DEISS) (1)    ${Caminho_Screenshots}DEISS
     RPA.Windows.Click         Confirmar
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 SISCOSERV
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        SISCOSERV
@@ -260,5 +255,5 @@ DCTF MIT
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

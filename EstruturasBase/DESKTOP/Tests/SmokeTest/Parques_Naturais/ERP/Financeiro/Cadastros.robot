@@ -22,11 +22,10 @@ Terceiros > Cadastro de Terceiros
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros/Cadastro de Terceiros
     RPA.Windows.Click       Cancelar (F3)
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Terceiros > Contatos > Registros de Contatos
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}Terceiros/Contatos/                          Registros de Contatos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Terceiros/Contatos/                          Registros de Contatos
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -46,8 +45,7 @@ Terceiros > Contatos > Tipo de Histórico de Contatos
     RPA.Windows.Get Text    Cadastro de tipo de Histórico de Contatos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de tipo de Histórico de Contatos (1)    ${Caminho_Screenshots}Terceiros/Contatos/Tipo de Histórico de Contatos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Terceiros > Contatos > Atividades de Contatos
     [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}Terceiros/Contatos/                             Atividades de Contatos
@@ -58,8 +56,7 @@ Terceiros > Contatos > Atividades de Contatos
     RPA.Windows.Get Text    Cadastro de Atividades de Contatos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Atividades de Contatos (1)    ${Caminho_Screenshots}Terceiros/Contatos/Atividades de Contatos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Terceiros > Contatos > Consulta de contatos realizados
     [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}Terceiros/Contatos/                                      Consulta de contatos realizados
@@ -79,8 +76,7 @@ Categorias de Terceiros
     RPA.Windows.Get Text    Cadastro de Categorias de Terceiros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Categorias de Terceiros (1)    ${Caminho_Screenshots}Categorias de Terceiros
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Grupos de Terceiros
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}                        Grupos de Terceiros
@@ -89,8 +85,7 @@ Grupos de Terceiros
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Grupo de Terceiros (1)    ${Caminho_Screenshots}Grupos de Terceiros
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Limite de Crédito
     [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                      Limite de Crédito
@@ -110,8 +105,7 @@ Planos de Contas
     RPA.Windows.Get Text    Cadastro do Plano de Contas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro do Plano de Contas (1)    ${Caminho_Screenshots}Planos de Contas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Tipos de Documento
     [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}                        Tipos de Documentos
@@ -120,8 +114,7 @@ Tipos de Documento
     RPA.Windows.Get Text    Cadastro de Tipos de Documentos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Documentos (1)    ${Caminho_Screenshots}Tipos de Documentos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Tipo de Financiamento
     [Teardown]              Caso aconteça erro                       ${Caminho_Screenshots}                          Tipo de Financiamento
@@ -130,18 +123,16 @@ Tipo de Financiamento
     RPA.Windows.Get Text    Cadastro de Tipo de Financiamento (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipo de Financiamento (1)    ${Caminho_Screenshots}Tipo de Financiamento
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Portadores
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}               Portadores
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                    Portadores
     Cadastros
     RPA.Windows.Click       Portadores
     RPA.Windows.Get Text    Cadastro de Portadores (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Portadores (1)    ${Caminho_Screenshots}Portadores
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Carteiras de Cobranças
     [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}                           Carteiras de Cobranças
@@ -150,8 +141,7 @@ Carteiras de Cobranças
     RPA.Windows.Get Text    Cadastro de Carteiras de Cobranças (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Carteiras de Cobranças (1)    ${Caminho_Screenshots}Carteiras de Cobranças
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Tipos de Cobrança
     [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                      Tipos de Cobrança
@@ -160,28 +150,25 @@ Tipos de Cobrança
     RPA.Windows.Get Text    Cadastro de Tipos de Cobrança (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Cobrança (1)    ${Caminho_Screenshots}Tipos de Cobrança
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Bancos
-    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}           Bancos
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                Bancos
     Cadastros
     RPA.Windows.Click       Bancos
     RPA.Windows.Get Text    Cadastro de Bancos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Bancos (1)    ${Caminho_Screenshots}Bancos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Formas de Pagamento
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                        Formas de Pagamento
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Formas de Pagamento
     Cadastros
     RPA.Windows.Click       Formas de Pagamento
     RPA.Windows.Get Text    Formas de Pagamento (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Formas de Pagamento (1)    ${Caminho_Screenshots}Formas de Pagamento
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Formas de Pagamento (SISPAG)
     [Teardown]              Caso aconteça erro                              ${Caminho_Screenshots}                                 Formas de Pagamento (SISPAG)
@@ -190,8 +177,7 @@ Formas de Pagamento (SISPAG)
     RPA.Windows.Get Text    Cadastro de Formas de Pagamento (SISPAG) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Formas de Pagamento (SISPAG) (1)    ${Caminho_Screenshots}Formas de Pagamento (SISPAG)
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Bandeiras de Cartões
     [Teardown]              Caso aconteça erro                  ${Caminho_Screenshots}                         Bandeiras de Cartões
@@ -200,8 +186,7 @@ Bandeiras de Cartões
     RPA.Windows.Get Text    Cadastro de Bandeiras Cartão (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Bandeiras Cartão (1)    ${Caminho_Screenshots}Bandeiras de Cartões
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Autorizadoras de Cartões
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Autorizadoras de Cartões
@@ -210,8 +195,7 @@ Autorizadoras de Cartões
     RPA.Windows.Get Text    Cadastro de Autorizadoras de Cartão (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Autorizadoras de Cartão (1)    ${Caminho_Screenshots}Autorizadoras de Cartões
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Centros de Custos
     [Teardown]              Caso aconteça erro                   ${Caminho_Screenshots}                      Centros de Custos
@@ -220,8 +204,7 @@ Centros de Custos
     RPA.Windows.Get Text    Cadastro de Centros de Custos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Centros de Custos (1)    ${Caminho_Screenshots}Centros de Custos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Históricos Contábeis
     [Teardown]              Caso aconteça erro                      ${Caminho_Screenshots}                         Históricos Contábeis
@@ -230,8 +213,7 @@ Históricos Contábeis
     RPA.Windows.Get Text    Cadastro de Históricos Contábeis (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Históricos Contábeis (1)    ${Caminho_Screenshots}Históricos Contábeis
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Indexadores
     [Teardown]              Caso aconteça erro             ${Caminho_Screenshots}                Indexadores
@@ -240,8 +222,7 @@ Indexadores
     RPA.Windows.Get Text    Cadastro de Indexadores (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Indexadores (1)    ${Caminho_Screenshots}Indexadores
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Índices Financeiros
     [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}                        Índices Financeiros
@@ -250,8 +231,7 @@ Indexadores
     RPA.Windows.Get Text    Cadastro de Índices Financeiros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Índices Financeiros (1)    ${Caminho_Screenshots}Índices Financeiros
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Limite de Crédito > Documentos
     [Teardown]                Caso aconteça erro                       ${Caminho_Screenshots}Limite de Crédito/               Documentos
@@ -272,8 +252,7 @@ Limite de Crédito > Tipos Aprovação
     RPA.Windows.Get Text      Cadastro de Tipos de Aprovação (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tipos de Aprovação (1)    ${Caminho_Screenshots}Limite de Crédito/Tipos Aprovação
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Limite de Crédito > Níveis de Aprovação
     [Teardown]                Caso aconteça erro                                             ${Caminho_Screenshots}Limite de Crédito/                        Níveis de Aprovação
@@ -283,8 +262,7 @@ Limite de Crédito > Níveis de Aprovação
     RPA.Windows.Get Text      Cadastro Estágios de aprovação para o Limite de Crédito (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro Estágios de aprovação para o Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito/Níveis de Aprovação
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Limite de Crédito > Dados para Análise
     [Teardown]                Caso aconteça erro                              ${Caminho_Screenshots}Limite de Crédito/                       Dados para Análise
@@ -294,8 +272,7 @@ Limite de Crédito > Dados para Análise
     RPA.Windows.Get Text      Cadastro de Dados para Limite de Crédito (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Dados para Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito/Dados para Análise
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Limite de Crédito > Tipos de Cálculos/Fórmulas
     [Teardown]                Caso aconteça erro                                          ${Caminho_Screenshots}Limite de Crédito/                               Tipos de Cálculos_Fórmulas
@@ -305,8 +282,7 @@ Limite de Crédito > Tipos de Cálculos/Fórmulas
     RPA.Windows.Get Text      Cadastro de Tipos de Cálculos para Limite de Crédito (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Tipos de Cálculos para Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito/Tipos de Cálculos_Fórmulas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Limite de Crédito > Estrutura Análise
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Limite de Crédito/                      Estrutura Análise
@@ -316,8 +292,7 @@ Limite de Crédito > Estrutura Análise
     RPA.Windows.Get Text      Cadastro de Estrutura de Cálculos para o Limite de Crédito (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Estrutura de Cálculos para o Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito/Estrutura Análise
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Limite de Crédito > Fórmulas/Cálculo Limite de crédito
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Limite de Crédito/                      Fórmulas_Cálculo Limite de crédito
@@ -327,8 +302,7 @@ Limite de Crédito > Fórmulas/Cálculo Limite de crédito
     RPA.Windows.Get Text      Cadastro de Cálculos para o Limite de Crédito (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Cálculos para o Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito/Fórmulas_Cálculo Limite de crédito
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Países
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Países
@@ -337,8 +311,7 @@ Países
     RPA.Windows.Get Text      Cadastro de Países (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Países (1)    ${Caminho_Screenshots}Países
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estados
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Estados
@@ -347,8 +320,7 @@ Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Estados (1)    ${Caminho_Screenshots}Estados
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Regiões
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Regiões
@@ -357,8 +329,7 @@ Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Regiões (1)    ${Caminho_Screenshots}Regiões
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Municípios
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Municípios
@@ -367,8 +338,7 @@ Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Municípios (1)    ${Caminho_Screenshots}Municípios
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Localidades
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Localidades
@@ -377,8 +347,7 @@ Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Relatórios > Terceiros
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Relatórios/           Terceiros
@@ -552,5 +521,5 @@ Parâmetros > Configurações da Estação
     BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

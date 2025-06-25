@@ -24,8 +24,7 @@ Requisição contra Almoxarifado
     RPA.Windows.Click       Novo
     RPA.Windows.Click       OK
     BaseDesktop.Screenshot  Requisição Contra Almoxarifado (1)    ${Caminho_Screenshots}Requisição contra Almoxarifado
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Incluir/Alterar Entradas/Compras
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Incluir_Alterar Entradas_Compras
@@ -33,8 +32,7 @@ Incluir/Alterar Entradas/Compras
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)    ${Caminho_Screenshots}Incluir_Alterar Entradas_Compras
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Manutenção Manual de Pneus
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Manutenção Manual de Pneus
@@ -51,8 +49,7 @@ Ordem de Serviço Interna
     RPA.Windows.Click       Novo
     RPA.Windows.Click       OK
     BaseDesktop.Screenshot  Ordem de Serviço Interna (1)    ${Caminho_Screenshots}Ordem de Serviço Interna
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Ordem de Serviço Externa
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Ordem de Serviço Externa
@@ -60,8 +57,7 @@ Ordem de Serviço Externa
     RPA.Windows.Get Text    Ordem de Serviço Externa
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Ordem de Serviço Externa          ${Caminho_Screenshots}Ordem de Serviço Externa
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
-Encerrar
-    Encerrar tudo
+
+    

@@ -84,8 +84,7 @@ Informações > Obrigações do ICMS a recolher
     RPA.Windows.Get Text    Obrigações do ICMS a Recolher (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Obrigações do ICMS a Recolher (1)    ${Caminho_Screenshots}Informações/Obrigações do ICMS a recolher
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Informações > Obrigações do PIS/Cofins a recolher
     [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}Informações/                         Obrigações do PIS_Cofins a recolher
@@ -94,8 +93,7 @@ Informações > Obrigações do PIS/Cofins a recolher
     RPA.Windows.Get Text    Obrigações do PIS/COFINS a Recolher (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Obrigações do PIS/COFINS a Recolher (1)    ${Caminho_Screenshots}Informações/Obrigações do PIS_Cofins a recolher
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Outros > ICMS > Outros Débitos
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/ICMS/                         Outros Débitos
@@ -535,5 +533,5 @@ Processos Personalizados
     RPA.Windows.Click         Sair
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

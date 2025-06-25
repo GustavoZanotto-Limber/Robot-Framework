@@ -1,11 +1,14 @@
 *** Settings ***
 Documentation    Smoke Test: Clube
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_clube
+Suite Setup         Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Clube/Consultas/    
+${nome_print}
+${nome_exe}=    cde_win_clube
 
 *** Keywords ***
 
@@ -16,7 +19,8 @@ Consultas
 *** Test Cases ***
 
 Mensalidades Pendentes/Pagas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Mensalidades Pendentes_Pagas
+    ${nome_print}=     Set Variable     Mensalidades Pendentes_Pagas
+    [Tags]     Clube    Consultas   SmokeTest
     Consultas 
     RPA.Windows.Click       Mensalidades Pendentes/Pagas
     RPA.Windows.Get Text    Consulta do Contas a Receber (1)
@@ -26,16 +30,17 @@ Mensalidades Pendentes/Pagas
     RPA.Windows.Click       Não
 
 Sócios/Dependentes
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Sócios_Dependentes
+    ${nome_print}=     Set Variable     Sócios_Dependentes
+    [Tags]     Clube    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Sócios/Dependentes
     RPA.Windows.Get Text    Sócios/Dependentes
     BaseDesktop.Screenshot  Sócios/Dependentes   ${Caminho_Screenshots}Sócios_Dependentes
     RPA.Windows.Click       Fechar
-    
 
-Controle Acessos > Status do Cartão
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle Acessos/              Status do Cartão
+Status do Cartão
+    ${nome_print}=     Set Variable     Status do Cartão
+    [Tags]     Clube    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Controle Acessos 
     RPA.Desktop.Press Keys  S
@@ -46,8 +51,9 @@ Controle Acessos > Status do Cartão
     RPA.Windows.Click       Fechar
     Fechar janela
 
-Controle Acessos > Extrato/Local Acesso
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle Acessos/              Extrato/Local Acesso
+Extrato/Local Acesso
+    ${nome_print}=     Set Variable     Extrato/Local Acesso
+    [Tags]     Clube    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Controle Acessos 
     RPA.Desktop.Press Keys  E
@@ -58,8 +64,9 @@ Controle Acessos > Extrato/Local Acesso
     RPA.Windows.Click       Fechar
     Fechar janela
 
-Controle Acessos > Extrato do Cartão
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle Acessos/              Extrato do Cartão
+Extrato do Cartão
+    ${nome_print}=     Set Variable     Extrato do Cartão
+    [Tags]     Clube    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Controle Acessos 
     RPA.Desktop.Press Keys  X
@@ -71,7 +78,8 @@ Controle Acessos > Extrato do Cartão
     Fechar janela
 
 Reservas (Listagem)
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Reservas (Listagem)
+    ${nome_print}=     Set Variable     Reservas (Listagem)
+    [Tags]     Clube    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Reservas (Listagem)
     RPA.Windows.Get Text    Consulta de Reservas (1)
@@ -80,7 +88,8 @@ Reservas (Listagem)
     Fechar janela
 
 Reservas (Calendário)
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Reservas (Calendário)
+    ${nome_print}=     Set Variable     Reservas (Calendário)
+    [Tags]     Clube    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Reservas (Calendário)
     RPA.Windows.Get Text    Consulta Reservas/Dependência (1)
@@ -88,9 +97,10 @@ Reservas (Calendário)
     RPA.Windows.Click       OK
     BaseDesktop.Screenshot  Consulta Reservas/Dependência (1)   ${Caminho_Screenshots}Reservas (Calendário)
     RPA.Windows.Click       Fechar
-    
+
 Consultas Personalizadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Consultas Personalizadas
+    ${nome_print}=     Set Variable     Consultas Personalizadas
+    [Tags]     Clube    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
@@ -98,6 +108,3 @@ Consultas Personalizadas
     BaseDesktop.Screenshot    Consultas Personalizadas (1)    ${Caminho_Screenshots}Consultas Personalizadas
     RPA.Windows.Click         Fechar
     Fechar janela
-
-Encerrar
-    Encerrar tudo

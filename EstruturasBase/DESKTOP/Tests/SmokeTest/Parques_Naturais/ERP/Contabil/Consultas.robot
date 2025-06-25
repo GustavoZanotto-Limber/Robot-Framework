@@ -2,6 +2,7 @@
 Documentation    Smoke Test: Contábil
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_ctb
+Suite Teardown   Encerrar Tudo
 
 
 *** Variables ***
@@ -189,5 +190,5 @@ Consulta de Alterações de Lançamentos
     BaseDesktop.Screenshot    Consulta Log de Lançamentos Contábeis (1)     ${Caminho_Screenshots}Consulta de Alterações de Lançamentos0
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

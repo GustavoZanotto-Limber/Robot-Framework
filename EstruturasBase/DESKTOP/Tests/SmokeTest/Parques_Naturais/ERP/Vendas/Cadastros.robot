@@ -45,8 +45,7 @@ Terceiros > Tipos de Garantia
     RPA.Windows.Get Text    Cadastro de Tipos de Garantia (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Garantia (1)    ${Caminho_Screenshots}Terceiros/Tipos de Garantia
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Terceiros > Categorias de Terceiros
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Terceiros/                             Categorias de Terceiros
@@ -56,8 +55,7 @@ Terceiros > Categorias de Terceiros
     RPA.Windows.Get Text    Cadastro de Categorias de Terceiros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Categorias de Terceiros (1)    ${Caminho_Screenshots}Categorias de Terceiros
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Terceiros > Grupo de Terceiros
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Terceiros/              Grupo de Terceiros
@@ -67,8 +65,7 @@ Terceiros > Grupo de Terceiros
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Grupo de Terceiros (1)    ${Caminho_Screenshots}Grupos de Terceiros
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Terceiros > Grupo de Terceiros Fidelizados
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Terceiros/              Grupo de Terceiros Fidelizados
@@ -78,8 +75,7 @@ Terceiros > Grupo de Terceiros Fidelizados
     RPA.Windows.Get Text    Grupo de Terceiros Fidelizados (1)
      RPA.Windows.Click      Carregar
     BaseDesktop.Screenshot  Grupo de Terceiros Fidelizados (1)    ${Caminho_Screenshots}Terceiros/Grupo de Terceiros Fidelizados
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Terceiros > Contatos > Registros de Contatos
     [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}Terceiros/Contatos/                          Registros de Contatos
@@ -102,8 +98,7 @@ Terceiros > Contatos > Tipo de Histórico de Contatos
     RPA.Windows.Get Text    Cadastro de tipo de Histórico de Contatos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de tipo de Histórico de Contatos (1)    ${Caminho_Screenshots}Terceiros/Contatos/Tipo de Histórico de Contatos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Terceiros > Contatos > Atividades de Contatos
     [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}Terceiros/Contatos/                             Atividades de Contatos
@@ -114,8 +109,7 @@ Terceiros > Contatos > Atividades de Contatos
     RPA.Windows.Get Text    Cadastro de Atividades de Contatos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Atividades de Contatos (1)    ${Caminho_Screenshots}Terceiros/Contatos/Atividades de Contatos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Terceiros > Contatos > Consulta de contatos realizados
     [Teardown]              Caso aconteça erro                     ${Caminho_Screenshots}Terceiros/Contatos/                                      Consulta de contatos realizados
@@ -190,8 +184,7 @@ Setores
     RPA.Windows.Get Text    Cadastro de Setores (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Setores (1)    ${Caminho_Screenshots}Setores
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Itens
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Itens
@@ -201,8 +194,7 @@ Itens > Itens
     RPA.Windows.Get Text    Cadastro de Itens (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Itens (1)    ${Caminho_Screenshots}Itens/Itens
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Itens - Edição em massa
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Itens - Edição em massa
@@ -222,8 +214,7 @@ Itens > Depósitos
     RPA.Windows.Get Text    Cadastro de Depósitos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Depósitos (1)    ${Caminho_Screenshots}Itens/Depósitos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Fabricantes
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Fabricantes
@@ -266,8 +257,7 @@ Itens > Marcas
     RPA.Windows.Get Text    Cadastro de Marcas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Marcas (1)    ${Caminho_Screenshots}Itens/Marcas
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Estampas
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Estampas
@@ -277,8 +267,7 @@ Itens > Estampas
     RPA.Windows.Get Text    Cadastro de Estampas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Estampas (1)    ${Caminho_Screenshots}Itens/Estampas
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Tamanhos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Tamanhos
@@ -288,8 +277,7 @@ Itens > Tamanhos
     RPA.Windows.Get Text    Cadastro de Tamanhos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tamanhos (1)    ${Caminho_Screenshots}Itens/Tamanhos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Tipo do Serviço
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Tipo Serviço
@@ -332,8 +320,7 @@ Itens > Unidades
     RPA.Windows.Get Text    Cadastro de Unidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Unidades (1)    ${Caminho_Screenshots}Itens/Unidades
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Conversões de Unidades
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Conversões de Unidades
@@ -343,8 +330,7 @@ Itens > Conversões de Unidades
     RPA.Windows.Get Text    Cadastro de Conversões de Unidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Conversões de Unidades (1)    ${Caminho_Screenshots}Itens/Conversões de Unidades
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     RPA.Windows.Click       OK
     Fechar Janela
 
@@ -356,8 +342,7 @@ Itens > Tabelas de Frete
     RPA.Windows.Get Text    Cadastro de Tabela de Fretes (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tabela de Fretes (1)    ${Caminho_Screenshots}Itens/Tabelas de Frete
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Modos de Preparo
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Modos de Preparo
@@ -367,8 +352,7 @@ Itens > Modos de Preparo
     RPA.Windows.Get Text    Modo de Preparo (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Modo de Preparo (1)    ${Caminho_Screenshots}Itens/Modos de Preparo
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Grades
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Grades
@@ -389,8 +373,7 @@ Itens > Tabela de Preços
     RPA.Windows.Get Text    Tabela de Preços (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Tabela de Preços (1)    ${Caminho_Screenshots}Itens/Tabela de Preços
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Cores
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Cores
@@ -400,8 +383,7 @@ Itens > Cores
     RPA.Windows.Get Text    Cadastro de Cores (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Cores (1)    ${Caminho_Screenshots}Itens/Cores
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Tabela de Umidade
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/             Tabela de Umidade
@@ -411,8 +393,7 @@ Itens > Tabela de Umidade
     RPA.Windows.Get Text    Cadastro de Índices de Descontos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Índices de Descontos (1)    ${Caminho_Screenshots}Itens/Tabela de Umidade
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Descontos para Grãos
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Descontos para Grãos
@@ -476,8 +457,7 @@ Itens > Categorias
     RPA.Windows.Get Text    Cadastro de Categorias de Produtos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Categorias de Produtos (1)    ${Caminho_Screenshots}Itens/Categorias
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Grupo de Variedade de Produção
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Grupo de Variedade de Produção
@@ -487,8 +467,7 @@ Itens > Grupo de Variedade de Produção
     RPA.Windows.Get Text    Cadastro de Variedade de Produção (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Variedade de Produção (1)    ${Caminho_Screenshots}Itens/Grupo de Variedade de Produção
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Ecommerce > Características
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/Ecommerce/            Características
@@ -499,8 +478,7 @@ Itens > Ecommerce > Características
     RPA.Windows.Get Text    Cadastro de Características (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Características (1)    ${Caminho_Screenshots}Itens/Ecommerce/Características
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Ecommerce > Categorias
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/Ecommerce/            Categorias
@@ -511,8 +489,7 @@ Itens > Ecommerce > Categorias
     RPA.Windows.Get Text    Cadastro de Categoria (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Itens/Ecommerce/Categorias
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Ecommerce > Informações Adicionais
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/Ecommerce/            Informações Adicionais
@@ -523,8 +500,7 @@ Itens > Ecommerce > Informações Adicionais
     RPA.Windows.Get Text    Cadastro de Informações Adicionais (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Informações Adicionais (1)    ${Caminho_Screenshots}Itens/Ecommerce/Informações Adicionais
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Recorrências
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Recorrências
@@ -534,8 +510,7 @@ Itens > Recorrências
     RPA.Windows.Get Text    Cadastro de Recorrências (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Recorrências (1)    ${Caminho_Screenshots}Itens/Recorrências
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Catálogo de Produtos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Catálogo de Produtos
@@ -565,8 +540,7 @@ Veículos > Tipos de Veículos
     RPA.Windows.Get Text    Cadastro de Tipos de Veículos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Veículos (1)    ${Caminho_Screenshots}Veículos/Tipos de Veículos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Seguros de Carga
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Seguros de Carga
@@ -575,8 +549,7 @@ Seguros de Carga
     RPA.Windows.Get Text    Cadastro de Seguro de Carga (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Seguro de Carga (1)    ${Caminho_Screenshots}Seguros de Carga
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Grupos de Equipamentos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Grupos de Equipamentos
@@ -585,8 +558,7 @@ Grupos de Equipamentos
     RPA.Windows.Get Text    Cadastro de Grupos de Equipamentos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Grupos de Equipamentos (1)    ${Caminho_Screenshots}Grupos de Equipamentos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Equipamentos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Equipamentos
@@ -595,8 +567,7 @@ Equipamentos
     RPA.Windows.Get Text    Cadastro de Equipamentos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Equipamentos (1)    ${Caminho_Screenshots}Equipamentos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 ECF/SAT > Situação Tributária (Totalizadores)
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}ECF_SAT/              Situação Tributária (Totalizadores)
@@ -606,8 +577,7 @@ ECF/SAT > Situação Tributária (Totalizadores)
     RPA.Windows.Get Text    Cadastro de Situação Tributária (Totalizadores da ECF) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Situação Tributária (Totalizadores da ECF) (1)    ${Caminho_Screenshots}ECF_SAT/Situação Tributária (Totalizadores)
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Observações
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Observações
@@ -616,8 +586,7 @@ Observações
     RPA.Windows.Get Text    Cadastro de Observações Fiscais (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Observações Fiscais (1)    ${Caminho_Screenshots}Observações
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Contabilista
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Contabilista
@@ -626,8 +595,7 @@ Contabilista
     RPA.Windows.Get Text    Cadastro de Contabilistas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Contabilistas (1)    ${Caminho_Screenshots}Contabilista
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Navios
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Navios
@@ -636,8 +604,7 @@ Navios
     RPA.Windows.Get Text    Cadastro de Navios (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Navios (1)    ${Caminho_Screenshots}Navios
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Berço de Embarque
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Berço de Embarque
@@ -646,8 +613,7 @@ Berço de Embarque
     RPA.Windows.Get Text    Cadastro de Berços de Embarque (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Berços de Embarque (1)    ${Caminho_Screenshots}Berço de Embarque
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Rotas Simplificado
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Rotas Simplificado
@@ -656,8 +622,7 @@ Rotas Simplificado
     RPA.Windows.Get Text    Cadastro de Rotas Simplificado (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Rotas Simplificado (1)    ${Caminho_Screenshots}Rotas Simplificado
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Feriados
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Feriados
@@ -667,8 +632,7 @@ Feriados
     RPA.Windows.Click       Cadastrar Feriados deste ano
     BaseDesktop.Screenshot  Cadastro de Feriados (1)    ${Caminho_Screenshots}Feriados
     RPA.Windows.Click       OK
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Tipos de Visitas
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tipos de Visitas
@@ -677,8 +641,7 @@ Tipos de Visitas
     RPA.Windows.Get Text    Cadastro de Tipos de Visitas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Visitas (1)    ${Caminho_Screenshots}Tipos de Visitas
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Finalidade de Visita
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Finalidade de Visita
@@ -687,8 +650,7 @@ Finalidade de Visita
     RPA.Windows.Get Text    Cadastro de Finalidade de Visita (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Finalidade de Visita (1)    ${Caminho_Screenshots}Finalidade de Visita
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Jornada de Trabalho
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Jornada de Trabalho
@@ -697,8 +659,7 @@ Jornada de Trabalho
     RPA.Windows.Get Text    Cadastro de Jornada de Trabalho (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Jornada de Trabalho (1)    ${Caminho_Screenshots}Jornada de Trabalho
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configuração de mensagem para nota fiscal
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Configuração de mensagem para nota fiscal
@@ -732,8 +693,7 @@ Programa de Recompensas > Configuração de Acúmulo de Pontos
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configuração de Acúmulo de Pontos (1)    ${Caminho_Screenshots}Programa de Recompensas/Configuração de Acúmulo de Pontos
     RPA.Windows.Click       Confirmar
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Programa de Recompensas > Consulta de Saldo de Pontuação de Terceiros
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Programa de Recompensas/             Consulta de Saldo de Pontuação de Terceiros
@@ -764,8 +724,7 @@ Metas Mensais
     RPA.Windows.Get Text    Cadastro de Metas Mensais para Vendedores (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Metas Mensais para Vendedores (1)    ${Caminho_Screenshots}Metas Mensais
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Documentos > Tipos de Documentos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Documentos/              Tipos de Documentos
@@ -775,8 +734,7 @@ Documentos > Tipos de Documentos
     RPA.Windows.Get Text    Cadastro de Tipos de Documentos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Documentos (1)    ${Caminho_Screenshots}Documentos/Tipos de Documentos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Documentos > Manutenção de Tipos de Documentos Terceiros
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Documentos/              Manutenção de Tipos de Documentos Terceiros
@@ -804,8 +762,7 @@ Países
     RPA.Windows.Get Text      Cadastro de Países (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Países (1)    ${Caminho_Screenshots}Países
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estados
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Estados
@@ -814,8 +771,7 @@ Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Estados (1)    ${Caminho_Screenshots}Estados
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Municípios
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Municípios
@@ -824,8 +780,7 @@ Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Municípios (1)    ${Caminho_Screenshots}Municípios
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Localidades
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Localidades
@@ -834,8 +789,7 @@ Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Regiões
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Regiões
@@ -844,8 +798,7 @@ Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Regiões (1)    ${Caminho_Screenshots}Regiões
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Bairros
@@ -855,8 +808,7 @@ Bairros
     RPA.Windows.Get Text    Cadastro de Bairros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Bairros (1)    ${Caminho_Screenshots}Bairros
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Comunidades
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Comunidades
@@ -865,8 +817,7 @@ Comunidades
     RPA.Windows.Get Text    Cadastro de Comunidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Comunidades (1)    ${Caminho_Screenshots}Comunidades
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Financeiro > Formas de Pagamento
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Financeiro/          Formas de Pagamento
@@ -876,8 +827,7 @@ Financeiro > Formas de Pagamento
     RPA.Windows.Get Text      Formas de Pagamento (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Formas de Pagamento (1)    ${Caminho_Screenshots}Financeiro/Formas de Pagamento
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Financeiro > Bandeira Cartão
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Financeiro/          Bandeira Cartão
@@ -909,8 +859,7 @@ Fiscal > Configuração Int. Contábil
     RPA.Windows.Get Text      Configuração para Integração Contábil (1)
     RPA.Windows.Click         Cooperado
     BaseDesktop.Screenshot    Configuração para Integração Contábil (1)    ${Caminho_Screenshots}Fiscal/Configuração Int. Contábil
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Classificações Fiscais
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Classificações Fiscais
@@ -920,8 +869,7 @@ Fiscal > Classificações Fiscais
     RPA.Windows.Get Text      Cadastro de Classificações Fiscais (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Classificações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Classificações Fiscais
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Fiscal > Mensagem de Notas Fiscais
@@ -931,8 +879,7 @@ Fiscal > Mensagem de Notas Fiscais
     RPA.Desktop.Press Keys    N
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Mensagens de Notas Fiscais (1)    ${Caminho_Screenshots}Fiscal/Mensagem de Notas Fiscais
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Espécies de Documentos
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Espécies de Documentos
@@ -953,8 +900,7 @@ Fiscal > Operações Fiscais
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Operações Fiscais
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Séries
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Séries
@@ -964,8 +910,7 @@ Fiscal > Séries
     RPA.Windows.Get Text      Cadastro de Séries (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Séries (1)    ${Caminho_Screenshots}Fiscal/Séries
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > CFOP's
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           CFOP's
@@ -975,8 +920,7 @@ Fiscal > CFOP's
     RPA.Windows.Get Text      Cadastro de CFOP's (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de CFOP's (1)    ${Caminho_Screenshots}Fiscal/CFOP's
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Ramo de Atividade
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Ramo de Atividade
@@ -998,8 +942,7 @@ Fiscal > Simples Nacional > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do Simples Nacional (CSOSN) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do Simples Nacional (CSOSN) (1)    ${Caminho_Screenshots}Fiscal/Simples Nacional/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Simples Nacional > Situação Tributária (CSOSN)
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Simples Nacional/           Tabela Tributária
@@ -1010,8 +953,7 @@ Fiscal > Simples Nacional > Situação Tributária (CSOSN)
     RPA.Windows.Get Text      Cadastro de Situações Tributárias Simples Nacional (CSOSN) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situações Tributárias Simples Nacional (CSOSN) (1)    ${Caminho_Screenshots}Fiscal/Simples Nacional/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > IPI > Tabela Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/           Tabela Tributária
@@ -1022,8 +964,7 @@ Fiscal > IPI > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabela Tributária do IPI (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabela Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > IPI > Situação Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/           Situação Tributária
@@ -1034,8 +975,7 @@ Fiscal > IPI > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situação Tributária do IPI (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Tabela Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária
@@ -1046,8 +986,7 @@ Fiscal > ICMS > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributária (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributária (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Situação Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Situação Tributária
@@ -1058,8 +997,7 @@ Fiscal > ICMS > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situações Tributárias do ICMS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situações Tributárias do ICMS (1)    ${Caminho_Screenshots}Fiscal/ICMS/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Tabela Tributária - FCP
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária - FCP
@@ -1070,8 +1008,7 @@ Fiscal > ICMS > Tabela Tributária - FCP
     RPA.Windows.Get Text      Cadastro da Tabela Tributária FCP (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro da Tabela Tributária FCP (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária - FCP
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Configuração Benefício Fiscal
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Configuração Benefício Fiscal
@@ -1106,8 +1043,7 @@ Fiscal > PIS > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do PIS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do PIS (1)    ${Caminho_Screenshots}Fiscal/PIS/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > PIS > Situação Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/PIS/           Situação Tributária
@@ -1118,8 +1054,7 @@ Fiscal > PIS > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situação Tributária PIS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária PIS (1)    ${Caminho_Screenshots}Fiscal/PIS/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > COFINS > Tabela Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/COFINS/           Tabela Tributária
@@ -1130,8 +1065,7 @@ Fiscal > COFINS > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do COFINS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do COFINS (1)    ${Caminho_Screenshots}Fiscal/COFINS/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > COFINS > Situação Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/COFINS/           Situação Tributária
@@ -1142,8 +1076,7 @@ Fiscal > COFINS > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situação Tributária COFINS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária COFINS (1)    ${Caminho_Screenshots}Fiscal/COFINS/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > CSLL > Tabela Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/CSLL/           Tabela Tributária
@@ -1154,8 +1087,7 @@ Fiscal > CSLL > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do CSLL (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do CSLL (1)    ${Caminho_Screenshots}Fiscal/CSLL/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > CSLL > Situação Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/CSLL/           Situação Tributária
@@ -1166,8 +1098,7 @@ Fiscal > CSLL > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situação Tributária CSLL (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária CSLL (1)    ${Caminho_Screenshots}Fiscal/CSLL/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > IRPJ > Tabela Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IRPJ/           Tabela Tributária
@@ -1178,8 +1109,7 @@ Fiscal > IRPJ > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do IRPJ (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > IRPJ > Situação Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IRPJ/           Situação Tributária
@@ -1190,8 +1120,7 @@ Fiscal > IRPJ > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situação Tributária IRPJ (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ISSQN > Tabela Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ISSQN/           Tabela Tributária
@@ -1202,8 +1131,7 @@ Fiscal > ISSQN > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabela Tributária ISSQN (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabela Tributária ISSQN (1)    ${Caminho_Screenshots}Fiscal/ISSQN/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa jurídica
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/           Tabela Tributária - Pessoa jurídica
@@ -1215,8 +1143,7 @@ Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa jurídica
     RPA.Windows.Get Text      Tabela Tributaria de Retenção de IR (Pessoa Jurídica) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Tabela Tributaria de Retenção de IR (Pessoa Jurídica) (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/Tabela Tributária - Pessoa jurídica
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa Física
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/           Tabela Tributária - Pessoa Física
@@ -1228,8 +1155,7 @@ Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa Física
     RPA.Windows.Get Text      Tabela Tributaria de Retenção de IR (Pessoa Física) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Tabela Tributaria de Retenção de IR (Pessoa Física) (1)   ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/Tabela Tributária - Pessoa Física
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > IR > Cadastro de Serviço
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/           Cadastro de Serviço
@@ -1241,8 +1167,7 @@ Fiscal > Impostos Retidos > IR > Cadastro de Serviço
     RPA.Windows.Get Text      Cadastro de Serviços para Retenção de IRRF (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Serviços para Retenção de IRRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/Cadastro de Serviço
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > CSRF > Tabela Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/           Tabela Tributária
@@ -1254,8 +1179,7 @@ Fiscal > Impostos Retidos > CSRF > Tabela Tributária
     RPA.Windows.Get Text      Tabela Tributaria de Retenção de PIS/COFINS/CSLL (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Tabela Tributaria de Retenção de PIS/COFINS/CSLL (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/           Cadastro de Serviços
@@ -1267,8 +1191,7 @@ Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
     RPA.Windows.Get Text      Cadastro de Serviços para Retenção de PIS/COFINS/CSLL (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Serviços para Retenção de PIS/COFINS/CSLL (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/Cadastro de Serviços
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa jurídica
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/           Tabela Tributária - Pessoa jurídica
@@ -1280,8 +1203,7 @@ Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa jurídica
     RPA.Windows.Get Text      Tabela Tributaria de Retenção de INSS (Pessoa Jurídica) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Tabela Tributaria de Retenção de INSS (Pessoa Jurídica) (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/Tabela Tributária - Pessoa jurídica
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa Física
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/           Tabela Tributária - Pessoa Física
@@ -1293,8 +1215,7 @@ Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa Física
     RPA.Windows.Get Text      Tabela Tributaria de Retenção de INSS (Pessoa Física) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Tabela Tributaria de Retenção de INSS (Pessoa Física) (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/Tabela Tributária - Pessoa Física
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/           Cadastro de Serviços
@@ -1306,8 +1227,7 @@ Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
     RPA.Windows.Get Text      Cadastro de Serviços para Retenção de INSSRF (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Serviços para Retenção de INSSRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/Cadastro de Serviços
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > SEST/SENAT
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/          SEST_SENAT
@@ -1318,8 +1238,7 @@ Fiscal > Impostos Retidos > SEST/SENAT
     RPA.Windows.Get Text      Cadastro de Tabela Tributária de SEST/SENAT (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabela Tributária de SEST/SENAT (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/SEST_SENAT
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Tabela de Alíquota Nacional de Impostos por NCM > Cadastro de Tabela
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Tabela de Alíquota Nacional de Impostos por NCM/          Cadastro de Tabela
@@ -1374,8 +1293,7 @@ Parâmetros > Empresas
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot                  Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Estabelecimentos
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Estabelecimentos
@@ -1407,8 +1325,7 @@ Parâmetros > Usuários
     RPA.Windows.Get Text      Cadastro de Usuários (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot                  Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Configurações de Estação
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Configurações de Estação
@@ -1759,5 +1676,5 @@ PDV > Taxa de Entrega
     Fechar janela
     RPA.Windows.Click         Sim
 
-Encerrar
-    Encerrar tudo
+
+    

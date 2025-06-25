@@ -64,5 +64,5 @@ Compras/Aquisição de Serviços - Sintético/Setor
     BaseDesktop.Screenshot  Compras - Aquisição de Serviços Sintético / Setor. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Setor
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

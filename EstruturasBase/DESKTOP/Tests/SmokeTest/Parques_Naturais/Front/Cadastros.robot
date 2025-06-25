@@ -1,37 +1,41 @@
 *** Settings ***
 Documentation    Smoke Test: Front
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao Front
+Suite Setup      Iniciar sessao     ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/Front/Cadastros/    
+${nome_print}
+${nome_exe}=    cde_win_bca_frontR30
 
 *** Keywords ***
 
 *** Test Cases ***
+
 Guias
-    [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}          Guias
+    ${nome_print}=          Set Variable    Guias       
     Cadastros
     RPA.Windows.Click       Guias
     RPA.Windows.Get Text    Cadastro de Guias (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Guias (1)    ${Caminho_Screenshots}Guias
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Isentos
-    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}            Isentos
+    ${nome_print}=          Set Variable    Isentos
     Cadastros
     RPA.Windows.Click       Isentos
     RPA.Windows.Get Text    Cadastro de Isento (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Isento (1)    ${Caminho_Screenshots}Isentos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Agências -> Agências
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Agências/     Agências
+    ${nome_print}=          Set Variable    Agências
     Cadastros
     RPA.Windows.Click         Agências
     RPA.Desktop.Press Keys    A
@@ -40,145 +44,131 @@ Agências -> Agências
     Sleep                     1s
     BaseDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Agências/Agências
     RPA.Windows.Click         Fechar
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Agências -> Grupo de Agências
-    [Teardown]    Caso aconteça erro        ${Caminho_Screenshots}/Agências           Grupo de Agências
+    ${nome_print}=          Set Variable    Grupo de Agências
     Cadastros
     RPA.Windows.Click         Agências
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Cadastro de Grupos de Agências (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Grupos de Agências (1)    ${Caminho_Screenshots}/Agências/Grupo de Agências
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Locais Estacionamento
-    [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}              Locais Estacionamento
+    ${nome_print}=          Set Variable    Locais Estacionamento
     Cadastros
     RPA.Windows.Click       Locais Estacionamento
     RPA.Windows.Get Text    Cadastro Locais de Estacionamento (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro Locais de Estacionamento (1)    ${Caminho_Screenshots}Locais Estacionamento
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Grupos de Bilhetes Totem
-    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                 Grupo Bilhetes Totem
+    ${nome_print}=          Set Variable    Grupos de Bilhetes Totem
     Cadastros
     RPA.Windows.Click       Grupo Bilhetes Totem
     RPA.Windows.Get Text    Cadastro de Grupos de Bilhetes Totem (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Grupos de Bilhetes Totem (1)    ${Caminho_Screenshots}Grupos de Bilhetes Totem
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Grupos de Isenção
-    [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}          Grupos de Isenção
+    ${nome_print}=          Set Variable    Grupos de Isenção
     Cadastros
     RPA.Windows.Click        Grupos de Isenção
     RPA.Windows.Get Text     Cadastro de Grupos de Isenção (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot   Cadastro de Grupos de Isenção (1)    ${Caminho_Screenshots}Grupos de Isenção
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Tipos de Autorização
-    [Teardown]              Caso aconteça erro          ${Caminho_Screenshots}             Tipos de Autorização
+    ${nome_print}=          Set Variable    Tipos de Autorização
     Cadastros
     RPA.Windows.Click       Tipos de Autorização
     RPA.Windows.Get Text    Cadastro de Tipos de Autorização (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Autorização (1)    ${Caminho_Screenshots}Tipos de Autorização
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Tipos de Documentos
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}            Tipos de Documentos
+    ${nome_print}=          Set Variable    Tipos de Documentos
     Cadastros
     RPA.Windows.Click       Tipos de Documentos
     RPA.Windows.Get Text    Cadastro de Tipos de Documentos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Documentos (1)    ${Caminho_Screenshots}Tipos de Documentos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Pessoas Autorizadas
-    [Teardown]              Caso aconteça erro               ${Caminho_Screenshots}     Pessoas Autorizadas    
+    ${nome_print}=          Set Variable    Pessoas Autorizadas
     Cadastros
     RPA.Windows.Click       Pessoas Autorizadas
     RPA.Windows.Get Text    Cadastro de Pessoas Autorizadas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Pessoas Autorizadas (1)    ${Caminho_Screenshots}Pessoas Autorizadas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Acesso por aproximação
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}               Acesso por Aproximação
+    ${nome_print}=          Set Variable    Acesso por aproximação
     Cadastros
     RPA.Windows.Click       Acesso por Aproximação
     RPA.Windows.Get Text    Cadastro de Acesso por Aproximação (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Acesso por Aproximação (1)    ${Caminho_Screenshots}Acesso por aproximação
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Catracas / Terminais de Acesso
-    [Teardown]              Caso aconteça erro        ${Caminho_Screenshots}         Catracas_Terminais de Acesso
+    ${nome_print}=          Set Variable    Catracas / Terminais de Acesso
     Cadastros
     RPA.Windows.Click       Catracas / Terminais de Acesso
     RPA.Windows.Get Text    Cadastro de Catracas / Terminais de Acesso (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Catracas / Terminais de Acesso (1)    ${Caminho_Screenshots}Catracas_Terminais de Acesso
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 PDV -> Locais de Venda
-    [Teardown]    Caso aconteça erro     ${Caminho_Screenshots}PDV/        Locais de Venda
+    ${nome_print}=          Set Variable    Locais de Venda
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    l
     RPA.Windows.Get Text      Cadastro de Locais de Venda (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Locais de Venda (1)    ${Caminho_Screenshots}PDV/Locais de Venda
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 PDV -> PDV
-    [Teardown]    Caso aconteça erro     ${Caminho_Screenshots}PDV/        PDV
+    ${nome_print}=          Set Variable    PDV
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    p
     RPA.Windows.Get Text      Cadastro de PDV (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de PDV (1)    ${Caminho_Screenshots}PDV/PDV
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Câmeras de Contagem
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}            Câmeras de Contagem
+    ${nome_print}=          Set Variable    Câmeras de Contagem
     Cadastros
     RPA.Windows.Click       Câmeras de Contagem
     RPA.Windows.Get Text    Cadastro de Câmeras de Contagem (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Câmeras de Contagem (1)    ${Caminho_Screenshots}Câmeras de Contagem
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros -> Empresas
-    [Teardown]    Caso aconteça erro          ${Caminho_Screenshots}Parâmetros/             Empresas
+    ${nome_print}=          Set Variable    Empresas
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros -> Estabelecimentos
-    [Teardown]    Caso aconteça erro      ${Caminho_Screenshots}Parâmetros/         Estabelecimentos
+    ${nome_print}=          Set Variable    Estabelecimentos
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
@@ -186,11 +176,10 @@ Parâmetros -> Estabelecimentos
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros -> Usuários
-    [Teardown]    Caso aconteça erro          ${Caminho_Screenshots}Parâmetros/            Usuários
+    ${nome_print}=          Set Variable    Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
@@ -201,7 +190,7 @@ Parâmetros -> Usuários
      RPA.Windows.Click         Sim
 
 Parâmetros -> Grupos de Usuários
-    [Teardown]    Caso aconteça erro        ${Caminho_Screenshots}Parâmetros/           Grupos de Usuários
+    ${nome_print}=          Set Variable    Grupos de Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    g
@@ -212,7 +201,7 @@ Parâmetros -> Grupos de Usuários
      RPA.Windows.Click         Sim
 
 Parâmetros -> Configurações de Estação
-    [Teardown]    Caso aconteça erro              ${Caminho_Screenshots}Parâmetros/                 Configurações de Estação
+    ${nome_print}=          Set Variable    Configurações de Estação
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    c
@@ -222,7 +211,7 @@ Parâmetros -> Configurações de Estação
     Fechar janela
 
 Parâmetros -> Configurações de Bilheteria
-    [Teardown]    Caso aconteça erro              ${Caminho_Screenshots}Parâmetros/                 Configurações de Bilheteria
+    ${nome_print}=          Set Variable    Configurações de Bilheteria
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    o
@@ -234,5 +223,3 @@ Parâmetros -> Configurações de Bilheteria
     RPA.Desktop.Press Keys    right
     RPA.Desktop.Press Keys    enter
 
-Encerrar
-    Encerrar tudo

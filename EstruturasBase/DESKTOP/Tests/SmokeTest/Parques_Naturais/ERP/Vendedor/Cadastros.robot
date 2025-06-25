@@ -2,6 +2,7 @@
 Documentation    Smoke Test: Vendedor
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_VENDEDOR
+Suite Teardown   Encerrar Tudo
 
 
 *** Variables ***
@@ -24,8 +25,7 @@ Terceiros
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
     RPA.Windows.Click         Cancelar (F3)
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Permissões de Acesso
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Permissões de Acesso
@@ -45,8 +45,7 @@ Parâmetros > Empresas
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Estabelecimentos
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Estabelecimentos
@@ -56,8 +55,7 @@ Parâmetros > Estabelecimentos
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Usuários
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Usuários
@@ -76,8 +74,7 @@ Parâmetros > Grupo de Usuários
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Configurações da Estação
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Configurações da Estação
@@ -89,6 +86,6 @@ Parâmetros > Configurações da Estação
     BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    
     

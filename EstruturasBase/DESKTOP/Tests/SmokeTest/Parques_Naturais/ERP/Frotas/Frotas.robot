@@ -23,8 +23,7 @@ Lançamento de Viagem
     RPA.Windows.Get Text    Lançamento de Viagem (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Lançamento de Viagem (1)                             ${Caminho_Screenshots}Lançamento de Viagem
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Adiantamentos/Devoluções > Adiantamentos
     [Teardown]              Caso aconteça erro                                ${Caminho_Screenshots}Adiantamentos_Devoluções\             Adiantamentos
@@ -33,8 +32,7 @@ Adiantamentos/Devoluções > Adiantamentos
     RPA.Windows.Get Text    Cadastro de Adiantamentos - Motorista (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Adiantamentos - Motorista (1)       ${Caminho_Screenshots}Adiantamentos_Devoluções\Adiantamentos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Adiantamentos/Devoluções > Devoluções
     [Teardown]              Caso aconteça erro                            ${Caminho_Screenshots}Adiantamentos_Devoluções\             Devoluções
@@ -43,8 +41,7 @@ Adiantamentos/Devoluções > Devoluções
     RPA.Windows.Get Text    Cadastro de Devolução - Motorista (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Devolução - Motorista (1)       ${Caminho_Screenshots}Adiantamentos_Devoluções\Devoluções
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Acerto de Viagens
     [Teardown]              Caso aconteça erro                            ${Caminho_Screenshots}           Acerto de Viagens
@@ -52,8 +49,7 @@ Acerto de Viagens
     RPA.Windows.Get Text    Acerto de Viagens (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Acerto de Viagens (1)       ${Caminho_Screenshots}Acerto de Viagens
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Ordem de Carregamento
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}             Ordem de Carregamento
@@ -61,8 +57,7 @@ Ordem de Carregamento
     RPA.Windows.Get Text    Ordem de Carregamento (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Ordem de Carregamento (1)                             ${Caminho_Screenshots}Ordem de Carregamento
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Gerenciamento de Ordem De Carregamento
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}             Gerenciamento de Ordem De Carregamento
@@ -81,8 +76,7 @@ CRT
     RPA.Windows.Get Text    CRT (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  CRT (1)                             ${Caminho_Screenshots}CRT
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Enlastre
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}             Enlastre
@@ -90,8 +84,7 @@ Enlastre
     RPA.Windows.Get Text    Enlastre 
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Enlastre                              ${Caminho_Screenshots}Enlastre
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Conferência de Lançamentos de Viagem 
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}             Conferência de Lançamentos de Viagem 
@@ -109,8 +102,7 @@ Revisões Preventivas
     RPA.Windows.Get Text    Manutenção de Revisões Preventivas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Manutenção de Revisões Preventivas (1)                             ${Caminho_Screenshots}Revisões Preventivas
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Lançamentos de Infrações
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}             Lançamentos de Infrações
@@ -129,8 +121,7 @@ Agenciamento Transporte > Propostas de Transporte
     RPA.Windows.Get Text    Proposta (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Proposta (1)                             ${Caminho_Screenshots}Agenciamento Transporte\Propostas de Transporte
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Agenciamento Transporte > Pedidos de Transporte
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Agenciamento Transporte\             Pedidos de Transporte
@@ -139,8 +130,7 @@ Agenciamento Transporte > Pedidos de Transporte
     RPA.Windows.Get Text    Pedido (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Pedido (1)                             ${Caminho_Screenshots}Agenciamento Transporte\Pedidos de Transporte
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
-Encerrar
-    Encerrar tudo
+
+    

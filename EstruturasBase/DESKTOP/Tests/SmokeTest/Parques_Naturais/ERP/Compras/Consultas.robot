@@ -167,5 +167,5 @@ Consultas Personalizadas
     RPA.Windows.Click       Fechar
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

@@ -1,11 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Clube
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_clube
+Suite Setup         Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Clube/Utilitários/    
+${nome_print}
+${nome_exe}=    cde_win_clube
 
 *** Keywords ***
 
@@ -16,7 +20,8 @@ Utilitários
 *** Test Cases ***
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Utilitários
+    ${nome_print}=     Set Variable     Favoritos
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -26,7 +31,8 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
+    ${nome_print}=     Set Variable     Papel de Parede
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -35,7 +41,8 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Estilo do Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
+    ${nome_print}=     Set Variable     Estilo do Menu Principal
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -44,7 +51,8 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Controle de Acessos
+    ${nome_print}=     Set Variable     Controle de Acessos
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -54,7 +62,8 @@ Controle de Acessos
     Fechar janela
 
 Configuração de Liberação
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configuração de Liberação
+    ${nome_print}=     Set Variable     Configuração de Liberação
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -62,12 +71,11 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
-
-Relatórios Personalizados > Cadastro de Categorias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                             Cadastro de Categorias
+Cadastro de Categorias
+    ${nome_print}=     Set Variable     Cadastro de Categorias
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -76,11 +84,11 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     
-Relatórios Personalizados > Cadastro de Relatórios
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
+Cadastro de Relatórios
+    ${nome_print}=     Set Variable     Cadastro de Relatórios
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -89,11 +97,11 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Criar Usuario de Log
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
+    ${nome_print}=     Set Variable     Criar Usuario de Log
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Criar Usuário de Log
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
@@ -101,16 +109,18 @@ Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Verifica transações abertas
+    ${nome_print}=     Set Variable     Verifica transações abertas
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
-     RPA.Windows.Click      Carregar
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
 
 Email de Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Email de Terceiros
+    ${nome_print}=     Set Variable     Email de Terceiros
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Email de Terceiros
     RPA.Windows.Get Text    E-mails de Terceiros (1)
@@ -119,7 +129,8 @@ Email de Terceiros
     RPA.Windows.Click       Fechar
 
 Testador de Cartão
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Testador de Cartão
+    ${nome_print}=     Set Variable     Testador de Cartão
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Testador de Cartão
     RPA.Windows.Get Text    Teste de Cartões (1)
@@ -127,12 +138,10 @@ Testador de Cartão
     RPA.Windows.Click       Fechar
 
 Leitura de Cartão
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Leitura de Cartão
+    ${nome_print}=     Set Variable     Leitura de Cartão
+    [Tags]     Clube    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Leitura de Cartão
     RPA.Windows.Get Text    Leitura de Cartão (1)
     BaseDesktop.Screenshot  Leitura de Cartão (1)    ${Caminho_Screenshots}Leitura de Cartão
     Fechar janela
-
-Encerrar
-    Encerrar tudo

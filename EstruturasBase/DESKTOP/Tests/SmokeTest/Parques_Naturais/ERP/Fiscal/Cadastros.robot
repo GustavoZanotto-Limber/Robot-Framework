@@ -51,8 +51,7 @@ Países
     RPA.Windows.Get Text    Cadastro de Países (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Países (1)    ${Caminho_Screenshots}Países
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estados
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Estados
@@ -60,8 +59,7 @@ Estados
     RPA.Windows.Get Text    Cadastro de Estados (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Estados (1)    ${Caminho_Screenshots}Estados
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Municípios
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Municípios
@@ -69,8 +67,7 @@ Municípios
     RPA.Windows.Get Text    Cadastro de Municípios (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Municípios (1)    ${Caminho_Screenshots}Municípios
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Localidades
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Localidades
@@ -78,8 +75,7 @@ Localidades
     RPA.Windows.Get Text    Cadastro de Localidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Regiões
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Regiões
@@ -87,8 +83,7 @@ Regiões
     RPA.Windows.Get Text    Cadastro de Regiões (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Regiões (1)    ${Caminho_Screenshots}Regiões
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Obra de construção civil(CNO)
     [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Obra de construção civil(CNO)
@@ -96,8 +91,7 @@ Obra de construção civil(CNO)
     RPA.Windows.Get Text    Cadastro de obra de construção civil (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de obra de construção civil (1)    ${Caminho_Screenshots}Obra de construção civil(CNO)
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Mensagem de Notas Fiscais
     [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Mensagem de Notas Fiscais
@@ -105,8 +99,7 @@ Fiscal > Mensagem de Notas Fiscais
     RPA.Desktop.Press Keys  E
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Mensagens de Notas Fiscais (1)    ${Caminho_Screenshots}Fiscal/Mensagem de Notas Fiscais
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Espécies de Documentos
     [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Espécies de Documentos
@@ -125,8 +118,7 @@ Fiscal > Classificação Fiscal
     RPA.Windows.Get Text    Cadastro de Classificações Fiscais (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Classificações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Classificação Fiscal
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Operações Fiscais
     [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Operações Fiscais
@@ -135,8 +127,7 @@ Fiscal > Operações Fiscais
     RPA.Windows.Get Text    Cadastro de Operações Fiscais (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Operações Fiscais
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Séries
     [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Séries
@@ -145,8 +136,7 @@ Fiscal > Séries
     RPA.Windows.Get Text    Cadastro de Séries (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Séries (1)    ${Caminho_Screenshots}Fiscal/Séries
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > CFOP's
     [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           CFOP's
@@ -155,8 +145,7 @@ Fiscal > CFOP's
     RPA.Windows.Get Text    Cadastro de CFOP's (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de CFOP's (1)    ${Caminho_Screenshots}Fiscal/CFOP's
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Incidência Contrib Previdenciária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           CFOP's
@@ -177,8 +166,7 @@ Fiscal > IPI > Tabela Tributária
     RPA.Windows.Get Text    Cadastro de Tabela Tributária do IPI (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tabela Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > IPI > Situação Tributária
     [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/           Situação Tributária
@@ -188,8 +176,7 @@ Fiscal > IPI > Situação Tributária
     RPA.Windows.Get Text    Cadastro de Situação Tributária do IPI (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Situação Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Tabela Tributária
     [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária
@@ -199,8 +186,7 @@ Fiscal > ICMS > Tabela Tributária
     RPA.Windows.Get Text    Cadastro de Tabelas Tributária (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tabelas Tributária (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Situação Tributária
     [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Situação Tributária
@@ -210,8 +196,7 @@ Fiscal > ICMS > Situação Tributária
     RPA.Windows.Get Text    Cadastro de Situações Tributárias do ICMS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Situações Tributárias do ICMS (1)    ${Caminho_Screenshots}Fiscal/ICMS/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Tabela Tributária - FCP
     [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária - FCP
@@ -221,8 +206,7 @@ Fiscal > ICMS > Tabela Tributária - FCP
     RPA.Windows.Get Text    Cadastro da Tabela Tributária FCP (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro da Tabela Tributária FCP (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária - FCP
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Fiscal > ICMS > Configuração Benefício Fiscal
@@ -348,8 +332,7 @@ SPED ECF > Parte A e-Lalur
     RPA.Windows.Get Text    Lançamentos da Parte A do e-Lalur (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Lançamentos da Parte A do e-Lalur (1)    ${Caminho_Screenshots}SPED ECF/Parte A e-Lalur
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 SPED ECF > Parte B e-Lalur
    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}SPED ECF/                         Parte B e-Lalur
@@ -401,6 +384,6 @@ SPED ECF > Parte B e-Lacs (Sem Reflexo na Parte A)
    Fechar Janela
    RPA.Windows.Click       Sim
 
-Encerrar
-    Encerrar tudo
+
+    
     

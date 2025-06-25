@@ -36,5 +36,5 @@ Fluxo de Caixa Realizado
     RPA.Windows.Click         OK
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

@@ -1,12 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Compras
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_compras
-
+Suite Setup         Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Compras/Cadastros/    
+${nome_print}
+${nome_exe}=    cde_win_compras
 
 *** Keywords ***
 
@@ -14,38 +17,39 @@ ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTe
 *** Test Cases ***
 
 Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Terceiros
+    ${nome_print}=     Set Variable     Terceiros
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Get Text    Cadastro de Terceiros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
     RPA.Windows.Click       Cancelar (F3)
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Categorias de Terceiros
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                            Categorias de Terceiros
+    ${nome_print}=     Set Variable     Categorias de Terceiros
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Categorias de Terceiros
     RPA.Windows.Get Text    Cadastro de Categorias de Terceiros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Categorias de Terceiros (1)    ${Caminho_Screenshots}Categorias de Terceiros
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Grupo de Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Grupo de Terceiros
+    ${nome_print}=     Set Variable     Grupo de Terceiros
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Grupo de Terceiros
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Grupo de Terceiros (1)    ${Caminho_Screenshots}Grupo de Terceiros
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Limite de Crédito
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Limite de Crédito
+    ${nome_print}=     Set Variable     Limite de Crédito
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Limite de Crédito
     RPA.Windows.Get Text    Cadastro de Limite de Crédito (1)
@@ -56,161 +60,162 @@ Limite de Crédito
     Fechar Janela
 
 Itens > Itens
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Itens
+    ${nome_print}=     Set Variable     Itens
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  I
     RPA.Windows.Get Text    Cadastro de Itens (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Itens (1)    ${Caminho_Screenshots}Itens/Itens
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Depósitos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Depósitos
+    ${nome_print}=     Set Variable     Depósitos
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  D
     RPA.Windows.Get Text    Cadastro de Depósitos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Depósitos (1)    ${Caminho_Screenshots}Itens/Depósitos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Unidades
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Unidades
+    ${nome_print}=     Set Variable     Unidades
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  U
     RPA.Windows.Get Text    Cadastro de Unidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Unidades (1)    ${Caminho_Screenshots}Itens/Unidades
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Estampas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Estampas
+    ${nome_print}=     Set Variable     Estampas
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  P
     RPA.Windows.Get Text    Cadastro de Estampas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Estampas (1)    ${Caminho_Screenshots}Itens/Estampas
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Marcas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Marcas
+    ${nome_print}=     Set Variable     Marcas
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  R
     RPA.Windows.Get Text    Cadastro de Marcas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Marcas (1)    ${Caminho_Screenshots}Itens/Marcas
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Culturas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Culturas
+    ${nome_print}=     Set Variable     Culturas
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  L
     RPA.Windows.Get Text    Cadastro de Culturas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Culturas (1)    ${Caminho_Screenshots}Itens/Culturas
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Cores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Cores
+    ${nome_print}=     Set Variable     Cores
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Cadastro de Cores (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Cores (1)    ${Caminho_Screenshots}Itens/Cores
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Tamanhos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Tamanhos
+    ${nome_print}=     Set Variable     Tamanhos
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Cadastro de Tamanhos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tamanhos (1)    ${Caminho_Screenshots}Itens/Tamanhos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Tabela de Preços
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Tabela de Preços
+    ${nome_print}=     Set Variable     Tabela de Preços
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  B
     RPA.Windows.Get Text    Tabela de Preços (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Tabela de Preços (1)    ${Caminho_Screenshots}Itens/Tabela de Preços
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Tabela de Umidade
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/             Tabela de Umidade
+    ${nome_print}=     Set Variable     Tabela de Umidade
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  A       
     RPA.Windows.Get Text    Cadastro de Índices de Descontos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Índices de Descontos (1)    ${Caminho_Screenshots}Itens/Tabela de Umidade
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Descontos para Grãos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Descontos para Grãos
+    ${nome_print}=     Set Variable     Descontos para Grãos
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Windows.Click         Descontos para Grãos  
     RPA.Windows.Get Text      Cadastro de Descontos/Classificações para Grãos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Descontos/Classificações para Grãos (1)    ${Caminho_Screenshots}Itens/Descontos para Grãos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Classificação de Grãos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Classificação de Grãos
+    ${nome_print}=     Set Variable     Classificação de Grãos
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    C  
     RPA.Windows.Get Text      Cadastro de Classificação de Grãos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Classificação de Grãos (1)    ${Caminho_Screenshots}Itens/Classificação de Grãos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Grades
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Grades
+    ${nome_print}=     Set Variable     Grades
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    G  
     RPA.Windows.Get Text      Cadastro de Grades (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Grades (1)    ${Caminho_Screenshots}Itens/Grades
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Fabricantes
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Fabricantes
+    ${nome_print}=     Set Variable     Fabricantes
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    F  
     RPA.Windows.Get Text      Cadastro de Fabricantes (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Fabricantes (1)    ${Caminho_Screenshots}Itens/Fabricantes
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Tipo Serviço
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Tipo Serviço
+    ${nome_print}=     Set Variable     Tipo Serviço
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    V  
@@ -220,7 +225,8 @@ Itens > Tipo Serviço
     Fechar janela
 
 Itens > Gênero produto
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Gênero produto
+    ${nome_print}=     Set Variable     Gênero produto
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    N  
@@ -230,7 +236,8 @@ Itens > Gênero produto
     Fechar janela
 
 Itens > Safras
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Itens/                         Safras
+    ${nome_print}=     Set Variable     Safras
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    S 
@@ -240,18 +247,19 @@ Itens > Safras
     Fechar janela
     
 Itens > Categorias
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/              Categorias
+    ${nome_print}=     Set Variable     Categorias
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Cadastro de Categorias de Produtos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Categorias de Produtos (1)    ${Caminho_Screenshots}Itens/Categorias
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Sementes > Peneira
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/Sementes/              Peneira
+    ${nome_print}=     Set Variable     Peneira
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Sementes
@@ -259,11 +267,11 @@ Itens > Sementes > Peneira
     RPA.Windows.Get Text    Cadastro de Sementes - Peneiras (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Sementes - Peneiras (1)    ${Caminho_Screenshots}Itens/Sementes/Peneira
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Sementes > Classe
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/Sementes/              Classe
+    ${nome_print}=     Set Variable     Classe
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Sementes
@@ -271,11 +279,11 @@ Itens > Sementes > Classe
     RPA.Windows.Get Text    Cadastro de Sementes - Classes (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Sementes - Classes (1)    ${Caminho_Screenshots}Itens/Sementes/Classe
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Sementes > Cultivar
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/Sementes/              Cultivar
+    ${nome_print}=     Set Variable     Cultivar
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Sementes
@@ -283,11 +291,11 @@ Itens > Sementes > Cultivar
     RPA.Windows.Get Text    Cadastro de Sementes - Cultivar (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Sementes - Cultivar (1)    ${Caminho_Screenshots}Itens/Sementes/Cultivar
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Sementes > Tratamento
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/Sementes/              Tratamento
+    ${nome_print}=     Set Variable     Tratamento
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Sementes
@@ -295,11 +303,11 @@ Itens > Sementes > Tratamento
     RPA.Windows.Get Text    Cadastro de Sementes - Tratamentos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Sementes - Tratamentos (1)    ${Caminho_Screenshots}Itens/Sementes/Tratamento
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Itens > Sementes > Variedade
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Itens/Sementes/              Variedade
+    ${nome_print}=     Set Variable     Variedade
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Sementes
@@ -307,21 +315,21 @@ Itens > Sementes > Variedade
     RPA.Windows.Get Text    Cadastro de Sementes - Variedades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Sementes - Variedades (1)    ${Caminho_Screenshots}Itens/Sementes/Variedade
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Setores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}           Setores    
+    ${nome_print}=     Set Variable     Setores
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Setores
     RPA.Windows.Get Text    Cadastro de Setores (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Setores (1)    ${Caminho_Screenshots}Setores
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Veículos > Veículos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/              Veículos
+    ${nome_print}=     Set Variable     Veículos
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  V
@@ -331,49 +339,50 @@ Veículos > Veículos
     Fechar Janela
 
 Veículos > Tipos de Veículos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/              Tipos de Veículos
+    ${nome_print}=     Set Variable     Tipos de Veículos
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Cadastro de Tipos de Veículos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Veículos (1)    ${Caminho_Screenshots}Veículos/Tipos de Veículos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Observações
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Observações
+    ${nome_print}=     Set Variable     Observações
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Observações
     RPA.Windows.Get Text    Cadastro de Observações Fiscais (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Observações Fiscais (1)    ${Caminho_Screenshots}Observações
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Feriados
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Feriados
+    ${nome_print}=     Set Variable     Feriados
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Feriados
     RPA.Windows.Get Text    Cadastro de Feriados (1)
     RPA.Windows.Click       Cadastrar Feriados deste ano
     BaseDesktop.Screenshot  Cadastro de Feriados (1)    ${Caminho_Screenshots}Feriados
     RPA.Windows.Click       OK
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Tipos de Visitas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tipos de Visitas
+    ${nome_print}=     Set Variable     Tipos de Visitas
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Tipos de Visitas
     RPA.Windows.Get Text    Cadastro de Tipos de Visitas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Visitas (1)    ${Caminho_Screenshots}Tipos de Visitas
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configuração de mensagem para nota fiscal
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Configuração de mensagem para nota fiscal
+    ${nome_print}=     Set Variable     Configuração de mensagem para nota fiscal
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Configuração de mensagem para nota fiscal
     RPA.Windows.Get Text    Configuração de mensagem para nota fiscal (1)
@@ -383,48 +392,49 @@ Configuração de mensagem para nota fiscal
     Fechar Janela
 
 Custos Avulsos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Custos Avulsos
+    ${nome_print}=     Set Variable     Custos Avulsos
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Custos avulsos
     RPA.Windows.Get Text    Cadastro de Custos Avulsos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Custos Avulsos (1)    ${Caminho_Screenshots}Custos Avulsos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Documentos > Tipos de Documentos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Documentos/              Tipos de Documentos
+    ${nome_print}=     Set Variable     Tipos de Documentos
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Documentos
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Cadastro de Tipos de Documentos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Documentos (1)    ${Caminho_Screenshots}Documentos/Tipos de Documentos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Tipos de Requisição de Compra
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Tipos de Requisição de Compra
+    ${nome_print}=     Set Variable     Tipos de Requisição de Compra
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Tipos de Requisição de Compra
     RPA.Windows.Get Text    Tipo de Requisição de Compra (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Tipo de Requisição de Compra (1)    ${Caminho_Screenshots}Tipos de Requisição de Compra
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Países
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Países
+    ${nome_print}=     Set Variable     Países
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Países (1)    ${Caminho_Screenshots}Países
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Estados
+    ${nome_print}=     Set Variable     Estados
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -434,70 +444,70 @@ Estados
     RPA.Windows.Click         Sim
 
 Municípios
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Municípios
+    ${nome_print}=     Set Variable     Municípios
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Municípios (1)    ${Caminho_Screenshots}Municípios
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Localidades
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Localidades
+    ${nome_print}=     Set Variable     Localidades
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Regiões
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Regiões
+    ${nome_print}=     Set Variable     Regiões
+    [Tags]     Compras    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Regiões (1)    ${Caminho_Screenshots}Regiões
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Configuração Int. Contábil
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Configuração Int. Contábil
+    ${nome_print}=     Set Variable     Configuração Int. Contábil
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Configuração para Integração Contábil (1)
     RPA.Windows.Click         Cooperado
     BaseDesktop.Screenshot    Configuração para Integração Contábil (1)    ${Caminho_Screenshots}Fiscal/Configuração Int. Contábil
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Classificações Fiscais
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Classificações Fiscais
+    ${nome_print}=     Set Variable     Classificações Fiscais
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Cadastro de Classificações Fiscais (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Classificações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Classificações Fiscais
-    Fechar janela
-    RPA.Windows.Click       Sim
-
+    Fechar com Sim
 
 Fiscal > Mensagem de Notas Fiscais
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Mensagem de Notas Fiscais
+    ${nome_print}=     Set Variable     Mensagem de Notas Fiscais
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    N
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Mensagens de Notas Fiscais (1)    ${Caminho_Screenshots}Fiscal/Mensagem de Notas Fiscais
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Espécies de Documentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Espécies de Documentos
+    ${nome_print}=     Set Variable     Espécies de Documentos
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    E
@@ -508,18 +518,19 @@ Fiscal > Espécies de Documentos
     Fechar janela
 
 Fiscal > Operações Fiscais
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Operações Fiscais
+    ${nome_print}=     Set Variable     Operações Fiscais
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Operações Fiscais
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Simples Nacional > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Simples Nacional/           Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Simples Nacional
@@ -527,11 +538,11 @@ Fiscal > Simples Nacional > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do Simples Nacional (CSOSN) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do Simples Nacional (CSOSN) (1)    ${Caminho_Screenshots}Fiscal/Simples Nacional/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Simples Nacional > Situação Tributária (CSOSN)
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Simples Nacional/           Tabela Tributária
+    ${nome_print}=     Set Variable     Situação Tributária (CSOSN)
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Simples Nacional
@@ -539,33 +550,33 @@ Fiscal > Simples Nacional > Situação Tributária (CSOSN)
     RPA.Windows.Get Text      Cadastro de Situações Tributárias Simples Nacional (CSOSN) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situações Tributárias Simples Nacional (CSOSN) (1)    ${Caminho_Screenshots}Fiscal/Simples Nacional/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Séries
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Séries
+    ${nome_print}=     Set Variable     Séries
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    R
     RPA.Windows.Get Text      Cadastro de Séries (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Séries (1)    ${Caminho_Screenshots}Fiscal/Séries
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > CFOP's
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           CFOP's
+    ${nome_print}=     Set Variable     CFOP's
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de CFOP's (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de CFOP's (1)    ${Caminho_Screenshots}Fiscal/CFOP's
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > IPI > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/           Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IPI
@@ -573,11 +584,11 @@ Fiscal > IPI > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabela Tributária do IPI (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabela Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > IPI > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/           Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IPI
@@ -585,11 +596,11 @@ Fiscal > IPI > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situação Tributária do IPI (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -597,11 +608,11 @@ Fiscal > ICMS > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributária (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributária (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -609,11 +620,11 @@ Fiscal > ICMS > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situações Tributárias do ICMS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situações Tributárias do ICMS (1)    ${Caminho_Screenshots}Fiscal/ICMS/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Tabela Tributária - FCP
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária - FCP
+    ${nome_print}=     Set Variable     Tabela Tributária - FCP
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -621,11 +632,11 @@ Fiscal > ICMS > Tabela Tributária - FCP
     RPA.Windows.Get Text      Cadastro da Tabela Tributária FCP (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro da Tabela Tributária FCP (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária - FCP
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Tabela Tributária - ICMS Monofásico
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária - ICMS Monofásico
+    ${nome_print}=     Set Variable     Tabela Tributária - ICMS Monofásico
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -633,11 +644,11 @@ Fiscal > ICMS > Tabela Tributária - ICMS Monofásico
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do Monofásico (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do Monofásico (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária - ICMS Monofásico
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ICMS > Configuração Benefício Fiscal
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Configuração Benefício Fiscal
+    ${nome_print}=     Set Variable     Configuração Benefício Fiscal
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -648,7 +659,8 @@ Fiscal > ICMS > Configuração Benefício Fiscal
     Fechar janela 
 
 Fiscal > PIS > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/PIS/           Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         PIS
@@ -656,11 +668,11 @@ Fiscal > PIS > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do PIS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do PIS (1)    ${Caminho_Screenshots}Fiscal/PIS/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > PIS > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/PIS/           Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         PIS
@@ -668,11 +680,11 @@ Fiscal > PIS > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situação Tributária PIS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária PIS (1)    ${Caminho_Screenshots}Fiscal/PIS/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > COFINS > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/COFINS/           Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         COFINS
@@ -680,11 +692,11 @@ Fiscal > COFINS > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do COFINS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do COFINS (1)    ${Caminho_Screenshots}Fiscal/COFINS/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > COFINS > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/COFINS/           Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         COFINS
@@ -692,11 +704,11 @@ Fiscal > COFINS > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situação Tributária COFINS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária COFINS (1)    ${Caminho_Screenshots}Fiscal/COFINS/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > CSLL > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/CSLL/           Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         CSLL
@@ -704,11 +716,11 @@ Fiscal > CSLL > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do CSLL (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do CSLL (1)    ${Caminho_Screenshots}Fiscal/CSLL/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > CSLL > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/CSLL/           Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         CSLL
@@ -716,11 +728,11 @@ Fiscal > CSLL > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situação Tributária CSLL (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária CSLL (1)    ${Caminho_Screenshots}Fiscal/CSLL/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > IRPJ > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IRPJ/           Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IRPJ
@@ -728,11 +740,11 @@ Fiscal > IRPJ > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do IRPJ (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > IRPJ > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IRPJ/           Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IRPJ
@@ -740,11 +752,11 @@ Fiscal > IRPJ > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situação Tributária IRPJ (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > ISSQN > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ISSQN/           Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ISSQN
@@ -752,11 +764,11 @@ Fiscal > ISSQN > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabela Tributária ISSQN (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabela Tributária ISSQN (1)    ${Caminho_Screenshots}Fiscal/ISSQN/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Tabela de Alíquota Nacional de Impostos por NCM
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Tabela de Alíquota Nacional de Impostos por NCM
+    ${nome_print}=     Set Variable     Tabela de Alíquota Nacional de Impostos por NCM
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    T
@@ -766,7 +778,8 @@ Fiscal > Tabela de Alíquota Nacional de Impostos por NCM
     Fechar janela
 
 Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa jurídica
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/           Tabela Tributária - Pessoa jurídica
+    ${nome_print}=     Set Variable     Tabela Tributária - Pessoa jurídica
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -775,11 +788,11 @@ Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa jurídica
     RPA.Windows.Get Text      Tabela Tributaria de Retenção de IR (Pessoa Jurídica) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Tabela Tributaria de Retenção de IR (Pessoa Jurídica) (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/Tabela Tributária - Pessoa jurídica
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa Física
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/           Tabela Tributária - Pessoa Física
+    ${nome_print}=     Set Variable     Tabela Tributária - Pessoa Física
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -788,11 +801,11 @@ Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa Física
     RPA.Windows.Get Text      Tabela Tributaria de Retenção de IR (Pessoa Física) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Tabela Tributaria de Retenção de IR (Pessoa Física) (1)   ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/Tabela Tributária - Pessoa Física
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > IR > Cadastro de Serviço
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/           Cadastro de Serviço
+    ${nome_print}=     Set Variable     Cadastro de Serviço
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -801,11 +814,11 @@ Fiscal > Impostos Retidos > IR > Cadastro de Serviço
     RPA.Windows.Get Text      Cadastro de Serviços para Retenção de IRRF (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Serviços para Retenção de IRRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/Cadastro de Serviço
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > CSRF > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/           Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -814,11 +827,11 @@ Fiscal > Impostos Retidos > CSRF > Tabela Tributária
     RPA.Windows.Get Text      Tabela Tributaria de Retenção de PIS/COFINS/CSLL (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Tabela Tributaria de Retenção de PIS/COFINS/CSLL (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/           Cadastro de Serviços
+    ${nome_print}=     Set Variable     Cadastro de Serviços
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -827,11 +840,11 @@ Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
     RPA.Windows.Get Text      Cadastro de Serviços para Retenção de PIS/COFINS/CSLL (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Serviços para Retenção de PIS/COFINS/CSLL (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/Cadastro de Serviços
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa jurídica
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/           Tabela Tributária - Pessoa jurídica
+    ${nome_print}=     Set Variable     Tabela Tributária - Pessoa jurídica
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -840,11 +853,11 @@ Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa jurídica
     RPA.Windows.Get Text      Tabela Tributaria de Retenção de INSS (Pessoa Jurídica) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Tabela Tributaria de Retenção de INSS (Pessoa Jurídica) (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/Tabela Tributária - Pessoa jurídica
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa Física
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/           Tabela Tributária - Pessoa Física
+    ${nome_print}=     Set Variable     Tabela Tributária - Pessoa Física
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -853,11 +866,11 @@ Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa Física
     RPA.Windows.Get Text      Tabela Tributaria de Retenção de INSS (Pessoa Física) (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Tabela Tributaria de Retenção de INSS (Pessoa Física) (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/Tabela Tributária - Pessoa Física
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/           Cadastro de Serviços
+    ${nome_print}=     Set Variable     Cadastro de Serviços
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -866,11 +879,11 @@ Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
     RPA.Windows.Get Text      Cadastro de Serviços para Retenção de INSSRF (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Serviços para Retenção de INSSRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/Cadastro de Serviços
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Impostos Retidos > SEST/SENAT
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/Impostos Retidos/          SEST_SENAT
+    ${nome_print}=     Set Variable     SEST_SENAT
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -878,88 +891,88 @@ Fiscal > Impostos Retidos > SEST/SENAT
     RPA.Windows.Get Text      Cadastro de Tabela Tributária de SEST/SENAT (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Tabela Tributária de SEST/SENAT (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/SEST_SENAT
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscal > Classificações de Serviços Prestado - REINF
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/       Classificações de Serviços Prestado - REINF
+    ${nome_print}=     Set Variable     Classificações de Serviços Prestado - REINF
+    [Tags]     Compras    Fiscal   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    V
     RPA.Windows.Get Text      Classificações de Serviços Prestado - REINF (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Classificações de Serviços Prestado - REINF (1)    ${Caminho_Screenshots}Fiscal/Classificações de Serviços Prestado - REINF
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Financeiro > Portadores
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Financeiro/          Portadores
+    ${nome_print}=     Set Variable     Portadores
+    [Tags]     Compras    Financeiro   SmokeTest
     Cadastros
     RPA.Windows.Click         Financeiro
     RPA.Desktop.Press Keys    P
     RPA.Windows.Get Text      Cadastro de Portadores (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Portadores (1)    ${Caminho_Screenshots}Financeiro/Portadores
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Financeiro > Formas de Pagamento
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Financeiro/          Formas de Pagamento
+    ${nome_print}=     Set Variable     Formas de Pagamento
+    [Tags]     Compras    Financeiro   SmokeTest
     Cadastros
     RPA.Windows.Click         Financeiro
     RPA.Desktop.Press Keys    F
     RPA.Windows.Get Text      Formas de Pagamento (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Formas de Pagamento (1)    ${Caminho_Screenshots}Financeiro/Formas de Pagamento
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Empresas
+    ${nome_print}=     Set Variable     Empresas
+    [Tags]     Compras    Parâmetros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot                  Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Estabelecimentos
+    ${nome_print}=     Set Variable     Estabelecimentos
+    [Tags]     Compras    Parâmetros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot                  Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Usuários
+    ${nome_print}=     Set Variable     Usuários
+    [Tags]     Compras    Parâmetros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
     RPA.Windows.Get Text      Cadastro de Usuários (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot                  Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Grupos Usuários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Grupos Usuários
+    ${nome_print}=     Set Variable     Grupos Usuários
+    [Tags]     Compras    Parâmetros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    g
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot                  Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupos Usuários
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Configurações de Estação
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Configurações de Estação
+    ${nome_print}=     Set Variable     Configurações de Estação
+    [Tags]     Compras    Parâmetros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    c
@@ -969,18 +982,19 @@ Parâmetros > Configurações de Estação
     Fechar janela
 
 Parâmetros > Sistema Web
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Sistema Web
+    ${nome_print}=     Set Variable     Sistema Web
+    [Tags]     Compras    Parâmetros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    I
     RPA.Windows.Get Text      Cadastro de Login Portal Web (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Login Portal Web (1)    ${Caminho_Screenshots}Parâmetros/Sistema Web
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Configuração para Entrada de CT-e
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Configuração para Entrada de CT-e
+    ${nome_print}=     Set Variable     Configuração para Entrada de CT-e
+    [Tags]     Compras    Parâmetros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    O
@@ -990,6 +1004,3 @@ Parâmetros > Configuração para Entrada de CT-e
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Configurações para Entrada de CT-e (1)    ${Caminho_Screenshots}Parâmetros/Configuração para Entrada de CT-e
     Fechar janela
-
-Encerrar
-    Encerrar Tudo

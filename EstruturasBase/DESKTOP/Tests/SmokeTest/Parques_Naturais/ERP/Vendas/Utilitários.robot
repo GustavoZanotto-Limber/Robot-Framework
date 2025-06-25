@@ -36,7 +36,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Papel de Parede
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -53,8 +53,7 @@ Configurar Menu Pincipal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurar Barra de Atalhos
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
@@ -63,8 +62,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estilo do Menu Principal
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
@@ -94,8 +92,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Relatórios Personalizados > Cadastro de Categorias
@@ -108,8 +105,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
@@ -121,8 +117,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Criar Usuario de Log
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
@@ -183,8 +178,7 @@ Configurador de Impressões > Ordem se Serviço
     RPA.Windows.Get Text    Configurador de Impressões - Ordem de Serviço (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Ordem de Serviço (1)    ${Caminho_Screenshots}Configurador de Impressões/Ordem se Serviço
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Saídas_Vendas
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Saídas_Vendas
@@ -194,8 +188,7 @@ Configurador de Impressões > Saídas_Vendas
     RPA.Windows.Get Text    Configurador de Impressões - Saídas/Vendas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Saídas/Vendas (1)    ${Caminho_Screenshots}Configurador de Impressões/Saídas_Vendas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 PDV > Atualizar Produtos
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}PDV/           Atualizar Produtos
@@ -252,6 +245,7 @@ Agenda > Consulta
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Consulta de Agendamentos (1)
     RPA.Desktop.Press Keys    0
+    
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Consulta de Agendamentos (1)    ${Caminho_Screenshots}Agenda/Consulta
     RPA.Windows.Click         Confirmar
@@ -275,8 +269,7 @@ Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Integração WhatsApp > Configuração para Integração
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Integração WhatsApp/           Configuração para Integração
@@ -444,5 +437,5 @@ Configuração de Certificado Digital
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

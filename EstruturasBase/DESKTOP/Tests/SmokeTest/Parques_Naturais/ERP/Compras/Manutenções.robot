@@ -24,8 +24,7 @@ Entradas/Compras > Incluir/Alterar
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)   ${Caminho_Screenshots}Entradas_Compras/Incluir_Alterar 
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Entradas/Compras > Consultar
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/              Consultar
@@ -35,8 +34,7 @@ Entradas/Compras > Consultar
     RPA.Windows.Get Text    Entradas/Compras - Consultar (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Entradas/Compras > Excluir Entradas/Compras
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/              CoExcluir Entradas/Comprasnsultar
@@ -118,8 +116,7 @@ Requisição de Compra > Manutenção
     RPA.Windows.Get Text    Requisição de Compras (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Requisição de Compras (1)    ${Caminho_Screenshots}Requisição de Compra/Manutenção
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Requisição de Compra > Consultar
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Compra/              Consultar
@@ -193,8 +190,7 @@ Pedidos de Compra > Pedidos de Compra
     RPA.Windows.Get Text    Pedidos de Compra (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Pedidos de Compra (1)    ${Caminho_Screenshots}Pedidos de Compra/Pedidos de Compra
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Pedidos de Compra > Aprovação/Rejeição
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Pedidos de Compra/              Aprovação_Rejeição
@@ -230,8 +226,7 @@ Pedidos de Compra > Modelo de Impressão
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configuração de Layout Personalizado (1)    ${Caminho_Screenshots}Pedidos de Compra/Modelo de Impressão
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Consulta de Notas Fiscais Emitidas
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}          Consulta de Notas Fiscais Emitidas
@@ -351,8 +346,7 @@ Transferência entre Terceiros (NF) > Transferência entre Terceiros
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Transferências entre Terceiros (NF) (1)    ${Caminho_Screenshots}Transferência entre Terceiros (NF)/Transferência entre Terceiro
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Transferência entre Terceiros (NF) > Transferências Pendentes
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Transferência entre Terceiros (NF)/              Transferências Pendentes
@@ -384,5 +378,5 @@ Conferência Valores IPI Entrada
     BaseDesktop.Screenshot  Conferência Valores IPI Entrada (1)    ${Caminho_Screenshots}Conferência Valores IPI Entrada
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

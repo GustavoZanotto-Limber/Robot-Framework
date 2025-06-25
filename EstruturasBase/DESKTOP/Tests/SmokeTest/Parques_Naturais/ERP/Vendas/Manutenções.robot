@@ -24,8 +24,7 @@ Saídas/Vendas > Incluir/Alterar - Sem Fechamento
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Sem Fechamento (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Sem Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Incluir_Alterar - Sem Fechamento
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Saídas/Vendas > Incluir - Com Fechamento
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Incluir - Com Fechamento
@@ -35,8 +34,7 @@ Saídas/Vendas > Incluir - Com Fechamento
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Com Fechamento (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Incluir - Com Fechamento
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Saídas/Vendas > Fechar Saídas/Vendas Abertas
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Fechar Saídas_Vendas Abertas
@@ -46,8 +44,7 @@ Saídas/Vendas > Fechar Saídas/Vendas Abertas
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Com Fechamento (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Fechar Saídas_Vendas Abertas
-    Fechar janela
-    RPA.Windows.Click         Sim    
+    Fechar com Sim    
 
 Saídas/Vendas > Alterar Saídas/Vendas
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Alterar Saídas_Vendas
@@ -111,8 +108,7 @@ Ordem de Serviço > Abrir Ordem de Serviço
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Saidas/Vendas - Abertura de Ordem de Serviço (1)      ${Caminho_Screenshots}Ordem de Serviço/Abrir Ordem de Serviço
     RPA.Windows.Click         OK
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Ordem de Serviço > Movimentar Ordem de Serviço
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                         Movimentar Ordem de Serviço
@@ -134,8 +130,7 @@ Ordem de Serviço > Fechar Ordem de Serviço
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Saidas/Vendas - Fechamento de Ordem de Serviço (1)    ${Caminho_Screenshots}Ordem de Serviço/Fechar Ordem de Serviço
     RPA.Windows.Click         OK
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Ordem de Serviço > Alterar Ordem de Serviço
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Ordem de Serviço/                         Alterar Ordem de Serviço
@@ -184,8 +179,7 @@ Saídas para Venda Ambulante > Cadastro de Motivo de Retorno de Vendas Ambulante
     RPA.Windows.Get Text      Cadastro de Motivo de Retorno de Vendas Ambulantes (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Motivo de Retorno de Vendas Ambulantes (1)    ${Caminho_Screenshots}Saídas para Venda Ambulante/Cadastro de Motivo de Retorno de Vendas Ambulantes
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Saídas para Venda Ambulante > Saídas para Venda Ambulante
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas para Venda Ambulante/                         Saídas para Venda Ambulante
@@ -195,8 +189,7 @@ Saídas para Venda Ambulante > Saídas para Venda Ambulante
     RPA.Windows.Get Text      Lançamento de Saída para Venda Ambulante (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Lançamento de Saída para Venda Ambulante (1)    ${Caminho_Screenshots}Saídas para Venda Ambulante/Saídas para Venda Ambulante
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Saídas para Venda Ambulante > Controle de Venda e Devoluções de Saídas para Venda Ambulante
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas para Venda Ambulante/                         Controle de Venda e Devoluções de Saídas para Venda Ambulante
@@ -293,8 +286,7 @@ Demais Operações de Saída > Agendamentos > Contato
     RPA.Windows.Get Text      Registro de Contato (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Registro de Contato (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Contato
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Demais Operações de Saída > Agendamentos > Agendamento
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/                         Agendamento
@@ -356,8 +348,7 @@ Demais Operações de Saída > Condicional > Inclusão de Saídas em Condicional
     RPA.Windows.Get Text      Saída em Condicional (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Saída em Condicional (1)    ${Caminho_Screenshots}Demais Operações de Saída/Condicional/Inclusão de Saídas em Condicional
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Demais Operações de Saída > Condicional > Manutenção/consulta de saídas em condicional
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Demais Operações de Saída/Condicional/                         Manutenção_consulta de saídas em condicional
@@ -568,8 +559,7 @@ Documentos Fiscais > ECF > Mapa Resumo (Redução Z)
     RPA.Windows.Get Text      Mapa Resumo da ECF (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Mapa Resumo da ECF (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Mapa Resumo (Redução Z)
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 # TODO:Ajustar o ambiente para testar.
 Documentos Fiscais > MDF-e > Manifesto de Documentos Fiscais
@@ -612,8 +602,7 @@ Pedidos > Pedidos de Venda > Pedido de Venda
     RPA.Windows.Get Text      Pedidos de Venda (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pedido de Venda
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Pedidos > Pedidos de Venda > Zeramento de Pedido
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Zeramento de Pedido
@@ -624,8 +613,7 @@ Pedidos > Pedidos de Venda > Zeramento de Pedido
     RPA.Windows.Get Text      Zeramento de Pedido de Venda (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Zeramento de Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Zeramento de Pedido
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Pedidos > Pedidos de Venda > Pré Zeramento de Pedido
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Pré Zeramento de Pedido
@@ -636,8 +624,7 @@ Pedidos > Pedidos de Venda > Pré Zeramento de Pedido
     RPA.Windows.Get Text      Pré Zeramento de Pedido de Venda (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Pré Zeramento de Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pré Zeramento de Pedido
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Pedidos > Pedidos de Venda > Gerar Venda por Pedido de Venda
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Gerar Venda por Pedido de Venda
@@ -659,8 +646,7 @@ Pedidos > Pedidos de Venda > Pedido de Venda Simplificado
     RPA.Windows.Get Text      Pedido de Venda Simplificado
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Pedido de Venda Simplificado    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pedido de Venda Simplificado
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Pedidos > Pedidos de Venda > Manutenção de Pedido de Venda
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Manutenção de Pedido de Venda
@@ -683,8 +669,7 @@ Pedidos > Pedidos de Venda > Cadastro de Status
     RPA.Windows.Get Text      Cadastro de Status - Pedido de Venda (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Status - Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Cadastro de Status
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Pedidos > Pedidos de Venda > Aprovação/Rejeição
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/                       Aprovação_Rejeição
@@ -744,8 +729,7 @@ Pedidos > Pedidos de Venda > Modelo de Impressão
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Configuração de Layout Personalizado (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Modelo de Impressão
     RPA.Windows.Click         Confirmar
-    Fechar janela
-    RPA.Windows.Click         Sim    
+    Fechar com Sim    
     
 Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Agrupar Pedidos de Venda
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/                       Agrupar Pedidos de Venda
@@ -806,8 +790,7 @@ Pedidos > Pedidos de Transferência
     RPA.Windows.Get Text      Pedido de Transferência (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Pedido de Transferência (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pedidos de Transferência
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Orçamentos > Orçamentos
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Orçamentos/                      Orçamentos
@@ -818,8 +801,7 @@ Orçamentos > Orçamentos
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Orçamentos (1)    ${Caminho_Screenshots}Orçamentos/Orçamentos
     RPA.Windows.Click         OK
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Orçamentos > Consulta
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Orçamentos/                      Consulta
@@ -848,8 +830,7 @@ Controle de Viagens de Vendedores > Lançamento de Viagens
     RPA.Windows.Get Text      Lançamento de Viagens (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Lançamento de Viagens (1)    ${Caminho_Screenshots}Controle de Viagens de Vendedores/Lançamento de Viagens
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Controle de Viagens de Vendedores > Lançamento de Despesas
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle de Viagens de Vendedores/                      Lançamento de Despesas
@@ -859,8 +840,7 @@ Controle de Viagens de Vendedores > Lançamento de Despesas
     RPA.Windows.Get Text      Lançamento de Despesas (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Lançamento de Despesas (1)    ${Caminho_Screenshots}Controle de Viagens de Vendedores/Lançamento de Despesas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Controle de Viagens de Vendedores > Relatório de Despesas
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Controle de Viagens de Vendedores/                      Relatório de Despesas
@@ -926,8 +906,7 @@ Caixa Operador > Suprimento/Entradas
     RPA.Windows.Get Text      Suprimento/Entradas
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Suprimento/Entradas    ${Caminho_Screenshots}Caixa Operador/Suprimento_Entradas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Caixa Operador > Sangria/Saídas
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                      Sangria_Saídas
@@ -937,8 +916,7 @@ Caixa Operador > Sangria/Saídas
     RPA.Windows.Get Text      Sangria\\Saidas
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Sangria\\Saidas    ${Caminho_Screenshots}Caixa Operador/Sangria_Saídas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Caixa Operador > Fechamento
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Caixa Operador/                      Fechamento
@@ -984,5 +962,5 @@ Controle de Recorrências
     RPA.Windows.Click         OK
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

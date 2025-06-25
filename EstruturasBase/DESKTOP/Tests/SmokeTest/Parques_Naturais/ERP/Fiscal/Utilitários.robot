@@ -28,7 +28,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Papel de Parede
     Utilitários             Papel de Parede
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
@@ -43,8 +43,7 @@ Configurar Menu Pincipal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurar Barra de Atalhos
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
@@ -52,8 +51,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estilo do Menu Principal
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
@@ -80,8 +78,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Relatórios Personalizados > Cadastro de Categorias
@@ -93,8 +90,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Criar Usuario de Log
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
@@ -131,5 +127,5 @@ Reprocessar Contas ECD
     RPA.Windows.Click       Confirmar
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

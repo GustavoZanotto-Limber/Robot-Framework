@@ -26,8 +26,7 @@ Lançamentos > Lançamento - Simplificado
     RPA.Windows.Get Text      Provisões do Contas a Pagar (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Provisões do Contas a Pagar (1)    ${Caminho_Screenshots}Lançamentos/Lançamento - Simplificado
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Lançamentos > Lançamento - Múltiplas Parcelas
     [Teardown]                Caso aconteça erro                                       ${Caminho_Screenshots}Lançamentos/                                    Lançamento - Múltiplas Parcelas
@@ -37,8 +36,7 @@ Lançamentos > Lançamento - Múltiplas Parcelas
     RPA.Windows.Get Text      Lançamento do Contas a Pagar - Múltiplas Parcelas (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Lançamento do Contas a Pagar - Múltiplas Parcelas (1)    ${Caminho_Screenshots}Lançamentos/Lançamento - Múltiplas Parcelas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Lançamentos > Lançamento - Com Baixa Automática
     [Teardown]                Caso aconteça erro                                    ${Caminho_Screenshots}Lançamentos/                                      Lançamento - Com Baixa Automática
@@ -57,8 +55,7 @@ Financiamento
     RPA.Windows.Get Text    Cronograma de Liberação e Amortização (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cronograma de Liberação e Amortização (1)    ${Caminho_Screenshots}Financiamento
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Baixas
     [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}           Baixas
@@ -121,8 +118,7 @@ Adiantamentos > Adiantamento a Fornecedores
     RPA.Windows.Get Text      Adiantamentos a Fornecedores (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Adiantamentos a Fornecedores (1)    ${Caminho_Screenshots}Adiantamentos/Adiantamento a Fornecedores
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Adiantamentos > Extrato dos Adiantamentos/Fornecedor
     [Teardown]                Caso aconteça erro                                ${Caminho_Screenshots}Adiantamentos/                                         Extrato dos Adiantamentos_Fornecedor
@@ -212,8 +208,7 @@ Empenhos
     RPA.Windows.Get Text    Cadastro de Empenhos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Empenhos (1)    ${Caminho_Screenshots}Empenhos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Recibos Avulsos
     [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}                    Recibos Avulsos
@@ -222,8 +217,7 @@ Recibos Avulsos
     RPA.Windows.Get Text    Emissão de Recibo - Contas a Pagar (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Emissão de Recibo - Contas a Pagar (1)    ${Caminho_Screenshots}Recibos Avulsos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Consultas
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Consultas
@@ -360,8 +354,7 @@ Comissões de Venda > Cadastro De Comissão por Faixa de Descontos
     RPA.Windows.Get Text      Cadastro de Comissão por Faixa de Descontos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Comissão por Faixa de Descontos (1)    ${Caminho_Screenshots}Comissões de Venda/Cadastro De Comissão por Faixa de Descontos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Pagamentos Eletrônicos > Pagamentos a Fornecedores > Remessa
     [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Pagamentos Eletrônicos/Pagamentos a Fornecedores                                              Remessa
@@ -399,5 +392,5 @@ Pagamentos Eletrônicos > Pagamentos a Funcionarios
     RPA.Windows.Click         OK
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

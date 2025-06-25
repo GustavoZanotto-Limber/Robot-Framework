@@ -1,11 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Clube
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_clube
+Suite Setup         Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Clube/Relatórios/    
+${nome_print}
+${nome_exe}=    cde_win_clube
 
 *** Keywords ***
 
@@ -16,7 +20,8 @@ Relatórios
 *** Test Cases ***
 
 Sócios
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Sócios
+    ${nome_print}=     Set Variable     Sócios
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Sócios
     RPA.Windows.Get Text    Relação de Sócios (1)
@@ -27,7 +32,8 @@ Sócios
     Fechar janela
 
 Sócios/Agências Bancárias
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Sócios_Agências Bancárias
+    ${nome_print}=     Set Variable     Sócios_Agências Bancárias
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Sócios/Agências Bancárias
     RPA.Windows.Get Text    Sócios/Agências Bancárias (1)
@@ -38,7 +44,8 @@ Sócios/Agências Bancárias
     Fechar janela      
 
 Sócios/Aniversariantes
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Sócios_Aniversariantes
+    ${nome_print}=     Set Variable     Sócios_Aniversariantes
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Sócios/Aniversariantes
     RPA.Windows.Get Text    Relatório de Sócios Aniversariantes (1)
@@ -47,7 +54,8 @@ Sócios/Aniversariantes
     Fechar janela
 
 Sócios/Atividades
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Sócios_Atividades
+    ${nome_print}=     Set Variable     Sócios_Atividades
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Sócios/Atividades
     RPA.Windows.Get Text    Relatório de Atividades (1)
@@ -56,7 +64,8 @@ Sócios/Atividades
     Fechar janela  
 
 Sócios/Local Acesso
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Sócios_Local Acesso
+    ${nome_print}=     Set Variable     Sócios_Local Acesso
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Sócios/Local Acesso
     RPA.Windows.Get Text    Relatório de Sócios Presentes/Local de Acesso (1)
@@ -65,7 +74,8 @@ Sócios/Local Acesso
     Fechar janela    
 
 Sócios/Contagem de Acessos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Sócios_Contagem de Acessos
+    ${nome_print}=     Set Variable     Sócios_Contagem de Acessos
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Sócios/Contagem de Acessos
     RPA.Windows.Get Text    Relatório de Contagem de Acessos (1)
@@ -74,7 +84,8 @@ Sócios/Contagem de Acessos
     Fechar janela   
 
 Reservas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Reservas
+    ${nome_print}=     Set Variable     Reservas
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Reservas
     RPA.Windows.Get Text    Relatório de Reservas (1)
@@ -83,7 +94,8 @@ Reservas
     Fechar janela   
 
 Relatório de Exames
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Relatório de Exames
+    ${nome_print}=     Set Variable     Relatório de Exames
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Relatório de Exames
     RPA.Windows.Get Text    Relatório de Exames (1)
@@ -95,7 +107,8 @@ Relatório de Exames
     RPA.Windows.Click       OK   
 
 Relatório de Mensalidades Recebidas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Relatório de Mensalidades Recebidas
+    ${nome_print}=     Set Variable     Relatório de Mensalidades Recebidas
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Relatório de Mensalidades Recebidas
     RPA.Windows.Get Text    Relatório de Mensalidades Recebidas (1)
@@ -106,7 +119,8 @@ Relatório de Mensalidades Recebidas
     Fechar janela   
 
 Quadro Social
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Quadro Social
+    ${nome_print}=     Set Variable     Quadro Social
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Quadro Social
     RPA.Windows.Get Text    Quadro Social (1)
@@ -114,7 +128,8 @@ Quadro Social
     Fechar janela   
 
 Lista de Presença de Atividades
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Lista de Presença de Atividades
+    ${nome_print}=     Set Variable     Lista de Presença de Atividades
+    [Tags]     Clube    Relatórios   SmokeTest
     Relatórios 
     RPA.Windows.Click       Lista de Presença de Atividades
     RPA.Windows.Get Text    Relatório de Presença de Atividades (1)
@@ -122,7 +137,4 @@ Lista de Presença de Atividades
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Relatório de Presença de Atividades (1)   ${Caminho_Screenshots}Lista de Presença de Atividades
     RPA.Windows.Click       Confirmar
-    Fechar janela   
-
-Encerrar
-    Encerrar tudo
+    Fechar janela

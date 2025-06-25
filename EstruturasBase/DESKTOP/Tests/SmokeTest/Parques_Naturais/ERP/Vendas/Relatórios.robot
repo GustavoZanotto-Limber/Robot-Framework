@@ -725,5 +725,5 @@ Customizados > Borderô de Entregas
     RPA.Windows.Click       Confirmar
     Fechar janela
 
-Encerrar    
-    Encerrar tudo
+    
+    

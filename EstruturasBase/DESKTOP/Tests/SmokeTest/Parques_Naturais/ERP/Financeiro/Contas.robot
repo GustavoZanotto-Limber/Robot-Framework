@@ -24,8 +24,7 @@ Movimentação de Contas
     RPA.Windows.Get Text      Movimento de Contas (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Movimento de Contas (1)    ${Caminho_Screenshots}Movimentação de Contas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Transferências entre Contas
     [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Transferências entre Contas
@@ -44,8 +43,7 @@ Transferências entre Estabelecimentos
     RPA.Windows.Get Text      Transferência Entre Estabelecimentos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Transferência Entre Estabelecimentos (1)    ${Caminho_Screenshots}Transferências entre Contas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Conciliação de Cheques Emitidos
     [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Conciliação de Cheques Emitidos
@@ -139,8 +137,7 @@ Conciliação de Transações Eletrônicas > Configuração de Arquivo de Import
     RPA.Windows.Get Text      Configuração de Arquivo de Importação (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Configuração de Arquivo de Importação (1)    ${Caminho_Screenshots}Conciliação de Transações Eletrônicas/Configuração de Arquivo de Importação
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Apropriação de Custos (Centro de Custos)
     [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Apropriação de Custos (Centro de Custos)
@@ -202,8 +199,7 @@ Geração de Receitas Mapa Resumo > Configuração para geração de receitas
     RPA.Windows.Get Text      Configuração para geração de receitas (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Configuração para geração de receitas (1)    ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Configuração para geração de receitas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Tipos de Deduções
     [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Deduções Adicionais de ISS/            Tipos de Deduções
@@ -214,8 +210,7 @@ Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Tipos de Dedu
     RPA.Windows.Get Text      Cadastro de Tipos de Deduções (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Tipos de Deduções (1)    ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Deduções Adicionais de ISS/Tipos de Deduções
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Lançamento de Deduções
     [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Deduções Adicionais de ISS/             Lançamento de Deduções
@@ -226,8 +221,7 @@ Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Lançamento d
     RPA.Windows.Get Text      Lançamento de Dedução de ISS (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Lançamento de Dedução de ISS (1)    ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Deduções Adicionais de ISS/Lançamento de Deduções
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Consulta de Lançamentos
     [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Deduções Adicionais de ISS/             Consulta de Lançamentos
@@ -271,8 +265,7 @@ Geração de Receitas Mapa Resumo > Mapa Resumo da ECF
     RPA.Windows.Get Text      Mapa Resumo da ECF (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Mapa Resumo da ECF (1)    ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Mapa Resumo da ECF
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Geração de Receitas Mapa Resumo > Fechamento de Caixas
     [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/          Fechamento de Caixas
@@ -412,5 +405,5 @@ Relatórios > Movimentação de Caixa
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

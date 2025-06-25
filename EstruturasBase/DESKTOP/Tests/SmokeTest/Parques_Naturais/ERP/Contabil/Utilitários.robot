@@ -2,6 +2,7 @@
 Documentation    Smoke Test: Contábil
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_ctb
+Suite Teardown   Encerrar Tudo
 
 *** Variables ***
 
@@ -43,8 +44,7 @@ Configurar Menu Pincipal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurar Barra de Atalhos
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
@@ -53,8 +53,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estilo do Menu Principal
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
@@ -84,8 +83,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Relatórios Personalizados > Cadastro de Categorias
@@ -98,8 +96,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
@@ -111,8 +108,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Criar Usuario de Log
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
@@ -164,8 +160,7 @@ Integrações > Sênior > Configuração
     RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Cadastro Configuração Integração Sênior (1)    ${Caminho_Screenshots}Integrações/Sênior/Configuração
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Integrações > DPPH > Lançamentos Funcionários
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Integrações/DPPH/                             Lançamentos Funcionários
@@ -211,8 +206,7 @@ Agenda Telefônica
     RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
     RPA.Windows.Click         Confirmar
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Upload de Arquivos
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Upload de Arquivos
@@ -224,5 +218,5 @@ Upload de Arquivos
     RPA.Windows.Click         OK
     RPA.Windows.Click       Fechar
 
-Encerrar
-    Encerrar tudo
+
+    

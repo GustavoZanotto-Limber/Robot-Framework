@@ -44,5 +44,5 @@ Movimentação de Lotes
     RPA.Windows.Click       OK
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

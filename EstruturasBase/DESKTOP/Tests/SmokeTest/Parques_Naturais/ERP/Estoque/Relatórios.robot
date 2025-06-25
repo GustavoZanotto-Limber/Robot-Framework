@@ -346,5 +346,5 @@ Customizados > Relatório Simplificado / Depósito
     RPA.Windows.Click       Confirmar
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

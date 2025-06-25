@@ -43,8 +43,7 @@ Transferência de Orçamentos
     RPA.Windows.Get Text      Transferência de Orçamentos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Transferência de Orçamentos (1)    ${Caminho_Screenshots}Transferência de Orçamentos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Consultas > Previsão X Realizado
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Consultas/                         Previsão X Realizado
@@ -67,5 +66,5 @@ Consultas > Previsão X Realizado 2
     BaseDesktop.Screenshot    Consulta Previsto X Realizado (1)    ${Caminho_Screenshots}Previsão X Realizado 2
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    
