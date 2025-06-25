@@ -149,6 +149,6 @@ Análise de Terceiro
      RPA.Windows.Click        Carregar
     RPA.Windows.Click         Fechar
 
-Encerrar
-    Encerrar tudo
+
+    
     

@@ -240,5 +240,5 @@ Análise de Terceiro
     BaseDesktop.Screenshot    Análise de Terceiros (1)    ${Caminho_Screenshots}Análise de Terceiro
     RPA.Windows.Click         Fechar
 
-Encerrar
-    Encerrar tudo
+
+    

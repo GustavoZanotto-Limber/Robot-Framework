@@ -1,11 +1,14 @@
 *** Settings ***
 Documentation    Smoke Test: Front
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao Front
+Suite Setup      Iniciar sessao     ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
-
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/Front/Manutenções/
+${Caminho_Screenshots}=   ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/Front/Manutenções/
+${nome_print}
+${nome_exe}=    cde_win_bca_frontR30
 
 *** Keywords ***
 
@@ -16,7 +19,7 @@ Manutenções
 *** Test Cases    ***
 
 Emissão de Bilhetes
-    [Teardown]                Caso aconteça erro         ${Caminho_Screenshots}                        Emissão de Bilhetes
+    ${nome_print}=          Set Variable    Emissão de Bilhetes
     Manutenções
     RPA.Windows.Click         Emissão de Bilhetes
     Sleep                     10s
@@ -28,7 +31,7 @@ Emissão de Bilhetes
     RPA.Windows.Click         Sim
 
 Reimpressão de Bilhetes
-    [Teardown]              Caso aconteça erro             ${Caminho_Screenshots}                            Reimpressão de Bilhetes
+    ${nome_print}=          Set Variable    Reimpressão de Bilhetes
     Manutenções
     RPA.Windows.Click       Reimpressão de Bilhetes
     RPA.Windows.Get Text    Reimpressão de Bilhetes (1)
@@ -39,7 +42,7 @@ Reimpressão de Bilhetes
     Fechar janela
 
 Cancelamentos de Bilhetes
-    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}                             Cancelamento de Bilhetes
+    ${nome_print}=          Set Variable    Cancelamento de Bilhetes
     Manutenções
     RPA.Windows.Click       Cancelamento de Bilhetes
     Sleep                   4s
@@ -48,11 +51,11 @@ Cancelamentos de Bilhetes
     RPA.Desktop.Press Keys  Enter
     Sleep                   1s
     RPA.Windows.Click       Cancelar
-    BaseDesktop.Screenshot  Cancelamento de Bilhetes (1)    ${Caminho_Screenshots}Cancelamento de Bilhetes
+    BaseDesktop.Screenshot  Cancelamento de Bilhetes (1)   ${Caminho_Screenshots}Cancelamento de Bilhetes
     RPA.Windows.Click       Fechar
 
 Remarcações de Visitas
-    [Teardown]              Caso aconteça erro       ${Caminho_Screenshots}                           Remarcações de Visitas
+    ${nome_print}=          Set Variable    Remarcação de Vendas
     Manutenções
     RPA.Windows.Click       Remarcação de Visitas
     Sleep                   4s
@@ -62,18 +65,17 @@ Remarcações de Visitas
     RPA.Windows.Click       Fechar
 
 Reservas -> Lançamentos
-    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Reservas/                           Lançamento de Reservas
+    ${nome_print}=          Set Variable    Lançamento de Reservas
     Manutenções
     RPA.Windows.Click         Reservas
     RPA.Desktop.Press Keys    l
     RPA.Windows.Get Text      Lançamento de Reservas (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Lançamento de Reservas (1)    ${Caminho_Screenshots}Reservas/Lançamento de Reservas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Reservas -> Cancelamento
-    [Teardown]                Caso aconteça erro              ${Caminho_Screenshots}Reservas/                             Cancelamento de Reservas
+    ${nome_print}=          Set Variable    Cancelamento de Reservas
     Manutenções
     RPA.Windows.Click       Reservas
     RPA.Desktop.Press Keys  c
@@ -85,7 +87,7 @@ Reservas -> Cancelamento
     Fechar janela
 
 Reservas -> Alteração
-    [Teardown]                Caso aconteça erro                        ${Caminho_Screenshots}Reservas/                          Alteração de Reservas
+    ${nome_print}=          Set Variable    Alteração de Reservas
     Manutenções
     RPA.Windows.Click         Reservas
     RPA.Desktop.Press Keys    a
@@ -97,7 +99,7 @@ Reservas -> Alteração
     Fechar janela
 
 Reservas -> Remarcação de Visitas
-    [Teardown]                Caso aconteça erro          ${Caminho_Screenshots}Reservas/                          Remarcação de Visitas
+    ${nome_print}=          Set Variable    Remarcação de Visitas
     Manutenções
     RPA.Windows.Click         Reservas
     RPA.Desktop.Press Keys    r
@@ -108,18 +110,17 @@ Reservas -> Remarcação de Visitas
     RPA.Windows.Click         Fechar
 
 Lançamento de Isenções
-    [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}                           Lançamento de Isenções
+    ${nome_print}=          Set Variable    Lançamento de Isenções
     Manutenções
     RPA.Windows.Click       Lançamento de Isenções
     RPA.Windows.Get Text    Lançamento de Isenção (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Lançamento de Isenção (1)    ${Caminho_Screenshots}Lançamento de Isenções
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Lançamento de Veículos
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                           Lançamento de Veículos
+    ${nome_print}=          Set Variable    Lançamento de Veículos
     Manutenções
     RPA.Windows.Click       Lançamento de Veículos
     RPA.Windows.Get Text    Lançamento de Veiculos (1)
@@ -127,11 +128,10 @@ Lançamento de Veículos
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Lançamento de Veiculos (1)    ${Caminho_Screenshots}Lançamento de Veículos
     RPA.Windows.Click       OK
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Lançamento de Vouchers Pendentes
-    [Teardown]              Caso aconteça erro                  ${Caminho_Screenshots}                                     Lançamento de Vouchers Pendentes
+    ${nome_print}=          Set Variable    Lançamento de Vouchers Pendentes
     Manutenções
     RPA.Windows.Click       Lançamento de Vouchers Pendentes
     Sleep                   1s
@@ -141,50 +141,50 @@ Lançamento de Vouchers Pendentes
     RPA.Windows.Click       Fechar
 
 Comissões de Guias -> Pagamento
-    [Teardown]                Caso aconteça erro        ${Caminho_Screenshots}Comissões de Guias/              Pagamento
+    ${nome_print}=          Set Variable    Pagamento de Comissões
     Manutenções
     RPA.Windows.Click         Comissões de Guias
     RPA.Desktop.Press Keys    p
     RPA.Windows.Get Text      Comissões de Guias (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Comissões de Guias (1)    ${Caminho_Screenshots}Comissões de Guias/Pagamento
+    BaseDesktop.Screenshot    Comissões de Guias (1)    ${Caminho_Screenshots}Pagamento
     RPA.Windows.Click         OK
     Fechar janela
 
 Comissões de Guias -> Estorno
-    [Teardown]                Caso aconteça erro          ${Caminho_Screenshots}Comissões de Guias/            Estorno
+    ${nome_print}=          Set Variable    Estorno de Comissões
     Manutenções
     RPA.Windows.Click         Comissões de Guias
     RPA.Desktop.Press Keys    e
     RPA.Windows.Get Text      Estorno de Comissões (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Estorno de Comissões (1)    ${Caminho_Screenshots}Comissões de Guias/Estorno
+    BaseDesktop.Screenshot    Estorno de Comissões (1)    ${Caminho_Screenshots}Estorno
     Fechar janela
 
 Comissões de Guias -> Vincular Guia em Venda
-    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Comissões de Guias/                           Vincular Guia em Venda
+    ${nome_print}=          Set Variable    Vincular Guia em Venda
     Manutenções
     RPA.Windows.Click         Comissões de Guias
     RPA.Desktop.Press Keys    v
     RPA.Windows.Get Text      Vincular Guia em Venda (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Vincular Guia em Venda (1)    ${Caminho_Screenshots}Comissões de Guias/Vincular Guia em Venda
+    BaseDesktop.Screenshot    Vincular Guia em Venda (1)    ${Caminho_Screenshots}Vincular Guia em Venda
     Fechar janela
 
 Comissões de Guias -> Relatório
-    [Teardown]                Caso aconteça erro            ${Caminho_Screenshots}Comissões de Guias/              Relatório
+    ${nome_print}=          Set Variable    Relatório de Comissões
     Manutenções
     RPA.Windows.Click         Comissões de Guias
     RPA.Desktop.Press Keys    r
     RPA.Windows.Get Text      Relatório de Comissões (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    Relatório de Comissões (1)    ${Caminho_Screenshots}Comissões de Guias/Relatório
+    BaseDesktop.Screenshot    Relatório de Comissões (1)    ${Caminho_Screenshots}Relatório
     RPA.Windows.Click       Fechar
     Fechar janela
 
 Devoluções de Vendas
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                         Devoluções de Vendas
+    ${nome_print}=          Set Variable    Devoluções de Vendas
     Manutenções
     RPA.Windows.Click       Devoluções de Vendas
     RPA.Windows.Get Text    Devolução de Vendas (1)
@@ -193,7 +193,7 @@ Devoluções de Vendas
     Fechar janela
 
 Configurações Totem
-    [Teardown]              Caso aconteça erro         ${Caminho_Screenshots}                        Configurações Totem
+    ${nome_print}=          Set Variable    Configurações Totem
     Manutenções
     RPA.Windows.Click       Configurações Totem
     RPA.Windows.Get Text    Configurações Totem (1)
@@ -201,5 +201,5 @@ Configurações Totem
     BaseDesktop.Screenshot  Configurações Totem (1)    ${Caminho_Screenshots}Configurações Totem
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

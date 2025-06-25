@@ -23,8 +23,7 @@ Movimentações de Produtos - Agrupados
     RPA.Windows.Get Text    Movimentações de Produtos Agrupados (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Movimentações de Produtos Agrupados (1)    ${Caminho_Screenshots}Movimentações de Produtos - Agrupados
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Movimentações de Produtos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Movimentações de Produtos 
@@ -33,8 +32,7 @@ Movimentações de Produtos
     RPA.Windows.Get Text    Movimentações de Produtos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Movimentações de Produtos (1)    ${Caminho_Screenshots}Movimentações de Produtos 
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Ajuste/Contagem de Estoque
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Ajuste_Contagem de Estoque 
@@ -43,8 +41,7 @@ Ajuste/Contagem de Estoque
     RPA.Windows.Get Text    Ajuste/Contagem de Estoque (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Ajuste/Contagem de Estoque (1)    ${Caminho_Screenshots}Ajuste_Contagem de Estoque
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Balanço de Estoque
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Balanço de Estoque 
@@ -53,8 +50,7 @@ Balanço de Estoque
     RPA.Windows.Get Text    Balanço de Estoque (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Balanço de Estoque (1)    ${Caminho_Screenshots}Balanço de Estoque
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Quantidade Mínima/Máxima de Itens por Estabelecimento
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Quantidade Mínima_Máxima de Itens por Estabelecimento
@@ -85,8 +81,7 @@ Transferências entre Depósitos
     RPA.Windows.Get Text    Transferências de Depósito (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Transferências de Depósito (1)    ${Caminho_Screenshots}Transferências entre Depósitos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Pré Transferências entre Depósitos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Pré Transferências entre Depósitos
@@ -95,8 +90,7 @@ Pré Transferências entre Depósitos
     RPA.Windows.Get Text    Pré - Transferências de Depósito (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Pré - Transferências de Depósito (1)    ${Caminho_Screenshots}Pré Transferências entre Depósitos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Aprovação de Pré Transferências entre Depósitos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Aprovação de Pré Transferências entre Depósitos
@@ -115,8 +109,7 @@ Tranferência entre Produtos
     RPA.Windows.Get Text    Transferência entre Produtos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Transferência entre Produtos (1)    ${Caminho_Screenshots}Tranferência entre Produtos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Bloqueio de Movimentos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Bloqueio de Movimentos
@@ -148,8 +141,7 @@ Tranferência entre Terceiros
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Transferência de depósitos entre terceiros (1)    ${Caminho_Screenshots}Tranferência entre Terceiros
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Bloqueio de Saldo de Terceiros
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Bloqueio de Saldo de Terceiros
@@ -158,8 +150,7 @@ Bloqueio de Saldo de Terceiros
     RPA.Windows.Get Text    Bloqueio de Saldo de Terceiros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Bloqueio de Saldo de Terceiros (1)    ${Caminho_Screenshots}Bloqueio de Saldo de Terceiros
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Controle de Empréstimos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Controle de Empréstimos
@@ -180,8 +171,7 @@ Requisição de Compra/Transferência > Manutenção
     RPA.Windows.Get Text    Requisição de Compras (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Requisição de Compras (1)    ${Caminho_Screenshots}Requisição de Compra_Transferência/Manutenção
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Requisição de Compra/Transferência > Consultar
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Compra_Transferência/              Consultar
@@ -215,8 +205,7 @@ Requisição de Movimentos > Emissão/Manutenção
     RPA.Windows.Get Text    Requisição de Movimentos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Requisição de Movimentos (1)    ${Caminho_Screenshots}Requisição de Movimentos/Emissão_Manutenção
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Requisição de Movimentos > Consulta
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Requisição de Movimentos/              Consulta
@@ -246,8 +235,7 @@ Controle de Vasilhames > Lançamento Inicial/Ajuste
     RPA.Windows.Get Text    Lançamento Inicial/Ajuste de Vasilhames (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Lançamento Inicial/Ajuste de Vasilhames (1)    ${Caminho_Screenshots}Controle de Vasilhames/Lançamento Inicial_Ajuste
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Controle de Vasilhames > Movimentação de Vasilhames
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Controle de Vasilhames/              Movimentação de Vasilhames
@@ -257,8 +245,7 @@ Controle de Vasilhames > Movimentação de Vasilhames
     RPA.Windows.Get Text    Movimentação de Vasilhames (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Movimentação de Vasilhames (1)    ${Caminho_Screenshots}Controle de Vasilhames/Movimentação de Vasilhames
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Processos Personalizados
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Processos Personalizados
@@ -270,5 +257,5 @@ Processos Personalizados
     RPA.Windows.Click       Sair
     Fechar janela
 
-Encerrar 
-    Encerrar tudo
+ 
+    

@@ -2,6 +2,7 @@
 Documentation    Smoke Test: Contábil
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_ctb
+Suite Teardown   Encerrar Tudo
 
 *** Variables ***
 
@@ -302,5 +303,5 @@ Faturamento
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

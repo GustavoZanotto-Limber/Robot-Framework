@@ -256,5 +256,5 @@ Relatório de Detalhamento de Receitas
     BaseDesktop.Screenshot    Detalhamento de Receitas (1)    ${Caminho_Screenshots}Relatório de Detalhamento de Receitas
     RPA.Windows.Click         Confirmar
     Fechar janela
-Encerrar
-    Encerrar tudo
+
+    

@@ -1,20 +1,26 @@
 *** Settings ***
 Documentation    Smoke Test: Balança
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_Balanca
-
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Balanças/Cadastros/    
+${nome_print}
+${nome_exe}=    cde_win_Balanca
 
 *** Keywords ***
 
 
 *** Test Cases ***
 
+*** Test Cases ***
+
 Produtos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Produtos
+    ${nome_print}=            Set Variable     Produtos
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Produtos
     RPA.Windows.Get Text      Cadastro de Itens (1)
@@ -24,7 +30,8 @@ Produtos
     RPA.Windows.Click         Sim
     
 Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Terceiros
+    ${nome_print}=     Set Variable     Terceiros
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
@@ -35,7 +42,8 @@ Terceiros
     RPA.Windows.Click         Sim
 
 Operações Fiscais
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Operações Fiscais
+    ${nome_print}=     Set Variable     Operações Fiscais
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Operações Fiscais
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
@@ -45,7 +53,8 @@ Operações Fiscais
     RPA.Windows.Click         Sim
 
 Descontos/Classificações para Grãos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Descontos_Classificações para Grãos
+    ${nome_print}=     Set Variable     Descontos_Classificações para Grãos
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Descontos/Classificações para Grãos
     RPA.Windows.Get Text      Cadastro de Descontos/Classificações para Grãos (1)
@@ -55,7 +64,8 @@ Descontos/Classificações para Grãos
     RPA.Windows.Click         Sim
 
 Classificação de Grãos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Classificação de Grãos
+    ${nome_print}=     Set Variable     Classificação de Grãos
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Classificação de Grãos
     RPA.Windows.Get Text      Cadastro de Classificação de Grãos (1)
@@ -65,7 +75,8 @@ Classificação de Grãos
     RPA.Windows.Click         Sim
 
 Tabela de Índices de Descontos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Tabela de Índices de Descontos
+    ${nome_print}=     Set Variable     Tabela de Índices de Descontos
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Tabela de Índices de Descontos
     RPA.Windows.Get Text      Cadastro de Índices de Descontos (1)
@@ -75,7 +86,8 @@ Tabela de Índices de Descontos
     RPA.Windows.Click         Sim
 
 Melhorias do Peso Hectolítrico
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Melhorias do Peso Hectolítrico
+    ${nome_print}=     Set Variable     Melhorias do Peso Hectolítrico
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Melhorias do Peso Hectolítrico
     RPA.Windows.Get Text      Cadastro de Melhorias do Peso Hectolítrico (PH) (1)
@@ -85,7 +97,8 @@ Melhorias do Peso Hectolítrico
     RPA.Windows.Click         Sim
 
 Tipos de Romaneio
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Tipos de Romaneio
+    ${nome_print}=     Set Variable     Tipos de Romaneio
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Tipos de Romaneio
     RPA.Windows.Get Text      Cadastro de Tipos de Romaneio (1)
@@ -95,7 +108,8 @@ Tipos de Romaneio
     RPA.Windows.Click         Sim
 
 Conf. Modelos Impressao de Processos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Conf. Modelos Impressao de Processos
+    ${nome_print}=     Set Variable     Conf. Modelos Impressao de Processos
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Conf. Modelos Impressao de Processos
     RPA.Windows.Get Text      Conf. Modelos Impressão de Processos (1)
@@ -108,7 +122,8 @@ Conf. Modelos Impressao de Processos
     RPA.Windows.Click         Sim
 
 Conf. Movimentação de Estoque de Produtos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Conf. Movimentação de Estoque de Produtos
+    ${nome_print}=     Set Variable     Conf. Movimentação de Estoque de Produtos
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Conf. Movimentação de Estoque de Produto
     RPA.Windows.Get Text      Configuração de Movimentação de Estoque de Produto (1)
@@ -120,7 +135,8 @@ Conf. Movimentação de Estoque de Produtos
     Fechar janela
 
 Configuração de Troca de Produto p/ emissão de NF
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Configuração de Troca de Produto p_ emissão de NF
+    ${nome_print}=     Set Variable     Configuração de Troca de Produto p_ emissão de NF
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Configuração de Troca de Produto p/ emissão de NF
     RPA.Windows.Get Text      Configuração de Troca de Produto p/ emissão de NF (1)
@@ -129,8 +145,9 @@ Configuração de Troca de Produto p/ emissão de NF
     Fechar janela
     RPA.Windows.Click         Sim
 
-Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Empresas
+Empresas
+    ${nome_print}=     Set Variable      Empresas
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -140,8 +157,9 @@ Parâmetros > Empresas
     Fechar janela
     RPA.Windows.Click         Sim
 
-Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Estabelecimentos
+Estabelecimentos
+    ${nome_print}=     Set Variable      Estabelecimentos
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -151,8 +169,9 @@ Parâmetros > Estabelecimentos
     Fechar janela
     RPA.Windows.Click         Sim
 
-Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Usuários
+Usuários
+    ${nome_print}=     Set Variable      Usuários
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
@@ -160,8 +179,9 @@ Parâmetros > Usuários
     BaseDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
     Fechar janela
 
-Parâmetros > Grupo de Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Grupo de Usuários
+Grupo de Usuários
+    ${nome_print}=     Set Variable      Grupo de Usuários
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -171,8 +191,9 @@ Parâmetros > Grupo de Usuários
     Fechar janela
     RPA.Windows.Click         Sim
 
-Parâmetros > Configurações da Estação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Configurações da Estação
+Configurações da Estação
+    ${nome_print}=     Set Variable      Configurações da Estação
+    [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    C
@@ -180,6 +201,3 @@ Parâmetros > Configurações da Estação
     RPA.Windows.Click         CDE-WIN-FIN
     BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
     Fechar janela
-
-Encerrar
-    Encerrar tudo

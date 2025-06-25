@@ -2,6 +2,7 @@
 Documentation    Smoke Test: Contábil
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_ctb
+Suite Teardown   Encerrar Tudo
 
 
 *** Variables ***
@@ -149,8 +150,7 @@ Países
     RPA.Windows.Get Text      Cadastro de Países (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Países (1)    ${Caminho_Screenshots}Países
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estados
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Estados
@@ -169,8 +169,7 @@ Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Municípios (1)    ${Caminho_Screenshots}Municípios
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Localidades
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Localidades
@@ -179,8 +178,7 @@ Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Regiões
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Regiões
@@ -189,8 +187,7 @@ Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Regiões (1)    ${Caminho_Screenshots}Regiões
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Empresas
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Empresas
@@ -200,8 +197,7 @@ Parâmetros > Empresas
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot                  Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Estabelecimentos
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Estabelecimentos
@@ -211,8 +207,7 @@ Parâmetros > Estabelecimentos
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot                  Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Usuários
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Usuários
@@ -222,8 +217,7 @@ Parâmetros > Usuários
     RPA.Windows.Get Text      Cadastro de Usuários (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot                  Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Grupos Usuários
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Grupos Usuários
@@ -233,8 +227,7 @@ Parâmetros > Grupos Usuários
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot                  Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupos Usuários
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Configurações de Estação
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Configurações de Estação
@@ -246,5 +239,5 @@ Parâmetros > Configurações de Estação
     BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações de Estação
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

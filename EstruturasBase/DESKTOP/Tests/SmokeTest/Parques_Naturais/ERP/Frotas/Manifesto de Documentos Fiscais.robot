@@ -44,5 +44,5 @@ Importar CT-e/NF-e para MDF-e
     BaseDesktop.Screenshot  Importador MDF-e (1)                              ${Caminho_Screenshots}Importar CT-e/NF-e para MDF-e
     Fechar Janela
 
-Encerrar
-    Encerrar tudo
+
+    

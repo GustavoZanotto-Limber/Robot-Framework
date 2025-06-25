@@ -21,8 +21,7 @@ Terceiros
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
     RPA.Windows.Click       Cancelar (F3)
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Grupo de Terceiros
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Grupo de Terceiros
@@ -31,8 +30,7 @@ Grupo de Terceiros
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Grupo de Terceiros (1)    ${Caminho_Screenshots}Grupo de Terceiros
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Setores
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Setores
@@ -41,8 +39,7 @@ Setores
     RPA.Windows.Get Text    Cadastro de Setores (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Setores (1)    ${Caminho_Screenshots}Setores
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Safras
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Safras
@@ -61,8 +58,7 @@ Produtos > Produtos
     RPA.Windows.Get Text    Cadastro de Itens (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Itens (1)    ${Caminho_Screenshots}Produtos/Produtos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Produtos > Depósitos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Depósitos
@@ -72,8 +68,7 @@ Produtos > Depósitos
     RPA.Windows.Get Text    Cadastro de Depósitos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Depósitos (1)    ${Caminho_Screenshots}Produtos/Depósitos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Produtos > Unidades
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Unidades
@@ -83,8 +78,7 @@ Produtos > Unidades
     RPA.Windows.Get Text    Cadastro de Unidades (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Unidades (1)    ${Caminho_Screenshots}Produtos/Unidades
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Produtos > Marcas
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Marcas
@@ -94,8 +88,7 @@ Produtos > Marcas
     RPA.Windows.Get Text    Cadastro de Marcas (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Marcas (1)    ${Caminho_Screenshots}Produtos/Marcas
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Produtos > Cores
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Cores
@@ -105,8 +98,7 @@ Produtos > Cores
     RPA.Windows.Get Text    Cadastro de Cores (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Cores (1)    ${Caminho_Screenshots}Produtos/Cores
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Produtos > Tamanhos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Tamanhos
@@ -116,8 +108,7 @@ Produtos > Tamanhos
     RPA.Windows.Get Text    Cadastro de Tamanhos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Tamanhos (1)    ${Caminho_Screenshots}Produtos/Tamanhos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Produtos > Estampas
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Estampas
@@ -127,8 +118,7 @@ Produtos > Estampas
     RPA.Windows.Get Text    Cadastro de Estampas (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Estampas (1)    ${Caminho_Screenshots}Produtos/Estampas
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Produtos > Categorias
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Categorias
@@ -138,8 +128,7 @@ Produtos > Categorias
     RPA.Windows.Get Text    Cadastro de Categorias de Produtos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Categorias de Produtos (1)    ${Caminho_Screenshots}Produtos/Categorias
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Veículos > Veículos
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/              Veículos
@@ -159,8 +148,7 @@ Veículos > Tipos de Veículos
     RPA.Windows.Get Text    Cadastro de Tipos de Veículos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Veículos (1)    ${Caminho_Screenshots}Veículos/Tipos de Veículos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Tipo Movimentação
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Tipo Movimentação
@@ -169,8 +157,7 @@ Tipo Movimentação
     RPA.Windows.Get Text    Cadastro de Tipos de Movimentação (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Movimentação (1)    ${Caminho_Screenshots}Tipo Movimentação
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Categoria de Lote
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Categoria de Lote
@@ -179,8 +166,7 @@ Categoria de Lote
     RPA.Windows.Get Text    Cadastro de Categoria de Lote (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Categoria de Lote (1)    ${Caminho_Screenshots}Categoria de Lote
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Tipo de Teste Lotes
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Tipo De Teste Lotes
@@ -190,8 +176,7 @@ Tipo de Teste Lotes
     RPA.Windows.Get Text    Cadastro de Tipos de Testes para Lotes (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Testes para Lotes (1)    ${Caminho_Screenshots}Tipo de Teste Lotes
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Países
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Países
@@ -200,8 +185,7 @@ Países
     RPA.Windows.Get Text      Cadastro de Países (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Países (1)    ${Caminho_Screenshots}Países
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Municípios
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Municípios
@@ -210,8 +194,7 @@ Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Municípios (1)    ${Caminho_Screenshots}Municípios
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estados
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Estados
@@ -220,8 +203,7 @@ Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Estados (1)    ${Caminho_Screenshots}Estados
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Localidades
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Localidades
@@ -230,8 +212,7 @@ Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Regiões
     [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Regiões
@@ -240,8 +221,7 @@ Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Regiões (1)    ${Caminho_Screenshots}Regiões
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscais > Tabela Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Tabela Tributária
@@ -251,8 +231,7 @@ Fiscais > Tabela Tributária
     RPA.Windows.Get Text      Cadastro de Tabelas Tributária (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Tabelas Tributária (1)    ${Caminho_Screenshots}Fiscais/Tabela Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscais > Situação Tributária
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Situação Tributária
@@ -262,8 +241,7 @@ Fiscais > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situações Tributárias do ICMS (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Situações Tributárias do ICMS (1)    ${Caminho_Screenshots}Fiscais/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscais > Operações Fiscais
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Operações Fiscais
@@ -273,8 +251,7 @@ Fiscais > Operações Fiscais
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscais/Operações Fiscais
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Fiscais > Classificações Fiscais
@@ -285,8 +262,7 @@ Fiscais > Classificações Fiscais
     RPA.Windows.Get Text      Cadastro de Classificações Fiscais (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Classificações Fiscais (1)    ${Caminho_Screenshots}Fiscais/Classificações Fiscais
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Fiscais > Classificações de Serviços Prestado - REINF
     [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Classificações de Serviços Prestado - REINF
@@ -351,5 +327,5 @@ Parâmetros > Configurações da Estação
     BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
     Fechar janela
 
-Encerrar  
-    Encerrar tudo
+  
+    

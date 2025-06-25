@@ -2,6 +2,7 @@
 Documentation    Smoke Test: Vendedor
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_VENDEDOR
+Suite Teardown   Encerrar Tudo
 
 
 *** Variables ***
@@ -24,8 +25,7 @@ Pedidos de Venda
     RPA.Windows.Get Text      Pedidos de Venda (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos de Venda
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Orçamentos
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Orçamentos
@@ -34,8 +34,7 @@ Orçamentos
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Orçamentos (1)    ${Caminho_Screenshots}Orçamentos
     RPA.Windows.Click         OK
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Processos Personalizados
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Processos Personalizados
@@ -46,5 +45,5 @@ Processos Personalizados
     RPA.Windows.Click         Sair
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

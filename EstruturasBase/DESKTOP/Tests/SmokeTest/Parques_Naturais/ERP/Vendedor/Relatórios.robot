@@ -2,6 +2,7 @@
 Documentation    Smoke Test: Vendedor
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_VENDEDOR
+Suite Teardown   Encerrar Tudo
 
 
 *** Variables ***
@@ -51,8 +52,8 @@ Posição Financeira/Vendedor/Terceiro
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    
 
 
 

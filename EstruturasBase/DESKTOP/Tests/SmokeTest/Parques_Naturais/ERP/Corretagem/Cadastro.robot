@@ -2,6 +2,7 @@
 Documentation    Smoke Test: Corretagem
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_crt
+Suite Teardown   Encerrar Tudo
 
 
 *** Variables ***
@@ -93,8 +94,7 @@ Confirmação de Negócio > Motivos Acrésc/Descontos
     RPA.Windows.Get Text      Cadastro de Motivos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Motivos (1)    ${Caminho_Screenshots}Confirmação de Negócio/Motivos Acrésc_Descontos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Confirmação de Negócio > Cadastro Tipo de Custos
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Confirmação de Negócio/                         Cadastro Tipo de Custos
@@ -104,8 +104,7 @@ Confirmação de Negócio > Cadastro Tipo de Custos
     RPA.Windows.Get Text      Cadastro Tipo de Custos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro Tipo de Custos (1)    ${Caminho_Screenshots}Confirmação de Negócio/Cadastro Tipo de Custos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Empresas
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Empresas
@@ -115,8 +114,7 @@ Parâmetros > Empresas
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Estabelecimentos
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Estabelecimentos
@@ -126,8 +124,7 @@ Parâmetros > Estabelecimentos
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Grupo de Usuários
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Grupo de Usuários
@@ -137,8 +134,7 @@ Parâmetros > Grupo de Usuários
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Parâmetros > Usuários
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Usuários
@@ -148,8 +144,7 @@ Parâmetros > Usuários
     RPA.Windows.Get Text      Cadastro de Usuários (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
-Encerrar    
-    Encerrar tudo
+    
+    

@@ -2,7 +2,7 @@
 Documentation    Smoke Test: Corretagem
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_crt
-
+Suite Teardown   Encerrar Tudo
 
 *** Variables ***
 
@@ -35,5 +35,5 @@ Log de Alterações
     BaseDesktop.Screenshot    Consulta Log de Alterações (1)      ${Caminho_Screenshots}Log de Alterações
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

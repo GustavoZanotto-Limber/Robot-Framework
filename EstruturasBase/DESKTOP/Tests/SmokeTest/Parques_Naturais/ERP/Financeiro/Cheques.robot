@@ -34,8 +34,7 @@ Cheques de Terceiros
     RPA.Windows.Get Text      Movimentação de Cheques de Terceiros (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Movimentação de Cheques de Terceiros (1)    ${Caminho_Screenshots}Cheques de Terceiros
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Relatório de Cheque de Terceiros
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatório de Cheque de Terceiros
@@ -78,8 +77,7 @@ Layouts de Cheques para Emissão
     RPA.Windows.Get Text      Configuração de Cheques (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Configuração de Cheques (1)    ${Caminho_Screenshots}Layouts de Cheques para Emissão
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Imprimir Multiplos Cheques
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Imprimir Multiplos Cheques
@@ -90,5 +88,5 @@ Imprimir Multiplos Cheques
     BaseDesktop.Screenshot    Imprimir Cheques (1)    ${Caminho_Screenshots}Imprimir Multiplos Cheques
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

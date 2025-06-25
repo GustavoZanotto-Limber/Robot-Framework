@@ -1,12 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Balança
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_Balanca
-
+Suite Setup         Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Balanças/Consultas/    
+${nome_print}
+${nome_exe}=    cde_win_Balanca
 
 *** Keywords ***
 
@@ -18,7 +21,8 @@ Consultas
 *** Test Cases ***
 
 Romaneios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Romaneios
+    ${nome_print}=     Set Variable     Romaneios
+    [Tags]     Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Romaneios 
     RPA.Windows.Get Text      Consulta de Romaneios (1)
@@ -27,7 +31,8 @@ Romaneios
     Fechar janela
 
 Romaneios Excluídos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Romaneios Excluídos
+    ${nome_print}=     Set Variable     Romaneios Excluídos
+    [Tags]     Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Romaneios Excluídos
     RPA.Windows.Get Text      Consulta Romaneios Excluídos (1)
@@ -38,7 +43,8 @@ Romaneios Excluídos
     Fechar janela
 
 Movimentações da Balança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Movimentações da Balança
+    ${nome_print}=     Set Variable     Movimentações da Balança
+    [Tags]     Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Movimentações da Balança
     RPA.Windows.Get Text      Movimentação da Balança (1)
@@ -48,7 +54,8 @@ Movimentações da Balança
     Fechar janela
 
 Lançamentos de Saída
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Lançamentos de Saída
+    ${nome_print}=     Set Variable     Lançamentos de Saída
+    [Tags]     Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Lançamentos de Saída
     RPA.Windows.Get Text      Lançamentos de Saída (1)
@@ -57,7 +64,8 @@ Lançamentos de Saída
     Fechar janela
 
 Consultas Personalizadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Consultas Personalizadas
+    ${nome_print}=     Set Variable     Consultas Personalizadas
+    [Tags]     Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
@@ -67,7 +75,8 @@ Consultas Personalizadas
     Fechar janela
 
 Saldo de Terceiro
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Saldo de Terceiro
+    ${nome_print}=     Set Variable     Saldo de Terceiro
+    [Tags]     Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Saldo de Terceiro 
     RPA.Windows.Get Text      Saldos de Terceiros (1)
@@ -76,7 +85,8 @@ Saldo de Terceiro
     Fechar janela
 
 Movimentação de Terceiro
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Movimentação de Terceiro
+    ${nome_print}=     Set Variable     Movimentação de Terceiro
+    [Tags]     Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Movimentação de Terceiro 
     RPA.Windows.Get Text      Movimentação de Terceiros (1)
@@ -84,8 +94,3 @@ Movimentação de Terceiro
     BaseDesktop.Screenshot    Movimentação de Terceiros (1)    ${Caminho_Screenshots}Movimentação de Terceiro
     RPA.Windows.Click         OK
     Fechar janela
-
-Encerrar
-    Encerrar tudo
-
-

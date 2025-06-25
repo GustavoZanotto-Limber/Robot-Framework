@@ -24,8 +24,7 @@ Limite de Crédito
     RPA.Windows.Get Text      Limite de Crédito (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
-Encerrar
-    Encerrar tudo
+
+    

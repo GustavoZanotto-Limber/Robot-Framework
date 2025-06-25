@@ -28,18 +28,25 @@ ${achou}
 #     Add Image Path    ${EXECDIR}\\EstruturasBase\\DESKTOP\\Elements
 
 Cadastros
+    Sleep                     1s
     RPA.Desktop.Press Keys    Alt
     RPA.Desktop.Press Keys    Enter
     
 Fechar janela
-    Set Global Timeout    0.01
-    Set Wait Time         0.01
-    Run Keyword And Ignore error    RPA.Windows.Click               Maximizar
-    Set Anchor                     Aplicativo
-    RPA.Windows.Click              Fechar
-    Clear Anchor
-    Sleep                 0.2
+    RPA.Desktop.Press Keys    alt     -
+    RPA.Windows.Click         Maximizar
+    Sleep                     0.3s
+    RPA.Desktop.Press Keys    alt     -
+    RPA.Windows.Click         Fechar
+    
 
+Fechar com Sim
+    Fechar janela
+    RPA.Windows.Click       Sim
+
+Fechar com OK
+    Fechar janela
+    RPA.Windows.Click       OK
     
 Iniciar sessao        
     [Arguments]    ${nome_exe} 
@@ -55,35 +62,98 @@ Iniciar sessao
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
 
-Iniciar sessao Front     
-    # Carregar os elementos do app
-    Sleep                           1s
-    RPA.Desktop.Open Application    C:\\Limber\\Turismo_PARQUES_NATURAIS\\cde_win_bca_frontR30.exe
-    Sleep                           4s
-    RPA.Windows.Click    Abrir
-    Sleep                           2s
-    RPA.Desktop.Press keys                      enter
-    Sleep                           10s         Carregando a base...
-    Type text                       1
-    RPA.Desktop.Press keys                      enter
-    RPA.Desktop.Press keys                      enter
-    Sleep                           5s
+
     
 Screenshot
     [Arguments]               ${janela}    ${Caminho}
     RPA.Windows.Screenshot    ${janela}    ${Caminho}.png
 
-# Terminar sessao
-#     Stop Remote Server
+Caixa Operador
+    Cadastros
+    repetidor de teclas    right    4
 
-#O nome da aplication deve ser o mesmo que aparece no aplicativo na barra inferior
-# Encerrar teste front
-#     SikuliLibrary.Close application    [Limber Bilheteria Front - Standard Version]
-#     RPA.Desktop.Press Keys                         Left
-#     RPA.Desktop.Press Keys                         Enter
+Abrir Caixa
+    RPA.Windows.Click                   Abrir Caixa
+    RPA.Desktop.Press Keys              Enter
+    RPA.Desktop.Press Keys              Enter
 
-Encerrar tudo
-    RPA.Desktop.Close all applications
+Ir Para Emissão de Bilhetes
+    Cadastros
+    Repetidor de teclas    right    1
+    RPA.Windows.Click      Emissão de Bilhetes
+    Sleep                  2s
+    RPA.Windows.Get Text   Emissão de Bilhetes (1)
+
+Ir Para Reimpressão de Bilhetes
+    Cadastros
+    Repetidor de teclas    right    2
+    RPA.Windows.Click      Reimpressão de Bilhetes
+    Sleep                  2s
+    RPA.Windows.Get Text   Reimpressão de Bilhetes (1)
+    
+Selecionar o bilhete
+    #Selecionando o bilhete
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    enter
+    Sleep                     1s
+    RPA.Windows.Click         Confirmar
+    #Selecionando a categoria
+    Sleep                     1s
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    enter
+    Sleep                     1s
+    RPA.Windows.Click         Confirmar
+    Sleep                     1s
+    Repetidor de teclas       enter    6
+
+Finalizar compra 
+    RPA.Desktop.Press Keys    F5
+    RPA.Desktop.Press Keys    space
+    RPA.Desktop.Press Keys    enter
+    
+Salvo a Impressão    
+    Sleep                         5s
+    RPA.Desktop.Type Text         RPS
+    RPA.Windows.Click             Salvar
+    Sleep                         1s
+    RPA.Windows.Click             Sim
+    Sleep                         5s
+    RPA.Desktop.Type Text         Impressão do bilhete
+    RPA.Windows.Click             Salvar
+    Sleep                         1s
+    RPA.Windows.Click             Sim
+    Sleep                         1s
+
+Salvo a Reimpressão  
+    Sleep                         1s  
+    RPA.Desktop.Type Text         Reimpressão do bilhete
+    RPA.Windows.Click             Salvar
+    Sleep                         1s
+    RPA.Windows.Click             Sim
+
+Fechar caixa caso esteja aberto
+    ${caixa_aberto}=          Run Keyword And Ignore error              RPA.Windows.Get Text    Fechar Caixa
+    IF                        ${caixa_aberto} != (\'FAIL\', "ElementNotFound: Element not found with locator \'Fechar Caixa\'")
+    RPA.Windows.Click         Fechar Caixa
+    RPA.Windows.Click         Sim
+    Sleep                     3s
+    RPA.Desktop.Press Keys    Esc
+    Sleep                     3s
+    RPA.Desktop.Press Keys    Enter                                                                                                
+    Caixa Operador            
+    RPA.Windows.Click         Abertura / Fechamento                                                                                
+    END
+
+Abrir arquivo
+    [Arguments]    ${Caminho_arquivo}    ${nome_Arquivo_com_o_tipo}
+    Sleep                     1s
+    Windows Run               a                 
+    Sleep                     1s
+    Run Keyword and Ignore error     RPA.Windows.Click         OK
+    Sleep                     1s
+    RPA.Desktop.Type Text     ${Caminho_arquivo}${nome_Arquivo_com_o_tipo}
+    RPA.Desktop.Press Keys    enter
+
 
 Repetidor de teclas
     [Arguments]               ${tecla}                   ${quantidade_de_clicks}    
@@ -97,30 +167,44 @@ Repetidor de 2 teclas
     RPA.Desktop.Press Keys    ${tecla}             ${tecla2}
     END
 
+Eleições
+    Cadastros
+    repetidor de teclas    right    5
+
+Encerrar Tudo
+    RPA.Desktop.Close All Applications
+
+
 
 Caso aconteça erro
     [Arguments]     ${Caminho_Screenshots}        ${nome_print}
     Set Global Timeout    0.01
     Set Wait Time    0.01
-    ${Erro}=                       Run Keyword And Ignore error     RPA.Windows.Get Text            Erro
-    IF    ${Erro} != ('FAIL', "ElementNotFound: Element not found with locator 'Erro'")
-         Fail                       Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.
-    END
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Maximizar   
-    Sleep                           0.4
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          esc
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Confirmar
-    Run Keyword If Test Failed      Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
-    Run Keyword If Test Failed      Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Cancelar
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Cancel
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          esc
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               OK     
-    Run Keyword And Ignore error    Set Anchor                      Aplicativo
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Fechar
-    Clear Anchor
-    Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Sim
+    # ${Erro}=                       Run Keyword And Ignore error     RPA.Windows.Get Element    Erro
+    # IF    ${Erro} != ('FAIL', "ElementNotFound: Element not found with locator 'Erro'")
+    #     Fail                       Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.
+        Run Keyword If Test Failed        Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
+        Run Keyword If Test Failed        Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
+        Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Desktop.Press Keys          Alt    -
+        Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Windows.Click               Maximizar
+        Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Desktop.Press Keys          Alt    -
+        Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Windows.Click               Fechar   
+        # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          esc
+        # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Confirmar
+        # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Cancelar
+        # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Cancel
+        # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          esc    
+        # Run Keyword If Test Failed      Run Keyword And Ignore error    Set Anchor                      Aplicativo
+        
+        Clear Anchor
+    # END
+    
     # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          Enter  
-    
-    
-    
+     
+
+Caso aconteça erro 2
+    [Arguments]     ${Caminho_Screenshots}        ${nome_print}    ${nome_exe}
+        Run Keyword If Test Failed    Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
+        Run Keyword If Test Failed    Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
+        Run Keyword If Test Failed    Encerrar Tudo
+        Run Keyword If Test Failed    Iniciar sessao    ${nome_exe}

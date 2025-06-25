@@ -26,7 +26,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Papel de Parede
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -43,8 +43,7 @@ Configurar Menu Pincipal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurar Barra de Atalhos
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
@@ -53,8 +52,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estilo do Menu Principal
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
@@ -84,8 +82,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Relatórios Personalizados > Cadastro de Categorias
@@ -98,8 +95,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
@@ -111,8 +107,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Transferência entre Terceiros
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Transferência entre Terceiros
@@ -122,8 +117,7 @@ Configurador de Impressões > Transferência entre Terceiros
     RPA.Windows.Get Text    Configurador de Impressões - Transferência entre Terceiros - Estoque (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Transferência entre Terceiros - Estoque (1)    ${Caminho_Screenshots}Configurador de Impressões/Transferência entre Terceiros
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Criar Usuario de Log
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
@@ -160,8 +154,7 @@ Configurador de Etiquetas
     RPA.Windows.Get Text    Configurador de Etiqueta (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Etiqueta (1)    ${Caminho_Screenshots}Configurador de Etiquetas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Etiquetas de Produtos para Transporte > Etiqueta de produtos naturais para transporte
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Etiquetas de Produtos para Transporte/                             Etiqueta de produtos naturais para transporte
@@ -171,8 +164,7 @@ Etiquetas de Produtos para Transporte > Etiqueta de produtos naturais para trans
     RPA.Windows.Get Text    Etiqueta de produtos naturais para transporte (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Etiqueta de produtos naturais para transporte (1)    ${Caminho_Screenshots}Etiquetas de Produtos para Transporte/Etiqueta de produtos naturais para transporte
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Etiquetas de Produtos para Transporte > Monitor de Envio de Etiquetas 
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Etiquetas de Produtos para Transporte/                             Monitor de Envio de Etiquetas 
@@ -186,5 +178,5 @@ Etiquetas de Produtos para Transporte > Monitor de Envio de Etiquetas
 
 
 
-Encerrar
-    Encerrar tudo
+
+    

@@ -35,8 +35,7 @@ Carteiras de Cobrança
     RPA.Windows.Get Text      Cadastro de Carteiras de Cobranças (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Carteiras de Cobranças (1)    ${Caminho_Screenshots}Carteiras de Cobrança
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Tipos de Cobrança
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Tipos de Cobrança
@@ -45,8 +44,7 @@ Tipos de Cobrança
     RPA.Windows.Get Text      Cadastro de Tipos de Cobrança (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Tipos de Cobrança (1)    ${Caminho_Screenshots}Tipos de Cobrança
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Geração de Remessas > Débito em C_C
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Geração de Remessas/                         Débito em C_C
@@ -155,5 +153,5 @@ Desvincular Boletos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
-Encerrar    
-    Encerrar tudo
+    
+    

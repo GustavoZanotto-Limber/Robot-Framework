@@ -28,7 +28,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro            ${Caminho_Screenshots}                    Papel de Parede
+    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Papel de Parede
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -54,8 +54,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estilo do Menu Principal
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
@@ -85,8 +84,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Relatórios Personalizados > Cadastro de Categorias
@@ -99,8 +97,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
@@ -112,8 +109,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Relatórios > Contas a Pagar
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Relatórios/                             Contas a Pagar
@@ -124,8 +120,7 @@ Configurador de Impressões > Relatórios > Contas a Pagar
     RPA.Windows.Get Text    Configurador de Impressões - Contas a Pagar (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Contas a Pagar (1)    ${Caminho_Screenshots}Configurador de Impressões/Relatórios/Contas a Pagar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Relatórios > Contas a Receber
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Relatórios/                             Contas a Receber
@@ -136,8 +131,7 @@ Configurador de Impressões > Relatórios > Contas a Receber
     RPA.Windows.Get Text    Configurador de Impressões - Contas a Receber (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Contas a Receber (1)    ${Caminho_Screenshots}Configurador de Impressões/Relatórios/Contas a Receber
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Recibos > Contas a Pagar
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Recibos/                             Contas a Pagar
@@ -148,8 +142,7 @@ Configurador de Impressões > Recibos > Contas a Pagar
     RPA.Windows.Get Text    Configurador de Impressões - Recibo Contas a Pagar (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Recibo Contas a Pagar (1)    ${Caminho_Screenshots}Configurador de Impressões/Recibos/Contas a Pagar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Recibos > Contas a Receber
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Recibos/                             Contas a Receber
@@ -160,8 +153,7 @@ Configurador de Impressões > Recibos > Contas a Receber
     RPA.Windows.Get Text    Configurador de Impressões - Recibo Contas a Receber (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Recibo Contas a Receber (1)    ${Caminho_Screenshots}Configurador de Impressões/Recibos/Contas a Receber
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Criar Usuario de Log
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
@@ -187,8 +179,7 @@ Configurar de Dup/Boletos/Carnês
     RPA.Windows.Get Text    Configuração de Duplicatas/Carnes/Boletos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configuração de Duplicatas/Carnes/Boletos (1)    ${Caminho_Screenshots}Configurar de Dup_Boletos_Carnês
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Importador Extrato Bancário (OFX)
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Importador Extrato Bancário (OFX)
@@ -255,8 +246,7 @@ Cadastro de Bilheterias
     RPA.Windows.Get Text    Cadastro de Bilheterias (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Bilheterias (1)    ${Caminho_Screenshots}Cadastro de Bilheterias
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Processos Personalizados
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                           Processos Personalizados
@@ -299,8 +289,7 @@ Bilheteria > Cadastro de Tipos de Receita
     RPA.Windows.Get Text    Cadastro de Tipos de Receita (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de Tipos de Receita (1)    ${Caminho_Screenshots}Bilheteria/Cadastro de Tipos de Receita
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Bilheteria > Config. Plano Contas X Produtos
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Bilheteria/                           Config. Plano Contas X Produtos
@@ -313,8 +302,7 @@ Bilheteria > Config. Plano Contas X Produtos
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configuração Geração de Receitas Plano de Contas Produto (1)    ${Caminho_Screenshots}Bilheteria/Config. Plano Contas X Produtos
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     RPA.Windows.Click       OK
     Fechar janela
     
@@ -329,10 +317,9 @@ Bilheteria > Config. Tipo Receita Trib.
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configuração Tipo Receita Produto Geração de Receitas (1)    ${Caminho_Screenshots}Bilheteria/Config. Tipo Receita Trib.
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     RPA.Windows.Click       OK
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    

@@ -1,24 +1,27 @@
 *** Settings ***
 Documentation    Smoke Test: Balança
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_Balanca
-
+Suite Setup         Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Balanças/Manutenções/    
+${nome_print}
+${nome_exe}=    cde_win_Balanca
 
 *** Keywords ***
 
 Manutenções
-
     Cadastros
     repetidor de teclas    right    1
 
 *** Test Cases ***
 
 Romaneios Entrada/Saída > Inclusão de Romaneios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Inclusão de Romaneios
+    ${nome_print}=     Set Variable     Inclusão de Romaneios
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    I
@@ -29,7 +32,8 @@ Romaneios Entrada/Saída > Inclusão de Romaneios
     Fechar janela
 
 Romaneios Entrada/Saída > Alteração de Romaneios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Alteração de Romaneios
+    ${nome_print}=     Set Variable     Alteração de Romaneios
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    A
@@ -40,7 +44,8 @@ Romaneios Entrada/Saída > Alteração de Romaneios
     Fechar janela
 
 Romaneios Entrada/Saída > Consulta de Romaneios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Consulta de Romaneios
+    ${nome_print}=     Set Variable     Consulta de Romaneios
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    C
@@ -51,7 +56,8 @@ Romaneios Entrada/Saída > Consulta de Romaneios
     Fechar janela
 
 Romaneios Entrada/Saída > Alteração de Romaneios - Classificação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Alteração de Romaneios - Classificação
+    ${nome_print}=     Set Variable     Alteração de Romaneios - Classificação
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    L
@@ -62,7 +68,8 @@ Romaneios Entrada/Saída > Alteração de Romaneios - Classificação
     Fechar janela
 
 Romaneios Entrada/Saída > Alteração de Romaneios - Endereço
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Alteração de Romaneios - Endereço
+    ${nome_print}=     Set Variable     Alteração de Romaneios - Endereço
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    T
@@ -72,7 +79,8 @@ Romaneios Entrada/Saída > Alteração de Romaneios - Endereço
     Fechar janela
 
 Romaneios Entrada/Saída > Gerenciamentos de Romaneios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Romaneios Entrada_Saída/                         Gerenciamentos de Romaneios
+    ${nome_print}=     Set Variable     Gerenciamentos de Romaneios
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    G
@@ -82,7 +90,8 @@ Romaneios Entrada/Saída > Gerenciamentos de Romaneios
     Fechar janela
 
 Pesagem para Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pesagem para Terceiros
+    ${nome_print}=     Set Variable     Pesagem para Terceiros
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pesagem para Terceiros
     RPA.Windows.Get Text      Pesagem para Terceiros (1)
@@ -93,7 +102,8 @@ Pesagem para Terceiros
     Fechar janela
 
 Emissão de Nota Fiscal
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Emissão de Nota Fiscal
+    ${nome_print}=     Set Variable     Emissão de Nota Fiscal
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Emissão de Nota Fiscal
     RPA.Windows.Get Text      Emissão de Nota Fiscal (1)
@@ -102,7 +112,8 @@ Emissão de Nota Fiscal
     Fechar janela
 
 Documentos emitidos contra o estabelecimento p/ entrada
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Documentos emitidos contra o estabelecimento p_ entrada
+    ${nome_print}=     Set Variable     Documentos emitidos contra o estabelecimento p_ entrada
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Documentos emitidos contra o estabelecimento p/ entrada
     RPA.Windows.Get Text      Documentos emitidos contra o estabelecimento p/ entrada (1)
@@ -111,7 +122,8 @@ Documentos emitidos contra o estabelecimento p/ entrada
     Fechar janela
 
 Pesagem Geral
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pesagem Geral
+    ${nome_print}=     Set Variable     Pesagem Geral
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pesagem Geral
     RPA.Windows.Get Text      Pesagem Geral (1)
@@ -121,7 +133,8 @@ Pesagem Geral
     RPA.Windows.Click         Sim
 
 Processos Personalizados
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Processos Personalizados
+    ${nome_print}=     Set Variable     Processos Personalizados
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
@@ -131,7 +144,8 @@ Processos Personalizados
     Fechar janela
 
 Pesagem de Descarga - Romaneio
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pesagem de Descarga - Romaneio
+    ${nome_print}=     Set Variable     Pesagem de Descarga - Romaneio
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pesagem de Descarga - Romaneio
     RPA.Windows.Get Text      Pesagem Romaneio Descarga (1)
@@ -142,7 +156,8 @@ Pesagem de Descarga - Romaneio
     Fechar janela
 
 Consulta/Manutenção Ordem Tickets Descarga
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Consulta_Manutenção Ordem Tickets Descarga
+    ${nome_print}=     Set Variable     Consulta_Manutenção Ordem Tickets Descarga
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Consulta/Manutenção Ordem Tickets Descarga
     RPA.Windows.Get Text      Consulta/Manutenção Ordem Ticket Descarga (1)
@@ -151,7 +166,8 @@ Consulta/Manutenção Ordem Tickets Descarga
     Fechar janela
 
 Pesagem de Descarga - Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pesagem de Descarga - Venda
+    ${nome_print}=     Set Variable     Pesagem de Descarga - Venda
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pesagem de Descarga - Venda
     RPA.Windows.Get Text      Pesagem Romaneio Descarga - Venda (1)
@@ -161,7 +177,8 @@ Pesagem de Descarga - Venda
     RPA.Windows.Click         Sim
 
 Pesagem - Ordem de Carregamento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pesagem - Ordem de Carregamento
+    ${nome_print}=     Set Variable     Pesagem - Ordem de Carregamento
+    [Tags]     Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pesagem - Ordem de Carregamento
     RPA.Windows.Get Text      Pesagem - Ordem de Carregamento (1)
@@ -170,10 +187,3 @@ Pesagem - Ordem de Carregamento
     BaseDesktop.Screenshot    Pesagem - Ordem de Carregamento (1)    ${Caminho_Screenshots}Pesagem - Ordem de Carregamento
     RPA.Windows.Click         OK
     Fechar janela
-    
-
-
-Encerrar
-    Encerrar tudo
-
-

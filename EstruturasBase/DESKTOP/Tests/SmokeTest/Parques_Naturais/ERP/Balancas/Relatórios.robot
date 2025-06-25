@@ -1,24 +1,27 @@
 *** Settings ***
 Documentation    Smoke Test: Balança
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_Balanca
-
+Suite Setup         Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Balanças/Relatórios/    
+${nome_print}
+${nome_exe}=    cde_win_Balanca
 
 *** Keywords ***
 
 Relatórios
-
     Cadastros
     repetidor de teclas    right    4
 
 *** Test Cases ***
 
 Movimentação de Cereais
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Movimentação de Cereais
+    ${nome_print}=     Set Variable     Movimentação de Cereais
+    [Tags]     Balancas    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Movimentação de Cereais
     RPA.Windows.Get Text      Movimentação de Cereais (1)
@@ -30,7 +33,8 @@ Movimentação de Cereais
     Fechar janela
 
 Lançamentos de Saídas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Lançamentos de Saídas
+    ${nome_print}=     Set Variable     Lançamentos de Saídas
+    [Tags]     Balancas    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Lançamentos de Saídas
     RPA.Windows.Get Text      Lançamentos de Saídas (1)
@@ -41,7 +45,8 @@ Lançamentos de Saídas
     Fechar janela
 
 Relatório de Pesagem de Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatório de Pesagem de Terceiros
+    ${nome_print}=     Set Variable     Relatório de Pesagem de Terceiros
+    [Tags]     Balancas    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Relatório de Pesagem de Terceiro
     RPA.Windows.Get Text      Relatório de Pesagem de Terceiro (1)
@@ -52,7 +57,8 @@ Relatório de Pesagem de Terceiros
     Fechar janela
 
 Relatório Bayer/Monsanto
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatório Bayer_Monsanto
+    ${nome_print}=     Set Variable     Relatório Bayer_Monsanto
+    [Tags]     Balancas    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Relatório Bayer/Monsanto
     RPA.Windows.Get Text      Relatório Bayer/Monsanto (1)
@@ -62,8 +68,3 @@ Relatório Bayer/Monsanto
     BaseDesktop.Screenshot    Relatório Bayer/Monsanto (1)    ${Caminho_Screenshots}Relatório Bayer_Monsanto
     RPA.Windows.Click         Confirmar
     Fechar janela
-
-Encerrar
-    Encerrar tudo
-
-

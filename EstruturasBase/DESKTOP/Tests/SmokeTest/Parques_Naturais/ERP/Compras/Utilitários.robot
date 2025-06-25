@@ -62,8 +62,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
-    Fechar Janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Estilo do Menu Principal
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
@@ -93,8 +92,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 
 Relatórios Personalizados > Cadastro de Categorias
@@ -107,8 +105,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
@@ -120,8 +117,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Ordem se Serviço
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Ordem se Serviço
@@ -131,8 +127,7 @@ Configurador de Impressões > Ordem se Serviço
     RPA.Windows.Get Text    Configurador de Impressões - Ordem de Serviço (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Ordem de Serviço (1)    ${Caminho_Screenshots}Configurador de Impressões/Ordem se Serviço
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Saídas Vendas
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Saídas Vendas
@@ -142,8 +137,7 @@ Configurador de Impressões > Saídas Vendas
     RPA.Windows.Get Text    Configurador de Impressões - Saídas/Vendas (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Saídas/Vendas (1)    ${Caminho_Screenshots}Configurador de Impressões/Saídas Vendas
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Ordem de Fixação
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Ordem de Fixação
@@ -153,8 +147,7 @@ Configurador de Impressões > Ordem de Fixação
     RPA.Windows.Get Text    Configurador de Impressões - Ordem de Fixação (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Ordem de Fixação (1)    ${Caminho_Screenshots}Configurador de Impressões/Ordem de Fixação
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Fixação de Produtos
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Fixação de Produtos
@@ -164,8 +157,7 @@ Configurador de Impressões > Fixação de Produtos
     RPA.Windows.Get Text    Configurador de Impressões - Fixação de Produtos (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Fixação de Produtos (1)    ${Caminho_Screenshots}Configurador de Impressões/Fixação de Produtos
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Entradas/Compras
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Entradas_Compras
@@ -175,8 +167,7 @@ Configurador de Impressões > Entradas/Compras
     RPA.Windows.Get Text    Configurador de Impressões - Entradas/Compras (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Entradas/Compras (1)    ${Caminho_Screenshots}Configurador de Impressões/Entradas_Compras
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Configurador de Impressões > Transferência entre Terceiros
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Transferência entre Terceiros
@@ -186,8 +177,7 @@ Configurador de Impressões > Transferência entre Terceiros
     RPA.Windows.Get Text    Configurador de Impressões - Transferência entre Terceiros - Compras (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Transferência entre Terceiros - Compras (1)    ${Caminho_Screenshots}Configurador de Impressões/Transferência entre Terceiros
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Criar Usuario de Log
     [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
@@ -244,8 +234,7 @@ Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
-    Fechar janela
-    RPA.Windows.Click       Sim
+    Fechar com Sim
 
 Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
     [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Exportação de Arquivos/             Salvar arquivo XML NFe de Terceiros
@@ -269,5 +258,5 @@ Exportação de Arquivos > Salvar o Arquivo XML NFe Própria
     RPA.Windows.Click       OK
     Fechar janela
 
-Encerrar
-    Encerrar tudo
+
+    
