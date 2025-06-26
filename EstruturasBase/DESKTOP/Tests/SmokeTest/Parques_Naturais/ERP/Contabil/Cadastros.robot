@@ -1,21 +1,23 @@
 *** Settings ***
 Documentation    Smoke Test: Contábil
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_ctb
+Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Contábil/Cadastros/    
-
+${nome_print}
+${nome_exe}=    cde_win_ctb
 *** Keywords ***
     
 
 *** Test Cases ***
 
 Plano de Contas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Plano de Contas
+    ${nome_print}=     Set Variable     Plano de Contas
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Plano de Contas
     RPA.Windows.Get Text      Cadastro do Plano de Contas (1)  
@@ -25,7 +27,8 @@ Plano de Contas
     RPA.Windows.Click         Sim
 
 Plano de Contas X Plano Referencial
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Plano de Contas X Plano Referencial
+    ${nome_print}=     Set Variable     Plano de Contas X Plano Referencial
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Plano de Contas x Plano Referencial
     RPA.Windows.Get Text      Relacionamento Plano de Contas x Plano Referencial
@@ -34,7 +37,8 @@ Plano de Contas X Plano Referencial
     RPA.Windows.Click         Fechar
 
 Balancete X Plano Referencial
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Balancete X Plano Referencial
+    ${nome_print}=     Set Variable     Balancete X Plano Referencial
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Balancete x Plano Referencial
     RPA.Windows.Get Text      Balancete x Plano Referencial (1)
@@ -44,7 +48,8 @@ Balancete X Plano Referencial
     Fechar janela
 
 Notas Explicativas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Notas Explicativas
+    ${nome_print}=     Set Variable     Notas Explicativas
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Notas Explicativas
     RPA.Windows.Get Text      Cadastro de Notas Explicativas (1)
@@ -54,7 +59,8 @@ Notas Explicativas
     RPA.Windows.Click         Sim
 
 Históricos Contábeis
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Históricos Contábeis
+    ${nome_print}=     Set Variable     Históricos Contábeis
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Históricos Contábeis
     RPA.Windows.Get Text      Cadastro de Históricos Contábeis (1)
@@ -64,7 +70,8 @@ Históricos Contábeis
     RPA.Windows.Click         Sim
 
 Centro de Custos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Centro de Custos
+    ${nome_print}=     Set Variable     Centro de Custos
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Centro de Custos
     RPA.Windows.Get Text      Cadastro de Centros de Custos (1)
@@ -74,7 +81,8 @@ Centro de Custos
     RPA.Windows.Click         Sim
 
 Indexadores
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Indexadores
+    ${nome_print}=     Set Variable     Indexadores
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Indexadores
     RPA.Windows.Get Text      Cadastro de Indexadores (1)
@@ -84,7 +92,8 @@ Indexadores
     RPA.Windows.Click         Sim
 
 Contabilistas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Contabilistas
+    ${nome_print}=     Set Variable     Contabilistas
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Contabilistas
     RPA.Windows.Get Text      Cadastro de Contabilistas (1)
@@ -94,7 +103,8 @@ Contabilistas
     RPA.Windows.Click         Sim
 
 Montagem do Demonstrativo DRE
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Montagem do Demonstrativo DRE
+    ${nome_print}=     Set Variable     Montagem do Demonstrativo DRE
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Montagem do Demonstrativo DRE
     RPA.Windows.Get Text      Montagem do Demonstrativo (1)
@@ -104,7 +114,8 @@ Montagem do Demonstrativo DRE
     Fechar janela
 
 Montagem do Demonstrativo DFC
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Montagem do Demonstrativo DFC
+    ${nome_print}=     Set Variable     Montagem do Demonstrativo DFC
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Montagem do Demonstrativo DFC
     RPA.Windows.Get Text      Montagem do Demonstrativo - DFC (1)
@@ -114,7 +125,8 @@ Montagem do Demonstrativo DFC
     Fechar janela
 
 Configuração Int. Contabil
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Configuração Int. Contabil
+    ${nome_print}=     Set Variable     Configuração Int. Contabil
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Configuração Int. Contabil
     RPA.Windows.Get Text      Configuração para Integração Contábil (1)
@@ -124,7 +136,8 @@ Configuração Int. Contabil
     RPA.Windows.Click         Sim
 
 Composição de Custos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Composição de Custos
+    ${nome_print}=     Set Variable     Composição de Custos
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Composição de Custos
     RPA.Windows.Get Text      Configuração de Composição de Custos (1)
@@ -134,7 +147,8 @@ Composição de Custos
     RPA.Windows.Click         Sim
 
 Despesas antecipadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Despesas antecipadas
+    ${nome_print}=     Set Variable     Despesas antecipadas
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Despesas antecipadas
     RPA.Windows.Get Text      Cadastro de Despesas Antecipadas (1)
@@ -144,7 +158,8 @@ Despesas antecipadas
     RPA.Windows.Click         Sim
 
 Países
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Países
+    ${nome_print}=     Set Variable     Países
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -153,7 +168,8 @@ Países
     Fechar com Sim
 
 Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Estados
+    ${nome_print}=     Set Variable     Estados
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -163,7 +179,8 @@ Estados
     RPA.Windows.Click         Sim
 
 Municípios
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Municípios
+    ${nome_print}=     Set Variable     Municípios
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -172,7 +189,8 @@ Municípios
     Fechar com Sim
 
 Localidades
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Localidades
+    ${nome_print}=     Set Variable     Localidades
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
@@ -181,7 +199,8 @@ Localidades
     Fechar com Sim
 
 Regiões
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}           Regiões
+    ${nome_print}=     Set Variable     Regiões
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -190,7 +209,8 @@ Regiões
     Fechar com Sim
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Empresas
+    ${nome_print}=     Set Variable     Empresas
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -200,7 +220,8 @@ Parâmetros > Empresas
     Fechar com Sim
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Estabelecimentos
+    ${nome_print}=     Set Variable     Estabelecimentos
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
@@ -210,7 +231,8 @@ Parâmetros > Estabelecimentos
     Fechar com Sim
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Usuários
+    ${nome_print}=     Set Variable     Usuários
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
@@ -220,7 +242,8 @@ Parâmetros > Usuários
     Fechar com Sim
 
 Parâmetros > Grupos Usuários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Grupos Usuários
+    ${nome_print}=     Set Variable     Grupos Usuários
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    g
@@ -230,7 +253,8 @@ Parâmetros > Grupos Usuários
     Fechar com Sim
 
 Parâmetros > Configurações de Estação
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Parâmetros/           Configurações de Estação
+    ${nome_print}=     Set Variable     Configurações de Estação
+    [Tags]     Contábil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    c
@@ -238,6 +262,3 @@ Parâmetros > Configurações de Estação
     RPA.Windows.Click         CDE-WIN-FIN
     BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações de Estação
     Fechar janela
-
-
-    

@@ -1,13 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_fin
-
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Financeiro/Cobrança Bancária/ 
-
+${nome_print}
+${nome_exe}=    cde_win_fin
 
 *** Keywords ***
 
@@ -15,10 +17,11 @@ Cobrança Bancária
     Cadastros
     repetidor de teclas    right    8
 
-
 *** Test Cases ***
+
 Emissão de Boletos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Emissão de Boletos
+    ${nome_print}=     Set Variable     Emissão de Boletos
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Emissão de Boletos
     RPA.Windows.Get Text      Emissão de Duplicatas/Boletos/Carnês (1)
@@ -29,7 +32,8 @@ Emissão de Boletos
     Fechar janela
 
 Carteiras de Cobrança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Carteiras de Cobrança
+    ${nome_print}=     Set Variable     Carteiras de Cobrança
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Carteiras de Cobrança
     RPA.Windows.Get Text      Cadastro de Carteiras de Cobranças (1)
@@ -38,7 +42,8 @@ Carteiras de Cobrança
     Fechar com Sim
 
 Tipos de Cobrança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Tipos de Cobrança
+    ${nome_print}=     Set Variable     Tipos de Cobrança
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Tipos de Cobrança
     RPA.Windows.Get Text      Cadastro de Tipos de Cobrança (1)
@@ -47,7 +52,8 @@ Tipos de Cobrança
     Fechar com Sim
 
 Geração de Remessas > Débito em C_C
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Geração de Remessas/                         Débito em C_C
+    ${nome_print}=     Set Variable     Débito em C_C
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    d
@@ -58,7 +64,8 @@ Geração de Remessas > Débito em C_C
     Fechar janela
 
 Geração de Remessas > Cobrança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Geração de Remessas/                         Cobrança
+    ${nome_print}=     Set Variable     Cobrança
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    C
@@ -69,7 +76,8 @@ Geração de Remessas > Cobrança
     Fechar janela
 
 Geração de Remessas > Consulta
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Geração de Remessas/                         Consulta
+    ${nome_print}=     Set Variable     Consulta
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    O
@@ -79,7 +87,8 @@ Geração de Remessas > Consulta
     Fechar janela
 
 Geração de Remessas > Manutenção
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Geração de Remessas/                         Manutenção
+    ${nome_print}=     Set Variable     Manutenção
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    M
@@ -91,7 +100,8 @@ Geração de Remessas > Manutenção
     Fechar janela
 
 Recepção de Arquivos Retornos > Débito em C_C
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                         Débito em C_C
+    ${nome_print}=     Set Variable     Débito em C_C
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Recepção de Arquivos Retornos
     RPA.Desktop.Press Keys    D
@@ -102,7 +112,8 @@ Recepção de Arquivos Retornos > Débito em C_C
     Fechar janela
 
 Recepção de Arquivos Retornos > Cobrança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                         Cobrança
+    ${nome_print}=     Set Variable     Cobrança
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Recepção de Arquivos Retornos
     RPA.Desktop.Press Keys    C
@@ -113,7 +124,8 @@ Recepção de Arquivos Retornos > Cobrança
     Fechar janela
 
 Recepção de Arquivos Retornos > Log Arquivos de Retorno
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Recepção de Arquivos Retornos/                         Log Arquivos de Retorno
+    ${nome_print}=     Set Variable     Log Arquivos de Retorno
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Recepção de Arquivos Retornos
     RPA.Desktop.Press Keys    L
@@ -123,7 +135,8 @@ Recepção de Arquivos Retornos > Log Arquivos de Retorno
     Fechar janela
 
 Duplicatas Descontadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Duplicatas Descontadas
+    ${nome_print}=     Set Variable     Duplicatas Descontadas
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Duplicatas Descontadas
     RPA.Windows.Get Text      Duplicatas Descontadas (1)
@@ -133,7 +146,8 @@ Duplicatas Descontadas
     Fechar janela
 
 Extorno de Duplicatas Descontadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Extorno de Duplicatas Descontadas
+    ${nome_print}=     Set Variable     Extorno de Duplicatas Descontadas
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Estorno Duplicatas Descontadas
     RPA.Windows.Get Text      Estorno - Duplicatas Descontadas (1)
@@ -143,7 +157,8 @@ Extorno de Duplicatas Descontadas
     Fechar janela
 
 Desvincular Boletos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Desvincular Boletos
+    ${nome_print}=     Set Variable     Desvincular Boletos
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Desvincular Boletos
     RPA.Windows.Get Text      Desvincular Boletos (1)
@@ -152,6 +167,3 @@ Desvincular Boletos
     BaseDesktop.Screenshot    Desvincular Boletos (1)    ${Caminho_Screenshots}Desvincular Boletos
     RPA.Windows.Click       Confirmar
     Fechar janela
-
-    
-    

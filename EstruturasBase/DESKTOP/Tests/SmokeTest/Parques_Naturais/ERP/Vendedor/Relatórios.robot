@@ -1,14 +1,16 @@
 *** Settings ***
 Documentation    Smoke Test: Vendedor
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_VENDEDOR
+Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendedor/Relatórios/    
-
+${nome_print}
+${nome_exe}=    cde_win_VENDEDOR
 *** Keywords ***
 
 Relatórios
@@ -20,7 +22,8 @@ Relatórios
 *** Test Cases ***
 
 Análise da Disponibilidade do Estoque
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Análise da Disponibilidade do Estoque
+    ${nome_print}=     Set Variable     Análise da Disponibilidade do Estoque
+    [Tags]    Vendedor   Relatórios   SmokeTest
     Relatórios                Análise da Disponibilidade do Estoque   
     RPA.Windows.Get Text      Análise da Disponibilidade do Estoque (1)
     RPA.Desktop.Press Keys    tab
@@ -31,7 +34,8 @@ Análise da Disponibilidade do Estoque
     Fechar janela
 
 Relatório de Cobrança
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatório de Cobrança
+    ${nome_print}=     Set Variable     Relatório de Cobrança
+    [Tags]    Vendedor   Relatórios   SmokeTest
     Relatórios                Relatório de Cobrança  
     RPA.Windows.Get Text      Relatório de Cobrança
     RPA.Desktop.Press Keys    tab
@@ -42,7 +46,8 @@ Relatório de Cobrança
     Fechar janela
 
 Posição Financeira/Vendedor/Terceiro
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Posição Financeira/Vendedor/Terceiro
+    ${nome_print}=     Set Variable     Posição Financeira/Vendedor/Terceiro
+    [Tags]    Vendedor   Relatórios   SmokeTest
     Relatórios                Posição Financeira/Vendedor/Terceiro  
     RPA.Windows.Get Text      Posição Financeira por Representante/Terceiro
     RPA.Desktop.Press Keys    tab
@@ -51,9 +56,3 @@ Posição Financeira/Vendedor/Terceiro
     BaseDesktop.Screenshot    Posição Financeira por Representante/Terceiro   ${Caminho_Screenshots}Posição Financeira/Vendedor/Terceiro
     RPA.Windows.Click         Confirmar
     Fechar janela
-
-
-    
-
-
-

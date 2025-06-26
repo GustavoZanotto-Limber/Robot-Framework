@@ -20,6 +20,7 @@ Manutenções
 *** Test Cases ***
 
 Consulta de Vendas
+    [Tags]    Consultas    Front    SmokeTest  
     ${nome_print}=          Set Variable    Consulta de Vendas
     Manutenções
     RPA.Windows.Click       Consulta de Vendas
@@ -29,6 +30,7 @@ Consulta de Vendas
     Fechar janela
 
 Consulta de Reservas
+    [Tags]    Consultas    Front    SmokeTest  
     ${nome_print}=          Set Variable    Consulta de Reservas        
     Manutenções
     RPA.Windows.Click       Consulta de Reservas
@@ -38,6 +40,7 @@ Consulta de Reservas
     Fechar janela
 
 Consulta de Voucher
+    [Tags]    Consultas    Front    SmokeTest  
     ${nome_print}=          Set Variable    Consulta de Voucher
     Manutenções
     RPA.Windows.Click       Consulta de Voucher
@@ -47,6 +50,7 @@ Consulta de Voucher
     Fechar janela
 
 Consulta de Lançamento de Veículos
+    [Tags]    Consultas    Front    SmokeTest  
     ${nome_print}=          Set Variable    Consulta de Lançamento de Veículos   
     Manutenções
     RPA.Windows.Click       Consulta de Lançamento de Veículos
@@ -56,6 +60,7 @@ Consulta de Lançamento de Veículos
     Fechar janela
 
 Consulta de Bilhetes
+    [Tags]    Consultas    Front    SmokeTest  
     ${nome_print}=          Set Variable    Consulta de Bilhetes    
     Manutenções
     RPA.Windows.Click       Consulta de Bilhetes
@@ -67,6 +72,7 @@ Consulta de Bilhetes
     Fechar janela
 
 Leitor de Bilhetes
+    [Tags]    Consultas    Front    SmokeTest  
     ${nome_print}=          Set Variable    Leitor de Bilhetes    
     RPA.Windows.Click       Leitor de Bilhetes
     RPA.Windows.Get Text    Leitor de Bilhetes (1)
@@ -76,6 +82,7 @@ Leitor de Bilhetes
     RPA.Windows.Click       Fechar
 
 Consulta Passaporte
+    [Tags]    Consultas    Front    SmokeTest  
     ${nome_print}=          Set Variable    Consulta Passaporte    
     Manutenções
     RPA.Windows.Click       Consulta Passaporte
@@ -88,6 +95,7 @@ Consulta Passaporte
     RPA.Windows.Click       Fechar
 
 Consultas Personalizadas
+    [Tags]    Consultas    Front    SmokeTest  
     ${nome_print}=          Set Variable    Consultas Personalizadas
     Manutenções
     RPA.Windows.Click       Consultas Personalizadas

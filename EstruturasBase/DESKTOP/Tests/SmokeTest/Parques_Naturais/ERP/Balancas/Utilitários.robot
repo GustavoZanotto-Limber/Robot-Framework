@@ -95,7 +95,7 @@ Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
-Cadastro de Categorias
+Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
     [Tags]     Balancas    Utilitários   SmokeTest
     Utilitários
@@ -108,7 +108,7 @@ Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar com Sim
     
-Cadastro de Relatórios
+Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
     [Tags]     Balancas    Utilitários   SmokeTest
     Utilitários

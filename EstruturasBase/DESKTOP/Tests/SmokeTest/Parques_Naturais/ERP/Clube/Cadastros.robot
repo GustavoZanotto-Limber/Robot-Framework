@@ -106,7 +106,7 @@ Perfil de acesso
     BaseDesktop.Screenshot  Cadastro de perfil para permissão de acesso (1)    ${Caminho_Screenshots}Perfil de acesso
     Fechar com Sim
 
-Origens de Venda
+Novo Clubes > Origens de Venda
     ${nome_print}=     Set Variable     Origens de Venda
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -117,7 +117,7 @@ Origens de Venda
     BaseDesktop.Screenshot  Cadastro de Origens de Venda (1)    ${Caminho_Screenshots}Novo Clubes/Origens de Venda
     Fechar com Sim
 
-Tarifas
+Novo Clubes > Tarifas
     ${nome_print}=     Set Variable     Tarifas
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -128,7 +128,7 @@ Tarifas
     BaseDesktop.Screenshot  Cadastro de Tarifas (1)    ${Caminho_Screenshots}Novo Clubes/Tarifas
     Fechar com Sim
 
-Regras de Acesso
+Novo Clubes > Regras de Acesso
     ${nome_print}=     Set Variable     Regras de Acesso
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -139,7 +139,7 @@ Regras de Acesso
     BaseDesktop.Screenshot  Cadastro de Regras de Acesso (1)    ${Caminho_Screenshots}Novo Clubes/Regras de Acesso
     Fechar com Sim
 
-Locais de Acesso
+Novo Clubes > Locais de Acesso
     ${nome_print}=     Set Variable     Locais de Acesso
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -150,7 +150,7 @@ Locais de Acesso
     BaseDesktop.Screenshot  Cadastro de Locais de Acesso (1)    ${Caminho_Screenshots}Novo Clubes/Locais de Acesso
     Fechar com Sim
 
-Campanhas e Cupons
+Novo Clubes > Campanhas e Cupons
     ${nome_print}=     Set Variable     Campanhas e Cupons
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -161,7 +161,7 @@ Campanhas e Cupons
     BaseDesktop.Screenshot  Cadastro de Campanhas e Cupons (1)    ${Caminho_Screenshots}Novo Clubes/Campanhas e Cupons
     Fechar com Sim
 
-Produtos
+Novo Clubes > Produtos
     ${nome_print}=     Set Variable     Produtos
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -172,7 +172,7 @@ Produtos
     BaseDesktop.Screenshot  Cadastro de Produtos (1)   ${Caminho_Screenshots}Novo Clubes/Produtos
     Fechar com Sim
 
-Ocorrências
+Novo Clubes > Ocorrências
     ${nome_print}=     Set Variable     Ocorrências
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -183,7 +183,7 @@ Ocorrências
     BaseDesktop.Screenshot  Cadastro de Ocorrências (1)    ${Caminho_Screenshots}Novo Clubes/Ocorrências
     Fechar com Sim
 
-Títulos
+Novo Clubes > Títulos
     ${nome_print}=     Set Variable     Títulos
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -244,7 +244,7 @@ Localidades
     BaseDesktop.Screenshot    Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
     Fechar com Sim
 
-Planos de Contas
+Financeiro > Planos de Contas
     ${nome_print}=     Set Variable     Planos de Contas
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -255,7 +255,7 @@ Planos de Contas
     BaseDesktop.Screenshot    Cadastro do Plano de Contas (1)    ${Caminho_Screenshots}Financeiro/Planos de Contas
     Fechar com Sim
 
-Centro de Custos
+Financeiro > Centro de Custos
     ${nome_print}=     Set Variable     Centro de Custos
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -266,7 +266,7 @@ Centro de Custos
     BaseDesktop.Screenshot    Cadastro de Centros de Custos (1)    ${Caminho_Screenshots}Financeiro/Centro de Custos
     Fechar com Sim
 
-Portadores
+Financeiro > Portadores
     ${nome_print}=     Set Variable     Portadores
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -277,7 +277,7 @@ Portadores
     BaseDesktop.Screenshot    Cadastro de Portadores (1)    ${Caminho_Screenshots}Financeiro/Portadores
     Fechar com Sim
 
-Tipos de Cobrança
+Financeiro > Tipos de Cobrança
     ${nome_print}=     Set Variable     Tipos de Cobrança
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -288,7 +288,7 @@ Tipos de Cobrança
     BaseDesktop.Screenshot    Cadastro de Tipos de Cobrança (1)    ${Caminho_Screenshots}Financeiro/Tipos de Cobrança
     Fechar com Sim
 
-Tipos de Documento
+Financeiro > Tipos de Documento
     ${nome_print}=     Set Variable     Tipos de Documentos
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -299,7 +299,7 @@ Tipos de Documento
     BaseDesktop.Screenshot    Cadastro de Tipos de Documentos (1)    ${Caminho_Screenshots}Financeiro/Tipos de Documentos
     Fechar com Sim
 
-Formas de Pagamento
+Financeiro > Formas de Pagamento
     ${nome_print}=     Set Variable     Formas de Pagamento
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -310,7 +310,7 @@ Formas de Pagamento
     BaseDesktop.Screenshot    Formas de Pagamento (1)    ${Caminho_Screenshots}Financeiro/Formas de Pagamento
     Fechar com Sim
 
-Empresas
+Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -321,7 +321,7 @@ Empresas
     BaseDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
     Fechar com Sim
 
-Estabelecimentos
+Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -332,7 +332,7 @@ Estabelecimentos
     BaseDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
     Fechar com Sim
 
-Usuários
+Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -343,7 +343,7 @@ Usuários
     BaseDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
     Fechar com Sim
 
-Grupo de Usuários
+Parâmetros > Grupo de Usuários
     ${nome_print}=     Set Variable     Grupo de Usuários
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros
@@ -354,7 +354,7 @@ Grupo de Usuários
     BaseDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
     Fechar com Sim
 
-Configurações da Estação
+Parâmetros > Configurações da Estação
     ${nome_print}=     Set Variable     Configurações da Estação
     [Tags]     Clube    Cadastros   SmokeTest
     Cadastros

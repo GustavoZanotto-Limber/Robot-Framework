@@ -1,13 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
 Resource          C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_VENDEDOR
+Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendedor/Utilitários/    
-
+${nome_print}
+${nome_exe}=    cde_win_VENDEDOR
 *** Keywords ***
 
 Utilitários
@@ -19,7 +21,8 @@ Utilitários
 *** Test Cases ***
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Favoritos
+    ${nome_print}=     Set Variable     Favoritos
+    [Tags]    Frotas   Utilitários   SmokeTest
     Utilitários             Favoritos       
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
@@ -28,7 +31,8 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Papel de Parede
+    ${nome_print}=     Set Variable     Papel de Parede
+    [Tags]    Frotas   Utilitários   SmokeTest
     Utilitários             Papel de Parede     
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
@@ -36,7 +40,8 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Estilo do Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
+    ${nome_print}=     Set Variable     Estilo do Menu Principal
+    [Tags]    Frotas   Utilitários   SmokeTest
     Utilitários             Estilo do Menu Principal       
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
     RPA.Windows.Click       Standard
@@ -44,7 +49,8 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Controle de Acessos
+    ${nome_print}=     Set Variable     Controle de Acessos
+    [Tags]    Frotas   Utilitários   SmokeTest
     Utilitários             Controle de Acessos   
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
     RPA.Windows.Click       Confirmar
@@ -53,7 +59,8 @@ Controle de Acessos
     Fechar janela
 
 Configuração de Liberação
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configuração de Liberação
+    ${nome_print}=     Set Variable     Configuração de Liberação
+    [Tags]    Frotas   Utilitários   SmokeTest
     Utilitários             Configuração de Liberação   
     RPA.Windows.Get Text    Configurações de Liberação (1)
     RPA.Desktop.Press Keys  0
@@ -62,9 +69,9 @@ Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
-
 Relatórios Personalizados > Cadastro de Categorias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                             Cadastro de Categorias
+    ${nome_print}=     Set Variable     Cadastro de Categorias
+    [Tags]    Frotas   Utilitários   SmokeTest
     Utilitários             Relatórios Personalizados      
     RPA.Desktop.Press Keys  c
     RPA.Windows.Get Text    Cadastro de Categoria (1)
@@ -75,7 +82,8 @@ Relatórios Personalizados > Cadastro de Categorias
     Fechar com Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
+    ${nome_print}=     Set Variable     Cadastro de Relatórios
+    [Tags]    Frotas   Utilitários   SmokeTest
     Utilitários             Relatórios Personalizados      
     RPA.Desktop.Press Keys  a
     RPA.Desktop.Press Keys  0
@@ -86,19 +94,18 @@ Relatórios Personalizados > Cadastro de Relatórios
     Fechar com Sim
 
 Criar Usuario de Log
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
+    ${nome_print}=     Set Variable     Criar Usuario de Log
+    [Tags]    Frotas   Utilitários   SmokeTest
     Utilitários             Criar Usuário de Log 
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
     BaseDesktop.Screenshot  Cadastro Usuario de Log (1)    ${Caminho_Screenshots}Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Verifica transações abertas
+    ${nome_print}=     Set Variable     Verifica transações abertas
+    [Tags]    Frotas   Utilitários   SmokeTest
     Utilitários             Verifica transações abertas  
     RPA.Windows.Get Text    Verifica transações abertas (1)
     RPA.Windows.Click      Carregar
     BaseDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
-
-
-    

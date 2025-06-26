@@ -1,8 +1,9 @@
 *** Settings ***
 Documentation    Smoke Test: Clube
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup         Iniciar sessao  ${nome_exe}
+Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
@@ -27,7 +28,7 @@ Mensalidades Pendentes/Pagas
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Consulta do Contas a Receber (1)   ${Caminho_Screenshots}Mensalidades Pendentes_Pagas
     Fechar janela
-    RPA.Windows.Click       Não
+    RPA.Windows.Click       OK
 
 Sócios/Dependentes
     ${nome_print}=     Set Variable     Sócios_Dependentes
@@ -38,7 +39,7 @@ Sócios/Dependentes
     BaseDesktop.Screenshot  Sócios/Dependentes   ${Caminho_Screenshots}Sócios_Dependentes
     RPA.Windows.Click       Fechar
 
-Status do Cartão
+Controle Acessos > Status do Cartão
     ${nome_print}=     Set Variable     Status do Cartão
     [Tags]     Clube    Consultas   SmokeTest
     Consultas
@@ -51,7 +52,7 @@ Status do Cartão
     RPA.Windows.Click       Fechar
     Fechar janela
 
-Extrato/Local Acesso
+Controle Acessos > Extrato/Local Acesso
     ${nome_print}=     Set Variable     Extrato/Local Acesso
     [Tags]     Clube    Consultas   SmokeTest
     Consultas
@@ -60,7 +61,7 @@ Extrato/Local Acesso
     RPA.Windows.Get Text    Sócios Presentes (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Sócios Presentes (1)   ${Caminho_Screenshots}Controle Acessos/Extrato/Local Acesso 
+    BaseDesktop.Screenshot  Sócios Presentes (1)   ${Caminho_Screenshots}Controle Acessos/Extrato_Local Acesso 
     RPA.Windows.Click       Fechar
     Fechar janela
 

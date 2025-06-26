@@ -1,13 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_fin
-
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Financeiro/Contas/    
-
+${nome_print}
+${nome_exe}=    cde_win_fin
 *** Keywords ***
 
 Contas
@@ -18,7 +20,8 @@ Contas
 *** Test Cases ***
 
 Movimentação de Contas
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Movimentação de Contas
+    ${nome_print}=     Set Variable     Movimentação de Contas
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Movimentação de Contas
     RPA.Windows.Get Text      Movimento de Contas (1)
@@ -27,7 +30,8 @@ Movimentação de Contas
     Fechar com Sim
 
 Transferências entre Contas
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Transferências entre Contas
+    ${nome_print}=     Set Variable     Transferências entre Contas
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Transferências entre Contas
     RPA.Windows.Get Text      Transferências (1)
@@ -37,7 +41,8 @@ Transferências entre Contas
     RPA.Windows.Click         Sim
 
 Transferências entre Estabelecimentos
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Transferências entre Estabelecimentos
+    ${nome_print}=     Set Variable     Transferências entre Estabelecimentos
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Transferências entre Estabelecimentos
     RPA.Windows.Get Text      Transferência Entre Estabelecimentos (1)
@@ -46,7 +51,8 @@ Transferências entre Estabelecimentos
     Fechar com Sim
 
 Conciliação de Cheques Emitidos
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Conciliação de Cheques Emitidos
+    ${nome_print}=     Set Variable     Conciliação de Cheques Emitidos
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Cheques Emitidos
     RPA.Windows.Get Text      Conciliação de Cheques Emitidos
@@ -56,7 +62,8 @@ Conciliação de Cheques Emitidos
     Fechar janela
 
 Conciliação de Cheques de Terceiros
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Conciliação de Cheques de Terceiros
+    ${nome_print}=     Set Variable     Conciliação de Cheques de Terceiros
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Cheques de Terceiros
     RPA.Windows.Get Text      Conciliação de Cheques de Terceiros (1)
@@ -66,7 +73,8 @@ Conciliação de Cheques de Terceiros
     Fechar janela
 
 Conciliação de Contas
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Conciliação de Contas
+    ${nome_print}=     Set Variable     Conciliação de Contas
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Contas
     RPA.Windows.Get Text      Conciliação de Contas
@@ -76,7 +84,8 @@ Conciliação de Contas
     Fechar janela
 
 Estorna Conciliação
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Estorna Conciliação
+    ${nome_print}=     Set Variable     Estorna Conciliação
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Estorna Conciliação
     RPA.Windows.Get Text      Estorna Conciliação de Lançamentos Bancários (1)
@@ -86,7 +95,8 @@ Estorna Conciliação
     Fechar janela
 
 Estorno de Conciliação Cheques Terceiros
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Estorno de Conciliação Cheques Terceiros
+    ${nome_print}=     Set Variable     Estorno de Conciliação Cheques Terceiros
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Estorno de Conciliação Cheques Terceiros
     RPA.Windows.Get Text      Estorno de Conciliação de Cheques de Terceiros (1)
@@ -96,7 +106,8 @@ Estorno de Conciliação Cheques Terceiros
     Fechar janela
 
 Conciliação de Transações Eletrônicas > Conciliação de Transações Eletrônicas Simplificadas
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Conciliação de Transações Eletrônicas/             Conciliação de Transações Eletrônicas Simplificadas
+    ${nome_print}=     Set Variable     Conciliação de Transações Eletrônicas Simplificadas
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Transações Eletrônicas
     RPA.Desktop.Press Keys    C
@@ -107,7 +118,8 @@ Conciliação de Transações Eletrônicas > Conciliação de Transações Eletr
     Fechar janela
 
 Conciliação de Transações Eletrônicas > Conciliação Arquivo PIX CNAB 750
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Conciliação de Transações Eletrônicas/             Conciliação Arquivo PIX CNAB 750
+    ${nome_print}=     Set Variable     Conciliação Arquivo PIX CNAB 750
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Transações Eletrônicas
     RPA.Desktop.Press Keys    o
@@ -118,7 +130,8 @@ Conciliação de Transações Eletrônicas > Conciliação Arquivo PIX CNAB 750
     Fechar janela
 
 Conciliação de Transações Eletrônicas > Conciliação de Transações PIX > API
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Conciliação de Transações Eletrônicas/Conciliação de Transações PIX/             API
+    ${nome_print}=     Set Variable     API
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Transações Eletrônicas
     RPA.Desktop.Press Keys    n
@@ -130,7 +143,8 @@ Conciliação de Transações Eletrônicas > Conciliação de Transações PIX >
     Fechar janela
 
 Conciliação de Transações Eletrônicas > Configuração de Arquivo de Importação
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Conciliação de Transações Eletrônicas/        Configuração de Arquivo de Importação
+    ${nome_print}=     Set Variable     Configuração de Arquivo de Importação
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Transações Eletrônicas
     RPA.Desktop.Press Keys    f
@@ -140,7 +154,8 @@ Conciliação de Transações Eletrônicas > Configuração de Arquivo de Import
     Fechar com Sim
 
 Apropriação de Custos (Centro de Custos)
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Apropriação de Custos (Centro de Custos)
+    ${nome_print}=     Set Variable     Apropriação de Custos (Centro de Custos)
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Apropriação de Custos (Centro de Custos)
     RPA.Windows.Get Text      Apropriação de Custos (1)
@@ -150,7 +165,8 @@ Apropriação de Custos (Centro de Custos)
     Fechar janela
 
 Apropriação de Consumo de Adiantamentos
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Apropriação de Consumo de Adiantamentos
+    ${nome_print}=     Set Variable     Apropriação de Consumo de Adiantamentos
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Apropriação de Consumo de Adiantamentos
     RPA.Windows.Get Text      Apropriação de consumo de adiantamento (1)
@@ -159,7 +175,8 @@ Apropriação de Consumo de Adiantamentos
     Fechar janela
 
 Encontro de Contas > Encontro de Contas
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Encontro de Contas/             Encontro de Contas
+    ${nome_print}=     Set Variable     Encontro de Contas
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Encontro de Contas
     RPA.Desktop.Press Keys    E
@@ -170,7 +187,8 @@ Encontro de Contas > Encontro de Contas
     Fechar janela
 
 Encontro de Contas > Estorno de Encontro de Contas
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Encontro de Contas/             Estorno de Encontro de Contas
+    ${nome_print}=     Set Variable     Estorno de Encontro de Contas
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Encontro de Contas
     RPA.Desktop.Press Keys    s
@@ -181,7 +199,8 @@ Encontro de Contas > Estorno de Encontro de Contas
     Fechar janela
 
 Geração de Receitas Mapa Resumo > Geração de Receitas Mapa Resumo
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/             Geração de Receitas Mapa Resumo
+    ${nome_print}=     Set Variable     Geração de Receitas Mapa Resumo
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    g
@@ -192,7 +211,8 @@ Geração de Receitas Mapa Resumo > Geração de Receitas Mapa Resumo
     Fechar janela
 
 Geração de Receitas Mapa Resumo > Configuração para geração de receitas
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/             Configuração para geração de receitas
+    ${nome_print}=     Set Variable     Configuração para geração de receitas
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    c
@@ -202,7 +222,8 @@ Geração de Receitas Mapa Resumo > Configuração para geração de receitas
     Fechar com Sim
 
 Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Tipos de Deduções
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Deduções Adicionais de ISS/            Tipos de Deduções
+    ${nome_print}=     Set Variable     Tipos de Deduções
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    d
@@ -213,7 +234,8 @@ Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Tipos de Dedu
     Fechar com Sim
 
 Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Lançamento de Deduções
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Deduções Adicionais de ISS/             Lançamento de Deduções
+    ${nome_print}=     Set Variable     Lançamento de Deduções
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    d
@@ -224,7 +246,8 @@ Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Lançamento d
     Fechar com Sim
 
 Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Consulta de Lançamentos
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Deduções Adicionais de ISS/             Consulta de Lançamentos
+    ${nome_print}=     Set Variable     Consulta de Lançamentos
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    d
@@ -235,7 +258,8 @@ Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Consulta de L
     Fechar janela
 
 Geração de Receitas Mapa Resumo > Vinculo Cliente em Venda
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/          Vinculo Cliente em Venda
+    ${nome_print}=     Set Variable     Vinculo Cliente em Venda
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    v
@@ -247,7 +271,8 @@ Geração de Receitas Mapa Resumo > Vinculo Cliente em Venda
     Fechar janela
 
 Geração de Receitas Mapa Resumo > Emissão de NFS-e/CT-e sobre Reduções
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/          Emissão de NFS-e_CT-e sobre Reduções
+    ${nome_print}=     Set Variable     Emissão de NFS-e_CT-e sobre Reduções
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    e
@@ -258,7 +283,8 @@ Geração de Receitas Mapa Resumo > Emissão de NFS-e/CT-e sobre Reduções
     Fechar janela
 
 Geração de Receitas Mapa Resumo > Mapa Resumo da ECF
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/          Mapa Resumo da ECF
+    ${nome_print}=     Set Variable     Mapa Resumo da ECF
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    m
@@ -268,7 +294,8 @@ Geração de Receitas Mapa Resumo > Mapa Resumo da ECF
     Fechar com Sim
 
 Geração de Receitas Mapa Resumo > Fechamento de Caixas
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/          Fechamento de Caixas
+    ${nome_print}=     Set Variable     Fechamento de Caixas
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    f
@@ -278,7 +305,8 @@ Geração de Receitas Mapa Resumo > Fechamento de Caixas
     Fechar janela
 
 Zeramento de Cartões Crédito Interno
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Zeramento de Cartões Crédito Interno
+    ${nome_print}=     Set Variable     Zeramento de Cartões Crédito Interno
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Zeramento de Cartões Crédito Interno
     RPA.Windows.Get Text      Zeramento de Saldo de Cartões Crédito Interno Pré Pago (1)
@@ -288,7 +316,8 @@ Zeramento de Cartões Crédito Interno
     Fechar janela
 
 Bloqueia Lançamentos
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}             Bloqueia Lançamentos
+    ${nome_print}=     Set Variable     Bloqueia Lançamentos
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Bloqueia Lançamentos
     RPA.Windows.Get Text      Bloqueia Lançamentos (1)
@@ -300,7 +329,8 @@ Bloqueia Lançamentos
     Fechar janela
 
 Consultas > Razão de Contas
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Consultas/          Razão de Contas
+    ${nome_print}=     Set Variable     Razão de Contas
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    r
@@ -311,7 +341,8 @@ Consultas > Razão de Contas
     Fechar janela
 
 Consultas > Balancete
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Consultas/          Balancete
+    ${nome_print}=     Set Variable     Balancete
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    b
@@ -322,7 +353,8 @@ Consultas > Balancete
     Fechar janela
 
 Consultas > Diário
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Consultas/          Diário
+    ${nome_print}=     Set Variable     Diário
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    d
@@ -333,7 +365,8 @@ Consultas > Diário
     Fechar janela
 
 Consultas > Pesquisa de Lançamentos
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Consultas/          Pesquisa de Lançamentos
+    ${nome_print}=     Set Variable     Pesquisa de Lançamentos
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    p
@@ -344,18 +377,20 @@ Consultas > Pesquisa de Lançamentos
     Fechar janela
 
 Consultas > Livro Caixa
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Consultas/          Livro Caixa
+    ${nome_print}=     Set Variable     Livro Caixa
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    l
     RPA.Windows.Get Text      Consulta Livro Caixa (1)
-     RPA.Windows.Click        Carregar
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Consulta Livro Caixa (1)    ${Caminho_Screenshots}Consultas/Livro Caixa
     RPA.Windows.Click         OK
     Fechar janela
 
 Relatórios > Razão Gerencial
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Relatórios/          Razão Gerencial
+    ${nome_print}=     Set Variable     Razão Gerencial
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    r
@@ -368,7 +403,8 @@ Relatórios > Razão Gerencial
     Fechar janela
 
 Relatórios > Balancete
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Relatórios/          Balancete
+    ${nome_print}=     Set Variable     Balancete
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    b
@@ -380,7 +416,8 @@ Relatórios > Balancete
     Fechar janela
 
 Relatórios > Livro caixa
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Relatórios/          Livro caixa
+    ${nome_print}=     Set Variable     Livro caixa
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    l
@@ -393,7 +430,8 @@ Relatórios > Livro caixa
     Fechar janela
 
 Relatórios > Movimentação de Caixa
-    [Teardown]    Caso aconteça erro           ${Caminho_Screenshots}Relatórios/          Movimentação de Caixa
+    ${nome_print}=     Set Variable     Movimentação de Caixa
+    [Tags]     Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    m
@@ -404,6 +442,7 @@ Relatórios > Movimentação de Caixa
     BaseDesktop.Screenshot    Relatório de Movimentação de Caixa (1)    ${Caminho_Screenshots}Relatórios/Movimentação de Caixa
     RPA.Windows.Click         Confirmar
     Fechar janela
+
 
 
     

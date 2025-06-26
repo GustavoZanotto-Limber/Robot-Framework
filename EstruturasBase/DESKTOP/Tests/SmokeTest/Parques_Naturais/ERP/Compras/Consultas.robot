@@ -1,12 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Compras
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_compras
-
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Compras/Consultas/    
+${nome_print}
+${nome_exe}=    cde_win_compras
 
 *** Keywords ***
 
@@ -17,7 +20,8 @@ Consultas
 *** Test Cases ***
 
 Estoque Atual
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Estoque Atual
+    ${nome_print}=     Set Variable     Estoque Atual
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Estoque Atual
     RPA.Windows.Get Text    Consulta de Itens (1)
@@ -26,7 +30,8 @@ Estoque Atual
     Fechar janela
 
 Estoque Atual (Modelo 2)
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Estoque Atual (Modelo 2)
+    ${nome_print}=     Set Variable     Estoque Atual (Modelo 2)
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Estoque Atual (Modelo 2)
     RPA.Windows.Get Text    Consulta de Itens (1)
@@ -35,7 +40,8 @@ Estoque Atual (Modelo 2)
     RPA.Windows.Click       Fechar
 
 Pedidos de Compra
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Pedidos de Compra
+    ${nome_print}=     Set Variable     Pedidos de Compra
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Pedidos de Compra
     RPA.Windows.Get Text    Consulta de Pedidos de Compra (1)
@@ -44,7 +50,8 @@ Pedidos de Compra
     Fechar janela
 
 Entrega de Pedidos de Compra
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Entrega de Pedidos de Compra
+    ${nome_print}=     Set Variable     Entrega de Pedidos de Compra
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Entrega de Pedidos de Compra
     RPA.Windows.Get Text    Controle de entrega de Pedido de Compras (1)
@@ -53,7 +60,8 @@ Entrega de Pedidos de Compra
     Fechar janela
 
 Ficha Kardex de Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Ficha Kardex de Produtos
+    ${nome_print}=     Set Variable     Ficha Kardex de Produtos
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Ficha Kardex de Produtos
     RPA.Windows.Get Text    Kardex do Estoque (1)
@@ -63,7 +71,8 @@ Ficha Kardex de Produtos
     Fechar janela
 
 Saldo Sintético de Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Saldo Sintético de Produtos
+    ${nome_print}=     Set Variable     Saldo Sintético de Produtos
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Saldo Sintético de Produtos
     RPA.Windows.Get Text    Consulta Saldo Sintético de Produtos (1)
@@ -73,7 +82,8 @@ Saldo Sintético de Produtos
     Fechar janela
 
 Consulta Saldo Sintético de Operações
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Consulta Saldo Sintético de Operações
+    ${nome_print}=     Set Variable     Consulta Saldo Sintético de Operações
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Consulta Saldo Sintético de Operações
     RPA.Windows.Get Text    Consulta Saldo Sintético de Operações (1)
@@ -82,7 +92,8 @@ Consulta Saldo Sintético de Operações
     Fechar janela
 
 Movimentação de Operações
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Movimentação de Operações
+    ${nome_print}=     Set Variable     Movimentação de Operações
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Movimentação de Operações
     RPA.Windows.Get Text    Movimentação de Operações (1)
@@ -91,7 +102,8 @@ Movimentação de Operações
     Fechar janela
 
 Saldo de Operações
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Saldo de Operações
+    ${nome_print}=     Set Variable     Saldo de Operações
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Saldo de Operações
     RPA.Windows.Get Text    Consulta Saldo de Operações (1)
@@ -100,7 +112,8 @@ Saldo de Operações
     Fechar janela
 
 Saldo de Lotes - Sintético
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Saldo de Lotes - Sintético
+    ${nome_print}=     Set Variable     Saldo de Lotes - Sintético
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas 
     RPA.Windows.Click       Saldo de Lotes - Sintético
     RPA.Windows.Get Text    Consulta de Lotes/Sintético (1)
@@ -109,7 +122,8 @@ Saldo de Lotes - Sintético
     Fechar janela
 
 Movimentação de Lotes
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Movimentação de Lotes
+    ${nome_print}=     Set Variable     Movimentação de Lotes
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas 
     RPA.Windows.Click       Movimentação de Lotes
     RPA.Windows.Get Text    Relatório de Movimentação de Lotes (1)
@@ -119,7 +133,8 @@ Movimentação de Lotes
     Fechar janela
 
 Saldo de Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Saldo de Terceiros
+    ${nome_print}=     Set Variable     Saldo de Terceiros
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Saldo de Terceiros
     RPA.Windows.Get Text    Saldos de Terceiros (1)
@@ -128,7 +143,8 @@ Saldo de Terceiros
     Fechar janela
 
 Movimentação de Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Movimentação de Terceiros
+    ${nome_print}=     Set Variable     Movimentação de Terceiros
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Movimentação de Terceiros
     RPA.Windows.Get Text    Movimentação de Terceiros (1)
@@ -138,7 +154,8 @@ Movimentação de Terceiros
     Fechar janela
 
 Análise de Compras
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Análise de Compras
+    ${nome_print}=     Set Variable     Análise de Compras
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Análise de Compras
     RPA.Windows.Get Text    Consulta de Análise de Compra (1)
@@ -148,7 +165,8 @@ Análise de Compras
     Fechar janela
 
 Consulta Descontos Calculados
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Consulta Descontos Calculados
+    ${nome_print}=     Set Variable     Consulta Descontos Calculados
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consulta Descontos Calculados
     RPA.Windows.Get Text      Consulta Descontos Calculados (1)
@@ -158,7 +176,8 @@ Consulta Descontos Calculados
     Fechar janela
 
 Consultas Personalizadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Consultas Personalizadas
+    ${nome_print}=     Set Variable     Consultas Personalizadas
+    [Tags]     Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)

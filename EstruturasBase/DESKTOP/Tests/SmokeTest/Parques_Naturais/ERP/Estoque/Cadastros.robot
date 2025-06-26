@@ -1,20 +1,23 @@
 *** Settings ***
 Documentation    Smoke Test: Estoque
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_est
-
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Estoque/Cadastros/    
-
+${nome_print}
+${nome_exe}=    cde_win_est
 *** Keywords ***
 
 
 *** Test Cases ***
 
 Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Terceiros
+    ${nome_print}=     Set Variable     Terceiros
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Get Text    Cadastro de Terceiros (1)
@@ -24,7 +27,8 @@ Terceiros
     Fechar com Sim
 
 Grupo de Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Grupo de Terceiros
+    ${nome_print}=     Set Variable     Grupo de Terceiros
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Grupo de Terceiros
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
@@ -33,7 +37,8 @@ Grupo de Terceiros
     Fechar com Sim
 
 Setores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Setores
+    ${nome_print}=     Set Variable     Setores
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Setores
     RPA.Windows.Get Text    Cadastro de Setores (1)
@@ -42,7 +47,8 @@ Setores
     Fechar com Sim
 
 Safras
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Safras
+    ${nome_print}=     Set Variable     Safras
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Safras
     RPA.Windows.Get Text    Cadastro de Safras (1)
@@ -51,7 +57,8 @@ Safras
     Fechar Janela
 
 Produtos > Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Produtos
+    ${nome_print}=     Set Variable     Produtos
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  P
@@ -61,7 +68,8 @@ Produtos > Produtos
     Fechar com Sim
 
 Produtos > Depósitos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Depósitos
+    ${nome_print}=     Set Variable     Depósitos
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  D
@@ -71,7 +79,8 @@ Produtos > Depósitos
     Fechar com Sim
 
 Produtos > Unidades
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Unidades
+    ${nome_print}=     Set Variable     Unidades
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  U
@@ -81,7 +90,8 @@ Produtos > Unidades
     Fechar com Sim
 
 Produtos > Marcas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Marcas
+    ${nome_print}=     Set Variable     Marcas
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  M
@@ -91,7 +101,8 @@ Produtos > Marcas
     Fechar com Sim
 
 Produtos > Cores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Cores
+    ${nome_print}=     Set Variable     Cores
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  C
@@ -101,7 +112,8 @@ Produtos > Cores
     Fechar com Sim
 
 Produtos > Tamanhos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Tamanhos
+    ${nome_print}=     Set Variable     Tamanhos
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  T
@@ -111,7 +123,8 @@ Produtos > Tamanhos
     Fechar com Sim
 
 Produtos > Estampas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Estampas
+    ${nome_print}=     Set Variable     Estampas
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  E
@@ -121,7 +134,8 @@ Produtos > Estampas
     Fechar com Sim
 
 Produtos > Categorias
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Produtos/              Categorias
+    ${nome_print}=     Set Variable     Categorias
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  A
@@ -131,7 +145,8 @@ Produtos > Categorias
     Fechar com Sim
 
 Veículos > Veículos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/              Veículos
+    ${nome_print}=     Set Variable     Veículos
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  V
@@ -141,7 +156,8 @@ Veículos > Veículos
     Fechar Janela
 
 Veículos > Tipos de Veículos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Veículos/              Tipos de Veículos
+    ${nome_print}=     Set Variable     Tipos de Veículos
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  T
@@ -151,7 +167,8 @@ Veículos > Tipos de Veículos
     Fechar com Sim
 
 Tipo Movimentação
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Tipo Movimentação
+    ${nome_print}=     Set Variable     Tipo Movimentação
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Tipo Movimentação
     RPA.Windows.Get Text    Cadastro de Tipos de Movimentação (1)
@@ -160,7 +177,8 @@ Tipo Movimentação
     Fechar com Sim
 
 Categoria de Lote
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Categoria de Lote
+    ${nome_print}=     Set Variable     Categoria de Lote
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Categoria de Lote
     RPA.Windows.Get Text    Cadastro de Categoria de Lote (1)
@@ -169,7 +187,8 @@ Categoria de Lote
     Fechar com Sim
 
 Tipo de Teste Lotes
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Tipo De Teste Lotes
+    ${nome_print}=     Set Variable     Tipo De Teste Lotes
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     repetidor de teclas     down    9
     RPA.Desktop.Press Keys  ENTER
@@ -179,7 +198,8 @@ Tipo de Teste Lotes
     Fechar com Sim
 
 Países
-    [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Países
+    ${nome_print}=     Set Variable     Países
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -188,7 +208,8 @@ Países
     Fechar com Sim
 
 Municípios
-    [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Municípios
+    ${nome_print}=     Set Variable     Municípios
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -197,7 +218,8 @@ Municípios
     Fechar com Sim
 
 Estados
-    [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Estados
+    ${nome_print}=     Set Variable     Estados
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -206,7 +228,8 @@ Estados
     Fechar com Sim
 
 Localidades
-    [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Localidades
+    ${nome_print}=     Set Variable     Localidades
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
@@ -215,7 +238,8 @@ Localidades
     Fechar com Sim
 
 Regiões
-    [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}           Regiões
+    ${nome_print}=     Set Variable     Regiões
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -224,7 +248,8 @@ Regiões
     Fechar com Sim
 
 Fiscais > Tabela Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    T
@@ -234,7 +259,8 @@ Fiscais > Tabela Tributária
     Fechar com Sim
 
 Fiscais > Situação Tributária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    S
@@ -244,7 +270,8 @@ Fiscais > Situação Tributária
     Fechar com Sim
 
 Fiscais > Operações Fiscais
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Operações Fiscais
+    ${nome_print}=     Set Variable     Operações Fiscais
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    O
@@ -253,9 +280,9 @@ Fiscais > Operações Fiscais
     BaseDesktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscais/Operações Fiscais
     Fechar com Sim
 
-
 Fiscais > Classificações Fiscais
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Classificações Fiscais
+    ${nome_print}=     Set Variable     Classificações Fiscais
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    C
@@ -265,7 +292,8 @@ Fiscais > Classificações Fiscais
     Fechar com Sim
 
 Fiscais > Classificações de Serviços Prestado - REINF
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscais/           Classificações de Serviços Prestado - REINF
+    ${nome_print}=     Set Variable     Classificações de Serviços Prestado - REINF
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    L
@@ -276,7 +304,8 @@ Fiscais > Classificações de Serviços Prestado - REINF
     RPA.Windows.Click         Sim
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Empresas
+    ${nome_print}=     Set Variable     Empresas
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -287,7 +316,8 @@ Parâmetros > Empresas
     RPA.Windows.Click         Sim
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Estabelecimentos
+    ${nome_print}=     Set Variable     Estabelecimentos
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -298,7 +328,8 @@ Parâmetros > Estabelecimentos
     RPA.Windows.Click         Sim
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Usuários
+    ${nome_print}=     Set Variable     Usuários
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
@@ -307,7 +338,8 @@ Parâmetros > Usuários
     Fechar janela
 
 Parâmetros > Grupo de Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Grupo de Usuários
+    ${nome_print}=     Set Variable     Grupo de Usuários
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -318,7 +350,8 @@ Parâmetros > Grupo de Usuários
     RPA.Windows.Click         Sim
 
 Parâmetros > Configurações da Estação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Configurações da Estação
+    ${nome_print}=     Set Variable     Configurações da Estação
+    [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    C
@@ -326,6 +359,3 @@ Parâmetros > Configurações da Estação
     RPA.Windows.Click         CDE-WIN-FIN
     BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
     Fechar janela
-
-  
-    

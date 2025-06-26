@@ -1,14 +1,17 @@
 *** Settings ***
 Documentation    Smoke Test: Vendedor
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_VENDEDOR
+Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+
 
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendedor/Cadastros/    
-
+${nome_print}
+${nome_exe}=    cde_win_VENDEDOR
 *** Keywords ***
 
 Cadastro
@@ -19,7 +22,8 @@ Cadastro
 *** Test Cases ***
 
 Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Terceiros
+    ${nome_print}=     Set Variable     Terceiros
+    [Tags]    Vendedor   Cadastros   SmokeTest
     Cadastro                  Terceiros    
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
     RPA.Windows.Click         Novo
@@ -28,7 +32,8 @@ Terceiros
     Fechar com Sim
 
 Permissões de Acesso
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Permissões de Acesso
+    ${nome_print}=     Set Variable     Permissões de Acesso
+    [Tags]    Vendedor   Cadastros   SmokeTest
     Cadastro                  Permissões de Acesso    
     RPA.Windows.Get Text      Permissões de Acesso para Vendedores (1)
     RPA.Desktop.Press Keys    0
@@ -38,7 +43,8 @@ Permissões de Acesso
     Fechar janela
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Empresas
+    ${nome_print}=     Set Variable     Empresas
+    [Tags]    Vendedor   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -48,7 +54,8 @@ Parâmetros > Empresas
     Fechar com Sim
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Estabelecimentos
+    ${nome_print}=     Set Variable     Estabelecimentos
+    [Tags]    Vendedor   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -58,7 +65,8 @@ Parâmetros > Estabelecimentos
     Fechar com Sim
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Usuários
+    ${nome_print}=     Set Variable     Usuários
+    [Tags]    Vendedor   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
@@ -67,7 +75,8 @@ Parâmetros > Usuários
     Fechar janela
 
 Parâmetros > Grupo de Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Grupo de Usuários
+    ${nome_print}=     Set Variable     Grupo de Usuários
+    [Tags]    Vendedor   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -77,7 +86,8 @@ Parâmetros > Grupo de Usuários
     Fechar com Sim
 
 Parâmetros > Configurações da Estação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Configurações da Estação
+    ${nome_print}=     Set Variable     Configurações da Estação
+    [Tags]    Vendedor   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    C
@@ -85,7 +95,3 @@ Parâmetros > Configurações da Estação
     RPA.Windows.Click         CDE-WIN-FIN
     BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
     Fechar janela
-
-
-    
-    

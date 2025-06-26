@@ -1,12 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Contábil
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_crt
+Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Corretagem/Utilitários/    
+${nome_print}
+${nome_exe}=    cde_win_crt
 
 *** Keywords ***
 
@@ -17,7 +20,8 @@ Utilitários
 *** Test Cases ***
 
 Inicializar sistema patrimonial
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Inicializar sistema patrimonial
+    ${nome_print}=     Set Variable     Inicializar sistema patrimonial
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Inicializar sistema patrimonial
     RPA.Windows.Get Text    Inicializar sistema patrimonial (1)
@@ -25,7 +29,8 @@ Inicializar sistema patrimonial
     RPA.Windows.Click       Fechar
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Utilitários
+    ${nome_print}=     Set Variable     Favoritos
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -35,7 +40,8 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Papel de Parede
+    ${nome_print}=     Set Variable     Papel de Parede
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -44,7 +50,8 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Pincipal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
+    ${nome_print}=     Set Variable     Configurar Barra de Atalhos
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -55,7 +62,8 @@ Configurar Menu Pincipal
     Fechar com Sim
 
 Configurar Barra de Atalhos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
+    ${nome_print}=     Set Variable     Configurar Barra de Atalhos
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
@@ -64,7 +72,8 @@ Configurar Barra de Atalhos
     Fechar com Sim
 
 Estilo do Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
+    ${nome_print}=     Set Variable     Estilo do Menu Principal
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -73,7 +82,8 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Controle de Acessos
+    ${nome_print}=     Set Variable     Controle de Acessos
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -83,7 +93,8 @@ Controle de Acessos
     Fechar janela
 
 Configuração de Liberação
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configuração de Liberação
+    ${nome_print}=     Set Variable     Configuração de Liberação
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -93,9 +104,9 @@ Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
-
 Relatórios Personalizados > Cadastro de Categorias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                             Cadastro de Categorias
+    ${nome_print}=     Set Variable     Cadastro de Categorias
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -107,7 +118,8 @@ Relatórios Personalizados > Cadastro de Categorias
     Fechar com Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
+    ${nome_print}=     Set Variable     Cadastro de Relatórios
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -119,7 +131,8 @@ Relatórios Personalizados > Cadastro de Relatórios
     Fechar com Sim
 
 Criar Usuario de Log
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
+    ${nome_print}=     Set Variable     Criar Usuario de Log
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Criar Usuário de Log
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
@@ -127,21 +140,20 @@ Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Verifica transações abertas
+    ${nome_print}=     Set Variable     Verifica transações abertas
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
-     RPA.Windows.Click      Carregar
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
 
 Pendências
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Pendências
+    ${nome_print}=     Set Variable     Pendências
+    [Tags]     Corretagem    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Pendências
     RPA.Windows.Get Text    Configuração de Pendências (1)
     BaseDesktop.Screenshot  Configuração de Pendências (1)    ${Caminho_Screenshots}Pendências
     RPA.Windows.Click       Fechar
-
-
-    

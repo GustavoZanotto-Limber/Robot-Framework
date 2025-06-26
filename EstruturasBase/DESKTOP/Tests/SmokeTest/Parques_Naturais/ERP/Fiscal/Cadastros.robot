@@ -1,13 +1,17 @@
 *** Settings ***
-Documentation    Smoke Test: Cadastros
+Documentation    Smoke Test: Fiscal
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_fis
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+
 
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Fiscal/Cadastros/    
-
+${nome_print}
+${nome_exe}=    cde_win_fis
 *** Keywords ***
 
 Cadastro
@@ -17,8 +21,11 @@ Cadastro
 
 *** Test Cases ***
 
+*** Test Cases ***
+
 Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Terceiros
+    ${nome_print}=     Set Variable     Terceiros
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                  Terceiros    
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
     RPA.Windows.Click         Novo
@@ -28,16 +35,18 @@ Terceiros
     RPA.Windows.Click         Sim
 
 Produtos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Produtos
+    ${nome_print}=     Set Variable     Produtos
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                  Produtos    
     RPA.Windows.Get Text      Cadastro de Itens (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Itens (1)    ${Caminho_Screenshots}Produtos
     Fechar janela
     RPA.Windows.Click         Sim
-    
+
 Contabilista
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Contabilista
+    ${nome_print}=     Set Variable     Contabilista
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                  Contabilista    
     RPA.Windows.Get Text      Cadastro de Contabilistas (1)
     RPA.Windows.Click         Novo
@@ -46,7 +55,8 @@ Contabilista
     RPA.Windows.Click         Sim
 
 Países
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Países
+    ${nome_print}=     Set Variable     Países
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Países   
     RPA.Windows.Get Text    Cadastro de Países (1)
     RPA.Windows.Click       Novo
@@ -54,7 +64,8 @@ Países
     Fechar com Sim
 
 Estados
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Estados
+    ${nome_print}=     Set Variable     Estados
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Estados   
     RPA.Windows.Get Text    Cadastro de Estados (1)
     RPA.Windows.Click       Novo
@@ -62,7 +73,8 @@ Estados
     Fechar com Sim
 
 Municípios
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Municípios
+    ${nome_print}=     Set Variable     Municípios
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Municípios     
     RPA.Windows.Get Text    Cadastro de Municípios (1)
     RPA.Windows.Click       Novo
@@ -70,7 +82,8 @@ Municípios
     Fechar com Sim
 
 Localidades
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Localidades
+    ${nome_print}=     Set Variable     Localidades
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Localidades      
     RPA.Windows.Get Text    Cadastro de Localidades (1)
     RPA.Windows.Click       Novo
@@ -78,7 +91,8 @@ Localidades
     Fechar com Sim
 
 Regiões
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Regiões
+    ${nome_print}=     Set Variable     Regiões
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Regiões     
     RPA.Windows.Get Text    Cadastro de Regiões (1)
     RPA.Windows.Click       Novo
@@ -86,15 +100,17 @@ Regiões
     Fechar com Sim
 
 Obra de construção civil(CNO)
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Obra de construção civil(CNO)
+    ${nome_print}=     Set Variable     Obra de construção civil(CNO)
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro               	Obra de contrução civil(CNO)    
     RPA.Windows.Get Text    Cadastro de obra de construção civil (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Cadastro de obra de construção civil (1)    ${Caminho_Screenshots}Obra de construção civil(CNO)
     Fechar com Sim
 
-Fiscal > Mensagem de Notas Fiscais
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Mensagem de Notas Fiscais
+Mensagem de Notas Fiscais
+    ${nome_print}=     Set Variable     Mensagem de Notas Fiscais
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal         
     RPA.Desktop.Press Keys  E
     RPA.Windows.Click       Novo
@@ -102,7 +118,8 @@ Fiscal > Mensagem de Notas Fiscais
     Fechar com Sim
 
 Fiscal > Espécies de Documentos
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Espécies de Documentos
+    ${nome_print}=     Set Variable     Espécies de Documentos
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Desktop.Press Keys  D
     RPA.Windows.Get Text    Cadastro de Espécies de Documentos (1)
@@ -112,7 +129,8 @@ Fiscal > Espécies de Documentos
     Fechar janela
 
 Fiscal > Classificação Fiscal
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Classificação Fiscal
+    ${nome_print}=     Set Variable     Classificação Fiscal
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Desktop.Press Keys  L
     RPA.Windows.Get Text    Cadastro de Classificações Fiscais (1)
@@ -121,7 +139,8 @@ Fiscal > Classificação Fiscal
     Fechar com Sim
 
 Fiscal > Operações Fiscais
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Operações Fiscais
+    ${nome_print}=     Set Variable     Operações Fiscais
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Cadastro de Operações Fiscais (1)
@@ -130,7 +149,8 @@ Fiscal > Operações Fiscais
     Fechar com Sim
 
 Fiscal > Séries
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           Séries
+    ${nome_print}=     Set Variable     Séries
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Desktop.Press Keys  R
     RPA.Windows.Get Text    Cadastro de Séries (1)
@@ -139,7 +159,8 @@ Fiscal > Séries
     Fechar com Sim
 
 Fiscal > CFOP's
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           CFOP's
+    ${nome_print}=     Set Variable     CFOP's
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Desktop.Press Keys  F
     RPA.Windows.Get Text    Cadastro de CFOP's (1)
@@ -148,18 +169,20 @@ Fiscal > CFOP's
     Fechar com Sim
 
 Fiscal > Incidência Contrib Previdenciária
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/           CFOP's
+    ${nome_print}=     Set Variable     Incidência Contrib Previdenciária
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Desktop.Press Keys  N
     RPA.Windows.Get Text    Cadastro de Incidência Contribuição Previdenciária (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Cadastro de Incidência Contribuição Previdenciária (1)    ${Caminho_Screenshots}Fiscal/CFOP's
+    BaseDesktop.Screenshot  Cadastro de Incidência Contribuição Previdenciária (1)    ${Caminho_Screenshots}Fiscal/Incidência Contrib Previdenciária
     RPA.Windows.Click       Confirmar
     Fechar janela
 
-Fiscal > IPI > Tabela Tributária
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/           Tabela Tributária
+Fiscal > IPI > Tabela Tributária IPI
+    ${nome_print}=     Set Variable     Tabela Tributária IPI
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Windows.Click       IPI
     RPA.Desktop.Press Keys  T
@@ -168,8 +191,9 @@ Fiscal > IPI > Tabela Tributária
     BaseDesktop.Screenshot  Cadastro de Tabela Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Tabela Tributária
     Fechar com Sim
 
-Fiscal > IPI > Situação Tributária
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/IPI/           Situação Tributária
+Fiscal > IPI > Situação Tributária IPI
+    ${nome_print}=     Set Variable     Situação Tributária IPI
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Windows.Click       IPI
     RPA.Desktop.Press Keys  S
@@ -178,8 +202,9 @@ Fiscal > IPI > Situação Tributária
     BaseDesktop.Screenshot  Cadastro de Situação Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Situação Tributária
     Fechar com Sim
 
-Fiscal > ICMS > Tabela Tributária
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária
+Fiscal > ICMS > Tabela Tributária ICMS
+    ${nome_print}=     Set Variable     Tabela Tributária ICMS
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Windows.Click       ICMS
     RPA.Desktop.Press Keys  T
@@ -188,8 +213,9 @@ Fiscal > ICMS > Tabela Tributária
     BaseDesktop.Screenshot  Cadastro de Tabelas Tributária (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária
     Fechar com Sim
 
-Fiscal > ICMS > Situação Tributária
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Situação Tributária
+Fiscal > ICMS > Situação Tributária ICMS
+    ${nome_print}=     Set Variable     Situação Tributária ICMS
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Windows.Click       ICMS
     RPA.Desktop.Press Keys  S
@@ -199,7 +225,8 @@ Fiscal > ICMS > Situação Tributária
     Fechar com Sim
 
 Fiscal > ICMS > Tabela Tributária - FCP
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Tabela Tributária - FCP
+    ${nome_print}=     Set Variable     Tabela Tributária - FCP
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
     RPA.Windows.Click       ICMS
     RPA.Desktop.Press Keys  A
@@ -208,9 +235,9 @@ Fiscal > ICMS > Tabela Tributária - FCP
     BaseDesktop.Screenshot  Cadastro da Tabela Tributária FCP (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária - FCP
     Fechar com Sim
 
-
 Fiscal > ICMS > Configuração Benefício Fiscal
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Configuração Benefício Fiscal
+    ${nome_print}=     Set Variable     Configuração Benefício Fiscal
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal 
     RPA.Windows.Click       ICMS
     RPA.Desktop.Press Keys  C
@@ -220,7 +247,8 @@ Fiscal > ICMS > Configuração Benefício Fiscal
     Fechar janela 
 
 Fiscal > ICMS > Observações de Lançamento Fiscal
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Observações de Lançamento Fiscal
+    ${nome_print}=     Set Variable     Observações de Lançamento Fiscal
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal 
     RPA.Windows.Click       ICMS
     RPA.Desktop.Press Keys  O
@@ -231,7 +259,8 @@ Fiscal > ICMS > Observações de Lançamento Fiscal
     RPA.Windows.Click       Sim
 
 Fiscal > ICMS > Importar Tabelas Padrões
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Importar Tabelas Padrões
+    ${nome_print}=     Set Variable     Importar Tabelas Padrões
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal 
     RPA.Windows.Click       ICMS
     RPA.Desktop.Press Keys  I
@@ -243,7 +272,8 @@ Fiscal > ICMS > Importar Tabelas Padrões
     Fechar janela 
 
 Fiscal > ICMS > Configurar Tabela IPM
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Configurar Tabela IPM
+    ${nome_print}=     Set Variable     Configurar Tabela IPM
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal 
     RPA.Windows.Click       ICMS
     RPA.Desktop.Press Keys  N
@@ -255,7 +285,8 @@ Fiscal > ICMS > Configurar Tabela IPM
     Fechar janela 
 
 Fiscal > ICMS > Configuração de Ajuste do Documento Fiscal
-    [Teardown]              Caso aconteça erro                                                ${Caminho_Screenshots}Fiscal/ICMS/           Configuração de Ajuste do Documento Fiscal
+    ${nome_print}=     Set Variable     Configuração de Ajuste do Documento Fiscal
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal 
     RPA.Windows.Click       ICMS
     RPA.Desktop.Press Keys  F
@@ -267,7 +298,8 @@ Fiscal > ICMS > Configuração de Ajuste do Documento Fiscal
     Fechar janela 
 
 Parâmetros > Empresas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Empresas
+    ${nome_print}=     Set Variable     Empresas
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                  Parâmetros        
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Cadastro de Empresas (1)
@@ -277,7 +309,8 @@ Parâmetros > Empresas
     RPA.Windows.Click         Sim
 
 Parâmetros > Estabelecimentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Estabelecimentos
+    ${nome_print}=     Set Variable     Estabelecimentos
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                  Parâmetros    
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
@@ -287,7 +320,8 @@ Parâmetros > Estabelecimentos
     RPA.Windows.Click         Sim
 
 Parâmetros > Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Usuários
+    ${nome_print}=     Set Variable     Usuários
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                  Parâmetros    
     RPA.Desktop.Press Keys    U
     RPA.Windows.Get Text      Cadastro de Usuários (1)
@@ -295,7 +329,8 @@ Parâmetros > Usuários
     Fechar janela
 
 Parâmetros > Grupo de Usuários
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Grupo de Usuários
+    ${nome_print}=     Set Variable     Grupo de Usuários
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                  Parâmetros    
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
@@ -305,7 +340,8 @@ Parâmetros > Grupo de Usuários
     RPA.Windows.Click         Sim
 
 Parâmetros > Configurações da Estação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Configurações da Estação
+    ${nome_print}=     Set Variable     Configurações da Estação
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                  Parâmetros    
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Configurações da Estação (1)
@@ -314,7 +350,8 @@ Parâmetros > Configurações da Estação
     Fechar janela
 
 Parâmetros > Quadro de Sócios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Parâmetros/                         Quadro de Sócios
+    ${nome_print}=     Set Variable     Quadro de Sócios
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                  Parâmetros    
     RPA.Desktop.Press Keys    Q
     RPA.Windows.Get Text      Quadro de Sócios (1)
@@ -326,7 +363,8 @@ Parâmetros > Quadro de Sócios
     RPA.Windows.Click         Fechar
 
 SPED ECF > Parte A e-Lalur
-    [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}SPED ECF/                         Parte A e-Lalur
+    ${nome_print}=     Set Variable     Parte A e-Lalur
+    [Tags]    Fiscal    Cadastros   SmokeTest
     Cadastro                SPED ECF    
     RPA.Desktop.Press Keys  P
     RPA.Windows.Get Text    Lançamentos da Parte A do e-Lalur (1)
@@ -335,55 +373,59 @@ SPED ECF > Parte A e-Lalur
     Fechar com Sim
 
 SPED ECF > Parte B e-Lalur
-   [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}SPED ECF/                         Parte B e-Lalur
-   Cadastro                SPED ECF
-   RPA.Desktop.Press Keys  A
-   RPA.Windows.Get Text    Identificação da conta na parte B do e-Lalur (1)
-   RPA.Windows.Click       Novo
-   BaseDesktop.Screenshot  Identificação da conta na parte B do e-Lalur (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lalur
-   Fechar Janela
-   RPA.Windows.Click       Sim
+    ${nome_print}=     Set Variable     Parte B e-Lalur
+    [Tags]    Fiscal    Cadastros   SmokeTest
+    Cadastro                SPED ECF
+    RPA.Desktop.Press Keys  A
+    RPA.Windows.Get Text    Identificação da conta na parte B do e-Lalur (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Identificação da conta na parte B do e-Lalur (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lalur
+    Fechar Janela
+    RPA.Windows.Click       Sim
 
 SPED ECF > Parte B e-Lalur (Sem Reflexo na Parte A)
-   [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}SPED ECF/                         Parte B e-Lalur (Sem Reflexo na Parte A)
-   Cadastro               SPED ECF
-   RPA.Desktop.Press Keys  R
-   RPA.Windows.Get Text    Lançamentos na conta da parte B do e-Lalur sem reflexo na parte A (1)
-   RPA.Windows.Click       Novo
-   BaseDesktop.Screenshot  Lançamentos na conta da parte B do e-Lalur sem reflexo na parte A (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lalur (Sem Reflexo na Parte A)
-   Fechar Janela
-   RPA.Windows.Click       Sim
+    ${nome_print}=     Set Variable     Parte B e-Lalur (Sem Reflexo na Parte A)
+    [Tags]    Fiscal    Cadastros   SmokeTest
+    Cadastro               SPED ECF
+    RPA.Desktop.Press Keys  R
+    RPA.Windows.Get Text    Lançamentos na conta da parte B do e-Lalur sem reflexo na parte A (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Lançamentos na conta da parte B do e-Lalur sem reflexo na parte A (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lalur (Sem Reflexo na Parte A)
+    Fechar Janela
+    RPA.Windows.Click       Sim
 
 SPED ECF > Parte A e-Lacs
-   [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}SPED ECF/                         Parte A e-Lacs
-   Cadastro                SPED ECF
-   RPA.Desktop.Press Keys  T
-   RPA.Windows.Get Text    Lançamentos da Parte A do e-Lacs (1)
-   RPA.Windows.Click       Novo
-   BaseDesktop.Screenshot  Lançamentos da Parte A do e-Lacs (1)    ${Caminho_Screenshots}SPED ECF/Parte A e-Lacs
-   Fechar Janela
-   RPA.Windows.Click       Sim
+    ${nome_print}=     Set Variable     Parte A e-Lacs
+    [Tags]    Fiscal    Cadastros   SmokeTest
+    Cadastro                SPED ECF
+    RPA.Desktop.Press Keys  T
+    RPA.Windows.Get Text    Lançamentos da Parte A do e-Lacs (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Lançamentos da Parte A do e-Lacs (1)    ${Caminho_Screenshots}SPED ECF/Parte A e-Lacs
+    Fechar Janela
+    RPA.Windows.Click       Sim
 
 SPED ECF > Parte B e-Lacs
-   [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}SPED ECF/                         Parte B e-Lacs
-   Cadastro               SPED ECF
-   RPA.Desktop.Press Keys  E
-   RPA.Windows.Get Text    Identificação da conta na parte B do e-Lacs (1)  
-   RPA.Windows.Click       Novo
-   BaseDesktop.Screenshot  Identificação da conta na parte B do e-Lacs (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lacs
-   Fechar Janela
-   RPA.Windows.Click       Sim
+    ${nome_print}=     Set Variable     Parte B e-Lacs
+    [Tags]    Fiscal    Cadastros   SmokeTest
+    Cadastro               SPED ECF
+    RPA.Desktop.Press Keys  E
+    RPA.Windows.Get Text    Identificação da conta na parte B do e-Lacs (1)  
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Identificação da conta na parte B do e-Lacs (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lacs
+    Fechar Janela
+    RPA.Windows.Click       Sim
 
 SPED ECF > Parte B e-Lacs (Sem Reflexo na Parte A)
-   [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}SPED ECF/                         Parte B e-Lacs (Sem Reflexo na Parte A)
-   Cadastro                SPED ECF
-   RPA.Desktop.Press Keys  B
-   RPA.Windows.Get Text    Lançamentos na conta da parte B do e-Lacs sem reflexo na parte A (1)
-   RPA.Windows.Click       Novo
-   BaseDesktop.Screenshot  Lançamentos na conta da parte B do e-Lacs sem reflexo na parte A (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lacs (Sem Reflexo na Parte A)
-   Fechar Janela
-   RPA.Windows.Click       Sim
-
+    ${nome_print}=     Set Variable     Parte B e-Lacs (Sem Reflexo na Parte A)
+    [Tags]    Fiscal    Cadastros   SmokeTest
+    Cadastro                SPED ECF
+    RPA.Desktop.Press Keys  B
+    RPA.Windows.Get Text    Lançamentos na conta da parte B do e-Lacs sem reflexo na parte A (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Lançamentos na conta da parte B do e-Lacs sem reflexo na parte A (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lacs (Sem Reflexo na Parte A)
+    Fechar Janela
+    RPA.Windows.Click       Sim
 
     
     

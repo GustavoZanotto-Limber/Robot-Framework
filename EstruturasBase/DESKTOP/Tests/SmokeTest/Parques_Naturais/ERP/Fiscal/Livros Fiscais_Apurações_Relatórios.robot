@@ -1,13 +1,17 @@
 *** Settings ***
-Documentation    Smoke Test: Livros Fiscais_Apurações_Relatórios
+Documentation    Smoke Test: Fiscal
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_fis
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+
 
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Fiscal/Livros Fiscais_Apurações_Relatórios/
-
+${nome_print}
+${nome_exe}=    cde_win_fis
 *** Keywords ***
 
 Geração de Arquivos Fiscais
@@ -19,7 +23,8 @@ Geração de Arquivos Fiscais
 *** Test Cases ***
 
 Livro de Entradas Mensal
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Livro de Entradas Mensal
+    ${nome_print}=     Set Variable     Livro de Entradas Mensal
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Livro de Entradas Mensal
     RPA.Windows.Get Text      Livro de Entradas (1)
     repetidor de teclas       tab      3
@@ -30,7 +35,8 @@ Livro de Entradas Mensal
     Fechar janela
 
 Livro de Saídas Mensal
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Livro de Saídas Mensal
+    ${nome_print}=     Set Variable     Livro de Saídas Mensal
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Livro de Saídas Mensal
     RPA.Windows.Get Text      Livro de Saídas (1)
     repetidor de teclas       tab      3
@@ -41,7 +47,8 @@ Livro de Saídas Mensal
     Fechar janela
 
 Livro de Entradas por Período
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Livro de Entradas por Período
+    ${nome_print}=     Set Variable     Livro de Entradas por Período
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Livro de Entradas por Período
     RPA.Windows.Get Text      Livro de Entradas (1)
     repetidor de teclas       tab      3
@@ -52,7 +59,8 @@ Livro de Entradas por Período
     Fechar janela
 
 Livro de Saídas por Período
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Livro de Saídas por Período
+    ${nome_print}=     Set Variable     Livro de Saídas por Período
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Livro de Saídas por Período
     RPA.Windows.Get Text      Livro de Saídas (1)
     repetidor de teclas       tab      3
@@ -63,7 +71,8 @@ Livro de Saídas por Período
     Fechar janela
 
 Livro de Contribuições PIS/COFINS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Livro de Contribuições PIS_COFINS
+    ${nome_print}=     Set Variable     Livro de Contribuições PIS_COFINS
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Livro de Contribuições PIS/COFINS
     RPA.Windows.Get Text      Livro de Contribuições (1)
     RPA.Desktop.Press Keys    0
@@ -73,7 +82,8 @@ Livro de Contribuições PIS/COFINS
     Fechar janela
 
 Apuração de ICMS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Apuração de ICMS
+    ${nome_print}=     Set Variable     Apuração de ICMS
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Apuração de ICMS
     RPA.Windows.Get Text      Apuração do ICMS (1)
     RPA.Desktop.Press Keys    0
@@ -83,7 +93,8 @@ Apuração de ICMS
     Fechar janela
 
 Apuração de ICMS-ST
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Apuração de ICMS-ST
+    ${nome_print}=     Set Variable     Apuração de ICMS-ST
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Apuração de ICMS-ST
     RPA.Windows.Get Text      Consulta de Obrigações de ICMS-ST (1)
     RPA.Desktop.Press Keys    0
@@ -93,7 +104,8 @@ Apuração de ICMS-ST
     Fechar janela
 
 Apuração do IPI
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Apuração do IPI
+    ${nome_print}=     Set Variable     Apuração do IPI
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Apuração do IPI
     RPA.Windows.Get Text      Apuração do IPI (1)
     RPA.Desktop.Press Keys    0
@@ -103,7 +115,8 @@ Apuração do IPI
     Fechar janela
 
 Apuração do FCP
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Apuração do FCP
+    ${nome_print}=     Set Variable     Apuração do FCP
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Apuração do FCP
     RPA.Windows.Get Text      Relatório de Apuração FCP (1)
     RPA.Desktop.Press Keys    0
@@ -113,7 +126,8 @@ Apuração do FCP
     Fechar janela
 
 Apuração do DIFAL
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Apuração do DIFAL
+    ${nome_print}=     Set Variable     Apuração do DIFAL
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Apuração do DIFAL
     RPA.Windows.Get Text      Apuração do Difal (1)
     RPA.Desktop.Press Keys    0
@@ -123,7 +137,8 @@ Apuração do DIFAL
     Fechar janela
 
 Apuração do ISS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Apuração do ISS
+    ${nome_print}=     Set Variable     Apuração do ISS
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Apuração do ISS
     RPA.Windows.Get Text      Livro Fiscal do ISS (1)
     RPA.Desktop.Press Keys    0
@@ -133,7 +148,8 @@ Apuração do ISS
     Fechar janela
 
 Apuração de Impostos e Contribuições
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Apuração de Impostos e Contribuições
+    ${nome_print}=     Set Variable     Apuração de Impostos e Contribuições
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Apuração de Impostos e Contribuições
     RPA.Windows.Get Text      Apuração de Impostos e Contribuições (1)
     RPA.Desktop.Press Keys    0
@@ -142,8 +158,9 @@ Apuração de Impostos e Contribuições
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Apuração Funrural/Senar/Gilrat
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Apuração Funrural_Senar_Gilrat
+Apuração Funrural_Senar_Gilrat
+    ${nome_print}=     Set Variable     Apuração Funrural_Senar_Gilrat
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Apuração Funrural/Senar/Gilrat
     RPA.Windows.Get Text      Apuração Funrural/Senar/Gilrat (1)
     RPA.Desktop.Press Keys    0
@@ -153,7 +170,8 @@ Apuração Funrural/Senar/Gilrat
     Fechar janela
 
 Apuração de Antecipação de ICMS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Apuração de Antecipação de ICMS
+    ${nome_print}=     Set Variable     Apuração de Antecipação de ICMS
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Apuração de Antecipação de ICMS
     RPA.Windows.Get Text      Apuração de Antecipação do ICMS (1)
     RPA.Desktop.Press Keys    0
@@ -163,7 +181,8 @@ Apuração de Antecipação de ICMS
     Fechar janela
 
 Apuração de Impostos Retidos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Apuração de Impostos Retidos
+    ${nome_print}=     Set Variable     Apuração de Impostos Retidos
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Apuração de Impostos Retidos
     RPA.Windows.Get Text      Apuração de Impostos Retidos (1)
     repetidor de teclas       tab      2
@@ -175,7 +194,8 @@ Apuração de Impostos Retidos
     Fechar janela
 
 Tabela Ajustes ICMS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Tabela Ajustes ICMS
+    ${nome_print}=     Set Variable     Tabela Ajustes ICMS
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Tabela Ajustes ICMS
     RPA.Windows.Get Text      Tabela Ajustes ICMS (1)
     RPA.Desktop.Press Keys    0
@@ -185,7 +205,8 @@ Tabela Ajustes ICMS
     Fechar janela
 
 Auditor Fiscal
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Auditor Fiscal
+    ${nome_print}=     Set Variable     Auditor Fiscal
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Auditor Fiscal
     RPA.Windows.Get Text      Auditor Fiscal (1)
     RPA.Desktop.Press Keys    tab
@@ -196,7 +217,8 @@ Auditor Fiscal
     Fechar janela
 
 Relatório de Impostos dos Produtos (Lei n° 12.741, de 8 de dezembro de 2012)
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Relatório de Impostos dos Produtos (Lei n° 12.741, de 8 de dezembro de 2012)
+    ${nome_print}=     Set Variable     Relatório de Impostos dos Produtos (Lei n° 12.741, de 8 de dezembro de 2012)
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Relatório de Impostos dos Produtos (Lei n° 12.741, de 8 de dezembro de 2012)
     RPA.Windows.Get Text      Relatório de Impostos de Produtos (1)
     repetidor de teclas       tab      2
@@ -208,7 +230,8 @@ Relatório de Impostos dos Produtos (Lei n° 12.741, de 8 de dezembro de 2012)
     Fechar janela
 
 Relatório de Ajustes de Documento Fiscal
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Relatório de Ajustes de Documento Fiscal
+    ${nome_print}=     Set Variable     Relatório de Ajustes de Documento Fiscal
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Relatório de Ajustes de Documento Fiscal
     RPA.Windows.Get Text      Relatório de Ajustes de Documento Fiscal (1)
     RPA.Desktop.Press Keys    0
@@ -218,7 +241,8 @@ Relatório de Ajustes de Documento Fiscal
     Fechar janela
 
 Termos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Termos
+    ${nome_print}=     Set Variable     Termos
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Termos
     RPA.Windows.Get Text      Termos de Abertura/Encerramento (1)
     RPA.Desktop.Press Keys    0
@@ -228,7 +252,8 @@ Termos
     Fechar janela
 
 Consultas Personalizadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Consultas Personalizadas
+    ${nome_print}=     Set Variable     Consultas Personalizadas
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
     RPA.Windows.Click         Cadastrar Nova Consulta
@@ -236,8 +261,9 @@ Consultas Personalizadas
     RPA.Windows.Click         Sair
     Fechar janela
 
-Consulta Lalur Parte A/B
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Consulta Lalur Parte A_B
+Consulta Lalur Parte A_B
+    ${nome_print}=     Set Variable     Consulta Lalur Parte A_B
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Consulta Lalur Parte A/B
     RPA.Windows.Get Text      Consulta Lalur A/B (1)
     RPA.Desktop.Press Keys    0
@@ -247,7 +273,8 @@ Consulta Lalur Parte A/B
     Fechar janela
 
 Relatório de Detalhamento de Receitas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                       Relatório de Detalhamento de Receitas
+    ${nome_print}=     Set Variable     Relatório de Detalhamento de Receitas
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Relatório de Detalhamento de Receitas
     RPA.Windows.Get Text      Detalhamento de Receitas (1)
     repetidor de teclas       tab      2
@@ -256,5 +283,3 @@ Relatório de Detalhamento de Receitas
     BaseDesktop.Screenshot    Detalhamento de Receitas (1)    ${Caminho_Screenshots}Relatório de Detalhamento de Receitas
     RPA.Windows.Click         Confirmar
     Fechar janela
-
-    

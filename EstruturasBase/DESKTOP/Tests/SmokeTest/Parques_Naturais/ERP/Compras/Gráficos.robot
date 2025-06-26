@@ -2,11 +2,14 @@
 Documentation    Smoke Test: Compras
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_compras
-
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Compras/Gráficos/    
+${nome_print}
+${nome_exe}=    cde_win_compras
 
 *** Keywords ***
 
@@ -17,7 +20,8 @@ Gráficos
 *** Test Cases ***
 
 Compras/Aquisição de Serviços - Evolução Diária
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Evolução Diária
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Diária
+    [Tags]     Compras    Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Diária
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Diária. (1)
@@ -27,7 +31,8 @@ Compras/Aquisição de Serviços - Evolução Diária
     Fechar janela
 
 Compras/Aquisição de Serviços - Evolução Mensal
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Evolução Mensal
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Mensal
+    [Tags]     Compras    Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Mensal
     RPA.Windows.Get Text    Compras - Evolução Mensal. (1)
@@ -37,7 +42,8 @@ Compras/Aquisição de Serviços - Evolução Mensal
     Fechar janela
 
 Compras/Aquisição de Serviços - Evolução Anual
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Evolução Anual
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Anual
+    [Tags]     Compras    Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Anual
     RPA.Windows.Get Text    Compras - Evolução Anual. (1)
@@ -47,7 +53,8 @@ Compras/Aquisição de Serviços - Evolução Anual
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Fornecedor
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Sintético_Fornecedor
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Fornecedor
+    [Tags]     Compras    Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Fornecedor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor. (1)
@@ -56,13 +63,10 @@ Compras/Aquisição de Serviços - Sintético/Fornecedor
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Setor
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Sintético_Setor
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Setor
+    [Tags]     Compras    Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Setor
     RPA.Windows.Get Text    Compras - Aquisição de Serviços Sintético / Setor. (1)
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Compras - Aquisição de Serviços Sintético / Setor. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Setor
-    Fechar janela
-
-
-    

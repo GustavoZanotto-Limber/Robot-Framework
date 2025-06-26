@@ -17,6 +17,7 @@ ${nome_exe}=    cde_win_bca_frontR30
 *** Test Cases    ***
 
 Abertura / Fechamento
+    [Tags]    Caixa Operador    Front    SmokeTest  
     ${nome_print}=                      Set Variable    Abertura_Fechamento
     Caixa Operador
     RPA.Windows.Click                   Abertura / Fechamento
@@ -28,6 +29,7 @@ Abertura / Fechamento
     RPA.Windows.Click                   OK
 
 Suprimento / Sangria
+    [Tags]    Caixa Operador    Front    SmokeTest  
     ${nome_print}=          Set Variable    Suprimento _ Sangria
     Caixa Operador
     RPA.Windows.Click       Suprimento / Sangria

@@ -1,13 +1,17 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_fin
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+
 
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Financeiro/Cheques/    
-
+${nome_print}
+${nome_exe}=    cde_win_fin
 *** Keywords ***
 
 Cheques
@@ -17,7 +21,8 @@ Cheques
 *** Test Cases ***
 
 Cheques Emitidos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Cheques Emitidos
+    ${nome_print}=     Set Variable     Cheques Emitidos
+    [Tags]     Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Cheques Emitidos
     RPA.Windows.Get Text      Manutenção de Cheques (1)
@@ -28,7 +33,8 @@ Cheques Emitidos
     Fechar janela
 
 Cheques de Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Cheques de Terceiros
+    ${nome_print}=     Set Variable     Cheques de Terceiros
+    [Tags]     Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Cheques de Terceiros
     RPA.Windows.Get Text      Movimentação de Cheques de Terceiros (1)
@@ -37,7 +43,8 @@ Cheques de Terceiros
     Fechar com Sim
 
 Relatório de Cheque de Terceiros
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatório de Cheque de Terceiros
+    ${nome_print}=     Set Variable     Relatório de Cheque de Terceiros
+    [Tags]     Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Relatório de Cheques de Terceiros
     RPA.Windows.Get Text      Relatório de Cheque de Terceiros (1)
@@ -48,7 +55,8 @@ Relatório de Cheque de Terceiros
     Fechar janela
 
 Relatório de Cheques Emitidos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatório de Cheques Emitidos
+    ${nome_print}=     Set Variable     Relatório de Cheques Emitidos
+    [Tags]     Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Relatório de Cheques Emitidos
     RPA.Windows.Get Text      Relatório de Cheques (1)
@@ -59,7 +67,8 @@ Relatório de Cheques Emitidos
     Fechar janela
 
 Relatórios de Cheques Cancelados/Excluídos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatórios de Cheques Cancelados_Excluídos
+    ${nome_print}=     Set Variable     Relatórios de Cheques Cancelados_Excluídos
+    [Tags]     Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Relatório de Cheques Cancelados/Excluídos
     RPA.Windows.Get Text      Relatório de cheques cancelados (1)
@@ -71,7 +80,8 @@ Relatórios de Cheques Cancelados/Excluídos
     Fechar janela
 
 Layouts de Cheques para Emissão
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Layouts de Cheques para Emissão
+    ${nome_print}=     Set Variable     Layouts de Cheques para Emissão
+    [Tags]     Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Layouts de Cheques para Emissão
     RPA.Windows.Get Text      Configuração de Cheques (1)
@@ -80,13 +90,11 @@ Layouts de Cheques para Emissão
     Fechar com Sim
 
 Imprimir Multiplos Cheques
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Imprimir Multiplos Cheques
+    ${nome_print}=     Set Variable     Imprimir Multiplos Cheques
+    [Tags]     Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Imprimir Multiplos Cheques
     RPA.Windows.Get Text      Imprimir Cheques (1)
     RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Imprimir Cheques (1)    ${Caminho_Screenshots}Imprimir Multiplos Cheques
     Fechar janela
-
-
-    
