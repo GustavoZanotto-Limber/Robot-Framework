@@ -1,15 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_fin
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
-
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Financeiro/Utilitários/ 
-
+${nome_print}
+${nome_exe}=    cde_win_fin
 *** Keywords ***
-
-
 
 Utilitários
     Cadastros
@@ -18,7 +18,8 @@ Utilitários
 *** Test Cases    ***
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Utilitários
+    ${nome_print}=     Set Variable     Favoritos
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -26,9 +27,10 @@ Favoritos
     BaseDesktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
     RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar
-    
+
 Papel de Parede
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Papel de Parede
+    ${nome_print}=     Set Variable     Papel de Parede
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -37,7 +39,8 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Pincipal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
+    ${nome_print}=     Set Variable     Configurar Menu Pincipal
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -48,7 +51,8 @@ Configurar Menu Pincipal
     Fechar Janela
 
 Configurar Barra de Atalhos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
+    ${nome_print}=     Set Variable     Configurar Barra de Atalhos
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
@@ -57,7 +61,8 @@ Configurar Barra de Atalhos
     Fechar com Sim
 
 Estilo do Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
+    ${nome_print}=     Set Variable     Estilo do Menu Principal
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -66,7 +71,8 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Controle de Acessos
+    ${nome_print}=     Set Variable     Controle de Acessos
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -76,7 +82,8 @@ Controle de Acessos
     Fechar janela
 
 Configuração de Liberação
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configuração de Liberação
+    ${nome_print}=     Set Variable     Configuração de Liberação
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -86,9 +93,9 @@ Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
-
 Relatórios Personalizados > Cadastro de Categorias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                             Cadastro de Categorias
+    ${nome_print}=     Set Variable     Cadastro de Categorias
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -98,9 +105,10 @@ Relatórios Personalizados > Cadastro de Categorias
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar com Sim
-    
+
 Relatórios Personalizados > Cadastro de Relatórios
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
+    ${nome_print}=     Set Variable     Cadastro de Relatórios
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -112,7 +120,8 @@ Relatórios Personalizados > Cadastro de Relatórios
     Fechar com Sim
 
 Configurador de Impressões > Relatórios > Contas a Pagar
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Relatórios/                             Contas a Pagar
+    ${nome_print}=     Set Variable     Contas a Pagar
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  R
@@ -123,7 +132,8 @@ Configurador de Impressões > Relatórios > Contas a Pagar
     Fechar com Sim
 
 Configurador de Impressões > Relatórios > Contas a Receber
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Relatórios/                             Contas a Receber
+    ${nome_print}=     Set Variable     Contas a Receber
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  R
@@ -134,7 +144,8 @@ Configurador de Impressões > Relatórios > Contas a Receber
     Fechar com Sim
 
 Configurador de Impressões > Recibos > Contas a Pagar
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Recibos/                             Contas a Pagar
+    ${nome_print}=     Set Variable     Recibos Contas a Pagar
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  E
@@ -145,7 +156,8 @@ Configurador de Impressões > Recibos > Contas a Pagar
     Fechar com Sim
 
 Configurador de Impressões > Recibos > Contas a Receber
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/Recibos/                             Contas a Receber
+    ${nome_print}=     Set Variable     Recibos Contas a Receber
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  E
@@ -156,7 +168,8 @@ Configurador de Impressões > Recibos > Contas a Receber
     Fechar com Sim
 
 Criar Usuario de Log
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
+    ${nome_print}=     Set Variable     Criar Usuario de Log
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Criar Usuário de Log
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
@@ -164,16 +177,18 @@ Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Verifica transações abertas
+    ${nome_print}=     Set Variable     Verifica transações abertas
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
-     RPA.Windows.Click      Carregar
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
 
 Configurar de Dup/Boletos/Carnês
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar de Dup_Boletos_Carnês
+    ${nome_print}=     Set Variable     Configurar de Dup/Boletos/Carnês
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar de Dup/Boletos/Carnês
     RPA.Windows.Get Text    Configuração de Duplicatas/Carnes/Boletos (1)
@@ -182,7 +197,8 @@ Configurar de Dup/Boletos/Carnês
     Fechar com Sim
 
 Importador Extrato Bancário (OFX)
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Importador Extrato Bancário (OFX)
+    ${nome_print}=     Set Variable     Importador Extrato Bancário (OFX)
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Importador Extrato Bancário (OFX)
     RPA.Windows.Get Text    Importador de Extrato Bancário (OFX) (1)
@@ -196,7 +212,8 @@ Importador Extrato Bancário (OFX)
     RPA.Windows.Click       OK
 
 Arquivo Relato - Serasa
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Arquivo Relato - Serasa
+    ${nome_print}=     Set Variable     Arquivo Relato - Serasa
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Arquivo Relato - Serasa
     RPA.Windows.Get Text    ARQUIVO RELATO - SERASA (1)
@@ -206,7 +223,8 @@ Arquivo Relato - Serasa
     Fechar janela
 
 Agenda Telefônica
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Agenda Telefônica
+    ${nome_print}=     Set Variable     Agenda Telefônica
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
@@ -218,7 +236,8 @@ Agenda Telefônica
     RPA.Windows.Click         Sim
 
 Faturamento de Agências - Bilheteria > Geração de Faturas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Faturamento de Agências - Bilheteria/                             Geração de Faturas
+    ${nome_print}=     Set Variable     Geração de Faturas
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Faturamento de Agências - Bilheteria
     RPA.Desktop.Press Keys  G
@@ -229,7 +248,8 @@ Faturamento de Agências - Bilheteria > Geração de Faturas
     Fechar janela
 
 Faturamento de Agências - Bilheteria > Estorno de Faturas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Faturamento de Agências - Bilheteria/                             Estorno de Faturas
+    ${nome_print}=     Set Variable     Estorno de Faturas
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Faturamento de Agências - Bilheteria
     RPA.Desktop.Press Keys  E
@@ -240,7 +260,8 @@ Faturamento de Agências - Bilheteria > Estorno de Faturas
     Fechar janela
 
 Cadastro de Bilheterias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                           Cadastro de Bilheterias
+    ${nome_print}=     Set Variable     Cadastro de Bilheterias
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Cadastro de Bilheterias
     RPA.Windows.Get Text    Cadastro de Bilheterias (1)
@@ -249,7 +270,8 @@ Cadastro de Bilheterias
     Fechar com Sim
 
 Processos Personalizados
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                           Processos Personalizados
+    ${nome_print}=     Set Variable     Processos Personalizados
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Processos Personalizados
     RPA.Windows.Get Text    Processos Personalizados (1)
@@ -259,7 +281,8 @@ Processos Personalizados
     Fechar janela
 
 Relatório de Análise de Veículos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                           Relatório de Análise de Veículos
+    ${nome_print}=     Set Variable     Relatório de Análise de Veículos
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Relatório de Análise de Veículos
     RPA.Windows.Get Text    Relatório de Análise de Veículos (1)
@@ -271,7 +294,8 @@ Relatório de Análise de Veículos
     Fechar janela
 
 Importação de Planilha Excel Personalizada
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                           Importação de Planilha Excel Personalizada
+    ${nome_print}=     Set Variable     Importação de Planilha Excel Personalizada
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Importação de Planilha Excel Personalizada
     RPA.Windows.Get Text    Importação de Planilha Excel Personalizada (1)
@@ -282,7 +306,8 @@ Importação de Planilha Excel Personalizada
     Fechar janela
 
 Bilheteria > Cadastro de Tipos de Receita
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Bilheteria/                           Cadastro de Tipos de Receita
+    ${nome_print}=     Set Variable     Cadastro de Tipos de Receita
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Bilheteria
     RPA.Desktop.Press Keys  T
@@ -292,7 +317,8 @@ Bilheteria > Cadastro de Tipos de Receita
     Fechar com Sim
 
 Bilheteria > Config. Plano Contas X Produtos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Bilheteria/                           Config. Plano Contas X Produtos
+    ${nome_print}=     Set Variable     Config. Plano Contas X Produtos
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Bilheteria
     RPA.Desktop.Press Keys  C
@@ -305,9 +331,10 @@ Bilheteria > Config. Plano Contas X Produtos
     Fechar com Sim
     RPA.Windows.Click       OK
     Fechar janela
-    
+
 Bilheteria > Config. Tipo Receita Trib.
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Bilheteria/                           Config. Tipo Receita Trib.
+    ${nome_print}=     Set Variable     Config. Tipo Receita Trib.
+    [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Bilheteria
     RPA.Desktop.Press Keys  O
@@ -320,6 +347,3 @@ Bilheteria > Config. Tipo Receita Trib.
     Fechar com Sim
     RPA.Windows.Click       OK
     Fechar janela
-
-
-    

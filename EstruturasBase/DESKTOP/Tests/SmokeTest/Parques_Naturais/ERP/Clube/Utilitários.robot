@@ -86,7 +86,7 @@ Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar com Sim
     
-Cadastro de Relatórios
+Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
     [Tags]     Clube    Utilitários   SmokeTest
     Utilitários

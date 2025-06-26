@@ -145,7 +145,7 @@ Configuração de Troca de Produto p/ emissão de NF
     Fechar janela
     RPA.Windows.Click         Sim
 
-Empresas
+Parâmetros > Empresas
     ${nome_print}=     Set Variable      Empresas
     [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
@@ -157,7 +157,7 @@ Empresas
     Fechar janela
     RPA.Windows.Click         Sim
 
-Estabelecimentos
+Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable      Estabelecimentos
     [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
@@ -169,7 +169,7 @@ Estabelecimentos
     Fechar janela
     RPA.Windows.Click         Sim
 
-Usuários
+Parâmetros > Usuários
     ${nome_print}=     Set Variable      Usuários
     [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros
@@ -191,7 +191,7 @@ Grupo de Usuários
     Fechar janela
     RPA.Windows.Click         Sim
 
-Configurações da Estação
+Parâmetros > Configurações da Estação
     ${nome_print}=     Set Variable      Configurações da Estação
     [Tags]     Balancas    Cadastros   SmokeTest
     Cadastros

@@ -2,11 +2,14 @@
 Documentation    Smoke Test: Compras
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_compras
-
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Compras/Relatórios/    
+${nome_print}
+${nome_exe}=    cde_win_compras
 
 *** Keywords ***
 
@@ -17,7 +20,8 @@ Relatórios
 *** Test Cases ***
 
 Compras/Aquisição de Serviços - Lançamentos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Lançamentos
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Lançamentos
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Lançamentos
     RPA.Windows.Get Text    Lançamentos de Compras/Aquisição de Serviços (1)
@@ -26,7 +30,8 @@ Compras/Aquisição de Serviços - Lançamentos
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Item
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Sintético_Item
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Item
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Item
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Item (1)
@@ -35,7 +40,8 @@ Compras/Aquisição de Serviços - Sintético/Item
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Fornecedor
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Sintético_Fornecedor
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Fornecedor
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Fornecedor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor (1)
@@ -44,7 +50,8 @@ Compras/Aquisição de Serviços - Sintético/Fornecedor
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Forn/Item
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Sintético_Forn_Item
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Forn_Item
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Forn/Item
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor / Item (1)
@@ -53,7 +60,8 @@ Compras/Aquisição de Serviços - Sintético/Forn/Item
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Setor
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Sintético_Setor
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Setor
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Setor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços por Setor (1)
@@ -64,7 +72,8 @@ Compras/Aquisição de Serviços - Sintético/Setor
     Fechar janela
 
 Compras/Aquisição de Serviços - Evolução Diária
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Evolução Diária
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Diária
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Diária
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Diária (1)
@@ -76,7 +85,8 @@ Compras/Aquisição de Serviços - Evolução Diária
     Fechar janela
 
 Compras/Aquisição de Serviços - Evolução Mensal
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Evolução Mensal
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Mensal
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Mensal
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Mensal (1)
@@ -88,7 +98,8 @@ Compras/Aquisição de Serviços - Evolução Mensal
     Fechar janela
 
 Compras/Aquisição de Serviços - Evolução Anual
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - Evolução Anual
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Anual
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Anual
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Anual (1)
@@ -100,7 +111,8 @@ Compras/Aquisição de Serviços - Evolução Anual
     Fechar janela
 
 Compras/Aquisição de Serviços - CFOP
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Compras_Aquisição de Serviços - CFOP
+    ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - CFOP
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - CFOP
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - CFOP (1)
@@ -111,7 +123,8 @@ Compras/Aquisição de Serviços - CFOP
     Fechar janela
 
 Lançamento de Entradas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Lançamento de Entradas
+    ${nome_print}=     Set Variable     Lançamento de Entradas
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Lançamento de Entradas
     RPA.Windows.Get Text    Relatório de Lançamentos de Entradas (1)
@@ -120,7 +133,8 @@ Lançamento de Entradas
     Fechar janela
 
 Produtos/Fornecedor
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Produtos_Fornecedor
+    ${nome_print}=     Set Variable     Produtos_Fornecedor
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Produtos/Fornecedor
     RPA.Windows.Get Text    Relatório Ultimo Fornecedor (1)
@@ -132,7 +146,8 @@ Produtos/Fornecedor
     Fechar janela
 
 Fornecedor/Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Fornecedor_Produtos
+    ${nome_print}=     Set Variable     Fornecedor_Produtos
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Fornecedor/Produtos
     RPA.Windows.Get Text    Relatório de fornecedores por produto (1)
@@ -143,7 +158,8 @@ Fornecedor/Produtos
     Fechar janela
 
 Notas Fiscais Emitidas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Notas Fiscais Emitidas
+    ${nome_print}=     Set Variable     Notas Fiscais Emitidas
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Notas Fiscais Emitidas
     RPA.Windows.Get Text    Relatório de Notas Fiscais Emitidas (1)
@@ -152,7 +168,8 @@ Notas Fiscais Emitidas
     Fechar janela
 
 Pedidos de Compra
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Pedidos de Compra
+    ${nome_print}=     Set Variable     Pedidos de Compra
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Pedidos de Compra
     RPA.Windows.Get Text    Relatório de Pedidos de Compra (1)
@@ -161,7 +178,8 @@ Pedidos de Compra
     Fechar janela
 
 Pedidos de Compra - Saldo Produtos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Pedidos de Compra - Saldo Produtos
+    ${nome_print}=     Set Variable     Pedidos de Compra - Saldo Produtos
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Pedidos de Compra - Saldo Produtos
     RPA.Windows.Get Text    Relatório de Pedidos de Compra - Saldo dos produtos (1)
@@ -170,7 +188,8 @@ Pedidos de Compra - Saldo Produtos
     Fechar janela
 
 Giro de Fornecedores
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Giro de Fornecedores
+    ${nome_print}=     Set Variable     Giro de Fornecedores
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Giro de Fornecedores
     RPA.Windows.Get Text    Relatório Giro de Fornecedores (1)
@@ -179,7 +198,8 @@ Giro de Fornecedores
     Fechar janela
 
 Resumo Retenção Monsanto
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Resumo Retenção Monsanto
+    ${nome_print}=     Set Variable     Resumo Retenção Monsanto
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Resumo Retenção Monsanto
     RPA.Windows.Get Text    Consulta Monsanto (1)
@@ -188,7 +208,8 @@ Resumo Retenção Monsanto
     Fechar janela
 
 Resumo Geral de Movimentos/Saldos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Resumo Geral de Movimentos_Saldos
+    ${nome_print}=     Set Variable     Resumo Geral de Movimentos_Saldos
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Resumo Geral de Movimentos/Saldos
     RPA.Windows.Get Text    Resumo Geral de Movimentos/Saldos (1)
@@ -199,7 +220,8 @@ Resumo Geral de Movimentos/Saldos
     Fechar janela
 
 Customizados > Projeção de Compras
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Customizados/             Projeção de Compras
+    ${nome_print}=     Set Variable     Projeção de Compras
+    [Tags]     Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Customizados
     RPA.Desktop.Press Keys  P
@@ -209,6 +231,3 @@ Customizados > Projeção de Compras
     BaseDesktop.Screenshot  Projeção de Compras (1)   ${Caminho_Screenshots}Customizados/Projeção de Compras
     RPA.Windows.Click       Confirmar
     Fechar janela
-
-
-    

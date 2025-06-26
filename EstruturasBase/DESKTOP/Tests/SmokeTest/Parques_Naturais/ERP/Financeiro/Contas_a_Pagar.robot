@@ -1,13 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_fin
-
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Financeiro/Contas a Pagar/ 
-
+${nome_print}
+${nome_exe}=    cde_win_fin
 
 *** Keywords ***
 
@@ -19,7 +21,8 @@ Contas a Pagar
 *** Test Cases ***
 
 Lançamentos > Lançamento - Simplificado
-    [Teardown]                Caso aconteça erro                 ${Caminho_Screenshots}Lançamentos/                              Lançamento - Simplificado
+    ${nome_print}=     Set Variable     Lançamento - Simplificado
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    l
@@ -29,7 +32,8 @@ Lançamentos > Lançamento - Simplificado
     Fechar com Sim
 
 Lançamentos > Lançamento - Múltiplas Parcelas
-    [Teardown]                Caso aconteça erro                                       ${Caminho_Screenshots}Lançamentos/                                    Lançamento - Múltiplas Parcelas
+    ${nome_print}=     Set Variable     Lançamento - Múltiplas Parcelas
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    a
@@ -39,7 +43,8 @@ Lançamentos > Lançamento - Múltiplas Parcelas
     Fechar com Sim
 
 Lançamentos > Lançamento - Com Baixa Automática
-    [Teardown]                Caso aconteça erro                                    ${Caminho_Screenshots}Lançamentos/                                      Lançamento - Com Baixa Automática
+    ${nome_print}=     Set Variable     Lançamento - Com Baixa Automática
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    n
@@ -49,7 +54,8 @@ Lançamentos > Lançamento - Com Baixa Automática
     Fechar janela
 
 Financiamento
-    [Teardown]              Caso aconteça erro                           ${Caminho_Screenshots}                  Financiamento
+    ${nome_print}=     Set Variable     Financiamento
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Financiamento
     RPA.Windows.Get Text    Cronograma de Liberação e Amortização (1)
@@ -58,7 +64,8 @@ Financiamento
     Fechar com Sim
 
 Baixas
-    [Teardown]              Caso aconteça erro              ${Caminho_Screenshots}           Baixas
+    ${nome_print}=     Set Variable     Baixas
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Baixas
     RPA.Windows.Get Text    Baixas do Contas a Pagar (1)
@@ -68,7 +75,8 @@ Baixas
     Fechar janela
 
 Estornar Baixas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                    Extornar Baixas
+    ${nome_print}=     Set Variable     Estornar Baixas
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Estornar Baixas
     RPA.Windows.Get Text    Estorno de Baixas do Contas a Pagar (1)
@@ -79,7 +87,8 @@ Estornar Baixas
     Fechar janela
 
 Renegociações
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}                  Renegociações
+    ${nome_print}=     Set Variable     Renegociações
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Renegociações
     RPA.Windows.Get Text    Renegociação do Contas a Pagar (1)
@@ -89,7 +98,8 @@ Renegociações
     Fechar janela
 
 Estornar Renegociações
-    [Teardown]              Caso aconteça erro                                ${Caminho_Screenshots}                           Extornar Renegociações
+    ${nome_print}=     Set Variable     Estornar Renegociações
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Estornar Renegociações
     RPA.Windows.Get Text    Estorno de Renegociações do Contas a Pagar (1)
@@ -99,8 +109,9 @@ Estornar Renegociações
     RPA.Windows.Click       OK
     Fechar janela
 
-Alterar Vencimento/Portador
-    [Teardown]              Caso aconteça erro                                        ${Caminho_Screenshots}                                Alterar Vencimento_Portador
+Alterar Vencimento_Portador
+    ${nome_print}=     Set Variable     Alterar Vencimento_Portador
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Alterar Vencimento/Portador
     RPA.Windows.Get Text    Alteração de Vencimento/Portador do Contas a Pagar (1)
@@ -111,7 +122,8 @@ Alterar Vencimento/Portador
     Fechar janela
 
 Adiantamentos > Adiantamento a Fornecedores
-    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Adiantamentos/                                Adiantamento a Fornecedores
+    ${nome_print}=     Set Variable     Adiantamento a Fornecedores
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    a
@@ -120,8 +132,9 @@ Adiantamentos > Adiantamento a Fornecedores
     BaseDesktop.Screenshot    Adiantamentos a Fornecedores (1)    ${Caminho_Screenshots}Adiantamentos/Adiantamento a Fornecedores
     Fechar com Sim
 
-Adiantamentos > Extrato dos Adiantamentos/Fornecedor
-    [Teardown]                Caso aconteça erro                                ${Caminho_Screenshots}Adiantamentos/                                         Extrato dos Adiantamentos_Fornecedor
+Adiantamentos > Extrato dos Adiantamentos_Fornecedor
+    ${nome_print}=     Set Variable     Extrato dos Adiantamentos_Fornecedor
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    e
@@ -133,7 +146,8 @@ Adiantamentos > Extrato dos Adiantamentos/Fornecedor
     Fechar janela
 
 Adiantamentos > Saldo de Adiantamentos Fornecedores
-    [Teardown]                Caso aconteça erro                   ${Caminho_Screenshots}Adiantamentos/                                        Saldo de Adiantamentos Fornecedores
+    ${nome_print}=     Set Variable     Saldo de Adiantamentos Fornecedores
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    s
@@ -144,8 +158,9 @@ Adiantamentos > Saldo de Adiantamentos Fornecedores
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Adiantamentos > Adiantamento a Funcionários
-    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Adiantamentos/                                Adiantamento a Funcionários
+Adiantamento a Funcionários
+    ${nome_print}=     Set Variable     Adiantamento a Funcionários
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    d
@@ -155,8 +170,9 @@ Adiantamentos > Adiantamento a Funcionários
     Fechar janela
     RPA.Windows.Click         Sim
 
-Adiantamentos > Extrato dos Adiantamentos/Funcionário
-    [Teardown]                Caso aconteça erro                           ${Caminho_Screenshots}Adiantamentos/                                          Extrato dos Adiantamentos_Funcionário
+Extrato dos Adiantamentos_Funcionário
+    ${nome_print}=     Set Variable     Extrato dos Adiantamentos_Funcionário
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    x
@@ -167,8 +183,9 @@ Adiantamentos > Extrato dos Adiantamentos/Funcionário
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Adiantamentos > Saldo de Adiantamentos Funcionários
-    [Teardown]                Caso aconteça erro                    ${Caminho_Screenshots}Adiantamentos/                                        Saldo de Adiantamentos Funcionários
+Saldo de Adiantamentos Funcionários
+    ${nome_print}=     Set Variable     Saldo de Adiantamentos Funcionários
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    l
@@ -179,8 +196,9 @@ Adiantamentos > Saldo de Adiantamentos Funcionários
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Adiantamentos > Relatório de Lançamento
-    [Teardown]                Caso aconteça erro                                              ${Caminho_Screenshots}Adiantamentos/                            Relatório de Lançamento
+Relatório de Lançamento
+    ${nome_print}=     Set Variable     Relatório de Lançamento
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    r
@@ -191,8 +209,9 @@ Adiantamentos > Relatório de Lançamento
     RPA.Windows.Click       Confirmar   
     Fechar janela
 
-Adiantamentos > Antecipação de Pedido de Compras
-    [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}                                                   Antecipação de Pedido de Compras
+Antecipação de Pedido de Compras
+    ${nome_print}=     Set Variable     Antecipação de Pedido de Compras
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    n
@@ -202,7 +221,8 @@ Adiantamentos > Antecipação de Pedido de Compras
     Fechar janela
 
 Empenhos
-    [Teardown]              Caso aconteça erro          ${Caminho_Screenshots}             Empenhos
+    ${nome_print}=     Set Variable     Empenhos
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Empenhos
     RPA.Windows.Get Text    Cadastro de Empenhos (1)
@@ -211,7 +231,8 @@ Empenhos
     Fechar com Sim
 
 Recibos Avulsos
-    [Teardown]              Caso aconteça erro                        ${Caminho_Screenshots}                    Recibos Avulsos
+    ${nome_print}=     Set Variable     Recibos Avulsos
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Recibos Avulsos
     RPA.Windows.Get Text    Emissão de Recibo - Contas a Pagar (1)
@@ -220,7 +241,8 @@ Recibos Avulsos
     Fechar com Sim
 
 Consultas
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Consultas
+    ${nome_print}=     Set Variable     Consultas
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Consultas
     RPA.Windows.Get Text    Consulta do Contas a Pagar (1)
@@ -230,8 +252,9 @@ Consultas
     RPA.Windows.Click       OK
     Fechar janela
 
-Relatórios > Contas a Pagar
-    [Teardown]                Caso aconteça erro                 ${Caminho_Screenshots}Relatórios/                   Contas a Pagar
+Contas a Pagar
+    ${nome_print}=     Set Variable     Contas a Pagar
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    c
@@ -243,8 +266,9 @@ Relatórios > Contas a Pagar
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Relatórios > Contas a Pagar a Prazo Resumido
-    [Teardown]                Caso aconteça erro                         ${Caminho_Screenshots}Relatórios/                                    Contas a Pagar a Prazo Resumido
+Contas a Pagar a Prazo Resumido
+    ${nome_print}=     Set Variable     Contas a Pagar a Prazo Resumido
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    o
@@ -257,8 +281,9 @@ Relatórios > Contas a Pagar a Prazo Resumido
     RPA.Windows.Click         OK
     Fechar janela
 
-Relatórios > Pagamentos
-    [Teardown]                Caso aconteça erro                           ${Caminho_Screenshots}Relatórios/               Pagamentos
+Pagamentos
+    ${nome_print}=     Set Variable     Pagamentos
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    p
@@ -270,8 +295,9 @@ Relatórios > Pagamentos
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Relatórios > Empenhos/Credor
-    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Relatórios/                    Empenhos_Credor
+Empenhos_Credor
+    ${nome_print}=     Set Variable     Empenhos_Credor
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    e
@@ -284,8 +310,9 @@ Relatórios > Empenhos/Credor
     Fechar janela
     RPA.Windows.Click         OK
 
-Comissões de Venda > Manutenção de Pagamento de Comissões
-    [Teardown]                Caso aconteça erro                          ${Caminho_Screenshots}Comissões de Venda/                                         Manutenção de Pagamento de Comissões
+Manutenção de Pagamento de Comissões
+    ${nome_print}=     Set Variable     Manutenção de Pagamento de Comissões
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    m
@@ -296,8 +323,9 @@ Comissões de Venda > Manutenção de Pagamento de Comissões
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Comissões de Venda > Provisionamento de Pagamento
-    [Teardown]                Caso aconteça erro                  ${Caminho_Screenshots}Comissões de Venda/                                 Provisionamento de Pagamento
+Provisionamento de Pagamento
+    ${nome_print}=     Set Variable     Provisionamento de Pagamento
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    p
@@ -307,8 +335,9 @@ Comissões de Venda > Provisionamento de Pagamento
     RPA.Windows.Click         OK
     Fechar janela
 
-Comissões de Venda > Relatório de Comissões
-    [Teardown]                Caso aconteça erro                      ${Caminho_Screenshots}Comissões de Venda/                           Relatório de Comissões
+Relatório de Comissões
+    ${nome_print}=     Set Variable     Relatório de Comissões
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    r
@@ -319,8 +348,9 @@ Comissões de Venda > Relatório de Comissões
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Comissões de Venda > Relatório de Comissões por Vendedor
-    [Teardown]                Caso aconteça erro                         ${Caminho_Screenshots}Comissões de Venda/                                        Relatório de Comissõesvpor Vendedor
+Relatório de Comissões por Vendedor
+    ${nome_print}=     Set Variable     Relatório de Comissões por Vendedor
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    e
@@ -333,8 +363,9 @@ Comissões de Venda > Relatório de Comissões por Vendedor
     RPA.Windows.Click       OK
     Fechar janela
 
-Comissões de Venda > Reprocessar Valores da Comissão
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Comissões de Venda/                                    Reprocessar Valores da Comissão
+Reprocessar Valores da Comissão
+    ${nome_print}=     Set Variable     Reprocessar Valores da Comissão
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    o
@@ -346,8 +377,9 @@ Comissões de Venda > Reprocessar Valores da Comissão
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Comissões de Venda > Cadastro De Comissão por Faixa de Descontos
-    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Comissões de Venda/                                                Cadastro De Comissão por Faixa de Descontos
+Cadastro De Comissão por Faixa de Descontos
+    ${nome_print}=     Set Variable     Cadastro De Comissão por Faixa de Descontos
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    c
@@ -356,8 +388,9 @@ Comissões de Venda > Cadastro De Comissão por Faixa de Descontos
     BaseDesktop.Screenshot    Cadastro de Comissão por Faixa de Descontos (1)    ${Caminho_Screenshots}Comissões de Venda/Cadastro De Comissão por Faixa de Descontos
     Fechar com Sim
 
-Pagamentos Eletrônicos > Pagamentos a Fornecedores > Remessa
-    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Pagamentos Eletrônicos/Pagamentos a Fornecedores                                              Remessa
+Remessa
+    ${nome_print}=     Set Variable     Remessa
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Pagamentos Eletrônicos
     RPA.Windows.Click         Pagamentos a Fornecedores
@@ -369,8 +402,9 @@ Pagamentos Eletrônicos > Pagamentos a Fornecedores > Remessa
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Pagamentos Eletrônicos > Pagamentos a Fornecedores > Retorno
-    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Pagamentos Eletrônicos/Pagamentos a Fornecedores                                              Retorno
+Retorno
+    ${nome_print}=     Set Variable     Retorno
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Pagamentos Eletrônicos
     RPA.Windows.Click         Pagamentos a Fornecedores
@@ -381,8 +415,9 @@ Pagamentos Eletrônicos > Pagamentos a Fornecedores > Retorno
     RPA.Windows.Click         OK
     Fechar janela
 
-Pagamentos Eletrônicos > Pagamentos a Funcionarios
-    [Teardown]                Caso aconteça erro                                 ${Caminho_Screenshots}Pagamentos Eletrônicos/                                             Pagamentos a Funcionarios
+Pagamentos a Funcionarios
+    ${nome_print}=     Set Variable     Pagamentos a Funcionarios
+    [Tags]     Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Pagamentos Eletrônicos
     RPA.Desktop.Press Keys    a
@@ -391,6 +426,3 @@ Pagamentos Eletrônicos > Pagamentos a Funcionarios
     BaseDesktop.Screenshot    Pagamento a Funcionários (1)    ${Caminho_Screenshots}Pagamentos Eletrônicos/Pagamentos a Funcionarios
     RPA.Windows.Click         OK
     Fechar janela
-
-
-    

@@ -1,13 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_fin
-
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Financeiro/Fluxo de Caixa/    
-
+${nome_print}
+${nome_exe}=    cde_win_fin
 *** Keywords ***
 
 Fluxo de Caixa
@@ -17,7 +19,8 @@ Fluxo de Caixa
 *** Test Cases ***
 
 Fluxo de Caixa a Realizar (Projetado)
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Fluxo de Caixa a Realizar (Projetado)
+    ${nome_print}=     Set Variable     Fluxo de Caixa a Realizar (Projetado)
+    [Tags]     Financeiro    Fluxo de Caixa   SmokeTest
     Fluxo de Caixa
     RPA.Windows.Click         Fluxo de Caixa a Realizar (Projetado)
     RPA.Windows.Get Text      Fluxo de Caixa Projetado (A Realizar) (1)
@@ -27,7 +30,8 @@ Fluxo de Caixa a Realizar (Projetado)
     Fechar janela
 
 Fluxo de Caixa Realizado    
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Fluxo de Caixa Realizado
+    ${nome_print}=     Set Variable     Fluxo de Caixa Realizado
+    [Tags]     Financeiro    Fluxo de Caixa   SmokeTest
     Fluxo de Caixa
     RPA.Windows.Click         Fluxo de Caixa Realizado
     RPA.Windows.Get Text      Fluxo de Caixa a Realizado (1)
@@ -35,6 +39,3 @@ Fluxo de Caixa Realizado
     BaseDesktop.Screenshot    Fluxo de Caixa a Realizado (1)    ${Caminho_Screenshots}Fluxo de Caixa Realizado
     RPA.Windows.Click         OK
     Fechar janela
-
-
-    

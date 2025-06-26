@@ -1,24 +1,28 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
 Resource          C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_frotas
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Frotas/Projeto EDI Transportes/    
-
+${nome_print}
+${nome_exe}=    cde_win_frotas
 *** Keywords ***
 
 Projeto EDI Transportes
     [Arguments]    ${nome}
     Cadastros
-    repetidor de teclas    right    10
+    repetidor de teclas    right    11
     RPA.Windows.Click    ${nome}
 
 *** Test Cases ***
 
 Importação NOTFIS
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Importação NOTFIS
+    ${nome_print}=     Set Variable     Importação NOTFIS
+    [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Importação NOTFIS
     RPA.Windows.Get Text   	Importação de Dados do Projeto EDI Transporte (NOTFIS - Dados de Notas Fiscais) (1) 
     RPA.Windows.Click       Iniciar Importação
@@ -27,28 +31,25 @@ Importação NOTFIS
     Fechar Janela
 
 Exportação CONEMB
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Exportação CONEMB
+    ${nome_print}=     Set Variable     Exportação CONEMB
+    [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação CONEMB
     RPA.Windows.Get Text    bbbbb 
-
     BaseDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação CONEMB
     Fechar Janela
 
 Exportação DOCCOB
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Exportação DOCCOB
+    ${nome_print}=     Set Variable     Exportação DOCCOB
+    [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação DOCCOB
     RPA.Windows.Get Text    bbbbb 
-
     BaseDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação DOCCOB
     Fechar Janela
 
 Exportação OCOREN
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Exportação OCOREN
+    ${nome_print}=     Set Variable     Exportação OCOREN
+    [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação OCOREN
     RPA.Windows.Get Text    bbbbb 
-
     BaseDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação OCOREN
     Fechar Janela
-
-
-    

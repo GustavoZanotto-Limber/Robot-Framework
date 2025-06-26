@@ -1,11 +1,15 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_fin
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+
 
 *** Variables ***
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Financeiro/Relatórios_Consultas/
-
+${nome_print}
+${nome_exe}=    cde_win_fin
 
 *** Keywords ***
 
@@ -17,7 +21,8 @@ Relatórios/Consultas
 *** Test Cases ***
 
 Informe de Rendimentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Informe de Rendimentos
+    ${nome_print}=     Set Variable     Informe de Rendimentos
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Informe de Rendimentos
     RPA.Windows.Get Text      Informativo de Rendimentos (1)
@@ -26,7 +31,8 @@ Informe de Rendimentos
     Fechar janela
 
 Relatório de Receitas e Despesas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Relatório de Receitas e Despesas
+    ${nome_print}=     Set Variable     Relatório de Receitas e Despesas
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Relatório de Receitas e Despesas
     RPA.Windows.Get Text      Relatório de Receitas e Despesas (1)
@@ -37,7 +43,8 @@ Relatório de Receitas e Despesas
     Fechar janela
 
 Consulta de Receitas e Despesas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Consulta de Receitas e Despesas
+    ${nome_print}=     Set Variable     Consulta de Receitas e Despesas
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Consulta de Receitas e Despesas
     RPA.Windows.Get Text      Consulta de Receitas e Despesas (1)
@@ -48,7 +55,8 @@ Consulta de Receitas e Despesas
     Fechar janela
 
 Saldo de Pedidos de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Saldo de Pedidos de Venda
+    ${nome_print}=     Set Variable     Saldo de Pedidos de Venda
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Saldo de Pedidos de Venda
     RPA.Windows.Get Text      Relatório de Saldos de Pedidos de Venda (1)
@@ -60,7 +68,8 @@ Saldo de Pedidos de Venda
     Fechar janela
 
 Posição Financeira > Configuração
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Posição Financeira/                         Configuração
+    ${nome_print}=     Set Variable     Configuração
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Posição Financeira
     RPA.Desktop.Press Keys    c
@@ -76,7 +85,8 @@ Posição Financeira > Configuração
     RPA.Windows.Click         OK
 
 Posição Financeira > Relatório
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Posição Financeira/                         Relatório
+    ${nome_print}=     Set Variable     Relatório
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Posição Financeira
     RPA.Desktop.Press Keys    r
@@ -85,7 +95,8 @@ Posição Financeira > Relatório
     Fechar janela
 
 Relatório Crédito Interno
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                 Relatório Crédito Interno
+    ${nome_print}=     Set Variable     Relatório Crédito Interno
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Relatório Crédito Interno
     RPA.Windows.Get Text      Relatório de Crédito Interno (1)
@@ -97,7 +108,8 @@ Relatório Crédito Interno
     RPA.Windows.Click         OK
 
 Consultas Personalizadas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                 Consultas Personalizadas
+    ${nome_print}=     Set Variable     Consultas Personalizadas
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
@@ -107,7 +119,8 @@ Consultas Personalizadas
     Fechar janela
 
 Rateio de Centro de Custo
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                 Rateio de Centro de Custo
+    ${nome_print}=     Set Variable     Rateio de Centro de Custo
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Rateio de Centro de Custo
     RPA.Windows.Get Text      Consulta de Rateio de Centro de Custos (1)
@@ -118,26 +131,29 @@ Rateio de Centro de Custo
     Fechar janela
 
 Centro de Custos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                 Centro de Custos
+    ${nome_print}=     Set Variable     Centro de Custos
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Centro de Custos
     RPA.Windows.Get Text      Centro de Custos (1)
-     RPA.Windows.Click        Carregar
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Centro de Custos (1)    ${Caminho_Screenshots}Centro de Custos
     RPA.Windows.Click         OK
     Fechar janela
 
 Consumo de Adiantamento
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                 Consumo de Adiantamento
+    ${nome_print}=     Set Variable     Consumo de Adiantamento
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Consumo de Adiantamento
     RPA.Windows.Get Text      Consulta de Consumo de Adiantamentos (1)
-     RPA.Windows.Click        Carregar
+    RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Consulta de Consumo de Adiantamentos (1)    ${Caminho_Screenshots}Consumo de Adiantamento
     Fechar janela
 
 Análise de Terceiro
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                 Análise de Terceiro
+    ${nome_print}=     Set Variable     Análise de Terceiro
+    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Análise de Terceiro
     Sleep                     1s
@@ -146,9 +162,5 @@ Análise de Terceiro
     RPA.Windows.Click         Confirmar
     RPA.Windows.Get Text      Análise de Terceiros (1)
     BaseDesktop.Screenshot    Análise de Terceiros (1)    ${Caminho_Screenshots}Análise de Terceiro
-     RPA.Windows.Click        Carregar
+    RPA.Windows.Click         Carregar
     RPA.Windows.Click         Fechar
-
-
-    
-    

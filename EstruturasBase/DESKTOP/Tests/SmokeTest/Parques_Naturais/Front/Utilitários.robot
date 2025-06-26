@@ -20,6 +20,7 @@ Utilitários
 *** Test Cases    ***
 
 Favoritos
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Favoritos
     Utilitários
     RPA.Windows.Click       Favoritos
@@ -29,6 +30,7 @@ Favoritos
     RPA.Windows.Click       Fechar
     
 Papel de Parede
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Papel de Parede
     Utilitários
     RPA.Windows.Click       Papel de Parede
@@ -38,6 +40,7 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Estilo do Menu Principal
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Estilo do Menu Principal
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
@@ -47,6 +50,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Controle de Acessos
     Utilitários
     RPA.Windows.Click       Controle de Acessos
@@ -57,6 +61,7 @@ Controle de Acessos
     Fechar janela
 
 Relatórios Personalizados > Cadastro de Categorias
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable      Cadastro de Categorias
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
@@ -69,6 +74,7 @@ Relatórios Personalizados > Cadastro de Categorias
     Fechar com Sim
     
 Relatórios Personalizados > Cadastro de Relatórios
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Cadastro de Relatórios
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
@@ -81,6 +87,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     Fechar com Sim
 
 Layout de Bilhetes
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Layout de Bilhetes
     Utilitários
     RPA.Windows.Click       Layout de Bilhetes
@@ -92,6 +99,7 @@ Layout de Bilhetes
     Fechar com Sim
 
 Configuração de Impressoras
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Configuração de Impressoras
     Utilitários
     RPA.Windows.Click       Configuração de Impressoras
@@ -103,6 +111,7 @@ Configuração de Impressoras
     RPA.Desktop.Press Keys  Enter
 
 Observações Padrão
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Observações Padrão
     Utilitários
     RPA.Windows.Click       Observações Padrão
@@ -114,6 +123,7 @@ Observações Padrão
     Fechar janela
 
 Criar Usuario de Log
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Criar Usuario de Log
     Utilitários
     RPA.Windows.Click       Criar Usuário de Log
@@ -122,6 +132,7 @@ Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Verifica transações abertas
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
@@ -131,6 +142,7 @@ Verifica transações abertas
     Fechar janela
 
 Abrir Gaveta
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Abrir Gaveta
     Utilitários
     RPA.Windows.Click       Abrir Gaveta
@@ -139,7 +151,8 @@ Abrir Gaveta
     RPA.Windows.Click       Fechar
 
 Metas Orçamento/Previsão
-    ${nome_print}=     Set Variable     Metas Orçamento/Previsão
+    [Tags]    Utilitários    Front    SmokeTest  
+    ${nome_print}=     Set Variable     Metas Orçamento_Previsão
     Utilitários
     RPA.Windows.Click       Metas Orçamento/Previsão
     RPA.Windows.Get Text    Cadastro de Metas para BI (1)
@@ -150,6 +163,7 @@ Metas Orçamento/Previsão
     Fechar com Sim
 
 Metas Realizadas Adicionais
+    [Tags]    Utilitários    Front    SmokeTest  
     ${nome_print}=     Set Variable     Metas Realizadas Adicionais
     Utilitários
     RPA.Windows.Click       Metas Realizadas Adicionais

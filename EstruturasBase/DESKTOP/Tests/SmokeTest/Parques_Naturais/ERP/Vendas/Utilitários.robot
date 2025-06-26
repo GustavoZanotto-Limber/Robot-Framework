@@ -1,13 +1,16 @@
 *** Settings ***
 Documentation    Smoke Test: Vendas
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_ven
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendas/Utilitários/    
-
+${nome_print}
+${nome_exe}=    cde_win_ven
 *** Keywords ***
 
 Utilitários
@@ -17,7 +20,8 @@ Utilitários
 *** Test Cases ***
 
 Configurar Nota Fiscal
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Configurar Nota Fiscal
+    ${nome_print}=     Set Variable     Configurar Nota Fiscal
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Nota Fiscal
     RPA.Windows.Get Text    Configuração da Nota Fiscal (1)
@@ -26,7 +30,8 @@ Configurar Nota Fiscal
     Fechar janela
 
 Favoritos
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}              Utilitários
+    ${nome_print}=     Set Variable     Favoritos
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -34,9 +39,10 @@ Favoritos
     BaseDesktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
     RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar
-    
+
 Papel de Parede
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                         Papel de Parede
+    ${nome_print}=     Set Variable     Papel de Parede
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -45,7 +51,8 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Pincipal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
+    ${nome_print}=     Set Variable     Configurar Barra de Atalhos
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -56,7 +63,8 @@ Configurar Menu Pincipal
     Fechar com Sim
 
 Configurar Barra de Atalhos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configurar Barra de Atalhos
+    ${nome_print}=     Set Variable     Configurar Barra de Atalhos
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
@@ -65,7 +73,8 @@ Configurar Barra de Atalhos
     Fechar com Sim
 
 Estilo do Menu Principal
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Estilo do Menu Principal
+    ${nome_print}=     Set Variable     Estilo do Menu Principal
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -74,7 +83,8 @@ Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Controle de Acessos
+    ${nome_print}=     Set Variable     Controle de Acessos
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -84,7 +94,8 @@ Controle de Acessos
     Fechar janela
 
 Configuração de Liberação
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Configuração de Liberação
+    ${nome_print}=     Set Variable     Configuração de Liberação
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -94,9 +105,9 @@ Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
-
 Relatórios Personalizados > Cadastro de Categorias
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                             Cadastro de Categorias
+    ${nome_print}=     Set Variable     Cadastro de Categorias
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  C
@@ -106,9 +117,10 @@ Relatórios Personalizados > Cadastro de Categorias
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar com Sim
-    
+
 Relatórios Personalizados > Cadastro de Relatórios
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Relatórios Personalizados/                               Cadastro de Relatórios
+    ${nome_print}=     Set Variable     Cadastro de Relatórios
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -120,7 +132,8 @@ Relatórios Personalizados > Cadastro de Relatórios
     Fechar com Sim
 
 Criar Usuario de Log
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Criar Usuario de Log
+    ${nome_print}=     Set Variable     Criar Usuario de Log
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Criar Usuário de Log
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
@@ -128,16 +141,18 @@ Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Verifica transações abertas
+    ${nome_print}=     Set Variable     Verifica transações abertas
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
-     RPA.Windows.Click      Carregar
+    RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
 
 Impressão de Etiquetas/Produtos
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Impressão de Etiquetas_Produtos
+    ${nome_print}=     Set Variable     Impressão de Etiquetas_Produtos
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Impressão de Etiquetas/Produtos
     RPA.Windows.Get Text    Emissão de Etiquetas (1)
@@ -147,7 +162,8 @@ Impressão de Etiquetas/Produtos
     Fechar janela
 
 Etiquetas (Terceiros)
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}             Etiquetas (Terceiros)
+    ${nome_print}=     Set Variable     Etiquetas (Terceiros)
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Etiquetas (Terceiros)
     RPA.Windows.Get Text    Emissão de Etiquetas de Terceiros (1)
@@ -160,7 +176,8 @@ Etiquetas (Terceiros)
     RPA.Windows.Click       OK
 
 Impressão de Etiquetas de Entrega
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Impressão de Etiquetas de Entregas
+    ${nome_print}=     Set Variable     Impressão de Etiquetas de Entregas
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Impressão de Etiquetas de Entrega
     RPA.Windows.Get Text    Impressão de Etiquetas de Entrega (1)
@@ -168,10 +185,11 @@ Impressão de Etiquetas de Entrega
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Impressão de Etiquetas de Entrega (1)    ${Caminho_Screenshots}Impressão de Etiquetas de Entregas
     RPA.Windows.Click       Confirmar
-    Fechar janela 
+    Fechar janela
 
 Configurador de Impressões > Ordem se Serviço
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Ordem se Serviço
+    ${nome_print}=     Set Variable     Ordem se Serviço
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  O
@@ -181,7 +199,8 @@ Configurador de Impressões > Ordem se Serviço
     Fechar com Sim
 
 Configurador de Impressões > Saídas_Vendas
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}Configurador de Impressões/                               Saídas_Vendas
+    ${nome_print}=     Set Variable     Saídas_Vendas
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  S
@@ -191,7 +210,8 @@ Configurador de Impressões > Saídas_Vendas
     Fechar com Sim
 
 PDV > Atualizar Produtos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}PDV/           Atualizar Produtos
+    ${nome_print}=     Set Variable     Atualizar Produtos
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    A
@@ -204,7 +224,8 @@ PDV > Atualizar Produtos
     Fechar janela
 
 PDV > Atualizar Balança
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}PDV/           Atualizar Balança
+    ${nome_print}=     Set Variable     Atualizar Balança
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    T
@@ -217,7 +238,8 @@ PDV > Atualizar Balança
     Fechar janela
 
 Agenda > Agendamentos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/           Agendamentos
+    ${nome_print}=     Set Variable     Agendamentos
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    A
@@ -228,7 +250,8 @@ Agenda > Agendamentos
     RPA.Windows.Click         Sim
 
 Agenda > Estados
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/           Estados
+    ${nome_print}=     Set Variable     Estados
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    E
@@ -239,20 +262,21 @@ Agenda > Estados
     RPA.Windows.Click         Sim
 
 Agenda > Consulta
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/           Consulta
+    ${nome_print}=     Set Variable     Consulta
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Consulta de Agendamentos (1)
     RPA.Desktop.Press Keys    0
-    
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Consulta de Agendamentos (1)    ${Caminho_Screenshots}Agenda/Consulta
     RPA.Windows.Click         Confirmar
     Fechar janela
 
 Agenda > Calendários
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Agenda/           Calendários
+    ${nome_print}=     Set Variable     Calendários
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    L
@@ -263,7 +287,8 @@ Agenda > Calendários
     RPA.Windows.Click         Fechar
 
 Agenda Telefônica
-    [Teardown]              Caso aconteça erro                         ${Caminho_Screenshots}                             Agenda Telefônica
+    ${nome_print}=     Set Variable     Agenda Telefônica
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
@@ -272,7 +297,8 @@ Agenda Telefônica
     Fechar com Sim
 
 Integração WhatsApp > Configuração para Integração
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Integração WhatsApp/           Configuração para Integração
+    ${nome_print}=     Set Variable     Configuração para Integração
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Integração WhatsApp
     RPA.Desktop.Press Keys    C
@@ -283,7 +309,8 @@ Integração WhatsApp > Configuração para Integração
     Fechar janela
 
 Integração WhatsApp > Envio de Mensagens
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Integração WhatsApp/           Envio de Mensagens
+    ${nome_print}=     Set Variable     Envio de Mensagens
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Integração WhatsApp
     RPA.Desktop.Press Keys    E
@@ -296,7 +323,8 @@ Integração WhatsApp > Envio de Mensagens
     Fechar janela
 
 Geração de Arquivos > Projeto Cultivar
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/           Projeto Cultivar
+    ${nome_print}=     Set Variable     Projeto Cultivar
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    P
@@ -309,7 +337,8 @@ Geração de Arquivos > Projeto Cultivar
     RPA.Windows.Click         OK
 
 Geração de Arquivos > Projeto Pegasus
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/           Projeto Pegasus
+    ${nome_print}=     Set Variable     Projeto Pegasus
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    R
@@ -322,7 +351,8 @@ Geração de Arquivos > Projeto Pegasus
     RPA.Windows.Click         OK
 
 Geração de Arquivos > Accera Bayer
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/           Accera Bayer
+    ${nome_print}=     Set Variable     Accera Bayer
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    A
@@ -333,7 +363,8 @@ Geração de Arquivos > Accera Bayer
     Fechar janela
 
 Geração de Arquivos > Projeto Cultivar (Fase II)
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/           Projeto Cultivar (Fase II)
+    ${nome_print}=     Set Variable     Projeto Cultivar (Fase II)
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    O
@@ -346,7 +377,8 @@ Geração de Arquivos > Projeto Cultivar (Fase II)
     RPA.Windows.Click         OK
 
 Geração de Arquivos > Histórico de Geracao de Arquivos
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Geração de Arquivos/           Histórico de Geracao de Arquivos
+    ${nome_print}=     Set Variable     Histórico de Geracao de Arquivos
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    H
@@ -360,7 +392,8 @@ Geração de Arquivos > Histórico de Geracao de Arquivos
     RPA.Windows.Click         OK
 
 Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Exportação de Arquivos/             Salvar arquivo XML NFe de Terceiros
+    ${nome_print}=     Set Variable     Salvar arquivo XML NFe de Terceiros
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Exportação de arquivos
     RPA.Desktop.Press Keys  S
@@ -371,7 +404,8 @@ Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
     Fechar janela
 
 Exportação de arquivos > CRM Cloud > Integração
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Exportação de arquivos/CRM Cloud/           Integração
+    ${nome_print}=     Set Variable     Integração
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Exportação de arquivos
     RPA.Windows.Click         CRM Cloud
@@ -383,7 +417,8 @@ Exportação de arquivos > CRM Cloud > Integração
     Fechar janela
 
 Exportação de arquivos > CRM Cloud > Configuração
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Exportação de arquivos/CRM Cloud/           Configuração
+    ${nome_print}=     Set Variable     Configuração
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Exportação de arquivos
     RPA.Windows.Click         CRM Cloud
@@ -395,7 +430,8 @@ Exportação de arquivos > CRM Cloud > Configuração
     RPA.Windows.Click         Sim
 
 Integradores > Integração Padrão
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}Integradores/          Integração Padrão
+    ${nome_print}=     Set Variable     Integração Padrão
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Integradores
     RPA.Desktop.Press Keys    I
@@ -406,7 +442,8 @@ Integradores > Integração Padrão
     Fechar janela
 
 Importação de Planilha Excel Personalizada
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          Importação de Planilha Excel Personalizada
+    ${nome_print}=     Set Variable     Importação de Planilha Excel Personalizada
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Importação de Planilha Excel Personalizada
     RPA.Windows.Get Text      Importação de Planilha Excel Personalizada (1)
@@ -417,7 +454,8 @@ Importação de Planilha Excel Personalizada
     Fechar janela
 
 Gerador de Vendas por XML
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          Gerador de Vendas por XML
+    ${nome_print}=     Set Variable     Gerador de Vendas por XML
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Gerador de Vendas por XML
     RPA.Windows.Get Text      Importação de Nota Fiscal (1)
@@ -427,7 +465,8 @@ Gerador de Vendas por XML
     Fechar janela
 
 Configuração de Certificado Digital
-    [Teardown]                Caso aconteça erro                                                ${Caminho_Screenshots}          Configuração de Certificado Digital
+    ${nome_print}=     Set Variable     Configuração de Certificado Digital
+    [Tags]    Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Configuração de Certificado Digital
     RPA.Windows.Get Text      Configuração de Certificado (1)
@@ -436,6 +475,3 @@ Configuração de Certificado Digital
     BaseDesktop.Screenshot    Configuração de Certificado (1)    ${Caminho_Screenshots}Configuração de Certificado Digital
     RPA.Windows.Click         Confirmar
     Fechar janela
-
-
-    

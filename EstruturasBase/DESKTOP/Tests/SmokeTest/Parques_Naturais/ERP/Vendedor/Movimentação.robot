@@ -1,14 +1,17 @@
 *** Settings ***
 Documentation    Smoke Test: Vendedor
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_VENDEDOR
+Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+
 
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendedor/Movimentação/    
-
+${nome_print}
+${nome_exe}=    cde_win_VENDEDOR
 *** Keywords ***
 
 Movimentação
@@ -20,7 +23,8 @@ Movimentação
 *** Test Cases ***
 
 Pedidos de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Pedidos de Venda
+    ${nome_print}=     Set Variable     Pedidos de Venda
+    [Tags]    Vendedor   Movimentação   SmokeTest
     Movimentação              Pedidos de Venda    
     RPA.Windows.Get Text      Pedidos de Venda (1)
     RPA.Windows.Click         Novo
@@ -28,7 +32,8 @@ Pedidos de Venda
     Fechar com Sim
 
 Orçamentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Orçamentos
+    ${nome_print}=     Set Variable     Orçamentos
+    [Tags]    Vendedor   Movimentação   SmokeTest
     Movimentação              Orçamentos    
     RPA.Windows.Get Text      Orçamentos (1)
     RPA.Windows.Click         Novo
@@ -37,13 +42,11 @@ Orçamentos
     Fechar com Sim
 
 Processos Personalizados
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                         Processos Personalizados
+    ${nome_print}=     Set Variable     Processos Personalizados
+    [Tags]    Vendedor   Movimentação   SmokeTest
     Movimentação              Processos Personalizados    
     RPA.Windows.Get Text      Processos Personalizados (1)
     RPA.Windows.Click         Cadastrar Novo Processo
     BaseDesktop.Screenshot    Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
     RPA.Windows.Click         Sair
     Fechar janela
-
-
-    

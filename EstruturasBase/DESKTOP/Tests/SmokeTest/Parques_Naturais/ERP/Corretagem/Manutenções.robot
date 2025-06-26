@@ -1,13 +1,16 @@
 *** Settings ***
 Documentation    Smoke Test: Corretagem
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_crt
+Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Corretagem/Manutenções/    
-
+${nome_print}
+${nome_exe}=    cde_win_crt
 *** Keywords ***
 
 Manutenções
@@ -17,7 +20,8 @@ Manutenções
 *** Test Cases ***
 
 Confirmação de Negócio
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Confirmação de Negócio
+    ${nome_print}=     Set Variable     Confirmação de Negócio
+    [Tags]     Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Confirmação de Negócio
     RPA.Windows.Get Text      Confirmação de Negócio (1)
@@ -26,7 +30,8 @@ Confirmação de Negócio
     Fechar com Sim
 
 Emissão de NFS-e sobre Confirmações de Negócios
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Confirmação de Negócio
+    ${nome_print}=     Set Variable     Emissão de NFS-e sobre Confirmações de Negócios
+    [Tags]     Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Emissão de NFS-e sobre Confirmações de Negócios
     RPA.Windows.Get Text      Emissão de NFS-e sobre Confirmações de Negócios (1)
@@ -35,7 +40,8 @@ Emissão de NFS-e sobre Confirmações de Negócios
     Fechar janela
 
 Pedidos > Pedidos de Compra
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Pedidos de Compra
+    ${nome_print}=     Set Variable     Pedidos de Compra
+    [Tags]     Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Desktop.Press Keys    P
@@ -45,7 +51,8 @@ Pedidos > Pedidos de Compra
     Fechar com Sim
 
 Pedidos > Pedidos de Venda
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                      Pedidos de Venda
+    ${nome_print}=     Set Variable     Pedidos de Venda
+    [Tags]     Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Desktop.Press Keys    E
@@ -55,7 +62,8 @@ Pedidos > Pedidos de Venda
     Fechar com Sim
 
 Entradas/Compras > Incluir/Alterar
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/              Incluir_Alterar
+    ${nome_print}=     Set Variable     Incluir_Alterar
+    [Tags]     Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  I
@@ -65,7 +73,8 @@ Entradas/Compras > Incluir/Alterar
     Fechar com Sim
 
 Entradas/Compras > Consultar
-    [Teardown]              Caso aconteça erro                ${Caminho_Screenshots}Entradas_Compras/              Consultar
+    ${nome_print}=     Set Variable     Consultar
+    [Tags]     Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  C
@@ -75,7 +84,8 @@ Entradas/Compras > Consultar
     Fechar com Sim
 
 Saídas/Vendas > Incluir Saídas/Vendas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Alterar Saídas_Vendas
+    ${nome_print}=     Set Variable     Alterar Saídas_Vendas
+    [Tags]     Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    I
@@ -85,9 +95,9 @@ Saídas/Vendas > Incluir Saídas/Vendas
     Fechar janela
     RPA.Windows.Click         Sim
 
-
 Saídas/Vendas > Alterar Saídas/Vendas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Alterar Saídas_Vendas
+    ${nome_print}=     Set Variable     Alterar Saídas_Vendas
+    [Tags]     Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    A
@@ -99,7 +109,8 @@ Saídas/Vendas > Alterar Saídas/Vendas
     Fechar janela
 
 Saídas/Vendas > Consultar Saídas/Vendas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Saídas_Vendas/                         Consultar Saídas_Vendas
+    ${nome_print}=     Set Variable     Consultar Saídas_Vendas
+    [Tags]     Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    C
@@ -109,6 +120,3 @@ Saídas/Vendas > Consultar Saídas/Vendas
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Consulta (1)    ${Caminho_Screenshots}Saídas_Vendas/Consultar Saídas_Vendas
     RPA.Windows.Click       Cancelar
     Fechar janela
-
-
-    

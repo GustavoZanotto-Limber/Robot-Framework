@@ -60,7 +60,7 @@ Emissão de Carnês
     BaseDesktop.Screenshot  Impressão de Carnês (1)   ${Caminho_Screenshots}Emissão de Carnês
     Fechar janela
 
-Emissão de Etiquetas
+Mala Direta > Emissão de Etiquetas
     ${nome_print}=     Set Variable     Emissão de Etiquetas
     [Tags]     Clube    Manutenção   SmokeTest
     Manutenções

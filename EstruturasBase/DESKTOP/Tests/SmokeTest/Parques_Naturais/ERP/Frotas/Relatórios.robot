@@ -1,24 +1,28 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
 Resource          C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao  cde_win_frotas
+Suite Setup      Iniciar sessao  ${nome_exe}
+Suite Teardown   Encerrar Tudo
+Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Frotas/Relatórios/    
-
+${nome_print}
+${nome_exe}=    cde_win_frotas
 *** Keywords ***
 
 Relatórios
     [Arguments]    ${nome}
     Cadastros
-    repetidor de teclas    right    8
+    repetidor de teclas    right    9
     RPA.Windows.Click    ${nome}
 
 *** Test Cases ***
 
 CT-e > CT-e Emitidos
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}CT-e\        CT-e Emitidos
+    ${nome_print}=     Set Variable     CT-e Emitidos
+    [Tags]    Frotas   Relatórios   SmokeTest
     Relatórios              CT-e
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text   	Relatório de CT'es Emitidos (1) 
@@ -30,7 +34,8 @@ CT-e > CT-e Emitidos
     Fechar Janela
 
 CT-e > CT-e Inutilizados
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}CT-e\        CT-e Inutilizados
+    ${nome_print}=     Set Variable     CT-e Inutilizados
+    [Tags]    Frotas   Relatórios   SmokeTest
     Relatórios              CT-e
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Relatório de Conhecimento de Transporte Inutilizados (1) 
@@ -41,7 +46,8 @@ CT-e > CT-e Inutilizados
     Fechar Janela
 
 Jornada de Trabalho
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Jornada de Trabalho
+    ${nome_print}=     Set Variable     Jornada de Trabalho
+    [Tags]    Frotas   Relatórios   SmokeTest
     Relatórios              Jornada de Trabalho
     RPA.Windows.Get Text    Controle de Horário de Trabalho Externo (1) 
     RPA.Desktop.Press Keys  Shift    tab
@@ -52,7 +58,8 @@ Jornada de Trabalho
     RPA.Windows.Click       Fechar
 
 Viagens
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Viagens
+    ${nome_print}=     Set Variable     Viagens
+    [Tags]    Frotas   Relatórios   SmokeTest
     Relatórios              Viagens
     RPA.Windows.Get Text    Relatório de Viagens (1) 
     RPA.Desktop.Press Keys  0
@@ -62,8 +69,9 @@ Viagens
     Fechar Janela
 
 Ordem de Serviço
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Ordem de Serviço
-    Relatórios                  Ordem de Serviço
+    ${nome_print}=     Set Variable     Ordem de Serviço
+    [Tags]    Frotas   Relatórios   SmokeTest
+    Relatórios              Ordem de Serviço
     RPA.Windows.Get Text    Relatório de Ordens de Serviços (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
@@ -73,8 +81,9 @@ Ordem de Serviço
     Fechar Janela
 
 Check-list
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Check-list
-    Relatórios                  Check-list
+    ${nome_print}=     Set Variable     Check-list
+    [Tags]    Frotas   Relatórios   SmokeTest
+    Relatórios              Check-list
     RPA.Windows.Get Text    Relatório Checklist (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
@@ -82,10 +91,10 @@ Check-list
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
-
 Abastecimentos
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Abastecimentos
-    Relatórios                  Abastecimentos
+    ${nome_print}=     Set Variable     Abastecimentos
+    [Tags]    Frotas   Relatórios   SmokeTest
+    Relatórios              Abastecimentos
     RPA.Windows.Get Text    Relatório de Abastecimentos (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
@@ -94,7 +103,8 @@ Abastecimentos
     Fechar Janela
 
 Pneus > Pneus
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Pneus\     Pneus
+    ${nome_print}=     Set Variable     Pneus
+    [Tags]    Frotas   Relatórios   SmokeTest
     Relatórios              Pneus
     RPA.Desktop.Press Keys  P
     RPA.Windows.Get Text    Relatório de Pneus (1) 
@@ -105,7 +115,8 @@ Pneus > Pneus
     Fechar Janela
 
 Pneus > Estoque de Pneus
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Pneus\     Estoque de Pneus
+    ${nome_print}=     Set Variable     Estoque de Pneus
+    [Tags]    Frotas   Relatórios   SmokeTest
     Relatórios              Pneus
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Relatório de Estoque de Pneus (1) 
@@ -116,7 +127,8 @@ Pneus > Estoque de Pneus
     Fechar Janela
 
 Pneus > Histórico de Movimentações
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}Pneus\     Histórico de Movimentações
+    ${nome_print}=     Set Variable     Histórico de Movimentações
+    [Tags]    Frotas   Relatórios   SmokeTest
     Relatórios              Pneus
     RPA.Desktop.Press Keys  H
     RPA.Windows.Get Text    Histórico de Movimentações (1) 
@@ -128,8 +140,9 @@ Pneus > Histórico de Movimentações
     Fechar Janela
 
 Resumo Frotas
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Resumo Frotas
-    Relatórios                  Resumo Frotas
+    ${nome_print}=     Set Variable     Resumo Frotas
+    [Tags]    Frotas   Relatórios   SmokeTest
+    Relatórios              Resumo Frotas
     RPA.Windows.Get Text    Resumo de Frota (1) 
     repetidor de teclas     tab      1
     RPA.Desktop.Press Keys  0
@@ -139,8 +152,9 @@ Resumo Frotas
     Fechar Janela
 
 Relatório de Alertas
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Relatório de Alertas
-    Relatórios                  Relatório de Alertas
+    ${nome_print}=     Set Variable     Relatório de Alertas
+    [Tags]    Frotas   Relatórios   SmokeTest
+    Relatórios              Relatório de Alertas
     RPA.Windows.Get Text    Relatório De Alertas (1) 
     repetidor de teclas     tab      3
     RPA.Desktop.Press Keys  0
@@ -150,7 +164,8 @@ Relatório de Alertas
     Fechar Janela
 
 Fechamento de Viagem
-    [Teardown]              Caso aconteça erro                    ${Caminho_Screenshots}           Fechamento de Viagem
+    ${nome_print}=     Set Variable     Fechamento de Viagem
+    [Tags]    Frotas   Relatórios   SmokeTest
     Relatórios              Fechamento de Viagem
     RPA.Windows.Get Text    Relatório de Fechamento de Viagens (1) 
     RPA.Desktop.Press Keys  0
@@ -159,6 +174,3 @@ Fechamento de Viagem
     RPA.Windows.Click       Confirmar
     RPA.Windows.Click       OK
     Fechar Janela
-
-
-    
