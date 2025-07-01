@@ -14,7 +14,7 @@ ${nome_exe}=    cde_win_fin
 
 Contas a Receber
     Cadastros
-    repetidor de teclas    right    3
+    repetidor de teclas    right    4
     Sleep                  1s
 
 

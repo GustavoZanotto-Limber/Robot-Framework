@@ -15,7 +15,7 @@ ${nome_exe}=    cde_win_fin
 
 Relatórios/Consultas
     Cadastros
-    repetidor de teclas    right    7
+    repetidor de teclas    right    8
     Sleep                  1s
 
 *** Test Cases ***

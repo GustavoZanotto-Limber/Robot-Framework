@@ -15,7 +15,7 @@ ${nome_exe}=    cde_win_fin
 
 Contas a Pagar
     Cadastros
-    repetidor de teclas    right    1
+    repetidor de teclas    right    2
 
 
 *** Test Cases ***

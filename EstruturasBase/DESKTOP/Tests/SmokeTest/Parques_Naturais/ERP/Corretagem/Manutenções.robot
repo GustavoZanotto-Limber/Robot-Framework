@@ -15,7 +15,7 @@ ${nome_exe}=    cde_win_crt
 
 Manutenções
     Cadastros 
-    repetidor de teclas    right    1
+    repetidor de teclas    right    2
 
 *** Test Cases ***
 
@@ -89,6 +89,7 @@ Saídas/Vendas > Incluir Saídas/Vendas
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    I
+    Sleep                     2s
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Com Fechamento (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
@@ -101,9 +102,10 @@ Saídas/Vendas > Alterar Saídas/Vendas
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    A
+    Sleep                     2s
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)
-    RPA.Desktop.Press Keys  0
-    RPA.Desktop.Press Keys  Enter 
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter 
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
     RPA.Windows.Click       Cancelar
     Fechar janela
@@ -114,6 +116,7 @@ Saídas/Vendas > Consultar Saídas/Vendas
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    C
+    Sleep                     2s
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Consulta (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 

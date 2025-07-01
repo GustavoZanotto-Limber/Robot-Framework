@@ -23,7 +23,8 @@ Movimentos
 *** Test Cases ***
 
 Liberações > Lançamentos de Entrada
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Liberações/                         Lançamentos de Entrada
+    ${nome_print}=     Set Variable     Lançamentos de Entrada
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Liberações
     RPA.Desktop.Press Keys    L  
     RPA.Windows.Get Text      Liberação de Lançamentos Fiscais de Entrada (1)
@@ -35,7 +36,8 @@ Liberações > Lançamentos de Entrada
     Fechar janela
 
 Liberações > Lançamentos de Saída
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Liberações/                         Lançamentos de Saída
+    ${nome_print}=     Set Variable     Lançamentos de Saída
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Liberações
     RPA.Desktop.Press Keys    A  
     RPA.Windows.Get Text      Liberação de Lançamentos Fiscais de Saídas (1)
@@ -47,7 +49,8 @@ Liberações > Lançamentos de Saída
     Fechar janela
 
 Estornar Liberações > Lançamentos de Entrada
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Estornar Liberações/                         Lançamentos de Entrada
+    ${nome_print}=     Set Variable     Lançamentos de Entrada
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Estornar Liberações
     RPA.Desktop.Press Keys    L  
     RPA.Windows.Get Text      Estorno de Liberação de Lançamentos Fiscais de Entrada (1)
@@ -59,7 +62,8 @@ Estornar Liberações > Lançamentos de Entrada
     Fechar janela
 
 Estornar Liberações > Lançamentos de Saída
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Estornar Liberações/                         Lançamentos de Saída
+    ${nome_print}=     Set Variable     Lançamentos de Saída
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Estornar Liberações
     RPA.Desktop.Press Keys    A  
     RPA.Windows.Get Text      Estorno de Liberação de Lançamentos Fiscais de Saídas (1)
@@ -71,7 +75,8 @@ Estornar Liberações > Lançamentos de Saída
     Fechar janela
 
 Informações > Complementares de ICMS
-    [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}Informações/                         Complementares de ICMS
+    ${nome_print}=     Set Variable     Complementares de ICMS
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos              Informações
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Informações Complementares ICMS (1)
@@ -80,9 +85,9 @@ Informações > Complementares de ICMS
     BaseDesktop.Screenshot  Informações Complementares ICMS (1)    ${Caminho_Screenshots}Informações/Complementares de ICMS
     Fechar janela
 
-
 Informações > Obrigações do ICMS a recolher
-    [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}Informações/                         Obrigações do ICMS a recolher
+    ${nome_print}=     Set Variable     Obrigações do ICMS a recolher
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos              Informações
     RPA.Desktop.Press Keys  O  
     RPA.Windows.Get Text    Obrigações do ICMS a Recolher (1)
@@ -91,7 +96,8 @@ Informações > Obrigações do ICMS a recolher
     Fechar com Sim
 
 Informações > Obrigações do PIS/Cofins a recolher
-    [Teardown]              Caso aconteça erro           ${Caminho_Screenshots}Informações/                         Obrigações do PIS_Cofins a recolher
+    ${nome_print}=     Set Variable     Obrigações do PIS_Cofins a recolher
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos              Informações
     RPA.Desktop.Press Keys  B  
     RPA.Windows.Get Text    Obrigações do PIS/COFINS a Recolher (1)
@@ -100,7 +106,8 @@ Informações > Obrigações do PIS/Cofins a recolher
     Fechar com Sim
 
 Outros > ICMS > Outros Débitos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/ICMS/                         Outros Débitos
+    ${nome_print}=     Set Variable     Outros Débitos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Desktop.Press Keys    O  
@@ -111,7 +118,8 @@ Outros > ICMS > Outros Débitos
     RPA.Windows.Click         Sim
 
 Outros > ICMS > Estorno de Créditos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/ICMS/                         Estorno de Créditos
+    ${nome_print}=     Set Variable     Estorno de Créditos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Desktop.Press Keys    E  
@@ -122,7 +130,8 @@ Outros > ICMS > Estorno de Créditos
     RPA.Windows.Click         Sim
 
 Outros > ICMS > Outros Créditos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/ICMS/                         Outros Créditos
+    ${nome_print}=     Set Variable     Outros Créditos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Desktop.Press Keys    U  
@@ -133,7 +142,8 @@ Outros > ICMS > Outros Créditos
     RPA.Windows.Click         Sim
 
 Outros > ICMS > Estorno de Débitos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/ICMS/                         Estorno de Débitos
+    ${nome_print}=     Set Variable     Estorno de Débitos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Desktop.Press Keys    S  
@@ -144,7 +154,8 @@ Outros > ICMS > Estorno de Débitos
     RPA.Windows.Click         Sim
 
 Outros > ICMS > Específicos > SC
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/ICMS/Específicos/            SC
+    ${nome_print}=     Set Variable     SC
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Windows.Click         Específicos
@@ -156,7 +167,8 @@ Outros > ICMS > Específicos > SC
     RPA.Windows.Click         Sim
 
 Outros > ICMS > Específicos > Apuração de Crédito de ICMS - TTD
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/ICMS/Específicos/            Apuração de Crédito de ICMS - TTD
+    ${nome_print}=     Set Variable     Apuração de Crédito de ICMS - TTD
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Windows.Click         Específicos
@@ -168,7 +180,8 @@ Outros > ICMS > Específicos > Apuração de Crédito de ICMS - TTD
     Fechar janela
 
 Outros > ICMS > Deduções
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/ICMS/                         Deduções
+    ${nome_print}=     Set Variable     Deduções
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Desktop.Press Keys    D  
@@ -179,7 +192,8 @@ Outros > ICMS > Deduções
     RPA.Windows.Click         Sim
 
 Outros > IPI > Outros Débitos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/IPI/                         Outros Débitos
+    ${nome_print}=     Set Variable     Outros Débitos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         IPI
     RPA.Desktop.Press Keys    O  
@@ -190,7 +204,8 @@ Outros > IPI > Outros Débitos
     RPA.Windows.Click         Sim
 
 Outros > IPI > Estorno de Créditos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/IPI/                         Estorno de Créditos
+    ${nome_print}=     Set Variable     Estorno de Créditos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         IPI
     RPA.Desktop.Press Keys    E  
@@ -201,7 +216,8 @@ Outros > IPI > Estorno de Créditos
     RPA.Windows.Click         Sim
 
 Outros > IPI > Outros Créditos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/IPI/                         Outros Créditos
+    ${nome_print}=     Set Variable     Outros Créditos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         IPI
     RPA.Desktop.Press Keys    U  
@@ -212,7 +228,8 @@ Outros > IPI > Outros Créditos
     RPA.Windows.Click         Sim
 
 Outros > IPI > Estorno de Débitos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/IPI/                         Estorno de Débitos
+    ${nome_print}=     Set Variable     Estorno de Débitos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         IPI
     RPA.Desktop.Press Keys    S  
@@ -223,7 +240,8 @@ Outros > IPI > Estorno de Débitos
     RPA.Windows.Click         Sim
 
 Outros > Outras Bases > PIS > Outras Receitas - PIS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/PIS/                         Outras Receitas - PIS
+    ${nome_print}=     Set Variable     Outras Receitas - PIS
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         PIS
@@ -236,7 +254,8 @@ Outros > Outras Bases > PIS > Outras Receitas - PIS
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > PIS > Deduções - PIS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/PIS/                         Deduções - PIS
+    ${nome_print}=     Set Variable     Deduções - PIS
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         PIS
@@ -249,7 +268,8 @@ Outros > Outras Bases > PIS > Deduções - PIS
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > PIS > Compensações - PIS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/PIS/                         Compensações - PIS
+    ${nome_print}=     Set Variable     Compensações - PIS
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         PIS
@@ -262,7 +282,8 @@ Outros > Outras Bases > PIS > Compensações - PIS
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > COFINS > Outras Receitas - COFINS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/COFINS/                         Outras Receitas - COFINS
+    ${nome_print}=     Set Variable     Outras Receitas - COFINS
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Desktop.Press Keys    C
@@ -275,7 +296,8 @@ Outros > Outras Bases > COFINS > Outras Receitas - COFINS
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > COFINS > Deduções - COFINS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/COFINS/                         Deduções - COFINS
+    ${nome_print}=     Set Variable     Deduções - COFINS
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Desktop.Press Keys    C
@@ -288,7 +310,8 @@ Outros > Outras Bases > COFINS > Deduções - COFINS
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > COFINS > Compensações - COFINS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/COFINS/                         Compensações - COFINS
+    ${nome_print}=     Set Variable     Compensações - COFINS
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Desktop.Press Keys    C
@@ -301,7 +324,8 @@ Outros > Outras Bases > COFINS > Compensações - COFINS
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > CS > Outras Receitas - CS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/CS/                         Outras Receitas - CS
+    ${nome_print}=     Set Variable     Outras Receitas - CS
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         CS
@@ -314,7 +338,8 @@ Outros > Outras Bases > CS > Outras Receitas - CS
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > CS > Deduções - CS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/CS/                         Deduções - CS
+    ${nome_print}=     Set Variable     Deduções - CS
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         CS
@@ -327,7 +352,8 @@ Outros > Outras Bases > CS > Deduções - CS
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > CS > Compensações - CS
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/CS/                         Compensações - CS
+    ${nome_print}=     Set Variable     Compensações - CS
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         CS
@@ -340,7 +366,8 @@ Outros > Outras Bases > CS > Compensações - CS
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > IRPJ > Demais Resultados - IRPJ
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/IRPJ/                         Demais Resultados - IRPJ
+    ${nome_print}=     Set Variable     Demais Resultados - IRPJ
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         IRPJ
@@ -353,7 +380,8 @@ Outros > Outras Bases > IRPJ > Demais Resultados - IRPJ
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > IRPJ > Deduções - IRPJ
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/IRPJ/                         Deduções - IRPJ
+    ${nome_print}=     Set Variable     Deduções - IRPJ
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         IRPJ
@@ -366,7 +394,8 @@ Outros > Outras Bases > IRPJ > Deduções - IRPJ
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > IRPJ > Compensações - IRPJ
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/IRPJ/                         Compensações - IRPJ
+    ${nome_print}=     Set Variable     Compensações - IRPJ
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         IRPJ
@@ -379,7 +408,8 @@ Outros > Outras Bases > IRPJ > Compensações - IRPJ
     RPA.Windows.Click         OK
 
 Outros > Outras Bases > IRPJ > Outras Deduções do IRF p/ IRPJ - IRPJ
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Outras Bases/IRPJ/                         Outras Deduções do IRF p_ IRPJ - IRPJ
+    ${nome_print}=     Set Variable     Outras Deduções do IRF p_ IRPJ - IRPJ
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         IRPJ
@@ -392,7 +422,8 @@ Outros > Outras Bases > IRPJ > Outras Deduções do IRF p/ IRPJ - IRPJ
     RPA.Windows.Click         OK
 
 Outros > PIS/COFINS > Lançamentos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/PIS_COFINS/                         Lançamentos
+    ${nome_print}=     Set Variable     Lançamentos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Desktop.Press Keys    L
@@ -403,7 +434,8 @@ Outros > PIS/COFINS > Lançamentos
     RPA.Windows.Click         Sim
 
 Outros > PIS/COFINS > Informações > Ajustes Bebidas
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/PIS_COFINS/Informações/        Ajustes Bebidas
+    ${nome_print}=     Set Variable     Ajustes Bebidas
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Windows.Click         Informações
@@ -415,7 +447,8 @@ Outros > PIS/COFINS > Informações > Ajustes Bebidas
     RPA.Windows.Click         Sim    
 
 Outros > PIS/COFINS > Informações > Créditos Não Cumulativos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/PIS_COFINS/Informações/        Créditos Não Cumulativos
+    ${nome_print}=     Set Variable     Créditos Não Cumulativos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Windows.Click         Informações
@@ -427,7 +460,8 @@ Outros > PIS/COFINS > Informações > Créditos Não Cumulativos
     RPA.Windows.Click         Sim
 
 Outros > PIS/COFINS > Lançamento de Crédito do Pis/Cofins
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/PIS_COFINS/                         Lançamento de Crédito do Pis_Cofins
+    ${nome_print}=     Set Variable     Lançamento de Crédito do Pis_Cofins
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Desktop.Press Keys    A
@@ -438,7 +472,8 @@ Outros > PIS/COFINS > Lançamento de Crédito do Pis/Cofins
     RPA.Windows.Click         Sim
 
 Outros > PIS/COFINS > Utilização de Crédito de Pis/Cofins
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/PIS_COFINS/                         Utilização de Crédito de Pis_Cofins
+    ${nome_print}=     Set Variable     Utilização de Crédito de Pis_Cofins
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Desktop.Press Keys    U
@@ -449,7 +484,8 @@ Outros > PIS/COFINS > Utilização de Crédito de Pis/Cofins
     RPA.Windows.Click         Sim
 
 Outros > PIS/COFINS > Gerar Lançamentos Automáticos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/PIS_COFINS/                         Gerar Lançamentos Automáticos
+    ${nome_print}=     Set Variable     Gerar Lançamentos Automáticos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Desktop.Press Keys    G
@@ -461,7 +497,8 @@ Outros > PIS/COFINS > Gerar Lançamentos Automáticos
     Fechar janela
 
 Outros > PIS/COFINS > Estornar Lançamentos Automáticos
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/PIS_COFINS/                         Estornar Lançamentos Automáticos
+    ${nome_print}=     Set Variable     Estornar Lançamentos Automáticos
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Desktop.Press Keys    E
@@ -474,7 +511,8 @@ Outros > PIS/COFINS > Estornar Lançamentos Automáticos
     Fechar janela
 
 Outros > Exportações > Exportações
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Exportações/                         Exportações
+    ${nome_print}=     Set Variable     Exportações
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Exportações
     RPA.Desktop.Press Keys    E
@@ -485,7 +523,8 @@ Outros > Exportações > Exportações
     RPA.Windows.Click         Sim
 
 Outros > Exportações > Saldo de NF's p/ Exportação
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Exportações/                         Saldo de NF's p/ Exportação
+    ${nome_print}=     Set Variable     Saldo de NF's p/ Exportação
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Exportações
     RPA.Desktop.Press Keys    S
@@ -497,7 +536,8 @@ Outros > Exportações > Saldo de NF's p/ Exportação
     Fechar janela
 
 Outros > Exportações > PH > S-1250
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Outros/Exportações/PH/                        S-1250
+    ${nome_print}=     Set Variable     S-1250
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Exportações
     RPA.Windows.Click         PH
@@ -506,12 +546,13 @@ Outros > Exportações > PH > S-1250
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    S-1250 (1)          ${Caminho_Screenshots}Outros/Exportações/PS/S-1250
+    BaseDesktop.Screenshot    S-1250 (1)          ${Caminho_Screenshots}Outros/Exportações/PH/S-1250
     RPA.Windows.Click         Confirmar
     Fechar janela
 
 Alterar Lcto Entrada
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Alterar Lcto Entrada
+    ${nome_print}=     Set Variable     Alterar Lcto Entrada
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Alterar Lcto Entrada
     RPA.Windows.Get Text      Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click         Novo
@@ -519,7 +560,8 @@ Alterar Lcto Entrada
     Fechar janela
 
 Alterar Lcto Saída
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Alterar Lcto Saída
+    ${nome_print}=     Set Variable     Alterar Lcto Saída
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Alterar Lcto Saída
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)
     RPA.Desktop.Press Keys    0
@@ -529,13 +571,11 @@ Alterar Lcto Saída
     Fechar janela
 
 Processos Personalizados
-    [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}                        Processos Personalizados
+    ${nome_print}=     Set Variable     Processos Personalizados
+    [Tags]    Fiscal   Movimentos   SmokeTest
     Movimentos                Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
     RPA.Windows.Click         Cadastrar Novo Processo
     BaseDesktop.Screenshot    Processos Personalizados (1)         ${Caminho_Screenshots}Processos Personalizados
     RPA.Windows.Click         Sair
     Fechar janela
-
-
-    

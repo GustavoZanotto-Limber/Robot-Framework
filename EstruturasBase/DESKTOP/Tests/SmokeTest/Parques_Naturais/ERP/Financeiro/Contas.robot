@@ -14,7 +14,7 @@ ${nome_exe}=    cde_win_fin
 
 Contas
     Cadastros
-    repetidor de teclas    right    5
+    repetidor de teclas    right    6
     Sleep      1s
 
 *** Test Cases ***

@@ -15,7 +15,7 @@ ${nome_exe}=    cde_win_ven
 
 Utilitários
     Cadastros
-    repetidor de teclas    Right    8
+    repetidor de teclas    Right    9
 
 *** Test Cases ***
 

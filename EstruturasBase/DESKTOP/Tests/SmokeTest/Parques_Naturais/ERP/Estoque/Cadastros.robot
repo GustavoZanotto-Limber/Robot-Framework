@@ -190,7 +190,7 @@ Tipo de Teste Lotes
     ${nome_print}=     Set Variable     Tipo De Teste Lotes
     [Tags]     Estoque    Cadastros   SmokeTest
     Cadastros
-    repetidor de teclas     down    9
+    repetidor de teclas     down    8
     RPA.Desktop.Press Keys  ENTER
     RPA.Windows.Get Text    Cadastro de Tipos de Testes para Lotes (1)
     RPA.Windows.Click         Novo
@@ -297,9 +297,9 @@ Fiscais > Classificações de Serviços Prestado - REINF
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    L
-    RPA.Windows.Get Text      Classificações de Serviços Prestado - REINF (1)
+    RPA.Windows.Get Text      Classificações de Serviços Prestados - REINF (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Classificações de Serviços Prestado - REINF (1)    ${Caminho_Screenshots}Fiscais/Classificações de Serviços Prestado - REINF
+    BaseDesktop.Screenshot    Classificações de Serviços Prestados - REINF (1)    ${Caminho_Screenshots}Fiscais/Classificações de Serviços Prestado - REINF
     Fechar janela
     RPA.Windows.Click         Sim
 

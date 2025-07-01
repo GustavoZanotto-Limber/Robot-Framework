@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Smoke Test: Frotas
+Documentation    Smoke Test: Vendedor
 Resource          C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
@@ -22,7 +22,7 @@ Utilitários
 
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Vendedor   Utilitários   SmokeTest
     Utilitários             Favoritos       
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
@@ -32,7 +32,7 @@ Favoritos
     
 Papel de Parede
     ${nome_print}=     Set Variable     Papel de Parede
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Vendedor   Utilitários   SmokeTest
     Utilitários             Papel de Parede     
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
@@ -41,7 +41,7 @@ Papel de Parede
 
 Estilo do Menu Principal
     ${nome_print}=     Set Variable     Estilo do Menu Principal
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Vendedor   Utilitários   SmokeTest
     Utilitários             Estilo do Menu Principal       
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
     RPA.Windows.Click       Standard
@@ -50,7 +50,7 @@ Estilo do Menu Principal
 
 Controle de Acessos
     ${nome_print}=     Set Variable     Controle de Acessos
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Vendedor   Utilitários   SmokeTest
     Utilitários             Controle de Acessos   
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
     RPA.Windows.Click       Confirmar
@@ -60,7 +60,7 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Vendedor   Utilitários   SmokeTest
     Utilitários             Configuração de Liberação   
     RPA.Windows.Get Text    Configurações de Liberação (1)
     RPA.Desktop.Press Keys  0
@@ -71,7 +71,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Vendedor   Utilitários   SmokeTest
     Utilitários             Relatórios Personalizados      
     RPA.Desktop.Press Keys  c
     RPA.Windows.Get Text    Cadastro de Categoria (1)
@@ -83,7 +83,7 @@ Relatórios Personalizados > Cadastro de Categorias
     
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Vendedor   Utilitários   SmokeTest
     Utilitários             Relatórios Personalizados      
     RPA.Desktop.Press Keys  a
     RPA.Desktop.Press Keys  0
@@ -95,7 +95,7 @@ Relatórios Personalizados > Cadastro de Relatórios
 
 Criar Usuario de Log
     ${nome_print}=     Set Variable     Criar Usuario de Log
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Vendedor   Utilitários   SmokeTest
     Utilitários             Criar Usuário de Log 
     RPA.Windows.Get Text    Cadastro Usuario de Log (1)
     BaseDesktop.Screenshot  Cadastro Usuario de Log (1)    ${Caminho_Screenshots}Criar Usuario de Log
@@ -103,7 +103,7 @@ Criar Usuario de Log
 
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Vendedor   Utilitários   SmokeTest
     Utilitários             Verifica transações abertas  
     RPA.Windows.Get Text    Verifica transações abertas (1)
     RPA.Windows.Click      Carregar

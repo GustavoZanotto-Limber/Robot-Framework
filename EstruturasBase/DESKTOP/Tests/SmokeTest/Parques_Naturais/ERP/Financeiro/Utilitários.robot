@@ -13,7 +13,7 @@ ${nome_exe}=    cde_win_fin
 
 Utilitários
     Cadastros
-    repetidor de teclas    right    12
+    repetidor de teclas    right    13
 
 *** Test Cases    ***
 

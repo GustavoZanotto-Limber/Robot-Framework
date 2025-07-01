@@ -16,7 +16,7 @@ ${nome_exe}=    cde_win_ven
 
 Manutenções
     Cadastros
-    Repetidor de Teclas     Right    1
+    Repetidor de Teclas     Right    2
 
 *** Test Cases ***
 

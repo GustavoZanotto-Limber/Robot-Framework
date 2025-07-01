@@ -181,9 +181,8 @@ Integrações > Vincular Valores MDF-e
     ${nome_print}=     Set Variable     Vincular Valores MDF-e
     [Tags]    Frotas   Utilitários   SmokeTest
     Utilitários com tecla   T 
-    RPA.Windows.Click       Sênior
     RPA.Desktop.Press Keys  V
-    RPA.Windows.Get Text    Vincular Valores Viagens - MDFe (1)
+    RPA.Windows.Get Text   	Vincular Valores Viagens - MDFe (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Vincular Valores Viagens - MDFe (1)    ${Caminho_Screenshots}Integrações/Vincular Valores MDF-e
     Fechar com Sim

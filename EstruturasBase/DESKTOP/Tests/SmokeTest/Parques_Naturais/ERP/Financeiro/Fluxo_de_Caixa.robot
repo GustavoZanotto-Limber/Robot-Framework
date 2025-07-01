@@ -14,7 +14,7 @@ ${nome_exe}=    cde_win_fin
 
 Fluxo de Caixa
     Cadastros
-    repetidor de teclas    right    10
+    repetidor de teclas    right    11
 
 *** Test Cases ***
 

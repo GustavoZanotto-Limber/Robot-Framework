@@ -14,7 +14,7 @@ ${nome_exe}=    cde_win_fin
 
 Limite de Crédito
     Cadastros
-    repetidor de teclas    right    6
+    repetidor de teclas    right    7
     Sleep                  1s
 
 *** Test Cases ***
