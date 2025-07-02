@@ -14,7 +14,7 @@ ${nome_exe}=    cde_win_fin
 
 Orçamentos
     Cadastros
-    repetidor de teclas    right    9
+    repetidor de teclas    right    10
 
 *** Test Cases ***
 

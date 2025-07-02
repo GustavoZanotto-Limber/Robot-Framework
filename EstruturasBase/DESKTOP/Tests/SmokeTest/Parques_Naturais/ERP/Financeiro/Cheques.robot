@@ -16,7 +16,7 @@ ${nome_exe}=    cde_win_fin
 
 Cheques
     Cadastros
-    repetidor de teclas    right    11
+    repetidor de teclas    right    12
 
 *** Test Cases ***
 

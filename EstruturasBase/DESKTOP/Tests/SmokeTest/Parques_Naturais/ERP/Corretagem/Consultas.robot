@@ -15,7 +15,7 @@ ${nome_exe}=    cde_win_crt
 
 Consultas
     Cadastros 
-    repetidor de teclas    right    2
+    repetidor de teclas    right    3
 
 *** Test Cases ***
 

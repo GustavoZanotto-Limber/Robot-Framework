@@ -15,7 +15,7 @@ ${nome_exe}=    cde_win_fin
 
 Cobrança Bancária
     Cadastros
-    repetidor de teclas    right    8
+    repetidor de teclas    right    9
 
 *** Test Cases ***
 

@@ -14,7 +14,7 @@ ${nome_exe}=    cde_win_ven
 
 Consultas
     Cadastros
-    Repetidor de Teclas     Right    3
+    Repetidor de Teclas     Right    4
 
 *** Test Cases ***
 

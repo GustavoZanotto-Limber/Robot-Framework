@@ -27,6 +27,7 @@ Mensalidades Pendentes/Pagas
     RPA.Windows.Get Text    Consulta do Contas a Receber (1)
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Consulta do Contas a Receber (1)   ${Caminho_Screenshots}Mensalidades Pendentes_Pagas
+    RPA.Windows.Click       Sim
     Fechar janela
     RPA.Windows.Click       OK
 

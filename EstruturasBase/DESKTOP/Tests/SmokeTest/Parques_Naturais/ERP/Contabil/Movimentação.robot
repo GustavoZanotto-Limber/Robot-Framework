@@ -104,20 +104,18 @@ Zeramento de Contas > Parâmetros Zeramento
     Movimentação
     RPA.Windows.Click         Zeramento de Contas
     RPA.Desktop.Press Keys    P
-    RPA.Windows.Get Text      Parâmetros Zeramento (1) 
+    RPA.Windows.Get Text      Parâmetros de Zeramento (1) 
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Parâmetros Zeramento (1)      ${Caminho_Screenshots}Zeramento de Contas/Parâmetros Zeramento
+    BaseDesktop.Screenshot    Parâmetros de Zeramento (1)      ${Caminho_Screenshots}Zeramento de Contas/Parâmetros Zeramento
     RPA.Windows.Click         Confirmar
-    RPA.Windows.Click         Sim
     RPA.Windows.Click         Fechar
-    RPA.Windows.Click         Sim
 
 Conciliação de Cheques Emitidos
     ${nome_print}=     Set Variable     Conciliação de Cheques Emitidos
     [Tags]     Contábil    Movimentação   SmokeTest
     Movimentação
-    repetidor de teclas   Down       7
+    repetidor de teclas   Down       6
     RPA.Desktop.Press Keys    Enter
     RPA.Windows.Get Text      Conciliação de Cheques Emitidos 
     RPA.Windows.Click         Executar
@@ -129,7 +127,7 @@ Estorna Conciliação
     ${nome_print}=     Set Variable     Estorna Conciliação
     [Tags]     Contábil    Movimentação   SmokeTest
     Movimentação
-    repetidor de teclas   Down       8
+    repetidor de teclas   Down       7
     RPA.Desktop.Press Keys    Enter
     RPA.Windows.Get Text      Estorna Conciliação de Lançamentos Bancários (1) 
     RPA.Windows.Click         Executar
@@ -350,7 +348,7 @@ CMV > Cálculo_Geração do CMV
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Cálculo/Geração do CMV (1)      ${Caminho_Screenshots}CMV/Cálculo_Geração do CMV
     RPA.Windows.Click         OK
-    Fechar janela
+    Fechar com OK
 
 CMV > Preço de Mercado
     ${nome_print}=     Set Variable     Preço de Mercado
