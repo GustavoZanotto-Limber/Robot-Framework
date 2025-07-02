@@ -135,3 +135,76 @@ Sped Contábil > Gerar Sped Contábil
     RPA.Windows.Get Text      SPED Contábil (1) 
     RPA.Windows.Click         Registro 0007
     BaseDesktop.Screenshot    SPED Contábil (1)     ${Caminho_Screenshots}Sped Contábil/Gerar Sped Contábil
+    Fechar janela
+
+Sped Contábil > Conglomerados Econômicos
+    ${nome_print}=     Set Variable     Conglomerados Econômicos
+    [Tags]     Contábil    Consultas   SmokeTest
+    Consultas
+    RPA.Windows.Click         Sped Contábil
+    RPA.Desktop.Press Keys    C
+    RPA.Windows.Get Text      Cadastro de Conglomerados Econômicos (1)
+    RPA.Windows.Click         Novo
+    BaseDesktop.Screenshot    Cadastro de Conglomerados Econômicos (1)     ${Caminho_Screenshots}Sped Contábil/Conglomerados Econômicos
+    Fechar janela
+    RPA.Windows.Click         Sim
+
+Sped Contábil > Conglomerados Eliminações
+    ${nome_print}=     Set Variable     Conglomerados Eliminações
+    [Tags]     Contábil    Consultas   SmokeTest
+    Consultas
+    RPA.Windows.Click         Sped Contábil
+    RPA.Desktop.Press Keys    O
+    RPA.Windows.Get Text      Eliminações de Conglomerados (1) 
+    RPA.Windows.Click         Novo
+    BaseDesktop.Screenshot    Eliminações de Conglomerados (1)     ${Caminho_Screenshots}Sped Contábil/Conglomerados Eliminações
+    RPA.Windows.Click         Cancelar
+    Fechar janela
+
+Sped Contábil > Cadastro de SCP
+    ${nome_print}=     Set Variable     Cadastro de SCP
+    [Tags]     Contábil    Consultas   SmokeTest
+    Consultas
+    RPA.Windows.Click         Sped Contábil
+    RPA.Desktop.Press Keys    A
+    RPA.Windows.Get Text      Cadastro de SCP para Sped Contábil (1) 
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    BaseDesktop.Screenshot    Cadastro de SCP para Sped Contábil (1)     ${Caminho_Screenshots}Sped Contábil/Cadastro de SCP
+    RPA.Windows.Click         Confirmar
+    RPA.Windows.Click        Fechar
+
+Sped Contábil > Transferência de Plano de Contas
+    ${nome_print}=     Set Variable     Transferência de Plano de Contas
+    [Tags]     Contábil    Consultas   SmokeTest
+    Consultas
+    RPA.Windows.Click         Sped Contábil
+    RPA.Desktop.Press Keys    T
+    RPA.Windows.Get Text      Transferência de Plano de Contas (1)
+    RPA.Desktop.Press Keys  Enter
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    BaseDesktop.Screenshot    Transferência de Plano de Contas (1)     ${Caminho_Screenshots}Sped Contábil/Transferência de Plano de Contas
+    RPA.Windows.Click         Confirmar
+    Fechar janela
+
+Consulta CMV por período
+    ${nome_print}=     Set Variable     Consulta CMV por período
+    [Tags]     Contábil    Consultas   SmokeTest
+    Consultas
+    RPA.Windows.Click         Consulta CMV por período
+    RPA.Windows.Get Text      Consulta CMV por período (1) 
+    RPA.Windows.Click         Carregar
+    BaseDesktop.Screenshot    Consulta CMV por período (1)     ${Caminho_Screenshots}Consulta CMV por período
+    RPA.Windows.Click         OK
+    Fechar janela
+
+Consulta de Alterações de Lançamentos
+    ${nome_print}=     Set Variable     Consulta de Alterações de Lançamentos
+    [Tags]     Contábil    Consultas   SmokeTest
+    Consultas
+    RPA.Windows.Click         Consulta de Alterações de Lançamentos
+    RPA.Windows.Get Text      Consulta Log de Lançamentos Contábeis (1) 
+    RPA.Windows.Click         Carregar
+    BaseDesktop.Screenshot    Consulta Log de Lançamentos Contábeis (1)     ${Caminho_Screenshots}Consulta de Alterações de Lançamentos
+    Fechar janela

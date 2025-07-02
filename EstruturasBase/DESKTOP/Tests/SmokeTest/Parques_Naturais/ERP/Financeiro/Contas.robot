@@ -304,6 +304,20 @@ Geração de Receitas Mapa Resumo > Fechamento de Caixas
     BaseDesktop.Screenshot    Fechamento de Caixas (1)    ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Fechamento de Caixas
     Fechar janela
 
+Geração de Receitas Mapa Resumo > Configuração de Centros de Custos por PDV
+    ${nome_print}=     Set Variable     Configuração de Centros de Custos por PDV
+    [Tags]     Financeiro    Contas   SmokeTest      
+    Contas
+    RPA.Windows.Click         Geração de Receitas Mapa Resumo
+    RPA.Desktop.Press Keys    o
+    RPA.Windows.Get Text      Configuração de Centro de Custos por PDV (1)
+    repetidor de teclas       tab      3
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    BaseDesktop.Screenshot    Configuração de Centro de Custos por PDV (1)    ${Caminho_Screenshots}Geração de Receitas Mapa Resumo/Configuração de Centros de Custos por PDV
+    RPA.Windows.Click         Confirmar
+    Fechar janela
+
 Zeramento de Cartões Crédito Interno
     ${nome_print}=     Set Variable     Zeramento de Cartões Crédito Interno
     [Tags]     Financeiro    Contas   SmokeTest

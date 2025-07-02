@@ -13,6 +13,7 @@ Library    Process
 ${front}
 ${nome_exe}
 ${achou}
+${Erro}
 
 *** Keywords ***
 #As keywords e a setting funcionam basicamente de forma igual tanto no web quanto no desktop
@@ -51,9 +52,8 @@ Fechar com OK
 Iniciar sessao        
     [Arguments]    ${nome_exe} 
     # Carregar os elementos do app
-    Sleep                           1s
     RPA.Desktop.Open Application    C:\\Limber\\ERP Executaveis\\${nome_exe}.exe
-    Sleep                           4s 
+    Sleep                           2s 
     RPA.Windows.Click               Abrir
     Sleep                           2s
     RPA.Desktop.Press keys                      enter
@@ -61,6 +61,7 @@ Iniciar sessao
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
+    Sleep                           1s
 
 
     

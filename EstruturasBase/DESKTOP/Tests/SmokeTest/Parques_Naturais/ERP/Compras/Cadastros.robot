@@ -1004,3 +1004,14 @@ Parâmetros > Configuração para Entrada de CT-e
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Configurações para Entrada de CT-e (1)    ${Caminho_Screenshots}Parâmetros/Configuração para Entrada de CT-e
     Fechar janela
+
+Parâmetros > Tópicos de Avaliação de fornecedor
+    ${nome_print}=     Set Variable     Tópicos de Avaliação de fornecedor
+    [Tags]     Compras    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Parâmetros
+    RPA.Desktop.Press Keys    T
+    RPA.Windows.Get Text      Tópicos de Avaliação de Fornecedor (1)
+    RPA.Windows.Click         Novo
+    BaseDesktop.Screenshot    Tópicos de Avaliação de Fornecedor (1)    ${Caminho_Screenshots}Parâmetros/Tópicos de Avaliação de fornecedor
+    Fechar com Sim

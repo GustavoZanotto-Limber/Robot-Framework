@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "tumit.vscode-rf-formatter"
+        "tumit.vscode-rf-formatter",
+        "robocorp.robotframework-lsp"
     ]
 }

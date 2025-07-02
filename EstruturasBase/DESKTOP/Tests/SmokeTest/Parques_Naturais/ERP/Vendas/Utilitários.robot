@@ -475,3 +475,16 @@ Configuração de Certificado Digital
     BaseDesktop.Screenshot    Configuração de Certificado (1)    ${Caminho_Screenshots}Configuração de Certificado Digital
     RPA.Windows.Click         Confirmar
     Fechar janela
+
+Reprocessamento de disponibilidade de itens
+    ${nome_print}=     Set Variable     Reprocessamento de disponibilidade de itens
+    [Tags]     Estoque    Utilitários   SmokeTest    
+    Utilitários
+    RPA.Windows.Click       Reprocessamento de disponibilidade de itens
+    RPA.Windows.Get Text    Reprocessamento de Itens (1)
+    repetidor de teclas     tab      1
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    BaseDesktop.Screenshot  Reprocessamento de Itens (1)    ${Caminho_Screenshots}Reprocessamento de disponibilidade de itens
+    RPA.Windows.Click       Confirmar
+    RPA.Windows.Click       Fechar

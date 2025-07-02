@@ -160,6 +160,16 @@ Registro Magnético
     RPA.Windows.Click       OK
     Fechar janela
 
+Agenda Telefônica
+    ${nome_print}=     Set Variable     Agenda Telefônica
+    [Tags]     Compras    Utilitários   SmokeTest
+    Utilitários
+    RPA.Windows.Click       Agenda Telefônica
+    RPA.Windows.Get Text    Agenda Telefônica (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
+    Fechar com Sim
+
 Configurador de Etiquetas
     ${nome_print}=     Set Variable     Configurador de Etiquetas
     [Tags]     Estoque    Utilitários   SmokeTest
@@ -191,3 +201,16 @@ Etiquetas de Produtos para Transporte > Monitor de Envio de Etiquetas
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Envio de Etiquetas de produtos naturais para transporte (1)    ${Caminho_Screenshots}Etiquetas de Produtos para Transporte/Monitor de Envio de Etiquetas
     Fechar janela
+
+Reprocessamento de disponibilidade de itens
+    ${nome_print}=     Set Variable     Reprocessamento de disponibilidade de itens
+    [Tags]     Estoque    Utilitários   SmokeTest    
+    Utilitários
+    RPA.Windows.Click       Reprocessamento de disponibilidade de itens
+    RPA.Windows.Get Text    Reprocessamento de Itens (1)
+    repetidor de teclas     tab      1
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    BaseDesktop.Screenshot  Reprocessamento de Itens (1)    ${Caminho_Screenshots}Reprocessamento de disponibilidade de itens
+    RPA.Windows.Click       Confirmar
+    RPA.Windows.Click       Fechar

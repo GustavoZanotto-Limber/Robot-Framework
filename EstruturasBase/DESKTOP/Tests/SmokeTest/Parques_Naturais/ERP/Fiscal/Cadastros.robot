@@ -297,6 +297,235 @@ Fiscal > ICMS > Configuração de Ajuste do Documento Fiscal
     RPA.Windows.Click       Confirmar
     Fechar janela 
 
+Fiscal > PIS > Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         PIS
+    RPA.Desktop.Press Keys    T
+    RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do PIS (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do PIS (1)    ${Caminho_Screenshots}Fiscal/PIS/Tabela Tributária
+    Fechar com Sim
+
+Fiscal > PIS > Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         PIS
+    RPA.Desktop.Press Keys    S
+    RPA.Windows.Get Text      Cadastro de Situação Tributária PIS (1)
+    RPA.Windows.Click         Novo
+    BaseDesktop.Screenshot    Cadastro de Situação Tributária PIS (1)    ${Caminho_Screenshots}Fiscal/PIS/Situação Tributária
+    Fechar com Sim
+
+Fiscal > PIS > Detalhamento de Receitas
+    ${nome_print}=     Set Variable     Detalhamento de Receitas
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         PIS
+    RPA.Desktop.Press Keys    D
+    RPA.Windows.Get Text      Cadastro de Receitas PIS e COFINS (1)
+    repetidor de teclas       tab      4
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    BaseDesktop.Screenshot    Cadastro de Receitas PIS e COFINS (1)    ${Caminho_Screenshots}Fiscal/PIS/Detalhamento de Receitas
+    RPA.Windows.Click         Confirmar
+    Fechar com Sim
+
+Fiscal > PIS > EFD Contribuições - Config. Receitas
+    ${nome_print}=     Set Variable     EFD Contribuições - Config. Receitas
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         PIS
+    RPA.Desktop.Press Keys    E
+    RPA.Windows.Get Text      EFD Contribuições - Configuração de Receitas (1)
+    repetidor de teclas       tab      3
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    BaseDesktop.Screenshot    EFD Contribuições - Configuração de Receitas (1)    ${Caminho_Screenshots}Fiscal/PIS/EFD Contribuições - Config. Receitas
+    RPA.Windows.Click         Confirmar
+    Fechar com Sim
+
+Fiscal > COFINS > Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         COFINS
+    RPA.Desktop.Press Keys    T
+    RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do COFINS (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do COFINS (1)    ${Caminho_Screenshots}Fiscal/COFINS/Tabela Tributária
+    Fechar com Sim
+
+Fiscal > COFINS > Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         COFINS
+    RPA.Desktop.Press Keys    S
+    RPA.Windows.Get Text      Cadastro de Situação Tributária COFINS (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Situação Tributária COFINS (1)    ${Caminho_Screenshots}Fiscal/COFINS/Situação Tributária
+    Fechar com Sim
+
+Fiscal > COFINS > Detalhamento de Receitas
+    ${nome_print}=     Set Variable     Detalhamento de Receitas
+    [Tags]     Fiscal    Cadastros   SmokeTest       
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         COFINS
+    RPA.Desktop.Press Keys    D
+    RPA.Windows.Get Text      Cadastro de Receitas PIS e COFINS (1)
+    repetidor de teclas       tab      4
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    BaseDesktop.Screenshot    Cadastro de Receitas PIS e COFINS (1)    ${Caminho_Screenshots}Fiscal/PIS/Detalhamento de Receitas
+    RPA.Windows.Click         Confirmar
+    Fechar com Sim
+
+Fiscal > COFINS > EFD Contribuições - Config. Receitas
+    ${nome_print}=     Set Variable     EFD Contribuições - Config. Receitas
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         COFINS
+    RPA.Desktop.Press Keys    E
+    RPA.Windows.Get Text      EFD Contribuições - Configuração de Receitas (1)
+    repetidor de teclas       tab      3
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    BaseDesktop.Screenshot    EFD Contribuições - Configuração de Receitas (1)    ${Caminho_Screenshots}Fiscal/PIS/EFD Contribuições - Config. Receitas
+    RPA.Windows.Click         Confirmar
+    Fechar com Sim
+
+Fiscal > CSLL > Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         CSLL
+    RPA.Desktop.Press Keys    T
+    RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do CSLL (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do CSLL (1)    ${Caminho_Screenshots}Fiscal/CSLL/Tabela Tributária
+    Fechar com Sim
+
+Fiscal > CSLL > Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         CSLL
+    RPA.Desktop.Press Keys    S
+    RPA.Windows.Get Text      Cadastro de Situação Tributária CSLL (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Situação Tributária CSLL (1)    ${Caminho_Screenshots}Fiscal/CSLL/Situação Tributária
+    Fechar com Sim
+
+Fiscal > IRPJ > Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         IRPJ
+    RPA.Desktop.Press Keys    T
+    RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do IRPJ (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Tabelas Tributárias do IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Tabela Tributária
+    Fechar com Sim
+
+Fiscal > IRPJ > Situação Tributária
+    ${nome_print}=     Set Variable     Situação Tributária
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         IRPJ
+    RPA.Desktop.Press Keys    S
+    RPA.Windows.Get Text      Cadastro de Situação Tributária IRPJ (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Situação Tributária IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Situação Tributária
+    Fechar com Sim
+
+Fiscal > ISSQN > Tabela Tributária
+    ${nome_print}=     Set Variable     Tabela Tributária
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         ISSQN
+    RPA.Desktop.Press Keys    T
+    RPA.Windows.Get Text      Cadastro de Tabela Tributária ISSQN (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Tabela Tributária ISSQN (1)    ${Caminho_Screenshots}Fiscal/ISSQN/Tabela Tributária
+    Fechar com Sim
+
+Fiscal > Tabela de Alíquota Nacional de Impostos por NCM
+    ${nome_print}=     Set Variable     Tabela de Alíquota Nacional de Impostos por NCM
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Desktop.Press Keys    T
+    RPA.Windows.Get Text      Tabela de Alíquota Nacional de Impostos de Produtos/Serviços - Lei n° 12.741, de 8 de dezembro de 2012 (1)
+    RPA.Windows.Click       Carregar
+    BaseDesktop.Screenshot    Tabela de Alíquota Nacional de Impostos de Produtos/Serviços - Lei n° 12.741, de 8 de dezembro de 2012 (1)    ${Caminho_Screenshots}Fiscal/Tabela de Alíquota Nacional de Impostos por NCM
+    Fechar janela
+
+Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
+    ${nome_print}=     Set Variable     Cadastro de Serviços
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         Impostos Retidos
+    RPA.Windows.Click         INSS
+    RPA.Desktop.Press Keys    C
+    RPA.Windows.Get Text      Cadastro de Serviços para Retenção de INSSRF (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Serviços para Retenção de INSSRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/Cadastro de Serviços
+    Fechar com Sim
+
+Fiscal > Impostos Retidos > IR > Cadastro de Serviço
+    ${nome_print}=     Set Variable     Cadastro de Serviço
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         Impostos Retidos
+    RPA.Windows.Click         IR
+    RPA.Desktop.Press Keys    C
+    RPA.Windows.Get Text      Cadastro de Serviços para Retenção de IRRF (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Serviços para Retenção de IRRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/Cadastro de Serviço
+    Fechar com Sim
+
+Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
+    ${nome_print}=     Set Variable     Cadastro de Serviços
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Windows.Click         Impostos Retidos
+    RPA.Windows.Click         CSRF
+    RPA.Desktop.Press Keys    C
+    RPA.Windows.Get Text      Cadastro de Serviços para Retenção de PIS/COFINS/CSLL (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Serviços para Retenção de PIS/COFINS/CSLL (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/Cadastro de Serviços
+    Fechar com Sim
+
+Fiscal > Classificações de Serviços Prestado - REINF
+    ${nome_print}=     Set Variable     Classificações de Serviços Prestado - REINF
+    [Tags]     Fiscal    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Fiscal
+    RPA.Desktop.Press Keys    V
+    RPA.Windows.Get Text      Classificações de Serviços Prestados - REINF (1)
+    RPA.Windows.Click         Novo
+    BaseDesktop.Screenshot    Classificações de Serviços Prestados - REINF (1)    ${Caminho_Screenshots}Fiscal/Classificações de Serviços Prestado - REINF
+    Fechar com Sim
+
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
     [Tags]    Fiscal    Cadastros   SmokeTest

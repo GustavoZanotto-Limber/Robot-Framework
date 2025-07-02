@@ -99,6 +99,17 @@ Insucesso/Cancelar Insucesso
     RPA.Windows.Click       OK
     Fechar Janela
 
+Averbação Online
+    ${nome_print}=     Set Variable     Averbação Online
+    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest    
+    Conhecimento de Transporte                  Averbação Online
+    RPA.Windows.Get Text    Averbação Online (1)
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    BaseDesktop.Screenshot  Averbação Online (1)                             ${Caminho_Screenshots}Averbação Online
+    RPA.Windows.Click       Confirmar
+    Fechar Janela
+
 Notas Fiscais Pendentes de Emissão de CT-e
     ${nome_print}=     Set Variable     Notas Fiscais Pendentes de Emissão de CT-e
     [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
@@ -135,6 +146,17 @@ Recibo de Pagamento a Autônomo (RPA) > Exclusão/Reimpressão
     RPA.Windows.Get Text   	Reimpressão/Exclusão de RPAs (1)
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot 	Reimpressão/Exclusão de RPAs (1)                             ${Caminho_Screenshots}Recibo de Pagamento a Autônomo (RPA)/Exclusão_Reimpressão
+    Fechar Janela
+
+Recibo de Pagamento a Autônomo (RPA) > Consulta/Conferência de Conhecimento de Transporte
+    ${nome_print}=     Set Variable     Consulta_Conferência de Conhecimento de Transporte
+    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest    
+    Conhecimento de Transporte                  Recibo de Pagamento a Autônomo (RPA)
+    RPA.Desktop.Press Keys      C  
+    RPA.Windows.Get Text     	Consulta/Conferência de CTEs (1)
+    RPA.Desktop.Press Keys      0
+    RPA.Desktop.Press Keys      Enter
+    BaseDesktop.Screenshot  	Consulta/Conferência de CTEs (1)                             ${Caminho_Screenshots}Recibo de Pagamento a Autônomo (RPA)/Consulta_Conferência de Conhecimento de Transporte
     Fechar Janela
 
 Documentos emitidos contra o estabelecimento para CT-e
