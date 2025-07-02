@@ -91,3 +91,14 @@ Consulta de Abastecimentos(PoliFrotas)
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot 	Consulta de Abastecidas PoliFrotas (1)                              ${Caminho_Screenshots}Consulta de Abastecimentos(PoliFrotas)
     RPA.Windows.Click       Fechar
+
+Consulta de Conhecimento de Transporte
+    ${nome_print}=     Set Variable     Consulta de Conhecimento de Transporte
+    [Tags]    Frotas   Consultas   SmokeTest        
+    Consultas               Consulta de Conhecimento de Transporte
+    RPA.Windows.Get Text   	Consulta de Conhecimento de Transporte (1)
+    repetidor de teclas     tab      3
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    BaseDesktop.Screenshot 	Consulta de Conhecimento de Transporte (1)                             ${Caminho_Screenshots}Consulta de Conhecimento de Transporte
+    Fechar Janela

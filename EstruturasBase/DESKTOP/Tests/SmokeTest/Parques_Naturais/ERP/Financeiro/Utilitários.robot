@@ -269,6 +269,16 @@ Cadastro de Bilheterias
     BaseDesktop.Screenshot  Cadastro de Bilheterias (1)    ${Caminho_Screenshots}Cadastro de Bilheterias
     Fechar com Sim
 
+Liberações Contratos de Serviços
+    ${nome_print}=     Set Variable     Liberações Contratos de Serviços
+    [Tags]     Financeiro    Utilitários   SmokeTest    
+    Utilitários
+    RPA.Windows.Click       Liberações Contratos de Serviços
+    RPA.Windows.Get Text    Liberações Contratos de Serviços (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Liberações Contratos de Serviços (1)    ${Caminho_Screenshots}Liberações Contratos de Serviços
+    Fechar com Sim
+
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
     [Tags]     Financeiro    Utilitários   SmokeTest

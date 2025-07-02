@@ -22,7 +22,7 @@ Relatórios
 
 Inventário de Estoque
     ${nome_print}=     Set Variable     Inventário de Estoque
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Inventário de Estoque
     RPA.Windows.Get Text    Inventário de Estoque (1)
@@ -32,7 +32,7 @@ Inventário de Estoque
 
 Relatório de Estoque Simplificado
     ${nome_print}=     Set Variable     Relatório de Estoque Simplificado
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Relatório de Estoque Simplificado
     RPA.Windows.Get Text    Relatório Simplificado de Estoque (1)
@@ -42,7 +42,7 @@ Relatório de Estoque Simplificado
 
 Resumo Apuração Custo Médio
     ${nome_print}=     Set Variable     Resumo Apuração Custo Médio
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Resumo Apuração Custo Médio
     RPA.Windows.Get Text    Resumo da Apuração do Custo Médio (1)
@@ -54,7 +54,7 @@ Resumo Apuração Custo Médio
 
 Saldos de Lotes/Sintético
     ${nome_print}=     Set Variable     Saldos de Lotes_Sintético
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Saldos de Lotes/Sintético
     RPA.Windows.Get Text    Relatório de Saldo de Lotes/Sintético (1)
@@ -66,7 +66,7 @@ Saldos de Lotes/Sintético
 
 Análise de Disponibilidade do Estoque
     ${nome_print}=     Set Variable     Análise de Disponibilidade do Estoque
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Análise da Disponibilidade do Estoque
     RPA.Windows.Get Text    Análise da Disponibilidade do Estoque (1)
@@ -79,7 +79,7 @@ Análise de Disponibilidade do Estoque
 
 Movimentação de Depósitos/Compras
     ${nome_print}=     Set Variable     Movimentação de Depósitos_Compras
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Movimentação de Depósitos/Compras
     RPA.Windows.Get Text    Movimentação de Depósitos/Compras (1)
@@ -93,7 +93,7 @@ Movimentação de Depósitos/Compras
 
 Rentabilidade de Estoque
     ${nome_print}=     Set Variable     Rentabilidade de Estoque
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Rentabilidade de Estoque
     RPA.Windows.Get Text    Relatório de Rentabilidade de Estoque (1)
@@ -107,7 +107,7 @@ Rentabilidade de Estoque
 
 Movimentação de produtos - Operacional
     ${nome_print}=     Set Variable     Movimentação de produtos - Operacional
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Movimentação de produtos (1)
@@ -120,7 +120,7 @@ Movimentação de produtos - Operacional
 
 Movimentação de Produtos - Lançamentos
     ${nome_print}=     Set Variable     Movimentação de Produtos - Lançamentos
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Movimentação de Produtos - Lançamentos
     RPA.Windows.Get Text    Movimentação de Produtos - Lançamentos (1)
@@ -132,7 +132,7 @@ Movimentação de Produtos - Lançamentos
 
 Requisições de Compra/Transferência
     ${nome_print}=     Set Variable     Requisições de Compra_Transferência
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Requisições de Compra/Transferência
     RPA.Windows.Get Text    Relatório de Requições/Status (1)
@@ -145,7 +145,7 @@ Requisições de Compra/Transferência
 
 Valor do Estoque Atual
     ${nome_print}=     Set Variable     Valor do Estoque Atual
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Valor do Estoque Atual
     RPA.Windows.Get Text    Relatório de Valor do Estoque Atual (1)
@@ -158,7 +158,7 @@ Valor do Estoque Atual
 
 Análise de Estoque
     ${nome_print}=     Set Variable     Análise de Estoque
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Análise de Estoque
     RPA.Windows.Get Text    Análise de Estoque (1)
@@ -167,7 +167,7 @@ Análise de Estoque
 
 Resumo Geral de Movimentos/Saldos
     ${nome_print}=     Set Variable     Resumo Geral de Movimentos_Saldos
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Resumo Geral de Movimentos/Saldos
     RPA.Windows.Get Text    Resumo Geral de Movimentos/Saldos (1)
@@ -179,7 +179,7 @@ Resumo Geral de Movimentos/Saldos
 
 Cadastros > Setores
     ${nome_print}=     Set Variable     Setores
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  S
@@ -190,7 +190,7 @@ Cadastros > Setores
 
 Cadastros > Produtos > Produtos
     ${nome_print}=     Set Variable     Produtos
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -205,7 +205,7 @@ Cadastros > Produtos > Produtos
 
 Cadastros > Produtos > Tabela de Umidade
     ${nome_print}=     Set Variable     Tabela de Umidade
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -217,7 +217,7 @@ Cadastros > Produtos > Tabela de Umidade
 
 Cadastros > Produtos > Cores
     ${nome_print}=     Set Variable     Cores
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -229,7 +229,7 @@ Cadastros > Produtos > Cores
 
 Cadastros > Produtos > Unidades
     ${nome_print}=     Set Variable     Unidades
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -241,7 +241,7 @@ Cadastros > Produtos > Unidades
 
 Cadastros > Produtos > Marcas
     ${nome_print}=     Set Variable     Marcas
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -253,7 +253,7 @@ Cadastros > Produtos > Marcas
 
 Cadastros > Produtos > Estampas
     ${nome_print}=     Set Variable     Estampas
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -265,7 +265,7 @@ Cadastros > Produtos > Estampas
 
 Cadastros > Produtos > Tamanhos
     ${nome_print}=     Set Variable     Tamanhos
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Windows.Click       Produtos
@@ -277,7 +277,7 @@ Cadastros > Produtos > Tamanhos
 
 Cadastros > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  T
@@ -288,7 +288,7 @@ Cadastros > Tabela Tributária
 
 Cadastros > CFOP
     ${nome_print}=     Set Variable     CFOP
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  C
@@ -299,7 +299,7 @@ Cadastros > CFOP
 
 Cadastros > Estabelecimento
     ${nome_print}=     Set Variable     Estabelecimento
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  E
@@ -310,7 +310,7 @@ Cadastros > Estabelecimento
 
 Cadastros > Países
     ${nome_print}=     Set Variable     Países
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  A
@@ -321,7 +321,7 @@ Cadastros > Países
 
 Cadastros > Estados
     ${nome_print}=     Set Variable     Estados
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  D
@@ -332,7 +332,7 @@ Cadastros > Estados
 
 Cadastros > Municípios
     ${nome_print}=     Set Variable     Municípios
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  M
@@ -343,7 +343,7 @@ Cadastros > Municípios
 
 Cadastros > Regiões
     ${nome_print}=     Set Variable     Regiões
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  R
@@ -354,7 +354,7 @@ Cadastros > Regiões
 
 Customizados > Relatório Simplificado de Estoque 2
     ${nome_print}=     Set Variable     Relatório Simplificado de Estoque 2
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest    
     Relatórios
     RPA.Windows.Click         Customizados
     RPA.Desktop.Press Keys    R
@@ -363,10 +363,11 @@ Customizados > Relatório Simplificado de Estoque 2
     RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot    Relatório de Estoque Simplificado 2 (1)    ${Caminho_Screenshots}Customizados/Relatório Simplificado de Estoque 2
     RPA.Windows.Click       Confirmar
+    Fechar janela
 
 Customizados > Relatório Simplificado / Depósito
     ${nome_print}=     Set Variable     Relatório Simplificado _ Depósito
-    [Tags]    Estoque   Manutenções   SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest    
     Relatórios
     RPA.Windows.Click         Customizados
     RPA.Desktop.Press Keys    E
@@ -375,3 +376,4 @@ Customizados > Relatório Simplificado / Depósito
     RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot    Relatório de Estoque por Depósito (1)    ${Caminho_Screenshots}Customizados/Relatório Simplificado _ Depósito
     RPA.Windows.Click       Confirmar
+    Fechar janela

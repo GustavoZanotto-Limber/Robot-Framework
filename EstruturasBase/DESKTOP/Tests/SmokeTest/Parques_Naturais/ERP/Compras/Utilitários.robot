@@ -282,3 +282,29 @@ Exportação de Arquivos > Salvar o Arquivo XML NFe Própria
     BaseDesktop.Screenshot  Salvar arquivo XML NF-e / NFS-e / CT-e / SAT própria(o) (1)   ${Caminho_Screenshots}Exportação de Arquivos/Salvar o arquivo XML NFe Própria
     RPA.Windows.Click       OK
     Fechar janela
+
+Integração Royalties Monsanto > Consulta de Entregas/Cancelamentos
+    ${nome_print}=     Set Variable     Consulta de Entregas_Cancelamentos
+    [Tags]     Balancas    Utilitários   SmokeTest    
+    Utilitários
+    RPA.Windows.Click       Integração Royalties Monsanto
+    RPA.Desktop.Press Keys  C
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    RPA.Windows.Get Text    Consulta de Entregas/Cancelamentos - Monsanto (1)
+    BaseDesktop.Screenshot  Consulta de Entregas/Cancelamentos - Monsanto (1)    ${Caminho_Screenshots}Integração Royalties Monsanto/Consulta de Entregas_Cancelamentos
+    RPA.Windows.Click       Confirmar
+    Fechar Janela
+
+Integração Royalties Monsanto > Consulta Lista de Pendências
+    ${nome_print}=     Set Variable     Consulta Lista de Pendências
+    [Tags]     Balancas    Utilitários   SmokeTest    
+    Utilitários
+    RPA.Windows.Click       Integração Royalties Monsanto
+    RPA.Desktop.Press Keys  O
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    RPA.Windows.Get Text    Consulta Lista de Pendências - Monsanto (1)
+    BaseDesktop.Screenshot  Consulta Lista de Pendências - Monsanto (1)    ${Caminho_Screenshots}Integração Royalties Monsanto/Consulta Lista de Pendências
+    RPA.Windows.Click       Confirmar
+    Fechar Janela

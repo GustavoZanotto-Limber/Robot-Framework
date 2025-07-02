@@ -198,6 +198,27 @@ Comissões de Guias -> Relatório
     RPA.Windows.Click       Fechar
     Fechar janela
 
+Consulta/Manutenção Consumo Interno
+    [Tags]    Manutenções    Front    SmokeTest     
+    ${nome_print}=          Set Variable    Consulta/Manutenção Consumo Interno
+    Manutenções
+    RPA.Windows.Click       Consulta/Manutenção Consumo Interno
+    RPA.Windows.Get Text    Consulta da Movimentação de Crédito Interno (1)
+    RPA.Windows.Click       Carregar Dados
+    BaseDesktop.Screenshot  Consulta da Movimentação de Crédito Interno (1)    ${Caminho_Screenshots}Consulta/Manutenção Consumo Interno
+    Fechar janela
+
+Bloqueio/Desbloqueio Consumo Interno
+    [Tags]    Manutenções    Front    SmokeTest     
+    ${nome_print}=          Set Variable    Bloqueio/Desbloqueio Consumo Interno
+    Manutenções
+    RPA.Windows.Click       Bloqueio/Desbloqueio Consumo Interno
+    RPA.Windows.Get Text    Bloqueio/Desbloqueio de RFID (1)
+    RPA.Windows.Click       Carregar Dados
+    BaseDesktop.Screenshot  Bloqueio/Desbloqueio de RFID (1)    ${Caminho_Screenshots}Bloqueio/Desbloqueio Consumo Interno
+    RPA.Windows.Click       OK
+    Fechar janela
+
 Devoluções de Vendas
     [Tags]    Manutenções    Front    SmokeTest  
     ${nome_print}=          Set Variable    Devoluções de Vendas

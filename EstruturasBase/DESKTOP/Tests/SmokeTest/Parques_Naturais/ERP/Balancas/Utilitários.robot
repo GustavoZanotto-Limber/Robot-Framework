@@ -148,3 +148,29 @@ Configuração da Balança
     RPA.Windows.Get Text    Configuração da Balança (1)
     BaseDesktop.Screenshot  Configuração da Balança (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
+
+Integração Royalties Monsanto > Consulta de Entregas/Cancelamentos
+    ${nome_print}=     Set Variable     Consulta de Entregas_Cancelamentos
+    [Tags]     Balancas    Utilitários   SmokeTest
+    Utilitários
+    RPA.Windows.Click       Integração Royalties Monsanto
+    RPA.Desktop.Press Keys  C
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    RPA.Windows.Get Text    Consulta de Entregas/Cancelamentos - Monsanto (1)
+    BaseDesktop.Screenshot  Consulta de Entregas/Cancelamentos - Monsanto (1)    ${Caminho_Screenshots}Integração Royalties Monsanto/Consulta de Entregas_Cancelamentos
+    RPA.Windows.Click       Confirmar
+    Fechar Janela
+
+Integração Royalties Monsanto > Consulta Lista de Pendências
+    ${nome_print}=     Set Variable     Consulta Lista de Pendências
+    [Tags]     Balancas    Utilitários   SmokeTest    
+    Utilitários
+    RPA.Windows.Click       Integração Royalties Monsanto
+    RPA.Desktop.Press Keys  O
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    RPA.Windows.Get Text    Consulta Lista de Pendências - Monsanto (1)
+    BaseDesktop.Screenshot  Consulta Lista de Pendências - Monsanto (1)    ${Caminho_Screenshots}Integração Royalties Monsanto/Consulta Lista de Pendências
+    RPA.Windows.Click       Confirmar
+    Fechar Janela

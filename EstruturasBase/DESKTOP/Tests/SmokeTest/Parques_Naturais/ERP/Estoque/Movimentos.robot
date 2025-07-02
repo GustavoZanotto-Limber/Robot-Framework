@@ -272,6 +272,16 @@ Controle de Vasilhames > Movimentação de Vasilhames
     BaseDesktop.Screenshot  Movimentação de Vasilhames (1)    ${Caminho_Screenshots}Controle de Vasilhames/Movimentação de Vasilhames
     Fechar com Sim
 
+Manutenção de Máquinas Agrícolas
+    ${nome_print}=     Set Variable     Manutenção de Máquinas Agrícolas
+    [Tags]     Estoque    Movimentos   SmokeTest    
+    Movimentos
+    RPA.Windows.Click       Manutenção de Máquinas Agrícolas
+    RPA.Windows.Get Text    Manutenção de Máquinas Agrícolas (1)
+    RPA.Windows.Click       Carregar
+    BaseDesktop.Screenshot  Manutenção de Máquinas Agrícolas (1)    ${Caminho_Screenshots}Manutenção de Máquinas Agrícolas
+    Fechar janela
+
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
     [Tags]     Estoque    Movimentos   SmokeTest

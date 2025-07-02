@@ -127,6 +127,16 @@ Tipos de Documento
     BaseDesktop.Screenshot  Cadastro de Tipos de Documentos (1)    ${Caminho_Screenshots}Tipos de Documentos
     Fechar com Sim
 
+Tipo de Consórcio
+    ${nome_print}=     Set Variable     Tipo de Consórcio
+    [Tags]     Financeiro    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click       Tipo de Consórcio
+    RPA.Windows.Get Text    Tipo de Consórcio (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot  Tipo de Consórcio (1)    ${Caminho_Screenshots}Tipo de Consórcio
+    Fechar com Sim
+
 Tipo de Financiamento
     ${nome_print}=     Set Variable     Tipo de Financiamento
     [Tags]     Financeiro    Cadastros   SmokeTest
@@ -383,6 +393,16 @@ Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
+    Fechar com Sim
+
+Eventos
+    ${nome_print}=     Set Variable     Eventos
+    [Tags]     Financeiro    Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         Eventos
+    RPA.Windows.Get Text      Cadastro de Eventos (1)
+    RPA.Windows.Click       Novo
+    BaseDesktop.Screenshot    Cadastro de Eventos (1)    ${Caminho_Screenshots}Eventos
     Fechar com Sim
 
 Relatórios > Terceiros

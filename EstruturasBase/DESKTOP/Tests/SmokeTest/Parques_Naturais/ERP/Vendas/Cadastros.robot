@@ -1830,4 +1830,15 @@ PDV > Taxa de Entrega
     Fechar janela
     RPA.Windows.Click         Sim
 
-    
+PDV > Integração Abrahao
+    ${nome_print}=     Set Variable     Integração Abrahao
+    [Tags]    Vendas   Cadastros   SmokeTest    
+    Cadastros
+    RPA.Windows.Click         PDV
+    RPA.Desktop.Press Keys    H
+    RPA.Windows.Get Text      Integração Abrahao (1)
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    BaseDesktop.Screenshot    Integração Abrahao (1)    ${Caminho_Screenshots}PDV/Integração Abrahao
+    RPA.Windows.Click         Confirmar
+    Fechar com Sim
