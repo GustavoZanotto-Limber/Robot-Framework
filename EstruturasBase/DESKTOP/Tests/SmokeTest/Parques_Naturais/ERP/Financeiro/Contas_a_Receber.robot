@@ -3,7 +3,7 @@ Documentation    Smoke Test: Financeiro
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
@@ -20,7 +20,7 @@ Contas a Receber
 
 *** Test Cases ***
 
-Lançamento - Simplificado
+Lançamentos > Lançamento - Simplificado
     ${nome_print}=     Set Variable     Lançamento - Simplificado
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -32,7 +32,7 @@ Lançamento - Simplificado
     Fechar janela
     RPA.Windows.Click         Sim
 
-Lançamento - Múltiplas Parcelas
+Lançamentos > Lançamento - Múltiplas Parcelas
     ${nome_print}=     Set Variable     Lançamento - Múltiplas Parcelas
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -44,7 +44,7 @@ Lançamento - Múltiplas Parcelas
     Fechar janela
     RPA.Windows.Click         Sim
 
-Lançamento - Com Baixa Automática
+Lançamentos > Lançamento - Com Baixa Automática
     ${nome_print}=     Set Variable     Lançamento - Com Baixa Automática
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -168,7 +168,7 @@ Estorno Alteração de Contas a Receber
     RPA.Windows.Click       OK
     Fechar janela
 
-Adiantamento de Clientes
+Adiantementos > Adiantamento de Clientes
     ${nome_print}=     Set Variable     Adiantamento de Clientes
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -179,7 +179,7 @@ Adiantamento de Clientes
     BaseDesktop.Screenshot    Adiantamentos de Clientes (1)    ${Caminho_Screenshots}Adiantamentos/Adiantamento de Clientes
     Fechar com Sim
 
-Extrato dos Adiantamentos_Clientes
+Adiantementos > Extrato dos Adiantamentos_Clientes
     ${nome_print}=     Set Variable     Extrato dos Adiantamentos_Clientes
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -192,7 +192,7 @@ Extrato dos Adiantamentos_Clientes
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Saldo de Adiantamentos Clientes
+Adiantementos > Saldo de Adiantamentos Clientes
     ${nome_print}=     Set Variable     Saldo de Adiantamentos Clientes
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -205,7 +205,7 @@ Saldo de Adiantamentos Clientes
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Relatório de Lançamento
+Adiantementos > Relatório de Lançamento
     ${nome_print}=     Set Variable     Relatório de Lançamento
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -218,7 +218,7 @@ Relatório de Lançamento
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Adiantamento de Pedidos de Venda
+Adiantementos > Adiantamento de Pedidos de Venda
     ${nome_print}=     Set Variable     Adiantamento de Pedidos de Venda
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -229,7 +229,7 @@ Adiantamento de Pedidos de Venda
     BaseDesktop.Screenshot    Adiantamento de Pedidos de Venda (1)    ${Caminho_Screenshots}Adiantamentos/Adiantamento de Pedidos de Venda
     Fechar janela
 
-Antecipação de Pedido de Vendas Parcial
+Adiantementos > Antecipação de Pedido de Vendas Parcial
     ${nome_print}=     Set Variable     Antecipação de Pedido de Vendas Parcial
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -284,7 +284,7 @@ Emissão de Documentos
     RPA.Windows.Click       OK
     Fechar janela
 
-Contas a Receber
+Relatórios > Contas a Receber
     ${nome_print}=     Set Variable     Contas a Receber
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -298,7 +298,7 @@ Contas a Receber
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Contas a Receber Prazo
+Relatórios > Contas a Receber Prazo
     ${nome_print}=     Set Variable     Contas a Receber Prazo
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -312,7 +312,7 @@ Contas a Receber Prazo
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Recebimento do contas a receber
+Relatórios > Recebimento do contas a receber
     ${nome_print}=     Set Variable     Recebimento do contas a receber
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -325,7 +325,7 @@ Recebimento do contas a receber
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Consulta
+Relatórios > Consulta
     ${nome_print}=     Set Variable     Consulta
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -340,7 +340,7 @@ Consulta
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Relatório
+Relatórios > Posição Financeira/Vendedor/Terceiro > Relatório
     ${nome_print}=     Set Variable     Relatório
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -355,7 +355,7 @@ Relatório
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Relatório de Cobrança
+Relatórios > Relatório de Cobrança
     ${nome_print}=     Set Variable     Relatório de Cobrança
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -369,7 +369,7 @@ Relatório de Cobrança
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Emissão_Manutenção
+Contratos de Terceiros > Emissão_Manutenção
     ${nome_print}=     Set Variable     Emissão_Manutenção
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -381,7 +381,7 @@ Emissão_Manutenção
     Fechar janela
     RPA.Windows.Click         Sim
 
-Assinatura
+Contratos de Terceiros > Assinatura
     ${nome_print}=     Set Variable     Assinatura
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -392,7 +392,7 @@ Assinatura
     BaseDesktop.Screenshot    Assinatura de Contratos de Terceiros (1)    ${Caminho_Screenshots}Contratos de Terceiros/Assinatura
     Fechar janela
 
-Cancelamento_Baixa
+Contratos de Terceiros > Cancelamento_Baixa
     ${nome_print}=     Set Variable     Cancelamento_Baixa
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -405,7 +405,7 @@ Cancelamento_Baixa
     RPA.Windows.Click         Fechar
     Fechar janela
 
-Estorno de Cancelamento
+Contratos de Terceiros > Estorno de Cancelamento
     ${nome_print}=     Set Variable     Estorno de Cancelamento
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -418,19 +418,19 @@ Estorno de Cancelamento
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Consulta Contratos
-    ${nome_print}=     Set Variable     Consulta Contratos
+Contratos de Terceiros > Consulta 
+    ${nome_print}=     Set Variable     Consulta 
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
     RPA.Windows.Click         Contratos de Terceiros       
     RPA.Desktop.Press Keys    o
     RPA.Windows.Get Text      Consulta de Contratos (1)
     RPA.Windows.Click         Quitado
-    BaseDesktop.Screenshot    Consulta de Contratos (1)    ${Caminho_Screenshots}Contratos de Terceiros/Consulta Contratos
+    BaseDesktop.Screenshot    Consulta de Contratos (1)    ${Caminho_Screenshots}Contratos de Terceiros/Consulta 
     Fechar janela
 
-Relatório Contratos
-    ${nome_print}=     Set Variable     Relatório Contratos
+Contratos de Terceiros > Relatório 
+    ${nome_print}=     Set Variable     Relatório 
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
     RPA.Windows.Click         Contratos de Terceiros        
@@ -439,11 +439,11 @@ Relatório Contratos
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter 
-    BaseDesktop.Screenshot    Relatório de Contratos (1)    ${Caminho_Screenshots}Contratos de Terceiros/Relatório Contratos
+    BaseDesktop.Screenshot    Relatório de Contratos (1)    ${Caminho_Screenshots}Contratos de Terceiros/Relatório 
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Manutenção de Contratos
+Contratos de Prestação de Serviços > Manutenção de Contratos
     ${nome_print}=     Set Variable     Manutenção de Contratos
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -455,7 +455,7 @@ Manutenção de Contratos
     Fechar janela
     RPA.Windows.Click         Sim
 
-Consulta_Emissão de NF
+Contratos de Prestação de Serviços > Consulta _ Emissão de NF
     ${nome_print}=     Set Variable     Consulta_Emissão de NF
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -464,7 +464,6 @@ Consulta_Emissão de NF
     RPA.Windows.Get Text      Consultar/Faturar (1)
     RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Consultar/Faturar (1)                ${Caminho_Screenshots}Contratos de Pestação de Serviços /Consulta_Emissão de NF
-    RPA.Windows.Click         OK
     Fechar janela
 
 Reajuste de Valores
@@ -478,7 +477,7 @@ Reajuste de Valores
     RPA.Windows.Click         OK
     Fechar janela
 
-Geração de Faturas
+Faturamento de Agências > Geração de Faturas
     ${nome_print}=     Set Variable     Geração de Faturas
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -489,7 +488,7 @@ Geração de Faturas
     BaseDesktop.Screenshot    Faturamento de Agências (1)                ${Caminho_Screenshots}Faturamento de Agências/Geração de Faturas
     Fechar janela
 
-Estorno de Faturas
+Faturamento de Agências > Estorno de Faturas
     ${nome_print}=     Set Variable     Estorno de Faturas
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -500,7 +499,7 @@ Estorno de Faturas
     BaseDesktop.Screenshot    Estorno de Faturas (1)                ${Caminho_Screenshots}Faturamento de Agências/Estorno de Faturas
     Fechar janela
 
-Troca de Agências
+Faturamento de Agências > Troca de Agências
     ${nome_print}=     Set Variable     Troca de Agências
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber
@@ -512,7 +511,7 @@ Troca de Agências
     RPA.Windows.Click         OK
     Fechar janela
 
-Lançamento de Vouchers Venda
+Faturamento de Agências > Lançamento de Vouchers Venda
     ${nome_print}=     Set Variable     Lançamento de Vouchers Venda
     [Tags]     Financeiro    Contas a Receber   SmokeTest
     Contas a Receber

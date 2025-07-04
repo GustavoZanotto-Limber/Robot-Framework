@@ -3,7 +3,7 @@ Documentation    Smoke Test: Compras
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_compras
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
@@ -25,6 +25,7 @@ Entradas/Compras > Incluir/Alterar
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  I
+    Sleep                   2s
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)   ${Caminho_Screenshots}Entradas_Compras/Incluir_Alterar 
@@ -37,7 +38,9 @@ Entradas/Compras > Consultar
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Entradas/Compras - Consultar (1)
-    RPA.Windows.Click       Novo
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    RPA.Windows.Click       Confirmar
     BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
     Fechar com Sim
 

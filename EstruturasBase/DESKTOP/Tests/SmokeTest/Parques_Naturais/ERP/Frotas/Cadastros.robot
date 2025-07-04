@@ -3,7 +3,7 @@ Documentation    Smoke Test: Frotas
 Resource          C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
@@ -534,19 +534,6 @@ Fiscal > ICMS > Situação Tributária
     RPA.Windows.Get Text      Cadastro de Situações Tributárias do ICMS (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Cadastro de Situações Tributárias do ICMS (1)    ${Caminho_Screenshots}Fiscal/ICMS/Situação Tributária
-    Fechar janela
-    RPA.Windows.Click       Sim
-
-Fiscal > ICMS > Tabela Tributária - FCP
-    ${nome_print}=     Set Variable     Tabela Tributária - FCP
-    [Tags]     Frotas    Cadastros    SmokeTest    
-    Cadastros
-    RPA.Windows.Click         Fiscal
-    RPA.Windows.Click         ICMS
-    RPA.Desktop.Press Keys    A
-    RPA.Windows.Get Text      Cadastro da Tabela Tributária FCP (1)
-    RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot    Cadastro da Tabela Tributária FCP (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária - FCP
     Fechar janela
     RPA.Windows.Click       Sim
 

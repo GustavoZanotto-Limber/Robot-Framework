@@ -4,7 +4,7 @@ Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39
 Resource         ../../../../Resources/Keywords.robot
 Suite Setup      Iniciar sessao     ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
