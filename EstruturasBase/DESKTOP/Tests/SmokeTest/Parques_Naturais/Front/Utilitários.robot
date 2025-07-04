@@ -3,7 +3,7 @@ Documentation    Smoke Test: Front
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao     cde_win_bca_frontR30
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
@@ -120,15 +120,6 @@ Observações Padrão
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Observações Padrão (1)    ${Caminho_Screenshots}Observações Padrão
     RPA.Windows.Click       Confirmar
-    Fechar janela
-
-Criar Usuario de Log
-    [Tags]    Utilitários    Front    SmokeTest  
-    ${nome_print}=     Set Variable     Criar Usuario de Log
-    Utilitários
-    RPA.Windows.Click       Criar Usuário de Log
-    RPA.Windows.Get Text    Cadastro Usuario de Log (1)
-    BaseDesktop.Screenshot  Cadastro Usuario de Log (1)    ${Caminho_Screenshots}Criar Usuario de Log
     Fechar janela
 
 Verifica transações abertas

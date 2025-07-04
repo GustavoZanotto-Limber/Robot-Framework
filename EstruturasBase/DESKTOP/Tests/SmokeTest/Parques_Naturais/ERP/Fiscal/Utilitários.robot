@@ -3,7 +3,7 @@ Documentation    Smoke Test: Fiscal
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Fiscal/Utilitários/ 
@@ -48,7 +48,7 @@ Configurar Menu Pincipal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar Janela
+    Fechar com Sim
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
@@ -119,15 +119,6 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
-Criar Usuario de Log
-    ${nome_print}=     Set Variable     Criar Usuario de Log
-    [Tags]     Fiscal    Utilitários   SmokeTest
-    Utilitários
-    RPA.Windows.Click       Criar Usuário de Log
-    RPA.Windows.Get Text    Cadastro Usuario de Log (1)
-    BaseDesktop.Screenshot  Cadastro Usuario de Log (1)    ${Caminho_Screenshots}Criar Usuario de Log
-    Fechar janela
-
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas
     [Tags]     Fiscal    Utilitários   SmokeTest
@@ -154,9 +145,9 @@ Reprocessar Contas ECD
     [Tags]     Fiscal    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Reprocessar Contas ECD
-    RPA.Windows.Get Text    Ajustar Registros 1050 - ECD (1)
+    RPA.Windows.Get Text    Ajustar Registros I050 - ECD (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  justar Registros 1050 - ECD (1)    ${Caminho_Screenshots}Reprocessar Contas ECD
+    BaseDesktop.Screenshot  Ajustar Registros I050 - ECD (1)   ${Caminho_Screenshots}Reprocessar Contas ECD
     RPA.Windows.Click       Confirmar
     Fechar janela

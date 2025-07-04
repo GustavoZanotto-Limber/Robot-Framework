@@ -3,7 +3,7 @@ Documentation    Smoke Test: Fiscal
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 
 
@@ -226,18 +226,18 @@ DEISS
 
 SISCOSERV
     ${nome_print}=     Set Variable     SISCOSERV
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                SISCOSERV
     RPA.Windows.Get Text      Geração de Arquivos SISCOSERV (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Geração de Arquivos SISCOSERV (1)    ${Caminho_Screenshots}SISCOSERV
     RPA.Windows.Click         Confirmar
+    BaseDesktop.Screenshot    Geração de Arquivos SISCOSERV (1)    ${Caminho_Screenshots}SISCOSERV
     RPA.Windows.Click         Fechar
 
 Outros Arquivos > FCont
     ${nome_print}=     Set Variable     FCont
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                Outros Arquivos
     RPA.Desktop.Press Keys    F  
     RPA.Windows.Get Text      bbbbb

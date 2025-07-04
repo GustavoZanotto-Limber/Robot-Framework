@@ -3,7 +3,7 @@ Documentation    Smoke Test: Vendas
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 
 *** Variables ***
@@ -130,16 +130,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar com Sim
-
-Criar Usuario de Log
-    ${nome_print}=     Set Variable     Criar Usuario de Log
-    [Tags]    Vendas   Utilitários   SmokeTest
-    Utilitários
-    RPA.Windows.Click       Criar Usuário de Log
-    RPA.Windows.Get Text    Cadastro Usuario de Log (1)
-    BaseDesktop.Screenshot  Cadastro Usuario de Log (1)    ${Caminho_Screenshots}Criar Usuario de Log
-    Fechar janela
-
+    
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas
     [Tags]    Vendas   Utilitários   SmokeTest
@@ -480,7 +471,7 @@ Reprocessamento de disponibilidade de itens
     ${nome_print}=     Set Variable     Reprocessamento de disponibilidade de itens
     [Tags]     Estoque    Utilitários   SmokeTest    
     Utilitários
-    RPA.Windows.Click       Reprocessamento de disponibilidade de itens
+    RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Reprocessamento de Itens (1)
     repetidor de teclas     tab      1
     RPA.Desktop.Press Keys  0

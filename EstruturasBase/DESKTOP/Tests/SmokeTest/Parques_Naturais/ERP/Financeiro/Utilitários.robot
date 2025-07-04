@@ -3,7 +3,7 @@ Documentation    Smoke Test: Financeiro
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Financeiro/Utilitários/ 
@@ -167,15 +167,6 @@ Configurador de Impressões > Recibos > Contas a Receber
     BaseDesktop.Screenshot  Configurador de Impressões - Recibo Contas a Receber (1)    ${Caminho_Screenshots}Configurador de Impressões/Recibos/Contas a Receber
     Fechar com Sim
 
-Criar Usuario de Log
-    ${nome_print}=     Set Variable     Criar Usuario de Log
-    [Tags]     Financeiro    Utilitários   SmokeTest
-    Utilitários
-    RPA.Windows.Click       Criar Usuário de Log
-    RPA.Windows.Get Text    Cadastro Usuario de Log (1)
-    BaseDesktop.Screenshot  Cadastro Usuario de Log (1)    ${Caminho_Screenshots}Criar Usuario de Log
-    Fechar janela
-
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas
     [Tags]     Financeiro    Utilitários   SmokeTest
@@ -201,11 +192,11 @@ Importador Extrato Bancário (OFX)
     [Tags]     Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Importador Extrato Bancário (OFX)
-    RPA.Windows.Get Text    Importador de Extrato Bancário (OFX) (1)
+    RPA.Windows.Get Text    Importador Extrato Bancário (OFX) (1)
     repetidor de teclas     Tab                                3
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Importador de Extrato Bancário (OFX) (1)    ${Caminho_Screenshots}Importador Extrato Bancário (OFX)
+    BaseDesktop.Screenshot  Importador Extrato Bancário (OFX) (1)    ${Caminho_Screenshots}Importador Extrato Bancário (OFX)
     RPA.Windows.Click       Confirmar
     RPA.Windows.Click       OK
     Fechar janela

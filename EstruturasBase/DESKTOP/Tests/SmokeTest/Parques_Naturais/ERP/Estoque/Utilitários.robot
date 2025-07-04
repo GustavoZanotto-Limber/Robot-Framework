@@ -3,7 +3,7 @@ Documentation    Smoke Test: Estoque
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Estoque/Utilitários/ 
@@ -129,15 +129,6 @@ Configurador de Impressões > Transferência entre Terceiros
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Configurador de Impressões - Transferência entre Terceiros - Estoque (1)    ${Caminho_Screenshots}Configurador de Impressões/Transferência entre Terceiros
     Fechar com Sim
-
-Criar Usuario de Log
-    ${nome_print}=     Set Variable     Criar Usuario de Log
-    [Tags]     Estoque    Utilitários   SmokeTest
-    Utilitários
-    RPA.Windows.Click       Criar Usuário de Log
-    RPA.Windows.Get Text    Cadastro Usuario de Log (1)
-    BaseDesktop.Screenshot  Cadastro Usuario de Log (1)    ${Caminho_Screenshots}Criar Usuario de Log
-    Fechar janela
 
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas

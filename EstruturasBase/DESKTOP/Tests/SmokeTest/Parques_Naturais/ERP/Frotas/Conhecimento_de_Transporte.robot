@@ -3,7 +3,7 @@ Documentation    Smoke Test: Frotas
 Resource          C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
@@ -157,11 +157,12 @@ Recibo de Pagamento a Autônomo (RPA) > Consulta/Conferência de Conhecimento de
     RPA.Desktop.Press Keys      0
     RPA.Desktop.Press Keys      Enter
     BaseDesktop.Screenshot  	Consulta/Conferência de CTEs (1)                             ${Caminho_Screenshots}Recibo de Pagamento a Autônomo (RPA)/Consulta_Conferência de Conhecimento de Transporte
+    RPA.Windows.Click           Confirmar
     Fechar Janela
 
 Documentos emitidos contra o estabelecimento para CT-e
     ${nome_print}=     Set Variable     Documentos emitidos contra o estabelecimento para CT-e
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest    
     Conhecimento de Transporte                  Documentos emitidos contra o estabelecimento para CT-e
     RPA.Windows.Get Text   	Documentos emitidos contra o estabelecimento para CT-e (1)
     RPA.Windows.Click       Carregar

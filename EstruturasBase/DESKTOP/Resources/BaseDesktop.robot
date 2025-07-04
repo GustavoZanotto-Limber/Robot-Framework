@@ -8,12 +8,15 @@ Library    RPA.Windows    timeout=1s
 Library    OperatingSystem
 Library    SeleniumLibrary 
 Library    Process
+Library    RPA.Excel.Files
+Library    RPA.Excel.Application
 
 *** Variables ***
 ${front}
 ${nome_exe}
 ${achou}
 ${Erro}
+${i}=    0
 
 *** Keywords ***
 #As keywords e a setting funcionam basicamente de forma igual tanto no web quanto no desktop
@@ -63,6 +66,25 @@ Iniciar sessao
     RPA.Desktop.Press keys                      enter
     Sleep                           1s
 
+Iniciar sessao e abrir caixa
+    [Arguments]    ${nome_exe} 
+    RPA.Desktop.Open Application    C:\\Limber\\ERP Executaveis\\${nome_exe}.exe
+    Sleep                           2s 
+    RPA.Windows.Click               Abrir
+    Sleep                           2s
+    RPA.Desktop.Press keys                      enter
+    Sleep                           5s          Carregando a base...
+    Type text                       1
+    RPA.Desktop.Press keys                      enter
+    RPA.Desktop.Press keys                      enter
+    Sleep                           1s
+    Abrir caixa operador
+
+Consultas Front
+    [Arguments]    ${janela}    
+    Cadastros
+    repetidor de teclas    right    2
+    RPA.Windows.Click      ${janela}
 
     
 Screenshot
@@ -82,27 +104,88 @@ Ir Para Emissão de Bilhetes
     Cadastros
     Repetidor de teclas    right    1
     RPA.Windows.Click      Emissão de Bilhetes
-    Sleep                  2s
+    Sleep                  3s
     RPA.Windows.Get Text   Emissão de Bilhetes (1)
 
 Ir Para Reimpressão de Bilhetes
     Cadastros
-    Repetidor de teclas    right    2
+    Repetidor de teclas    right    1
     RPA.Windows.Click      Reimpressão de Bilhetes
     Sleep                  2s
     RPA.Windows.Get Text   Reimpressão de Bilhetes (1)
     
+
+Exportar bilhetes vendidos para bloco de notas
+    Set Anchor    Panel1
+    RPA.Windows.Right Click    Bilhetes
+    Clear Anchor
+    Repetidor de teclas        down    4
+    RPA.Desktop.Press Keys     enter
+    repetidor de teclas        down    1
+    RPA.Desktop.Press Keys     enter
+    Sleep                      5s
+    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
+    RETURN    ${texto}
+
+Analisa texto dos bilhetes vendidos
+    ${bilhetes_vendidos}=    Exportar bilhetes vendidos para bloco de notas
+    Should Contain    ${bilhetes_vendidos}    5875 - Z - Bilhete integrado    4321 - CATEGORIA 1    4369 - CATEGORIA 2 - INTEGRADA    4389 - CATEGORIA 3 - INTEGRADA
+    RPA.Desktop.Press Keys    Alt    F4
+
+Analisa texto da forma de pagamento
+    ${pagamentos}=   Exportar pagamentos da venda para bloco de notas
+    Should Contain   ${pagamentos}    111,00    DINHEIRO  
+    RPA.Desktop.Press Keys    Alt    F4
+    Fechar janela  
+
+Exportar pagamentos da venda para bloco de notas
+    Set Anchor    Panel1
+    RPA.Windows.Right Click    Formas de Pagamento
+    Clear Anchor
+    Repetidor de teclas        down    4
+    RPA.Desktop.Press Keys     enter
+    repetidor de teclas        down    1
+    RPA.Desktop.Press Keys     enter
+    Sleep                      5s
+    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
+    RETURN    ${texto}
+
+Rolar barra até o Final
+    RPA.Windows.Click       Vertical
+    RPA.Desktop.Press Keys  END
+
+Carregar
+    RPA.Windows.Click       Carregar
+
+Selecionar a ultima venda para reimpressão
+    [Arguments]     ${ação}
+    RPA.Desktop.Press Keys     0
+    RPA.Desktop.Press Keys     Enter
+    Sleep                      1s
+    RPA.Windows.Click          OK
+    Sleep                      1s
+    RPA.Desktop.Press Keys     Ctrl    Down
+    RPA.Windows.Click          Confirmar
+    RPA.Desktop.Press Keys     Alt    M
+    RPA.Desktop.Press Keys     ${ação}
+
 Selecionar o bilhete
+    [Arguments]    ${categoria}
     #Selecionando o bilhete
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
+    RPA.Desktop.Press Keys    F6
+    repetidor de teclas       Down    7
     RPA.Windows.Click         Confirmar
-    #Selecionando a categoria
     Sleep                     1s
+    #Selecionando categorias
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
+    RPA.Desktop.Press Keys    F6
+    Sleep                     0.5s
+    Repetidor de teclas       down    ${categoria}   
     RPA.Windows.Click         Confirmar
     Sleep                     1s
     Repetidor de teclas       enter    6
@@ -112,12 +195,20 @@ Finalizar compra
     RPA.Desktop.Press Keys    space
     RPA.Desktop.Press Keys    enter
     
-Salvo a Impressão    
+Abrir caixa operador
+    Caixa Operador
+    RPA.Windows.Click    Abertura / Fechamento
+    Fechar caixa caso esteja aberto
+    Abrir Caixa
+ 
+Salvo a impressão do RPS
     Sleep                         5s
     RPA.Desktop.Type Text         RPS
     RPA.Windows.Click             Salvar
     Sleep                         1s
     RPA.Windows.Click             Sim
+
+Salvo a Impressão    
     Sleep                         5s
     RPA.Desktop.Type Text         Impressão do bilhete
     RPA.Windows.Click             Salvar
@@ -126,8 +217,9 @@ Salvo a Impressão
     Sleep                         1s
 
 Salvo a Reimpressão  
+    [Arguments]    ${nome_do_arquivo}
     Sleep                         1s  
-    RPA.Desktop.Type Text         Reimpressão do bilhete
+    RPA.Desktop.Type Text         ${nome_do_arquivo}
     RPA.Windows.Click             Salvar
     Sleep                         1s
     RPA.Windows.Click             Sim
@@ -168,10 +260,6 @@ Repetidor de 2 teclas
     RPA.Desktop.Press Keys    ${tecla}             ${tecla2}
     END
 
-Eleições
-    Cadastros
-    repetidor de teclas    right    5
-
 Encerrar Tudo
     RPA.Desktop.Close All Applications
 
@@ -203,7 +291,7 @@ Caso aconteça erro
     # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          Enter  
      
 
-Caso aconteça erro 2
+Caso aconteca erro 2
     [Arguments]     ${Caminho_Screenshots}        ${nome_print}    ${nome_exe}
         Run Keyword If Test Failed    Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
         Run Keyword If Test Failed    Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png

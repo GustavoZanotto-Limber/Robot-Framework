@@ -3,7 +3,7 @@ Documentation    Smoke Test: Frotas
 Resource          C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
@@ -118,14 +118,6 @@ Relatórios Personalizados > Cadastro de Relatórios
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar com Sim
-
-Criar Usuario de Log
-    ${nome_print}=     Set Variable     Criar Usuario de Log
-    [Tags]    Frotas   Utilitários   SmokeTest
-    Utilitários             Criar Usuário de Log 
-    RPA.Windows.Get Text    Cadastro Usuario de Log (1)
-    BaseDesktop.Screenshot  Cadastro Usuario de Log (1)    ${Caminho_Screenshots}Criar Usuario de Log
-    Fechar janela
 
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas
@@ -296,13 +288,13 @@ Integrações > Poli Frotas > Abastecidas > Relatório
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
-Integrações > Exportação de Arquivos > Salvar o Arquivo de XML NFe Própria
+Exportação de Arquivos > Salvar o Arquivo de XML NFe Própria
     ${nome_print}=     Set Variable     Salvar o Arquivo de XML NFe Própria
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários             Exportação de Arquivos  
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Salvar arquivo XML NF-e / NFS-e / CT-e / SAT própria(o) (1)
-    repetidor de teclas     tab      3
+    repetidor de teclas     tab      4
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Salvar arquivo XML NF-e / NFS-e / CT-e / SAT própria(o) (1)    ${Caminho_Screenshots}Integrações/Exportação de Arquivos/Salvar o Arquivo de XML NFe Própria

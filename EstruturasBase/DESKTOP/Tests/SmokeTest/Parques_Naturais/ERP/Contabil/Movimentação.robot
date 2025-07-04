@@ -3,7 +3,7 @@ Documentation    Smoke Test: Contábil
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 
 
@@ -109,7 +109,8 @@ Zeramento de Contas > Parâmetros Zeramento
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Parâmetros de Zeramento (1)      ${Caminho_Screenshots}Zeramento de Contas/Parâmetros Zeramento
     RPA.Windows.Click         Confirmar
-    RPA.Windows.Click         Fechar
+    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Conciliação de Cheques Emitidos
     ${nome_print}=     Set Variable     Conciliação de Cheques Emitidos

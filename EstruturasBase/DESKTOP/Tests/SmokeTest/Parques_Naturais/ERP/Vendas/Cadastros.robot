@@ -3,7 +3,7 @@ Documentation    Smoke Test: Vendas
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteça erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
@@ -1668,7 +1668,6 @@ PDV > Configuração para impressão de comandas
     BaseDesktop.Screenshot    Configuração de Impressoras (1)    ${Caminho_Screenshots}PDV/Configuração para impressão de comandas
     RPA.Windows.Click         Confirmar
     Fechar janela
-    RPA.Windows.Click         Sim
 
 PDV > Cadastro de Tipos de Pensão
     ${nome_print}=     Set Variable     Cadastro de Tipos de Pensão
