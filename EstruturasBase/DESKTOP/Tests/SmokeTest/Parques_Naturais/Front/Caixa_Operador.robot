@@ -10,7 +10,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/Front/Caixa Operador/ 
 ${nome_print}
-${nome_exe}=    cde_win_bca_frontR30
+${nome_exe}=    cde_win_bca_frontR40
 
 *** Keywords ***
 

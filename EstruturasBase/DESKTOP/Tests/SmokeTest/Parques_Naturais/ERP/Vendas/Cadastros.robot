@@ -1389,11 +1389,12 @@ Fiscal > Classificações de Serviços Prestado - REINF
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    V
-    RPA.Windows.Get Text      Classificações de Serviços Prestado - REINF (1)
-    RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Classificações de Serviços Prestado - REINF (1)    ${Caminho_Screenshots}Fiscal/Classificações de Serviços Prestado - REINF
-    RPA.Windows.Click         OK
-    Fechar janela
+    RPA.Windows.Get Text      Classificações de Serviços Prestados - REINF (1)
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    BaseDesktop.Screenshot    Classificações de Serviços Prestados - REINF (1)    ${Caminho_Screenshots}Fiscal/Classificações de Serviços Prestado - REINF
+    RPA.Windows.Click         Confirmar
+    Fechar Janela
 
 Fiscal > Tabela Pauta Fiscal
     ${nome_print}=     Set Variable     Tabela Pauta Fiscal

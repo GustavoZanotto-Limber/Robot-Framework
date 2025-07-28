@@ -42,7 +42,7 @@ Entradas/Compras > Consultar
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Click       Confirmar
     BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
-    Fechar com Sim
+    Fechar Janela
 
 Entradas/Compras > Excluir Entradas/Compras
     ${nome_print}=     Set Variable     Excluir Entradas_Compras

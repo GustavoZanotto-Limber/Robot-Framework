@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Smoke Test: Front
 Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
-Suite Setup      Iniciar sessao     cde_win_bca_frontR30
+Suite Setup      Iniciar sessao     ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
@@ -9,7 +9,7 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/Front/Consultas/ 
 ${nome_print}
-${nome_exe}=    cde_win_bca_frontR30
+${nome_exe}=    cde_win_bca_frontR40
 
 *** Keywords ***
 
@@ -18,7 +18,7 @@ ${nome_exe}=    cde_win_bca_frontR30
 
 Consulta de Vendas
     [Tags]    Consultas    Front    SmokeTest  
-    ${nome_print}=          Set Variable    Consulta de Vendas    Teste
+    ${nome_print}=          Set Variable    Consulta de Vendas    
     Consultas Front         Consulta de Vendas    
     RPA.Windows.Get Text    Consulta de Vendas (1)
     RPA.Windows.Click       Carregar
@@ -26,7 +26,7 @@ Consulta de Vendas
     Fechar janela
 
 Consulta de Reservas
-    [Tags]    Consultas    Front    SmokeTest      Teste
+    [Tags]    Consultas    Front    SmokeTest      
     ${nome_print}=          Set Variable    Consulta de Reservas        
     Consultas Front         Consulta de Reservas
     RPA.Windows.Get Text    Consulta de Reservas (1)

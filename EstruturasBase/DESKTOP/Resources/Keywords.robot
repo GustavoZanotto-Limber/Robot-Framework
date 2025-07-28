@@ -17,16 +17,27 @@ Resource   BaseDesktop.robot
 # ****** BDDs **********
 Dado que realizei uma venda
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete   1
+    Selecionar o bilhete   10    1
+    Finalizar compra
+
+Dado que realizei uma venda com convênio
+    Ir Para Emissão de Bilhetes
+    Selecionar o bilhete e o convênio
+    Finalizar compra
+
+Dado que realizei uma venda com dois bilhetes
+    Ir Para Emissão de Bilhetes
+    Selecionar o bilhete    10    1
+    Selecionar o bilhete    11    1
     Finalizar compra
 
 Dado que realizei uma venda com multiplas categorias
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete    1
+    Selecionar o bilhete    10    1
     Sleep                   1s
-    Selecionar o bilhete    2
+    Selecionar o bilhete    10    2
     Sleep                   1s
-    Selecionar o bilhete    3
+    Selecionar o bilhete    10    3
     Finalizar compra
 
 Quando imprimo o bilhete
@@ -39,14 +50,20 @@ Quando imprimo o bilhete
 
 Quando finalizo o pagamento 
     [Arguments]    ${qtd_de_bilhetes}
-    Sleep                        4s
+    Sleep                        5s
     RPA.Windows.Click            Fechar
     FOR    ${qtd_de_bilhetes}    IN RANGE    0    ${qtd_de_bilhetes}
     RPA.Windows.Click            Fechar
-    Sleep                4s
+    Sleep                5s
     END
     Fechar janela
     RPA.Windows.Click    Sim
+
+Dado que realizei uma venda verificando a quantidade de bilhetes
+    Ir Para Emissão de Bilhetes
+    Selecionar o bilhete e retornar quantidade de vagas   10    1
+    Finalizar compra
+
 
 Então valido se a impressão saiu corretamente
     [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
@@ -62,6 +79,7 @@ Então valido se a impressão saiu corretamente
     Should Contain            ${pagina1}             Z - Bilhete integrado\nCATEGORIA 1\nValor Total R$ 100,00Válido até     PDV: 1 OP: 1-Usuário 1\nDoc:      \nEmitida em
     Sleep                     7s
     RPA.Desktop.Press Keys    Alt    F4
+    Sleep                     3s
 
 Então valido se a impressão RPS saiu corretamente
     [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
@@ -91,8 +109,9 @@ Quando peço a Reimpressão do RPS
     Salvo a Reimpressão    Reimpressão do RPS
 
 Então valido a venda foi realizada com sucesso
+    [Arguments]    @{Texto_Bilhete}    ${metodo}    ${valor}
     Consultas Front    Consulta de Vendas
     Carregar
     Rolar barra até o Final
-    Analisa texto dos bilhetes vendidos
-    Analisa texto da forma de pagamento
+    Analisa texto dos bilhetes vendidos   @{Texto_Bilhete}
+    Analisa texto da forma de pagamento   ${metodo}    ${valor}    

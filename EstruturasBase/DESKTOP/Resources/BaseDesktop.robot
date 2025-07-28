@@ -103,8 +103,13 @@ Abrir Caixa
 Ir Para Emissão de Bilhetes
     Cadastros
     Repetidor de teclas    right    1
-    RPA.Windows.Click      Emissão de Bilhetes
-    Sleep                  3s
+    TRY
+        Run Keyword And Ignore Error   RPA.Windows.Click      Emissão de Bilhetes
+    EXCEPT    Erro:*
+        Repetidor de teclas    right    1
+        RPA.Windows.Click      Emissão de Bilhetes
+    END
+    Sleep                  4s
     RPA.Windows.Get Text   Emissão de Bilhetes (1)
 
 Ir Para Reimpressão de Bilhetes
@@ -128,13 +133,17 @@ Exportar bilhetes vendidos para bloco de notas
     RETURN    ${texto}
 
 Analisa texto dos bilhetes vendidos
+    [Arguments]    @{Texto_no_bilhete}
     ${bilhetes_vendidos}=    Exportar bilhetes vendidos para bloco de notas
-    Should Contain    ${bilhetes_vendidos}    5875 - Z - Bilhete integrado    4321 - CATEGORIA 1    4369 - CATEGORIA 2 - INTEGRADA    4389 - CATEGORIA 3 - INTEGRADA
+    FOR    ${item}    IN    @{Texto_no_bilhete}
+    Should Contain    ${bilhetes_vendidos}        ${item}     
+    END
     RPA.Desktop.Press Keys    Alt    F4
 
 Analisa texto da forma de pagamento
+    [Arguments]    ${metodo}    ${valor}
     ${pagamentos}=   Exportar pagamentos da venda para bloco de notas
-    Should Contain   ${pagamentos}    111,00    DINHEIRO  
+    Should Contain   ${pagamentos}    ${metodo}    ${valor} 
     RPA.Desktop.Press Keys    Alt    F4
     Fechar janela  
 
@@ -151,7 +160,7 @@ Exportar pagamentos da venda para bloco de notas
     RETURN    ${texto}
 
 Rolar barra até o Final
-    RPA.Windows.Click       Vertical
+    # RPA.Windows.Click       Vertical
     RPA.Desktop.Press Keys  END
 
 Carregar
@@ -170,13 +179,13 @@ Selecionar a ultima venda para reimpressão
     RPA.Desktop.Press Keys     ${ação}
 
 Selecionar o bilhete
-    [Arguments]    ${categoria}
+    [Arguments]    ${bilhete}    ${categoria}
     #Selecionando o bilhete
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
-    repetidor de teclas       Down    7
+    repetidor de teclas       Down    ${bilhete} 
     RPA.Windows.Click         Confirmar
     Sleep                     1s
     #Selecionando categorias
@@ -188,6 +197,59 @@ Selecionar o bilhete
     Repetidor de teclas       down    ${categoria}   
     RPA.Windows.Click         Confirmar
     Sleep                     1s
+    Repetidor de teclas       enter    6
+
+Selecionar o bilhete e retornar quantidade de vagas
+    [Arguments]    ${bilhete}    ${categoria}
+    #Selecionando o bilhete
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    enter
+    Sleep                     1s
+    RPA.Desktop.Press Keys    F6
+    repetidor de teclas       Down    ${bilhete} 
+    RPA.Windows.Click         Confirmar
+    Sleep                     1s
+    #Selecionando categorias
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    enter
+    Sleep                     1s
+    RPA.Desktop.Press Keys    F6
+    Sleep                     0.5s
+    Repetidor de teclas       down    ${categoria}   
+    RPA.Windows.Click         Confirmar
+    Sleep                     1s
+    Set Anchor                Emissão de Bilhetes (1)
+    ${elementos}=    Get Elements    /*
+    FOR    ${el}    IN    @{elementos}
+        ${tipo}=    Get Attribute    ${el}    ControlType
+        ${nome}=    Get Attribute    ${el}    Name
+        ${aid}=     Get Attribute    ${el}    AutomationId
+        Log    Tipo: ${tipo} | Nome: ${nome} | AutomationId: ${aid}
+    END
+    Clear Anchor
+    Repetidor de teclas       enter    6
+    
+
+Selecionar o bilhete e o convênio
+    #Selecionando o bilhete
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    enter
+    Sleep                     1s
+    RPA.Desktop.Press Keys    F6
+    repetidor de teclas       Down    10
+    RPA.Windows.Click         Confirmar
+    Sleep                     1s
+    #Selecionando categorias
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    enter
+    Sleep                     1s
+    RPA.Desktop.Press Keys    F6
+    Sleep                     0.5s
+    Repetidor de teclas       down    4   
+    RPA.Windows.Click         Confirmar
+    Sleep                     1s
+    RPA.Windows.Click         Confirmar
+    Sleep                     0.5s
     Repetidor de teclas       enter    6
 
 Finalizar compra 
@@ -202,7 +264,7 @@ Abrir caixa operador
     Abrir Caixa
  
 Salvo a impressão do RPS
-    Sleep                         5s
+    Sleep                         6s
     RPA.Desktop.Type Text         RPS
     RPA.Windows.Click             Salvar
     Sleep                         1s
