@@ -79,9 +79,11 @@ Entradas/Compras > Consultar
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Entradas/Compras - Consultar (1)
-    RPA.Windows.Click       Novo
+    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  Enter
+    RPA.Windows.Click       Confirmar
     BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
-    Fechar com Sim
+    Fechar Janela
 
 Saídas/Vendas > Incluir Saídas/Vendas
     ${nome_print}=     Set Variable     Alterar Saídas_Vendas

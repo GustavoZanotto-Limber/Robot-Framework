@@ -522,9 +522,11 @@ Fiscal > Classificações de Serviços Prestado - REINF
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    V
     RPA.Windows.Get Text      Classificações de Serviços Prestados - REINF (1)
-    RPA.Windows.Click         Novo
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Classificações de Serviços Prestados - REINF (1)    ${Caminho_Screenshots}Fiscal/Classificações de Serviços Prestado - REINF
-    Fechar com Sim
+    RPA.Windows.Click         Confirmar
+    Fechar Janela
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
