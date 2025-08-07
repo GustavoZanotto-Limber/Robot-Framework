@@ -6,11 +6,10 @@
 Library    RPA.Desktop
 Library    RPA.Windows    timeout=1s
 Library    OperatingSystem
-Library    SeleniumLibrary 
 Library    Process
 Library    RPA.Excel.Files
 Library    RPA.Excel.Application
-
+Library    String
 *** Variables ***
 ${front}
 ${nome_exe}
@@ -46,6 +45,7 @@ Fechar janela
 
 Fechar com Sim
     Fechar janela
+    Sleep                   0.5s
     RPA.Windows.Click       Sim
 
 Fechar com OK
@@ -86,10 +86,32 @@ Consultas Front
     repetidor de teclas    right    2
     RPA.Windows.Click      ${janela}
 
-    
+Ir para:
+    [Arguments]    ${janela}    ${sessao}    
+    Cadastros
+    repetidor de teclas    right    ${sessao}
+    RPA.Windows.Click      ${janela}
+
+Capturar mensagem em tela
+    [Arguments]     ${caixa_de_mensagem}
+    Set Anchor      ${caixa_de_mensagem}
+    ${mensagem}=    RPA.Windows.Get Attribute    type:TextControl      Name 
+    Log    ${mensagem}  
+    Clear Anchor
+    RETURN    ${mensagem}
+
 Screenshot
     [Arguments]               ${janela}    ${Caminho}
     RPA.Windows.Screenshot    ${janela}    ${Caminho}.png
+
+Consultar Cadastros
+    [Arguments]    ${qtd_cliques}
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    RPA.Desktop.Press Keys    F6
+    Sleep                     0.5s
+    Repetidor de teclas       Down    ${qtd_cliques}
+    RPA.Windows.Click         Confirmar
 
 Caixa Operador
     Cadastros
@@ -140,10 +162,17 @@ Analisa texto dos bilhetes vendidos
     END
     RPA.Desktop.Press Keys    Alt    F4
 
-Analisa texto da forma de pagamento
+Analisa texto da forma de pagamento (contém)
     [Arguments]    ${metodo}    ${valor}
     ${pagamentos}=   Exportar pagamentos da venda para bloco de notas
     Should Contain   ${pagamentos}    ${metodo}    ${valor} 
+    RPA.Desktop.Press Keys    Alt    F4
+    Fechar janela  
+
+Analisa texto da forma de pagamento (não contém)
+    [Arguments]    ${metodo}    ${valor}
+    ${pagamentos}=   Exportar pagamentos da venda para bloco de notas
+    Should not Contain   ${pagamentos}    ${metodo}    ${valor} 
     RPA.Desktop.Press Keys    Alt    F4
     Fechar janela  
 
@@ -160,8 +189,53 @@ Exportar pagamentos da venda para bloco de notas
     RETURN    ${texto}
 
 Rolar barra até o Final
-    # RPA.Windows.Click       Vertical
+    Repetidor de teclas     tab    2
+    RPA.Desktop.Press Keys  F6
+    RPA.Desktop.Press Keys  Enter
     RPA.Desktop.Press Keys  END
+
+Selecionar bilhete preenchendo pais, estado e município
+    [Arguments]    ${bilhete}    ${categoria}
+    #Selecionando o bilhete    
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    enter
+    Sleep                     1s
+    RPA.Desktop.Press Keys    F6
+    repetidor de teclas       Down    ${bilhete} 
+    RPA.Windows.Click         Confirmar
+    Sleep                     1s
+    #Selecionando categorias
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    enter
+    Sleep                     1s
+    RPA.Desktop.Press Keys    F6
+    Sleep                     0.5s
+    Repetidor de teclas       down    ${categoria}   
+    RPA.Windows.Click         Confirmar
+    Sleep                     1s
+    RPA.Desktop.Press Keys    enter
+    RPA.Desktop.Press Keys    1
+    RPA.Desktop.Press Keys    enter
+    RPA.Desktop.Type Text     18
+    RPA.Desktop.Press Keys    enter
+    RPA.Desktop.Type Text     4218
+    Repetidor de teclas       Enter    4   
+    
+Preencher dados do visitante
+    RPA.Desktop.Press Keys    F5
+    Sleep                     1s 
+    RPA.Desktop.Type Text     Gustavo Zanotto Automatizado
+    RPA.Desktop.Press Keys    enter
+    RPA.Desktop.Type Text     09285844960
+    RPA.Desktop.Press Keys    enter
+    RPA.Desktop.Type Text     22082000
+    RPA.Desktop.Press Keys    enter
+    RPA.Desktop.Type Text     5546999999999
+    RPA.Desktop.Press Keys    Tab
+    Repetidor de teclas       Down    6
+    RPA.Desktop.Press Keys    Tab
+    Repetidor de teclas       Down    1
+    Finalizar compra
 
 Carregar
     RPA.Windows.Click       Carregar
@@ -216,19 +290,39 @@ Selecionar o bilhete e retornar quantidade de vagas
     RPA.Desktop.Press Keys    F6
     Sleep                     0.5s
     Repetidor de teclas       down    ${categoria}   
-    RPA.Windows.Click         Confirmar
+    RPA.Desktop.Press Keys    enter
     Sleep                     1s
-    Set Anchor                Emissão de Bilhetes (1)
-    ${elementos}=    Get Elements    /*
-    FOR    ${el}    IN    @{elementos}
-        ${tipo}=    Get Attribute    ${el}    ControlType
-        ${nome}=    Get Attribute    ${el}    Name
-        ${aid}=     Get Attribute    ${el}    AutomationId
-        Log    Tipo: ${tipo} | Nome: ${nome} | AutomationId: ${aid}
-    END
-    Clear Anchor
-    Repetidor de teclas       enter    6
+    ${qtd_vagas}=    Coleta quantidade de vagas atraves da planilha
+    repetidor de teclas       enter    6
+    RETURN                    ${qtd_vagas}
     
+    
+Coleta quantidade de vagas atraves da planilha
+    RPA.Desktop.Press Mouse Button    Right
+    RPA.Desktop.Release Mouse Button    Right
+    Repetidor de teclas        Down    4
+    RPA.Desktop.Press Keys     enter
+    Sleep                      1s        
+    Repetidor de teclas        down    4
+    RPA.Desktop.Press Keys     enter
+    Sleep                      10s
+    Repetidor de teclas        Right    3
+    RPA.Desktop.Press Keys     down
+    RPA.Desktop.Press Keys     Ctrl     C
+    RPA.Desktop.Press Keys     Ctrl     V
+    Sleep                      1s
+    ${valor}=    RPA.Desktop.Get Clipboard Value
+    RPA.Desktop.Press Keys     Alt    F4
+    Sleep                      1s
+    RPA.Desktop.Press Keys     right
+    RPA.Desktop.Press Keys     enter
+    RETURN    ${valor}
+
+Trocar Operação
+    [Arguments]    ${operacao}
+    RPA.Desktop.Press Keys     Shift    Tab
+    Repetidor de teclas        down     ${operacao} 
+    RPA.Desktop.Press Keys     Enter
 
 Selecionar o bilhete e o convênio
     #Selecionando o bilhete
@@ -236,7 +330,7 @@ Selecionar o bilhete e o convênio
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
-    repetidor de teclas       Down    10
+    repetidor de teclas       Down    12
     RPA.Windows.Click         Confirmar
     Sleep                     1s
     #Selecionando categorias
@@ -266,16 +360,24 @@ Abrir caixa operador
 Salvo a impressão do RPS
     Sleep                         6s
     RPA.Desktop.Type Text         RPS
+    Sleep                         1s
     RPA.Windows.Click             Salvar
     Sleep                         1s
     RPA.Windows.Click             Sim
 
-Salvo a Impressão    
+Salvo a Impressão
+    [Arguments]    ${nome_do_arquivo}    
     Sleep                         5s
-    RPA.Desktop.Type Text         Impressão do bilhete
+    RPA.Desktop.Type Text         ${nome_do_arquivo}    
     RPA.Windows.Click             Salvar
     Sleep                         1s
     RPA.Windows.Click             Sim
+    Sleep                         1s
+Salvo a Impressão (Sem Sim)
+    [Arguments]    ${nome_do_arquivo}    
+    Sleep                         5s
+    RPA.Desktop.Type Text         ${nome_do_arquivo}    
+    RPA.Windows.Click             Salvar
     Sleep                         1s
 
 Salvo a Reimpressão  
@@ -298,6 +400,16 @@ Fechar caixa caso esteja aberto
     Caixa Operador            
     RPA.Windows.Click         Abertura / Fechamento                                                                                
     END
+
+Consultar ultimo registro
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
+    Sleep                     1s
+    RPA.Desktop.Press Keys    F6
+    RPA.Desktop.Press Keys    Down
+    RPA.Desktop.Press Keys    CTRL    End
+    Sleep                     1s
+    RPA.Windows.Click         Confirmar
 
 Abrir arquivo
     [Arguments]    ${Caminho_arquivo}    ${nome_Arquivo_com_o_tipo}
@@ -359,3 +471,39 @@ Caso aconteca erro 2
         Run Keyword If Test Failed    Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
         Run Keyword If Test Failed    Encerrar Tudo
         Run Keyword If Test Failed    Iniciar sessao    ${nome_exe}
+
+
+Somar Tempos
+    [Arguments]    ${tempo1}    ${tempo2}
+    
+    @{t1}=    Split String    ${tempo1}    :
+    @{t2}=    Split String    ${tempo2}    :
+
+    ${h1}=    Convert To Integer    ${t1[0]}
+    ${m1}=    Convert To Integer    ${t1[1]}
+    ${s1}=    Convert To Integer    ${t1[2]}
+
+    ${h2}=    Convert To Integer    ${t2[0]}
+    ${m2}=    Convert To Integer    ${t2[1]}
+    ${s2}=    Convert To Integer    ${t2[2]}
+
+    ${total1}=    Evaluate    (${h1}*3600 + ${m1}*60 + ${s1})
+    ${total2}=    Evaluate    (${h2}*3600 + ${m2}*60 + ${s2})
+    ${total}=     Evaluate    ${total1} + ${total2}
+
+    ${horas}=     Evaluate    int(${total} / 3600)
+    ${resto}=     Evaluate    ${total} % 3600
+    ${minutos}=   Evaluate    int(${resto} / 60)
+    ${segundos}=  Evaluate    ${resto} % 60
+
+    ${resultado}=    Evaluate    '{:02}:{:02}'.format(${horas}, ${minutos})
+    RETURN    ${resultado}
+
+Formatar Data Para DD/MM/AAAA
+    [Arguments]    @{data_lista}
+    ${dia}=       Convert To Integer    ${data_lista[2]}
+    ${mes}=       Convert To Integer    ${data_lista[1]}
+    ${ano}=       Convert To Integer    ${data_lista[0]}
+    
+    ${data_formatada}=    Evaluate    '{:0>2}/{:0>2}/{:04}'.format(int(${dia}), int(${mes}), int(${ano}))
+    RETURN    ${data_formatada}

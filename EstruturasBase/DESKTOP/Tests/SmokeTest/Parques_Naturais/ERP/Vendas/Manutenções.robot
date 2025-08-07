@@ -565,7 +565,7 @@ Documentos Fiscais > ECF > Mapa Resumo (Redução Z)
     BaseDesktop.Screenshot    Mapa Resumo da ECF (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Mapa Resumo (Redução Z)
     Fechar com Sim
 
-# TODO:Ajustar o ambiente para testar.
+
 Documentos Fiscais > MDF-e > Manifesto de Documentos Fiscais
     [Teardown]                Caso aconteça erro           ${Caminho_Screenshots}Documentos Fiscais/MDF-e/                         Manifesto de Documentos Fiscais
     Manutenções
