@@ -2,7 +2,7 @@
 Documentation       Suite de teste do front
 #Uma suite de teste é basicamente onde ira rodar os tester, que ira puxar as funções e executar em tela
 
-Resource        C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
+Resource        ../Resources/BaseDesktop.robot
 #Resource é basicamente onde fazemos o carregamento das imagens o inicio e o termino da sessao de testes.
 #
 
