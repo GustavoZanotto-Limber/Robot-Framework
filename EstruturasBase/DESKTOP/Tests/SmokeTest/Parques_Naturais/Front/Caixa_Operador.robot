@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Front
-Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
+Resource         ../../../../Resources/BaseDesktop.robot
 Resource         ../../../../Resources/Keywords.robot
 Suite Setup      Iniciar sessao     ${nome_exe}
 Suite Teardown   Encerrar Tudo

@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Testes regressivos: Impressão de Bilhete e Reimpressão de bilhetes
-Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
+Resource         ../../Resources/BaseDesktop.robot
 Resource         ../../Resources/Keywords.robot
 Suite Setup      Iniciar sessao e abrir caixa    ${nome_exe}
 Suite Teardown   Encerrar Tudo
