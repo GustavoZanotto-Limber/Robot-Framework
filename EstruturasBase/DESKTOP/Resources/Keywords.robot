@@ -11,7 +11,7 @@ Resource   BaseDesktop.robot
 
 *** Variables ***
 ${qtd_vagas}
-
+${Espaço}=    ${SPACE}
 *** Keywords ***
 
 # ****** BDDs **********
@@ -126,7 +126,18 @@ Dado que realizei um novo cadastro de Sangria E Suprimento
     @{tempos}=  Create List    ${data_formatada}    ${tempo_final1}    ${tempo_final2}    (-) Sangria    (+) Suprimento
     RETURN    @{tempos}
     
+Dado que estou na tela de cadastro do PDV
+    Ir para:            PDV    0    Cadastro de PDV (1)    PDV
     
+Dado que estou na tela do caixa operador
+    Ir para:           Abertura / Fechamento  4    Controle de Caixa (1)
+
+Dado que abri o caixa operador E realizei uma venda
+    Dado que estou na tela do caixa operador
+    Quando abro o caixa operador
+    Dado que realizei uma venda 
+    Quando finalizo o pagamento    1
+
 #----------------------------------------QUANDO----------------------------------------
 Quando imprimo o bilhete
     Salvo a Impressão do RPS
@@ -190,7 +201,7 @@ Quando salvo a edição do Suprimento/Sangria
     RPA.Windows.Click         Confirmar
 
 Quando vou consultar o histórico de operações do caixa
-    Ir para:                Fechamento de Caixa    3
+    Ir para:                Fechamento de Caixa    3    Fechamento de Caixa $Espaço(1)
     Repetidor de teclas     enter                  2
     Consultar Cadastros     1
     Repetidor de teclas     enter                  2
@@ -208,7 +219,7 @@ Quando vou consultar o histórico de operações do caixa
     RPA.Desktop.Press Keys  Enter
     
 Quando vou consultar o histórico de operações do caixa por turno
-    Ir para:                Abertura / Fechamento  4
+    Ir para:                Abertura / Fechamento  4    Controle de Caixa (1)
     RPA.Windows.Click       Fechar Caixa
     RPA.Windows.Click       Sim
     Sleep                   3s
@@ -216,7 +227,7 @@ Quando vou consultar o histórico de operações do caixa por turno
     Sleep                   3s
     RPA.Desktop.Press Keys  Enter 
     Sleep                   1s
-    Ir para:                Fechamento de Caixa    3
+    Ir para:                Fechamento de Caixa    3    Controle de Caixa (1)
     Repetidor de teclas     enter                  2
     Consultar Cadastros     1
     Sleep                   1s
@@ -234,6 +245,38 @@ Quando vou consultar o histórico de operações do caixa por turno
     Repetidor de teclas     TAB                   2
     Sleep                   1s
     RPA.Desktop.Press Keys  Enter
+
+Quando insiro as informaões para um novo cadastro de PDV
+    RPA.Windows.Click         Novo
+    RPA.Desktop.Type Text     PDV Automatizado
+    RPA.Desktop.Press Keys    Enter
+    RPA.Desktop.Type Text     1
+    RPA.Desktop.Press Keys    Enter
+    Repetidor de teclas em sequencia    Down    Enter    4
+    Repetidor de teclas       Tab               4
+    RPA.Desktop.Type Text     1
+    RPA.Desktop.Press Keys    Enter
+    RPA.Desktop.Type Text     1
+    RPA.Desktop.Press Keys    Enter
+
+Quando abro o caixa operador
+    Fechar caixa caso esteja aberto
+    Abrir Caixa
+
+Quando realizo a impressão do caixa
+    Fechar caixa caso esteja aberto
+    Abrir caixa
+    ${tempo}=   Fechar caixa e salvar a impressão
+    ${tempo_ajustado}=    Pegar Hora atual    ${tempo}
+    @{ano_mes_dia}=  Get Time	year month day 
+    ${data_formatada}=    Formatar Data Para DD/MM/AAAA    @{ano_mes_dia}
+    RETURN    ${tempo_ajustado}    ${data_formatada}    VALOR ABERTURA:    Total de Devolvidos    Valor Total Líquido    Total de Cancelamentos
+
+Quando Fecho o caixa operador E salvo a impressão
+    [Arguments]    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
+    Fechar caixa e salvar a impressão
+    ${texto_pdf}=    Pegar informações da 1° Pag. do arquivo    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
+    RETURN  ${texto_pdf}
 
 #----------------------------------------ENTÃO----------------------------------------
 Então valido a venda foi realizada com sucesso
@@ -301,7 +344,7 @@ Então valido se a impressão RPS saiu corretamente
 
 
 Então valido se a impressão saiu corretamente 2
-    [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}    @{texto_impressão}
+    [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}    ${texto_impressão}    ${texto_impressão2}=${None}
     Sleep                     1s
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
     Sleep                     6s
@@ -311,7 +354,15 @@ Então valido se a impressão saiu corretamente 2
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0
     ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
+    FOR    ${element}    IN    @{texto_impressão}
+        Should Contain      ${pagina1}        ${element}
+    END
     Should Contain            ${pagina1}             @{texto_impressão}
+    IF    ${texto_impressão2} != ${None}
+        FOR    ${element}    IN    @{texto_impressão2}
+        Should Contain      ${pagina1}        ${element}
+        END
+    END
     Sleep                     8s
     RPA.Desktop.Press Keys    Alt    F4
     Sleep                     3s
@@ -340,4 +391,30 @@ Então o sistema deve exibir corretamente todos os registros
     Sleep                     8s
     RPA.Desktop.Press Keys    Alt    F4
     Sleep                     3s
+    Fechar janela
+
+Então salvo o cadastro do PDV
+    RPA.Windows.Click         Confirmar
+    Sleep                     1s
+    Fechar janela
+    ${Erro}=                       Run Keyword And Ignore error     RPA.Windows.Get Element    Erro
+    IF    ${Erro} != ('FAIL', "ElementNotFound: Element not found with locator 'Erro'")
+         Fail                       Ocorreu um erro ao fechar a tela de PDV
+    END
+
+Então valido se o caixa foi aberto
+    Ir para:           Abertura / Fechamento  4    Controle de Caixa (1)
+    ${caixa_aberto}=          Run Keyword And Ignore error              RPA.Windows.Get Text    Fechar Caixa
+    IF  ${caixa_aberto} == (\'FAIL\', "ElementNotFound: Element not found with locator \'Fechar Caixa\'")
+        Fail    O caixa não foi aberto corretamente
+    END
+    Fechar janela
+
+Então valido se o caixa foi fechado corretamente
+    Ir para:           Abertura / Fechamento  4    Controle de Caixa (1)
+    Fechar caixa caso esteja aberto
+    ${caixa_aberto}=          Run Keyword And Ignore error              RPA.Windows.Get Text    Abrir Caixa
+    IF  ${caixa_aberto} == (\'FAIL\', "ElementNotFound: Element not found with locator \'Abrir Caixa\'")
+        Fail    O caixa não foi aberto corretamente
+    END
     Fechar janela

@@ -383,7 +383,7 @@ Transferência entre Terceiros (NF) > Transferência entre Terceiros
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Transferências entre Terceiros (NF) (1)    ${Caminho_Screenshots}Transferência entre Terceiros (NF)/Transferência entre Terceiro
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar Janela
 
 Transferência entre Terceiros (NF) > Transferências Pendentes
     ${nome_print}=     Set Variable     Transferências Pendentes

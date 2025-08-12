@@ -18,7 +18,7 @@ ${nome_exe}=    cde_win_compras
 
 Terceiros
     ${nome_print}=     Set Variable     Terceiros
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Get Text    Cadastro de Terceiros (1)
@@ -29,7 +29,7 @@ Terceiros
 
 Categorias de Terceiros
     ${nome_print}=     Set Variable     Categorias de Terceiros
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Categorias de Terceiros
     RPA.Windows.Get Text    Cadastro de Categorias de Terceiros (1)
@@ -61,7 +61,7 @@ Limite de Crédito
 
 Itens > Itens
     ${nome_print}=     Set Variable     Itens
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  I
@@ -319,7 +319,7 @@ Itens > Sementes > Variedade
 
 Setores
     ${nome_print}=     Set Variable     Setores
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest        
     Cadastros
     RPA.Windows.Click       Setores
     RPA.Windows.Get Text    Cadastro de Setores (1)
@@ -919,18 +919,18 @@ Financeiro > Portadores
 
 Financeiro > Formas de Pagamento
     ${nome_print}=     Set Variable     Formas de Pagamento
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest        
     Cadastros
     RPA.Windows.Click         Financeiro
     RPA.Desktop.Press Keys    F
-    RPA.Windows.Get Text      Formas de Pagamento (1)
+    RPA.Windows.Get Text      Formas de Pagamento (1)s
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot    Formas de Pagamento (1)    ${Caminho_Screenshots}Financeiro/Formas de Pagamento
     Fechar com Sim
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest        
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -941,7 +941,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest        
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
@@ -957,8 +957,8 @@ Parâmetros > Usuários
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
     RPA.Windows.Get Text      Cadastro de Usuários (1)
-    RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot                  Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
+    RPA.Windows.Click         Novo
+    BaseDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
     Fechar com Sim
 
 Parâmetros > Grupos Usuários
