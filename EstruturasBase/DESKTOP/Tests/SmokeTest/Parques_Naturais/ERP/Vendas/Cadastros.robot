@@ -935,15 +935,15 @@ Financeiro > Autorizadoras de Cartões
     RPA.Windows.Click         Sim
 
 
-Fiscal > Configuração Int. Contábil
-    ${nome_print}=     Set Variable     Configuração Int. Contábil
+Fiscal > Configuração Int. Contabil
+    ${nome_print}=     Set Variable     Configuração Int. Contabil
     [Tags]    Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    G
-    RPA.Windows.Get Text      Configuração para Integração Contábil (1)
+    RPA.Windows.Get Text      Configuração para Integração Contabil (1)
     RPA.Windows.Click         Cooperado
-    BaseDesktop.Screenshot    Configuração para Integração Contábil (1)    ${Caminho_Screenshots}Fiscal/Configuração Int. Contábil
+    BaseDesktop.Screenshot    Configuração para Integração Contabil (1)    ${Caminho_Screenshots}Fiscal/Configuração Int. Contabil
     Fechar com Sim
 
 Fiscal > Classificações Fiscais

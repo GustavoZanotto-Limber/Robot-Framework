@@ -42,7 +42,7 @@ Papel de Parede
 
 Configurar Menu Principal
     ${nome_print}=     Set Variable     Configurar Menu Principal
-    [Tags]     Balancas    Utilitários   SmokeTest
+    [Tags]     Balancas    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -50,7 +50,7 @@ Configurar Menu Principal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar Janela
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
@@ -85,7 +85,7 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]     Balancas    Utilitários   SmokeTest
+    [Tags]     Balancas    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -97,7 +97,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]     Balancas    Utilitários   SmokeTest
+    [Tags]     Balancas    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -106,12 +106,12 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar Janela
     
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]     Balancas    Utilitários   SmokeTest
-    Utilitários
+    [Tags]     Balancas    Utilitários   SmokeTest    
+    Utilitários    
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
     RPA.Desktop.Press Keys  0
@@ -119,7 +119,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar Janela
 
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas

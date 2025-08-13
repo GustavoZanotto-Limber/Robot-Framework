@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Smoke Test: Contábil
+Documentation    Smoke Test: Contabil
 Resource         ../../../../../Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
@@ -9,7 +9,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Contábil/Consultas/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Contabil/Consultas/    
 ${nome_print}
 ${nome_exe}=    cde_win_ctb
 *** Keywords ***
@@ -22,7 +22,7 @@ Consultas
 
 Lançamentos Diários
     ${nome_print}=     Set Variable     Lançamentos Diários
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Lançamentos Diários
     RPA.Windows.Get Text      Lançamentos Diários (1)
@@ -33,7 +33,7 @@ Lançamentos Diários
 
 Diferenças do Diário
     ${nome_print}=     Set Variable     Diferenças do Diário
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Diferenças do Diário
     RPA.Windows.Get Text      Diferenças do Diário (1)
@@ -43,7 +43,7 @@ Diferenças do Diário
 
 Planos de Contas
     ${nome_print}=     Set Variable     Planos de Contas
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Planos de Contas
     RPA.Windows.Get Text      Plano de Contas (1)
@@ -53,7 +53,7 @@ Planos de Contas
 
 Razão de Contas
     ${nome_print}=     Set Variable     Razão de Contas
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Razão de Contas
     RPA.Windows.Get Text      Razão de Contas (1)
@@ -64,7 +64,7 @@ Razão de Contas
 
 Balancete
     ${nome_print}=     Set Variable     Balancete
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Balancete
     RPA.Windows.Get Text      Balancete (1)
@@ -75,7 +75,7 @@ Balancete
 
 Depreciação de Bens do Ativo Imobilizado
     ${nome_print}=     Set Variable     Depreciação de Bens do Ativo Imobilizado
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Depreciação de Bens do Ativo Imobilizado
     RPA.Windows.Get Text      Consulta Depreciação de Bens do Ativo Imobilizado (1)
@@ -85,7 +85,7 @@ Depreciação de Bens do Ativo Imobilizado
 
 Centro de Custos
     ${nome_print}=     Set Variable     Centro de Custos
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Centro de Custos
     RPA.Windows.Get Text      Centro de Custos (1)
@@ -96,7 +96,7 @@ Centro de Custos
 
 Rateio de Centro de Custos
     ${nome_print}=     Set Variable     Rateio de Centro de Custos
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Rateio de Centro de Custos
     RPA.Windows.Get Text      Consulta de Rateio de Centro de Custos (1) 
@@ -107,7 +107,7 @@ Rateio de Centro de Custos
 
 Consumo de Adiantamentos
     ${nome_print}=     Set Variable     Consumo de Adiantamentos
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consumo de Adiantamentos
     RPA.Windows.Get Text      Consulta de Consumo de Adiantamentos (1) 
@@ -117,7 +117,7 @@ Consumo de Adiantamentos
 
 Consultas Personalizadas
     ${nome_print}=     Set Variable     Consultas Personalizadas
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1) 
@@ -126,71 +126,71 @@ Consultas Personalizadas
     RPA.Windows.Click         Fechar
     Fechar janela
 
-Sped Contábil > Gerar Sped Contábil
-    ${nome_print}=     Set Variable     Gerar Sped Contábil
-    [Tags]     Contábil    Consultas   SmokeTest
+Sped Contabil > Gerar Sped Contabil
+    ${nome_print}=     Set Variable     Gerar Sped Contabil
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
-    RPA.Windows.Click         Sped Contábil
+    RPA.Windows.Click         Sped Contabil
     RPA.Desktop.Press Keys    G
-    RPA.Windows.Get Text      SPED Contábil (1) 
+    RPA.Windows.Get Text      SPED Contabil (1) 
     RPA.Windows.Click         Registro 0007
-    BaseDesktop.Screenshot    SPED Contábil (1)     ${Caminho_Screenshots}Sped Contábil/Gerar Sped Contábil
+    BaseDesktop.Screenshot    SPED Contabil (1)     ${Caminho_Screenshots}Sped Contabil/Gerar Sped Contabil
     Fechar janela
 
-Sped Contábil > Conglomerados Econômicos
+Sped Contabil > Conglomerados Econômicos
     ${nome_print}=     Set Variable     Conglomerados Econômicos
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
-    RPA.Windows.Click         Sped Contábil
+    RPA.Windows.Click         Sped Contabil
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de Conglomerados Econômicos (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de Conglomerados Econômicos (1)     ${Caminho_Screenshots}Sped Contábil/Conglomerados Econômicos
+    BaseDesktop.Screenshot    Cadastro de Conglomerados Econômicos (1)     ${Caminho_Screenshots}Sped Contabil/Conglomerados Econômicos
     Fechar janela
     RPA.Windows.Click         Sim
 
-Sped Contábil > Conglomerados Eliminações
+Sped Contabil > Conglomerados Eliminações
     ${nome_print}=     Set Variable     Conglomerados Eliminações
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
-    RPA.Windows.Click         Sped Contábil
+    RPA.Windows.Click         Sped Contabil
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Eliminações de Conglomerados (1) 
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Eliminações de Conglomerados (1)     ${Caminho_Screenshots}Sped Contábil/Conglomerados Eliminações
+    BaseDesktop.Screenshot    Eliminações de Conglomerados (1)     ${Caminho_Screenshots}Sped Contabil/Conglomerados Eliminações
     RPA.Windows.Click         Cancelar
     Fechar janela
 
-Sped Contábil > Cadastro de SCP
+Sped Contabil > Cadastro de SCP
     ${nome_print}=     Set Variable     Cadastro de SCP
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
-    RPA.Windows.Click         Sped Contábil
+    RPA.Windows.Click         Sped Contabil
     RPA.Desktop.Press Keys    A
-    RPA.Windows.Get Text      Cadastro de SCP para Sped Contábil (1) 
+    RPA.Windows.Get Text      Cadastro de SCP para Sped Contabil (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    Cadastro de SCP para Sped Contábil (1)     ${Caminho_Screenshots}Sped Contábil/Cadastro de SCP
+    BaseDesktop.Screenshot    Cadastro de SCP para Sped Contabil (1)     ${Caminho_Screenshots}Sped Contabil/Cadastro de SCP
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click        Fechar
 
-Sped Contábil > Transferência de Plano de Contas
+Sped Contabil > Transferência de Plano de Contas
     ${nome_print}=     Set Variable     Transferência de Plano de Contas
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
-    RPA.Windows.Click         Sped Contábil
+    RPA.Windows.Click         Sped Contabil
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Transferência de Plano de Contas (1)
     RPA.Desktop.Press Keys  Enter
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    Transferência de Plano de Contas (1)     ${Caminho_Screenshots}Sped Contábil/Transferência de Plano de Contas
+    BaseDesktop.Screenshot    Transferência de Plano de Contas (1)     ${Caminho_Screenshots}Sped Contabil/Transferência de Plano de Contas
     RPA.Windows.Click         Confirmar
     Fechar janela
 
 Consulta CMV por período
     ${nome_print}=     Set Variable     Consulta CMV por período
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consulta CMV por período
     RPA.Windows.Get Text      Consulta CMV por período (1) 
@@ -201,7 +201,7 @@ Consulta CMV por período
 
 Consulta de Alterações de Lançamentos
     ${nome_print}=     Set Variable     Consulta de Alterações de Lançamentos
-    [Tags]     Contábil    Consultas   SmokeTest
+    [Tags]     Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consulta de Alterações de Lançamentos
     RPA.Windows.Get Text      Consulta Log de Lançamentos Contábeis (1) 

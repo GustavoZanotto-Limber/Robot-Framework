@@ -10,6 +10,8 @@ Library    Process
 Library    RPA.Excel.Files
 Library    RPA.Excel.Application
 Library    String
+Library    Collections
+Library    RPA.PDF
 *** Variables ***
 ${front}
 ${nome_exe}
@@ -87,11 +89,41 @@ Consultas Front
     RPA.Windows.Click      ${janela}
 
 Ir para:
-    [Arguments]    ${janela}    ${sessao}    
+    [Arguments]    ${janela}    ${sessao}    ${nome_tela}   ${sub_sessão1}=${None}    ${sub_sessão2}=${None}    ${sub_sessão3}=${None}
     Cadastros
     repetidor de teclas    right    ${sessao}
+    IF    $sub_sessão1 != None
+        RPA.Windows.Click   ${sub_sessão1}
+        IF    $sub_sessão2 != None
+            RPA.Windows.Click  ${sub_sessão2}
+            IF    $sub_sessão3 != None
+                RPA.Windows.Click  ${sub_sessão3}
+            END
+        END      
+    END
     RPA.Windows.Click      ${janela}
+    RPA.Windows.Get Text    ${nome_tela}
 
+Repetidor de teclas em sequencia
+    [Arguments]               ${tecla1}                  ${tecla2}                       ${quantidade_de_clicks}        ${quantidade_de_repetições_tecla1}=${None}    ${quantidade_de_repetições_tecla2}=${None}
+    FOR                       ${quantidade_de_clicks}    IN RANGE                   1    ${quantidade_de_clicks}+1
+        IF    ${quantidade_de_repetições_tecla1} != None
+            FOR                       ${quantidade_de_repetições_tecla1}    IN RANGE                   1    ${quantidade_de_repetições_tecla1}+1
+                RPA.Desktop.Press Keys    ${tecla1}  
+            END
+        ELSE
+            RPA.Desktop.Press Keys    ${tecla1}  
+        END
+        
+        IF    ${quantidade_de_repetições_tecla2} != None
+            FOR                       ${quantidade_de_repetições_tecla2}    IN RANGE                   1    ${quantidade_de_repetições_tecla2}+1
+                RPA.Desktop.Press Keys    ${tecla2}  
+            END
+        ELSE
+            RPA.Desktop.Press Keys    ${tecla2}  
+        END
+
+    END
 Capturar mensagem em tela
     [Arguments]     ${caixa_de_mensagem}
     Set Anchor      ${caixa_de_mensagem}
@@ -356,6 +388,20 @@ Abrir caixa operador
     RPA.Windows.Click    Abertura / Fechamento
     Fechar caixa caso esteja aberto
     Abrir Caixa
+
+Fechar caixa e salvar a impressão
+    Ir para:                  Abertura / Fechamento  4    Controle de Caixa (1)
+    RPA.Windows.Click         Fechar Caixa
+    ${tempo}=                 Get Time
+    RPA.Windows.Click         Sim
+    Sleep                     3s
+    RPA.Desktop.Type Text     Fechamento de Caixa
+    RPA.Desktop.Press Keys    Enter
+    Sleep                     3s
+    RPA.Windows.Click         Sim
+    Sleep                     3s
+    RPA.Desktop.Press Keys    Enter
+    RETURN    ${tempo}
  
 Salvo a impressão do RPS
     Sleep                         6s
@@ -373,12 +419,6 @@ Salvo a Impressão
     Sleep                         1s
     RPA.Windows.Click             Sim
     Sleep                         1s
-Salvo a Impressão (Sem Sim)
-    [Arguments]    ${nome_do_arquivo}    
-    Sleep                         5s
-    RPA.Desktop.Type Text         ${nome_do_arquivo}    
-    RPA.Windows.Click             Salvar
-    Sleep                         1s
 
 Salvo a Reimpressão  
     [Arguments]    ${nome_do_arquivo}
@@ -389,6 +429,7 @@ Salvo a Reimpressão
     RPA.Windows.Click             Sim
 
 Fechar caixa caso esteja aberto
+    Sleep                     2s
     ${caixa_aberto}=          Run Keyword And Ignore error              RPA.Windows.Get Text    Fechar Caixa
     IF                        ${caixa_aberto} != (\'FAIL\', "ElementNotFound: Element not found with locator \'Fechar Caixa\'")
     RPA.Windows.Click         Fechar Caixa
@@ -464,6 +505,12 @@ Caso aconteça erro
     
     # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          Enter  
      
+Pegar Hora atual
+    [Arguments]    ${tempo}
+    ${tempo1_split}=    Split String    ${tempo}    ${SPACE}
+    ${hora_minuto_segundo1}=    Get From List    ${tempo1_split}    1 
+    ${tempo_final1}=    Somar Tempos    ${hora_minuto_segundo1}    00:00:00
+    RETURN    ${tempo_final1}
 
 Caso aconteca erro 2
     [Arguments]     ${Caminho_Screenshots}        ${nome_print}    ${nome_exe}
@@ -507,3 +554,16 @@ Formatar Data Para DD/MM/AAAA
     
     ${data_formatada}=    Evaluate    '{:0>2}/{:0>2}/{:04}'.format(int(${dia}), int(${mes}), int(${ano}))
     RETURN    ${data_formatada}
+
+Pegar informações da 1° Pag. do arquivo
+    [Arguments]     ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
+    Sleep                     1s
+    Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
+    Sleep                     6s
+    RPA.Windows.Get Element   ${Nome_da_tela}
+    BaseDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
+    ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}  
+    ${keys}=                  Get Dictionary Keys    ${texto}
+    ${primeira}=              Get From List          ${keys}    0
+    ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
+    RETURN    ${pagina1}

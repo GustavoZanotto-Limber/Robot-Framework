@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Smoke Test: Contábil
+Documentation    Smoke Test: Contabil
 Resource         ../../../../../Resources/BaseDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo

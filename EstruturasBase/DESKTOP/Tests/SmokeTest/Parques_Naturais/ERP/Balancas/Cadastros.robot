@@ -136,7 +136,7 @@ Conf. Movimentação de Estoque de Produtos
 
 Configuração de Troca de Produto p/ emissão de NF
     ${nome_print}=     Set Variable     Configuração de Troca de Produto p_ emissão de NF
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]     Balancas    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Configuração de Troca de Produto p/ emissão de NF
     RPA.Windows.Get Text      Configuração de Troca de Produto p/ emissão de NF (1)
@@ -147,7 +147,7 @@ Configuração de Troca de Produto p/ emissão de NF
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable      Empresas
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]     Balancas    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -159,7 +159,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable      Estabelecimentos
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]     Balancas    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
