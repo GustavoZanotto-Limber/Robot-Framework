@@ -129,15 +129,15 @@ Verifica transações abertas
     BaseDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
 
-Importar Arquivos Transmitidos > SPED Contábil (ECD)
-    ${nome_print}=     Set Variable     SPED Contábil (ECD)
+Importar Arquivos Transmitidos > SPED Contabil (ECD)
+    ${nome_print}=     Set Variable     SPED Contabil (ECD)
     [Tags]     Fiscal    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Importar Arquivos Transmitidos
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Importar Arquivos SPED - ECD (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Importar Arquivos SPED - ECD (1)    ${Caminho_Screenshots}SPED Contábil (ECD)
+    BaseDesktop.Screenshot  Importar Arquivos SPED - ECD (1)    ${Caminho_Screenshots}SPED Contabil (ECD)
     Fechar com Sim
 
 Reprocessar Contas ECD

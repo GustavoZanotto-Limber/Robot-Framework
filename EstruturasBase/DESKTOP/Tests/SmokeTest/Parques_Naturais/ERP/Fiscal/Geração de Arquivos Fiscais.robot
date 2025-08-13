@@ -46,15 +46,15 @@ SPED Contribuições (PIS/COFINS)
     Fechar janela
     RPA.Windows.Click         OK
 
-SPED Contábil (ECD)
-    ${nome_print}=     Set Variable     SPED Contábil (ECD)
+SPED Contabil (ECD)
+    ${nome_print}=     Set Variable     SPED Contabil (ECD)
     [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
-    Geração de Arquivos Fiscais                SPED Contábil (ECD)
-    RPA.Windows.Get Text      SPED Contábil (1)
+    Geração de Arquivos Fiscais                SPED Contabil (ECD)
+    RPA.Windows.Get Text      SPED Contabil (1)
     RPA.Desktop.Press Keys    Shift    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    SPED Contábil (1)    ${Caminho_Screenshots}SPED Contábil (ECD)
+    BaseDesktop.Screenshot    SPED Contabil (1)    ${Caminho_Screenshots}SPED Contabil (ECD)
     RPA.Windows.Click         Confirmar
     Fechar janela
 
