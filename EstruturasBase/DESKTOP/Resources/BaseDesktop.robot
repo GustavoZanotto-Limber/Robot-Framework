@@ -183,7 +183,7 @@ Exportar bilhetes vendidos para bloco de notas
     repetidor de teclas        down    1
     RPA.Desktop.Press Keys     enter
     Sleep                      5s
-    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
+    ${texto}=    RPA.Windows.Get Value      Editor de texto		
     RETURN    ${texto}
 
 Analisa texto dos bilhetes vendidos
@@ -460,6 +460,7 @@ Abrir arquivo
     Run Keyword and Ignore error     RPA.Windows.Click         OK
     Sleep                     1s
     RPA.Desktop.Type Text     ${Caminho_arquivo}${nome_Arquivo_com_o_tipo}
+    Sleep                     2s
     RPA.Desktop.Press Keys    enter
 
 
