@@ -23,7 +23,7 @@ Cenário 1: Cadastro e configuração de um novo PDV
     ${nome_print}=    Set Variable     Cadastro e configuração de um novo PDV
     [Tags]    Testes Funcionais    LB-43
     Dado que estou na tela de cadastro do PDV
-    Quando insiro as informaões para um novo cadastro de PDV
+    Quando insiro as informações para um novo cadastro de PDV
     Então salvo o cadastro do PDV
 
 	
@@ -53,7 +53,6 @@ Cenário 4: Geração e impressão do fechamento de caixa
 Cenário 5: Fechamento dos caixas e validar a geração da receita (módulo financeiro)
     ${nome_print}=    Set Variable     Fechamento dos caixas e validar a geração da receita
     [Tags]    Testes Funcionais    LB-43
-    Dado que abri o caixa operador E realizei uma venda
-    ${texto}=    Quando Fecho o caixa operador E salvo a impressão    ${Caminho_arquivos}    Fechamento de Caixa.pdf    Fechamento de Caixa.pdf - WPS Office    ${Caminho_Screenshots}     Fechamento de Caixa
-    Log    ${texto}
-    #Então abro o financeiro e valido as informações
+    #Dado que abri o caixa operador E realizei uma venda
+    ${texto}=    Quando Fecho o caixa operador E pego o Resumo Geral    ${Caminho_arquivos}    Resumo Geral.pdf    Resumo Geral.pdf - WPS Office    ${Caminho_Screenshots}     Resumo Geral
+    Então abro o financeiro e valido as informações   ${texto}
