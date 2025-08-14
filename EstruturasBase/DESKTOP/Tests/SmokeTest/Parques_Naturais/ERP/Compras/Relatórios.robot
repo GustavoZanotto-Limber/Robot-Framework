@@ -51,7 +51,7 @@ Compras/Aquisição de Serviços - Sintético/Fornecedor
 
 Compras/Aquisição de Serviços - Sintético/Forn/Item
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Forn_Item
-    [Tags]     Compras    Relatórios   SmokeTest        Testes
+    [Tags]     Compras    Relatórios   SmokeTest        
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Forn/Item
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor / Item ${SPACE}(1)
@@ -124,7 +124,7 @@ Compras/Aquisição de Serviços - CFOP
 
 Lançamento de Entradas
     ${nome_print}=     Set Variable     Lançamento de Entradas
-    [Tags]     Compras    Relatórios   SmokeTest    Testes
+    [Tags]     Compras    Relatórios   SmokeTest    
     Relatórios
     RPA.Windows.Click       Lançamento de Entradas
     RPA.Windows.Get Text  	Relatório de Lançamentos de Entradas ${SPACE}(1)
