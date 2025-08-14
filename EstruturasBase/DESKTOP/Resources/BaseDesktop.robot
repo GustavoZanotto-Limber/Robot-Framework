@@ -92,6 +92,7 @@ Ir para:
     [Arguments]    ${janela}    ${sessao}    ${nome_tela}   ${sub_sessão1}=${None}    ${sub_sessão2}=${None}    ${sub_sessão3}=${None}
     Cadastros
     repetidor de teclas    right    ${sessao}
+    Sleep                1s
     IF    $sub_sessão1 != None
         RPA.Windows.Click   ${sub_sessão1}
         IF    $sub_sessão2 != None
@@ -476,6 +477,20 @@ Repetidor de 2 teclas
     RPA.Desktop.Press Keys    ${tecla}             ${tecla2}
     END
 
+Salvar arquivo    
+    [Arguments]    ${URL_nome}    ${tipo_arquivo}
+    RPA.Windows.Click       Arquivo
+    RPA.Windows.Click       Abrir
+    Repetidor de teclas     Down                   ${tipo_arquivo}
+    Sleep                   1s
+    RPA.Desktop.Press Keys  Enter
+    RPA.Desktop.Press Keys  Shift    Tab
+    Sleep                   1s
+    RPA.Desktop.Type Text   ${URL_nome}
+    Repetidor de teclas     TAB                   2
+    Sleep                   1s
+    RPA.Desktop.Press Keys  Enter
+
 Encerrar Tudo
     RPA.Desktop.Close All Applications
 
@@ -512,6 +527,12 @@ Pegar Hora atual
     ${hora_minuto_segundo1}=    Get From List    ${tempo1_split}    1 
     ${tempo_final1}=    Somar Tempos    ${hora_minuto_segundo1}    00:00:00
     RETURN    ${tempo_final1}
+
+Dividir Texto
+    [Arguments]    ${texto}    ${onde_dividir}    ${N_ao_vetor}
+    ${texto_split1}=    Split String    ${texto}    ${onde_dividir}
+    ${texto_final1}=    Get From List    ${texto_split1}    ${N_ao_vetor} 
+    RETURN    ${texto_final1}
 
 Caso aconteca erro 2
     [Arguments]     ${Caminho_Screenshots}        ${nome_print}    ${nome_exe}
@@ -568,3 +589,10 @@ Pegar informações da 1° Pag. do arquivo
     ${primeira}=              Get From List          ${keys}    0
     ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
     RETURN    ${pagina1}
+
+Gerar aquivo de resumo Geral
+    Ir para:    Resumo Geral            3            Resumo de Movimentação (1)
+    Repetidor de teclas                 enter        3
+    Repetidor de teclas em sequencia    1            Enter        1
+    Repetidor de teclas                 enter        1
+    Salvar arquivo                      C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Resumo Geral    2

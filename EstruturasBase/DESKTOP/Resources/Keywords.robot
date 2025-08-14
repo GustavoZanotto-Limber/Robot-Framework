@@ -234,19 +234,9 @@ Quando vou consultar o histórico de operações do caixa por turno
     Consultar ultimo registro
     RPA.Desktop.Press Keys  Enter 
     Sleep                   1s
-    RPA.Windows.Click       Arquivo
-    RPA.Windows.Click       Abrir
-    Repetidor de teclas     Down                   5
-    Sleep                   1s
-    RPA.Desktop.Press Keys  Enter
-    RPA.Desktop.Press Keys  Shift    Tab
-    Sleep                   1s
-    RPA.Desktop.Type Text   C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Relatório de Caixa por Turno
-    Repetidor de teclas     TAB                   2
-    Sleep                   1s
-    RPA.Desktop.Press Keys  Enter
-
-Quando insiro as informaões para um novo cadastro de PDV
+    Salvar arquivo          C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Relatório de Caixa por Turno    5
+    
+Quando insiro as informações para um novo cadastro de PDV
     RPA.Windows.Click         Novo
     RPA.Desktop.Type Text     PDV Automatizado
     RPA.Desktop.Press Keys    Enter
@@ -272,11 +262,13 @@ Quando realizo a impressão do caixa
     ${data_formatada}=    Formatar Data Para DD/MM/AAAA    @{ano_mes_dia}
     RETURN    ${tempo_ajustado}    ${data_formatada}    VALOR ABERTURA:    Total de Devolvidos    Valor Total Líquido    Total de Cancelamentos
 
-Quando Fecho o caixa operador E salvo a impressão
+Quando Fecho o caixa operador E pego o Resumo Geral
     [Arguments]    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
     Fechar caixa e salvar a impressão
+    Gerar aquivo de resumo Geral
     ${texto_pdf}=    Pegar informações da 1° Pag. do arquivo    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
-    RETURN  ${texto_pdf}
+    ${valor_final}=    Dividir Texto    ${texto_pdf}    R$    2
+    RETURN  ${valor_final}
 
 #----------------------------------------ENTÃO----------------------------------------
 Então valido a venda foi realizada com sucesso
@@ -418,3 +410,11 @@ Então valido se o caixa foi fechado corretamente
         Fail    O caixa não foi aberto corretamente
     END
     Fechar janela
+
+Então abro o financeiro e valido as informações
+    [Arguments]    ${texto}
+    Iniciar sessao    cde_win_fin
+    Ir para:    Geração de Receitas Mapa Resumo    6    Geração de receitas pela redução Z (1)    Geração de Receitas Mapa Resumo
+    Repetidor de teclas                 enter    1
+    Repetidor de teclas em sequencia    space    enter    2
+    RPA.Windows.Click                   Carregar
