@@ -19,14 +19,14 @@ ${nome_print}
 
 Cenário 1: Emissão de Bilhete
     ${nome_print}=    Set Variable     Emissão de Bilhete
-    [Tags]    Testes Funcionais    LB-51   
+    [Tags]    Testes_Funcionais    LB-51   
     Dado que realizei uma venda
     Quando imprimo o bilhete
     Então valido se a impressão saiu corretamente   ${Caminho_arquivos}   Impressão do Bilhete.pdf    Impressão do Bilhete.pdf - WPS Office    ${Caminho_Screenshots}        Cenário Emissão de Bilhete
 
 Cenário 2: Reimpressão de Bilhete
     ${nome_print}=    Set Variable     Reimpressão de Bilhete
-    [Tags]    Testes Funcionais    LB-51   
+    [Tags]    Testes_Funcionais    LB-51   
     Dado que realizei uma venda    
     Quando imprimo o bilhete
     #E
@@ -35,7 +35,7 @@ Cenário 2: Reimpressão de Bilhete
 
 Cenário 3: Reimpressão de RPS
     ${nome_print}=    Set Variable     Reimpressão de RPS
-    [Tags]    Testes Funcionais    LB-51     
+    [Tags]    Testes_Funcionais    LB-51     
     Dado que realizei uma venda    
     Quando imprimo o bilhete
     #E
