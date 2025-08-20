@@ -52,15 +52,8 @@ Cenário 4: Geração e impressão do fechamento de caixa
     
 Cenário 5: Fechamento dos caixas e validar a geração da receita (módulo financeiro)
     ${nome_print}=    Set Variable     Fechamento dos caixas e validar a geração da receita
-<<<<<<< HEAD
-    [Tags]    Testes_Funcionais    LB-43
-    Dado que abri o caixa operador E realizei uma venda
-    ${texto}=    Quando Fecho o caixa operador E salvo a impressão    ${Caminho_arquivos}    Fechamento de Caixa.pdf    Fechamento de Caixa.pdf - WPS Office    ${Caminho_Screenshots}     Fechamento de Caixa
-    Log    ${texto}
-    #Então abro o financeiro e valido as informações
-=======
     [Tags]    Testes Funcionais    LB-43
     #Dado que abri o caixa operador E realizei uma venda
     ${texto}=    Quando Fecho o caixa operador E pego o Resumo Geral    ${Caminho_arquivos}    Resumo Geral.pdf    Resumo Geral.pdf - WPS Office    ${Caminho_Screenshots}     Resumo Geral
     Então abro o financeiro e valido as informações   ${texto}
->>>>>>> 9e63f49456a5efaff833a84a4f5172399872503e
+

@@ -213,7 +213,7 @@ Quando vou consultar o histórico de operações do caixa
     RPA.Desktop.Press Keys  Enter
     RPA.Desktop.Press Keys  Shift    Tab
     Sleep                   1s
-    RPA.Desktop.Type Text   C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Relatório de Caixa
+    RPA.Desktop.Type Text   C:\\Users\\testes\\Documents\\Testes Regressivos\\Relatório de Caixa
     Repetidor de teclas     TAB                   2
     Sleep                   1s
     RPA.Desktop.Press Keys  Enter
@@ -234,7 +234,7 @@ Quando vou consultar o histórico de operações do caixa por turno
     Consultar ultimo registro
     RPA.Desktop.Press Keys  Enter 
     Sleep                   1s
-    Salvar arquivo          C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Relatório de Caixa por Turno    5
+    Salvar arquivo          C:\\Users\\testes\\Documents\\Testes Regressivos\\Relatório de Caixa por Turno    5
     
 Quando insiro as informações para um novo cadastro de PDV
     RPA.Windows.Click         Novo
@@ -332,7 +332,7 @@ Então valido se a impressão RPS saiu corretamente
     Should Contain            ${pagina1}             PDV: 1 Operador: 1-Usuário
     Sleep                     7s
     RPA.Desktop.Press Keys    Alt    F4
-    Fechar janela
+    #Fechar janela
 
 
 Então valido se a impressão saiu corretamente 2

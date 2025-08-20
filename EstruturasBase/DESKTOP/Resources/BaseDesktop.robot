@@ -193,6 +193,7 @@ Analisa texto dos bilhetes vendidos
     FOR    ${item}    IN    @{Texto_no_bilhete}
     Should Contain    ${bilhetes_vendidos}        ${item}     
     END
+    Sleep                     1s
     RPA.Desktop.Press Keys    Alt    F4
 
 Analisa texto da forma de pagamento (contém)
@@ -218,7 +219,7 @@ Exportar pagamentos da venda para bloco de notas
     repetidor de teclas        down    1
     RPA.Desktop.Press Keys     enter
     Sleep                      5s
-    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
+    ${texto}=    RPA.Windows.Get Value      Editor de texto		
     RETURN    ${texto}
 
 Rolar barra até o Final
@@ -331,12 +332,15 @@ Selecionar o bilhete e retornar quantidade de vagas
     
     
 Coleta quantidade de vagas atraves da planilha
+    Sleep                      1s 
     RPA.Desktop.Press Mouse Button    Right
     RPA.Desktop.Release Mouse Button    Right
     Repetidor de teclas        Down    4
+    Sleep                      1s 
     RPA.Desktop.Press Keys     enter
     Sleep                      1s        
     Repetidor de teclas        down    4
+    Sleep                      1s 
     RPA.Desktop.Press Keys     enter
     Sleep                      10s
     Repetidor de teclas        Right    3
@@ -381,7 +385,9 @@ Selecionar o bilhete e o convênio
 
 Finalizar compra 
     RPA.Desktop.Press Keys    F5
+    Sleep                     1s
     RPA.Desktop.Press Keys    space
+    Sleep                     1s
     RPA.Desktop.Press Keys    enter
     
 Abrir caixa operador
@@ -595,4 +601,4 @@ Gerar aquivo de resumo Geral
     Repetidor de teclas                 enter        3
     Repetidor de teclas em sequencia    1            Enter        1
     Repetidor de teclas                 enter        1
-    Salvar arquivo                      C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Resumo Geral    2
+    Salvar arquivo                      C:\\Users\\testes\\Documents\\Testes Regressivos\\Resumo Geral    2
