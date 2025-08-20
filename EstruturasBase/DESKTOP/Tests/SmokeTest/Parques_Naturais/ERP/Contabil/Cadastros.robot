@@ -126,12 +126,12 @@ Montagem do Demonstrativo DFC
 
 Configuração Int. Contabil
     ${nome_print}=     Set Variable     Configuração Int. Contabil
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]     Contabil    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Configuração Int. Contabil
-    RPA.Windows.Get Text      Configuração para Integração Contabil (1)
+    RPA.Windows.Get Text      Configuração para Integração Contábil (1)
     RPA.Windows.Click         Cooperado
-    BaseDesktop.Screenshot    Configuração para Integração Contabil (1)    ${Caminho_Screenshots}Configuração Int. Contabil
+    BaseDesktop.Screenshot    Configuração para Integração Contábil (1)    ${Caminho_Screenshots}Configuração Int. Contabil
     Fechar janela
     RPA.Windows.Click         Sim
 

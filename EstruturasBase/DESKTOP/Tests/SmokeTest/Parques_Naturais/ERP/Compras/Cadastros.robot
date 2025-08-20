@@ -475,13 +475,13 @@ Regiões
 
 Fiscal > Configuração Int. Contabil
     ${nome_print}=     Set Variable     Configuração Int. Contabil
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    G
-    RPA.Windows.Get Text      Configuração para Integração Contabil (1)
+    RPA.Windows.Get Text      Configuração para Integração Contábil (1)
     RPA.Windows.Click         Cooperado
-    BaseDesktop.Screenshot    Configuração para Integração Contabil (1)    ${Caminho_Screenshots}Fiscal/Configuração Int. Contabil
+    BaseDesktop.Screenshot    Configuração para Integração Contábil (1)    ${Caminho_Screenshots}Fiscal/Configuração Int. Contabil
     Fechar com Sim
 
 Fiscal > Classificações Fiscais
@@ -923,8 +923,8 @@ Financeiro > Formas de Pagamento
     Cadastros
     RPA.Windows.Click         Financeiro
     RPA.Desktop.Press Keys    F
-    RPA.Windows.Get Text      Formas de Pagamento (1)s
-    RPA.Windows.Click       Novo
+    RPA.Windows.Get Text      Formas de Pagamento (1)
+    RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Formas de Pagamento (1)    ${Caminho_Screenshots}Financeiro/Formas de Pagamento
     Fechar com Sim
 

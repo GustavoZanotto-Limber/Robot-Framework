@@ -102,6 +102,7 @@ Ir para:
             END
         END      
     END
+    Sleep                  1s
     RPA.Windows.Click      ${janela}
     RPA.Windows.Get Text    ${nome_tela}
 
@@ -315,6 +316,7 @@ Selecionar o bilhete e retornar quantidade de vagas
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
     repetidor de teclas       Down    ${bilhete} 
+    Sleep                     0.3
     RPA.Windows.Click         Confirmar
     Sleep                     1s
     #Selecionando categorias
@@ -367,7 +369,7 @@ Selecionar o bilhete e o convênio
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
-    repetidor de teclas       Down    12
+    repetidor de teclas       Down    20
     RPA.Windows.Click         Confirmar
     Sleep                     1s
     #Selecionando categorias
@@ -474,6 +476,7 @@ Abrir arquivo
 Repetidor de teclas
     [Arguments]               ${tecla}                   ${quantidade_de_clicks}    
     FOR                       ${quantidade_de_clicks}    IN RANGE                   1    ${quantidade_de_clicks}+1
+    Sleep                     0.1
     RPA.Desktop.Press Keys    ${tecla}     
     END
 
