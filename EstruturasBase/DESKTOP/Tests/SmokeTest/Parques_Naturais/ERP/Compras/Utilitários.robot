@@ -52,7 +52,7 @@ Papel de Parede
 
 Configurar Menu Principal
     ${nome_print}=     Set Variable     Configurar Menu Principal
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]     Compras    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -60,7 +60,7 @@ Configurar Menu Principal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
@@ -107,7 +107,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]     Compras    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -116,11 +116,11 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]     Compras    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -129,7 +129,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Configurador de Impressões > Ordem se Serviço
     ${nome_print}=     Set Variable     Ordem se Serviço

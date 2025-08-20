@@ -33,20 +33,21 @@ Entradas/Compras > Incluir/Alterar
 
 Entradas/Compras > Consultar
     ${nome_print}=     Set Variable     Consultar
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]     Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Entradas/Compras - Consultar (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
+    Sleep                   1
     RPA.Windows.Click       Confirmar
     BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
     Fechar Janela
 
 Entradas/Compras > Excluir Entradas/Compras
     ${nome_print}=     Set Variable     Excluir Entradas_Compras
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]     Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  E
@@ -102,7 +103,7 @@ Entradas/Compras > Conferência de Mercadoria de Entrada
 
 Entradas/Compras > Alteração em Massa de Operação
     ${nome_print}=     Set Variable     Alteração em Massa de Operação
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]     Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  A

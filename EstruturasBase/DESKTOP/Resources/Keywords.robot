@@ -18,7 +18,7 @@ ${Espaço}=    ${SPACE}
 #----------------------------------------DADO----------------------------------------
 Dado que realizei uma venda
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete   12    1
+    Selecionar o bilhete   20    1
     Finalizar compra
 
 Dado que realizei uma venda com convênio
@@ -28,25 +28,25 @@ Dado que realizei uma venda com convênio
 
 Dado que realizei uma venda com dois bilhetes
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete    12    1
-    Selecionar o bilhete    13    1
+    Selecionar o bilhete    20    1
+    Selecionar o bilhete    21    1
     RPA.Desktop.Press Keys  Enter
     Finalizar compra
 
 Dado que realizei uma venda com multiplas categorias
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete    12    1
+    Selecionar o bilhete    20    1
     Sleep                   1s
-    Selecionar o bilhete    12    2
+    Selecionar o bilhete    20    2
     RPA.Desktop.Press Keys  Enter
     Sleep                   1s
-    Selecionar o bilhete    12    3
+    Selecionar o bilhete    20    3
     RPA.Desktop.Press Keys  Enter
     Finalizar compra
 
 Dado que realizei uma reserva preenchendo os dados do titular e visitante
     Ir Para Emissão de Bilhetes
-    Selecionar bilhete preenchendo pais, estado e município   14    1
+    Selecionar bilhete preenchendo pais, estado e município   22    1
     Sleep                   1s        
     Preencher dados do visitante
     Finalizar compra
@@ -59,7 +59,7 @@ Dado que realizei uma reserva como outras receitas
 
 Dado que realizei uma reserva verificando a quantidade de bilhetes
     Ir Para Emissão de Bilhetes
-    ${qtd_vagas_string}=   Selecionar o bilhete e retornar quantidade de vagas   12    1
+    ${qtd_vagas_string}=   Selecionar o bilhete e retornar quantidade de vagas   20    1
     ${qtd_vagas}=        Convert to Integer    ${qtd_vagas_string}
     Sleep    1s
     Finalizar compra
@@ -68,7 +68,7 @@ Dado que realizei uma reserva verificando a quantidade de bilhetes
 Dado que realizei uma reserva com fundo iguaçu
     Ir Para Emissão de Bilhetes
     RPA.Desktop.Press Keys  F4
-    Selecionar o bilhete    13    1
+    Selecionar o bilhete    21    1
     Finalizar compra
 
 Dado que realizei uma reserva com valor Zerado
@@ -152,12 +152,11 @@ Quando preencho a observação
     RPA.Desktop.Press Keys    Enter
     Finalizar compra
     Sleep                     4s    
-    RPA.Windows.Click         Fechar
     Fechar com Sim
 
 Quando finalizo o pagamento 
     [Arguments]    ${qtd_de_bilhetes}
-    Sleep                        5s
+    Sleep                        7s
     RPA.Windows.Click            Fechar
     FOR    ${qtd_de_bilhetes}    IN RANGE    0    ${qtd_de_bilhetes}
     RPA.Windows.Click            Fechar
@@ -264,10 +263,12 @@ Quando realizo a impressão do caixa
 
 Quando Fecho o caixa operador E pego o Resumo Geral
     [Arguments]    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
+    Sleep                    1s
     Fechar caixa e salvar a impressão
     Gerar aquivo de resumo Geral
     ${texto_pdf}=    Pegar informações da 1° Pag. do arquivo    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
     ${valor_final}=    Dividir Texto    ${texto_pdf}    R$    2
+    RPA.Desktop.Press Keys    ALT    f4
     RETURN  ${valor_final}
 
 #----------------------------------------ENTÃO----------------------------------------
@@ -289,7 +290,7 @@ Então valido a venda foi realizada com sucesso (valor zerado)
     
 Então valido se a quantidade foi reduzida corretamente
     [Arguments]    ${qtd_vagas}
-    ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    12    1
+    ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    20    1
     ${qtd_vagas_novo}=            Convert to Integer    ${qtd_vagas_novo_string}
     ${qtd_vagas}=            Evaluate    ${qtd_vagas}-1
     IF     ${qtd_vagas} == ${qtd_vagas_novo}
@@ -332,7 +333,6 @@ Então valido se a impressão RPS saiu corretamente
     Should Contain            ${pagina1}             PDV: 1 Operador: 1-Usuário
     Sleep                     7s
     RPA.Desktop.Press Keys    Alt    F4
-    Fechar janela
 
 
 Então valido se a impressão saiu corretamente 2
@@ -414,7 +414,12 @@ Então valido se o caixa foi fechado corretamente
 Então abro o financeiro e valido as informações
     [Arguments]    ${texto}
     Iniciar sessao    cde_win_fin
-    Ir para:    Geração de Receitas Mapa Resumo    6    Geração de receitas pela redução Z (1)    Geração de Receitas Mapa Resumo
+    Cadastros
+    repetidor de teclas       right    6
+    sleep                     2s
+    RPA.Windows.Click         Geração de Receitas Mapa Resumo
+    RPA.Desktop.Press Keys    g
+    RPA.Windows.Get Text      Geração de receitas pela redução Z (1)
     Repetidor de teclas                 enter    1
     Repetidor de teclas em sequencia    space    enter    2
     RPA.Windows.Click                   Carregar
