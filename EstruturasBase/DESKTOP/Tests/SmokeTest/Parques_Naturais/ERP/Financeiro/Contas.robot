@@ -21,7 +21,7 @@ Contas
 
 Movimentação de Contas
     ${nome_print}=     Set Variable     Movimentação de Contas
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]     Financeiro    Contas   SmokeTest    
     Contas
     RPA.Windows.Click         Movimentação de Contas
     RPA.Windows.Get Text      Movimento de Contas (1)

@@ -21,10 +21,10 @@ Limite de Crédito
 
 Limite de Crédito
     ${nome_print}=     Set Variable     Limite de Crédito
-    [Tags]     Financeiro    Limite de Crédito   SmokeTest
+    [Tags]     Financeiro    Limite de Crédito   SmokeTest    
     Limite de Crédito
     RPA.Windows.Click         Limite de Crédito
     RPA.Windows.Get Text      Limite de Crédito (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito
-    Fechar com Sim
+    Fechar janela

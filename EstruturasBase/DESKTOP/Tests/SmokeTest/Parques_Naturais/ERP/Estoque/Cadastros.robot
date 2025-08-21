@@ -292,20 +292,20 @@ Fiscais > Classificações Fiscais
     Fechar com Sim
 
 Fiscais > Classificações de Serviços Prestado - REINF
-    ${nome_print}=     Set Variable     Classificações de Serviços Prestado - REINF
-    [Tags]     Estoque    Cadastros   SmokeTest
+    ${nome_print}=     Set Variable     Classificações de Serviços Prestado - REINF    
+    [Tags]     Estoque    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    L
     RPA.Windows.Get Text      Classificações de Serviços Prestados - REINF (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Classificações de Serviços Prestados - REINF (1)    ${Caminho_Screenshots}Fiscais/Classificações de Serviços Prestado - REINF
+    RPA.Windows.Click         OK
     Fechar janela
-    RPA.Windows.Click         Sim
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]     Estoque    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E

@@ -36,7 +36,7 @@ SPED Fiscal (ICMS/IPI)
 
 SPED Contribuições (PIS/COFINS)
     ${nome_print}=     Set Variable     SPED Contribuições (PIS/COFINS)
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                SPED Contribuições (PIS/COFINS)
     RPA.Windows.Get Text      SPED Contribuições (1)
     RPA.Desktop.Press Keys    0
@@ -48,13 +48,13 @@ SPED Contribuições (PIS/COFINS)
 
 SPED Contabil (ECD)
     ${nome_print}=     Set Variable     SPED Contabil (ECD)
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
-    Geração de Arquivos Fiscais                SPED Contabil (ECD)
-    RPA.Windows.Get Text      SPED Contabil (1)
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
+    Geração de Arquivos Fiscais                SPED Contábil (ECD)
+    RPA.Windows.Get Text      SPED Contábil (1)
     RPA.Desktop.Press Keys    Shift    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    SPED Contabil (1)    ${Caminho_Screenshots}SPED Contabil (ECD)
+    BaseDesktop.Screenshot    SPED Contábil (1)    ${Caminho_Screenshots}SPED Contabil (ECD)
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -95,8 +95,8 @@ SPED REINF > Relatório
     Fechar janela
 
 GIA-PR
-    ${nome_print}=     Set Variable     GIA-PR
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    ${nome_print}=     Set Variable     GIA-PR    
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                GIA-PR
     RPA.Windows.Get Text      Guia de Informação e Apuração do ICMS - Paraná (GIA-PR) (1)
     RPA.Desktop.Press Keys    0
@@ -104,10 +104,11 @@ GIA-PR
     BaseDesktop.Screenshot    Guia de Informação e Apuração do ICMS - Paraná (GIA-PR) (1)    ${Caminho_Screenshots}GIA-PR
     RPA.Windows.Click         Confirmar
     Fechar com Sim
+    RPA.Windows.Click         OK
 
 GIA-MS
     ${nome_print}=     Set Variable     GIA-MS
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                GIA-MS
     RPA.Windows.Get Text      Guia de Informação e Apuração do ICMS - Mato Grosso do Sul (GIA-MS) (1)
     repetidor de teclas       tab      3
@@ -163,13 +164,11 @@ Registro Magnético SISCRED - PR
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Arquivo Magnético SISCRED - PR (1)    ${Caminho_Screenshots}Registro Magnético SISCRED - PR
     RPA.Windows.Click         Confirmar
-    RPA.Windows.Click         OK
-    RPA.Windows.Click         Fechar
-    RPA.Windows.Click         OK
+    Fechar com OK
 
 SEF-PE
     ${nome_print}=     Set Variable     SEF-PE
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                SEF-PE
     RPA.Windows.Get Text      Geração do Arquivo SEF 2012 - Pernambuco (1)
     repetidor de teclas       tab      2
@@ -181,7 +180,7 @@ SEF-PE
 
 DIME-SC > Geração
     ${nome_print}=     Set Variable     Geração
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                DIME-SC
     RPA.Desktop.Press Keys    G  
     RPA.Windows.Get Text      Declaração do ICMS e do Movimento Econômico (DIME) (1)
@@ -190,6 +189,7 @@ DIME-SC > Geração
     BaseDesktop.Screenshot    Declaração do ICMS e do Movimento Econômico (DIME) (1)    ${Caminho_Screenshots}DIME-SC/Geração
     RPA.Windows.Click         Confirmar 
     Fechar com Sim 
+    RPA.Windows.Click         OK
 
 DIME-SC > Montagem
     ${nome_print}=     Set Variable     Montagem
@@ -215,7 +215,7 @@ DFC GI/ICMS - PR
 
 DEISS
     ${nome_print}=     Set Variable     DEISS
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                DEISS
     RPA.Windows.Get Text      Declaração Eletrônica de Imposto Sobre Serviço (DEISS) (1)
     RPA.Desktop.Press Keys    0
@@ -223,10 +223,11 @@ DEISS
     BaseDesktop.Screenshot    Declaração Eletrônica de Imposto Sobre Serviço (DEISS) (1)    ${Caminho_Screenshots}DEISS
     RPA.Windows.Click         Confirmar
     Fechar com Sim
+    RPA.Windows.Click         OK
 
 SISCOSERV
     ${nome_print}=     Set Variable     SISCOSERV
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest        
     Geração de Arquivos Fiscais                SISCOSERV
     RPA.Windows.Get Text      Geração de Arquivos SISCOSERV (1)
     RPA.Desktop.Press Keys    0
@@ -234,15 +235,6 @@ SISCOSERV
     RPA.Windows.Click         Confirmar
     BaseDesktop.Screenshot    Geração de Arquivos SISCOSERV (1)    ${Caminho_Screenshots}SISCOSERV
     RPA.Windows.Click         Fechar
-
-Outros Arquivos > FCont
-    ${nome_print}=     Set Variable     FCont
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
-    Geração de Arquivos Fiscais                Outros Arquivos
-    RPA.Desktop.Press Keys    F  
-    RPA.Windows.Get Text      bbbbb
-    BaseDesktop.Screenshot    bbbbb    ${Caminho_Screenshots}Outros Arquivos/FCont
-    Fechar janela
 
 Outros Arquivos > Ato Declaratório Executivo Cofis n°25, de 7 de junho de 2010
     ${nome_print}=     Set Variable     Ato Declaratório Executivo Cofis n°25, de 7 de junho de 2010

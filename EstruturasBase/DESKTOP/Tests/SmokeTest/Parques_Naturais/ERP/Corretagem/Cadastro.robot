@@ -59,13 +59,13 @@ Contrato > Configuração de Contrato
 
 Contrato > Mensagens para Contrato
     ${nome_print}=     Set Variable     Mensagens para Contrato
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]     Corretagem    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Contrato
     RPA.Desktop.Press Keys    M
-    RPA.Windows.Get Text      Configuração de Mensagens para Contrato (1)
+    RPA.Windows.Get Text      Configuração de Mensagens para ${SPACE}Contrato (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Configuração de Mensagens para Contrato (1)    ${Caminho_Screenshots}Contrato/Mensagens para Contrato
+    BaseDesktop.Screenshot    Configuração de Mensagens para ${SPACE}Contrato (1)    ${Caminho_Screenshots}Contrato/Mensagens para Contrato
     Fechar janela
     RPA.Windows.Click         Sim
 

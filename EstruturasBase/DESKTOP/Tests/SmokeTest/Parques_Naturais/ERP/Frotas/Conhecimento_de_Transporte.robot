@@ -21,8 +21,8 @@ Conhecimento de Transporte
 *** Test Cases ***
 
 Conhecimento de Transporte > Emissão
-    ${nome_print}=     Set Variable     Emissão
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    ${nome_print}=     Set Variable     Emissão    
+    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest    
     Conhecimento de Transporte                  Conhecimento de Transporte
     RPA.Desktop.Press Keys  E  
     RPA.Windows.Get Text    Conhecimento de Transporte (1)
