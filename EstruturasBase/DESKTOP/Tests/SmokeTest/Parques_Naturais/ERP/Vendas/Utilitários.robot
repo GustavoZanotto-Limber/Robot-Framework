@@ -52,7 +52,7 @@ Papel de Parede
 
 Configurar Menu Pincipal
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]    Vendas   Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -60,7 +60,7 @@ Configurar Menu Pincipal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
@@ -107,7 +107,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]    Vendas   Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  C
@@ -116,11 +116,11 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]    Vendas   Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -129,7 +129,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
     
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas
@@ -469,10 +469,10 @@ Configuração de Certificado Digital
 
 Reprocessamento de disponibilidade de itens
     ${nome_print}=     Set Variable     Reprocessamento de disponibilidade de itens
-    [Tags]     Estoque    Utilitários   SmokeTest    
+    [Tags]     Estoque    Utilitários   SmokeTest   Teste   
     Utilitários
-    RPA.Desktop.Press Keys  O
-    RPA.Windows.Get Text    Reprocessamento de Itens (1)
+    RPA.Desktop.Press Keys  S
+    RPA.Windows.Get Text   	Reprocessamento de Itens (1)
     repetidor de teclas     tab      1
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter

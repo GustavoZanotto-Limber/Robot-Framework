@@ -72,7 +72,7 @@ Consulta de Notas Fiscais Emitidas
 
 Movimentação de Clientes/Veículos
     ${nome_print}=     Set Variable     Movimentação de Clientes/Veículos
-    [Tags]    Vendas   Consultas   SmokeTest
+    [Tags]    Vendas   Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Movimentação de Clientes / Veículos
     RPA.Windows.Get Text      Movimentação de Cliente/Veículo (1)
@@ -219,7 +219,7 @@ Saldo de Terceiros
 
 Movimentação de Terceiros
     ${nome_print}=     Set Variable     Movimentação de Terceiros
-    [Tags]    Vendas   Consultas   SmokeTest
+    [Tags]    Vendas   Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click       Movimentação de Terceiros
     RPA.Windows.Get Text    Movimentação de Terceiros (1)
@@ -230,7 +230,7 @@ Movimentação de Terceiros
 
 Consulta de Visitas Técnicas
     ${nome_print}=     Set Variable     Consulta de Visitas Técnicas
-    [Tags]    Vendas   Consultas   SmokeTest
+    [Tags]    Vendas   Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Consulta de Visitas Técnicas
     RPA.Windows.Get Text      Consulta de Visitas Técnicas (1)

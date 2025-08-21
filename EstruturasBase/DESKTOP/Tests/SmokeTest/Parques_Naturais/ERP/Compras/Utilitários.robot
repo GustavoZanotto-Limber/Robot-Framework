@@ -95,7 +95,7 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]     Compras    Utilitários   SmokeTest 
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -103,7 +103,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias

@@ -42,7 +42,7 @@ Papel de Parede
 
 Configurar Menu Pincipal
     ${nome_print}=     Set Variable     Configurar Menu Pincipal
-    [Tags]     Contabil    Utilitários   SmokeTest
+    [Tags]     Contabil    Utilitários   SmokeTest     
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -50,7 +50,7 @@ Configurar Menu Pincipal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar Janela
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
@@ -85,7 +85,7 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]     Contabil    Utilitários   SmokeTest
+    [Tags]     Contabil    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -93,11 +93,11 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]     Contabil    Utilitários   SmokeTest
+    [Tags]     Contabil    Utilitários   SmokeTest      
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -106,11 +106,11 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
     
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]     Contabil    Utilitários   SmokeTest
+    [Tags]     Contabil    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -119,11 +119,11 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas
-    [Tags]     Contabil    Utilitários   SmokeTest
+    [Tags]     Contabil    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
@@ -133,13 +133,13 @@ Verifica transações abertas
 
 Integrações > SCPH
     ${nome_print}=     Set Variable     SCPH
-    [Tags]     Contabil    Utilitários   SmokeTest
+    [Tags]     Contabil    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Integrações
     RPA.Desktop.Press Keys  S
-    RPA.Windows.Get Text    Integração Contabil SCPH (1)
+    RPA.Windows.Get Text    Integração Contábil SCPH (1)
     RPA.Windows.Click       Identificar conta do Cliente/Fornecedor
-    BaseDesktop.Screenshot  Integração Contabil SCPH (1)    ${Caminho_Screenshots}Integrações/SCPH
+    BaseDesktop.Screenshot  Integração Contábil SCPH (1)    ${Caminho_Screenshots}Integrações/SCPH
     Fechar janela
 
 Integrações > Sênior > Importação
@@ -157,7 +157,7 @@ Integrações > Sênior > Importação
 
 Integrações > Sênior > Configuração
     ${nome_print}=     Set Variable     Configuração
-    [Tags]     Contabil    Utilitários   SmokeTest
+    [Tags]     Contabil    Utilitários   SmokeTest     
     Utilitários
     RPA.Windows.Click       Integrações
     RPA.Windows.Click       Sênior
@@ -167,7 +167,7 @@ Integrações > Sênior > Configuração
     RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Cadastro Configuração Integração Sênior (1)    ${Caminho_Screenshots}Integrações/Sênior/Configuração
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Integrações > DPPH > Lançamentos Funcionários
     ${nome_print}=     Set Variable     Lançamentos Funcionários
@@ -209,7 +209,7 @@ Integrações > Ocepar
 
 Agenda Telefônica
     ${nome_print}=     Set Variable     Agenda Telefônica
-    [Tags]     Contabil    Utilitários   SmokeTest
+    [Tags]     Contabil    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
@@ -217,7 +217,7 @@ Agenda Telefônica
     RPA.Desktop.Press Keys  Enter 
     BaseDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
     RPA.Windows.Click         Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Upload de Arquivos
     ${nome_print}=     Set Variable     Upload de Arquivos

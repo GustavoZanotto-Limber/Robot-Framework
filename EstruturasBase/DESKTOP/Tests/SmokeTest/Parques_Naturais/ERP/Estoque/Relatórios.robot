@@ -22,7 +22,7 @@ Relatórios
 
 Inventário de Estoque
     ${nome_print}=     Set Variable     Inventário de Estoque
-    [Tags]    Estoque   Relatórios  SmokeTest
+    [Tags]    Estoque   Relatórios  SmokeTest    
     Relatórios
     RPA.Windows.Click       Inventário de Estoque
     RPA.Windows.Get Text    Inventário de Estoque (1)

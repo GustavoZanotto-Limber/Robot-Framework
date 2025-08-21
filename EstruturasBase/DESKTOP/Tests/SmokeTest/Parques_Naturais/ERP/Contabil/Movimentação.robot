@@ -182,27 +182,27 @@ Estornar Apropriação por Rateio de Contas
 
 Rateio Cooperativismo > Método 1
     ${nome_print}=     Set Variable     Método 1
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]     Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    1
-    RPA.Windows.Get Text      Apropriação por Rateio de Contas - Método 1 (1) 
+    RPA.Windows.Get Text      Apropriação por Rateio de Contas - ${SPACE}Método 1 (1) 
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Apropriação por Rateio de Contas - Método 1 (1)      ${Caminho_Screenshots}Rateio Cooperativismo/Método 1
+    BaseDesktop.Screenshot    Apropriação por Rateio de Contas - ${SPACE}Método 1 (1)      ${Caminho_Screenshots}Rateio Cooperativismo/Método 1
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
 
 Rateio Cooperativismo > Método 2
     ${nome_print}=     Set Variable     Método 2
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]     Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    2
-    RPA.Windows.Get Text      Apropriação por Rateio de Contas - Método 2 (1)
+    RPA.Windows.Get Text      Apropriação por Rateio de Contas - ${SPACE}Método 2 (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Apropriação por Rateio de Contas - Método 2 (1)      ${Caminho_Screenshots}Rateio Cooperativismo/Método 2
+    BaseDesktop.Screenshot    Apropriação por Rateio de Contas - ${SPACE}Método 2 (1)      ${Caminho_Screenshots}Rateio Cooperativismo/Método 2
     RPA.Windows.Click         OK
     Fechar janela
     RPA.Windows.Click         OK
@@ -400,18 +400,18 @@ Processos Personalizados
 
 Ajuste a Valor Presente > Configuração
     ${nome_print}=     Set Variable     Configuração
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]     Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    C
-    RPA.Windows.Get Text      Cadastro de configuração de ajuste a valor Presente (1) 
+    RPA.Windows.Get Text      Cadastro de configuração de ajuste a valor Presente ${SPACE}(1) 
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de configuração de ajuste a valor Presente (1)     ${Caminho_Screenshots}Ajuste a Valor Presente/Configuração
+    BaseDesktop.Screenshot    Cadastro de configuração de ajuste a valor Presente ${SPACE}(1)     ${Caminho_Screenshots}Ajuste a Valor Presente/Configuração
     Fechar com Sim
 
 Ajuste a Valor Presente > Execução do Ajuste
     ${nome_print}=     Set Variable     Execução do Ajuste
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]     Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    E

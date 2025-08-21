@@ -19,15 +19,6 @@ Utilitários
 
 *** Test Cases ***
 
-Inicializar sistema patrimonial
-    ${nome_print}=     Set Variable     Inicializar sistema patrimonial
-    [Tags]     Corretagem    Utilitários   SmokeTest
-    Utilitários
-    RPA.Windows.Click       Inicializar sistema patrimonial
-    RPA.Windows.Get Text    Inicializar sistema patrimonial (1)
-    BaseDesktop.Screenshot  Inicializar sistema patrimonial (1)    ${Caminho_Screenshots}Inicializar sistema patrimonial
-    RPA.Windows.Click       Fechar
-
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
     [Tags]     Corretagem    Utilitários   SmokeTest
@@ -50,8 +41,8 @@ Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Pincipal
-    ${nome_print}=     Set Variable     Configurar Barra de Atalhos
-    [Tags]     Corretagem    Utilitários   SmokeTest
+    ${nome_print}=     Set Variable     Configurar Menu Principal
+    [Tags]     Corretagem    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -59,7 +50,7 @@ Configurar Menu Pincipal
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
@@ -94,7 +85,7 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]     Corretagem    Utilitários   SmokeTest
+    [Tags]     Corretagem    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -102,11 +93,11 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]     Corretagem    Utilitários   SmokeTest
+    [Tags]     Corretagem    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -115,11 +106,11 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
     
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]     Corretagem    Utilitários   SmokeTest
+    [Tags]     Corretagem    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -128,7 +119,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas
@@ -140,11 +131,11 @@ Verifica transações abertas
     BaseDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
 
-Pendências
-    ${nome_print}=     Set Variable     Pendências
-    [Tags]     Corretagem    Utilitários   SmokeTest
+Configurador de Consulta
+    ${nome_print}=     Set Variable     Configurador de Consulta
+    [Tags]     Corretagem    Utilitários   SmokeTest    
     Utilitários
-    RPA.Windows.Click       Pendências
-    RPA.Windows.Get Text    Configuração de Pendências (1)
-    BaseDesktop.Screenshot  Configuração de Pendências (1)    ${Caminho_Screenshots}Pendências
+    RPA.Windows.Click       Configurador de Consulta
+    RPA.Windows.Get Text    Cadastro Configuração Filtros Rotinas (1)
+    BaseDesktop.Screenshot  Cadastro Configuração Filtros Rotinas (1)    ${Caminho_Screenshots}Configurador de Consulta
     RPA.Windows.Click       Fechar

@@ -576,7 +576,7 @@ Fiscal > CFOP's
 
 Fiscal > IPI > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IPI
@@ -588,13 +588,14 @@ Fiscal > IPI > Tabela Tributária
 
 Fiscal > IPI > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
+    Sleep                     0.1
     RPA.Windows.Click         IPI
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Situação Tributária do IPI (1)
-    RPA.Windows.Click       Novo
+    RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Situação Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Situação Tributária
     Fechar com Sim
 
