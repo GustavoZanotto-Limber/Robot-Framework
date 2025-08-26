@@ -469,7 +469,7 @@ Configuração de Certificado Digital
 
 Reprocessamento de disponibilidade de itens
     ${nome_print}=     Set Variable     Reprocessamento de disponibilidade de itens
-    [Tags]     Estoque    Utilitários   SmokeTest   Teste   
+    [Tags]     Estoque    Utilitários   SmokeTest      
     Utilitários
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text   	Reprocessamento de Itens (1)

@@ -91,7 +91,7 @@ Romaneios Entrada/Saída > Gerenciamentos de Romaneios
 
 Pesagem para Terceiros
     ${nome_print}=     Set Variable     Pesagem para Terceiros
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]     Balancas    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click         Pesagem para Terceiros
     RPA.Windows.Get Text      Pesagem para Terceiros (1)
@@ -103,7 +103,7 @@ Pesagem para Terceiros
 
 Emissão de Nota Fiscal
     ${nome_print}=     Set Variable     Emissão de Nota Fiscal
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]     Balancas    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click         Emissão de Nota Fiscal
     RPA.Windows.Get Text      Emissão de Nota Fiscal (1)
