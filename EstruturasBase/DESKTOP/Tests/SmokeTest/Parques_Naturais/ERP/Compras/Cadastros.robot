@@ -49,13 +49,13 @@ Grupo de Terceiros
 
 Limite de Crédito
     ${nome_print}=     Set Variable     Limite de Crédito
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Limite de Crédito
     RPA.Windows.Get Text    Cadastro de Limite de Crédito (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Cadastro de Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito
+    BaseDesktop.Screenshot  Cadastro de Limite de Crédito (1)    ${Caminho_Screenshots }Limite de Crédito
     RPA.Windows.Click       Confirmar
     Fechar Janela
 

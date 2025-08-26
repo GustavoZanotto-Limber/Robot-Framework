@@ -165,7 +165,7 @@ Ir Para Emissão de Bilhetes
         Repetidor de teclas    right    1
         RPA.Windows.Click      Emissão de Bilhetes
     END
-    Sleep                  4s
+    Sleep                  5s
     RPA.Windows.Get Text   Emissão de Bilhetes (1)
 
 Ir Para Reimpressão de Bilhetes
@@ -301,7 +301,7 @@ Selecionar o bilhete
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
-    Sleep                     0.5s
+    Sleep                     0.6s
     Repetidor de teclas       down    ${categoria}   
     RPA.Windows.Click         Confirmar
     Sleep                     1s
