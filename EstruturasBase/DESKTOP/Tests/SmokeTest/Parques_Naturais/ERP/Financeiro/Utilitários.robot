@@ -95,7 +95,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]     Financeiro    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -104,11 +104,11 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]     Financeiro    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -117,7 +117,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Configurador de Impressões > Relatórios > Contas a Pagar
     ${nome_print}=     Set Variable     Contas a Pagar
@@ -189,11 +189,10 @@ Configurar de Dup/Boletos/Carnês
 
 Importador Extrato Bancário (OFX)
     ${nome_print}=     Set Variable     Importador Extrato Bancário (OFX)
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]     Financeiro    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Importador Extrato Bancário (OFX)
     RPA.Windows.Get Text    Importador Extrato Bancário (OFX) (1)
-    repetidor de teclas     Tab                                3
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Importador Extrato Bancário (OFX) (1)    ${Caminho_Screenshots}Importador Extrato Bancário (OFX)
@@ -215,7 +214,7 @@ Arquivo Relato - Serasa
 
 Agenda Telefônica
     ${nome_print}=     Set Variable     Agenda Telefônica
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]     Financeiro    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
@@ -224,7 +223,6 @@ Agenda Telefônica
     BaseDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
     RPA.Windows.Click         Confirmar
     Fechar janela
-    RPA.Windows.Click         Sim
 
 Faturamento de Agências - Bilheteria > Geração de Faturas
     ${nome_print}=     Set Variable     Geração de Faturas

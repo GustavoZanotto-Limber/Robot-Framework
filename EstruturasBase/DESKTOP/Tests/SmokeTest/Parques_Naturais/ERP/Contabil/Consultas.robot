@@ -176,9 +176,9 @@ Sped Contabil > Cadastro de SCP
 
 Sped Contabil > Transferência de Plano de Contas
     ${nome_print}=     Set Variable     Transferência de Plano de Contas
-    [Tags]     Contabil    Consultas   SmokeTest    
+    [Tags]     Contabil    Consultas   SmokeTest   
     Consultas
-    RPA.Windows.Click         Sped Contáb il
+    RPA.Windows.Click         Sped Contábil
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Transferência de Plano de Contas (1)
     RPA.Desktop.Press Keys    Enter

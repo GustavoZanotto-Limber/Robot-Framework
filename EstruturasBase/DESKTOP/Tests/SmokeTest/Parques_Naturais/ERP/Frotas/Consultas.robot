@@ -41,7 +41,7 @@ Consulta de Pneus
 
 Consulta de Avisos
     ${nome_print}=     Set Variable     Consulta de Avisos
-    [Tags]    Frotas   Consultas   SmokeTest
+    [Tags]    Frotas   Consultas   SmokeTest    
     Consultas               Consulta de Avisos
     RPA.Windows.Get Text    Consulta de Avisos (1) 
     BaseDesktop.Screenshot  Consulta de Avisos (1)                              ${Caminho_Screenshots}Consulta de Avisos
@@ -83,18 +83,19 @@ Consulta de Infrações de Trânsito
 
 Consulta de Abastecimentos(PoliFrotas)
     ${nome_print}=     Set Variable     Consulta de Abastecimentos(PoliFrotas)
-    [Tags]    Frotas   Consultas   SmokeTest
+    [Tags]    Frotas   Consultas   SmokeTest    
     Consultas               Consulta de Abastecimentos(PoliFrotas)
     RPA.Windows.Get Text   	Consulta de Abastecidas PoliFrotas (1) 
     repetidor de teclas     tab      2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot 	Consulta de Abastecidas PoliFrotas (1)                              ${Caminho_Screenshots}Consulta de Abastecimentos(PoliFrotas)
+    RPA.Windows.Click       Confirmar
     RPA.Windows.Click       Fechar
 
 Consulta de Conhecimento de Transporte
     ${nome_print}=     Set Variable     Consulta de Conhecimento de Transporte
-    [Tags]    Frotas   Consultas   SmokeTest        
+    [Tags]    Frotas   Consultas   SmokeTest              
     Consultas               Consulta de Conhecimento de Transporte
     RPA.Windows.Get Text   	Consulta de Conhecimento de Transporte (1)
     repetidor de teclas     tab      3

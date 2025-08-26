@@ -74,24 +74,25 @@ Entradas/Compras > Incluir/Alterar
 
 Entradas/Compras > Consultar
     ${nome_print}=     Set Variable     Consultar
-    [Tags]     Corretagem    Manutenções   SmokeTest
+    [Tags]     Corretagem    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Entradas/Compras - Consultar (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
+    Sleep                   3s
     RPA.Windows.Click       Confirmar
     BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
     Fechar Janela
 
 Saídas/Vendas > Incluir Saídas/Vendas
     ${nome_print}=     Set Variable     Alterar Saídas_Vendas
-    [Tags]     Corretagem    Manutenções   SmokeTest
+    [Tags]     Corretagem    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    I
-    Sleep                     2s
+    Sleep                     4s
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Com Fechamento (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas

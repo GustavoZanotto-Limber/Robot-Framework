@@ -937,13 +937,13 @@ Financeiro > Autorizadoras de Cartões
 
 Fiscal > Configuração Int. Contabil
     ${nome_print}=     Set Variable     Configuração Int. Contabil
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    G
-    RPA.Windows.Get Text      Configuração para Integração Contabil (1)
+    RPA.Windows.Get Text      Configuração para Integração Contábil (1)
     RPA.Windows.Click         Cooperado
-    BaseDesktop.Screenshot    Configuração para Integração Contabil (1)    ${Caminho_Screenshots}Fiscal/Configuração Int. Contabil
+    BaseDesktop.Screenshot    Configuração para Integração Contábil (1)    ${Caminho_Screenshots}Fiscal/Configuração Int. Contabil
     Fechar com Sim
 
 Fiscal > Classificações Fiscais
@@ -1613,7 +1613,7 @@ PDV > Cadastro de Scripts
 
 PDV > Cadastro de Cupons de Desconto > Cadastro de Cupons de Desconto
     ${nome_print}=     Set Variable     Cadastro de Cupons de Desconto
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest     
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Windows.Click         Cadastro de Cupons de Desconto
@@ -1626,7 +1626,7 @@ PDV > Cadastro de Cupons de Desconto > Cadastro de Cupons de Desconto
 
 PDV > Cadastro de Cupons de Desconto > Config. Cupons PDV
     ${nome_print}=     Set Variable     Config. Cupons PDV
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Windows.Click         Cadastro de Cupons de Desconto
@@ -1636,13 +1636,11 @@ PDV > Cadastro de Cupons de Desconto > Config. Cupons PDV
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Cadastro de Cupons Promocionais (1)    ${Caminho_Screenshots}PDV/Cadastro de Cupons de Desconto/Config. Cupons PDV
     RPA.Windows.Click         Confirmar
-    RPA.Windows.Click         OK
     Fechar janela
-    RPA.Windows.Click         Sim
 
 PDV > Cadastro de Cupons de Desconto > Config. Cupons Bilheteria
     ${nome_print}=     Set Variable     Config. Cupons Bilheteria
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Windows.Click         Cadastro de Cupons de Desconto
@@ -1652,9 +1650,7 @@ PDV > Cadastro de Cupons de Desconto > Config. Cupons Bilheteria
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Cadastro de Cupons de Bilheteria (1)    ${Caminho_Screenshots}PDV/Cadastro de Cupons de Desconto/Config. Cupons Bilheteria
     RPA.Windows.Click         Confirmar
-    RPA.Windows.Click         OK
     Fechar janela
-    RPA.Windows.Click         Sim
 
 PDV > Configuração para impressão de comandas
     ${nome_print}=     Set Variable     Configuração para impressão de comandas
@@ -1755,7 +1751,7 @@ PDV > Ambientes para Mesas/Totens/Comandas/Delivery
 
 PDV > Grades para Mesas/Totens/Comanda
     ${nome_print}=     Set Variable     Grades para Mesas_Totens_Comanda
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    G
@@ -1765,7 +1761,6 @@ PDV > Grades para Mesas/Totens/Comanda
     BaseDesktop.Screenshot    Grades para Mesas/Totens/Comanda (1)    ${Caminho_Screenshots}PDV/Grades para Mesas_Totens_Comanda
     RPA.Windows.Click         Confirmar
     Fechar janela
-    RPA.Windows.Click         OK
 
 PDV > Configuração de Ambiente por Horários
     ${nome_print}=     Set Variable     Configuração de Ambiente por Horários

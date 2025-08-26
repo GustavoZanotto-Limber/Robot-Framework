@@ -561,18 +561,19 @@ Alterar Lcto Entrada
 
 Alterar Lcto Saída
     ${nome_print}=     Set Variable     Alterar Lcto Saída
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]    Fiscal   Movimentos   SmokeTest    
     Movimentos                Alterar Lcto Saída
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
+    Sleep                     1s
     RPA.Windows.Click         Confirmar
     BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)         ${Caminho_Screenshots}Alterar Lcto Saída
     Fechar janela
 
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]    Fiscal   Movimentos   SmokeTest    
     Movimentos                Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
     RPA.Windows.Click         Cadastrar Novo Processo

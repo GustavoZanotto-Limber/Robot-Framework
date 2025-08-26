@@ -28,7 +28,7 @@ Utilitários com tecla
 
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários             Favoritos       
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
@@ -47,14 +47,14 @@ Papel de Parede
 
 Configurar Menu Pincipal
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários             Configurar Menu Principal       
     RPA.Windows.Get Text    Configurador de Menus (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
@@ -86,18 +86,18 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários             Configuração de Liberação   
     RPA.Windows.Get Text    Configurações de Liberação (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários             Relatórios Personalizados      
     RPA.Desktop.Press Keys  c
     RPA.Windows.Get Text    Cadastro de Categoria (1)
@@ -105,11 +105,11 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários             Relatórios Personalizados      
     RPA.Desktop.Press Keys  a
     RPA.Desktop.Press Keys  0
@@ -117,7 +117,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
-    Fechar com Sim
+    Fechar janela
 
 Verifica transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas
@@ -150,7 +150,7 @@ Processos Personalizados
 
 Leiaute Carta Frete
     ${nome_print}=     Set Variable     Leiaute Carta Frete
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários             Leiaute Carta Frete    
     Sleep                   3s
     RPA.Windows.Get Text    FastReport - Untitled.fr3
@@ -160,7 +160,7 @@ Leiaute Carta Frete
 
 Integrações > Importação de CT-e/MDF-e
     ${nome_print}=     Set Variable     Importação de CT-e_MDF-e
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários com tecla   T 
     RPA.Desktop.Press Keys  I
     RPA.Windows.Get Text    Importação de XML de Conhecimento de Transporte Eletrônico (1) 
