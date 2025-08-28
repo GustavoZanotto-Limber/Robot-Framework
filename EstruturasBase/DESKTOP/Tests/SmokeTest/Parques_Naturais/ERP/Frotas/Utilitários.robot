@@ -88,16 +88,18 @@ Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
     [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários             Configuração de Liberação   
+    Sleep                   2s
     RPA.Windows.Get Text    Configurações de Liberação (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
+    Sleep                   2s
+    Fechar com Sim
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]    Frotas   Utilitários   SmokeTest    
+    [Tags]    Frotas   Utilitários   SmokeTest   
     Utilitários             Relatórios Personalizados      
     RPA.Desktop.Press Keys  c
     RPA.Windows.Get Text    Cadastro de Categoria (1)

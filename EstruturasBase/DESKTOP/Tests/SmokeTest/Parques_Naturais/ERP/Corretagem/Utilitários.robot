@@ -88,12 +88,14 @@ Configuração de Liberação
     [Tags]     Corretagem    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
+    Sleep                   2s
     RPA.Windows.Get Text    Configurações de Liberação (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
+    Sleep                   2s
     RPA.Windows.Click       Confirmar
-    Fechar janela
+    Fechar com Sim
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias

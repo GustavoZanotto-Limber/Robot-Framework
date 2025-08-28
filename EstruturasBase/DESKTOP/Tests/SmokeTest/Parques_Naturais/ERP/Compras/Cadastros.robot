@@ -94,7 +94,7 @@ Itens > Unidades
 
 Itens > Estampas
     ${nome_print}=     Set Variable     Estampas
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  P
@@ -105,7 +105,7 @@ Itens > Estampas
 
 Itens > Marcas
     ${nome_print}=     Set Variable     Marcas
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  R
