@@ -157,13 +157,14 @@ Registro Magnético (SINTEGRA)
 
 Registro Magnético SISCRED - PR
     ${nome_print}=     Set Variable     Registro Magnético SISCRED - PR
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                Arquivo Magnético SISCRED - PR
     RPA.Windows.Get Text      Arquivo Magnético SISCRED - PR (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
     BaseDesktop.Screenshot    Arquivo Magnético SISCRED - PR (1)    ${Caminho_Screenshots}Registro Magnético SISCRED - PR
     RPA.Windows.Click         Confirmar
+    RPA.Windows.Click         OK
     Fechar com OK
 
 SEF-PE

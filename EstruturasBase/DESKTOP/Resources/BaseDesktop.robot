@@ -165,7 +165,7 @@ Ir Para Emissão de Bilhetes
         Repetidor de teclas    right    1
         RPA.Windows.Click      Emissão de Bilhetes
     END
-    Sleep                  5s
+    Sleep                  7s
     RPA.Windows.Get Text   Emissão de Bilhetes (1)
 
 Ir Para Reimpressão de Bilhetes
@@ -594,7 +594,22 @@ Pegar informações da 1° Pag. do arquivo
 
 Gerar aquivo de resumo Geral
     Ir para:    Resumo Geral            3            Resumo de Movimentação (1)
+    sleep                               1s
     Repetidor de teclas                 enter        3
+    sleep                               1s
     Repetidor de teclas em sequencia    1            Enter        1
+    sleep                               1s
     Repetidor de teclas                 enter        1
+    sleep                               1s
     Salvar arquivo                      C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Resumo Geral    2
+
+Exportar para bloco de notas
+    [Arguments]    ${nome_painel}    ${posição_bloco}    
+    RPA.Windows.Right Click    ${nome_painel}
+    Repetidor de teclas        down    4
+    RPA.Desktop.Press Keys     enter
+    repetidor de teclas        down    ${posição_bloco}
+    RPA.Desktop.Press Keys     enter
+    Sleep                      5s
+    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
+    RETURN    ${texto}

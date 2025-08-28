@@ -267,6 +267,7 @@ Quando Fecho o caixa operador E pego o Resumo Geral
     Gerar aquivo de resumo Geral
     ${texto_pdf}=    Pegar informações da 1° Pag. do arquivo    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
     ${valor_final}=    Dividir Texto    ${texto_pdf}    R$    2
+    sleep                     5s
     RPA.Desktop.Press Keys    ALT    f4
     RETURN  ${valor_final}
 
@@ -410,15 +411,36 @@ Então valido se o caixa foi fechado corretamente
     END
     Fechar janela
 
- Então abro o financeiro e valido as informações
+Então abro o financeiro e valido as informações
     [Arguments]    ${texto}
-    Iniciar sessao    cde_win_fin
+    Iniciar sessao                      cde_win_fin
     Cadastros
-    repetidor de teclas       right    6
-    sleep                     2s
-    RPA.Windows.Click         Geração de Receitas Mapa Resumo
-    RPA.Desktop.Press Keys    g
-    RPA.Windows.Get Text      Geração de receitas pela redução Z (1)
+    repetidor de teclas                 right    6
+    sleep                               2s
+    RPA.Windows.Click                   Geração de Receitas Mapa Resumo
+    RPA.Desktop.Press Keys              g
+    Sleep                               2s
+    RPA.Windows.Get Text                Geração de receitas pela redução Z (1)
     Repetidor de teclas                 enter    1
     Repetidor de teclas em sequencia    space    enter    2
     RPA.Windows.Click                   Carregar
+    Sleep                               2s
+    RPA.Windows.click                   Conferido
+    Sleep                               1s
+    RPA.Windows.click                   Gerar Receitas
+    Sleep                               1s
+    RPA.Windows.click                   Demonstrativo
+    ${reduções_Z}=                      Exportar para bloco de notas        	 Dinheiro/Cheque (a Vista)    2
+    @{data_sem_formatar}=               Get Time	year month day 
+    ${data_atual}=                      Formatar Data Para DD/MM/AAAA            @{data_sem_formatar}
+    Should Contain                      ${reduções_Z}    ${texto}
+    Should Contain                      ${reduções_Z}    ${data_atual} 
+    Should Contain                      ${data_atual}    Conta 5
+    RPA.Desktop.Press Keys              Alt    F4
+    RPA.Windows.Click                   Fechar
+    RPA.Windows.Click                   Excluir Receitas
+    RPA.Windows.Click                   Sim
+    RPA.Windows.Click                   Estornar
+    RPA.Windows.Click                   Sim
+    
+    
