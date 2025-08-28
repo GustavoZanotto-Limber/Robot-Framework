@@ -49,7 +49,7 @@ Grupo de Terceiros
 
 Limite de Crédito
     ${nome_print}=     Set Variable     Limite de Crédito
-    [Tags]     Compras    Cadastros   SmokeTest
+    [Tags]     Compras    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Limite de Crédito
     RPA.Windows.Get Text    Cadastro de Limite de Crédito (1)
@@ -61,8 +61,8 @@ Limite de Crédito
 
 Itens > Itens
     ${nome_print}=     Set Variable     Itens
-    [Tags]     Compras    Cadastros   SmokeTest    
-    Cadastros
+    [Tags]     Compras    Cadastros   SmokeTest       
+    Cadastros    
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  I
     RPA.Windows.Get Text    Cadastro de Itens (1)
