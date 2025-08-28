@@ -162,8 +162,7 @@ Quando finalizo o pagamento
     RPA.Windows.Click            Fechar
     Sleep                5s
     END
-    Fechar janela
-    RPA.Windows.Click    Sim
+    Fechar com Sim
  
 Quando finalizo o pagamento (sem fechar a janela)
     [Arguments]    ${qtd_de_bilhetes}
@@ -411,7 +410,7 @@ Então valido se o caixa foi fechado corretamente
     END
     Fechar janela
 
-Então abro o financeiro e valido as informações
+ Então abro o financeiro e valido as informações
     [Arguments]    ${texto}
     Iniciar sessao    cde_win_fin
     Cadastros

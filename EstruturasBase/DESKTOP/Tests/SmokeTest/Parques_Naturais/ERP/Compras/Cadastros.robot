@@ -55,7 +55,7 @@ Limite de Crédito
     RPA.Windows.Get Text    Cadastro de Limite de Crédito (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Cadastro de Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito
+    BaseDesktop.Screenshot  Cadastro de Limite de Crédito (1)    ${Caminho_Screenshots }Limite de Crédito
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
