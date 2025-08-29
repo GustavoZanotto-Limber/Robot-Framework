@@ -61,7 +61,7 @@ Compras/Aquisição de Serviços - Sintético/Forn/Item
 
 Compras/Aquisição de Serviços - Sintético/Setor
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Setor
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]     Compras    Relatórios   SmokeTest    Teste
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Setor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços por Setor (1)
@@ -73,7 +73,7 @@ Compras/Aquisição de Serviços - Sintético/Setor
 
 Compras/Aquisição de Serviços - Evolução Diária
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Diária
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]     Compras    Relatórios   SmokeTest    Teste
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Diária
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Diária (1)

@@ -1,3 +1,6 @@
 {
-    "robot.codeFormatter": "robotidy"
+    "robot.codeFormatter": "robotidy",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.formatOnType": true
 }
