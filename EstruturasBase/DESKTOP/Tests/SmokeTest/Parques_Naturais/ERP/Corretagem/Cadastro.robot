@@ -120,18 +120,18 @@ Confirmação de Negócio > Cadastro Tipo de Custos
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]     Corretagem    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
-    Fechar com Sim
+    Fechar janela
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]     Corretagem    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -142,7 +142,7 @@ Parâmetros > Estabelecimentos
 
 Parâmetros > Grupo de Usuários
     ${nome_print}=     Set Variable     Grupo de Usuários
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]     Corretagem    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -153,7 +153,7 @@ Parâmetros > Grupo de Usuários
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]     Corretagem    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U

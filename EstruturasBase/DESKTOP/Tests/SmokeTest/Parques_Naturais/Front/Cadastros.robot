@@ -111,7 +111,7 @@ Tipos de Documentos
     Fechar com Sim
 
 Pessoas Autorizadas
-    [Tags]    Cadastros    Front    SmokeTest     Teste
+    [Tags]    Cadastros    Front    SmokeTest     Testes
     ${nome_print}=          Set Variable    Pessoas Autorizadas
     Cadastros
     RPA.Windows.Click       Pessoas Autorizadas
@@ -121,7 +121,7 @@ Pessoas Autorizadas
     Fechar janela
 
 Acesso por aproximação
-    [Tags]    Cadastros    Front    SmokeTest      Teste
+    [Tags]    Cadastros    Front    SmokeTest      
     ${nome_print}=          Set Variable    Acesso por aproximação
     Cadastros
     RPA.Windows.Click       Acesso por Aproximação

@@ -3,6 +3,7 @@
 #utilizados, assim quando temos varias suites de testes apenas importamos esse arquivo para a pasta o
 #que otimiza a utilização do aplicativo.
 # Library    SikuliLibrary
+Documentation   Keywords para automação DESKTOP com Robot Framework e Sikuli e RPA Framework
 Library    RPA.Desktop
 Library    RPA.Windows    timeout=1s
 Library    OperatingSystem
@@ -38,16 +39,12 @@ Cadastros
     RPA.Desktop.Press Keys    Enter
     
 Fechar janela
-    RPA.Desktop.Press Keys    alt     -
-    RPA.Windows.Click         Maximizar
-    Sleep                     0.3s
-    RPA.Desktop.Press Keys    alt     -
-    RPA.Windows.Click         Fechar
-    
+    RPA.Desktop.Press Keys    Ctrl     F4
+    Sleep                     1s        
 
 Fechar com Sim
     Fechar janela
-    Sleep                   0.5s
+    Sleep                   1s
     RPA.Windows.Click       Sim
 
 Fechar com OK
@@ -152,6 +149,7 @@ Caixa Operador
     repetidor de teclas    right    4
 
 Abrir Caixa
+    Sleep                               2s
     RPA.Windows.Click                   Abrir Caixa
     RPA.Desktop.Press Keys              Enter
     RPA.Desktop.Press Keys              Enter

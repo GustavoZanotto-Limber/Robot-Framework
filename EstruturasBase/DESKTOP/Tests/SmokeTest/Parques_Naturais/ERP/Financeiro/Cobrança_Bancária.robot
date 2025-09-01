@@ -21,19 +21,18 @@ Cobrança Bancária
 
 Emissão de Boletos
     ${nome_print}=     Set Variable     Emissão de Boletos
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest    
     Cobrança Bancária
     RPA.Windows.Click         Emissão de Boletos
     RPA.Windows.Get Text      Emissão de Duplicatas/Boletos/Carnês (1)
     RPA.Windows.Click         Executar
     BaseDesktop.Screenshot    Emissão de Duplicatas/Boletos/Carnês (1)    ${Caminho_Screenshots}Emissão de Boletos
-    RPA.Windows.Click       Sim
-    RPA.Windows.Click       OK
+    RPA.Windows.Click         Sim
     Fechar janela
 
 Carteiras de Cobrança
     ${nome_print}=     Set Variable     Carteiras de Cobrança
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]     Financeiro    Cobrança Bancária   SmokeTest    
     Cobrança Bancária
     RPA.Windows.Click         Carteiras de Cobrança
     RPA.Windows.Get Text      Cadastro de Carteiras de Cobranças (1)

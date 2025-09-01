@@ -241,7 +241,7 @@ Consulta de Visitas Técnicas
 
 Consultas Personalizadas
     ${nome_print}=     Set Variable     Consultas Personalizadas
-    [Tags]    Vendas   Consultas   SmokeTest
+    [Tags]    Vendas   Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
