@@ -93,7 +93,8 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  Enter
     BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Fechar janela
+    Sleep                   1s
+    Fechar com Sim
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
@@ -164,4 +165,5 @@ Integração Royalties Monsanto > Consulta Lista de Pendências
     RPA.Windows.Get Text    Consulta Lista de Pendências - Monsanto (1)
     BaseDesktop.Screenshot  Consulta Lista de Pendências - Monsanto (1)    ${Caminho_Screenshots}Integração Royalties Monsanto/Consulta Lista de Pendências
     RPA.Windows.Click       Confirmar
+    Sleep                   1s
     Fechar Janela
