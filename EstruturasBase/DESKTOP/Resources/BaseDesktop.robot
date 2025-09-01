@@ -102,7 +102,7 @@ Ir para:
             END
         END      
     END
-    Sleep                  1s
+    Sleep                  2s
     RPA.Windows.Click      ${janela}
     RPA.Windows.Get Text    ${nome_tela}
 
@@ -607,11 +607,7 @@ Gerar aquivo de resumo Geral
     Repetidor de teclas em sequencia    1            Enter        1
     sleep                               1s
     Repetidor de teclas                 enter        1
-<<<<<<< HEAD
     Salvar arquivo                      C:\\Users\\testes\\Documents\\Testes Regressivos\\Resumo Geral    2
-=======
-    sleep                               1s
-    Salvar arquivo                      C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Resumo Geral    2
 
 Exportar para bloco de notas
     [Arguments]    ${nome_painel}    ${posição_bloco}    
@@ -621,6 +617,5 @@ Exportar para bloco de notas
     repetidor de teclas        down    ${posição_bloco}
     RPA.Desktop.Press Keys     enter
     Sleep                      5s
-    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
+    ${texto}=    RPA.Windows.Get Value      Editor de texto		
     RETURN    ${texto}
->>>>>>> 23e55d7b676c85b978a2c27d46f810125a8d85de
