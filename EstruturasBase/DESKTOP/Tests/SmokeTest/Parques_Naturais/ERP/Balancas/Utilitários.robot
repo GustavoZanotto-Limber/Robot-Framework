@@ -98,7 +98,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]     Balancas    Utilitários   SmokeTest    
+    [Tags]     Balancas    Utilitários   SmokeTest        
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -143,7 +143,7 @@ Configuração da Balança
 
 Integração Royalties Monsanto > Consulta de Entregas/Cancelamentos
     ${nome_print}=     Set Variable     Consulta de Entregas_Cancelamentos
-    [Tags]     Balancas    Utilitários   SmokeTest
+    [Tags]     Balancas    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Integração Royalties Monsanto
     RPA.Desktop.Press Keys  C

@@ -61,8 +61,8 @@ Limite de Crédito
 
 Itens > Itens
     ${nome_print}=     Set Variable     Itens
-    [Tags]     Compras    Cadastros   SmokeTest    
-    Cadastros
+    [Tags]     Compras    Cadastros   SmokeTest       
+    Cadastros    
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  I
     RPA.Windows.Get Text    Cadastro de Itens (1)

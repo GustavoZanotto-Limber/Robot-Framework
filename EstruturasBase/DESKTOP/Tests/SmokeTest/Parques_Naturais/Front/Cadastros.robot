@@ -17,7 +17,7 @@ ${nome_exe}=    cde_win_bca_frontR40
 *** Test Cases ***
 
 Guias
-    [Tags]    Cadastros    Front    SmokeTest  
+    [Tags]    Cadastros    Front    SmokeTest      Rapido
     ${nome_print}=          Set Variable    Guias    
     Cadastros
     RPA.Windows.Click       Guias
@@ -28,7 +28,7 @@ Guias
 
 Isentos
     [Tags]    Cadastros    Front    SmokeTest  
-    ${nome_print}=          Set Variable    Isentos
+    ${nome_print}=          Set Variable    Isentos    Rapido
     Cadastros
     RPA.Windows.Click       Isentos
     RPA.Windows.Get Text    Cadastro de Isento (1)
@@ -111,7 +111,7 @@ Tipos de Documentos
     Fechar com Sim
 
 Pessoas Autorizadas
-    [Tags]    Cadastros    Front    SmokeTest     Testes
+    [Tags]    Cadastros    Front    SmokeTest     
     ${nome_print}=          Set Variable    Pessoas Autorizadas
     Cadastros
     RPA.Windows.Click       Pessoas Autorizadas
