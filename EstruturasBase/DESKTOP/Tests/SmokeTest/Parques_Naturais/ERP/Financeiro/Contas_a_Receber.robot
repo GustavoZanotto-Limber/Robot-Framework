@@ -125,19 +125,18 @@ Estornar Renegociações
 
 Alterar Vencimento_Portador
     ${nome_print}=     Set Variable     Alterar Vencimento_Portador
-    [Tags]     Financeiro    Contas a Receber   SmokeTest
+    [Tags]     Financeiro    Contas a Receber   SmokeTest    
     Contas a Receber
     RPA.Windows.Click       Alterar Vencimento/Portador
     RPA.Windows.Get Text    Alteração de Vencimento/Portador do Contas a Receber (1)
     RPA.Windows.Click       Executar
     BaseDesktop.Screenshot  Alteração de Vencimento/Portador do Contas a Receber (1)    ${Caminho_Screenshots}Alterar Vencimento_Portador
     RPA.Windows.Click       Sim
-    RPA.Windows.Click       OK
     Fechar janela
 
 Transferência entre Clientes
     ${nome_print}=     Set Variable     Transferência entre Clientes
-    [Tags]     Financeiro    Contas a Receber   SmokeTest
+    [Tags]     Financeiro    Contas a Receber   SmokeTest    
     Contas a Receber
     RPA.Windows.Click       Transferência entre Clientes
     RPA.Windows.Get Text    Transferência de Contas entre Clientes (1)
@@ -262,26 +261,24 @@ Recibos Avulsos - Múltiplas Contas
 
 Consultas
     ${nome_print}=     Set Variable     Consultas
-    [Tags]     Financeiro    Contas a Receber   SmokeTest
+    [Tags]     Financeiro    Contas a Receber   SmokeTest    
     Contas a Receber
     RPA.Windows.Click       Consultas
     RPA.Windows.Get Text    Consulta do Contas a Receber (1)
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Consulta do Contas a Receber (1)    ${Caminho_Screenshots}Consultas
     RPA.Windows.Click       Sim
-    RPA.Windows.Click       OK
     Fechar janela
 
 Emissão de Documentos
     ${nome_print}=     Set Variable     Emissão de Documentos
-    [Tags]     Financeiro    Contas a Receber   SmokeTest
+    [Tags]     Financeiro    Contas a Receber   SmokeTest    
     Contas a Receber
     RPA.Windows.Click       Emissão de Documentos
     RPA.Windows.Get Text    Emissão de Duplicatas/Boletos/Carnês (1)
     RPA.Windows.Click       Executar
     BaseDesktop.Screenshot  Emissão de Duplicatas/Boletos/Carnês (1)    ${Caminho_Screenshots}Emissão de Documentos
     RPA.Windows.Click       Sim
-    RPA.Windows.Click       OK
     Fechar janela
 
 Relatórios > Contas a Receber

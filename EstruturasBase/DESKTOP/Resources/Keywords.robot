@@ -158,6 +158,7 @@ Quando finalizo o pagamento
     [Arguments]    ${qtd_de_bilhetes}
     Sleep                        7s
     RPA.Windows.Click            Fechar
+    Sleep                        4s
     FOR    ${qtd_de_bilhetes}    IN RANGE    0    ${qtd_de_bilhetes}
     RPA.Windows.Click            Fechar
     Sleep                5s
@@ -435,12 +436,17 @@ Então abro o financeiro e valido as informações
     ${data_atual}=                      Formatar Data Para DD/MM/AAAA            @{data_sem_formatar}
     Should Contain                      ${reduções_Z}    ${texto}
     Should Contain                      ${reduções_Z}    ${data_atual} 
-    Should Contain                      ${data_atual}    Conta 5
+    Should Contain                      ${reduções_Z}    Conta 5
     RPA.Desktop.Press Keys              Alt    F4
+    Sleep                               1s
     RPA.Windows.Click                   Fechar
+    Sleep                               1s
     RPA.Windows.Click                   Excluir Receitas
+    Sleep                               1s
     RPA.Windows.Click                   Sim
+    Sleep                               1s
     RPA.Windows.Click                   Estornar
+    Sleep                               1s
     RPA.Windows.Click                   Sim
     
     
