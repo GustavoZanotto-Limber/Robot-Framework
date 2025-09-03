@@ -58,7 +58,8 @@ Fechar navegador
 # a identação estar correta com os demais comandos.
 Cenário 1: Teste de abrir o navegador
         Open Browser    https://www.google.com.br/     Chrome
-        Close Browser
+        Sleep    1s
+        #Close Browser
 
 # Para utilizar uma keyword dentro de um test case basta colocar um tab e escrever o nome da keyword assim 
 # o programa ja identifica como uma keyword e executa o comando dela. Essa keyword utilizada no exemplo já

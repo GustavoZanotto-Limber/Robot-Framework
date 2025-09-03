@@ -22,16 +22,16 @@ Manifesto de Documentos Fiscais
 
 Manifesto de Documentos Fiscais
     ${nome_print}=     Set Variable     Manifesto de Documentos Fiscais
-    [Tags]    Frotas   Manifesto de Documentos Fiscais   SmokeTest
+    [Tags]    Frotas   Manifesto de Documentos Fiscais   SmokeTest    
     Manifesto de Documentos Fiscais                 Manifesto de Documentos Fiscais
     RPA.Windows.Get Text    Manifesto Eletrônico de Documentos Fiscais (1)
     RPA.Windows.Click       Novo
     BaseDesktop.Screenshot  Manifesto Eletrônico de Documentos Fiscais (1)                             ${Caminho_Screenshots}Manifesto de Documentos Fiscais
-    Fechar Janela
+    Fechar com Sim
 
 Monitor - MDF-E
     ${nome_print}=     Set Variable     Monitor - MDF-E
-    [Tags]    Frotas   Manifesto de Documentos Fiscais   SmokeTest
+    [Tags]    Frotas   Manifesto de Documentos Fiscais   SmokeTest    
     Manifesto de Documentos Fiscais                 	Monitor - MDF-e
     RPA.Windows.Get Text    Monitor MDF-e (1)
     RPA.Desktop.Press Keys  0

@@ -15,11 +15,12 @@ ${texto_bilhete}
 *** Keywords ***
 
 
+
 *** Test Cases    ***
 
 Cenário 1: Cadastro de um bilhete por Horario/Vaga
-    ${nome_print}=    Set Variable     Cadastro de um bilhete por Horario/Vaga
+    ${nome_print}=    Set Variable     Cadastro de um bilhete por Horario_Vaga
     [Tags]    Testes_Funcionais    LB-42
-    Dado que estou na tela de Programacao de Horario
-    #Quando insiro as informações para um novo cadastro de Programacao de Horario
+    Dado que estou na tela de criação de bilhete
+    Quando insiro as informações para um novo cadastro de bilhete 
     #Então salvo o cadastro de Programacao de Horario
