@@ -577,6 +577,17 @@ Formatar Data Para DD/MM/AAAA
     ${data_formatada}=    Evaluate    '{:0>2}/{:0>2}/{:04}'.format(int(${dia}), int(${mes}), int(${ano}))
     RETURN    ${data_formatada}
 
+Gerar aquivo de resumo Geral
+    Ir para:    Resumo Geral            3            Resumo de Movimentação (1)
+    sleep                               1s
+    Repetidor de teclas                 enter        3
+    sleep                               1s
+    Repetidor de teclas em sequencia    1            Enter        1
+    sleep                               1s
+    Repetidor de teclas                 enter        1
+    sleep                               1s
+    Salvar arquivo                      C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Resumo Geral    2
+
 Pegar informações da 1° Pag. do arquivo
     [Arguments]     ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
     Sleep                     1s
@@ -589,17 +600,6 @@ Pegar informações da 1° Pag. do arquivo
     ${primeira}=              Get From List          ${keys}    0
     ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
     RETURN    ${pagina1}
-
-Gerar aquivo de resumo Geral
-    Ir para:    Resumo Geral            3            Resumo de Movimentação (1)
-    sleep                               1s
-    Repetidor de teclas                 enter        3
-    sleep                               1s
-    Repetidor de teclas em sequencia    1            Enter        1
-    sleep                               1s
-    Repetidor de teclas                 enter        1
-    sleep                               1s
-    Salvar arquivo                      C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Resumo Geral    2
 
 Exportar para bloco de notas
     [Arguments]    ${nome_painel}    ${posição_bloco}    
