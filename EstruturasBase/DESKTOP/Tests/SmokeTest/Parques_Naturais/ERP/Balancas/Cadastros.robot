@@ -31,7 +31,7 @@ Produtos
     
 Terceiros
     ${nome_print}=     Set Variable     Terceiros
-    [Tags]     Balancas    Cadastros   SmokeTest    Testes
+    [Tags]     Balancas    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
