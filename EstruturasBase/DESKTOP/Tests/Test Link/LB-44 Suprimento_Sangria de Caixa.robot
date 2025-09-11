@@ -26,7 +26,7 @@ Cenário 1: Usuário autorizado para realizar sangria ou suprimento
 
 Cenário 2: Realização de um lançamento de suprimento no caixa   
     ${nome_print}=    Set Variable     Realização de um lançamento de suprimento no caixa 
-    @{texto_bilhete}=   Create List     COMPROVANTE DE SUPRIMENTO    PDV: 1 - BIL 01    CODIGO MOVIMENTO    MOTIVO: Suprimento gerado a partir de testes automatizados
+    @{texto_bilhete}=   Create List     COMPROVANTE DE SUPRIMENTO    PDV: 1 - BIL 01    CODIGO MOVIMENTO    MOTIVO: Suprimento gerado a partir de  testes automatizados
     [Tags]    Testes_Funcionais    LB-44   
     Dado que realizei um novo cadastro de suprimento
     Quando salvo o arquivo de suprimento
@@ -34,7 +34,7 @@ Cenário 2: Realização de um lançamento de suprimento no caixa
 
 Cenário 3: Realização de um lançamento de Sangria no caixa   
     ${nome_print}=    Set Variable     Realização de um lançamento de Sangria no caixa 
-    @{texto_bilhete}=   Create List     COMPROVANTE DE SANGRIA    PDV: 1 - BIL 01    CODIGO MOVIMENTO    MOTIVO: Sangria gerado a partir de testes automatizados
+    @{texto_bilhete}=   Create List     COMPROVANTE DE SANGRIA    PDV: 1 - BIL 01    CODIGO MOVIMENTO    MOTIVO: Sangria gerado a partir de testes  automatizados
     [Tags]    Testes_Funcionais    LB-44   
     Dado que realizei um novo cadastro de Sangria
     Quando salvo o arquivo de Sangria

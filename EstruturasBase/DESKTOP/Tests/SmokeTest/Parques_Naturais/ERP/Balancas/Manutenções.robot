@@ -113,7 +113,7 @@ Emissão de Nota Fiscal
 
 Documentos emitidos contra o estabelecimento p/ entrada
     ${nome_print}=     Set Variable     Documentos emitidos contra o estabelecimento p_ entrada
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]     Balancas    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click         Documentos emitidos contra o estabelecimento p/ entrada
     RPA.Windows.Get Text      Documentos emitidos contra o estabelecimento p/ entrada (1)
@@ -123,7 +123,7 @@ Documentos emitidos contra o estabelecimento p/ entrada
 
 Pesagem Geral
     ${nome_print}=     Set Variable     Pesagem Geral
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]     Balancas    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click         Pesagem Geral
     RPA.Windows.Get Text      Pesagem Geral (1)
