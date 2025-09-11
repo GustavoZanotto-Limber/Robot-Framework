@@ -165,6 +165,7 @@ Integrações > Importação de CT-e/MDF-e
     [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários com tecla   T 
     RPA.Desktop.Press Keys  I
+    Sleep                   1s
     RPA.Windows.Get Text    Importação de XML de Conhecimento de Transporte Eletrônico (1) 
     RPA.Windows.Click       Atualizar
     BaseDesktop.Screenshot  Importação de XML de Conhecimento de Transporte Eletrônico (1)    ${Caminho_Screenshots}Integrações/Importação de CT-e_MDF-e

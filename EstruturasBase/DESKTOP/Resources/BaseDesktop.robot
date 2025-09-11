@@ -618,7 +618,6 @@ Gerar aquivo de resumo Geral
     Repetidor de teclas                 enter        1
     Salvar arquivo                      C:\\Users\\testes\\Documents\\Testes Regressivos\\Resumo Geral    2
 
-
 Exportar para bloco de notas
     [Arguments]    ${nome_painel}    ${posição_bloco}    
     RPA.Windows.Right Click    ${nome_painel}

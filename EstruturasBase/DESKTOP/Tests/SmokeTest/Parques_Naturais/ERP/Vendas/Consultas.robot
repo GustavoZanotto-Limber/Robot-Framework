@@ -230,18 +230,17 @@ Movimentação de Terceiros
 
 Consulta de Visitas Técnicas
     ${nome_print}=     Set Variable     Consulta de Visitas Técnicas
-    [Tags]    Vendas   Consultas   SmokeTest   Teste
+    [Tags]    Vendas   Consultas   SmokeTest   Teste    Testes
     Consultas
     RPA.Windows.Click         Consulta de Visitas Técnicas
     RPA.Windows.Get Text      Consulta de Visitas Técnicas (1)
     RPA.Windows.Click         Carregar
     BaseDesktop.Screenshot    Consulta de Visitas Técnicas (1)    ${Caminho_Screenshots}Consulta de Visitas Técnicas
-    Sleep                     3s
     Fechar janela
 
 Consultas Personalizadas
     ${nome_print}=     Set Variable     Consultas Personalizadas
-    [Tags]    Vendas   Consultas   SmokeTest    
+    [Tags]    Vendas   Consultas   SmokeTest        Testes
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
