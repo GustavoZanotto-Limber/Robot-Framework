@@ -537,7 +537,7 @@ Outros > Exportações > Saldo de NF's p/ Exportação
 
 Outros > Exportações > PH > S-1250
     ${nome_print}=     Set Variable     S-1250
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]    Fiscal   Movimentos   SmokeTest    
     Movimentos                Outros
     RPA.Windows.Click         Exportações
     RPA.Windows.Click         PH
@@ -552,8 +552,9 @@ Outros > Exportações > PH > S-1250
 
 Alterar Lcto Entrada
     ${nome_print}=     Set Variable     Alterar Lcto Entrada
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]    Fiscal   Movimentos   SmokeTest    
     Movimentos                Alterar Lcto Entrada
+    Sleep                     1s
     RPA.Windows.Get Text      Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Entradas/Compras - Incluir/Alterar (1)         ${Caminho_Screenshots}Alterar Lcto Entrada

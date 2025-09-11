@@ -32,7 +32,7 @@ Requisição contra Almoxarifado
 
 Incluir/Alterar Entradas/Compras
     ${nome_print}=     Set Variable     Incluir_Alterar Entradas_Compras
-    [Tags]    Frotas   Manutenções   SmokeTest
+    [Tags]    Frotas   Manutenções   SmokeTest    
     Manutenções             Incluir/Alterar Entradas/Compras    
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click       Novo

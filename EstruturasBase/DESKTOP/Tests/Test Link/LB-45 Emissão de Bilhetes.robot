@@ -66,7 +66,7 @@ Cenário 6: Redução da disponibilidade após cada venda
     ${qtd_vagas}=    Dado que realizei uma reserva verificando a quantidade de bilhetes    
     Quando finalizo o pagamento (sem fechar a janela)    1
     Então valido se a quantidade foi reduzida corretamente    ${qtd_vagas}
-
+    
 Cenário 7: Verificação de vendas realizadas
     ${nome_print}=    Set Variable     Verificação de vendas realizadas
     @{texto_bilhete}=   Create List     5875 - Z - Bilhete integrado    4401 - Categoria Convênio

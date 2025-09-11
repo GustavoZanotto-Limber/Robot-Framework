@@ -74,7 +74,7 @@ Leitor de Bilhetes
     RPA.Windows.Click       Fechar
 
 Consulta Passaporte
-    [Tags]    Consultas    Front    SmokeTest      Testes
+    [Tags]    Consultas    Front    SmokeTest      
     ${nome_print}=          Set Variable    Consulta Passaporte    
     Consultas Front         Consulta Passaporte    
     Sleep                   1s
@@ -86,13 +86,10 @@ Consulta Passaporte
     RPA.Desktop.Press Keys  ALT    f4
     
 Consultas Personalizadas
-    [Tags]    Consultas    Front    SmokeTest    Testes
+    [Tags]    Consultas    Front    SmokeTest    
     ${nome_print}=          Set Variable    Consultas Personalizadas
     Consultas Front         Consultas Personalizadas   
     RPA.Windows.Get Text    Consultas Personalizadas (1)
     RPA.Windows.Click       Cadastrar Nova Consulta
     BaseDesktop.Screenshot  Consultas Personalizadas (1)    ${Caminho_Screenshots}Consultas Personalizadas
     RPA.Desktop.Press Keys  ALT    f4
-
-
-    

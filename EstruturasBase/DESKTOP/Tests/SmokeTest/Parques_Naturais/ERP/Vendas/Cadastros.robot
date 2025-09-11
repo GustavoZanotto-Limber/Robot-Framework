@@ -981,10 +981,10 @@ Fiscal > Espécies de Documentos
 
 Fiscal > Operações Fiscais
     ${nome_print}=     Set Variable     Operações Fiscais
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
-    RPA.Desktop.Press Keys    O
+    RPA.Desktop.Press Keys    R
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Operações Fiscais
@@ -992,10 +992,10 @@ Fiscal > Operações Fiscais
 
 Fiscal > Séries
     ${nome_print}=     Set Variable     Séries
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
-    RPA.Desktop.Press Keys    R
+    RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Séries (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de Séries (1)    ${Caminho_Screenshots}Fiscal/Séries
@@ -1003,10 +1003,10 @@ Fiscal > Séries
 
 Fiscal > CFOP's
     ${nome_print}=     Set Variable     CFOP's
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
-    RPA.Desktop.Press Keys    C
+    RPA.Desktop.Press Keys    F
     RPA.Windows.Get Text      Cadastro de CFOP's (1)
     RPA.Windows.Click         Novo
     BaseDesktop.Screenshot    Cadastro de CFOP's (1)    ${Caminho_Screenshots}Fiscal/CFOP's
@@ -1445,7 +1445,7 @@ Parâmetros > Grupos Usuários
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
@@ -1456,10 +1456,10 @@ Parâmetros > Usuários
 
 Parâmetros > Configurações de Estação
     ${nome_print}=     Set Variable     Configurações de Estação
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
-    RPA.Desktop.Press Keys    c
+    RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Configurações da Estação (1)
     RPA.Windows.Click         CDE-WIN-FIN
     BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações de Estação
