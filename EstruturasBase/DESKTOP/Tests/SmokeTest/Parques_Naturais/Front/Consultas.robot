@@ -93,6 +93,3 @@ Consultas Personalizadas
     RPA.Windows.Click       Cadastrar Nova Consulta
     BaseDesktop.Screenshot  Consultas Personalizadas (1)    ${Caminho_Screenshots}Consultas Personalizadas
     RPA.Desktop.Press Keys  ALT    f4
-
-
-    

@@ -21,7 +21,7 @@ Manutenções
 
 Entradas/Compras > Incluir/Alterar
     ${nome_print}=     Set Variable     Incluir_Alterar
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]     Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  I

@@ -12,13 +12,14 @@ Resource   BaseDesktop.robot
 *** Variables ***
 ${qtd_vagas}
 ${Espaço}=    ${SPACE}
+${i}=    0
 *** Keywords ***
 
 # ****** BDDs **********
 #----------------------------------------DADO----------------------------------------
 Dado que realizei uma venda
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete   20    1
+    Selecionar o bilhete   5875    4321
     Finalizar compra
 
 Dado que realizei uma venda com convênio
@@ -28,25 +29,25 @@ Dado que realizei uma venda com convênio
 
 Dado que realizei uma venda com dois bilhetes
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete    20    1
-    Selecionar o bilhete    21    1
+    Selecionar o bilhete    5875    4321
+    Selecionar o bilhete    6080    4321
     RPA.Desktop.Press Keys  Enter
     Finalizar compra
 
 Dado que realizei uma venda com multiplas categorias
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete    20    1
+    Selecionar o bilhete    5875    4321
     Sleep                   1s
-    Selecionar o bilhete    20    2
+    Selecionar o bilhete    5875    4369
     RPA.Desktop.Press Keys  Enter
     Sleep                   1s
-    Selecionar o bilhete    20    3
+    Selecionar o bilhete    5875    4389
     RPA.Desktop.Press Keys  Enter
     Finalizar compra
 
 Dado que realizei uma reserva preenchendo os dados do titular e visitante
     Ir Para Emissão de Bilhetes
-    Selecionar bilhete preenchendo pais, estado e município   22    1
+    Selecionar bilhete preenchendo pais, estado e município   6081    4321
     Sleep                   1s        
     Preencher dados do visitante
     Finalizar compra
@@ -54,12 +55,12 @@ Dado que realizei uma reserva preenchendo os dados do titular e visitante
 Dado que realizei uma reserva como outras receitas
     Ir Para Emissão de Bilhetes
     Trocar Operação  6  
-    Selecionar o bilhete   1    1
+    Selecionar o bilhete   5774    3582
     Finalizar compra
 
 Dado que realizei uma reserva verificando a quantidade de bilhetes
     Ir Para Emissão de Bilhetes
-    ${qtd_vagas_string}=   Selecionar o bilhete e retornar quantidade de vagas   20    1
+    ${qtd_vagas_string}=   Selecionar o bilhete e retornar quantidade de vagas   5875    1
     ${qtd_vagas}=        Convert to Integer    ${qtd_vagas_string}
     Sleep    1s
     Finalizar compra
@@ -68,12 +69,12 @@ Dado que realizei uma reserva verificando a quantidade de bilhetes
 Dado que realizei uma reserva com fundo iguaçu
     Ir Para Emissão de Bilhetes
     RPA.Desktop.Press Keys  F4
-    Selecionar o bilhete    21    1
+    Selecionar o bilhete    6080    4321
     Finalizar compra
 
 Dado que realizei uma reserva com valor Zerado
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete    22   1
+    Selecionar o bilhete    6163   4321
     RPA.Desktop.Press Keys  F5
 
 Dado que realizei um novo cadastro de suprimento
@@ -151,6 +152,8 @@ Quando preencho a observação
     RPA.Desktop.Type Text     Liberado pelos teste automatizados
     RPA.Desktop.Press Keys    Enter
     Finalizar compra
+    Sleep                     1s
+    RPA.Windows.Click         OK
     Sleep                     4s    
     Fechar com Sim
 
@@ -226,7 +229,7 @@ Quando vou consultar o histórico de operações do caixa por turno
     Sleep                   3s
     RPA.Desktop.Press Keys  Enter 
     Sleep                   1s
-    Ir para:                Fechamento de Caixa    3    Controle de Caixa (1)
+    Ir para:                Fechamento de Caixa    3    Fechamento de Caixa ${Espaço}(1)
     Repetidor de teclas     enter                  2
     Consultar Cadastros     1
     Sleep                   1s
@@ -266,7 +269,7 @@ Quando Fecho o caixa operador E pego o Resumo Geral
     Sleep                    1s
     Fechar caixa e salvar a impressão
     Gerar aquivo de resumo Geral
-    ${texto_pdf}=    Pegar informações da 1° Pag. do arquivo    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
+    ${texto_pdf}=    Pegar informações da 1° Pagina do arquivo    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
     ${valor_final}=    Dividir Texto    ${texto_pdf}    R$    2
     sleep                     5s
     RPA.Desktop.Press Keys    ALT    f4
@@ -291,7 +294,7 @@ Então valido a venda foi realizada com sucesso (valor zerado)
     
 Então valido se a quantidade foi reduzida corretamente
     [Arguments]    ${qtd_vagas}
-    ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    20    1
+    ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    19    4321
     ${qtd_vagas_novo}=            Convert to Integer    ${qtd_vagas_novo_string}
     ${qtd_vagas}=            Evaluate    ${qtd_vagas}-1
     IF     ${qtd_vagas} == ${qtd_vagas_novo}
@@ -337,7 +340,7 @@ Então valido se a impressão RPS saiu corretamente
 
 
 Então valido se a impressão saiu corretamente 2
-    [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}    ${texto_impressão}    ${texto_impressão2}=${None}
+    [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}    @{texto_impressão}    ${texto_impressão2}=${None}
     Sleep                     1s
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
     Sleep                     6s
@@ -347,10 +350,11 @@ Então valido se a impressão saiu corretamente 2
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0
     ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
+    ${pagina1}=    Replace String    ${pagina1}    \n    SPACE
     FOR    ${element}    IN    @{texto_impressão}
-        Should Contain      ${pagina1}        ${element}
+        Should Contain    ${pagina1}    ${element[${i}]}
+        ${i}=    Evaluate    ${i}+1
     END
-    Should Contain            ${pagina1}             @{texto_impressão}
     IF    ${texto_impressão2} != ${None}
         FOR    ${element}    IN    @{texto_impressão2}
         Should Contain      ${pagina1}        ${element}

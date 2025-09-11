@@ -59,7 +59,7 @@ Iniciar sessao
     RPA.Windows.Click               Abrir
     Sleep                           2s
     RPA.Desktop.Press keys                      enter
-    Sleep                           5s          Carregando a base...
+    Sleep                           10s          Carregando a base...
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
@@ -163,7 +163,7 @@ Ir Para Emissão de Bilhetes
         Repetidor de teclas    right    1
         RPA.Windows.Click      Emissão de Bilhetes
     END
-    Sleep                  7s
+    Sleep                  8s
     RPA.Windows.Get Text   Emissão de Bilhetes (1)
 
 Ir Para Reimpressão de Bilhetes
@@ -230,22 +230,9 @@ Rolar barra até o Final
 Selecionar bilhete preenchendo pais, estado e município
     [Arguments]    ${bilhete}    ${categoria}
     #Selecionando o bilhete    
-    RPA.Desktop.Press Keys    0
-    RPA.Desktop.Press Keys    enter
-    Sleep                     1s
-    RPA.Desktop.Press Keys    F6
-    repetidor de teclas       Down    ${bilhete} 
-    RPA.Windows.Click         Confirmar
-    Sleep                     1s
+    Escrever para consultar   ${bilhete}
     #Selecionando categorias
-    RPA.Desktop.Press Keys    0
-    RPA.Desktop.Press Keys    enter
-    Sleep                     1s
-    RPA.Desktop.Press Keys    F6
-    Sleep                     0.5s
-    Repetidor de teclas       down    ${categoria}   
-    RPA.Windows.Click         Confirmar
-    Sleep                     1s
+    Escrever para consultar   ${categoria}
     RPA.Desktop.Press Keys    enter
     RPA.Desktop.Press Keys    1
     RPA.Desktop.Press Keys    enter
@@ -288,22 +275,9 @@ Selecionar a ultima venda para reimpressão
 Selecionar o bilhete
     [Arguments]    ${bilhete}    ${categoria}
     #Selecionando o bilhete
-    RPA.Desktop.Press Keys    0
-    RPA.Desktop.Press Keys    enter
-    Sleep                     1s
-    RPA.Desktop.Press Keys    F6
-    repetidor de teclas       Down    ${bilhete} 
-    RPA.Windows.Click         Confirmar
-    Sleep                     1s
+    Escrever para consultar   ${bilhete}
     #Selecionando categorias
-    RPA.Desktop.Press Keys    0
-    RPA.Desktop.Press Keys    enter
-    Sleep                     1s
-    RPA.Desktop.Press Keys    F6
-    Sleep                     0.6s
-    Repetidor de teclas       down    ${categoria}   
-    RPA.Windows.Click         Confirmar
-    Sleep                     1s
+    Escrever para consultar   ${categoria}
     Repetidor de teclas       enter    6
 
 Selecionar o bilhete e retornar quantidade de vagas
@@ -314,17 +288,29 @@ Selecionar o bilhete e retornar quantidade de vagas
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
     repetidor de teclas       Down    ${bilhete} 
-    Sleep                     0.3
+    Sleep                     1
     RPA.Windows.Click         Confirmar
     Sleep                     1s
+    #Selecionando categorias
+    Escrever para consultar   ${categoria}
+    Sleep                     1s
+    ${qtd_vagas}=    Coleta quantidade de vagas atraves da planilha
+    repetidor de teclas       enter    6
+    RETURN                    ${qtd_vagas}
+
+Selecionar o bilhete e retornar quantidade de vagas (categoria)
+    [Arguments]    ${bilhete}    ${categoria}
+    #Selecionando o bilhete
+    Escrever para consultar   ${bilhete}
     #Selecionando categorias
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
-    Sleep                     0.5s
-    Repetidor de teclas       down    ${categoria}   
-    RPA.Desktop.Press Keys    enter
+    repetidor de teclas       Down    ${categoria}
+    Sleep                     1
+    RPA.Windows.Click         Confirmar
+    Sleep                     1s
     Sleep                     1s
     ${qtd_vagas}=    Coleta quantidade de vagas atraves da planilha
     repetidor de teclas       enter    6
@@ -332,7 +318,6 @@ Selecionar o bilhete e retornar quantidade de vagas
     
     
 Coleta quantidade de vagas atraves da planilha
-    Sleep                      1s 
     RPA.Desktop.Press Mouse Button    Right
     RPA.Desktop.Release Mouse Button    Right
     Repetidor de teclas        Down    4
@@ -363,13 +348,7 @@ Trocar Operação
 
 Selecionar o bilhete e o convênio
     #Selecionando o bilhete
-    RPA.Desktop.Press Keys    0
-    RPA.Desktop.Press Keys    enter
-    Sleep                     1s
-    RPA.Desktop.Press Keys    F6
-    repetidor de teclas       Down    20
-    RPA.Windows.Click         Confirmar
-    Sleep                     1s
+    Escrever para consultar   5875
     #Selecionando categorias
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    enter
@@ -413,17 +392,17 @@ Fechar caixa e salvar a impressão
 Salvo a impressão do RPS
     Sleep                         6s
     RPA.Desktop.Type Text         RPS
-    Sleep                         1s
+    Sleep                         3s
     RPA.Windows.Click             Salvar
-    Sleep                         1s
+    Sleep                         2s
     RPA.Windows.Click             Sim
 
 Salvo a Impressão
     [Arguments]    ${nome_do_arquivo}    
-    Sleep                         5s
+    Sleep                         6s
     RPA.Desktop.Type Text         ${nome_do_arquivo}    
     RPA.Windows.Click             Salvar
-    Sleep                         1s
+    Sleep                         2s
     RPA.Windows.Click             Sim
     Sleep                         1s
 
@@ -595,7 +574,7 @@ Gerar aquivo de resumo Geral
     sleep                               1s
     Salvar arquivo                      C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Resumo Geral    2
 
-Pegar informações da 1° Pag. do arquivo
+Pegar informações da 1° Pagina do arquivo
     [Arguments]     ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
     Sleep                     1s
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
