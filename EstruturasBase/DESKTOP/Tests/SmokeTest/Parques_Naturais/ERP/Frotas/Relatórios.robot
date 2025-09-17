@@ -16,13 +16,14 @@ Relatórios
     [Arguments]    ${nome}
     Cadastros
     repetidor de teclas    right    9
+    sleep                0.5
     RPA.Windows.Click    ${nome}
 
 *** Test Cases ***
 
 CT-e > CT-e Emitidos
     ${nome_print}=     Set Variable     CT-e Emitidos
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]    Frotas   Relatórios   SmokeTest    Testes
     Relatórios              CT-e
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text   	Relatório de CT'es Emitidos (1) 
@@ -35,7 +36,7 @@ CT-e > CT-e Emitidos
 
 CT-e > CT-e Inutilizados
     ${nome_print}=     Set Variable     CT-e Inutilizados
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]    Frotas   Relatórios   SmokeTest    Testes
     Relatórios              CT-e
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Relatório de Conhecimento de Transporte Inutilizados (1) 

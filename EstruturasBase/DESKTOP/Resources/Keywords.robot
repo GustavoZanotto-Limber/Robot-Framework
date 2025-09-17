@@ -293,8 +293,8 @@ Então valido a venda foi realizada com sucesso (valor zerado)
     Analisa texto da forma de pagamento (não contém)  ${metodo}    ${valor}    
     
 Então valido se a quantidade foi reduzida corretamente
-    [Arguments]    ${qtd_vagas}
-    ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    19    4321
+    [Arguments]    ${qtd_vagas}    ${numero_bilhete}=4321
+    ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    ${numero_bilhete}    1
     ${qtd_vagas_novo}=            Convert to Integer    ${qtd_vagas_novo_string}
     ${qtd_vagas}=            Evaluate    ${qtd_vagas}-1
     IF     ${qtd_vagas} == ${qtd_vagas_novo}
@@ -452,5 +452,4 @@ Então abro o financeiro e valido as informações
     RPA.Windows.Click                   Estornar
     Sleep                               1s
     RPA.Windows.Click                   Sim
-    
     
