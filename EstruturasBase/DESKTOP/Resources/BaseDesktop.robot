@@ -99,7 +99,7 @@ Ir para:
             END
         END      
     END
-    Sleep                  2s
+    Sleep                  1s
     RPA.Windows.Click      ${janela}
     RPA.Windows.Get Text    ${nome_tela}
 
@@ -183,7 +183,7 @@ Exportar bilhetes vendidos para bloco de notas
     repetidor de teclas        down    1
     RPA.Desktop.Press Keys     enter
     Sleep                      5s
-    ${texto}=    RPA.Windows.Get Value      Editor de texto		
+    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
     RETURN    ${texto}
 
 Analisa texto dos bilhetes vendidos
@@ -192,7 +192,6 @@ Analisa texto dos bilhetes vendidos
     FOR    ${item}    IN    @{Texto_no_bilhete}
     Should Contain    ${bilhetes_vendidos}        ${item}     
     END
-    Sleep                     1s
     RPA.Desktop.Press Keys    Alt    F4
 
 Analisa texto da forma de pagamento (contém)
@@ -218,7 +217,7 @@ Exportar pagamentos da venda para bloco de notas
     repetidor de teclas        down    1
     RPA.Desktop.Press Keys     enter
     Sleep                      5s
-    ${texto}=    RPA.Windows.Get Value      Editor de texto		
+    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
     RETURN    ${texto}
 
 Rolar barra até o Final
@@ -318,14 +317,13 @@ Selecionar o bilhete e retornar quantidade de vagas (categoria)
     
     
 Coleta quantidade de vagas atraves da planilha
+
     RPA.Desktop.Press Mouse Button    Right
     RPA.Desktop.Release Mouse Button    Right
     Repetidor de teclas        Down    4
-    Sleep                      1s 
     RPA.Desktop.Press Keys     enter
     Sleep                      1s        
     Repetidor de teclas        down    4
-    Sleep                      1s 
     RPA.Desktop.Press Keys     enter
     Sleep                      10s
     Repetidor de teclas        Right    3
@@ -364,9 +362,7 @@ Selecionar o bilhete e o convênio
 
 Finalizar compra 
     RPA.Desktop.Press Keys    F5
-    Sleep                     1s
     RPA.Desktop.Press Keys    space
-    Sleep                     1s
     RPA.Desktop.Press Keys    enter
     
 Abrir caixa operador
@@ -446,7 +442,6 @@ Abrir arquivo
     Run Keyword and Ignore error     RPA.Windows.Click         OK
     Sleep                     1s
     RPA.Desktop.Type Text     ${Caminho_arquivo}${nome_Arquivo_com_o_tipo}
-    Sleep                     2s
     RPA.Desktop.Press Keys    enter
 
 
@@ -587,16 +582,6 @@ Pegar informações da 1° Pagina do arquivo
     ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
     RETURN    ${pagina1}
 
-Gerar aquivo de resumo Geral
-    Ir para:    Resumo Geral            3            Resumo de Movimentação (1)
-    sleep                               1s
-    Repetidor de teclas                 enter        3
-    sleep                               1s
-    Repetidor de teclas em sequencia    1            Enter        1
-    sleep                               1s
-    Repetidor de teclas                 enter        1
-    Salvar arquivo                      C:\\Users\\testes\\Documents\\Testes Regressivos\\Resumo Geral    2
-
 Exportar para bloco de notas
     [Arguments]    ${nome_painel}    ${posição_bloco}    
     RPA.Windows.Right Click    ${nome_painel}
@@ -605,5 +590,11 @@ Exportar para bloco de notas
     repetidor de teclas        down    ${posição_bloco}
     RPA.Desktop.Press Keys     enter
     Sleep                      5s
-    ${texto}=    RPA.Windows.Get Value      Editor de texto		
+    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
     RETURN    ${texto}
+
+Escrever para consultar
+    [Arguments]    ${texto}
+    RPA.Desktop.Type Text     ${texto}
+    RPA.Desktop.Press Keys    enter
+    Sleep                     1s
