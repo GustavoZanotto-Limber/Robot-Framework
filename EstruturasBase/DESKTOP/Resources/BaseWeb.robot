@@ -46,15 +46,19 @@ Abrir CARD e logar
     Preencher senha
     Sleep                      1s
     clicar em continuar
-    Sleep                      2s
+    Sleep                      4s
     Tirar notificação
-    Sleep                      3s
+    Sleep                      7s
     Colocar Filtro de estabelecimento    Zanotto
+     Sleep                      2s
+    # Tirar notificação
+    Sleep                      2s
 
 Caso aconteca erro WEB
         [Arguments]     ${Caminho_Screenshots}        ${nome_print}    
         Run Keyword If Test Failed    Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
         Run Keyword If Test Failed    Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
+        Run Keyword If Test Failed    Encerrar Tudo
         Run Keyword If Test Failed    Fechar navegador
         Run Keyword If Test Failed    Abrir CARD e logar
     
@@ -62,10 +66,10 @@ Mudar Página
     [Arguments]    ${url}
     Go To    ${url}
     Sleep    2s
-    Tirar notificação
 
 Criar Bilhete
     [Arguments]    ${nome}    ${bilheteria}    ${controla_por:int}    ${descrição_do_bilhete}=${None}
+    Sleep                     2s
     Input Text                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/div[2]/mat-form-field[1]/div[1]/div/div[2]/input    ${nome}
     Sleep                     1s
     Repetidor de teclas       tab    2
@@ -115,16 +119,16 @@ Navegar Configurações de venda > sessões
 Colocar Filtro de estabelecimento
     [Arguments]    ${estabelecimento}
     Click Element     xpath:/html/body/app-root/app-pages/div/card-toolbar/mat-toolbar/div/button
+    Sleep             2s
     Input Text        xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/filtro-estabs/table-with-selection/div/div[1]/mat-form-field/div[1]/div[2]/div[1]/input      ${estabelecimento}
     RPA.Desktop.Press Keys    Tab
+    Sleep                     2s
     RPA.Desktop.Press Keys    SPACE
-    Sleep             1s
+    Sleep             3s
     Click Element     xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/filtro-estabs/div/button[3]
 
 Tirar notificação
-    Sleep                      2s
-    Repetidor de teclas        Tab    2
-    RPA.Desktop.Press Keys     Enter
+    Click Element    xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/popup-notificacoes/div/div[2]/div[3]/button[2]
 
 Adicionar Categoria
     [Arguments]    ${categoria}
@@ -198,18 +202,22 @@ Colocar cor
 
 Criar tabela de preço
     [Arguments]    ${numero_bilhete}=6275    ${nome_tabela}=Tabela de Preço Automatizada    ${preço}=100
-    Mudar Página               https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
-    Sleep                      5s
+    Sleep                      4s
+    Go To                      https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+    Sleep                      7s
     Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[1]/div/table/thead/tr/th[4]/div/button
     Sleep                      2s
     Input Text                 xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/div/div/mat-form-field[1]/div[1]/div/div[2]/input    ${nome_tabela}
     Repetidor de teclas        tab    2
     Colocar cor                49    0    53
-    Repetidor de teclas em sequencia    tab    enter    2    4    1 
-    sleep                      2s
-    RPA.Desktop.Press Keys     Shift    Tab
-    RPA.Desktop.Press Keys     Enter
+    Repetidor de teclas em sequencia    tab    enter    1    4    1 
+    sleep                      5s
+    Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/mat-card/mat-card-content/table/tbody/tr/td[4]/div/button
     Sleep                      1s
+    RPA.Desktop.Press Keys     Shift    Tab
+    Sleep                      1s
+    RPA.Desktop.Press Keys     Enter
+    Sleep                      3s
     Click Element              xpath:/html/body/div[3]/div[4]/div/div/mat-option[2]
     RPA.Desktop.Press Keys     Tab
     RPA.Desktop.Type Text      ${preço}
@@ -223,7 +231,7 @@ Criar tabela de preço
 Criar tabela de disponibilidade
     [Arguments]    ${numero_bilhete}=6275    ${nome_tabela}=Tabela de Disponibilidade Automatizada    ${hora_inico}=0600    ${hora_fim}=2200    ${qtd_vagas}=1000
     Click Element              id:mat-tab-link-1
-    sleep                      2s
+    sleep                      3s
     Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[1]/div/table/thead/tr/th[4]/div/button
     Sleep                      2s
     Input Text                 xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[2]/div/config-disp/div[1]/div/div/mat-form-field[1]/div[1]/div/div[2]/input    ${nome_tabela}
@@ -246,7 +254,8 @@ Criar tabela de disponibilidade
 
 Preencher dia do calendario
     [Arguments]    ${mês}    ${dia}
-    Click Element              id:mat-tab-link-2
+    sleep                      3s
+    Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]
     sleep                      2s
     Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib
     sleep                      2s
@@ -268,28 +277,165 @@ Preencher dia do calendario
 
 Selecionar dia do calendário
     [Arguments]    ${mês}    ${dia}
+    ${termina_loop}=    Set Variable    0
     sleep           1s
     ${mês}=    Convert To Integer    ${mês}
+    ${dia}=    Convert To Integer    ${dia}
     IF    ${mês} < 10
-        ${mês}=    Convert To String    ${mês}
+        ${mês}=    Convert to String    ${mês}
         ${mês}=    Replace String   ${mês}    0    ${EMPTY}
     END
     FOR    ${linha}    IN RANGE    1    7    
-        FOR    ${coluna}    IN RANGE    0    7    
-            Sleep                 2s
-            @{dia_calendario}=    Run Keyword And Ignore Error     SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div/section
-            Log    ${dia_calendario[1]}
-            ${tem_dia}=    Run Keyword And Ignore Error    Should Contain    ${dia_calendario[1]}    Element with locator 'xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div/section' not found.
-            Log    ${tem_dia}
-            IF    ${tem_dia} == ('PASS', None)
-                Log    Dia não existe nesse mês
-            ELSE
-                IF    ${dia_calendario[1]} == ${dia}
-                Click Element     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div
-                BREAK
-                END    
-            END         
+        ${dia_max}=    Evaluate    ${linha}*7
+        IF  ${dia} < ${dia_max}
+            FOR    ${coluna}    IN RANGE    0    7   
+                Sleep                 2s
+                @{dia_calendario}=    Run Keyword And Ignore Error     SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div/section
+                Log    ${dia_calendario[1]}
+                ${tem_dia}=    Run Keyword And Ignore Error    Should Contain    ${dia_calendario[1]}    Element with locator 'xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div/section' not found.
+                Log    ${tem_dia}
+                IF    ${tem_dia} == ('PASS', None)
+                    Log    Dia incorreto.
+                ELSE
+                    IF    ${dia_calendario[1]} == ${dia}
+                    Click Element     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div
+                    ${termina_loop}=    Set Variable    1
+                    BREAK
+                    END    
+                END 
+            END
+        END 
+        IF    ${termina_loop} == 1
+            Log    Dia encontrado, saindo do loop
+            BREAK
         END
     END
 
+Criar exceção de disponibilidade
+    [Arguments]    ${qtd_vagas}=5
+    ${validador}=              Valida campo               /html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button    Configurar exceções e alta procura
+    IF    ${validador} == 1
+        Click Element          xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button
+    ELSE
+        Click Element          xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button[2]
+    END
+    Sleep                      2s
+    RPA.Desktop.Press Keys     Tab
+    RPA.Desktop.Type Text      ${qtd_vagas}
+    Repetidor de teclas        tab    4
+    RPA.Desktop.Press Keys     Enter
+
+Criar bloqueio de disponibilidade
+    ${validador}=              Valida campo               /html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button    Configurar exceções e alta procura
+    IF    ${validador} == 1
+        Click Element          xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button
+    ELSE
+        Click Element          xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button[2]
+    END
+    Sleep                      1s
+    Click Element              xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-excecoes/section/table/tbody/tr/td[4]/div/mat-checkbox
+    Sleep                      2s
+    input text                 xpath:/html/body/div[3]/div[4]/div/mat-dialog-container/div/div/app-bloqueio-dialog/div/div[1]/mat-form-field/div[1]/div/div[2]/textarea    Bloqueado pelo Teste Automatizado
+    Sleep                      1s
+    Repetidor de teclas        tab    2
+    Sleep                      1s
+    RPA.Desktop.Press Keys     Enter
+    sleep                      1s
+    Click Element              xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/app-excecoes/mat-dialog-actions/button[2]
     
+    
+
+Valida campo
+    [Arguments]   ${xpath}   ${texto_esperado}    
+    ${texto_obtido}=    Run Keyword and ignore error    SeleniumLibrary.Get Text    xpath:${xpath}
+    IF    $texto_esperado == $texto_obtido[1]
+        RETURN    1
+    ELSE
+        RETURN    0
+    END
+
+Colocar o bilhete no e-commerce
+    [Arguments]     ${numero_bilhete}=6275    
+    Mudar Página    https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=349
+    Sleep           6s
+    Click Element   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[4]
+    Sleep           1s
+    Click Element   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel/mat-expansion-panel-header
+    Sleep           1s
+    Click Element   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel/div/div/div/mat-card/div/div[2]/div/button
+    Sleep           3s
+    Input text      xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[1]/mat-form-field/div[1]/div/div[2]/input    ${numero_bilhete}
+    Sleep           1s
+    ${ativo}=       Get Element Attribute     xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]/img   style
+    Log    ${ativo}
+    Sleep          1s
+    ${resultado}=    Run Keyword and ignore error     Should Be Equal    ${ativo}    opacity 1;
+    Log    ${resultado}
+    IF    ${resultado} == ('FAIL', 'opacity: 0; != opacity 1;') 
+        Click Element   xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]
+        sleep           1s
+        Click Element   xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[4]/button[2]
+        sleep           1s
+        Click Element   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[2]/buttons/div/div/button[3]
+        sleep           25s
+        Log             Bilhete adicionado ao E-commerce. 
+    ELSE
+        Log    Bilhete já adicionado ao E-commerce.
+    END
+
+Adicionar no perfil
+    [Arguments]    ${numero_bilhete}=6275    ${id_perfil_de_venda}=882    
+    Go To          https://testescard.limbersoftware.com.br/#/pages/config/perfil?id=${id_perfil_de_venda}
+    sleep          6s
+    Click Element  xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[3]
+    Sleep          2s
+    Input Text     xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/div/mat-tab-body[3]/div/div/limber-select-product/div/div[1]/mat-form-field/div[1]/div/div[2]/input    ${numero_bilhete}
+    Sleep          2s
+    ${ativo}=      Get Element Attribute     xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/div/mat-tab-body[3]/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]/img   style
+    Log    ${ativo}
+    Sleep          1s
+    ${resultado}=    Run Keyword and ignore error     Should Be Equal    ${ativo}    opacity 1;
+    Log    ${resultado}
+    IF    ${resultado} == ('FAIL', 'opacity: 0; != opacity 1;') 
+        Click Element   xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/div/mat-tab-body[3]/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]
+        sleep           1s
+        Click Element   xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[2]/buttons/div/div/button[3]
+        sleep           25s
+        Log             Bilhete adicionado ao perfil. 
+    ELSE
+        Log    Bilhete já adicionado ao perfil.
+    END
+    
+Abrir E-commerce
+    Go To    https://automacao.testescard.limber.net.br/
+
+Abro o E-commerce
+    Go to                     https://automacao.testescard.limber.net.br/
+    Sleep                     2s
+    Click Element             accountButton   
+    sleep                     2s
+    Input Text                id:mat-input-1    gustavozanotto119@gmail.com
+    RPA.Desktop.Press keys    Enter
+    Sleep                     7s
+    Input Text                id:mat-input-3    Zanotto123@
+    RPA.Desktop.Press keys    Enter
+    Sleep                     7s
+
+Pesquisar bilhete no e-commerce
+    [Arguments]   ${nome_bilhete}=Bilhete Automatizado: Por Horario
+    Sleep              4s
+    Input Text         xpath:/html/body/app-root/app-home/div/main/app-dashboard/div/mat-form-field/div[1]/div/div[3]/input       ${nome_bilhete}
+    Sleep              2s
+    Repetidor de teclas       tab    2
+    RPA.Desktop.PRess Keys    Enter
+
+Coletar quantidade de vagas (E-Commerce)
+    [Arguments]    ${qtd_vagas}
+    sleep                         2s
+    ${qtd_vagas_no_ecommerce}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[2]/section/div[2]/div[1]/span[2]/span
+    log     ${qtd_vagas_no_ecommerce}
+    Should Contain    ${qtd_vagas_no_ecommerce}    ${qtd_vagas} Vagas
+
+Comparar valores
+    [Arguments]    ${valor1}    ${valor2}   
+    Should Be Equal    ${valor1}    ${valor2}  

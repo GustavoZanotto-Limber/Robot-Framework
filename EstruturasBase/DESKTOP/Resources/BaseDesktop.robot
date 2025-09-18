@@ -63,7 +63,7 @@ Iniciar sessao
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
-    Sleep                           1s
+    Sleep                           3s
 
 Iniciar sessao e abrir caixa
     [Arguments]    ${nome_exe} 
@@ -163,7 +163,7 @@ Ir Para Emissão de Bilhetes
         Repetidor de teclas    right    1
         RPA.Windows.Click      Emissão de Bilhetes
     END
-    Sleep                  8s
+    Sleep                  10s
     RPA.Windows.Get Text   Emissão de Bilhetes (1)
 
 Ir Para Reimpressão de Bilhetes
@@ -307,7 +307,7 @@ Selecionar o bilhete e retornar quantidade de vagas (categoria)
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
     repetidor de teclas       Down    ${categoria}
-    Sleep                     1
+    Sleep                     2s
     RPA.Windows.Click         Confirmar
     Sleep                     1s
     Sleep                     1s
