@@ -19,6 +19,8 @@ ${texto_bilhete}
 
 *** Test Cases    ***
 
+
+
 Cenário 1: Cadastro e configuração de um novo PDV  
     ${nome_print}=    Set Variable     Cadastro e configuração de um novo PDV
     [Tags]    Testes_Funcionais    LB-43
@@ -43,7 +45,7 @@ Cenário 3: Fechamento do caixa pelo operador
     
 Cenário 4: Geração e impressão do fechamento de caixa    
     ${nome_print}=    Set Variable     Geração e impressão do fechamento de caixa
-    ${texto}=    Set Variable       DEMONSTRAÇÃO     RESUMO DE MOVIMENTAÇÃO BILHETERIA    DATA:    PDV:    CÓDIGO CX:    OPERADOR:        
+    ${texto}=    Set Variable       DEMONSTRACAO     RESUMO DE MOVIMENTAÇÃO BILHETERIA    DATA:    PDV:    CÓDIGO CX:    OPERADOR:        
     [Tags]    Testes_Funcionais    LB-43
     Dado que estou na tela do caixa operador
     ${texto2}=    Quando realizo a impressão do caixa      

@@ -146,6 +146,7 @@ Consultar Cadastros
 
 Caixa Operador
     Cadastros
+    sleep                  0.5s
     repetidor de teclas    right    4
 
 Abrir Caixa
@@ -163,7 +164,7 @@ Ir Para Emissão de Bilhetes
         Repetidor de teclas    right    1
         RPA.Windows.Click      Emissão de Bilhetes
     END
-    Sleep                  10s
+    Sleep                  20s
     RPA.Windows.Get Text   Emissão de Bilhetes (1)
 
 Ir Para Reimpressão de Bilhetes
@@ -282,16 +283,16 @@ Selecionar o bilhete
 Selecionar o bilhete e retornar quantidade de vagas
     [Arguments]    ${bilhete}    ${categoria}
     #Selecionando o bilhete
+    Escrever para consultar   ${bilhete}   
+    Sleep                     1s
+    #Selecionando categorias
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
-    repetidor de teclas       Down    ${bilhete} 
-    Sleep                     1
+    repetidor de teclas       Down    ${categoria} 
+    Sleep                     2s
     RPA.Windows.Click         Confirmar
-    Sleep                     1s
-    #Selecionando categorias
-    Escrever para consultar   ${categoria}
     Sleep                     1s
     ${qtd_vagas}=    Coleta quantidade de vagas atraves da planilha
     repetidor de teclas       enter    6
@@ -388,7 +389,7 @@ Fechar caixa e salvar a impressão
 Salvo a impressão do RPS
     Sleep                         6s
     RPA.Desktop.Type Text         RPS
-    Sleep                         3s
+    Sleep                         5s
     RPA.Windows.Click             Salvar
     Sleep                         2s
     RPA.Windows.Click             Sim
@@ -407,7 +408,7 @@ Salvo a Reimpressão
     Sleep                         1s  
     RPA.Desktop.Type Text         ${nome_do_arquivo}
     RPA.Windows.Click             Salvar
-    Sleep                         1s
+    Sleep                         2s
     RPA.Windows.Click             Sim
 
 Fechar caixa caso esteja aberto
@@ -596,5 +597,6 @@ Exportar para bloco de notas
 Escrever para consultar
     [Arguments]    ${texto}
     RPA.Desktop.Type Text     ${texto}
+    Sleep                     1s
     RPA.Desktop.Press Keys    enter
     Sleep                     1s

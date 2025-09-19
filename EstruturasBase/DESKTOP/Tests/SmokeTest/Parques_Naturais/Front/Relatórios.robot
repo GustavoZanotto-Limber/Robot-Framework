@@ -10,7 +10,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/Front/Relatórios/
 ${nome_print}
 ${nome_exe}=    cde_win_bca_frontR40
-
+${ESPAÇO}=    ${SPACE}
 *** Keywords ***
 
 #TODO: Da pra usar essa bomba aqui nos outros pra otimizar :)
@@ -37,11 +37,11 @@ Fechamento de Caixa
     [Tags]    Relatórios    Front    SmokeTest  
     ${nome_print}=     Set Variable     Fechamento de Caixa
     Relatorios              Fechamento de Caixa
-    RPA.Windows.Get Text    Fechamento de Caixa (1)
+    RPA.Windows.Get Text    Fechamento de Caixa $ESPAÇO(1)
     repetidor de teclas     Tab    2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Fechamento de Caixa (1)    ${Caminho_Screenshots}Fechamento de Caixa
+    BaseDesktop.Screenshot  Fechamento de Caixa $ESPAÇO(1)    ${Caminho_Screenshots}Fechamento de Caixa
     Fechar janela
 
 Formas de Pagamento
