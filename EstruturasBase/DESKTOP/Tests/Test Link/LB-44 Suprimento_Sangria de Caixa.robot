@@ -19,7 +19,7 @@ ${nome_print}
 
 Cenário 1: Usuário autorizado para realizar sangria ou suprimento 
     ${nome_print}=    Set Variable     Usuário autorizado para realizar sangria ou suprimento  
-    [Tags]    Testes_Funcionais    LB-45   
+    [Tags]    Testes_Funcionais    LB-44   
     Dado que vou consultar um cadastro de suprimento/sangria
     Quando salvo a edição do Suprimento/Sangria
     Então valido se o usuário tem permissão 

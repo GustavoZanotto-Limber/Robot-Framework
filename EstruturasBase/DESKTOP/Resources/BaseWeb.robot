@@ -25,9 +25,11 @@ Abrir pagina login card
     Open Browser    https://testescard.limbersoftware.com.br/#/auth/login     Chrome
 
 Preencher email
+    Sleep       1s
     Input Text  xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input     gustavozanotto119@gmail.com
 
 Preencher senha
+    Sleep       1s
     Input Text  ${Senha}      Zanotto123@
 
 clicar em continuar
@@ -414,10 +416,10 @@ Abro o E-commerce
     Sleep                     2s
     Click Element             accountButton   
     sleep                     2s
-    Input Text                id:mat-input-1    gustavozanotto119@gmail.com
+    Input Text                xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input    gustavozanotto119@gmail.com
     RPA.Desktop.Press keys    Enter
     Sleep                     7s
-    Input Text                id:mat-input-3    Zanotto123@
+    Input Text                xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[2]/div[1]/div/div[2]/input    Zanotto123@
     RPA.Desktop.Press keys    Enter
     Sleep                     7s
 

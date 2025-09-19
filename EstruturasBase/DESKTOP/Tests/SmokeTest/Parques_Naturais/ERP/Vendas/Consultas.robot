@@ -10,6 +10,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendas/Consultas/    
 ${nome_print}
 ${nome_exe}=    cde_win_ven
+${ESPAÇO}=    ${SPACE}
 *** Keywords ***
 
 Consultas
@@ -75,9 +76,9 @@ Movimentação de Clientes/Veículos
     [Tags]    Vendas   Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Movimentação de Clientes / Veículos
-    RPA.Windows.Get Text      Movimentação de Cliente/Veículo (1)
+    RPA.Windows.Get Text      Movimentação de Cliente/Veículo $ESPAÇO(1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Movimentação de Cliente/Veículo (1)    ${Caminho_Screenshots}Movimentação de Clientes/Veículos
+    BaseDesktop.Screenshot    Movimentação de Cliente/Veículo $ESPAÇO(1)    ${Caminho_Screenshots}Movimentação de Clientes/Veículos
     Fechar janela
 
 Clientes/Veículos

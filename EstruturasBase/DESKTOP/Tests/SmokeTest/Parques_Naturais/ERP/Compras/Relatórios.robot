@@ -10,7 +10,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Compras/Relatórios/    
 ${nome_print}
 ${nome_exe}=    cde_win_compras
-
+${ESPAÇO}=    ${SPACE}
 *** Keywords ***
 
 Relatórios
@@ -54,9 +54,9 @@ Compras/Aquisição de Serviços - Sintético/Forn/Item
     [Tags]     Compras    Relatórios   SmokeTest        
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Forn/Item
-    RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor / Item ${SPACE}(1)
+    RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor / Item $ESPAÇO(1)
     RPA.Windows.Click       Nome do Fornecedor
-    BaseDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor / Item ${SPACE}(1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Forn_Item
+    BaseDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor / Item $ESPAÇO(1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Forn_Item
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Setor
@@ -127,9 +127,9 @@ Lançamento de Entradas
     [Tags]     Compras    Relatórios   SmokeTest    
     Relatórios
     RPA.Windows.Click       Lançamento de Entradas
-    RPA.Windows.Get Text  	Relatório de Lançamentos de Entradas ${SPACE}(1)
+    RPA.Windows.Get Text  	Relatório de Lançamentos de Entradas $ESPAÇO(1)
     RPA.Windows.Click       Fornecedor
-    BaseDesktop.Screenshot  Relatório de Lançamentos de Entradas ${SPACE}(1)   ${Caminho_Screenshots}Lançamento de Entradas
+    BaseDesktop.Screenshot  Relatório de Lançamentos de Entradas $ESPAÇO(1)   ${Caminho_Screenshots}Lançamento de Entradas
     Fechar janela
 
 Produtos/Fornecedor

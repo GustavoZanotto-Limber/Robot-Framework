@@ -10,6 +10,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Frotas/Relatórios/    
 ${nome_print}
 ${nome_exe}=    cde_win_frotas
+${ESPAÇO}=    ${SPACE}
 *** Keywords ***
 
 Relatórios
@@ -108,10 +109,10 @@ Pneus > Pneus
     [Tags]    Frotas   Relatórios   SmokeTest
     Relatórios              Pneus
     RPA.Desktop.Press Keys  P
-    RPA.Windows.Get Text    Relatório de Pneus (1) 
+    RPA.Windows.Get Text    Relatório de Pneus $ESPAÇO(1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de Pneus (1)                              ${Caminho_Screenshots}Pneus\Pneus
+    BaseDesktop.Screenshot  Relatório de Pneus $ESPAÇO(1)                              ${Caminho_Screenshots}Pneus\Pneus
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
