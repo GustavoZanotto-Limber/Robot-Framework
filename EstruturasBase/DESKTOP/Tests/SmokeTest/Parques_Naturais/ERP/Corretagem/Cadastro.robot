@@ -63,9 +63,9 @@ Contrato > Mensagens para Contrato
     Cadastros
     RPA.Windows.Click         Contrato
     RPA.Desktop.Press Keys    M
-    RPA.Windows.Get Text      Configuração de Mensagens para ${SPACE}Contrato (1)
+    RPA.Windows.Get Text      Configuração de Mensagens para $ESPAÇOContrato (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Configuração de Mensagens para ${SPACE}Contrato (1)    ${Caminho_Screenshots}Contrato/Mensagens para Contrato
+    BaseDesktop.Screenshot    Configuração de Mensagens para $ESPAÇOContrato (1)    ${Caminho_Screenshots}Contrato/Mensagens para Contrato
     Fechar janela
     RPA.Windows.Click         Sim
 

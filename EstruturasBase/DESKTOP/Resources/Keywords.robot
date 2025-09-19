@@ -79,6 +79,7 @@ Dado que realizei uma reserva com valor Zerado
 
 Dado que realizei um novo cadastro de suprimento
     Caixa Operador
+    Sleep                     1s
     RPA.Windows.Click         Suprimento / Sangria
     RPA.Windows.Click         Novo
     Sleep                     1s
@@ -152,8 +153,8 @@ Quando preencho a observação
     RPA.Desktop.Type Text     Liberado pelos teste automatizados
     RPA.Desktop.Press Keys    Enter
     Finalizar compra
-    Sleep                     1s
-    RPA.Windows.Click         OK
+    Sleep                     2s
+    RPA.Desktop.Press Keys    Enter
     Sleep                     4s    
     Fechar com Sim
 
@@ -174,7 +175,7 @@ Quando finalizo o pagamento (sem fechar a janela)
     RPA.Windows.Click            Fechar
     FOR    ${qtd_de_bilhetes}    IN RANGE    0    ${qtd_de_bilhetes}
     RPA.Windows.Click            Fechar
-    Sleep                5s
+    Sleep                7s
     END
     
 Quando peço a Reimpressão do bilhete
@@ -270,7 +271,8 @@ Quando Fecho o caixa operador E pego o Resumo Geral
     Fechar caixa e salvar a impressão
     Gerar aquivo de resumo Geral
     ${texto_pdf}=    Pegar informações da 1° Pagina do arquivo    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
-    ${valor_final}=    Dividir Texto    ${texto_pdf}    R$    2
+    ${valor_1}=    Dividir Texto    ${texto_pdf}    Total Geral Receitas (Bruto):    1
+    ${valor_final}=    Dividir Texto    ${valor_1}    Data    0
     sleep                     5s
     RPA.Desktop.Press Keys    ALT    f4
     RETURN  ${valor_final}
@@ -293,7 +295,8 @@ Então valido a venda foi realizada com sucesso (valor zerado)
     Analisa texto da forma de pagamento (não contém)  ${metodo}    ${valor}    
     
 Então valido se a quantidade foi reduzida corretamente
-    [Arguments]    ${qtd_vagas}    ${numero_bilhete}=4321
+    [Arguments]    ${qtd_vagas}    ${numero_bilhete}=5875
+    Sleep                         1s
     ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    ${numero_bilhete}    1
     ${qtd_vagas_novo}=            Convert to Integer    ${qtd_vagas_novo_string}
     ${qtd_vagas}=            Evaluate    ${qtd_vagas}-1
@@ -332,8 +335,8 @@ Então valido se a impressão RPS saiu corretamente
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0
     ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
-    Log                       ${pagina1}
-    Should Contain            ${pagina1}             DEMONSTRAÇÃO\nCNPJ: 000000000000000ENDEREÇO PADRÃO, 0\nMarília - SP\nCEP:  00000-000RECIBO PROVISÓRIO DE\nPRESTAÇÃO DE SERVIÇOS - RPSRPS Nº 264  Série PC1B\nEmissão  Discriminação dos serviçosCód.ItemValor00000 Acesso\nB. Cálculo 100,00 Alíq. 05%100,00\nVlr. ISS  5,00\nValor do RPS 100,00\nValor Total dos Tributos  5,00Emitido em    
+    Log                       ${pagina1}       
+    Should Contain            ${pagina1.lower()}             DEMONSTRACAO\nCNPJ: 000000000000000ENDEREÇO PADRÃO, 0\nMarília - SP\nCEP:  00000-000RECIBO PROVISÓRIO DE\nPRESTAÇÃO DE SERVIÇOS - RPSRPS Nº 264  Série PC1B\nEmissão  Discriminação dos serviçosCód.ItemValor00000 Acesso\nB. Cálculo 100,00 Alíq. 05%100,00\nVlr. ISS  5,00\nValor do RPS 100,00\nValor Total dos Tributos  5,00Emitido em  
     Should Contain            ${pagina1}             PDV: 1 Operador: 1-Usuário
     Sleep                     7s
     RPA.Desktop.Press Keys    Alt    F4
@@ -343,7 +346,7 @@ Então valido se a impressão saiu corretamente 2
     [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}    @{texto_impressão}    ${texto_impressão2}=${None}
     Sleep                     1s
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
-    Sleep                     6s
+    Sleep                     8s
     RPA.Windows.Get Element   ${Nome_da_tela}
     BaseDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}  
