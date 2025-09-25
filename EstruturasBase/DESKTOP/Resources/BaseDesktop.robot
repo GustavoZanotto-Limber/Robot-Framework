@@ -318,7 +318,6 @@ Selecionar o bilhete e retornar quantidade de vagas (categoria)
     
     
 Coleta quantidade de vagas atraves da planilha
-
     RPA.Desktop.Press Mouse Button    Right
     RPA.Desktop.Release Mouse Button    Right
     Repetidor de teclas        Down    4
@@ -346,20 +345,27 @@ Trocar Operação
     RPA.Desktop.Press Keys     Enter
 
 Selecionar o bilhete e o convênio
+    [Arguments]    ${numero_bilhete}=5875    ${qtd_clicks_categoria}=4
     #Selecionando o bilhete
-    Escrever para consultar   5875
+    Escrever para consultar   ${numero_bilhete}
     #Selecionando categorias
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
     Sleep                     0.5s
-    Repetidor de teclas       down    4   
+    Repetidor de teclas       down    ${qtd_clicks_categoria}   
     RPA.Windows.Click         Confirmar
     Sleep                     1s
+    RPA.Desktop.Press Keys    right
+    RPA.Desktop.Press Keys     Ctrl     C
+    RPA.Desktop.Press Keys     Ctrl     V
+    Sleep                      1s
+    ${valor}=    RPA.Desktop.Get Clipboard Value
     RPA.Windows.Click         Confirmar
     Sleep                     0.5s
     Repetidor de teclas       enter    6
+    RETURN    ${valor}
 
 Finalizar compra 
     RPA.Desktop.Press Keys    F5

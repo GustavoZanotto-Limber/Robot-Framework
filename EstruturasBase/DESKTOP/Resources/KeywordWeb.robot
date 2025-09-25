@@ -22,9 +22,9 @@ Dado que estou na tela de criação de bilhete
     Sleep    1s
 
 Dado que estou na tela de preço e disponibilidade
-    [Arguments]    ${numero_bilhete}=6275
+    [Arguments]    ${numero_bilhete}=6275    ${nome_bilhete}=Tabela de Preço Automatizada     ${taxa}=0
     Adicionar no Perfil    ${numero_bilhete}
-    Criar tabela de preço               ${numero_bilhete}    preço=500
+    Criar tabela de preço               ${numero_bilhete}   ${nome_bilhete}     500    ${taxa}
     Sleep    1s
 
 Dado que estou na tela de Exceções de Preço e Disponibilidade
@@ -40,6 +40,9 @@ Dado que estou na tela de emissão de bilhetes
     Iniciar sessao        cde_win_bca_frontR40
     Ir Para Emissão de Bilhetes
     Sleep    2s
+
+Dado que o usuário acessa o Cadastro de Categorias
+    Cadastrar nova categoria      Categoria Gerada pelos Testes Automatizados: CONVÊNIO    CONVÊNIO
 
 #---------------------------------------QUANDO---------------------------------------
 
@@ -75,6 +78,21 @@ Quando realizo o bloqueio de horário para o bilhete
     [Arguments]    ${numero_bilhete}=6275
     Criar bloqueio de disponibilidade
     Sleep    2s
+
+Quando ele insere a tabela com taxa no calendario
+    [Arguments]                ${numero_bilhete}=6275
+    Criar tabela de disponibilidade    ${numero_bilhete}
+    @{ano_mes_dia}=  Get Time	year month day 
+    Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
+    Sleep                          3s
+    
+Quando adiciono o convênio no bilhete
+    [Arguments]    ${numero_bilhete}=6275
+    Adicionar categoria em bilhetes ja existente    Categoria Gerada pelos Testes Automatizados: CONVÊNIO    2    3627
+    Criar tabela de preço               ${numero_bilhete}   Tabela de Preço com Convênio     500    0    2
+    Criar tabela de disponibilidade     ${numero_bilhete}
+    @{ano_mes_dia}=  Get Time	year month day 
+    Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
 
 #---------------------------------------ENTAO----------------------------------------
 
@@ -144,5 +162,27 @@ Então valido o bloqueio de horário no E-commerce e na bilheteria
     Fechar com Sim
     Encerrar Tudo
 
-  
+Então valido se a tarifa foi salva corretamente 
+    [Arguments]     ${valor}=5,00    ${nome_bilhete}=Bilhete Automatizado: Por Horario
+    Abro o E-commerce
+    Pesquisar bilhete no e-commerce    ${nome_bilhete}
+    Adicionar categoria (Compra E-Commerce)    1    1
+    Coleta Valor bilhete (E-commerce)     5,00    0,08
     
+Então Valido se o convênio foi salvo corretamente
+    [Arguments]    ${nome_bilhete}=Bilhete Automatizado: Por Horario
+    Abro o E-commerce
+    Pesquisar bilhete no e-commerce    ${nome_bilhete}
+    Adicionar categoria (Compra E-Commerce)    2    1
+    Comprar Ingressos
+    Preencher convênio
+    sleep                1s
+    Iniciar sessao       cde_win_bca_frontR40 
+    Ir Para Emissão de Bilhetes
+    ${nome_coletado}=    Selecionar o bilhete e o convênio    6275    1
+    IF    $nome_coletado != CONVÊNIO
+        FAIL    Convênio errado ou não aplicado corretamente.
+    END
+    Encerrar Tudo
+    Retirar Categoria    2
+    Excluir Categoria    

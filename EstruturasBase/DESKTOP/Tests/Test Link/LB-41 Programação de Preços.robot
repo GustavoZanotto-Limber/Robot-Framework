@@ -3,8 +3,8 @@ Documentation     Testes regressivos: Programação de Preços
 Resource          ../../Resources/BaseWeb.robot
 Resource          ../../Resources/KeywordWeb.robot
 Suite Setup       Abrir CARD e logar 
-Suite Teardown    Encerrar Tudo 
-Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
+# Suite Teardown    Inativar Bilhete    ${numero_bilhete}
+# Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
 
 *** Variables ***
 
@@ -13,6 +13,5 @@ ${nome_print}
 ${texto_bilhete}
 ${numero_bilhete}=  6275
 ${nome_bilhete}=  Bilhete Automatizado: Por Horario
-*** Keywords ***
 
-*** Test Cases ***
+*** Keywords ***
