@@ -14,3 +14,5 @@ ${texto_bilhete}
 ${numero_bilhete}=  6275
 ${nome_bilhete}=  Bilhete Automatizado: Por Horario
 *** Keywords ***
+
+*** Test Cases ***

@@ -184,7 +184,7 @@ Exportar bilhetes vendidos para bloco de notas
     repetidor de teclas        down    1
     RPA.Desktop.Press Keys     enter
     Sleep                      5s
-    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
+    ${texto}=    RPA.Windows.Get Value      Editor de texto		
     RETURN    ${texto}
 
 Analisa texto dos bilhetes vendidos
@@ -218,7 +218,7 @@ Exportar pagamentos da venda para bloco de notas
     repetidor de teclas        down    1
     RPA.Desktop.Press Keys     enter
     Sleep                      5s
-    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
+    ${texto}=    RPA.Windows.Get Value      Editor de texto		
     RETURN    ${texto}
 
 Rolar barra até o Final
@@ -591,7 +591,7 @@ Exportar para bloco de notas
     repetidor de teclas        down    ${posição_bloco}
     RPA.Desktop.Press Keys     enter
     Sleep                      5s
-    ${texto}=    RPA.Windows.Get Value      Editor de Texto		
+    ${texto}=    RPA.Windows.Get Value      Editor de texto		
     RETURN    ${texto}
 
 Escrever para consultar
