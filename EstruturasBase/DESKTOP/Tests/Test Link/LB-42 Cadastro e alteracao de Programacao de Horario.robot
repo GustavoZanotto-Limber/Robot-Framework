@@ -3,8 +3,8 @@ Documentation     Testes regressivos: Cadastro e alteracao de Programacao de Hor
 Resource          ../../Resources/BaseWeb.robot
 Resource          ../../Resources/KeywordWeb.robot
 Suite Setup       Abrir CARD e logar 
-Suite Teardown    Inativar bilhete
-Test Teardown    Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
+Suite Teardown    Inativar bilhete    ${numero_bilhete}
+Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
 
 *** Variables ***
 
@@ -15,12 +15,7 @@ ${numero_bilhete}=  6275
 ${nome_bilhete}=  Bilhete Automatizado: Por Horario
 *** Keywords ***
 
-Inativar bilhete
-    Go to     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
-    sleep            3s
-    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/div[1]/mat-checkbox
-    Sleep            1s
-    Click element    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
+
 
 *** Test Cases    ***
 
