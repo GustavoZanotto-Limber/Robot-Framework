@@ -42,7 +42,9 @@ Fechar navegador
 Abrir CARD e logar 
     Abrir pagina login card
     Sleep                      2s
-    RPA.Windows.Click          Google Chrome - 1 janela em execução
+    # RPA.Windows.Click          Google Chrome - 1 executando o windows
+    Minimize Browser Window
+    Sleep                      1s
     Maximize Browser Window
     Sleep                      1s
     Preencher email
@@ -53,8 +55,9 @@ Abrir CARD e logar
     Sleep                      4s
     Tirar notificação
     Sleep                      7s
+    Maximize Browser Window
     Colocar Filtro de estabelecimento    Zanotto
-     Sleep                      2s
+    Sleep                      2s
     # Tirar notificação
     Sleep                      2s
 
@@ -178,7 +181,9 @@ Adicionar Receita
     RPA.Desktop.Press Keys    Enter
 
 Criar Temporada
+    [Arguments]    ${vermelho}=255    ${verde}=0    ${azul}=0
     Navegar configuração de bilhete    6
+    Navegar configuração de bilhete    7
     Click Element                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[1]/title-btn-add/div/button
     sleep                     1s   
     RPA.Desktop.Press Keys    tab
@@ -189,11 +194,12 @@ Criar Temporada
     RPA.Desktop.Type Text     Temporada 1
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    Enter
+    Sleep                     1s
     Click Element             xpath:/html/body/div[3]/div[4]/div/div/mat-option
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    Enter
-    Repetidor de teclas       tab    3
-    RPA.Desktop.Type Text     255
+    Colocar cor               ${vermelho}    ${verde}    ${azul}
+    sleep                     1s
     Click Element             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/div[2]/button[2]
     sleep                     1s
 
@@ -219,15 +225,18 @@ Colocar cor
     RPA.Desktop.Press Keys     Enter
 
 Criar tabela de preço
-    [Arguments]    ${numero_bilhete}=6275    ${nome_tabela}=Tabela de Preço Automatizada    ${preço}=100    ${taxa}=0    ${qtd_de_categorias}=1
+    [Arguments]    ${numero_bilhete}=6275    ${nome_tabela}=Tabela de Preço Automatizada    ${preço}=100    ${taxa}=0    ${qtd_de_categorias}=1    
     Sleep                      4s
     Go To                      https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
     Sleep                      7s
     Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[1]/div/table/thead/tr/th[4]/div/button
     Sleep                      2s
     Input Text                 xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/div/div/mat-form-field[1]/div[1]/div/div[2]/input    ${nome_tabela}
+    Sleep                      1s
     Repetidor de teclas        tab    2
+    Sleep                      1s
     Colocar cor                49    0    53
+    Sleep                      1s
     Repetidor de teclas em sequencia    tab    enter    1    4    1 
     sleep                      5s
     FOR    ${i}    IN RANGE    0    ${qtd_de_categorias}   
@@ -240,7 +249,8 @@ Criar tabela de preço
         Sleep                      1s
         Click Element              xpath:/html/body/div[3]/div[4]/div/div/mat-option[2]
         RPA.Desktop.Press Keys     Tab
-        RPA.Desktop.Type Text      ${preço}
+        ${resul}=                  Evaluate                   ${preço} * ${valor}
+        RPA.Desktop.Type Text      ${resul}
         Repetidor de teclas        tab    3
         RPA.Desktop.Press Keys     Enter
         Repetidor de teclas        tab    1
@@ -278,7 +288,7 @@ Criar tabela de disponibilidade
     Sleep                      2s
 
 Preencher dia do calendario
-    [Arguments]    ${mês}    ${dia}
+    [Arguments]    ${mês}    ${dia}    ${n°_tabela_preco}=1    ${n°_tabela_dispo}=1    ${n°_temporada}=1
     sleep                      3s
     Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]
     sleep                      2s
@@ -287,31 +297,32 @@ Preencher dia do calendario
     Selecionar dia do calendário    ${mês}    ${dia}
     RPA.Desktop.Press Keys     Tab
     RPA.Desktop.Press Keys     Enter
-    RPA.Desktop.Press Keys     Down
+    Repetidor de teclas        Down    ${n°_tabela_preco}
     RPA.Desktop.Press Keys     Enter
     Repetidor de teclas        tab    2
     RPA.Desktop.Press Keys     Enter
-    RPA.Desktop.Press Keys     Down
+    Repetidor de teclas        Down    ${n°_tabela_dispo}
     RPA.Desktop.Press Keys     Enter
     RPA.Desktop.Press Keys     Tab
     RPA.Desktop.Press Keys     Enter
-    RPA.Desktop.Press Keys     Down
+    Repetidor de teclas        Down    ${n°_temporada}
     RPA.Desktop.Press Keys     Enter
     Repetidor de teclas        tab    2
     RPA.Desktop.Press Keys     Enter
 
 Selecionar dia do calendário
     [Arguments]    ${mês}    ${dia}
-    ${termina_loop}=    Set Variable    0
+    ${termina_loop}=    Set Variable    0    
     sleep           1s
     ${mês}=    Convert To Integer    ${mês}
-    ${dia}=    Convert To Integer    ${dia}
+    @{dia_calendario}=  Set Variable  a    Set Variable    b
     IF    ${mês} < 10
         ${mês}=    Convert to String    ${mês}
         ${mês}=    Replace String   ${mês}    0    ${EMPTY}
     END
     FOR    ${linha}    IN RANGE    1    7    
-        ${dia_max}=    Evaluate    ${linha}*7
+       ${dia}=    Convert To Integer    ${dia}
+       ${dia_max}=    Evaluate    ${linha}*7
         IF  ${dia} < ${dia_max}
             FOR    ${coluna}    IN RANGE    0    7   
                 Sleep                 2s
@@ -325,14 +336,20 @@ Selecionar dia do calendário
                     IF    ${dia_calendario[1]} == ${dia}
                     Click Element     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div
                     ${termina_loop}=    Set Variable    1
-                    BREAK
-                    END    
+                        
+                        BREAK
+                    END  
+                END
+                ${exists}=     Run Keyword And Return Status    Element Should Be Visible    /html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div/section
+                IF    ${exists} and ${dia} >= 29
+                    ${dia}=    Set Variable    1
+                     ${mês}=    Evaluate        ${mês} + 1
                 END 
             END
-        END 
+        END      
         IF    ${termina_loop} == 1
             Log    Dia encontrado, saindo do loop
-            BREAK
+            BREAK 
         END
     END
 
@@ -368,8 +385,6 @@ Criar bloqueio de disponibilidade
     sleep                      1s
     Click Element              xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/app-excecoes/mat-dialog-actions/button[2]
     
-    
-
 Valida campo
     [Arguments]   ${xpath}   ${texto_esperado}    
     ${texto_obtido}=    Run Keyword and ignore error    SeleniumLibrary.Get Text    xpath:${xpath}
@@ -430,9 +445,6 @@ Adicionar no perfil
     ELSE
         Log    Bilhete já adicionado ao perfil.
     END
-    
-Abrir E-commerce
-    Go To    https://automacao.testescard.limber.net.br/
 
 Abro o E-commerce
     Go to                     https://automacao.testescard.limber.net.br/
@@ -440,9 +452,13 @@ Abro o E-commerce
     Click Element             accountButton   
     sleep                     3s
     Input Text                xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    gustavozanotto119@gmail.com
+    RPA.Desktop.Press keys    Backspace
+    RPA.Desktop.Type Text     m
     RPA.Desktop.Press keys    Enter
     Sleep                     15s
-    Input Text                xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    Zanotto123@
+    Input Text                xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    Z
+    RPA.Desktop.Press keys    Backspace
+    RPA.Desktop.Type Text     Zanotto123@
     RPA.Desktop.Press keys    Enter
     Sleep                     15s
 
@@ -470,25 +486,24 @@ Comparar valores
 Inativar bilhete
     [Arguments]    ${numero_bilhete}=6275
     IF    ${numero_bilhete} == 6275
-        Go to            https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=6275
-        sleep            4s     
-        Run Keyword and Ignore Error    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[1]/div/table/tbody/tr[1]/td[4]/div/button[1]
-        Sleep            1s
-        Run Keyword and Ignore Error    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[2]/buttons/div/div/button[1]
-        Sleep                     1s
-        RPA.Desktop.Press Keys    tab
-        Sleep                     1s
-        RPA.Desktop.Press Keys    Enter
-        Sleep                     3s     
-        Run Keyword and Ignore Error    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[2]
-        Sleep                     2s
-        Run Keyword and Ignore Error    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[1]/div/table/tbody/tr[1]/td[4]/div/button[1]
-        Sleep            1s
-        Run Keyword and Ignore Error    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[2]/div/config-disp/div[2]/buttons/div/div/button[1]
-        Sleep                     1s
-        RPA.Desktop.Press Keys    tab
-        Sleep                     1s
-        RPA.Desktop.Press Keys    Enter
+            Go to            https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=6275
+            sleep            4s     
+            Sleep            1s
+            Run Keyword and Ignore Error    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[2]/buttons/div/div/button[1]
+            Sleep                     1s
+            RPA.Desktop.Press Keys    tab
+            Sleep                     1s
+            RPA.Desktop.Press Keys    Enter
+            Sleep                     3s     
+            Run Keyword and Ignore Error    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[2]
+            Sleep                     2s
+            Run Keyword and Ignore Error    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[1]/div/table/tbody/tr[1]/td[4]/div/button[1]
+            Sleep            1s
+            Run Keyword and Ignore Error    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[2]/div/config-disp/div[2]/buttons/div/div/button[1]
+            Sleep                     1s
+            RPA.Desktop.Press Keys    tab
+            Sleep                     1s
+            RPA.Desktop.Press Keys    Enter
     ELSE
         Go to     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
         sleep            3s
@@ -499,10 +514,10 @@ Inativar bilhete
 
     
 Coleta Valor bilhete (E-commerce)
-    [Arguments]    ${valor_bilhete}    ${valor_taxa}=0  
+    [Arguments]    ${valor_bilhete}   ${numero_categoria}=1     ${valor_taxa}=0  
     Sleep                   3s  
-    ${valor_bilhete_EC}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/section/div
-    IF    $valor_taxa != 0
+    ${valor_bilhete_EC}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit[${numero_categoria}]/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/section/div
+    IF    $valor_taxa != 0                                    
     ${valor_taxa_EC}=       SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/div
     END
     Log    ${valor_bilhete_EC}
@@ -518,13 +533,12 @@ Adicionar categoria (Compra E-Commerce)
         Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${categoria}]/div/div[2]/button[2]
     END
 
-Retirar categoria (Compra E-Commerce)
-    [Arguments]    ${categoria}    ${quantidade}
-    Sleep            3s
-    FOR    ${i}    IN RANGE    ${quantidade}
-        Sleep            1s
-        Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${categoria}]/div/div[2]/button[1]
-    END
+# Retirar categoria (Compra E-Commerce)
+#     [Arguments]    ${categoria}    ${quantidade}
+#     Sleep            3s
+#     FOR    ${i}    IN RANGE    ${quantidade}
+#         Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${categoria}]/div/div[2]/button[1]
+#     END
 
 Retirar Categoria
     [Arguments]        ${numero_categoria}    ${numero_bilhete}=6275
@@ -625,3 +639,25 @@ Preencher convênio
 Comprar Ingressos
     Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/div[3]/button
     sleep            1s
+    
+Retirar Exceção
+    [Arguments]    ${numero_bilhete}=6275
+    Go to    https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/calendario?bilhete=${numero_bilhete}
+    sleep    4s
+    Click Element  xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]
+    Sleep    2s
+    @{ano_mes_dia}=  Get Time	year month day 
+    Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
+    Sleep          1s    
+    Click Element  xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button[1]
+    Sleep    1s
+
+Adicionar nova temporada em um bilhete
+    [Arguments]    ${numero_bilhete}=6275
+    Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
+    sleep    5s
+    Criar Temporada    0    255    0
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
+    Sleep                     1s
+    # RPA.Desktop.Press Keys    tab
+    # RPA.Desktop.Press Keys    Enter

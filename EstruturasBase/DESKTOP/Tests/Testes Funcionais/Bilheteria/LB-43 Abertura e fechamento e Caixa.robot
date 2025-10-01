@@ -1,7 +1,12 @@
 *** Settings ***
 Documentation    Testes regressivos: Abertura e fechamento e Caixa
+<<<<<<< HEAD:EstruturasBase/DESKTOP/Tests/Test Link/LB-43 Abertura e fechamento e Caixa.robot
 Resource         ../../Resources/BaseDesktop.robot
 Resource         ../../Resources/Keywords.robot
+=======
+Resource         C:/Users/Gustavo Zanotto/AppData/Local/Programs/Python/Python39/Scripts/RobotFramework/EstruturasBase/DESKTOP/Resources/BaseDesktop.robot
+Resource         ../../../Resources/Keywords.robot
+>>>>>>> b1ad98465a5678d16b543456a17311bd78616791:EstruturasBase/DESKTOP/Tests/Testes Funcionais/Bilheteria/LB-43 Abertura e fechamento e Caixa.robot
 Suite Setup      Iniciar sessao e abrir caixa    ${nome_exe}   
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
