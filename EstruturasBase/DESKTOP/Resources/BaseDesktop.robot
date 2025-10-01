@@ -109,6 +109,7 @@ Repetidor de teclas em sequencia
         IF    ${quantidade_de_repetições_tecla1} != None
             FOR                       ${quantidade_de_repetições_tecla1}    IN RANGE                   1    ${quantidade_de_repetições_tecla1}+1
                 RPA.Desktop.Press Keys    ${tecla1}  
+                Sleep                     0.5
             END
         ELSE
             RPA.Desktop.Press Keys    ${tecla1}  
@@ -117,9 +118,11 @@ Repetidor de teclas em sequencia
         IF    ${quantidade_de_repetições_tecla2} != None
             FOR                       ${quantidade_de_repetições_tecla2}    IN RANGE                   1    ${quantidade_de_repetições_tecla2}+1
                 RPA.Desktop.Press Keys    ${tecla2}  
+                Sleep                     0.5
             END
         ELSE
             RPA.Desktop.Press Keys    ${tecla2}  
+            Sleep                     0.5
         END
 
     END
@@ -164,7 +167,7 @@ Ir Para Emissão de Bilhetes
         Repetidor de teclas    right    1
         RPA.Windows.Click      Emissão de Bilhetes
     END
-    Sleep                  20s
+    Sleep                  25s
     RPA.Windows.Get Text   Emissão de Bilhetes (1)
 
 Ir Para Reimpressão de Bilhetes
@@ -294,7 +297,7 @@ Selecionar o bilhete e retornar quantidade de vagas
     Sleep                     2s
     RPA.Windows.Click         Confirmar
     Sleep                     1s
-    ${qtd_vagas}=    Coleta quantidade de vagas atraves da planilha
+    ${qtd_vagas}=    Coleta valor atraves da planilha
     repetidor de teclas       enter    6
     RETURN                    ${qtd_vagas}
 
@@ -312,12 +315,13 @@ Selecionar o bilhete e retornar quantidade de vagas (categoria)
     RPA.Windows.Click         Confirmar
     Sleep                     1s
     Sleep                     1s
-    ${qtd_vagas}=    Coleta quantidade de vagas atraves da planilha
+    ${qtd_vagas}=    Coleta valor atraves da planilha
     repetidor de teclas       enter    6
     RETURN                    ${qtd_vagas}
     
     
-Coleta quantidade de vagas atraves da planilha
+Coleta valor atraves da planilha
+    [arguments]    ${qtd_direita}=3    ${qtd_baixo}=1
     RPA.Desktop.Press Mouse Button    Right
     RPA.Desktop.Release Mouse Button    Right
     Repetidor de teclas        Down    4
@@ -326,8 +330,8 @@ Coleta quantidade de vagas atraves da planilha
     Repetidor de teclas        down    4
     RPA.Desktop.Press Keys     enter
     Sleep                      10s
-    Repetidor de teclas        Right    3
-    RPA.Desktop.Press Keys     down
+    Repetidor de teclas        Right    ${qtd_direita}
+    Repetidor de teclas        Down     ${qtd_baixo}
     RPA.Desktop.Press Keys     Ctrl     C
     RPA.Desktop.Press Keys     Ctrl     V
     Sleep                      1s
@@ -606,3 +610,5 @@ Escrever para consultar
     Sleep                     1s
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
+
+
