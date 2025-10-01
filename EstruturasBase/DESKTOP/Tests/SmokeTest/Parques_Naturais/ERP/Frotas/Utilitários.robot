@@ -158,6 +158,7 @@ Leiaute Carta Frete
     RPA.Windows.Get Text    FastReport - Untitled.fr3
     BaseDesktop.Screenshot  FastReport - Untitled.fr3    ${Caminho_Screenshots}Leiaute Carta Frete
     RPA.Desktop.Press Keys  ALT    f4
+    Sleep                   1s        
     RPA.Windows.Click       Sim
 
 Integrações > Importação de CT-e/MDF-e

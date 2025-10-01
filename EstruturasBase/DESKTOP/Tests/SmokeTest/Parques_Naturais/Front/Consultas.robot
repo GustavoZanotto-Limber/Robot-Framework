@@ -35,16 +35,17 @@ Consulta de Reservas
     Fechar janela
 
 Consulta de Voucher
-    [Tags]    Consultas    Front    SmokeTest  
+    [Tags]    Consultas    Front    SmokeTest   
     ${nome_print}=          Set Variable    Consulta de Voucher
     Consultas Front         Consulta de Voucher     
     RPA.Windows.Get Text    Consulta de Voucher (1)
     RPA.Windows.Click       Carregar
     BaseDesktop.Screenshot  Consulta de Voucher (1)    ${Caminho_Screenshots}Consulta de Voucher
+    RPA.Windows.Click       OK
     Fechar janela
 
 Consulta de Lançamento de Veículos
-    [Tags]    Consultas    Front    SmokeTest  
+    [Tags]    Consultas    Front    SmokeTest   
     ${nome_print}=          Set Variable    Consulta de Lançamento de Veículos   
     Consultas Front         Consulta de Lançamento de Veículos   
     RPA.Windows.Get Text    Consulta de Lançamentos de Veículos (1)

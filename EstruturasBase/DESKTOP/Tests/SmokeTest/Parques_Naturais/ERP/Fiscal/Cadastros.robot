@@ -268,6 +268,7 @@ Fiscal > ICMS > Importar Tabelas Padrões
     RPA.Windows.Click       Abrir
     repetidor de teclas     down      2
     RPA.Desktop.Press Keys  Enter
+    Sleep                   2s
     BaseDesktop.Screenshot 	Importação de Tabelas Padrões (1)   ${Caminho_Screenshots}Fiscal/ICMS/Importar Tabelas Padrões
     Fechar janela 
 

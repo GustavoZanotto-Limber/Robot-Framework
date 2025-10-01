@@ -101,7 +101,7 @@ Tipos de Autorização
     Fechar com Sim
 
 Tipos de Documentos
-    [Tags]    Cadastros    Front    SmokeTest  
+    [Tags]    Cadastros    Front    SmokeTest      
     ${nome_print}=          Set Variable    Tipos de Documentos
     Cadastros
     RPA.Windows.Click       Tipos de Documentos
@@ -117,7 +117,7 @@ Pessoas Autorizadas
     RPA.Windows.Click       Pessoas Autorizadas
     RPA.Windows.Get Text    Cadastro de Pessoas Autorizadas (1)
     BaseDesktop.Screenshot  Cadastro de Pessoas Autorizadas (1)    ${Caminho_Screenshots}Pessoas Autorizadas
-    RPA.Windows.Click       OK
+    Sleep                   5s
     Fechar janela
 
 Acesso por aproximação

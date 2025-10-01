@@ -42,7 +42,7 @@ Fechar navegador
 Abrir CARD e logar 
     Abrir pagina login card
     Sleep                      2s
-    RPA.Windows.Click          Google Chrome - 1 executando o windows
+    RPA.Windows.Click          Google Chrome - 1 janela em execução
     Maximize Browser Window
     Sleep                      1s
     Preencher email
@@ -233,6 +233,7 @@ Criar tabela de preço
     FOR    ${i}    IN RANGE    0    ${qtd_de_categorias}   
         ${valor}=                  Evaluate    ${i} + 1
         Repetidor de teclas        Down    2
+        Sleep                      2s
         Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/mat-card/mat-card-content/table/tbody/tr[${valor}]/td[4]/div/button
         Sleep                      1s
         Click Element              xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/ng-component/div[2]/table/thead/tr/th[4]/button
@@ -521,6 +522,7 @@ Retirar categoria (Compra E-Commerce)
     [Arguments]    ${categoria}    ${quantidade}
     Sleep            3s
     FOR    ${i}    IN RANGE    ${quantidade}
+        Sleep            1s
         Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${categoria}]/div/div[2]/button[1]
     END
 

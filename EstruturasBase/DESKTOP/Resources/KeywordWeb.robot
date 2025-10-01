@@ -168,6 +168,7 @@ Então valido se a tarifa foi salva corretamente
     Pesquisar bilhete no e-commerce    ${nome_bilhete}
     Adicionar categoria (Compra E-Commerce)    1    1
     Coleta Valor bilhete (E-commerce)     5,00    0,08
+    Inativar bilhete
     
 Então Valido se o convênio foi salvo corretamente
     [Arguments]    ${nome_bilhete}=Bilhete Automatizado: Por Horario
