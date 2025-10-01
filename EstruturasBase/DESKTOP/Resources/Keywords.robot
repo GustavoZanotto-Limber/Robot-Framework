@@ -277,6 +277,7 @@ Quando Fecho o caixa operador E pego o Resumo Geral
     RPA.Desktop.Press Keys    ALT    f4
     RETURN  ${valor_final}
 
+
 #----------------------------------------ENTÃO----------------------------------------
 Então valido a venda foi realizada com sucesso
     [Arguments]    @{Texto_Bilhete}    ${metodo}    ${valor}

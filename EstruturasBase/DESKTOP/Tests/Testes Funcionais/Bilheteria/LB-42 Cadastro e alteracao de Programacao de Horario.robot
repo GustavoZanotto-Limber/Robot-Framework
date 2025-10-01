@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Testes regressivos: Cadastro e alteracao de Programacao de Horario
-Resource          ../../Resources/BaseWeb.robot
-Resource          ../../Resources/KeywordWeb.robot
+Resource          ../../../Resources/BaseWeb.robot
+Resource          ../../../Resources/KeywordWeb.robot
 Suite Setup       Abrir CARD e logar 
 Suite Teardown    Inativar bilhete    ${numero_bilhete}
 Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
@@ -34,6 +34,7 @@ Cenário 2: Associação de um horario a um bilhete
     Então valido se a disponibilidade integrou corretamente     ${numero_bilhete}    
 
 Cenário 3: Alteração do saldo de horário com motivo registrado
+
     ${nome_print}=    Set Variable     Associação de um horario a um bilhete
     [Tags]    Testes_Funcionais    LB-42
     Dado que estou na tela de Exceções de Preço e Disponibilidade    ${numero_bilhete}
