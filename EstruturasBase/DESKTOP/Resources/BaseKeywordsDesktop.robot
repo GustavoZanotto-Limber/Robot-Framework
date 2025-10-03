@@ -3,7 +3,7 @@
 #utilizados, assim quando temos varias suites de testes apenas importamos esse arquivo para a pasta o
 #que otimiza a utilização do aplicativo.
 # Library    SikuliLibrary
-Documentation   Keywords para automação DESKTOP com Robot Framework e Sikuli e RPA Framework
+Documentation   Keywords para automação DESKTOP com Robot Framework e RPA Framework
 Library    RPA.Desktop
 Library    RPA.Windows    timeout=1s
 Library    OperatingSystem
@@ -13,6 +13,7 @@ Library    RPA.Excel.Application
 Library    String
 Library    Collections
 Library    RPA.PDF
+
 *** Variables ***
 ${front}
 ${nome_exe}
@@ -586,7 +587,7 @@ Pegar informações da 1° Pagina do arquivo
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
     Sleep                     6s
     RPA.Windows.Get Element   ${Nome_da_tela}
-    BaseDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
+    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}  
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0

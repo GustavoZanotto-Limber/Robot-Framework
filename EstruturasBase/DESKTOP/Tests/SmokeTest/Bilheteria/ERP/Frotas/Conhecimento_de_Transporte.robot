@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
-Resource          ../../../../../Resources/BaseDesktop.robot
+Resource          ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Frotas/Conhecimento de Transporte/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Frotas/Conhecimento de Transporte/    
 ${nome_print}
 ${nome_exe}=    cde_win_frotas
 *** Keywords ***
@@ -27,7 +27,7 @@ Conhecimento de Transporte > Emissão
     RPA.Desktop.Press Keys  E  
     RPA.Windows.Get Text    Conhecimento de Transporte (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Conhecimento de Transporte (1)                             ${Caminho_Screenshots}Conhecimento de Transporte/Emissão
+    BaseKeywordsDesktop.Screenshot  Conhecimento de Transporte (1)                             ${Caminho_Screenshots}Conhecimento de Transporte/Emissão
     Fechar com Sim
 
 Conhecimento de Transporte > Cancelamento
@@ -38,7 +38,7 @@ Conhecimento de Transporte > Cancelamento
     RPA.Windows.Get Text    Conhecimento de Transporte Eletrônico - Cancelamento (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Conhecimento de Transporte Eletrônico - Cancelamento (1)                             ${Caminho_Screenshots}Conhecimento de Transporte/Cancelamento
+    BaseKeywordsDesktop.Screenshot  Conhecimento de Transporte Eletrônico - Cancelamento (1)                             ${Caminho_Screenshots}Conhecimento de Transporte/Cancelamento
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -51,7 +51,7 @@ Conhecimento de Transporte > Carta de Correção
     RPA.Windows.Get Text    Carta de Correção Eletrônica (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Carta de Correção Eletrônica (1)                             ${Caminho_Screenshots}Conhecimento de Transporte/Carta de Correção
+    BaseKeywordsDesktop.Screenshot  Carta de Correção Eletrônica (1)                             ${Caminho_Screenshots}Conhecimento de Transporte/Carta de Correção
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -63,7 +63,7 @@ Conhecimento de Transporte > Cálculo Desconto Quebra
     RPA.Windows.Get Text    Cálculo Desconto Quebra (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Cálculo Desconto Quebra (1)                             ${Caminho_Screenshots}Conhecimento de Transporte/Cálculo Desconto Quebra
+    BaseKeywordsDesktop.Screenshot  Cálculo Desconto Quebra (1)                             ${Caminho_Screenshots}Conhecimento de Transporte/Cálculo Desconto Quebra
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -74,7 +74,7 @@ Envio de Lote
     RPA.Windows.Click       OK
     RPA.Windows.Get Text    Emissão em Lote - Conhecimento de Transporte Eletrônico (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Emissão em Lote - Conhecimento de Transporte Eletrônico (1)                             ${Caminho_Screenshots}Envio em Lote
+    BaseKeywordsDesktop.Screenshot  Emissão em Lote - Conhecimento de Transporte Eletrônico (1)                             ${Caminho_Screenshots}Envio em Lote
     Fechar Janela
 
 Monitor de CT-e
@@ -84,7 +84,7 @@ Monitor de CT-e
     RPA.Windows.Get Text    Monitor - CT-e (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Monitor - CT-e (1)                             ${Caminho_Screenshots}Monitor de CT-e
+    BaseKeywordsDesktop.Screenshot  Monitor - CT-e (1)                             ${Caminho_Screenshots}Monitor de CT-e
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -94,7 +94,7 @@ Insucesso/Cancelar Insucesso
     Conhecimento de Transporte                  Insucesso/Cancelar Insucesso
     RPA.Windows.Get Text    CT-e Insucesso/Cancelamento de Insucesso (1)
     RPA.Windows.Click       Selecionar CTe
-    BaseDesktop.Screenshot  CT-e Insucesso/Cancelamento de Insucesso (1)                             ${Caminho_Screenshots}Insucesso_Cancelar Insucesso
+    BaseKeywordsDesktop.Screenshot  CT-e Insucesso/Cancelamento de Insucesso (1)                             ${Caminho_Screenshots}Insucesso_Cancelar Insucesso
     RPA.Windows.Click       Confirmar
     RPA.Windows.Click       OK
     Fechar Janela
@@ -106,7 +106,7 @@ Averbação Online
     RPA.Windows.Get Text    Averbação Online (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Averbação Online (1)                             ${Caminho_Screenshots}Averbação Online
+    BaseKeywordsDesktop.Screenshot  Averbação Online (1)                             ${Caminho_Screenshots}Averbação Online
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -116,7 +116,7 @@ Notas Fiscais Pendentes de Emissão de CT-e
     Conhecimento de Transporte                  Notas Fiscais Pendentes de Emissão de CT-e
     RPA.Windows.Get Text   	Notas Fiscais Pendentes de Emissão de CTe. (1)
     RPA.Windows.Click       Atualizar
-    BaseDesktop.Screenshot  Notas Fiscais Pendentes de Emissão de CTe. (1)                             ${Caminho_Screenshots}Notas Fiscais Pendentes de Emissão de CT-e
+    BaseKeywordsDesktop.Screenshot  Notas Fiscais Pendentes de Emissão de CTe. (1)                             ${Caminho_Screenshots}Notas Fiscais Pendentes de Emissão de CT-e
     Fechar Janela
 
 Subcontratação de CT-e
@@ -125,7 +125,7 @@ Subcontratação de CT-e
     Conhecimento de Transporte                  Subcontratação de CT-e
     RPA.Windows.Get Text   	Subcontratação de CT-e (1)
     RPA.Windows.Click       Atualizar
-    BaseDesktop.Screenshot 	Subcontratação de CT-e (1)                             ${Caminho_Screenshots}Subcontratação de CT-e
+    BaseKeywordsDesktop.Screenshot 	Subcontratação de CT-e (1)                             ${Caminho_Screenshots}Subcontratação de CT-e
     Fechar Janela
 
 Recibo de Pagamento a Autônomo (RPA) > Emissão
@@ -135,7 +135,7 @@ Recibo de Pagamento a Autônomo (RPA) > Emissão
     RPA.Desktop.Press Keys       E
     RPA.Windows.Get Text    Emissão de RPA (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Emissão de RPA (1)                             ${Caminho_Screenshots}Recibo de Pagamento a Autônomo (RPA)/Emissão
+    BaseKeywordsDesktop.Screenshot  Emissão de RPA (1)                             ${Caminho_Screenshots}Recibo de Pagamento a Autônomo (RPA)/Emissão
     Fechar Janela
 
 Recibo de Pagamento a Autônomo (RPA) > Exclusão/Reimpressão
@@ -145,7 +145,7 @@ Recibo de Pagamento a Autônomo (RPA) > Exclusão/Reimpressão
     RPA.Desktop.Press Keys       X  
     RPA.Windows.Get Text   	Reimpressão/Exclusão de RPAs (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot 	Reimpressão/Exclusão de RPAs (1)                             ${Caminho_Screenshots}Recibo de Pagamento a Autônomo (RPA)/Exclusão_Reimpressão
+    BaseKeywordsDesktop.Screenshot 	Reimpressão/Exclusão de RPAs (1)                             ${Caminho_Screenshots}Recibo de Pagamento a Autônomo (RPA)/Exclusão_Reimpressão
     Fechar Janela
 
 Recibo de Pagamento a Autônomo (RPA) > Consulta/Conferência de Conhecimento de Transporte
@@ -156,7 +156,7 @@ Recibo de Pagamento a Autônomo (RPA) > Consulta/Conferência de Conhecimento de
     RPA.Windows.Get Text     	Consulta/Conferência de CTEs (1)
     RPA.Desktop.Press Keys      0
     RPA.Desktop.Press Keys      Enter
-    BaseDesktop.Screenshot  	Consulta/Conferência de CTEs (1)                             ${Caminho_Screenshots}Recibo de Pagamento a Autônomo (RPA)/Consulta_Conferência de Conhecimento de Transporte
+    BaseKeywordsDesktop.Screenshot  	Consulta/Conferência de CTEs (1)                             ${Caminho_Screenshots}Recibo de Pagamento a Autônomo (RPA)/Consulta_Conferência de Conhecimento de Transporte
     RPA.Windows.Click           Confirmar
     Fechar Janela
 
@@ -166,5 +166,5 @@ Documentos emitidos contra o estabelecimento para CT-e
     Conhecimento de Transporte                  Documentos emitidos contra o estabelecimento para CT-e
     RPA.Windows.Get Text   	Documentos emitidos contra o estabelecimento para CT-e (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot 	Documentos emitidos contra o estabelecimento para CT-e (1)                             ${Caminho_Screenshots}Documentos emitidos contra o estabelecimento para CT-e
+    BaseKeywordsDesktop.Screenshot 	Documentos emitidos contra o estabelecimento para CT-e (1)                             ${Caminho_Screenshots}Documentos emitidos contra o estabelecimento para CT-e
     Fechar Janela

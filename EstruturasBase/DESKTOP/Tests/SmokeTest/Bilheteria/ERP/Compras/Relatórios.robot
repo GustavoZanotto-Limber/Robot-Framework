@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation    Smoke Test: Compras
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_compras
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Compras/Relatórios/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Compras/Relatórios/    
 ${nome_print}
 ${nome_exe}=    cde_win_compras
 ${ESPAÇO}=    ${SPACE}
@@ -26,7 +26,7 @@ Compras/Aquisição de Serviços - Lançamentos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Lançamentos
     RPA.Windows.Get Text    Lançamentos de Compras/Aquisição de Serviços (1)
     RPA.Windows.Click       Data
-    BaseDesktop.Screenshot  Lançamentos de Compras/Aquisição de Serviços (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Lançamentos
+    BaseKeywordsDesktop.Screenshot  Lançamentos de Compras/Aquisição de Serviços (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Lançamentos
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Item
@@ -36,7 +36,7 @@ Compras/Aquisição de Serviços - Sintético/Item
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Item
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Item (1)
     RPA.Windows.Click       Produtos
-    BaseDesktop.Screenshot  Compras/Aquisição de Serviços / Item (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Item
+    BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços / Item (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Item
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Fornecedor
@@ -46,7 +46,7 @@ Compras/Aquisição de Serviços - Sintético/Fornecedor
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Fornecedor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor (1)
     RPA.Windows.Click       Nome do Fornecedor
-    BaseDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Fornecedor
+    BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Fornecedor
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Forn/Item
@@ -56,7 +56,7 @@ Compras/Aquisição de Serviços - Sintético/Forn/Item
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Forn/Item
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor / Item $ESPAÇO(1)
     RPA.Windows.Click       Nome do Fornecedor
-    BaseDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor / Item $ESPAÇO(1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Forn_Item
+    BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor / Item $ESPAÇO(1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Forn_Item
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Setor
@@ -67,7 +67,7 @@ Compras/Aquisição de Serviços - Sintético/Setor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços por Setor (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Compras/Aquisição de Serviços por Setor (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Setor
+    BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços por Setor (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Setor
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -80,7 +80,7 @@ Compras/Aquisição de Serviços - Evolução Diária
     repetidor de teclas     Tab    4
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Compras/Aquisição de Serviços - Evolução Diária (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Diária
+    BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços - Evolução Diária (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Diária
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -93,7 +93,7 @@ Compras/Aquisição de Serviços - Evolução Mensal
     repetidor de teclas     Tab    3
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Compras/Aquisição de Serviços - Evolução Mensal (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Mensal
+    BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços - Evolução Mensal (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Mensal
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -106,7 +106,7 @@ Compras/Aquisição de Serviços - Evolução Anual
     repetidor de teclas     Tab    5
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Compras/Aquisição de Serviços - Evolução Anual (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Anual
+    BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços - Evolução Anual (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Anual
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -118,7 +118,7 @@ Compras/Aquisição de Serviços - CFOP
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - CFOP (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Compras/Aquisição de Serviços - CFOP (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - CFOP
+    BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços - CFOP (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - CFOP
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -129,7 +129,7 @@ Lançamento de Entradas
     RPA.Windows.Click       Lançamento de Entradas
     RPA.Windows.Get Text  	Relatório de Lançamentos de Entradas $ESPAÇO(1)
     RPA.Windows.Click       Fornecedor
-    BaseDesktop.Screenshot  Relatório de Lançamentos de Entradas $ESPAÇO(1)   ${Caminho_Screenshots}Lançamento de Entradas
+    BaseKeywordsDesktop.Screenshot  Relatório de Lançamentos de Entradas $ESPAÇO(1)   ${Caminho_Screenshots}Lançamento de Entradas
     Fechar janela
 
 Produtos/Fornecedor
@@ -141,7 +141,7 @@ Produtos/Fornecedor
     RPA.Desktop.Press Keys  Tab
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório Ultimo Fornecedor (1)   ${Caminho_Screenshots}Produtos_Fornecedor
+    BaseKeywordsDesktop.Screenshot  Relatório Ultimo Fornecedor (1)   ${Caminho_Screenshots}Produtos_Fornecedor
     RPA.Windows.Click       Fechar
     Fechar janela
 
@@ -153,7 +153,7 @@ Fornecedor/Produtos
     RPA.Windows.Get Text    Relatório de fornecedores por produto (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de fornecedores por produto (1)   ${Caminho_Screenshots}Fornecedor_Produtos
+    BaseKeywordsDesktop.Screenshot  Relatório de fornecedores por produto (1)   ${Caminho_Screenshots}Fornecedor_Produtos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -164,7 +164,7 @@ Notas Fiscais Emitidas
     RPA.Windows.Click       Notas Fiscais Emitidas
     RPA.Windows.Get Text    Relatório de Notas Fiscais Emitidas (1)
     RPA.Windows.Click       Data
-    BaseDesktop.Screenshot  Relatório de Notas Fiscais Emitidas (1)   ${Caminho_Screenshots}Notas Fiscais Emitidas
+    BaseKeywordsDesktop.Screenshot  Relatório de Notas Fiscais Emitidas (1)   ${Caminho_Screenshots}Notas Fiscais Emitidas
     Fechar janela
 
 Pedidos de Compra
@@ -174,7 +174,7 @@ Pedidos de Compra
     RPA.Windows.Click       Pedidos de Compra
     RPA.Windows.Get Text    Relatório de Pedidos de Compra (1)
     RPA.Windows.Click       Data
-    BaseDesktop.Screenshot  Relatório de Pedidos de Compra (1)   ${Caminho_Screenshots}Pedidos de Compra
+    BaseKeywordsDesktop.Screenshot  Relatório de Pedidos de Compra (1)   ${Caminho_Screenshots}Pedidos de Compra
     Fechar janela
 
 Pedidos de Compra - Saldo Produtos
@@ -184,7 +184,7 @@ Pedidos de Compra - Saldo Produtos
     RPA.Windows.Click       Pedidos de Compra - Saldo Produtos
     RPA.Windows.Get Text    Relatório de Pedidos de Compra - Saldo dos produtos (1)
     RPA.Windows.Click       Data
-    BaseDesktop.Screenshot  Relatório de Pedidos de Compra - Saldo dos produtos (1)   ${Caminho_Screenshots}Pedidos de Compra - Saldo Produtos
+    BaseKeywordsDesktop.Screenshot  Relatório de Pedidos de Compra - Saldo dos produtos (1)   ${Caminho_Screenshots}Pedidos de Compra - Saldo Produtos
     Fechar janela
 
 Giro de Fornecedores
@@ -194,7 +194,7 @@ Giro de Fornecedores
     RPA.Windows.Click       Giro de Fornecedores
     RPA.Windows.Get Text    Relatório Giro de Fornecedores (1)
     RPA.Windows.Click       Nome do Fornecedor
-    BaseDesktop.Screenshot  Relatório Giro de Fornecedores (1)   ${Caminho_Screenshots}Giro de Fornecedores
+    BaseKeywordsDesktop.Screenshot  Relatório Giro de Fornecedores (1)   ${Caminho_Screenshots}Giro de Fornecedores
     Fechar janela
 
 Resumo Retenção Monsanto
@@ -204,7 +204,7 @@ Resumo Retenção Monsanto
     RPA.Windows.Click       Resumo Retenção Monsanto
     RPA.Windows.Get Text    Consulta Monsanto (1)
     RPA.Windows.Click       Executar
-    BaseDesktop.Screenshot  Consulta Monsanto (1)   ${Caminho_Screenshots}Resumo Retenção Monsanto
+    BaseKeywordsDesktop.Screenshot  Consulta Monsanto (1)   ${Caminho_Screenshots}Resumo Retenção Monsanto
     Fechar janela
 
 Resumo Geral de Movimentos/Saldos
@@ -215,7 +215,7 @@ Resumo Geral de Movimentos/Saldos
     RPA.Windows.Get Text    Resumo Geral de Movimentos/Saldos (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Resumo Geral de Movimentos/Saldos (1)   ${Caminho_Screenshots}Resumo Geral de Movimentos_Saldos
+    BaseKeywordsDesktop.Screenshot  Resumo Geral de Movimentos/Saldos (1)   ${Caminho_Screenshots}Resumo Geral de Movimentos_Saldos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -228,6 +228,6 @@ Customizados > Projeção de Compras
     RPA.Windows.Get Text    Projeção de Compras (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Projeção de Compras (1)   ${Caminho_Screenshots}Customizados/Projeção de Compras
+    BaseKeywordsDesktop.Screenshot  Projeção de Compras (1)   ${Caminho_Screenshots}Customizados/Projeção de Compras
     RPA.Windows.Click       Confirmar
     Fechar janela

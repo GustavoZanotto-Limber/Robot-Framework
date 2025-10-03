@@ -1,10 +1,10 @@
 *** Settings ***
 Documentation     Testes regressivos: Programação de Preços
-Resource          ../../../Resources/BaseWeb.robot
-Resource          ../../../Resources/KeywordWeb.robot
+Resource          ../../../Resources/BaseKeywordsWeb.robot
+Resource          ../../../Resources/BDDKeywordsWeb.robot
 Suite Setup       Abrir CARD e logar 
 Suite Teardown    Inativar Bilhete    ${numero_bilhete}
-# Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
+Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
 
 *** Variables ***
 
@@ -42,7 +42,7 @@ Cenário 3: Cadastro de preços para diferentes categorias
 Cenário 4: Configuração de preços por temporada
     ${nome_print}=    Set Variable     Configuração de preços por temporada
     [Tags]    Testes_Funcionais    LB-41
-    Dado que criei novas temporadas
+    Dado que criei novas temporadas    
     Quando coloco as temporadas no calendario
     Então valido as temporadas no E-Commerce
 
