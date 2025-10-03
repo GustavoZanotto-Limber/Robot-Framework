@@ -9,7 +9,8 @@ Library    Collections
 Library    RPA.PDF
 Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\DESKTOP\\ScreenShots\\Selenium
 Library    RPA.Desktop
-Resource    BaseDesktop.robot
+Resource    BaseKeywordsDesktop.robot
+Resource    BDDKeywordsDesktop.robot
 
 *** Variables ***
 ${front}
@@ -65,6 +66,7 @@ Caso aconteca erro WEB
         [Arguments]     ${Caminho_Screenshots}        ${nome_print}    
         Run Keyword If Test Failed    Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
         Run Keyword If Test Failed    Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
+        Run Keyword If Test Failed    Run Keyword And Ignore error    Inativar bilhete
         Run Keyword If Test Failed    Encerrar Tudo
         Run Keyword If Test Failed    Fechar navegador
         Run Keyword If Test Failed    Abrir CARD e logar
@@ -181,17 +183,19 @@ Adicionar Receita
     RPA.Desktop.Press Keys    Enter
 
 Criar Temporada
-    [Arguments]    ${vermelho}=255    ${verde}=0    ${azul}=0
+    [Arguments]    ${codigo_temporada}=1    ${nome_temporada}=Temporada 1    ${vermelho}=255    ${verde}=0    ${azul}=0
     Navegar configuração de bilhete    6
+    Sleep                              1s
     Navegar configuração de bilhete    7
+    Sleep                        1s
     Click Element                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[1]/title-btn-add/div/button
     sleep                     1s   
     RPA.Desktop.Press Keys    tab
-    RPA.Desktop.Press Keys    1
+    RPA.Desktop.Press Keys    ${codigo_temporada}
     Sleep                     1s
     RPA.Desktop.Press Keys    tab
     Sleep                     1s
-    RPA.Desktop.Type Text     Temporada 1
+    RPA.Desktop.Type Text     ${nome_temporada}
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    Enter
     Sleep                     1s
@@ -199,7 +203,7 @@ Criar Temporada
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    Enter
     Colocar cor               ${vermelho}    ${verde}    ${azul}
-    sleep                     1s
+    sleep                     2s
     Click Element             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/div[2]/button[2]
     sleep                     1s
 
@@ -486,9 +490,10 @@ Comparar valores
 Inativar bilhete
     [Arguments]    ${numero_bilhete}=6275
     IF    ${numero_bilhete} == 6275
+            Go to            https://testescard.limbersoftware.com.br/
+            sleep            5s
             Go to            https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=6275
-            sleep            4s     
-            Sleep            1s
+            Sleep            7s     
             Run Keyword and Ignore Error    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[2]/buttons/div/div/button[1]
             Sleep                     1s
             RPA.Desktop.Press Keys    tab
@@ -504,6 +509,10 @@ Inativar bilhete
             RPA.Desktop.Press Keys    tab
             Sleep                     1s
             RPA.Desktop.Press Keys    Enter
+            Run Keyword and Ignore Error    Retirar Categoria  2
+            Sleep                     2s
+            Run Keyword and Ignore Error    Retirar Categoria  2
+            sleep                     1s
     ELSE
         Go to     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
         sleep            3s
@@ -554,7 +563,7 @@ Retirar Categoria
     RPA.Desktop.Press Keys    Enter
     Sleep                     1s
     Click Element             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
-    Sleep                     4s
+    Sleep                     6s
     RPA.Desktop.Press Keys    Enter
     Sleep                     2s
     
@@ -656,7 +665,7 @@ Adicionar nova temporada em um bilhete
     [Arguments]    ${numero_bilhete}=6275
     Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
     sleep    5s
-    Criar Temporada    0    255    0
+    Criar Temporada   2    Temporada 2     0    255    0
     Click Element             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
     Sleep                     1s
     # RPA.Desktop.Press Keys    tab

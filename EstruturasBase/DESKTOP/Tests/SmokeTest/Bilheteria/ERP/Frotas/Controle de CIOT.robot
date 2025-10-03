@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
-Resource          ../../../../../Resources/BaseDesktop.robot
+Resource          ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Frotas/Controle de CIOT/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Frotas/Controle de CIOT/    
 ${nome_print}
 ${nome_exe}=    cde_win_frotas
 *** Keywords ***
@@ -26,7 +26,7 @@ Lançamento de CIOT
     Controle de CIOT               Lançamento de CIOT
     RPA.Windows.Get Text    CIOT (1)  
     RPA.Windows.Click       Novo 
-    BaseDesktop.Screenshot  CIOT (1)                               ${Caminho_Screenshots}Lançamento de CIOT
+    BaseKeywordsDesktop.Screenshot  CIOT (1)                               ${Caminho_Screenshots}Lançamento de CIOT
     Fechar com Sim
 
 Monitor de CIOT
@@ -36,6 +36,6 @@ Monitor de CIOT
     RPA.Windows.Get Text    Monitor CIOT (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter  
-    BaseDesktop.Screenshot  Monitor CIOT (1)                                 ${Caminho_Screenshots}Monitor de CIOT
+    BaseKeywordsDesktop.Screenshot  Monitor CIOT (1)                                 ${Caminho_Screenshots}Monitor de CIOT
     RPA.Windows.Click       Confirmar
     Fechar Janela

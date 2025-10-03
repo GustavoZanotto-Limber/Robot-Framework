@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Vendedor
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendedor/Relatórios/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Vendedor/Relatórios/    
 ${nome_print}
 ${nome_exe}=    cde_win_VENDEDOR
 *** Keywords ***
@@ -29,7 +29,7 @@ Análise da Disponibilidade do Estoque
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Análise da Disponibilidade do Estoque (1)    ${Caminho_Screenshots}Análise da Disponibilidade do Estoque
+    BaseKeywordsDesktop.Screenshot    Análise da Disponibilidade do Estoque (1)    ${Caminho_Screenshots}Análise da Disponibilidade do Estoque
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -41,7 +41,7 @@ Relatório de Cobrança
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Relatório de Cobrança   ${Caminho_Screenshots}Relatório de Cobrança
+    BaseKeywordsDesktop.Screenshot    Relatório de Cobrança   ${Caminho_Screenshots}Relatório de Cobrança
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -53,6 +53,6 @@ Posição Financeira/Vendedor/Terceiro
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Posição Financeira por Representante/Terceiro   ${Caminho_Screenshots}Posição Financeira/Vendedor/Terceiro
+    BaseKeywordsDesktop.Screenshot    Posição Financeira por Representante/Terceiro   ${Caminho_Screenshots}Posição Financeira/Vendedor/Terceiro
     RPA.Windows.Click         Confirmar
     Fechar janela

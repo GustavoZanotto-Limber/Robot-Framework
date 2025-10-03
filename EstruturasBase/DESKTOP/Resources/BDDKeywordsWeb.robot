@@ -4,9 +4,9 @@ Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\DESKTOP\
 Library    Process
 Library    Collections
 Library    String
-Resource   BaseDesktop.robot
-Resource   Keywords.robot
-Resource   BaseWeb.robot
+Resource   BaseKeywordsDesktop.robot
+Resource   BDDKeywordsDesktop.robot
+Resource   BaseKeywordsWeb.robot
 
 *** Variables ***
 ${qtd_vagas}
@@ -116,7 +116,7 @@ Quando coloco as temporadas no calendario
     ${amanha}=       Evaluate       ${dia} + 1
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
     Sleep                       1s
-    Preencher dia do calendario    ${ano_mes_dia[1]}    32     n°_temporada=2
+    Preencher dia do calendario    ${ano_mes_dia[1]}    ${amanha}     n°_temporada=2
     Sleep                       2s
 
 
@@ -264,9 +264,11 @@ Então valido se o preço foi salvo corretamente
 Então valido as temporadas no E-Commerce
     [Arguments]    ${numero_bilhete}=6275
     Abro o E-commerce
+    Sleep                              1s
     Pesquisar bilhete no e-commerce    Bilhete Automatizado: Por Horario
-    ${temporada1}=    SeleniumLibrary.Get Text    xpath:
-    ${temporada2}=    SeleniumLibrary.Get Text    xpath:
+    Sleep                              3s
+    ${temporada1}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span
+    ${temporada2}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[4]/div/div/div/span
     Should Be Equal    ${temporada1}    Temporada 1
     Should Be Equal    ${temporada2}    Temporada 2
     Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
@@ -278,5 +280,5 @@ Então valido as temporadas no E-Commerce
     RPA.Desktop.Press Keys    enter
     Click Element    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
     Sleep    4s
-    Inativar bilhete    ${numero_bilhete}
+    Inativar bilhete    
     

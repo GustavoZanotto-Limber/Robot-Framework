@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Corretagem
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Corretagem/Manutenções/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Corretagem/Manutenções/    
 ${nome_print}
 ${nome_exe}=    cde_win_crt
 *** Keywords ***
@@ -26,7 +26,7 @@ Confirmação de Negócio
     RPA.Windows.Click         Confirmação de Negócio
     RPA.Windows.Get Text      Confirmação de Negócio (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Confirmação de Negócio (1)      ${Caminho_Screenshots}Confirmação de Negócio
+    BaseKeywordsDesktop.Screenshot    Confirmação de Negócio (1)      ${Caminho_Screenshots}Confirmação de Negócio
     Fechar com Sim
 
 Emissão de NFS-e sobre Confirmações de Negócios
@@ -36,7 +36,7 @@ Emissão de NFS-e sobre Confirmações de Negócios
     RPA.Windows.Click         Emissão de NFS-e sobre Confirmações de Negócios
     RPA.Windows.Get Text      Emissão de NFS-e sobre Confirmações de Negócios (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Emissão de NFS-e sobre Confirmações de Negócios (1)      ${Caminho_Screenshots}Confirmação de Negócio
+    BaseKeywordsDesktop.Screenshot    Emissão de NFS-e sobre Confirmações de Negócios (1)      ${Caminho_Screenshots}Confirmação de Negócio
     Fechar janela
 
 Pedidos > Pedidos de Compra
@@ -47,7 +47,7 @@ Pedidos > Pedidos de Compra
     RPA.Desktop.Press Keys    P
     RPA.Windows.Get Text      Pedidos de Compra (1)
     RPA.Windows.Click         Novo  
-    BaseDesktop.Screenshot    Pedidos de Compra (1)      ${Caminho_Screenshots}Pedidos de Compra
+    BaseKeywordsDesktop.Screenshot    Pedidos de Compra (1)      ${Caminho_Screenshots}Pedidos de Compra
     Fechar com Sim
 
 Pedidos > Pedidos de Venda
@@ -58,7 +58,7 @@ Pedidos > Pedidos de Venda
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Pedidos de Venda (1)  
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Pedidos de Venda (1)      ${Caminho_Screenshots}Pedidos de Venda
+    BaseKeywordsDesktop.Screenshot    Pedidos de Venda (1)      ${Caminho_Screenshots}Pedidos de Venda
     Fechar com Sim
 
 Entradas/Compras > Incluir/Alterar
@@ -69,7 +69,7 @@ Entradas/Compras > Incluir/Alterar
     RPA.Desktop.Press Keys  I
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)   ${Caminho_Screenshots}Entradas_Compras/Incluir_Alterar 
+    BaseKeywordsDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)   ${Caminho_Screenshots}Entradas_Compras/Incluir_Alterar 
     Fechar com Sim
 
 Entradas/Compras > Consultar
@@ -83,7 +83,7 @@ Entradas/Compras > Consultar
     RPA.Desktop.Press Keys  Enter
     Sleep                   3s
     RPA.Windows.Click       Confirmar
-    BaseDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
+    BaseKeywordsDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
     Fechar Janela
 
 Saídas/Vendas > Incluir Saídas/Vendas
@@ -95,7 +95,7 @@ Saídas/Vendas > Incluir Saídas/Vendas
     Sleep                     4s
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Com Fechamento (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
     Fechar janela
     RPA.Windows.Click         Sim
 
@@ -109,7 +109,7 @@ Saídas/Vendas > Alterar Saídas/Vendas
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter 
-    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
     RPA.Windows.Click       Cancelar
     Fechar janela
 
@@ -123,6 +123,6 @@ Saídas/Vendas > Consultar Saídas/Vendas
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Consulta (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Consulta (1)    ${Caminho_Screenshots}Saídas_Vendas/Consultar Saídas_Vendas
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Produtos - Consulta (1)    ${Caminho_Screenshots}Saídas_Vendas/Consultar Saídas_Vendas
     RPA.Windows.Click       Cancelar
     Fechar janela

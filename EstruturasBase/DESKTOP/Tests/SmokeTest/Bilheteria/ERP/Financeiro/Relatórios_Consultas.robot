@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 
 *** Variables ***
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Financeiro/Relatórios_Consultas/
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Financeiro/Relatórios_Consultas/
 ${nome_print}
 ${nome_exe}=    cde_win_fin
 
@@ -27,7 +27,7 @@ Informe de Rendimentos
     RPA.Windows.Click         Informe de Rendimentos
     RPA.Windows.Get Text      Informativo de Rendimentos (1)
     RPA.Windows.Click         Listar Notas Fiscais
-    BaseDesktop.Screenshot    Informativo de Rendimentos (1)    ${Caminho_Screenshots}Informe de Rendimentos
+    BaseKeywordsDesktop.Screenshot    Informativo de Rendimentos (1)    ${Caminho_Screenshots}Informe de Rendimentos
     Fechar janela
 
 Relatório de Receitas e Despesas
@@ -38,7 +38,7 @@ Relatório de Receitas e Despesas
     RPA.Windows.Get Text      Relatório de Receitas e Despesas (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter 
-    BaseDesktop.Screenshot    Relatório de Receitas e Despesas (1)    ${Caminho_Screenshots}Relatório de Receitas e Despesas
+    BaseKeywordsDesktop.Screenshot    Relatório de Receitas e Despesas (1)    ${Caminho_Screenshots}Relatório de Receitas e Despesas
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -50,7 +50,7 @@ Consulta de Receitas e Despesas
     RPA.Windows.Get Text      Consulta de Receitas e Despesas (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter 
-    BaseDesktop.Screenshot    Consulta de Receitas e Despesas (1)    ${Caminho_Screenshots}Consulta de Receitas e Despesas
+    BaseKeywordsDesktop.Screenshot    Consulta de Receitas e Despesas (1)    ${Caminho_Screenshots}Consulta de Receitas e Despesas
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -62,7 +62,7 @@ Saldo de Pedidos de Venda
     RPA.Windows.Get Text      Relatório de Saldos de Pedidos de Venda (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter 
-    BaseDesktop.Screenshot    Relatório de Saldos de Pedidos de Venda (1)    ${Caminho_Screenshots}Saldo de Pedidos de Venda
+    BaseKeywordsDesktop.Screenshot    Relatório de Saldos de Pedidos de Venda (1)    ${Caminho_Screenshots}Saldo de Pedidos de Venda
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         OK
     Fechar janela
@@ -78,7 +78,7 @@ Posição Financeira > Configuração
     repetidor de teclas       tab     2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter 
-    BaseDesktop.Screenshot    Configuração para Relatório de Posição Financeira (1)    ${Caminho_Screenshots}Posição Financeira/Configuração
+    BaseKeywordsDesktop.Screenshot    Configuração para Relatório de Posição Financeira (1)    ${Caminho_Screenshots}Posição Financeira/Configuração
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         OK
     Fechar janela
@@ -91,7 +91,7 @@ Posição Financeira > Relatório
     RPA.Windows.Click         Posição Financeira
     RPA.Desktop.Press Keys    r
     RPA.Windows.Get Text      Relatório de Posição Financeira (1)
-    BaseDesktop.Screenshot    Relatório de Posição Financeira (1)    ${Caminho_Screenshots}Posição Financeira/Relatório
+    BaseKeywordsDesktop.Screenshot    Relatório de Posição Financeira (1)    ${Caminho_Screenshots}Posição Financeira/Relatório
     Fechar janela
 
 Relatório Crédito Interno
@@ -102,7 +102,7 @@ Relatório Crédito Interno
     RPA.Windows.Get Text      Relatório de Crédito Interno (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter 
-    BaseDesktop.Screenshot    Relatório de Crédito Interno (1)    ${Caminho_Screenshots}Relatório Crédito Interno
+    BaseKeywordsDesktop.Screenshot    Relatório de Crédito Interno (1)    ${Caminho_Screenshots}Relatório Crédito Interno
     RPA.Windows.Click         OK
     Fechar janela
     RPA.Windows.Click         OK
@@ -114,7 +114,7 @@ Consultas Personalizadas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
     RPA.Windows.Click         Cadastrar Nova Consulta
-    BaseDesktop.Screenshot    Consultas Personalizadas (1)    ${Caminho_Screenshots}Consultas Personalizadas
+    BaseKeywordsDesktop.Screenshot    Consultas Personalizadas (1)    ${Caminho_Screenshots}Consultas Personalizadas
     RPA.Windows.Click         Fechar
     Fechar janela
 
@@ -126,7 +126,7 @@ Rateio de Centro de Custo
     RPA.Windows.Get Text      Consulta de Rateio de Centro de Custos (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter 
-    BaseDesktop.Screenshot    Consulta de Rateio de Centro de Custos (1)    ${Caminho_Screenshots}Rateio de Centro de Custo
+    BaseKeywordsDesktop.Screenshot    Consulta de Rateio de Centro de Custos (1)    ${Caminho_Screenshots}Rateio de Centro de Custo
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -137,7 +137,7 @@ Centro de Custos
     RPA.Windows.Click         Centro de Custos
     RPA.Windows.Get Text      Centro de Custos (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Centro de Custos (1)    ${Caminho_Screenshots}Centro de Custos
+    BaseKeywordsDesktop.Screenshot    Centro de Custos (1)    ${Caminho_Screenshots}Centro de Custos
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -148,7 +148,7 @@ Consumo de Adiantamento
     RPA.Windows.Click         Consumo de Adiantamento
     RPA.Windows.Get Text      Consulta de Consumo de Adiantamentos (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Consulta de Consumo de Adiantamentos (1)    ${Caminho_Screenshots}Consumo de Adiantamento
+    BaseKeywordsDesktop.Screenshot    Consulta de Consumo de Adiantamentos (1)    ${Caminho_Screenshots}Consumo de Adiantamento
     Fechar janela
 
 Análise de Terceiro
@@ -158,9 +158,9 @@ Análise de Terceiro
     RPA.Windows.Click         Análise de Terceiro
     Sleep                     1s
     RPA.Windows.Get Text      Consulta de Terceiros
-    BaseDesktop.Screenshot    Consulta de Terceiros    ${Caminho_Screenshots}Análise de Terceiro
+    BaseKeywordsDesktop.Screenshot    Consulta de Terceiros    ${Caminho_Screenshots}Análise de Terceiro
     RPA.Windows.Click         Confirmar
     RPA.Windows.Get Text      Análise de Terceiros (1)
-    BaseDesktop.Screenshot    Análise de Terceiros (1)    ${Caminho_Screenshots}Análise de Terceiro
+    BaseKeywordsDesktop.Screenshot    Análise de Terceiros (1)    ${Caminho_Screenshots}Análise de Terceiro
     RPA.Windows.Click         Carregar
     RPA.Windows.Click         Fechar

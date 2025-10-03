@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
-Resource          ../../../../../Resources/BaseDesktop.robot
+Resource          ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Frotas/Projeto EDI Transportes/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Frotas/Projeto EDI Transportes/    
 ${nome_print}
 ${nome_exe}=    cde_win_frotas
 *** Keywords ***
@@ -26,7 +26,7 @@ Importação NOTFIS
     Projeto EDI Transportes                  Importação NOTFIS
     RPA.Windows.Get Text   	Importação de Dados do Projeto EDI Transporte (NOTFIS - Dados de Notas Fiscais) (1) 
     RPA.Windows.Click       Iniciar Importação
-    BaseDesktop.Screenshot 	Importação de Dados do Projeto EDI Transporte (NOTFIS - Dados de Notas Fiscais) (1)                              ${Caminho_Screenshots}Importação NOTFIS
+    BaseKeywordsDesktop.Screenshot 	Importação de Dados do Projeto EDI Transporte (NOTFIS - Dados de Notas Fiscais) (1)                              ${Caminho_Screenshots}Importação NOTFIS
     RPA.Windows.Click       OK                             
     Fechar Janela
 
@@ -35,7 +35,7 @@ Exportação CONEMB
     [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação CONEMB
     RPA.Windows.Get Text    bbbbb 
-    BaseDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação CONEMB
+    BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação CONEMB
     Fechar Janela
 
 Exportação DOCCOB
@@ -43,7 +43,7 @@ Exportação DOCCOB
     [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação DOCCOB
     RPA.Windows.Get Text    bbbbb 
-    BaseDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação DOCCOB
+    BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação DOCCOB
     Fechar Janela
 
 Exportação OCOREN
@@ -51,5 +51,5 @@ Exportação OCOREN
     [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação OCOREN
     RPA.Windows.Get Text    bbbbb 
-    BaseDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação OCOREN
+    BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação OCOREN
     Fechar Janela

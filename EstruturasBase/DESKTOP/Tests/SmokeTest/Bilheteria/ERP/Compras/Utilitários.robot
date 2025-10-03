@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation    Smoke Test: Compras
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_compras
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Compras/Utilitários/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Compras/Utilitários/    
 ${nome_print}
 ${nome_exe}=    cde_win_compras
 
@@ -26,7 +26,7 @@ Configurar Nota Fiscal
     RPA.Windows.Click       Configurar Nota Fiscal
     RPA.Windows.Get Text    Configuração da Nota Fiscal (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Configuração da Nota Fiscal (1)    ${Caminho_Screenshots}Configurar Nota Fiscal
+    BaseKeywordsDesktop.Screenshot  Configuração da Nota Fiscal (1)    ${Caminho_Screenshots}Configurar Nota Fiscal
     Fechar janela
 
 Favoritos
@@ -36,7 +36,7 @@ Favoritos
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
+    BaseKeywordsDesktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
     RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar
 
@@ -47,7 +47,7 @@ Papel de Parede
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
-    BaseDesktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
+    BaseKeywordsDesktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Principal
@@ -58,7 +58,7 @@ Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
+    BaseKeywordsDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -69,7 +69,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
+    BaseKeywordsDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     Fechar com Sim
 
 Estilo do Menu Principal
@@ -79,7 +79,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
     RPA.Windows.Click       Standard
-    BaseDesktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
+    BaseKeywordsDesktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
@@ -89,7 +89,7 @@ Controle de Acessos
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
     RPA.Windows.Click       Confirmar
-    BaseDesktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
+    BaseKeywordsDesktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -103,7 +103,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     Sleep                   2s
-    BaseDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
+    BaseKeywordsDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
@@ -116,7 +116,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Windows.Get Text    Cadastro de Categoria (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
+    BaseKeywordsDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -129,7 +129,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
-    BaseDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
+    BaseKeywordsDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -141,7 +141,7 @@ Configurador de Impressões > Ordem se Serviço
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Configurador de Impressões - Ordem de Serviço (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Configurador de Impressões - Ordem de Serviço (1)    ${Caminho_Screenshots}Configurador de Impressões/Ordem se Serviço
+    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Ordem de Serviço (1)    ${Caminho_Screenshots}Configurador de Impressões/Ordem se Serviço
     Fechar com Sim
 
 Configurador de Impressões > Saídas Vendas
@@ -152,7 +152,7 @@ Configurador de Impressões > Saídas Vendas
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Configurador de Impressões - Saídas/Vendas (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Configurador de Impressões - Saídas/Vendas (1)    ${Caminho_Screenshots}Configurador de Impressões/Saídas Vendas
+    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Saídas/Vendas (1)    ${Caminho_Screenshots}Configurador de Impressões/Saídas Vendas
     Fechar com Sim
 
 Configurador de Impressões > Ordem de Fixação
@@ -163,7 +163,7 @@ Configurador de Impressões > Ordem de Fixação
     RPA.Desktop.Press Keys  R
     RPA.Windows.Get Text    Configurador de Impressões - Ordem de Fixação (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Configurador de Impressões - Ordem de Fixação (1)    ${Caminho_Screenshots}Configurador de Impressões/Ordem de Fixação
+    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Ordem de Fixação (1)    ${Caminho_Screenshots}Configurador de Impressões/Ordem de Fixação
     Fechar com Sim
 
 Configurador de Impressões > Fixação de Produtos
@@ -174,7 +174,7 @@ Configurador de Impressões > Fixação de Produtos
     RPA.Desktop.Press Keys  F
     RPA.Windows.Get Text    Configurador de Impressões - Fixação de Produtos (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Configurador de Impressões - Fixação de Produtos (1)    ${Caminho_Screenshots}Configurador de Impressões/Fixação de Produtos
+    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Fixação de Produtos (1)    ${Caminho_Screenshots}Configurador de Impressões/Fixação de Produtos
     Fechar com Sim
 
 Configurador de Impressões > Entradas/Compras
@@ -185,7 +185,7 @@ Configurador de Impressões > Entradas/Compras
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Configurador de Impressões - Entradas/Compras (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Configurador de Impressões - Entradas/Compras (1)    ${Caminho_Screenshots}Configurador de Impressões/Entradas_Compras
+    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Entradas/Compras (1)    ${Caminho_Screenshots}Configurador de Impressões/Entradas_Compras
     Fechar com Sim
 
 Configurador de Impressões > Transferência entre Terceiros
@@ -196,7 +196,7 @@ Configurador de Impressões > Transferência entre Terceiros
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Configurador de Impressões - Transferência entre Terceiros - Compras (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Configurador de Impressões - Transferência entre Terceiros - Compras (1)    ${Caminho_Screenshots}Configurador de Impressões/Transferência entre Terceiros
+    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Transferência entre Terceiros - Compras (1)    ${Caminho_Screenshots}Configurador de Impressões/Transferência entre Terceiros
     Fechar com Sim
 
 Verifica transações abertas
@@ -206,7 +206,7 @@ Verifica transações abertas
     RPA.Windows.Click       Verifica transações abertas
     RPA.Windows.Get Text    Verifica transações abertas (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
+    BaseKeywordsDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
     Fechar janela
 
 Etiquetas
@@ -216,7 +216,7 @@ Etiquetas
     RPA.Windows.Click       Etiquetas
     RPA.Windows.Get Text    Emissão de Etiquetas (1)
     RPA.Windows.Click       Imprimir Etiquetas
-    BaseDesktop.Screenshot  Emissão de Etiquetas (1)    ${Caminho_Screenshots}Etiquetas
+    BaseKeywordsDesktop.Screenshot  Emissão de Etiquetas (1)    ${Caminho_Screenshots}Etiquetas
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -227,7 +227,7 @@ Etiquetas (Terceiros)
     RPA.Windows.Click       Etiquetas (Terceiros)
     RPA.Windows.Get Text    Emissão de Etiquetas (1)
     RPA.Windows.Click       Adicionar
-    BaseDesktop.Screenshot  Emissão de Etiquetas (1)   ${Caminho_Screenshots}Etiquetas (Terceiros)
+    BaseKeywordsDesktop.Screenshot  Emissão de Etiquetas (1)   ${Caminho_Screenshots}Etiquetas (Terceiros)
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -238,7 +238,7 @@ Registro Magnético
     RPA.Windows.Click       Registro Magnético
     RPA.Windows.Get Text    Registro Magnético (1)
     RPA.Windows.Click       Gerar
-    BaseDesktop.Screenshot  Registro Magnético (1)    ${Caminho_Screenshots}Registro Magnético
+    BaseKeywordsDesktop.Screenshot  Registro Magnético (1)    ${Caminho_Screenshots}Registro Magnético
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -249,7 +249,7 @@ Agenda Telefônica
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
+    BaseKeywordsDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
     Fechar com Sim
 
 Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
@@ -260,7 +260,7 @@ Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Salvar arquivo XML NFe de Terceiros (1)
     RPA.Windows.Click       Salvar
-    BaseDesktop.Screenshot  Salvar arquivo XML NFe de Terceiros (1)   ${Caminho_Screenshots}Exportação de Arquivos/Salvar arquivo XML NFe de Terceiros
+    BaseKeywordsDesktop.Screenshot  Salvar arquivo XML NFe de Terceiros (1)   ${Caminho_Screenshots}Exportação de Arquivos/Salvar arquivo XML NFe de Terceiros
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -272,7 +272,7 @@ Exportação de Arquivos > Salvar o Arquivo XML NFe Própria
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Salvar arquivo XML NF-e / NFS-e / CT-e / SAT própria(o) (1)
     RPA.Windows.Click       Salvar
-    BaseDesktop.Screenshot  Salvar arquivo XML NF-e / NFS-e / CT-e / SAT própria(o) (1)   ${Caminho_Screenshots}Exportação de Arquivos/Salvar o arquivo XML NFe Própria
+    BaseKeywordsDesktop.Screenshot  Salvar arquivo XML NF-e / NFS-e / CT-e / SAT própria(o) (1)   ${Caminho_Screenshots}Exportação de Arquivos/Salvar o arquivo XML NFe Própria
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -285,7 +285,7 @@ Integração Royalties Monsanto > Consulta de Entregas/Cancelamentos
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Get Text    Consulta de Entregas/Cancelamentos - Monsanto (1)
-    BaseDesktop.Screenshot  Consulta de Entregas/Cancelamentos - Monsanto (1)    ${Caminho_Screenshots}Integração Royalties Monsanto/Consulta de Entregas_Cancelamentos
+    BaseKeywordsDesktop.Screenshot  Consulta de Entregas/Cancelamentos - Monsanto (1)    ${Caminho_Screenshots}Integração Royalties Monsanto/Consulta de Entregas_Cancelamentos
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -298,6 +298,6 @@ Integração Royalties Monsanto > Consulta Lista de Pendências
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Get Text    Consulta Lista de Pendências - Monsanto (1)
-    BaseDesktop.Screenshot  Consulta Lista de Pendências - Monsanto (1)    ${Caminho_Screenshots}Integração Royalties Monsanto/Consulta Lista de Pendências
+    BaseKeywordsDesktop.Screenshot  Consulta Lista de Pendências - Monsanto (1)    ${Caminho_Screenshots}Integração Royalties Monsanto/Consulta Lista de Pendências
     RPA.Windows.Click       Confirmar
     Fechar Janela

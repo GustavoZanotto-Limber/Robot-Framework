@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Vendedor
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendedor/Consultas/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Vendedor/Consultas/    
 ${nome_print}
 ${nome_exe}=    cde_win_VENDEDOR
 *** Keywords ***
@@ -29,7 +29,7 @@ Pedidos de Venda
     RPA.Desktop.Press Keys    Shift    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Consulta de Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos de Venda
+    BaseKeywordsDesktop.Screenshot    Consulta de Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos de Venda
     RPA.Windows.Click         Confirmar
     Fechar janela
     
@@ -41,6 +41,6 @@ Contas a Receber
     repetidor de teclas       tab      11
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Consulta do Contas a Receber (1)    ${Caminho_Screenshots}Contas a Receber
+    BaseKeywordsDesktop.Screenshot    Consulta do Contas a Receber (1)    ${Caminho_Screenshots}Contas a Receber
     RPA.Windows.Click         Confirmar
     Fechar janela

@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Contabil
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Contabil/Relatórios/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Contabil/Relatórios/    
 ${nome_print}
 ${nome_exe}=    cde_win_ctb
 *** Keywords ***
@@ -27,7 +27,7 @@ Livro Diário
     RPA.Windows.Get Text      Livro Diário (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    Livro Diário (1)     ${Caminho_Screenshots}Livro Diário
+    BaseKeywordsDesktop.Screenshot    Livro Diário (1)     ${Caminho_Screenshots}Livro Diário
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -40,7 +40,7 @@ Razão
     RPA.Desktop.Press Keys  Shift    Tab
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    Razão Contabil (1)     ${Caminho_Screenshots}Razão
+    BaseKeywordsDesktop.Screenshot    Razão Contabil (1)     ${Caminho_Screenshots}Razão
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -52,7 +52,7 @@ Balancete
     RPA.Windows.Get Text      Balancete (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    Balancete (1)     ${Caminho_Screenshots}Balancete
+    BaseKeywordsDesktop.Screenshot    Balancete (1)     ${Caminho_Screenshots}Balancete
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -63,7 +63,7 @@ Balancete por Plano de Contas Referencial
     RPA.Windows.Click         Balancete por Plano de Contas Referencial
     RPA.Windows.Get Text      Balancete por Plano de Contas Referencial (1) 
     RPA.Windows.Click         Liberados
-    BaseDesktop.Screenshot    Balancete por Plano de Contas Referencial (1)     ${Caminho_Screenshots}Balancete por Plano de Contas Referencial
+    BaseKeywordsDesktop.Screenshot    Balancete por Plano de Contas Referencial (1)     ${Caminho_Screenshots}Balancete por Plano de Contas Referencial
     Fechar janela
 
 Balanço Patrimonial/Demonstrativo DRE
@@ -74,7 +74,7 @@ Balanço Patrimonial/Demonstrativo DRE
     RPA.Windows.Get Text      Balanço/Demonstrativo Integrado (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    Balanço/Demonstrativo Integrado (1)     ${Caminho_Screenshots}Balanço Patrimonial_Demonstrativo DRE
+    BaseKeywordsDesktop.Screenshot    Balanço/Demonstrativo Integrado (1)     ${Caminho_Screenshots}Balanço Patrimonial_Demonstrativo DRE
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -86,7 +86,7 @@ Demonstrativo de Fluxo de Caixa - DFC
     RPA.Windows.Get Text      Demonstrativo de Fluxo de Caixa - DFC (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    Demonstrativo de Fluxo de Caixa - DFC (1)       ${Caminho_Screenshots}Demonstrativo de Fluxo de Caixa - DFC
+    BaseKeywordsDesktop.Screenshot    Demonstrativo de Fluxo de Caixa - DFC (1)       ${Caminho_Screenshots}Demonstrativo de Fluxo de Caixa - DFC
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -98,7 +98,7 @@ Balanço Patrimonial Comparado
     RPA.Windows.Get Text      Balanço Patrimonial Comparado (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    Balanço Patrimonial Comparado (1)     ${Caminho_Screenshots}Balanço Patrimonial Comparado
+    BaseKeywordsDesktop.Screenshot    Balanço Patrimonial Comparado (1)     ${Caminho_Screenshots}Balanço Patrimonial Comparado
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -110,7 +110,7 @@ DMPL/DMPS
     RPA.Windows.Get Text      DMPL/DMPS (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    DMPL/DMPS (1)     ${Caminho_Screenshots}DMPL_DMPS
+    BaseKeywordsDesktop.Screenshot    DMPL/DMPS (1)     ${Caminho_Screenshots}DMPL_DMPS
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -121,7 +121,7 @@ Extrato de Conta
     RPA.Windows.Click         Extrato de Conta
     RPA.Windows.Get Text      Extrato de Conta (1) 
     RPA.Windows.Click         Totalizar por Estabelecimento
-    BaseDesktop.Screenshot    Extrato de Conta (1)     ${Caminho_Screenshots}Extrato de Conta
+    BaseKeywordsDesktop.Screenshot    Extrato de Conta (1)     ${Caminho_Screenshots}Extrato de Conta
     Fechar janela
 
 Lançamentos
@@ -131,7 +131,7 @@ Lançamentos
     RPA.Windows.Click         Lançamentos
     RPA.Windows.Get Text      Relação de Lançamentos (1)
     RPA.Windows.Click         Ambos
-    BaseDesktop.Screenshot    Relação de Lançamentos (1)     ${Caminho_Screenshots}Lançamentos
+    BaseKeywordsDesktop.Screenshot    Relação de Lançamentos (1)     ${Caminho_Screenshots}Lançamentos
     Fechar janela
 
 Termos
@@ -142,7 +142,7 @@ Termos
     RPA.Windows.Get Text      Emissão dos Termos de Abertura/Encerramento (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot    Emissão dos Termos de Abertura/Encerramento (1)     ${Caminho_Screenshots}Termos
+    BaseKeywordsDesktop.Screenshot    Emissão dos Termos de Abertura/Encerramento (1)     ${Caminho_Screenshots}Termos
     RPA.Windows.Click         OK
     Fechar janela
     RPA.Windows.Click         OK
@@ -155,7 +155,7 @@ Cadastros > Plano de Contas
     RPA.Desktop.Press Keys    P
     RPA.Windows.Get Text      Relatório de Plano de Contas (1)
     RPA.Windows.Click         Ordem de Código
-    BaseDesktop.Screenshot    Relatório de Plano de Contas (1)     ${Caminho_Screenshots}Cadastros/Plano de Contas
+    BaseKeywordsDesktop.Screenshot    Relatório de Plano de Contas (1)     ${Caminho_Screenshots}Cadastros/Plano de Contas
     Fechar janela
 
 Cadastros > Históricos
@@ -166,7 +166,7 @@ Cadastros > Históricos
     RPA.Desktop.Press Keys    H
     RPA.Windows.Get Text      Relatório de Históricos Contábeis (1)  
     RPA.Windows.Click         Ordem de Nome
-    BaseDesktop.Screenshot    Relatório de Históricos Contábeis (1)      ${Caminho_Screenshots}Cadastros/Históricos
+    BaseKeywordsDesktop.Screenshot    Relatório de Históricos Contábeis (1)      ${Caminho_Screenshots}Cadastros/Históricos
     Fechar janela
 
 Cadastros > Centros de Custos
@@ -177,7 +177,7 @@ Cadastros > Centros de Custos
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Relatório de Centros de Custos (1)
     RPA.Windows.Click         Ordem de Nome
-    BaseDesktop.Screenshot    Relatório de Centros de Custos (1)    ${Caminho_Screenshots}Cadastros/Centros de Custos
+    BaseKeywordsDesktop.Screenshot    Relatório de Centros de Custos (1)    ${Caminho_Screenshots}Cadastros/Centros de Custos
     Fechar janela
 
 Cadastros > Estabelecimento
@@ -188,7 +188,7 @@ Cadastros > Estabelecimento
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Relatório de Estabelecimentos (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Estabelecimentos (1)    ${Caminho_Screenshots}Cadastros/Estabelecimento
+    BaseKeywordsDesktop.Screenshot  Relatório de Estabelecimentos (1)    ${Caminho_Screenshots}Cadastros/Estabelecimento
     Fechar janela
 
 Cadastros > Países
@@ -199,7 +199,7 @@ Cadastros > Países
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Relatório de Países (1)
     RPA.Windows.Click         Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Países (1)    ${Caminho_Screenshots}Cadastros/Países
+    BaseKeywordsDesktop.Screenshot  Relatório de Países (1)    ${Caminho_Screenshots}Cadastros/Países
     Fechar janela
 
 Cadastros > Estados
@@ -210,7 +210,7 @@ Cadastros > Estados
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Relatório de Estados (1)
     RPA.Windows.Click       Ordem de País
-    BaseDesktop.Screenshot  Relatório de Estados (1)    ${Caminho_Screenshots}Cadastros/Estados
+    BaseKeywordsDesktop.Screenshot  Relatório de Estados (1)    ${Caminho_Screenshots}Cadastros/Estados
     Fechar janela
 
 Cadastros > Municípios
@@ -221,7 +221,7 @@ Cadastros > Municípios
     RPA.Desktop.Press Keys  M
     RPA.Windows.Get Text    Relatório de Municípios (1)
     RPA.Windows.Click         Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Municípios (1)    ${Caminho_Screenshots}Cadastros/Municípios
+    BaseKeywordsDesktop.Screenshot  Relatório de Municípios (1)    ${Caminho_Screenshots}Cadastros/Municípios
     Fechar janela
 
 Cadastros > Regiões
@@ -232,7 +232,7 @@ Cadastros > Regiões
     RPA.Desktop.Press Keys  R
     RPA.Windows.Get Text    Relatório de Regiões (1)
     RPA.Windows.Click         Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Regiões (1)    ${Caminho_Screenshots}Cadastros/Regiões
+    BaseKeywordsDesktop.Screenshot  Relatório de Regiões (1)    ${Caminho_Screenshots}Cadastros/Regiões
     Fechar janela
 
 Cadastros > Localidades
@@ -243,7 +243,7 @@ Cadastros > Localidades
     RPA.Desktop.Press Keys    L
     RPA.Windows.Get Text      Relatório de Localidades (1)
     RPA.Windows.Click         Ordem de Nome
-    BaseDesktop.Screenshot    Relatório de Localidades (1)    ${Caminho_Screenshots}Cadastros/Localidades
+    BaseKeywordsDesktop.Screenshot    Relatório de Localidades (1)    ${Caminho_Screenshots}Cadastros/Localidades
     Fechar janela
 
 Cadastros > Terceiros
@@ -256,7 +256,7 @@ Cadastros > Terceiros
     repetidor de teclas       Tab                                9
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter  
-    BaseDesktop.Screenshot    Relatório de Clientes/Fornecedores (1)      ${Caminho_Screenshots}Cadastros/Terceiros
+    BaseKeywordsDesktop.Screenshot    Relatório de Clientes/Fornecedores (1)      ${Caminho_Screenshots}Cadastros/Terceiros
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -267,7 +267,7 @@ Informativo de Rendimentos
     RPA.Windows.Click         Informativo de Rendimentos
     RPA.Windows.Get Text      Informativo de Rendimentos (1) 
     RPA.Windows.Click         Listar Notas Fiscais  
-    BaseDesktop.Screenshot    Informativo de Rendimentos (1)     ${Caminho_Screenshots}Informativo de Rendimentos
+    BaseKeywordsDesktop.Screenshot    Informativo de Rendimentos (1)     ${Caminho_Screenshots}Informativo de Rendimentos
     Fechar janela
 
 Customizados > Relatório de Imobilização
@@ -279,7 +279,7 @@ Customizados > Relatório de Imobilização
     RPA.Windows.Get Text      Relatório de Imobilizado (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot    Relatório de Imobilizado (1)      ${Caminho_Screenshots}Customizados/Relatório de Imobilização
+    BaseKeywordsDesktop.Screenshot    Relatório de Imobilizado (1)      ${Caminho_Screenshots}Customizados/Relatório de Imobilização
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -291,7 +291,7 @@ Receitas / Despesas
     RPA.Windows.Get Text      Relatório de Receitas e Despesas (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot    Relatório de Receitas e Despesas (1)     ${Caminho_Screenshots}Receitas _ Despesas
+    BaseKeywordsDesktop.Screenshot    Relatório de Receitas e Despesas (1)     ${Caminho_Screenshots}Receitas _ Despesas
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -303,7 +303,7 @@ Despesas Antecipadas
     RPA.Windows.Get Text      Relatório de Despesas Antecipadas (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot    Relatório de Despesas Antecipadas (1)     ${Caminho_Screenshots}Despesas Antecipadas
+    BaseKeywordsDesktop.Screenshot    Relatório de Despesas Antecipadas (1)     ${Caminho_Screenshots}Despesas Antecipadas
     RPA.Windows.Click         OK
     RPA.Windows.Click         Fechar
     RPA.Windows.Click         OK
@@ -316,7 +316,7 @@ Centro de Custos (Borderô)
     RPA.Windows.Get Text      Relatório de Centro de Custos (Borderô) (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot    Relatório de Centro de Custos (Borderô) (1)     ${Caminho_Screenshots}Centro de Custos (Borderô)
+    BaseKeywordsDesktop.Screenshot    Relatório de Centro de Custos (Borderô) (1)     ${Caminho_Screenshots}Centro de Custos (Borderô)
     RPA.Windows.Click         OK
     RPA.Windows.Click         Fechar
     RPA.Windows.Click         OK      
@@ -329,6 +329,6 @@ Faturamento
     RPA.Windows.Get Text      Relatório de Faturamento (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot    Relatório de Faturamento (1)     ${Caminho_Screenshots}Faturamento
+    BaseKeywordsDesktop.Screenshot    Relatório de Faturamento (1)     ${Caminho_Screenshots}Faturamento
     RPA.Windows.Click         Confirmar
     Fechar janela

@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Estoque
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -9,7 +9,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Estoque/Relatórios/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Estoque/Relatórios/    
 ${nome_print}
 ${nome_exe}=    cde_win_est
 *** Keywords ***
@@ -27,7 +27,7 @@ Inventário de Estoque
     RPA.Windows.Click       Inventário de Estoque
     RPA.Windows.Get Text    Inventário de Estoque (1)
     RPA.Windows.Click       Setor
-    BaseDesktop.Screenshot  Inventário de Estoque (1)    ${Caminho_Screenshots}Inventário de Estoque
+    BaseKeywordsDesktop.Screenshot  Inventário de Estoque (1)    ${Caminho_Screenshots}Inventário de Estoque
     Fechar janela
 
 Relatório de Estoque Simplificado
@@ -37,7 +37,7 @@ Relatório de Estoque Simplificado
     RPA.Windows.Click       Relatório de Estoque Simplificado
     RPA.Windows.Get Text    Relatório Simplificado de Estoque (1)
     RPA.Windows.Click       Nome Produto
-    BaseDesktop.Screenshot  Relatório Simplificado de Estoque (1)    ${Caminho_Screenshots}Relatório de Estoque Simplificado
+    BaseKeywordsDesktop.Screenshot  Relatório Simplificado de Estoque (1)    ${Caminho_Screenshots}Relatório de Estoque Simplificado
     Fechar janela
 
 Resumo Apuração Custo Médio
@@ -48,7 +48,7 @@ Resumo Apuração Custo Médio
     RPA.Windows.Get Text    Resumo da Apuração do Custo Médio (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Resumo da Apuração do Custo Médio (1)    ${Caminho_Screenshots}Resumo Apuração Custo Médio
+    BaseKeywordsDesktop.Screenshot  Resumo da Apuração do Custo Médio (1)    ${Caminho_Screenshots}Resumo Apuração Custo Médio
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -60,7 +60,7 @@ Saldos de Lotes/Sintético
     RPA.Windows.Get Text    Relatório de Saldo de Lotes/Sintético (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Relatório de Saldo de Lotes/Sintético (1)    ${Caminho_Screenshots}Saldos de Lotes_Sintético
+    BaseKeywordsDesktop.Screenshot  Relatório de Saldo de Lotes/Sintético (1)    ${Caminho_Screenshots}Saldos de Lotes_Sintético
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -73,7 +73,7 @@ Análise de Disponibilidade do Estoque
     RPA.Desktop.Press Keys  Tab
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Análise da Disponibilidade do Estoque (1)    ${Caminho_Screenshots}Análise de Disponibilidade do Estoque
+    BaseKeywordsDesktop.Screenshot  Análise da Disponibilidade do Estoque (1)    ${Caminho_Screenshots}Análise de Disponibilidade do Estoque
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -86,7 +86,7 @@ Movimentação de Depósitos/Compras
     RPA.Desktop.Press Keys  Tab
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Movimentação de Depósitos/Compras (1)    ${Caminho_Screenshots}Movimentação de Depósitos_Compras
+    BaseKeywordsDesktop.Screenshot  Movimentação de Depósitos/Compras (1)    ${Caminho_Screenshots}Movimentação de Depósitos_Compras
     RPA.Windows.Click       OK
     Fechar janela
     RPA.Windows.Click       OK
@@ -100,7 +100,7 @@ Rentabilidade de Estoque
     RPA.Desktop.Press Keys  Shift    Tab
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Relatório de Rentabilidade de Estoque (1)    ${Caminho_Screenshots}Rentabilidade de Estoque
+    BaseKeywordsDesktop.Screenshot  Relatório de Rentabilidade de Estoque (1)    ${Caminho_Screenshots}Rentabilidade de Estoque
     RPA.Windows.Click       Confirmar
     RPA.Windows.Click       OK
     Fechar janela
@@ -113,7 +113,7 @@ Movimentação de produtos - Operacional
     RPA.Windows.Get Text    Movimentação de produtos (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Movimentação de produtos (1)    ${Caminho_Screenshots}Movimentação de produtos - Operacional
+    BaseKeywordsDesktop.Screenshot  Movimentação de produtos (1)    ${Caminho_Screenshots}Movimentação de produtos - Operacional
     RPA.Windows.Click       Confirmar
     RPA.Windows.Click       OK
     Fechar janela
@@ -126,7 +126,7 @@ Movimentação de Produtos - Lançamentos
     RPA.Windows.Get Text    Movimentação de Produtos - Lançamentos (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Movimentação de Produtos - Lançamentos (1)    ${Caminho_Screenshots}Movimentação de Produtos - Lançamentos
+    BaseKeywordsDesktop.Screenshot  Movimentação de Produtos - Lançamentos (1)    ${Caminho_Screenshots}Movimentação de Produtos - Lançamentos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -138,7 +138,7 @@ Requisições de Compra/Transferência
     RPA.Windows.Get Text    Relatório de Requições/Status (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Relatório de Requições/Status (1)    ${Caminho_Screenshots}Requisições de Compra_Transferência
+    BaseKeywordsDesktop.Screenshot  Relatório de Requições/Status (1)    ${Caminho_Screenshots}Requisições de Compra_Transferência
     RPA.Windows.Click       OK
     Fechar janela
     RPA.Windows.Click       OK
@@ -152,7 +152,7 @@ Valor do Estoque Atual
     RPA.Desktop.Press Keys  Shift    Tab
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Relatório de Valor do Estoque Atual (1)    ${Caminho_Screenshots}Valor do Estoque Atual
+    BaseKeywordsDesktop.Screenshot  Relatório de Valor do Estoque Atual (1)    ${Caminho_Screenshots}Valor do Estoque Atual
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -162,7 +162,7 @@ Análise de Estoque
     Relatórios
     RPA.Windows.Click       Análise de Estoque
     RPA.Windows.Get Text    Análise de Estoque (1)
-    BaseDesktop.Screenshot  Análise de Estoque (1)    ${Caminho_Screenshots}Análise de Estoque
+    BaseKeywordsDesktop.Screenshot  Análise de Estoque (1)    ${Caminho_Screenshots}Análise de Estoque
     Fechar janela
 
 Resumo Geral de Movimentos/Saldos
@@ -173,7 +173,7 @@ Resumo Geral de Movimentos/Saldos
     RPA.Windows.Get Text    Resumo Geral de Movimentos/Saldos (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Resumo Geral de Movimentos/Saldos (1)    ${Caminho_Screenshots}Resumo Geral de Movimentos_Saldos
+    BaseKeywordsDesktop.Screenshot  Resumo Geral de Movimentos/Saldos (1)    ${Caminho_Screenshots}Resumo Geral de Movimentos_Saldos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -185,7 +185,7 @@ Cadastros > Setores
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Relatório de Setores (1)
     RPA.Windows.Click       Ordem de Código
-    BaseDesktop.Screenshot  Relatório de Setores (1)    ${Caminho_Screenshots}Cadastros/Setores
+    BaseKeywordsDesktop.Screenshot  Relatório de Setores (1)    ${Caminho_Screenshots}Cadastros/Setores
     Fechar janela
 
 Cadastros > Produtos > Produtos
@@ -199,7 +199,7 @@ Cadastros > Produtos > Produtos
     repetidor de teclas     tab    6
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot  Produtos Cadastrados (1)    ${Caminho_Screenshots}Cadastros/Produtos/Produtos
+    BaseKeywordsDesktop.Screenshot  Produtos Cadastrados (1)    ${Caminho_Screenshots}Cadastros/Produtos/Produtos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -212,7 +212,7 @@ Cadastros > Produtos > Tabela de Umidade
     RPA.Desktop.Press Keys  T       
     RPA.Windows.Get Text    Relatório de Tabelas de Umidade (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Tabelas de Umidade (1)    ${Caminho_Screenshots}Cadastros/Produtos/Tabela de Umidade
+    BaseKeywordsDesktop.Screenshot  Relatório de Tabelas de Umidade (1)    ${Caminho_Screenshots}Cadastros/Produtos/Tabela de Umidade
     Fechar janela
 
 Cadastros > Produtos > Cores
@@ -224,7 +224,7 @@ Cadastros > Produtos > Cores
     RPA.Desktop.Press Keys  C        
     RPA.Windows.Get Text    Relatório de Cores (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Cores (1)    ${Caminho_Screenshots}Cadastros/Produtos/Cores
+    BaseKeywordsDesktop.Screenshot  Relatório de Cores (1)    ${Caminho_Screenshots}Cadastros/Produtos/Cores
     Fechar janela
 
 Cadastros > Produtos > Unidades
@@ -236,7 +236,7 @@ Cadastros > Produtos > Unidades
     RPA.Desktop.Press Keys  U      
     RPA.Windows.Get Text    Relatório de Unidades (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Unidades (1)    ${Caminho_Screenshots}Cadastros/Produtos/Unidades
+    BaseKeywordsDesktop.Screenshot  Relatório de Unidades (1)    ${Caminho_Screenshots}Cadastros/Produtos/Unidades
     Fechar janela
 
 Cadastros > Produtos > Marcas
@@ -248,7 +248,7 @@ Cadastros > Produtos > Marcas
     RPA.Desktop.Press Keys  M   
     RPA.Windows.Get Text    Relatório de Marcas (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Marcas (1)    ${Caminho_Screenshots}Cadastros/Produtos/Marcas
+    BaseKeywordsDesktop.Screenshot  Relatório de Marcas (1)    ${Caminho_Screenshots}Cadastros/Produtos/Marcas
     Fechar janela
 
 Cadastros > Produtos > Estampas
@@ -260,7 +260,7 @@ Cadastros > Produtos > Estampas
     RPA.Desktop.Press Keys  E      
     RPA.Windows.Get Text    Relatório de Estampas (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Estampas (1)    ${Caminho_Screenshots}Cadastros/Produtos/Estampas
+    BaseKeywordsDesktop.Screenshot  Relatório de Estampas (1)    ${Caminho_Screenshots}Cadastros/Produtos/Estampas
     Fechar janela
 
 Cadastros > Produtos > Tamanhos
@@ -272,7 +272,7 @@ Cadastros > Produtos > Tamanhos
     RPA.Desktop.Press Keys  A      
     RPA.Windows.Get Text    Relatório de Tamanhos (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Tamanhos (1)    ${Caminho_Screenshots}Cadastros/Produtos/Tamanhos
+    BaseKeywordsDesktop.Screenshot  Relatório de Tamanhos (1)    ${Caminho_Screenshots}Cadastros/Produtos/Tamanhos
     Fechar janela
 
 Cadastros > Tabela Tributária
@@ -283,7 +283,7 @@ Cadastros > Tabela Tributária
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Relatório de Tabelas Tributárias (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Tabelas Tributárias (1)    ${Caminho_Screenshots}Cadastros/Tabela Tributária
+    BaseKeywordsDesktop.Screenshot  Relatório de Tabelas Tributárias (1)    ${Caminho_Screenshots}Cadastros/Tabela Tributária
     Fechar janela
 
 Cadastros > CFOP
@@ -294,7 +294,7 @@ Cadastros > CFOP
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Relatório de CFOP's (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de CFOP's (1)    ${Caminho_Screenshots}Cadastros/CFOP
+    BaseKeywordsDesktop.Screenshot  Relatório de CFOP's (1)    ${Caminho_Screenshots}Cadastros/CFOP
     Fechar janela
 
 Cadastros > Estabelecimento
@@ -305,7 +305,7 @@ Cadastros > Estabelecimento
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Relatório de Estabelecimentos (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Estabelecimentos (1)    ${Caminho_Screenshots}Cadastros/Estabelecimento
+    BaseKeywordsDesktop.Screenshot  Relatório de Estabelecimentos (1)    ${Caminho_Screenshots}Cadastros/Estabelecimento
     Fechar janela
 
 Cadastros > Países
@@ -316,7 +316,7 @@ Cadastros > Países
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Relatório de Países (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Países (1)    ${Caminho_Screenshots}Cadastros/Países
+    BaseKeywordsDesktop.Screenshot  Relatório de Países (1)    ${Caminho_Screenshots}Cadastros/Países
     Fechar janela
 
 Cadastros > Estados
@@ -327,7 +327,7 @@ Cadastros > Estados
     RPA.Desktop.Press Keys  D
     RPA.Windows.Get Text    Relatório de Estados (1)
     RPA.Windows.Click       Ordem de País
-    BaseDesktop.Screenshot  Relatório de Estados (1)    ${Caminho_Screenshots}Cadastros/Estados
+    BaseKeywordsDesktop.Screenshot  Relatório de Estados (1)    ${Caminho_Screenshots}Cadastros/Estados
     Fechar janela
 
 Cadastros > Municípios
@@ -338,7 +338,7 @@ Cadastros > Municípios
     RPA.Desktop.Press Keys  M
     RPA.Windows.Get Text    Relatório de Municípios (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Municípios (1)    ${Caminho_Screenshots}Cadastros/Municípios
+    BaseKeywordsDesktop.Screenshot  Relatório de Municípios (1)    ${Caminho_Screenshots}Cadastros/Municípios
     Fechar janela
 
 Cadastros > Regiões
@@ -349,7 +349,7 @@ Cadastros > Regiões
     RPA.Desktop.Press Keys  R
     RPA.Windows.Get Text    Relatório de Regiões (1)
     RPA.Windows.Click       Ordem de Nome
-    BaseDesktop.Screenshot  Relatório de Regiões (1)    ${Caminho_Screenshots}Cadastros/Regiões
+    BaseKeywordsDesktop.Screenshot  Relatório de Regiões (1)    ${Caminho_Screenshots}Cadastros/Regiões
     Fechar janela
 
 Customizados > Relatório Simplificado de Estoque 2
@@ -361,7 +361,7 @@ Customizados > Relatório Simplificado de Estoque 2
     RPA.Windows.Get Text      Relatório de Estoque Simplificado 2 (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot    Relatório de Estoque Simplificado 2 (1)    ${Caminho_Screenshots}Customizados/Relatório Simplificado de Estoque 2
+    BaseKeywordsDesktop.Screenshot    Relatório de Estoque Simplificado 2 (1)    ${Caminho_Screenshots}Customizados/Relatório Simplificado de Estoque 2
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -374,6 +374,6 @@ Customizados > Relatório Simplificado / Depósito
     RPA.Windows.Get Text      Relatório de Estoque por Depósito (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseDesktop.Screenshot    Relatório de Estoque por Depósito (1)    ${Caminho_Screenshots}Customizados/Relatório Simplificado _ Depósito
+    BaseKeywordsDesktop.Screenshot    Relatório de Estoque por Depósito (1)    ${Caminho_Screenshots}Customizados/Relatório Simplificado _ Depósito
     RPA.Windows.Click       Confirmar
     Fechar janela
