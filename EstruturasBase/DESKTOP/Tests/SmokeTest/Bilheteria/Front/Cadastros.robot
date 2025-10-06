@@ -111,17 +111,18 @@ Tipos de Documentos
     Fechar com Sim
 
 Pessoas Autorizadas
-    [Tags]    Cadastros    Front    SmokeTest     
+    [Tags]    Cadastros    Front    SmokeTest     Teste
     ${nome_print}=          Set Variable    Pessoas Autorizadas
     Cadastros
     RPA.Windows.Click       Pessoas Autorizadas
     RPA.Windows.Get Text    Cadastro de Pessoas Autorizadas (1)
     BaseDesktop.Screenshot  Cadastro de Pessoas Autorizadas (1)    ${Caminho_Screenshots}Pessoas Autorizadas
-    Sleep                   5s
+    Sleep                   10s
     Fechar janela
+    Sleep                   5s
 
 Acesso por aproximação
-    [Tags]    Cadastros    Front    SmokeTest      
+    [Tags]    Cadastros    Front    SmokeTest      Teste
     ${nome_print}=          Set Variable    Acesso por aproximação
     Cadastros
     RPA.Windows.Click       Acesso por Aproximação

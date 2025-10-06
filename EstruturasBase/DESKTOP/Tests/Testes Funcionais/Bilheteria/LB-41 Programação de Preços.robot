@@ -4,7 +4,7 @@ Resource          ../../../Resources/BaseWeb.robot
 Resource          ../../../Resources/KeywordWeb.robot
 Suite Setup       Abrir CARD e logar 
 Suite Teardown    Inativar Bilhete    ${numero_bilhete}
-# Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
+Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
 
 *** Variables ***
 

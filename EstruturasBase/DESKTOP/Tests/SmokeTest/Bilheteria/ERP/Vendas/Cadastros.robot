@@ -17,7 +17,7 @@ ${nome_exe}=    cde_win_ven
 
 Terceiros > Cadastro de Terceiros
     ${nome_print}=     Set Variable     Cadastro de Terceiros
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Desktop.Press Keys    C
@@ -30,7 +30,7 @@ Terceiros > Cadastro de Terceiros
 
 Terceiros > Limite de Crédito
     ${nome_print}=     Set Variable     Limite de Crédito
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  L
@@ -43,7 +43,7 @@ Terceiros > Limite de Crédito
 
 Terceiros > Tipos de Garantia
     ${nome_print}=     Set Variable     Tipos de Garantia
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  T
