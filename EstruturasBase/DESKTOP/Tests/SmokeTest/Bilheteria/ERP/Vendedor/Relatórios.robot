@@ -35,7 +35,7 @@ Análise da Disponibilidade do Estoque
 
 Relatório de Cobrança
     ${nome_print}=     Set Variable     Relatório de Cobrança
-    [Tags]    Vendedor   Relatórios   SmokeTest    
+    [Tags]    Vendedor   Relatórios   SmokeTest        
     Relatórios                Relatório de Cobrança  
     RPA.Windows.Get Text      Relatório de Cobrança
     RPA.Desktop.Press Keys    tab

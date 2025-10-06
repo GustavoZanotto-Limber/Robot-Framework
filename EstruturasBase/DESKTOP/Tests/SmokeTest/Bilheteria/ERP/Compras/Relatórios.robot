@@ -54,14 +54,18 @@ Compras/Aquisição de Serviços - Sintético/Forn/Item
     [Tags]     Compras    Relatórios   SmokeTest        
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Forn/Item
-    RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor / Item $ESPAÇO(1)
+    RPA.Windows.Get Text    	Compras/Aquisição de Serviços / Fornecedor / Item ${ESPAÇO} (1)
     RPA.Windows.Click       Nome do Fornecedor
+<<<<<<< HEAD
+    BaseDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor / Item ${ESPAÇO} (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Forn_Item
+=======
     BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor / Item $ESPAÇO(1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Forn_Item
+>>>>>>> e9d3a22b4d970b3823137f8c97ccb46e1505a743
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Setor
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Setor
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]     Compras    Relatórios   SmokeTest    
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Setor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços por Setor (1)
@@ -73,7 +77,7 @@ Compras/Aquisição de Serviços - Sintético/Setor
 
 Compras/Aquisição de Serviços - Evolução Diária
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Diária
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]     Compras    Relatórios   SmokeTest    
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Diária
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Diária (1)
@@ -127,9 +131,13 @@ Lançamento de Entradas
     [Tags]     Compras    Relatórios   SmokeTest    
     Relatórios
     RPA.Windows.Click       Lançamento de Entradas
-    RPA.Windows.Get Text  	Relatório de Lançamentos de Entradas $ESPAÇO(1)
+    RPA.Windows.Get Text    Relatório de Lançamentos de Entradas${ESPAÇO} (1)
     RPA.Windows.Click       Fornecedor
+<<<<<<< HEAD
+    BaseDesktop.Screenshot  Relatório de Lançamentos de Entradas${ESPAÇO} (1)   ${Caminho_Screenshots}Lançamento de Entradas
+=======
     BaseKeywordsDesktop.Screenshot  Relatório de Lançamentos de Entradas $ESPAÇO(1)   ${Caminho_Screenshots}Lançamento de Entradas
+>>>>>>> e9d3a22b4d970b3823137f8c97ccb46e1505a743
     Fechar janela
 
 Produtos/Fornecedor

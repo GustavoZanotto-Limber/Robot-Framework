@@ -131,7 +131,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]     Corretagem    Cadastros   SmokeTest    
+    [Tags]     Corretagem    Cadastros   SmokeTest   
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S

@@ -147,7 +147,7 @@ Requisição de Compra > Consultar
 
 Requisição de Compra > Aprovação/Rejeição de Requisição
     ${nome_print}=     Set Variable     Aprovação_Rejeição de Requisição
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]     Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Requisição de Compra
     RPA.Desktop.Press Keys  A
@@ -158,7 +158,7 @@ Requisição de Compra > Aprovação/Rejeição de Requisição
 
 Requisição de Compra > Acompanhamento de Requisição
     ${nome_print}=     Set Variable     Acompanhamento de Requisição
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]     Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Requisição de Compra
     RPA.Desktop.Press Keys  O
