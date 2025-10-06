@@ -12,8 +12,6 @@ ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTe
 ${nome_print}
 ${nome_exe}=    cde_win_bca_frontR40
 
-*** Keywords ***
-
 *** Test Cases ***
 
 Guias
