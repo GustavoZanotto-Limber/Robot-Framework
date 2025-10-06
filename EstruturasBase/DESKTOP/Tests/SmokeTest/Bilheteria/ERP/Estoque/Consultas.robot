@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Estoque
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Estoque/Consultas/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Estoque/Consultas/    
 ${nome_print}
 ${nome_exe}=    cde_win_est
 *** Keywords ***
@@ -26,7 +26,7 @@ Consulta Simplificada do Estoque
     RPA.Windows.Click       Consulta Simplificada do Estoque
     RPA.Windows.Get Text    Consulta de Itens (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Consulta de Itens (1)    ${Caminho_Screenshots}Consulta Simplificada do Estoque
+    BaseKeywordsDesktop.Screenshot  Consulta de Itens (1)    ${Caminho_Screenshots}Consulta Simplificada do Estoque
     Fechar janela
 
 Consulta Simplificada do Estoque (Modelo 2)
@@ -36,7 +36,7 @@ Consulta Simplificada do Estoque (Modelo 2)
     RPA.Windows.Click       Consulta Simplificada do Estoque (Modelo 2)
     RPA.Windows.Get Text    Consulta de Itens (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Consulta de Itens (1)    ${Caminho_Screenshots}Consulta Simplificada do Estoque (Modelo 2)
+    BaseKeywordsDesktop.Screenshot  Consulta de Itens (1)    ${Caminho_Screenshots}Consulta Simplificada do Estoque (Modelo 2)
     Fechar janela
 
 Consulta do Estoque/Estabelecimento/Setor
@@ -46,7 +46,7 @@ Consulta do Estoque/Estabelecimento/Setor
     RPA.Windows.Click       Consulta do Estoque/Estabelecimento/Setor
     RPA.Windows.Get Text    Consulta de Estoque/Estabelecimento/Depósito (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Consulta de Estoque/Estabelecimento/Depósito (1)    ${Caminho_Screenshots}Consulta do Estoque/Estabelecimento/Setor
+    BaseKeywordsDesktop.Screenshot  Consulta de Estoque/Estabelecimento/Depósito (1)    ${Caminho_Screenshots}Consulta do Estoque/Estabelecimento/Setor
     Fechar janela
 
 Consulta Inventário de Estoque
@@ -56,7 +56,7 @@ Consulta Inventário de Estoque
     RPA.Windows.Click       Consulta Inventário de Estoque
     RPA.Windows.Get Text    Consulta de Inventário de Estoque (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Consulta de Inventário de Estoque (1)    ${Caminho_Screenshots}Consulta Inventário de Estoque
+    BaseKeywordsDesktop.Screenshot  Consulta de Inventário de Estoque (1)    ${Caminho_Screenshots}Consulta Inventário de Estoque
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -67,7 +67,7 @@ Disponibilidade de Estoque
     RPA.Windows.Click       Disponibilidade de Estoque
     RPA.Windows.Get Text    Disponibilidade do Estoque (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Disponibilidade do Estoque (1)    ${Caminho_Screenshots}Disponibilidade de Estoque
+    BaseKeywordsDesktop.Screenshot  Disponibilidade do Estoque (1)    ${Caminho_Screenshots}Disponibilidade de Estoque
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -78,7 +78,7 @@ Ficha Kardex de Produtos
     RPA.Windows.Click       Ficha Kardex de Produtos
     RPA.Windows.Get Text    Kardex do Estoque (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Kardex do Estoque (1)    ${Caminho_Screenshots}Ficha Kardex de Produtos
+    BaseKeywordsDesktop.Screenshot  Kardex do Estoque (1)    ${Caminho_Screenshots}Ficha Kardex de Produtos
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -89,7 +89,7 @@ Saldo Sintético de Produtos
     RPA.Windows.Click       Saldo Sintético de Produtos
     RPA.Windows.Get Text    Consulta Saldo Sintético de Produtos (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Consulta Saldo Sintético de Produtos (1)    ${Caminho_Screenshots}Saldo Sintético de Produtos
+    BaseKeywordsDesktop.Screenshot  Consulta Saldo Sintético de Produtos (1)    ${Caminho_Screenshots}Saldo Sintético de Produtos
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -100,7 +100,7 @@ Consulta Saldo Sintético de Operações
     RPA.Windows.Click       Consulta Saldo Sintético de Operações
     RPA.Windows.Get Text    Consulta Saldo Sintético de Operações (1)
     RPA.Windows.Click       Executar
-    BaseDesktop.Screenshot  Consulta Saldo Sintético de Operações (1)    ${Caminho_Screenshots}Consulta Saldo Sintético de Operações
+    BaseKeywordsDesktop.Screenshot  Consulta Saldo Sintético de Operações (1)    ${Caminho_Screenshots}Consulta Saldo Sintético de Operações
     Fechar janela
 
 Movimentação de Operações
@@ -110,7 +110,7 @@ Movimentação de Operações
     RPA.Windows.Click       Movimentação de Operações
     RPA.Windows.Get Text    Movimentação de Operações (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Movimentação de Operações (1)    ${Caminho_Screenshots}Movimentação de Operações
+    BaseKeywordsDesktop.Screenshot  Movimentação de Operações (1)    ${Caminho_Screenshots}Movimentação de Operações
     Fechar janela
 
 Saldo de Operações
@@ -120,7 +120,7 @@ Saldo de Operações
     RPA.Windows.Click       Saldo de Operações
     RPA.Windows.Get Text    Consulta Saldo de Operações (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Consulta Saldo de Operações (1)    ${Caminho_Screenshots}Saldo de Operações
+    BaseKeywordsDesktop.Screenshot  Consulta Saldo de Operações (1)    ${Caminho_Screenshots}Saldo de Operações
     Fechar janela
 
 Saldo de Terceiros
@@ -130,7 +130,7 @@ Saldo de Terceiros
     RPA.Windows.Click       Saldo de Terceiros
     RPA.Windows.Get Text    Saldos de Terceiros (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Saldos de Terceiros (1)    ${Caminho_Screenshots}Saldo de Terceiros
+    BaseKeywordsDesktop.Screenshot  Saldos de Terceiros (1)    ${Caminho_Screenshots}Saldo de Terceiros
     Fechar janela
 
 Movimentação de Terceiros
@@ -140,7 +140,7 @@ Movimentação de Terceiros
     RPA.Windows.Click       Movimentação de Terceiros
     RPA.Windows.Get Text    Movimentação de Terceiros (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Movimentação de Terceiros (1)    ${Caminho_Screenshots}Movimentação de Terceiros
+    BaseKeywordsDesktop.Screenshot  Movimentação de Terceiros (1)    ${Caminho_Screenshots}Movimentação de Terceiros
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -151,7 +151,7 @@ Lotes de Terceiros
     RPA.Windows.Click       Lotes de Terceiros
     RPA.Windows.Get Text    Consulta de Lotes de Terceiro (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Consulta de Lotes de Terceiro (1)    ${Caminho_Screenshots}Lotes de Terceiros
+    BaseKeywordsDesktop.Screenshot  Consulta de Lotes de Terceiro (1)    ${Caminho_Screenshots}Lotes de Terceiros
     Fechar janela
 
 Análise do Estoque
@@ -162,7 +162,7 @@ Análise do Estoque
     RPA.Windows.Get Text    Análise do Estoque (1)
     RPA.Windows.Click       Carregar
     RPA.Windows.Click       Sim
-    BaseDesktop.Screenshot  Análise do Estoque (1)    ${Caminho_Screenshots}Análise do Estoque
+    BaseKeywordsDesktop.Screenshot  Análise do Estoque (1)    ${Caminho_Screenshots}Análise do Estoque
     Fechar janela
 
 Consulta Kardex de Vasilhames
@@ -172,7 +172,7 @@ Consulta Kardex de Vasilhames
     RPA.Windows.Click       Consulta Kardex de Vasilhames
     RPA.Windows.Get Text    Kardex do Estoque de Vasilhames (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Kardex do Estoque de Vasilhames (1)    ${Caminho_Screenshots}Consulta Kardex de Vasilhames
+    BaseKeywordsDesktop.Screenshot  Kardex do Estoque de Vasilhames (1)    ${Caminho_Screenshots}Consulta Kardex de Vasilhames
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -183,7 +183,7 @@ Consulta de Saldo de Vasilhames
     RPA.Windows.Click       Consulta de Saldo de Vasilhames
     RPA.Windows.Get Text    Saldo de Vasilhames (1)
     RPA.Windows.Click       Carregar
-    BaseDesktop.Screenshot  Saldo de Vasilhames (1)    ${Caminho_Screenshots}Consulta de Saldo de Vasilhames
+    BaseKeywordsDesktop.Screenshot  Saldo de Vasilhames (1)    ${Caminho_Screenshots}Consulta de Saldo de Vasilhames
     Fechar janela
 
 Consultas Personalizadas
@@ -193,6 +193,6 @@ Consultas Personalizadas
     RPA.Windows.Click       Consultas Personalizadas
     RPA.Windows.Get Text    Consultas Personalizadas (1)
     RPA.Windows.Click       Cadastrar Nova Consulta
-    BaseDesktop.Screenshot  Consultas Personalizadas (1)    ${Caminho_Screenshots}Consulta Personalizadas
+    BaseKeywordsDesktop.Screenshot  Consultas Personalizadas (1)    ${Caminho_Screenshots}Consulta Personalizadas
     RPA.Windows.Click       Sair
     Fechar janela

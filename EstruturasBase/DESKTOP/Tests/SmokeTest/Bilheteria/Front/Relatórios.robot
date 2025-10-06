@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation    Smoke Test: Front
-Resource         ../../../../Resources/BaseDesktop.robot
+Resource         ../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao     ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 
 *** Variables ***
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/Front/Relatórios/
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/Front/Relatórios/
 ${nome_print}
 ${nome_exe}=    cde_win_bca_frontR40
 ${ESPAÇO}=    ${SPACE}
@@ -29,7 +29,7 @@ Resumo Geral
     repetidor de teclas     Tab    3
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Resumo de Movimentação (1)    ${Caminho_Screenshots}Resumo de Movimentação
+    BaseKeywordsDesktop.Screenshot  Resumo de Movimentação (1)    ${Caminho_Screenshots}Resumo de Movimentação
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -41,7 +41,7 @@ Fechamento de Caixa
     repetidor de teclas     Tab    2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Fechamento de Caixa $ESPAÇO(1)    ${Caminho_Screenshots}Fechamento de Caixa
+    BaseKeywordsDesktop.Screenshot  Fechamento de Caixa $ESPAÇO(1)    ${Caminho_Screenshots}Fechamento de Caixa
     Fechar janela
 
 Formas de Pagamento
@@ -52,7 +52,7 @@ Formas de Pagamento
     repetidor de teclas     Tab    3
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de Formas de Pagamento (1)    ${Caminho_Screenshots}Relatório de Formas de Pagamento
+    BaseKeywordsDesktop.Screenshot  Relatório de Formas de Pagamento (1)    ${Caminho_Screenshots}Relatório de Formas de Pagamento
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -64,7 +64,7 @@ Formas de Pagamento Agrupada
     repetidor de teclas     Tab    2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de Formas de Pagamento Agrupadas (1)    ${Caminho_Screenshots}Relatório de Formas de Pagamento Agrupadas
+    BaseKeywordsDesktop.Screenshot  Relatório de Formas de Pagamento Agrupadas (1)    ${Caminho_Screenshots}Relatório de Formas de Pagamento Agrupadas
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -76,7 +76,7 @@ Bilhetes Isentos
     repetidor de teclas     Tab    2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relátorio de Bilhetes Isentos (1)    ${Caminho_Screenshots}Relátorio de Bilhetes Isentos
+    BaseKeywordsDesktop.Screenshot  Relátorio de Bilhetes Isentos (1)    ${Caminho_Screenshots}Relátorio de Bilhetes Isentos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -88,7 +88,7 @@ Lançamento de Isenções
     repetidor de teclas     Tab    2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de Lançamentos de Isenções (1)    ${Caminho_Screenshots}Relatório de Lançamentos de Isenções
+    BaseKeywordsDesktop.Screenshot  Relatório de Lançamentos de Isenções (1)    ${Caminho_Screenshots}Relatório de Lançamentos de Isenções
     RPA.Windows.Click       Cancelar
     Fechar janela
 
@@ -100,7 +100,7 @@ Lançamentos de Reservas
     RPA.Windows.Get Text    Relatório de Lançamentos de Reservas (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de Lançamentos de Reservas (1)    ${Caminho_Screenshots}Relatório de Lançamentos de Reservas
+    BaseKeywordsDesktop.Screenshot  Relatório de Lançamentos de Reservas (1)    ${Caminho_Screenshots}Relatório de Lançamentos de Reservas
     RPA.Windows.Click       Cancelar
     Fechar janela
 
@@ -112,7 +112,7 @@ Bilhetes Reimpressos
     repetidor de teclas     Tab    2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de Bilhetes Reimpressos (1)    ${Caminho_Screenshots}Relatório de Bilhetes Reimpressos
+    BaseKeywordsDesktop.Screenshot  Relatório de Bilhetes Reimpressos (1)    ${Caminho_Screenshots}Relatório de Bilhetes Reimpressos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -124,7 +124,7 @@ Bilhetes Cancelados
     repetidor de teclas     Tab    2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de Bilhetes Cancelados (1)    ${Caminho_Screenshots}Relatório de Bilhetes Cancelados
+    BaseKeywordsDesktop.Screenshot  Relatório de Bilhetes Cancelados (1)    ${Caminho_Screenshots}Relatório de Bilhetes Cancelados
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -136,7 +136,7 @@ Desconto de Venda
     repetidor de teclas     Tab    2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de Desconto por Venda (1)    ${Caminho_Screenshots}Relatório de Desconto por Venda
+    BaseKeywordsDesktop.Screenshot  Relatório de Desconto por Venda (1)    ${Caminho_Screenshots}Relatório de Desconto por Venda
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -149,7 +149,7 @@ Bilhetes por Tipo de Autorização
     repetidor de teclas     Tab    2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de Bilhetes Isentos por Tipo de Isenção/Grupo/Categoria (1)    ${Caminho_Screenshots}Relatório de Bilhetes Isentos por Tipo de Isenção/Grupo/Categoria
+    BaseKeywordsDesktop.Screenshot  Relatório de Bilhetes Isentos por Tipo de Isenção/Grupo/Categoria (1)    ${Caminho_Screenshots}Relatório de Bilhetes Isentos por Tipo de Isenção/Grupo/Categoria
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -161,6 +161,6 @@ Guias
     repetidor de teclas     Tab    2    
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseDesktop.Screenshot  Relatório de Guias (1)    ${Caminho_Screenshots}Relatório de Guias
+    BaseKeywordsDesktop.Screenshot  Relatório de Guias (1)    ${Caminho_Screenshots}Relatório de Guias
     RPA.Windows.Click       Confirmar
     Fechar janela

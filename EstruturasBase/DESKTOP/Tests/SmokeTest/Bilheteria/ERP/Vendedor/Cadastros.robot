@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation    Smoke Test: Vendedor
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendedor/Cadastros/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Vendedor/Cadastros/    
 ${nome_print}
 ${nome_exe}=    cde_win_VENDEDOR
 *** Keywords ***
@@ -25,7 +25,7 @@ Terceiros
     Cadastro                  Terceiros    
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
+    BaseKeywordsDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
     RPA.Windows.Click         Cancelar (F3)
     Fechar com Sim
 
@@ -36,7 +36,7 @@ Permissões de Acesso
     RPA.Windows.Get Text      Permissões de Acesso para Vendedores (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Permissões de Acesso para Vendedores (1)    ${Caminho_Screenshots}Permissões de Acesso
+    BaseKeywordsDesktop.Screenshot    Permissões de Acesso para Vendedores (1)    ${Caminho_Screenshots}Permissões de Acesso
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -48,7 +48,7 @@ Parâmetros > Empresas
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
+    BaseKeywordsDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
     Fechar com Sim
 
 Parâmetros > Estabelecimentos
@@ -59,7 +59,7 @@ Parâmetros > Estabelecimentos
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
+    BaseKeywordsDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
     Fechar com Sim
 
 Parâmetros > Usuários
@@ -69,7 +69,7 @@ Parâmetros > Usuários
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
     RPA.Windows.Get Text      Cadastro de Usuários (1)
-    BaseDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
+    BaseKeywordsDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
     Fechar janela
 
 Parâmetros > Grupo de Usuários
@@ -80,7 +80,7 @@ Parâmetros > Grupo de Usuários
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
+    BaseKeywordsDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
     Fechar com Sim
 
 Parâmetros > Configurações da Estação
@@ -91,5 +91,5 @@ Parâmetros > Configurações da Estação
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Configurações da Estação (1)
     RPA.Windows.Click         CDE-WIN-FIN
-    BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
+    BaseKeywordsDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
     Fechar janela

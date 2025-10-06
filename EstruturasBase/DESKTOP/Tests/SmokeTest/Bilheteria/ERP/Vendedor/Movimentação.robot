@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Vendedor
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -9,7 +9,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendedor/Movimentação/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Vendedor/Movimentação/    
 ${nome_print}
 ${nome_exe}=    cde_win_VENDEDOR
 *** Keywords ***
@@ -28,7 +28,7 @@ Pedidos de Venda
     Movimentação              Pedidos de Venda    
     RPA.Windows.Get Text      Pedidos de Venda (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos de Venda
+    BaseKeywordsDesktop.Screenshot    Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos de Venda
     Fechar com Sim
 
 Orçamentos
@@ -37,7 +37,7 @@ Orçamentos
     Movimentação              Orçamentos    
     RPA.Windows.Get Text      Orçamentos (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Orçamentos (1)    ${Caminho_Screenshots}Orçamentos
+    BaseKeywordsDesktop.Screenshot    Orçamentos (1)    ${Caminho_Screenshots}Orçamentos
     RPA.Windows.Click         OK
     Fechar com Sim
 
@@ -47,6 +47,6 @@ Processos Personalizados
     Movimentação              Processos Personalizados    
     RPA.Windows.Get Text      Processos Personalizados (1)
     RPA.Windows.Click         Cadastrar Novo Processo
-    BaseDesktop.Screenshot    Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
+    BaseKeywordsDesktop.Screenshot    Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
     RPA.Windows.Click         Sair
     Fechar janela

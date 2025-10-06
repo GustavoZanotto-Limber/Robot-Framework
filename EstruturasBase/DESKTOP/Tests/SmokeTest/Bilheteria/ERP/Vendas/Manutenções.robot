@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Vendas
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -9,7 +9,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Vendas/Manutenções/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Vendas/Manutenções/    
 ${nome_print}
 ${nome_exe}=    cde_win_ven
 *** Keywords ***
@@ -27,7 +27,7 @@ Saídas/Vendas > Incluir/Alterar - Sem Fechamento
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Sem Fechamento (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Sem Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Incluir_Alterar - Sem Fechamento
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Produtos - Sem Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Incluir_Alterar - Sem Fechamento
     Fechar com Sim
 
 Saídas/Vendas > Incluir - Com Fechamento
@@ -37,7 +37,7 @@ Saídas/Vendas > Incluir - Com Fechamento
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Com Fechamento (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Incluir - Com Fechamento
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Incluir - Com Fechamento
     Fechar com Sim
 
 Saídas/Vendas > Fechar Saídas/Vendas Abertas
@@ -47,7 +47,7 @@ Saídas/Vendas > Fechar Saídas/Vendas Abertas
     RPA.Desktop.Press Keys    F
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Com Fechamento (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Fechar Saídas_Vendas Abertas
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Fechar Saídas_Vendas Abertas
     Fechar com Sim    
 
 Saídas/Vendas > Alterar Saídas/Vendas
@@ -56,7 +56,7 @@ Saídas/Vendas > Alterar Saídas/Vendas
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)
-    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
     Sleep                     1s
@@ -74,7 +74,7 @@ Saídas/Vendas > Consultar Saídas/Vendas
     RPA.Desktop.Press Keys    Enter
     Sleep                     1s
     RPA.Windows.Click         Confirmar
-    BaseDesktop.Screenshot    Saidas/Vendas - Produtos - Consulta (1)    ${Caminho_Screenshots}Saídas_Vendas/Consultar Saídas_Vendas
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Produtos - Consulta (1)    ${Caminho_Screenshots}Saídas_Vendas/Consultar Saídas_Vendas
     Fechar janela
 
 Saídas/Vendas > Excluir Saídas/Vendas
@@ -87,7 +87,7 @@ Saídas/Vendas > Excluir Saídas/Vendas
     RPA.Desktop.Press Keys    Enter
     Sleep                     1s
     RPA.Windows.Click         Confirmar
-    BaseDesktop.Screenshot    Excluir saídas/vendas (1)    ${Caminho_Screenshots}Saídas_Vendas/Excluir Saídas_Vendas
+    BaseKeywordsDesktop.Screenshot    Excluir saídas/vendas (1)    ${Caminho_Screenshots}Saídas_Vendas/Excluir Saídas_Vendas
     Fechar janela
 
 Saídas/Vendas > Venda Simplificada
@@ -98,7 +98,7 @@ Saídas/Vendas > Venda Simplificada
     RPA.Windows.Get Text      Venda Simplificada (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Venda Simplificada (1)    ${Caminho_Screenshots}Saídas_Vendas/Venda Simplificada
+    BaseKeywordsDesktop.Screenshot    Venda Simplificada (1)    ${Caminho_Screenshots}Saídas_Vendas/Venda Simplificada
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         OK
     Fechar janela
@@ -110,7 +110,7 @@ Ordem de Serviço > Abrir Ordem de Serviço
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Saidas/Vendas - Abertura de Ordem de Serviço (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Saidas/Vendas - Abertura de Ordem de Serviço (1)      ${Caminho_Screenshots}Ordem de Serviço/Abrir Ordem de Serviço
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Abertura de Ordem de Serviço (1)      ${Caminho_Screenshots}Ordem de Serviço/Abrir Ordem de Serviço
     RPA.Windows.Click         OK
     Fechar com Sim
 
@@ -121,7 +121,7 @@ Ordem de Serviço > Movimentar Ordem de Serviço
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Saidas/Vendas - Movimento de Ordem de Serviço (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Saidas/Vendas - Movimento de Ordem de Serviço (1)    ${Caminho_Screenshots}Ordem de Serviço/Movimentar Ordem de Serviço
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Movimento de Ordem de Serviço (1)    ${Caminho_Screenshots}Ordem de Serviço/Movimentar Ordem de Serviço
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -132,7 +132,7 @@ Ordem de Serviço > Fechar Ordem de Serviço
     RPA.Desktop.Press Keys    F
     RPA.Windows.Get Text      Saidas/Vendas - Fechamento de Ordem de Serviço (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Saidas/Vendas - Fechamento de Ordem de Serviço (1)    ${Caminho_Screenshots}Ordem de Serviço/Fechar Ordem de Serviço
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Fechamento de Ordem de Serviço (1)    ${Caminho_Screenshots}Ordem de Serviço/Fechar Ordem de Serviço
     RPA.Windows.Click         OK
     Fechar com Sim
 
@@ -146,7 +146,7 @@ Ordem de Serviço > Alterar Ordem de Serviço
     RPA.Desktop.Press Keys    Enter
     Sleep                     1s
     RPA.Windows.Click         Confirmar
-    BaseDesktop.Screenshot    Saidas/Vendas - Alterar Ordem de Serviço (1)   ${Caminho_Screenshots}Ordem de Serviço/Alterar Ordem de Serviço
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Alterar Ordem de Serviço (1)   ${Caminho_Screenshots}Ordem de Serviço/Alterar Ordem de Serviço
     Fechar janela
 
 Ordem de Serviço > Consultar Ordem de Serviço
@@ -159,7 +159,7 @@ Ordem de Serviço > Consultar Ordem de Serviço
     RPA.Desktop.Press Keys    Enter
     Sleep                     1s
     RPA.Windows.Click         Confirmar
-    BaseDesktop.Screenshot    Saidas/Vendas - Consulta de Ordem de Serviço (1)    ${Caminho_Screenshots}Ordem de Serviço/Consultar Ordem de Serviço
+    BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Consulta de Ordem de Serviço (1)    ${Caminho_Screenshots}Ordem de Serviço/Consultar Ordem de Serviço
     Fechar janela
 
 Ordem de Serviço > Excluir Ordem de Serviço
@@ -172,7 +172,7 @@ Ordem de Serviço > Excluir Ordem de Serviço
     RPA.Desktop.Press Keys    Enter
     Sleep                     1s
     RPA.Windows.Click         Confirmar
-    BaseDesktop.Screenshot    Excluir saídas/vendas (1)    ${Caminho_Screenshots}Ordem de Serviço/Excluir Ordem de Serviço
+    BaseKeywordsDesktop.Screenshot    Excluir saídas/vendas (1)    ${Caminho_Screenshots}Ordem de Serviço/Excluir Ordem de Serviço
     Fechar janela
 
 Saídas para Venda Ambulante > Cadastro de Motivo de Retorno de Vendas Ambulantes
@@ -182,7 +182,7 @@ Saídas para Venda Ambulante > Cadastro de Motivo de Retorno de Vendas Ambulante
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de Motivo de Retorno de Vendas Ambulantes (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de Motivo de Retorno de Vendas Ambulantes (1)    ${Caminho_Screenshots}Saídas para Venda Ambulante/Cadastro de Motivo de Retorno de Vendas Ambulantes
+    BaseKeywordsDesktop.Screenshot    Cadastro de Motivo de Retorno de Vendas Ambulantes (1)    ${Caminho_Screenshots}Saídas para Venda Ambulante/Cadastro de Motivo de Retorno de Vendas Ambulantes
     Fechar com Sim
 
 Saídas para Venda Ambulante > Saídas para Venda Ambulante
@@ -192,7 +192,7 @@ Saídas para Venda Ambulante > Saídas para Venda Ambulante
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Lançamento de Saída para Venda Ambulante (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Lançamento de Saída para Venda Ambulante (1)    ${Caminho_Screenshots}Saídas para Venda Ambulante/Saídas para Venda Ambulante
+    BaseKeywordsDesktop.Screenshot    Lançamento de Saída para Venda Ambulante (1)    ${Caminho_Screenshots}Saídas para Venda Ambulante/Saídas para Venda Ambulante
     Fechar com Sim
 
 Saídas para Venda Ambulante > Controle de Venda e Devoluções de Saídas para Venda Ambulante
@@ -202,7 +202,7 @@ Saídas para Venda Ambulante > Controle de Venda e Devoluções de Saídas para 
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Controle de Venda e Devoluções de Saídas para Venda Ambulante (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Controle de Venda e Devoluções de Saídas para Venda Ambulante (1)    ${Caminho_Screenshots}Saídas para Venda Ambulante/Controle de Venda e Devoluções de Saídas para Venda Ambulante
+    BaseKeywordsDesktop.Screenshot    Controle de Venda e Devoluções de Saídas para Venda Ambulante (1)    ${Caminho_Screenshots}Saídas para Venda Ambulante/Controle de Venda e Devoluções de Saídas para Venda Ambulante
     Fechar janela
 
 Saídas para Venda Ambulante > Excluir Venda Ambulante
@@ -213,7 +213,7 @@ Saídas para Venda Ambulante > Excluir Venda Ambulante
     RPA.Windows.Get Text      Exclusão de Vendas Ambulantes (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Exclusão de Vendas Ambulantes (1)    ${Caminho_Screenshots}Saídas para Venda Ambulante/Excluir Venda Ambulante
+    BaseKeywordsDesktop.Screenshot    Exclusão de Vendas Ambulantes (1)    ${Caminho_Screenshots}Saídas para Venda Ambulante/Excluir Venda Ambulante
     RPA.Windows.Click         OK
     RPA.Windows.Click         Confirmar
     Fechar janela
@@ -225,7 +225,7 @@ Demais Operações de Saída > Manutenção de Devolução de Compra
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Manutenção de Devolução de Compras (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Manutenção de Devolução de Compras (1)    ${Caminho_Screenshots}Demais Operações de Saída/Manutenção de Devolução de Compra
+    BaseKeywordsDesktop.Screenshot    Manutenção de Devolução de Compras (1)    ${Caminho_Screenshots}Demais Operações de Saída/Manutenção de Devolução de Compra
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -236,7 +236,7 @@ Demais Operações de Saída > Manutenção de Entrega Futura
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Manutenção de Venda de Entrega Futura (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Manutenção de Venda de Entrega Futura (1)    ${Caminho_Screenshots}Demais Operações de Saída/Manutenção de Entrega Futura
+    BaseKeywordsDesktop.Screenshot    Manutenção de Venda de Entrega Futura (1)    ${Caminho_Screenshots}Demais Operações de Saída/Manutenção de Entrega Futura
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -247,7 +247,7 @@ Demais Operações de Saída > Manutenção de Saídas Diversas
     RPA.Desktop.Press Keys    N
     RPA.Windows.Get Text      Manutenção de Saídas Diversas (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Manutenção de Saídas Diversas (1)    ${Caminho_Screenshots}Demais Operações de Saída/Manutenção de Saídas Diversas
+    BaseKeywordsDesktop.Screenshot    Manutenção de Saídas Diversas (1)    ${Caminho_Screenshots}Demais Operações de Saída/Manutenção de Saídas Diversas
     Fechar janela
 
 Demais Operações de Saída > Emissão de notas fiscais sobre Saídas
@@ -257,7 +257,7 @@ Demais Operações de Saída > Emissão de notas fiscais sobre Saídas
     RPA.Desktop.Press Keys    I
     RPA.Windows.Get Text      Consulta de vendas para Geração de Nota (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Consulta de vendas para Geração de Nota (1)    ${Caminho_Screenshots}Demais Operações de Saída/Emissão de notas fiscais sobre Saídas
+    BaseKeywordsDesktop.Screenshot    Consulta de vendas para Geração de Nota (1)    ${Caminho_Screenshots}Demais Operações de Saída/Emissão de notas fiscais sobre Saídas
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -268,7 +268,7 @@ Demais Operações de Saída > Estornar Fechamentos Vendas/Ordens de Serviços
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Cancelar Fechamentos (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Cancelar Fechamentos (1)    ${Caminho_Screenshots}Demais Operações de Saída/Estornar Fechamentos Vendas_Ordens de Serviços
+    BaseKeywordsDesktop.Screenshot    Cancelar Fechamentos (1)    ${Caminho_Screenshots}Demais Operações de Saída/Estornar Fechamentos Vendas_Ordens de Serviços
     Fechar janela
 
 Demais Operações de Saída > Agendamentos > Tipo Contato
@@ -278,7 +278,7 @@ Demais Operações de Saída > Agendamentos > Tipo Contato
     RPA.Windows.Click         Agendamentos
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Cadastro de tipo de Histórico de Contatos (1)
-    BaseDesktop.Screenshot    Cadastro de tipo de Histórico de Contatos (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Tipo Contato
+    BaseKeywordsDesktop.Screenshot    Cadastro de tipo de Histórico de Contatos (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Tipo Contato
     Fechar janela
 
 Demais Operações de Saída > Agendamentos > Contato
@@ -289,7 +289,7 @@ Demais Operações de Saída > Agendamentos > Contato
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Registro de Contato (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Registro de Contato (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Contato
+    BaseKeywordsDesktop.Screenshot    Registro de Contato (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Contato
     Fechar com Sim
 
 Demais Operações de Saída > Agendamentos > Agendamento
@@ -300,7 +300,7 @@ Demais Operações de Saída > Agendamentos > Agendamento
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Agendar (1)
     RPA.Windows.Click         Agendar
-    BaseDesktop.Screenshot    Agendar (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Agendamento
+    BaseKeywordsDesktop.Screenshot    Agendar (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Agendamento
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -312,7 +312,7 @@ Demais Operações de Saída > Agendamentos > Consultar Agendamentos
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Consulta de agendamentos (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Consulta de agendamentos (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Consultar Agendamentos
+    BaseKeywordsDesktop.Screenshot    Consulta de agendamentos (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Consultar Agendamentos
     Fechar janela
 
 Demais Operações de Saída > Agendamentos > Relatório de Contatos
@@ -324,7 +324,7 @@ Demais Operações de Saída > Agendamentos > Relatório de Contatos
     RPA.Windows.Get Text      Relatório de Registro de Contatos (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Relatório de Registro de Contatos (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Relatório de Contatos
+    BaseKeywordsDesktop.Screenshot    Relatório de Registro de Contatos (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Relatório de Contatos
     RPA.Windows.Click         OK
     Fechar janela
     RPA.Windows.Click         OK
@@ -338,7 +338,7 @@ Demais Operações de Saída > Agendamentos > Relatório de Agendamentos
     RPA.Windows.Get Text      Relatório de Agendamentos (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Relatório de Agendamentos (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Relatório de Agendamentos
+    BaseKeywordsDesktop.Screenshot    Relatório de Agendamentos (1)    ${Caminho_Screenshots}Demais Operações de Saída/Agendamentos/Relatório de Agendamentos
     RPA.Windows.Click         OK
     Fechar janela
     RPA.Windows.Click         OK
@@ -351,7 +351,7 @@ Demais Operações de Saída > Condicional > Inclusão de Saídas em Condicional
     RPA.Desktop.Press Keys    I
     RPA.Windows.Get Text      Saída em Condicional (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Saída em Condicional (1)    ${Caminho_Screenshots}Demais Operações de Saída/Condicional/Inclusão de Saídas em Condicional
+    BaseKeywordsDesktop.Screenshot    Saída em Condicional (1)    ${Caminho_Screenshots}Demais Operações de Saída/Condicional/Inclusão de Saídas em Condicional
     Fechar com Sim
 
 Demais Operações de Saída > Condicional > Manutenção/consulta de saídas em condicional
@@ -362,7 +362,7 @@ Demais Operações de Saída > Condicional > Manutenção/consulta de saídas em
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Manutenção de Saídas em Condicional (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Manutenção de Saídas em Condicional (1)    ${Caminho_Screenshots}Demais Operações de Saída/Condicional/Manutenção_consulta de saídas em condicional
+    BaseKeywordsDesktop.Screenshot    Manutenção de Saídas em Condicional (1)    ${Caminho_Screenshots}Demais Operações de Saída/Condicional/Manutenção_consulta de saídas em condicional
     Fechar janela
 
 Demais Operações de Saída > Condicional > Saldo de saídas em condicional
@@ -373,7 +373,7 @@ Demais Operações de Saída > Condicional > Saldo de saídas em condicional
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Saldo de Saídas em Condicional (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Saldo de Saídas em Condicional (1)    ${Caminho_Screenshots}Demais Operações de Saída/Condicional/Saldo de saídas em condicional
+    BaseKeywordsDesktop.Screenshot    Saldo de Saídas em Condicional (1)    ${Caminho_Screenshots}Demais Operações de Saída/Condicional/Saldo de saídas em condicional
     Fechar janela
 
 Demais Operações de Saída > Fixação de vendas
@@ -383,7 +383,7 @@ Demais Operações de Saída > Fixação de vendas
     RPA.Desktop.Press Keys    F
     RPA.Windows.Get Text      Fixação de Vendas (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Fixação de Vendas (1)    ${Caminho_Screenshots}Demais Operações de Saída/Fixação de vendas
+    BaseKeywordsDesktop.Screenshot    Fixação de Vendas (1)    ${Caminho_Screenshots}Demais Operações de Saída/Fixação de vendas
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -396,7 +396,7 @@ Demais Operações de Saída > Exportação > Venda para exportação
     RPA.Windows.Get Text      Vendas para Exportação (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Vendas para Exportação (1)    ${Caminho_Screenshots}Demais Operações de Saída/Exportação/Venda para exportação
+    BaseKeywordsDesktop.Screenshot    Vendas para Exportação (1)    ${Caminho_Screenshots}Demais Operações de Saída/Exportação/Venda para exportação
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -409,7 +409,7 @@ Demais Operações de Saída > Exportação > Venda para Exportação - Pendente
     RPA.Windows.Get Text      Vendas para Exportação - Pendentes (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Vendas para Exportação - Pendentes (1)    ${Caminho_Screenshots}Demais Operações de Saída/Exportação/Venda para Exportação - Pendentes
+    BaseKeywordsDesktop.Screenshot    Vendas para Exportação - Pendentes (1)    ${Caminho_Screenshots}Demais Operações de Saída/Exportação/Venda para Exportação - Pendentes
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -423,7 +423,7 @@ Demais Operações de Saída > Exportação > Relatório de Movimentação
     RPA.Windows.Get Text      Vendas para Exportação - Relatório (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Vendas para Exportação - Relatório (1)    ${Caminho_Screenshots}Demais Operações de Saída/Exportação/Relatório de Movimentação
+    BaseKeywordsDesktop.Screenshot    Vendas para Exportação - Relatório (1)    ${Caminho_Screenshots}Demais Operações de Saída/Exportação/Relatório de Movimentação
     RPA.Windows.Click         Confirmar
     Fechar janela
 Documentos Fiscais > NF-e > Emissão de Notas Fiscais Eletrônicas
@@ -434,7 +434,7 @@ Documentos Fiscais > NF-e > Emissão de Notas Fiscais Eletrônicas
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Emissão de Notas Fiscais Eletrônicas (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Emissão de Notas Fiscais Eletrônicas (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Emissão de Notas Fiscais Eletrônicas
+    BaseKeywordsDesktop.Screenshot    Emissão de Notas Fiscais Eletrônicas (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Emissão de Notas Fiscais Eletrônicas
     Fechar janela
     
 Documentos Fiscais > NF-e > Monitorar NFe's
@@ -445,7 +445,7 @@ Documentos Fiscais > NF-e > Monitorar NFe's
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Monitor de NF-e/NFC-e (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Monitor de NF-e/NFC-e (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Monitorar NFe's
+    BaseKeywordsDesktop.Screenshot    Monitor de NF-e/NFC-e (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Monitorar NFe's
     Fechar janela
 
 Documentos Fiscais > NF-e > Inutilização de Numeração
@@ -456,7 +456,7 @@ Documentos Fiscais > NF-e > Inutilização de Numeração
     RPA.Desktop.Press Keys    I
     RPA.Windows.Get Text      Nota Fiscal Eletrônica - Inutilização de Numeração (1)
     RPA.Windows.Click         Enviar
-    BaseDesktop.Screenshot    Nota Fiscal Eletrônica - Inutilização de Numeração (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Inutilização de Numeração
+    BaseKeywordsDesktop.Screenshot    Nota Fiscal Eletrônica - Inutilização de Numeração (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Inutilização de Numeração
     RPA.Windows.Click         Fechar
 
 Documentos Fiscais > NF-e > Inutilização de Numeração(Envio Rápido)
@@ -467,7 +467,7 @@ Documentos Fiscais > NF-e > Inutilização de Numeração(Envio Rápido)
     RPA.Desktop.Press Keys    N
     RPA.Windows.Get Text      Inutilização de Numeração - Envio Rápido (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Inutilização de Numeração - Envio Rápido (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Inutilização de Numeração(Envio Rápido)
+    BaseKeywordsDesktop.Screenshot    Inutilização de Numeração - Envio Rápido (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Inutilização de Numeração(Envio Rápido)
     Fechar janela
 
 Documentos Fiscais > NF-e > Carta de Correção Eletrônica
@@ -478,7 +478,7 @@ Documentos Fiscais > NF-e > Carta de Correção Eletrônica
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Carta de Correção Eletrônica (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Carta de Correção Eletrônica (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Carta de Correção Eletrônica
+    BaseKeywordsDesktop.Screenshot    Carta de Correção Eletrônica (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Carta de Correção Eletrônica
     RPA.Windows.Click         OK
     RPA.Windows.Click         Fechar
 
@@ -490,7 +490,7 @@ Documentos Fiscais > NF-e > Insucesso de Entrega da NF-e
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Nota Fiscal Eletrônica - Insucesso na Entrega (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Nota Fiscal Eletrônica - Insucesso na Entrega (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Insucesso de Entrega da NF-e
+    BaseKeywordsDesktop.Screenshot    Nota Fiscal Eletrônica - Insucesso na Entrega (1)    ${Caminho_Screenshots}Documentos Fiscais/NF-e/Insucesso de Entrega da NF-e
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -501,7 +501,7 @@ Documentos Fiscais > Monitorar NFSE's
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Consulta de Notas Fiscais de Serviço Eletrônicas (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Consulta de Notas Fiscais de Serviço Eletrônicas (1)      ${Caminho_Screenshots}Documentos Fiscais/Monitorar NFSE's
+    BaseKeywordsDesktop.Screenshot    Consulta de Notas Fiscais de Serviço Eletrônicas (1)      ${Caminho_Screenshots}Documentos Fiscais/Monitorar NFSE's
     Fechar janela
 
 Documentos Fiscais > Monitorar GNRE
@@ -511,7 +511,7 @@ Documentos Fiscais > Monitorar GNRE
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Consulta de Vendas e GNRE (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Consulta de Vendas e GNRE (1)  ${Caminho_Screenshots}Documentos Fiscais/Monitorar GNRE
+    BaseKeywordsDesktop.Screenshot    Consulta de Vendas e GNRE (1)  ${Caminho_Screenshots}Documentos Fiscais/Monitorar GNRE
     Fechar janela
 
 Documentos Fiscais > ECF > Leitura X
@@ -521,7 +521,7 @@ Documentos Fiscais > ECF > Leitura X
     RPA.Windows.Click         ECF
     RPA.Desktop.Press Keys    X
     RPA.Windows.Get Text      Leitura X (1)
-    BaseDesktop.Screenshot    Leitura X (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Leitura X
+    BaseKeywordsDesktop.Screenshot    Leitura X (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Leitura X
     Fechar janela
 
 Documentos Fiscais > ECF > Redução Z
@@ -531,7 +531,7 @@ Documentos Fiscais > ECF > Redução Z
     RPA.Windows.Click         ECF
     RPA.Desktop.Press Keys    Z
     RPA.Windows.Get Text      Redução Z (1)
-    BaseDesktop.Screenshot    Redução Z (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Redução Z
+    BaseKeywordsDesktop.Screenshot    Redução Z (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Redução Z
     Fechar janela
 
 Documentos Fiscais > ECF > Relatório Gerencial
@@ -541,7 +541,7 @@ Documentos Fiscais > ECF > Relatório Gerencial
     RPA.Windows.Click         ECF
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Relatório Gerencial (1)
-    BaseDesktop.Screenshot    Relatório Gerencial (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Relatório Gerencial
+    BaseKeywordsDesktop.Screenshot    Relatório Gerencial (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Relatório Gerencial
     Fechar janela
 
 Documentos Fiscais > ECF > Cancelar Último Cupom
@@ -551,7 +551,7 @@ Documentos Fiscais > ECF > Cancelar Último Cupom
     RPA.Windows.Click         ECF
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cancelar Último Cupom (1)
-    BaseDesktop.Screenshot    Cancelar Último Cupom (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Cancelar Último Cupom
+    BaseKeywordsDesktop.Screenshot    Cancelar Último Cupom (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Cancelar Último Cupom
     Fechar janela
 
 Documentos Fiscais > ECF > Mapa Resumo (Redução Z)
@@ -562,7 +562,7 @@ Documentos Fiscais > ECF > Mapa Resumo (Redução Z)
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Mapa Resumo da ECF (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Mapa Resumo da ECF (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Mapa Resumo (Redução Z)
+    BaseKeywordsDesktop.Screenshot    Mapa Resumo da ECF (1)    ${Caminho_Screenshots}Documentos Fiscais/ECF/Mapa Resumo (Redução Z)
     Fechar com Sim
 
 
@@ -573,7 +573,7 @@ Documentos Fiscais > MDF-e > Manifesto de Documentos Fiscais
     RPA.Windows.Click         MDF-e
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Manifesto de Documentos Fiscais (1)
-    BaseDesktop.Screenshot    Manifesto de Documentos Fiscais (1)    ${Caminho_Screenshots}Documentos Fiscais/MDF-e/Manifesto de Documentos Fiscais
+    BaseKeywordsDesktop.Screenshot    Manifesto de Documentos Fiscais (1)    ${Caminho_Screenshots}Documentos Fiscais/MDF-e/Manifesto de Documentos Fiscais
     Fechar janela
 
 Documentos Fiscais > MDF-e > Monitor - MDF-e
@@ -584,7 +584,7 @@ Documentos Fiscais > MDF-e > Monitor - MDF-e
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Monitor MDF-e (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Monitor MDF-e (1)    ${Caminho_Screenshots}Documentos Fiscais/MDF-e/Monitor - MDF-e
+    BaseKeywordsDesktop.Screenshot    Monitor MDF-e (1)    ${Caminho_Screenshots}Documentos Fiscais/MDF-e/Monitor - MDF-e
     Fechar janela
 
 Documentos Fiscais > MDF-e > Importar NF-e para MDF-e
@@ -594,7 +594,7 @@ Documentos Fiscais > MDF-e > Importar NF-e para MDF-e
     RPA.Windows.Click         MDF-e
     RPA.Desktop.Press Keys    I
     RPA.Windows.Get Text      Importador MDF-e (1)
-    BaseDesktop.Screenshot    Importador MDF-e (1)    ${Caminho_Screenshots}Documentos Fiscais/MDF-e/Importar NF-e para MDF-e
+    BaseKeywordsDesktop.Screenshot    Importador MDF-e (1)    ${Caminho_Screenshots}Documentos Fiscais/MDF-e/Importar NF-e para MDF-e
     Fechar janela
 
 Pedidos > Pedidos de Venda > Pedido de Venda
@@ -605,7 +605,7 @@ Pedidos > Pedidos de Venda > Pedido de Venda
     RPA.Desktop.Press Keys    P
     RPA.Windows.Get Text      Pedidos de Venda (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pedido de Venda
+    BaseKeywordsDesktop.Screenshot    Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pedido de Venda
     Fechar com Sim
 
 Pedidos > Pedidos de Venda > Zeramento de Pedido
@@ -616,7 +616,7 @@ Pedidos > Pedidos de Venda > Zeramento de Pedido
     RPA.Desktop.Press Keys    Z
     RPA.Windows.Get Text      Zeramento de Pedido de Venda (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Zeramento de Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Zeramento de Pedido
+    BaseKeywordsDesktop.Screenshot    Zeramento de Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Zeramento de Pedido
     Fechar com Sim
 
 Pedidos > Pedidos de Venda > Pré Zeramento de Pedido
@@ -627,7 +627,7 @@ Pedidos > Pedidos de Venda > Pré Zeramento de Pedido
     RPA.Desktop.Press Keys    R
     RPA.Windows.Get Text      Pré Zeramento de Pedido de Venda (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Pré Zeramento de Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pré Zeramento de Pedido
+    BaseKeywordsDesktop.Screenshot    Pré Zeramento de Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pré Zeramento de Pedido
     Fechar com Sim
 
 Pedidos > Pedidos de Venda > Gerar Venda por Pedido de Venda
@@ -638,7 +638,7 @@ Pedidos > Pedidos de Venda > Gerar Venda por Pedido de Venda
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Gerador de Vendas por Pedido de Venda (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Gerador de Vendas por Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Gerar Venda por Pedido de Venda
+    BaseKeywordsDesktop.Screenshot    Gerador de Vendas por Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Gerar Venda por Pedido de Venda
     Fechar janela
 
 Pedidos > Pedidos de Venda > Pedido de Venda Simplificado
@@ -649,7 +649,7 @@ Pedidos > Pedidos de Venda > Pedido de Venda Simplificado
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Pedido de Venda Simplificado
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Pedido de Venda Simplificado    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pedido de Venda Simplificado
+    BaseKeywordsDesktop.Screenshot    Pedido de Venda Simplificado    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pedido de Venda Simplificado
     Fechar com Sim
 
 Pedidos > Pedidos de Venda > Manutenção de Pedido de Venda
@@ -660,7 +660,7 @@ Pedidos > Pedidos de Venda > Manutenção de Pedido de Venda
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Manutenção de Pedido de Venda (1)
     RPA.Windows.Click         Validar Pedido
-    BaseDesktop.Screenshot    Manutenção de Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Manutenção de Pedido de Venda
+    BaseKeywordsDesktop.Screenshot    Manutenção de Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Manutenção de Pedido de Venda
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -672,7 +672,7 @@ Pedidos > Pedidos de Venda > Cadastro de Status
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de Status - Pedido de Venda (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de Status - Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Cadastro de Status
+    BaseKeywordsDesktop.Screenshot    Cadastro de Status - Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Cadastro de Status
     Fechar com Sim
 
 Pedidos > Pedidos de Venda > Aprovação/Rejeição
@@ -683,7 +683,7 @@ Pedidos > Pedidos de Venda > Aprovação/Rejeição
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Aprovação/Rejeição de Pedidos de Venda (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Aprovação/Rejeição de Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Aprovação_Rejeição
+    BaseKeywordsDesktop.Screenshot    Aprovação/Rejeição de Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Aprovação_Rejeição
     Fechar janela
 
 Pedidos > Pedidos de Venda > Estorno da Aprovação
@@ -696,7 +696,7 @@ Pedidos > Pedidos de Venda > Estorno da Aprovação
     RPA.Windows.Get Text      Estorno da Aprovação de Pedidos de Venda (1)
     RPA.Windows.Click         Carregar
     RPA.Windows.Click         Sim
-    BaseDesktop.Screenshot    Estorno da Aprovação de Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Estorno da Aprovação
+    BaseKeywordsDesktop.Screenshot    Estorno da Aprovação de Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Estorno da Aprovação
     RPA.Windows.Click         Fechar
 
 Pedidos > Pedidos de Venda > Enviar Email para Aprovação/Rejeição Pedido de Venda
@@ -707,7 +707,7 @@ Pedidos > Pedidos de Venda > Enviar Email para Aprovação/Rejeição Pedido de 
     RPA.Desktop.Press Keys    N
     RPA.Windows.Get Text      Envio de Email para Pedidos de Venda Aprovados/Rejeitados (1)
     RPA.Windows.Click         Carregar    
-    BaseDesktop.Screenshot    Envio de Email para Pedidos de Venda Aprovados/Rejeitados (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Enviar Email para Aprovação_Rejeição Pedido de Venda
+    BaseKeywordsDesktop.Screenshot    Envio de Email para Pedidos de Venda Aprovados/Rejeitados (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Enviar Email para Aprovação_Rejeição Pedido de Venda
     Fechar janela
 
 Pedidos > Pedidos de Venda > Definir lotes - Expedição
@@ -718,7 +718,7 @@ Pedidos > Pedidos de Venda > Definir lotes - Expedição
     RPA.Desktop.Press Keys    D
     RPA.Windows.Get Text      Definir lotes Expedição (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Definir lotes Expedição (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Definir lotes - Expedição
+    BaseKeywordsDesktop.Screenshot    Definir lotes Expedição (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Definir lotes - Expedição
     Fechar janela
 
 Pedidos > Pedidos de Venda > Modelo de Impressão
@@ -731,7 +731,7 @@ Pedidos > Pedidos de Venda > Modelo de Impressão
     repetidor de teclas       tab   5
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Configuração de Layout Personalizado (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Modelo de Impressão
+    BaseKeywordsDesktop.Screenshot    Configuração de Layout Personalizado (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Modelo de Impressão
     RPA.Windows.Click         Confirmar
     Fechar com Sim    
     
@@ -745,7 +745,7 @@ Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Agrupar Pedidos d
     Sleep                     1s
     RPA.Windows.Get Text      Agrupador de Pedidos de Venda
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Agrupador de Pedidos de Venda    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/Agrupar Pedidos de Venda
+    BaseKeywordsDesktop.Screenshot    Agrupador de Pedidos de Venda    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/Agrupar Pedidos de Venda
     RPA.Windows.Click         Fechar  
 
 Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Estornar Pedidos de Venda Agrupados
@@ -757,7 +757,7 @@ Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Estornar Pedidos 
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Estorno de Agrupamento de Pedidos de Venda (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Estorno de Agrupamento de Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/Estornar Pedidos de Venda Agrupados
+    BaseKeywordsDesktop.Screenshot    Estorno de Agrupamento de Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/Estornar Pedidos de Venda Agrupados
     Fechar janela
 
 Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Relatório de Pedidos de Venda Agrupados
@@ -770,7 +770,7 @@ Pedidos > Pedidos de Venda > Agrupamento de Pedidos de Venda > Relatório de Ped
     RPA.Windows.Get Text      Relatório de Pedidos de Venda Agrupados (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Relatório de Pedidos de Venda Agrupados (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/Relatório de Pedidos de Venda Agrupados
+    BaseKeywordsDesktop.Screenshot    Relatório de Pedidos de Venda Agrupados (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Agrupamento de Pedidos de Venda/Relatório de Pedidos de Venda Agrupados
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -782,7 +782,7 @@ Pedidos > Pedidos de Venda > Reprocessamento de Custos Gerenciais de Pedido de V
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Reprocessamento Custos Gerenciais Pedido de Venda (1)
     RPA.Windows.Click         Processar
-    BaseDesktop.Screenshot    Reprocessamento Custos Gerenciais Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Reprocessamento de Custos Gerenciais de Pedido de Venda
+    BaseKeywordsDesktop.Screenshot    Reprocessamento Custos Gerenciais Pedido de Venda (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Reprocessamento de Custos Gerenciais de Pedido de Venda
     RPA.Windows.Click         OK  
     Fechar janela
 
@@ -793,7 +793,7 @@ Pedidos > Pedidos de Transferência
     RPA.Desktop.Press Keys    P
     RPA.Windows.Get Text      Pedido de Transferência (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Pedido de Transferência (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pedidos de Transferência
+    BaseKeywordsDesktop.Screenshot    Pedido de Transferência (1)    ${Caminho_Screenshots}Pedidos/Pedidos de Venda/Pedidos de Transferência
     Fechar com Sim
 
 Orçamentos > Orçamentos
@@ -803,7 +803,7 @@ Orçamentos > Orçamentos
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Orçamentos (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Orçamentos (1)    ${Caminho_Screenshots}Orçamentos/Orçamentos
+    BaseKeywordsDesktop.Screenshot    Orçamentos (1)    ${Caminho_Screenshots}Orçamentos/Orçamentos
     RPA.Windows.Click         OK
     Fechar com Sim
 
@@ -814,7 +814,7 @@ Orçamentos > Consulta
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Consulta de Orçamentos (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Consulta de Orçamentos (1)    ${Caminho_Screenshots}Orçamentos/Consulta
+    BaseKeywordsDesktop.Screenshot    Consulta de Orçamentos (1)    ${Caminho_Screenshots}Orçamentos/Consulta
     Fechar janela
 
 Pesagem Geral
@@ -823,7 +823,7 @@ Pesagem Geral
     RPA.Windows.Click         Pesagem Geral
     RPA.Windows.Get Text      Consulta de Pesagem Geral (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Consulta de Pesagem Geral (1)    ${Caminho_Screenshots}Pesagem Geral
+    BaseKeywordsDesktop.Screenshot    Consulta de Pesagem Geral (1)    ${Caminho_Screenshots}Pesagem Geral
     Fechar janela
 
 Controle de Viagens de Vendedores > Lançamento de Viagens
@@ -833,7 +833,7 @@ Controle de Viagens de Vendedores > Lançamento de Viagens
     RPA.Desktop.Press Keys    L
     RPA.Windows.Get Text      Lançamento de Viagens (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Lançamento de Viagens (1)    ${Caminho_Screenshots}Controle de Viagens de Vendedores/Lançamento de Viagens
+    BaseKeywordsDesktop.Screenshot    Lançamento de Viagens (1)    ${Caminho_Screenshots}Controle de Viagens de Vendedores/Lançamento de Viagens
     Fechar com Sim
 
 Controle de Viagens de Vendedores > Lançamento de Despesas
@@ -843,7 +843,7 @@ Controle de Viagens de Vendedores > Lançamento de Despesas
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Lançamento de Despesas (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Lançamento de Despesas (1)    ${Caminho_Screenshots}Controle de Viagens de Vendedores/Lançamento de Despesas
+    BaseKeywordsDesktop.Screenshot    Lançamento de Despesas (1)    ${Caminho_Screenshots}Controle de Viagens de Vendedores/Lançamento de Despesas
     Fechar com Sim
 
 Controle de Viagens de Vendedores > Relatório de Despesas
@@ -855,7 +855,7 @@ Controle de Viagens de Vendedores > Relatório de Despesas
     repetidor de teclas       tab    2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Relatório de Despesas (1)    ${Caminho_Screenshots}Controle de Viagens de Vendedores/Relatório de Despesas
+    BaseKeywordsDesktop.Screenshot    Relatório de Despesas (1)    ${Caminho_Screenshots}Controle de Viagens de Vendedores/Relatório de Despesas
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -866,7 +866,7 @@ Gerenciamento de Preços > Formação de Preços de Venda
     RPA.Desktop.Press Keys    F
     RPA.Windows.Get Text      Formação de Preços de Venda (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Formação de Preços de Venda (1)    ${Caminho_Screenshots}Gerenciamento de Preços/Formação de Preços de Venda
+    BaseKeywordsDesktop.Screenshot    Formação de Preços de Venda (1)    ${Caminho_Screenshots}Gerenciamento de Preços/Formação de Preços de Venda
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -877,7 +877,7 @@ Gerenciamento de Preços > Tabela de Preços Condicionais
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Tabela de Preço Condicional (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Tabela de Preço Condicional (1)    ${Caminho_Screenshots}Gerenciamento de Preços/Tabela de Preços Condicionais
+    BaseKeywordsDesktop.Screenshot    Tabela de Preço Condicional (1)    ${Caminho_Screenshots}Gerenciamento de Preços/Tabela de Preços Condicionais
     Fechar janela
 
 Gerenciamento de Preços > Tabela de Preços de Venda
@@ -887,7 +887,7 @@ Gerenciamento de Preços > Tabela de Preços de Venda
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Tabela de Preços de Venda (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Tabela de Preços de Venda (1)    ${Caminho_Screenshots}Gerenciamento de Preços/Tabela de Preços de Venda
+    BaseKeywordsDesktop.Screenshot    Tabela de Preços de Venda (1)    ${Caminho_Screenshots}Gerenciamento de Preços/Tabela de Preços de Venda
     RPA.Windows.Click         Sim
     Fechar janela
 
@@ -899,7 +899,7 @@ Caixa Operador > Abertura
     RPA.Windows.Get Text      Abertura de Caixa
     RPA.Desktop.Press Keys    Enter
     RPA.Windows.Click         Confirmar
-    BaseDesktop.Screenshot    Abertura de Caixa    ${Caminho_Screenshots}Caixa Operador/Abertura
+    BaseKeywordsDesktop.Screenshot    Abertura de Caixa    ${Caminho_Screenshots}Caixa Operador/Abertura
     Fechar janela
 
 Caixa Operador > Suprimento/Entradas
@@ -909,7 +909,7 @@ Caixa Operador > Suprimento/Entradas
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Suprimento/Entradas
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Suprimento/Entradas    ${Caminho_Screenshots}Caixa Operador/Suprimento_Entradas
+    BaseKeywordsDesktop.Screenshot    Suprimento/Entradas    ${Caminho_Screenshots}Caixa Operador/Suprimento_Entradas
     Fechar com Sim
 
 Caixa Operador > Sangria/Saídas
@@ -919,7 +919,7 @@ Caixa Operador > Sangria/Saídas
     RPA.Desktop.Press Keys    N
     RPA.Windows.Get Text      Sangria\\Saidas
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Sangria\\Saidas    ${Caminho_Screenshots}Caixa Operador/Sangria_Saídas
+    BaseKeywordsDesktop.Screenshot    Sangria\\Saidas    ${Caminho_Screenshots}Caixa Operador/Sangria_Saídas
     Fechar com Sim
 
 Caixa Operador > Fechamento
@@ -930,7 +930,7 @@ Caixa Operador > Fechamento
     RPA.Windows.Get Text      Fechamento de Caixa
     RPA.Desktop.Press Keys    Enter
     RPA.Windows.Click         Confirmar
-    BaseDesktop.Screenshot    Fechamento de Caixa    ${Caminho_Screenshots}Caixa Operador/Fechamento
+    BaseKeywordsDesktop.Screenshot    Fechamento de Caixa    ${Caminho_Screenshots}Caixa Operador/Fechamento
     Fechar janela
 
 Caixa Operador > Relatório
@@ -942,7 +942,7 @@ Caixa Operador > Relatório
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseDesktop.Screenshot    Relatório do Caixa Operador (1)    ${Caminho_Screenshots}Caixa Operador/Relatório
+    BaseKeywordsDesktop.Screenshot    Relatório do Caixa Operador (1)    ${Caminho_Screenshots}Caixa Operador/Relatório
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -952,7 +952,7 @@ Processos Personalizados
     RPA.Windows.Click         Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
     RPA.Windows.Click         Cadastrar Novo Processo
-    BaseDesktop.Screenshot    Processos Personalizados (1)    ${Caminho_Screenshots}Caixa Operador/Processos Personalizados
+    BaseKeywordsDesktop.Screenshot    Processos Personalizados (1)    ${Caminho_Screenshots}Caixa Operador/Processos Personalizados
     RPA.Windows.Click         Sair
     Fechar janela
 
@@ -962,7 +962,7 @@ Controle de Recorrências
     RPA.Windows.Click         Controle de Recorrências
     RPA.Windows.Get Text      Consulta de Recorrências (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Consulta de Recorrências (1)    ${Caminho_Screenshots}Caixa Operador/Controle de Recorrências
+    BaseKeywordsDesktop.Screenshot    Consulta de Recorrências (1)    ${Caminho_Screenshots}Caixa Operador/Controle de Recorrências
     RPA.Windows.Click         OK
     Fechar janela
 

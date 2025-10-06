@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Financeiro/Limite de Crédito/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Financeiro/Limite de Crédito/    
 ${nome_print}
 ${nome_exe}=    cde_win_fin
 *** Keywords ***
@@ -26,5 +26,5 @@ Limite de Crédito
     RPA.Windows.Click         Limite de Crédito
     RPA.Windows.Get Text      Limite de Crédito (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito
+    BaseKeywordsDesktop.Screenshot    Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito
     Fechar janela

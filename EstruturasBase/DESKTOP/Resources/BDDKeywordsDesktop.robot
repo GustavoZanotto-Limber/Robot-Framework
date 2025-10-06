@@ -7,7 +7,8 @@ Library    Process
 Library    RPA.PDF
 Library    Collections
 Library    String
-Resource   BaseDesktop.robot
+Resource   BaseKeywordsDesktop.robot
+Resource   BaseKeywordsWeb.robot
 
 *** Variables ***
 ${qtd_vagas}
@@ -266,7 +267,7 @@ Quando realizo a impressão do caixa
     RETURN    ${tempo_ajustado}    ${data_formatada}    VALOR ABERTURA:    Total de Devolvidos    Valor Total Líquido    Total de Cancelamentos
 
 Quando Fecho o caixa operador E pego o Resumo Geral
-    [Arguments]    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
+    [Arguments]    ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}=Erro
     Sleep                    1s
     Fechar caixa e salvar a impressão
     Gerar aquivo de resumo Geral
@@ -285,7 +286,11 @@ Então valido a venda foi realizada com sucesso
     Carregar
     Rolar barra até o Final
     Analisa texto dos bilhetes vendidos   @{Texto_Bilhete}
-    Analisa texto da forma de pagamento (contém)  ${metodo}    ${valor}    
+    Analisa texto da forma de pagamento (contém)  ${metodo}    ${valor}
+    Retirar Categoria    2
+    Sleep                1s
+    Retirar Categoria    3
+    Inativar Bilhete    
 
 Então valido a venda foi realizada com sucesso (valor zerado)
     [Arguments]    @{Texto_Bilhete}    ${metodo}    ${valor}
@@ -314,7 +319,7 @@ Então valido se a impressão saiu corretamente
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
     Sleep                     5s
     RPA.Windows.Get Element   ${Nome_da_tela}
-    BaseDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
+    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}  
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0
@@ -331,7 +336,7 @@ Então valido se a impressão RPS saiu corretamente
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
     Sleep                     5s
     RPA.Windows.Get Element   ${Nome_da_tela}
-    BaseDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
+    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}  
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0
@@ -349,7 +354,7 @@ Então valido se a impressão saiu corretamente 2
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
     Sleep                     8s
     RPA.Windows.Get Element   ${Nome_da_tela}
-    BaseDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
+    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}  
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0
@@ -381,7 +386,7 @@ Então o sistema deve exibir corretamente todos os registros
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
     Sleep                     6s
     RPA.Windows.Get Element   ${Nome_da_tela}
-    BaseDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
+    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}  
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0

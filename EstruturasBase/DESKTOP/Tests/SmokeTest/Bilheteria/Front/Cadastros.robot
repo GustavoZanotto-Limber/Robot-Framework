@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Front
-Resource         ../../../../Resources/BaseDesktop.robot
+Resource         ../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao     ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -8,11 +8,9 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/Front/Cadastros/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/Front/Cadastros/    
 ${nome_print}
 ${nome_exe}=    cde_win_bca_frontR40
-
-*** Keywords ***
 
 *** Test Cases ***
 
@@ -23,7 +21,7 @@ Guias
     RPA.Windows.Click       Guias
     RPA.Windows.Get Text    Cadastro de Guias (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Cadastro de Guias (1)    ${Caminho_Screenshots}Guias
+    BaseKeywordsDesktop.Screenshot  Cadastro de Guias (1)    ${Caminho_Screenshots}Guias
     Fechar com Sim
 
 Isentos
@@ -33,7 +31,7 @@ Isentos
     RPA.Windows.Click       Isentos
     RPA.Windows.Get Text    Cadastro de Isento (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Cadastro de Isento (1)    ${Caminho_Screenshots}Isentos
+    BaseKeywordsDesktop.Screenshot  Cadastro de Isento (1)    ${Caminho_Screenshots}Isentos
     Fechar com Sim
 
 Agências -> Agências
@@ -45,7 +43,7 @@ Agências -> Agências
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
     RPA.Windows.Click         Novo
     Sleep                     1s
-    BaseDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Agências/Agências
+    BaseKeywordsDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Agências/Agências
     RPA.Windows.Click         Fechar
     Fechar com Sim
 
@@ -57,7 +55,7 @@ Agências -> Grupo de Agências
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Cadastro de Grupos de Agências (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de Grupos de Agências (1)    ${Caminho_Screenshots}/Agências/Grupo de Agências
+    BaseKeywordsDesktop.Screenshot    Cadastro de Grupos de Agências (1)    ${Caminho_Screenshots}/Agências/Grupo de Agências
     Fechar com Sim
 
 Locais Estacionamento
@@ -67,7 +65,7 @@ Locais Estacionamento
     RPA.Windows.Click       Locais Estacionamento
     RPA.Windows.Get Text    Cadastro Locais de Estacionamento (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot  Cadastro Locais de Estacionamento (1)    ${Caminho_Screenshots}Locais Estacionamento
+    BaseKeywordsDesktop.Screenshot  Cadastro Locais de Estacionamento (1)    ${Caminho_Screenshots}Locais Estacionamento
     Fechar com Sim
 
 Grupos de Bilhetes Totem
@@ -77,7 +75,7 @@ Grupos de Bilhetes Totem
     RPA.Windows.Click       Grupo Bilhetes Totem
     RPA.Windows.Get Text    Cadastro de Grupos de Bilhetes Totem (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot  Cadastro de Grupos de Bilhetes Totem (1)    ${Caminho_Screenshots}Grupos de Bilhetes Totem
+    BaseKeywordsDesktop.Screenshot  Cadastro de Grupos de Bilhetes Totem (1)    ${Caminho_Screenshots}Grupos de Bilhetes Totem
     Fechar com Sim
 
 Grupos de Isenção
@@ -87,7 +85,7 @@ Grupos de Isenção
     RPA.Windows.Click        Grupos de Isenção
     RPA.Windows.Get Text     Cadastro de Grupos de Isenção (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot   Cadastro de Grupos de Isenção (1)    ${Caminho_Screenshots}Grupos de Isenção
+    BaseKeywordsDesktop.Screenshot   Cadastro de Grupos de Isenção (1)    ${Caminho_Screenshots}Grupos de Isenção
     Fechar com Sim
 
 Tipos de Autorização
@@ -97,7 +95,7 @@ Tipos de Autorização
     RPA.Windows.Click       Tipos de Autorização
     RPA.Windows.Get Text    Cadastro de Tipos de Autorização (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Cadastro de Tipos de Autorização (1)    ${Caminho_Screenshots}Tipos de Autorização
+    BaseKeywordsDesktop.Screenshot  Cadastro de Tipos de Autorização (1)    ${Caminho_Screenshots}Tipos de Autorização
     Fechar com Sim
 
 Tipos de Documentos
@@ -107,7 +105,7 @@ Tipos de Documentos
     RPA.Windows.Click       Tipos de Documentos
     RPA.Windows.Get Text    Cadastro de Tipos de Documentos (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Cadastro de Tipos de Documentos (1)    ${Caminho_Screenshots}Tipos de Documentos
+    BaseKeywordsDesktop.Screenshot  Cadastro de Tipos de Documentos (1)    ${Caminho_Screenshots}Tipos de Documentos
     Fechar com Sim
 
 Pessoas Autorizadas
@@ -116,8 +114,8 @@ Pessoas Autorizadas
     Cadastros
     RPA.Windows.Click       Pessoas Autorizadas
     RPA.Windows.Get Text    Cadastro de Pessoas Autorizadas (1)
-    BaseDesktop.Screenshot  Cadastro de Pessoas Autorizadas (1)    ${Caminho_Screenshots}Pessoas Autorizadas
-    Sleep                   10s
+    BaseKeywordsDesktop.Screenshot  Cadastro de Pessoas Autorizadas (1)    ${Caminho_Screenshots}Pessoas Autorizadas
+    RPA.Windows.Click       OK
     Fechar janela
     Sleep                   5s
 
@@ -128,7 +126,7 @@ Acesso por aproximação
     RPA.Windows.Click       Acesso por Aproximação
     RPA.Windows.Get Text    Cadastro de Acesso por Aproximação (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Cadastro de Acesso por Aproximação (1)    ${Caminho_Screenshots}Acesso por aproximação
+    BaseKeywordsDesktop.Screenshot  Cadastro de Acesso por Aproximação (1)    ${Caminho_Screenshots}Acesso por aproximação
     Fechar com Sim
 
 Catracas / Terminais de Acesso
@@ -138,7 +136,7 @@ Catracas / Terminais de Acesso
     RPA.Windows.Click       Catracas / Terminais de Acesso
     RPA.Windows.Get Text    Cadastro de Catracas / Terminais de Acesso (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Cadastro de Catracas / Terminais de Acesso (1)    ${Caminho_Screenshots}Catracas_Terminais de Acesso
+    BaseKeywordsDesktop.Screenshot  Cadastro de Catracas / Terminais de Acesso (1)    ${Caminho_Screenshots}Catracas_Terminais de Acesso
     Fechar com Sim
 
 PDV -> Locais de Venda
@@ -149,7 +147,7 @@ PDV -> Locais de Venda
     RPA.Desktop.Press Keys    l
     RPA.Windows.Get Text      Cadastro de Locais de Venda (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot    Cadastro de Locais de Venda (1)    ${Caminho_Screenshots}PDV/Locais de Venda
+    BaseKeywordsDesktop.Screenshot    Cadastro de Locais de Venda (1)    ${Caminho_Screenshots}PDV/Locais de Venda
     Fechar com Sim
 
 PDV -> PDV
@@ -160,7 +158,7 @@ PDV -> PDV
     RPA.Desktop.Press Keys    p
     RPA.Windows.Get Text      Cadastro de PDV (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de PDV (1)    ${Caminho_Screenshots}PDV/PDV
+    BaseKeywordsDesktop.Screenshot    Cadastro de PDV (1)    ${Caminho_Screenshots}PDV/PDV
     Fechar com Sim
 
 Câmeras de Contagem
@@ -170,7 +168,7 @@ Câmeras de Contagem
     RPA.Windows.Click       Câmeras de Contagem
     RPA.Windows.Get Text    Cadastro de Câmeras de Contagem (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot  Cadastro de Câmeras de Contagem (1)    ${Caminho_Screenshots}Câmeras de Contagem
+    BaseKeywordsDesktop.Screenshot  Cadastro de Câmeras de Contagem (1)    ${Caminho_Screenshots}Câmeras de Contagem
     Fechar com Sim
 
 Parâmetros -> Empresas
@@ -181,7 +179,7 @@ Parâmetros -> Empresas
     RPA.Desktop.Press Keys    e
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
+    BaseKeywordsDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
     Fechar com Sim
 
 Parâmetros -> Estabelecimentos
@@ -193,7 +191,7 @@ Parâmetros -> Estabelecimentos
     Sleep                     2s
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
+    BaseKeywordsDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
     Fechar com Sim
 
 Parâmetros -> Usuários
@@ -204,7 +202,7 @@ Parâmetros -> Usuários
     RPA.Desktop.Press Keys    u
     RPA.Windows.Get Text      Cadastro de Usuários (1)
     RPA.Windows.Click         Novo
-    BaseDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
+    BaseKeywordsDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
     Fechar janela
      RPA.Windows.Click         Sim
 
@@ -216,7 +214,7 @@ Parâmetros -> Grupos de Usuários
     RPA.Desktop.Press Keys    g
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click       Novo
-    BaseDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupos de Usuários
+    BaseKeywordsDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupos de Usuários
     Fechar janela
      RPA.Windows.Click         Sim
 
@@ -228,7 +226,7 @@ Parâmetros -> Configurações de Estação
     RPA.Desktop.Press Keys    c
     RPA.Windows.Get Text      Configurações da Estação (1)
     RPA.Windows.Click         CDE-WIN-FIN
-    BaseDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações de Estação
+    BaseKeywordsDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações de Estação
     Fechar janela
 
 Parâmetros -> Configurações de Bilheteria
@@ -240,7 +238,7 @@ Parâmetros -> Configurações de Bilheteria
     Sleep                     1s
     RPA.Windows.Get Text      Configurações Bilheteria (1)
     RPA.Windows.Click         Emissão de Bilhete
-    BaseDesktop.Screenshot    Configurações Bilheteria (1)    ${Caminho_Screenshots}Parâmetros/Configurações Bilheteria
+    BaseKeywordsDesktop.Screenshot    Configurações Bilheteria (1)    ${Caminho_Screenshots}Parâmetros/Configurações Bilheteria
     Fechar janela
     RPA.Desktop.Press Keys    right
     RPA.Desktop.Press Keys    enter

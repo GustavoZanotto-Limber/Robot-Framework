@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Corretagem
-Resource         ../../../../../Resources/BaseDesktop.robot
+Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Parques_Naturais/ERP/Corretagem/Consultas/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Corretagem/Consultas/    
 ${nome_print}
 ${nome_exe}=    cde_win_crt
 *** Keywords ***
@@ -26,7 +26,7 @@ Consultas Personalizadas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
     RPA.Windows.Click         Cadastrar Nova Consulta
-    BaseDesktop.Screenshot    Consultas Personalizadas (1)      ${Caminho_Screenshots}Consultas Personalizadas
+    BaseKeywordsDesktop.Screenshot    Consultas Personalizadas (1)      ${Caminho_Screenshots}Consultas Personalizadas
     RPA.Windows.Click         Fechar
     Fechar janela
 
@@ -37,5 +37,5 @@ Log de Alterações
     RPA.Windows.Click         Log de Alterações
     RPA.Windows.Get Text      Consulta Log de Alterações (1)
     RPA.Windows.Click         Carregar
-    BaseDesktop.Screenshot    Consulta Log de Alterações (1)      ${Caminho_Screenshots}Log de Alterações
+    BaseKeywordsDesktop.Screenshot    Consulta Log de Alterações (1)      ${Caminho_Screenshots}Log de Alterações
     Fechar janela
