@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Smoke Test: Balança
 Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
-Suite Setup         Iniciar sessao  ${nome_exe}
+Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
@@ -14,7 +14,6 @@ ${nome_exe}=    cde_win_Balanca
 *** Keywords ***
 
 Consultas
-
     Cadastros
     repetidor de teclas    right    3
 

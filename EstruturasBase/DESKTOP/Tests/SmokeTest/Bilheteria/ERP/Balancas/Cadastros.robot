@@ -16,8 +16,6 @@ ${nome_exe}=    cde_win_Balanca
 
 *** Test Cases ***
 
-*** Test Cases ***
-
 Produtos
     ${nome_print}=            Set Variable     Produtos
     [Tags]     Balancas    Cadastros   SmokeTest
@@ -118,8 +116,7 @@ Conf. Modelos Impressao de Processos
     RPA.Desktop.Press Keys    Enter
     BaseKeywordsDesktop.Screenshot    Conf. Modelos Impressão de Processos (1)    ${Caminho_Screenshots}Conf. Modelos Impressao de Processos
     RPA.Windows.Click         Confirmar
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Conf. Movimentação de Estoque de Produtos
     ${nome_print}=     Set Variable     Conf. Movimentação de Estoque de Produtos
