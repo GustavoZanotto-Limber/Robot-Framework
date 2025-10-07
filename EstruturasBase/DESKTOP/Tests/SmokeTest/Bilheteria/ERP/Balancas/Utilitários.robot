@@ -88,12 +88,13 @@ Configuração de Liberação
     [Tags]     Balancas    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
+    Sleep                   7s
     RPA.Windows.Get Text    Configurações de Liberação (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     BaseKeywordsDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
-    Sleep                   1s
+    Sleep                   2s
     Fechar com Sim
 
 Relatórios Personalizados > Cadastro de Categorias
@@ -122,14 +123,14 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
-Verifica transações abertas
-    ${nome_print}=     Set Variable     Verifica transações abertas
+Verificar transações abertas
+    ${nome_print}=     Set Variable     Verificar transações abertas
     [Tags]     Balancas    Utilitários   SmokeTest
     Utilitários
-    RPA.Windows.Click       Verifica transações abertas
-    RPA.Windows.Get Text    Verifica transações abertas (1)
+    RPA.Windows.Click       Verificar transações abertas
+    RPA.Windows.Get Text    Verificar transações abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
+    BaseKeywordsDesktop.Screenshot  Verificar transações abertas (1)    ${Caminho_Screenshots}Verificar transações abertas
     Fechar janela
 
 Configuração da Balança

@@ -35,6 +35,7 @@ Plano de Contas X Plano Referencial
     RPA.Windows.Click         Carregar
     BaseKeywordsDesktop.Screenshot    Relacionamento Plano de Contas x Plano Referencial    ${Caminho_Screenshots}Plano de Contas X Plano Referencial
     RPA.Windows.Click         Fechar
+    Sleep                     1s
 
 Balancete X Plano Referencial
     ${nome_print}=     Set Variable     Balancete X Plano Referencial

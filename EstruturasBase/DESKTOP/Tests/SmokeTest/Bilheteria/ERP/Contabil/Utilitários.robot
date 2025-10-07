@@ -123,14 +123,14 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar janela
 
-Verifica transações abertas
+Verificar transações abertas
     ${nome_print}=     Set Variable     Verifica transações abertas
     [Tags]     Contabil    Utilitários   SmokeTest    
     Utilitários
-    RPA.Windows.Click       Verifica transações abertas
-    RPA.Windows.Get Text    Verifica transações abertas (1)
+    RPA.Windows.Click       Verificar transações abertas
+    RPA.Windows.Get Text    Verificar transações abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
+    BaseKeywordsDesktop.Screenshot  Verificar transações abertas (1)    ${Caminho_Screenshots}Verificar transações abertas
     Fechar janela
 
 Integrações > SCPH
