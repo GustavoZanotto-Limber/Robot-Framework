@@ -29,6 +29,7 @@ SPED Fiscal (ICMS/IPI)
     RPA.Windows.Get Text      SPED Fiscal (1)
     RPA.Desktop.Press Keys    Shift    tab
     RPA.Desktop.Press Keys    0
+    Sleep                     1s
     RPA.Desktop.Press Keys    Enter
     BaseKeywordsDesktop.Screenshot    SPED Fiscal (1)    ${Caminho_Screenshots}SPED Fiscal (ICMS_IPI)
     RPA.Windows.Click         Confirmar

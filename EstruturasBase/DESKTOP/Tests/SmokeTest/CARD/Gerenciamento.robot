@@ -17,6 +17,14 @@ ${nome_print}
 
 Gerenciamento de Vendas
     [Tags]        CARD    SmokeTest    Gerenciamento
-    ${nome_print}=    Set Variable    Dashboard
+    ${nome_print}=    Set Variable     Dashboard
     Dado que loguei no CARD
-    
+    Quando acesso o menu lateral    2    1
+    Então valido se a tela de Gerenciamento de Vendas foi carregada corretamente
+
+Extração de Dados/Relatórios
+    [Tags]        CARD    SmokeTest    Gerenciamento
+    ${nome_print}=    Set Variable    Extração de Dados/Relatórios
+    Dado que loguei no CARD
+    Quando acesso o menu lateral    2    2
+    Então valido se a tela de Extração de Dados/Relatórios foi carregada corretamente

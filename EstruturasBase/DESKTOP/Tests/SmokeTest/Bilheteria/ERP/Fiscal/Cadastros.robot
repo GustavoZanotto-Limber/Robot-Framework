@@ -260,7 +260,7 @@ Fiscal > ICMS > Observações de Lançamento Fiscal
 
 Fiscal > ICMS > Importar Tabelas Padrões
     ${nome_print}=     Set Variable     Importar Tabelas Padrões
-    [Tags]    Fiscal    Cadastros   SmokeTest
+    [Tags]    Fiscal    Cadastros   SmokeTest    
     Cadastro                Fiscal 
     RPA.Windows.Click       ICMS
     RPA.Desktop.Press Keys  I
@@ -268,17 +268,12 @@ Fiscal > ICMS > Importar Tabelas Padrões
     RPA.Windows.Click       Abrir
     repetidor de teclas     down      2
     RPA.Desktop.Press Keys  Enter
-<<<<<<< HEAD
-    Sleep                   2s
-    BaseDesktop.Screenshot 	Importação de Tabelas Padrões (1)   ${Caminho_Screenshots}Fiscal/ICMS/Importar Tabelas Padrões
-=======
     BaseKeywordsDesktop.Screenshot 	Importação de Tabelas Padrões (1)   ${Caminho_Screenshots}Fiscal/ICMS/Importar Tabelas Padrões
->>>>>>> e9d3a22b4d970b3823137f8c97ccb46e1505a743
     Fechar janela 
 
 Fiscal > ICMS > Configurar Tabela IPM
     ${nome_print}=     Set Variable     Configurar Tabela IPM
-    [Tags]    Fiscal    Cadastros   SmokeTest
+    [Tags]    Fiscal    Cadastros   SmokeTest    
     Cadastro                Fiscal 
     RPA.Windows.Click       ICMS
     RPA.Desktop.Press Keys  N
