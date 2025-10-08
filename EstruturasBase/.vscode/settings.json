@@ -1,0 +1,5 @@
+{
+    "robot.codeFormatter": "robotidy",
+    "robot.lint.unusedKeyword": true,
+    "robot.python.executable": "C:\\Users\\gustavo.zanotto_limb\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+}

@@ -19,5 +19,5 @@ Dashboard
     [Tags]        CARD    SmokeTest    Dashboard
     ${nome_print}=    Set Variable    Dashboard
     Dado que loguei no CARD
-    Quando eu acessar o Dashboard
+    Quando acesso o menu lateral    1
     Então o sistema deve apresentar o Dashboard corretamente
