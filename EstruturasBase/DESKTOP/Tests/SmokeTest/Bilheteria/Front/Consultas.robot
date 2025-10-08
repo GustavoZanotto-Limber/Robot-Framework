@@ -40,12 +40,8 @@ Consulta de Voucher
     Consultas Front         Consulta de Voucher     
     RPA.Windows.Get Text    Consulta de Voucher (1)
     RPA.Windows.Click       Carregar
-<<<<<<< HEAD
-    BaseDesktop.Screenshot  Consulta de Voucher (1)    ${Caminho_Screenshots}Consulta de Voucher
     RPA.Windows.Click       OK
-=======
     BaseKeywordsDesktop.Screenshot  Consulta de Voucher (1)    ${Caminho_Screenshots}Consulta de Voucher
->>>>>>> e9d3a22b4d970b3823137f8c97ccb46e1505a743
     Fechar janela
 
 Consulta de Lançamento de Veículos
