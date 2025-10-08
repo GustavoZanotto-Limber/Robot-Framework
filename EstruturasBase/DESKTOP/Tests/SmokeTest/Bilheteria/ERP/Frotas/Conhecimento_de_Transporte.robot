@@ -38,12 +38,7 @@ Conhecimento de Transporte > Cancelamento
     RPA.Windows.Get Text    Conhecimento de Transporte Eletrônico - Cancelamento (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-<<<<<<< HEAD
-    Sleep                   2s
-    BaseDesktop.Screenshot  Conhecimento de Transporte Eletrônico - Cancelamento (1)                             ${Caminho_Screenshots}Conhecimento de Transporte/Cancelamento
-=======
     BaseKeywordsDesktop.Screenshot  Conhecimento de Transporte Eletrônico - Cancelamento (1)                             ${Caminho_Screenshots}Conhecimento de Transporte/Cancelamento
->>>>>>> e9d3a22b4d970b3823137f8c97ccb46e1505a743
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
