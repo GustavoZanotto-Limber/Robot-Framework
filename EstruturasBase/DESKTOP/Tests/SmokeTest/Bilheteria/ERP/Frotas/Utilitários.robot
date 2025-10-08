@@ -152,7 +152,7 @@ Processos Personalizados
 
 Leiaute Carta Frete
     ${nome_print}=     Set Variable     Leiaute Carta Frete
-    [Tags]    Frotas   Utilitários   SmokeTest    Teste
+    [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários             Leiaute Carta Frete    
     Sleep                   3s
     RPA.Windows.Get Text    FastReport - Untitled.fr3
@@ -164,7 +164,7 @@ Leiaute Carta Frete
 
 Integrações > Importação de CT-e/MDF-e
     ${nome_print}=     Set Variable     Importação de CT-e_MDF-e
-    [Tags]    Frotas   Utilitários   SmokeTest    Teste
+    [Tags]    Frotas   Utilitários   SmokeTest    
     Utilitários com tecla   I 
     RPA.Desktop.Press Keys  I
     Sleep                   1s
