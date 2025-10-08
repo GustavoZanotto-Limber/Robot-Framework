@@ -123,14 +123,14 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
-Verificar transações abertas
-    ${nome_print}=     Set Variable     Verificar transações abertas
+Verificar Transações Abertas
+    ${nome_print}=     Set Variable     Verificar Transações Abertas
     [Tags]     Balancas    Utilitários   SmokeTest
     Utilitários
-    RPA.Windows.Click       Verificar transações abertas
-    RPA.Windows.Get Text    Verificar transações abertas (1)
+    RPA.Windows.Click       Verificar Transações Abertas
+    RPA.Windows.Get Text    Verificar Transações Abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verificar transações abertas (1)    ${Caminho_Screenshots}Verificar transações abertas
+    BaseKeywordsDesktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
     Fechar janela
 
 Configuração da Balança

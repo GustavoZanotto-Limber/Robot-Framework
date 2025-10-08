@@ -152,19 +152,20 @@ Processos Personalizados
 
 Leiaute Carta Frete
     ${nome_print}=     Set Variable     Leiaute Carta Frete
-    [Tags]    Frotas   Utilitários   SmokeTest    
+    [Tags]    Frotas   Utilitários   SmokeTest    Teste
     Utilitários             Leiaute Carta Frete    
     Sleep                   3s
     RPA.Windows.Get Text    FastReport - Untitled.fr3
     BaseKeywordsDesktop.Screenshot  FastReport - Untitled.fr3    ${Caminho_Screenshots}Leiaute Carta Frete
+    Sleep                   1s
     RPA.Desktop.Press Keys  ALT    f4
     Sleep                   1s        
     RPA.Windows.Click       Sim
 
 Integrações > Importação de CT-e/MDF-e
     ${nome_print}=     Set Variable     Importação de CT-e_MDF-e
-    [Tags]    Frotas   Utilitários   SmokeTest    
-    Utilitários com tecla   T 
+    [Tags]    Frotas   Utilitários   SmokeTest    Teste
+    Utilitários com tecla   I 
     RPA.Desktop.Press Keys  I
     Sleep                   1s
     RPA.Windows.Get Text    Importação de XML de Conhecimento de Transporte Eletrônico (1) 
@@ -176,7 +177,7 @@ Integrações > Importação de CT-e/MDF-e
 Integrações > Vincular Valores MDF-e
     ${nome_print}=     Set Variable     Vincular Valores MDF-e
     [Tags]    Frotas   Utilitários   SmokeTest
-    Utilitários com tecla   T 
+    Utilitários com tecla   I 
     RPA.Desktop.Press Keys  V
     RPA.Windows.Get Text   	Vincular Valores Viagens - MDFe (1)
     RPA.Windows.Click       Novo
@@ -186,7 +187,7 @@ Integrações > Vincular Valores MDF-e
 Integrações > Sênior > Configurações
     ${nome_print}=     Set Variable     Configurações
     [Tags]    Frotas   Utilitários   SmokeTest
-    Utilitários com tecla   T 
+    Utilitários com tecla   I 
     RPA.Windows.Click       Sênior
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Cadastro Configuração Integração Sênior (1)
@@ -197,7 +198,7 @@ Integrações > Sênior > Configurações
 Integrações > Sênior > RPAs > Envio
     ${nome_print}=     Set Variable     Envio
     [Tags]    Frotas   Utilitários   SmokeTest
-    Utilitários com tecla   T 
+    Utilitários com tecla   I 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs
     RPA.Desktop.Press Keys  E
@@ -211,7 +212,7 @@ Integrações > Sênior > RPAs > Envio
 Integrações > Sênior > RPAs > Exclusão
     ${nome_print}=     Set Variable     Exclusão
     [Tags]    Frotas   Utilitários   SmokeTest
-    Utilitários com tecla   T 
+    Utilitários com tecla   I 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs
     RPA.Desktop.Press Keys  X
@@ -225,7 +226,7 @@ Integrações > Sênior > RPAs > Exclusão
 Integrações > Sênior > RPAs > Consulta
     ${nome_print}=     Set Variable     Consulta
     [Tags]    Frotas   Utilitários   SmokeTest
-    Utilitários com tecla   T 
+    Utilitários com tecla   I 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs
     RPA.Desktop.Press Keys  C
@@ -239,7 +240,7 @@ Integrações > Sênior > RPAs > Consulta
 Integrações > Poli Frotas > Configuração
     ${nome_print}=     Set Variable     Configuração
     [Tags]    Frotas   Utilitários   SmokeTest
-    Utilitários com tecla   T 
+    Utilitários com tecla   I 
     RPA.Windows.Click       Poli Frotas
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    PoliFrotas - Configurações Integração (1)
@@ -250,7 +251,7 @@ Integrações > Poli Frotas > Configuração
 Integrações > Poli Frotas > Abastecidas > Importar
     ${nome_print}=     Set Variable     Importar
     [Tags]    Frotas   Utilitários   SmokeTest
-    Utilitários com tecla   T 
+    Utilitários com tecla   I 
     RPA.Windows.Click       Poli Frotas
     RPA.Windows.Click       Abastecidas
     RPA.Desktop.Press Keys  I
@@ -265,7 +266,7 @@ Integrações > Poli Frotas > Abastecidas > Importar
 Integrações > Poli Frotas > Abastecidas > Consultar
     ${nome_print}=     Set Variable     Consultar
     [Tags]    Frotas   Utilitários   SmokeTest
-    Utilitários com tecla   T 
+    Utilitários com tecla   I 
     RPA.Windows.Click       Poli Frotas
     RPA.Windows.Click       Abastecidas
     RPA.Desktop.Press Keys  C
@@ -280,7 +281,7 @@ Integrações > Poli Frotas > Abastecidas > Consultar
 Integrações > Poli Frotas > Abastecidas > Relatório
     ${nome_print}=     Set Variable     Relatório
     [Tags]    Frotas   Utilitários   SmokeTest
-    Utilitários com tecla   T 
+    Utilitários com tecla   I 
     RPA.Windows.Click       Poli Frotas
     RPA.Windows.Click       Abastecidas
     RPA.Desktop.Press Keys  R

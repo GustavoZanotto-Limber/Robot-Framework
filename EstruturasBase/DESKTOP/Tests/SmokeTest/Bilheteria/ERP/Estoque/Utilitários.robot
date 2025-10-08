@@ -153,7 +153,7 @@ Registro Magnético
 
 Agenda Telefônica
     ${nome_print}=     Set Variable     Agenda Telefônica
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]     Estoque    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
