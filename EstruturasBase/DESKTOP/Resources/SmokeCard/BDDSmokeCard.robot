@@ -10,13 +10,14 @@ Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\DESK
 Library    Collections
 Library    RPA.PDF
 Resource   ../BaseKeywordsWeb.robot
+Resource   BaseSmokeTestCard.robot
 
 *** Variables ***
 ${URL_Card}=    https://testescard.limbersoftware.com.br/
 *** Keywords ***
     
 #--------------------------------------------DADO--------------------------------------------
-Dado que loguei no CARD
+Dado que estou na página inicial do CARD
     Go To    ${URL_Card}
     Sleep    3s
 
@@ -26,8 +27,8 @@ Dado que loguei no CARD
 Quando acesso o menu lateral
     [Arguments]    ${numero_menu}    ${numero_submenu}=0
     sleep                    1s
-    SeleniumLibrary.Click Element        xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]
-    sleep                    3s
+    SeleniumLibrary.Mouse Over        xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]
+    sleep                    2s
     IF    '${numero_submenu}' != '0'
         SeleniumLibrary.Click Element    xpath:/html/body/div[3]/div/div/div/div/section[${numero_submenu}]/a
         sleep                2s
@@ -114,3 +115,13 @@ Então valido se a tela de Gerenciamento de Compradores foi carregada corretamen
     Sleep                                    1s
     SeleniumLibrary.Click Element            xpath:/html/body/app-root/app-pages/div/div/div/app-compradores/div/mat-expansion-panel/div/div/div/div/div/button
     
+Então valido se a tela de Horário de Vendas foi carregada corretamente
+    Sleep                                        2s
+    Configurar o Relatório                       Horário de Vendas    
+    Sleep                                        1s
+
+Então configuro o relatório com o nome
+    [Arguments]    ${nome_relatorio}
+    Sleep                                        2s
+    Configurar o Relatório                       ${nome_relatorio}
+    Sleep                                        1s

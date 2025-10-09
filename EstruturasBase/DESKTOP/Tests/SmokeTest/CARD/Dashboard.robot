@@ -18,6 +18,6 @@ ${nome_print}
 Dashboard
     [Tags]        CARD    SmokeTest    Dashboard
     ${nome_print}=    Set Variable    Dashboard
-    Dado que loguei no CARD
+    Dado que estou na página inicial do CARD
     Quando acesso o menu lateral    1
     Então o sistema deve apresentar o Dashboard corretamente
