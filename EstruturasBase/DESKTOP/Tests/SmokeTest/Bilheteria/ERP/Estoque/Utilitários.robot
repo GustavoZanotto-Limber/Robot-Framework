@@ -130,14 +130,14 @@ Configurador de Impressões > Transferência entre Terceiros
     BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Transferência entre Terceiros - Estoque (1)    ${Caminho_Screenshots}Configurador de Impressões/Transferência entre Terceiros
     Fechar com Sim
 
-Verifica transações abertas
-    ${nome_print}=     Set Variable     Verifica transações abertas
+Verificar Transações Abertas
+    ${nome_print}=     Set Variable     Verificar Transações Abertas
     [Tags]     Estoque    Utilitários   SmokeTest
     Utilitários
-    RPA.Windows.Click       Verifica transações abertas
-    RPA.Windows.Get Text    Verifica transações abertas (1)
+    RPA.Windows.Click       Verificar Transações Abertas
+    RPA.Windows.Get Text    Verificar Transações Abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
+    BaseKeywordsDesktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
     Fechar janela
 
 Registro Magnético

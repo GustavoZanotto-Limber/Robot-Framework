@@ -139,7 +139,7 @@ Configuração da Balança
     Utilitários
     RPA.Windows.Click       Configuração da Balança
     RPA.Windows.Get Text    Configuração da Balança (1)
-    BaseKeywordsDesktop.Screenshot  Configuração da Balança (1)    ${Caminho_Screenshots}Verifica transações abertas
+    BaseKeywordsDesktop.Screenshot  Configuração da Balança (1)    ${Caminho_Screenshots}Verificar Transações Abertas
     Fechar janela
 
 Integração Royalties Monsanto > Consulta de Entregas/Cancelamentos

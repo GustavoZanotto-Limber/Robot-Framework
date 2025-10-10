@@ -124,7 +124,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     Fechar janela
 
 Verificar Transações Abertas
-    ${nome_print}=     Set Variable     Verifica transações abertas
+    ${nome_print}=     Set Variable     Verificar Transações Abertas
     [Tags]     Contabil    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Verificar Transações Abertas
