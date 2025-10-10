@@ -33,10 +33,15 @@ Configurar o Relatório
     Selecionar a data de hoje nos relatórios
     Sleep    2
 
-Validar o titulo e clicar em novo e em voltar
-    [Arguments]    ${titulo_pagina}
-    Wait Until Element Is Visible    xpath://h1[contains(.,'${titulo_pagina}')]    timeout=10s
-    Element Should Contain           xpath://h1    ${titulo_pagina}
-    Click Element                    xpath://h1/button
-    Wait Until Element Is Visible    xpath://button[contains(.,'Voltar')]    timeout=10s
-    Click Element                    xpath://button[contains(.,'Voltar')]
+Validar o titulo e clicar em novo
+    [Arguments]    ${titulo_pagina}    ${rota_html}  
+    Sleep                                     2s
+    Element Should Contain                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html}/lista-cadastros-com-busca/div/div/h1    ${titulo_pagina}
+    Click Element                             xpath:/html/body/app-root/app-pages/div/div/div//${rota_html}/lista-cadastros-com-busca/div/div/h1/button
+    Sleep                                     2s
+
+Validar titulo de criar ou editar cadastros
+        [Arguments]    ${tiulo_pagina_novo}    ${rota_html_novo}
+        Element Should Contain                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html_novo}/div/div/h1    ${tiulo_pagina_novo}
+        Sleep                                     2s
+                                 

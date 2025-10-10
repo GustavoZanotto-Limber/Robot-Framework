@@ -30,7 +30,7 @@ Quando acesso o menu lateral
     SeleniumLibrary.Mouse Over        xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]
     sleep                    2s
     IF    '${numero_submenu}' != '0'
-        SeleniumLibrary.Click Element    xpath:/html/body/div[3]/div/div/div/div/section[${numero_submenu}]/a
+        SeleniumLibrary.Click Element    xpath:/html/body/div[3]/div/div/div/div/section[${numero_submenu}]/a                                     
         sleep                2s
     END
 
@@ -136,7 +136,30 @@ Então valido se a tela de bilhetes abriu corretamente
     Sleep                                        2s
     SeleniumLibrary.Click Element                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[1]
 
-Então valido a tela e clico em novo e em voltar
-    [Arguments]    ${titulo_pagina}
+Então valido o titulo clico em novo
+    [Arguments]    ${titulo_pagina}    ${tiulo_pagina_novo}    ${rota_html}    ${rota_html_novo}
     Sleep                                        2s
-    Validar o titulo e clicar em novo e em voltar    ${titulo_pagina}
+    Validar o titulo e clicar em novo    ${titulo_pagina}      ${rota_html}
+    Validar titulo de criar ou editar cadastros    ${tiulo_pagina_novo}    ${rota_html_novo}
+
+Então valido o a pagina de metas 
+    Sleep                                 1s
+    Element Should Contain                xpath:/html/body/app-root/app-pages/div/div/div/app-metas/div/div/h1    Configurações de Meta
+    Click Element                         xpath:/html/body/app-root/app-pages/div/div/div/app-metas/div[1]/mat-card/div/form/mat-form-field[1]/div[1]/div/div[2]
+    Sleep                                 1s
+    RPA.Desktop.Type Text                 ZANOTTO Bilheteria ONLINE   
+    RPA.Desktop.Press Keys                Down
+    RPA.Desktop.Press Keys                Enter
+    Click Element                         xpath:/html/body/app-root/app-pages/div/div/div/app-metas/div[1]/mat-card/div/form/button  
+
+Então valido o titulo e clico em novo 2   
+    [Arguments]    ${titulo_pagina}    ${tiulo_pagina_novo}    ${rota_html}    ${rota_html_novo}
+    Validar o titulo e clicar em novo     ${titulo_pagina}     ${rota_html}
+    Element Should Contain                xpath:/html/body/app-root/app-pages/div/div/div/${rota_html_novo}/div[1]/h1    ${tiulo_pagina_novo}
+
+Então valido o titulo das TAG clico em novo 
+    Validar o titulo e clicar em novo      Gerenciamento de Tag's     app-tag
+    Sleep                                  1s
+    Element Should Contain                 xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-tag/div[1]/div/h1    Nova TAG
+
+                                                  
