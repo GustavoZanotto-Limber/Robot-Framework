@@ -125,3 +125,18 @@ Então configuro o relatório com o nome
     Sleep                                        2s
     Configurar o Relatório                       ${nome_relatorio}
     Sleep                                        1s
+
+Então valido se a tela de bilhetes abriu corretamente
+    Sleep                                        2s
+    SeleniumLibrary.Element Should Contain       xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/div/h1    Gerenciamento de Bilhetes
+    Sleep                                        2s
+    SeleniumLibrary.Click Element                xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/div/h1/button
+    Sleep                                        2s
+    SeleniumLibrary.Element Should Contain       xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/div/h1    Novo Bilhete
+    Sleep                                        2s
+    SeleniumLibrary.Click Element                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[1]
+
+Então valido a tela e clico em novo e em voltar
+    [Arguments]    ${titulo_pagina}
+    Sleep                                        2s
+    Validar o titulo e clicar em novo e em voltar    ${titulo_pagina}

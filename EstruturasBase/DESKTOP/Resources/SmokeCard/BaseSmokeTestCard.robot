@@ -32,3 +32,11 @@ Configurar o Relatório
     Selecionar estabelecimento nos relatórios
     Selecionar a data de hoje nos relatórios
     Sleep    2
+
+Validar o titulo e clicar em novo e em voltar
+    [Arguments]    ${titulo_pagina}
+    Wait Until Element Is Visible    xpath://h1[contains(.,'${titulo_pagina}')]    timeout=10s
+    Element Should Contain           xpath://h1    ${titulo_pagina}
+    Click Element                    xpath://h1/button
+    Wait Until Element Is Visible    xpath://button[contains(.,'Voltar')]    timeout=10s
+    Click Element                    xpath://button[contains(.,'Voltar')]

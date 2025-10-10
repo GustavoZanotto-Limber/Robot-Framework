@@ -32,7 +32,7 @@ Lançamentos Contábeis
 
 Lançamentos Contábeis por Lote
     ${nome_print}=     Set Variable     Lançamentos Contábeis por Lote
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]     Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Lançamentos Contábeis por Lote
     RPA.Windows.Get Text      Lançamento contabil por lote (1)  
@@ -42,7 +42,7 @@ Lançamentos Contábeis por Lote
 
 Manutenção de Lançamentos contábeis
     ${nome_print}=     Set Variable     Manutenção de Lançamentos contábeis
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]     Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Manutenção de Lançamentos contábeis
     RPA.Windows.Get Text      Manutenção de Lançamentos contábeis (1)

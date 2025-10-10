@@ -39,6 +39,7 @@ Consulta de Voucher
     ${nome_print}=          Set Variable    Consulta de Voucher
     Consultas Front         Consulta de Voucher     
     RPA.Windows.Get Text    Consulta de Voucher (1)
+    RPA.Desktop.Press Keys  0
     RPA.Windows.Click       Carregar
     RPA.Windows.Click       OK
     BaseKeywordsDesktop.Screenshot  Consulta de Voucher (1)    ${Caminho_Screenshots}Consulta de Voucher
