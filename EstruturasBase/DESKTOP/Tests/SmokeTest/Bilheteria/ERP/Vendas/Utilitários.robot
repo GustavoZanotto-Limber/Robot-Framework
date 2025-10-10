@@ -471,7 +471,9 @@ Reprocessamento de disponibilidade de itens
     ${nome_print}=     Set Variable     Reprocessamento de disponibilidade de itens
     [Tags]     Vendas    Utilitários   SmokeTest      
     Utilitários
-    RPA.Desktop.Press Keys  S
+    Sleep                   1s
+    RPA.Desktop.Press Keys  UP
+    RPA.Desktop.Press Keys  Enter
     RPA.Windows.Get Text   	Reprocessamento de Itens (1)
     repetidor de teclas     tab      1
     RPA.Desktop.Press Keys  0

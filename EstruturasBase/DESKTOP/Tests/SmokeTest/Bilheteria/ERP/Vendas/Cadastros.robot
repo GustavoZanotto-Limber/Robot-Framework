@@ -969,7 +969,7 @@ Fiscal > Mensagem de Notas Fiscais
 
 Fiscal > Espécies de Documentos
     ${nome_print}=     Set Variable     Espécies de Documentos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    E
@@ -984,7 +984,7 @@ Fiscal > Operações Fiscais
     [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
-    RPA.Desktop.Press Keys    R
+    RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Operações Fiscais
@@ -995,7 +995,7 @@ Fiscal > Séries
     [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
-    RPA.Desktop.Press Keys    S
+    RPA.Desktop.Press Keys    R
     RPA.Windows.Get Text      Cadastro de Séries (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Séries (1)    ${Caminho_Screenshots}Fiscal/Séries
@@ -1006,7 +1006,7 @@ Fiscal > CFOP's
     [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
-    RPA.Desktop.Press Keys    F
+    RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de CFOP's (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de CFOP's (1)    ${Caminho_Screenshots}Fiscal/CFOP's

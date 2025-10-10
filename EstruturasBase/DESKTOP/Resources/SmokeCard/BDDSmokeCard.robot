@@ -10,29 +10,25 @@ Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\DESK
 Library    Collections
 Library    RPA.PDF
 Resource   ../BaseKeywordsWeb.robot
+Resource   BaseSmokeTestCard.robot
 
 *** Variables ***
 ${URL_Card}=    https://testescard.limbersoftware.com.br/
 *** Keywords ***
     
 #--------------------------------------------DADO--------------------------------------------
-Dado que loguei no CARD
+Dado que estou na página inicial do CARD
     Go To    ${URL_Card}
     Sleep    3s
 
 
 #--------------------------------------------QUANDO--------------------------------------------
-
-Quando eu acessar o Dashboard
-    Sleep                2s
-    SeleniumLibrary.Click Element   xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[1]/a
-    Sleep    2s
     
 Quando acesso o menu lateral
     [Arguments]    ${numero_menu}    ${numero_submenu}=0
     sleep                    1s
-    SeleniumLibrary.Click Element        xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]
-    sleep                    3s
+    SeleniumLibrary.Mouse Over        xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]
+    sleep                    2s
     IF    '${numero_submenu}' != '0'
         SeleniumLibrary.Click Element    xpath:/html/body/div[3]/div/div/div/div/section[${numero_submenu}]/a
         sleep                2s
@@ -74,4 +70,58 @@ Então valido se a tela de Extração de Dados/Relatórios foi carregada correta
     Sleep                                    1s
     RPA.Desktop.Press Keys                   Down
     RPA.Desktop.Press Keys                   Enter
-    SeleniumLibrary.Click Element            xpath:/html/body/app-root/app-pages/div/div/div/app-relatorios/div/div[2]/filtros-vendas/form/div/section[2]/button[1]
+    SeleniumLibrary.Click Element            xpath:/html/body/app-root/app-pages/div/div/div/app-relatorios/div[1]/button[1]
+    Sleep                                    1s
+
+Então valido se a tela de Gerenciamento - No Show foi carregada corretamente
+    Sleep                                    3s
+    SeleniumLibrary.Element Should Be Visible    xpath:/html/body/app-root/app-pages/div/div/div/app-no-show/div/h1
+    Sleep                                    2s
+    SeleniumLibrary.Click Element            xpath:/html/body/app-root/app-pages/div/div/div/app-no-show/div/div[1]/mat-form-field[1]
+    Sleep                                    1s
+    RPA.Desktop.Type Text                    ZANOTTO Bilheteria ONLINE
+    RPA.Desktop.Press Keys                   Down
+    RPA.Desktop.Press Keys                   Enter
+    Sleep                                    1s
+
+Então valido se a tela de Extrato Eletrônico de Transações foi carregada corretamente
+    Sleep                                    2s
+    SeleniumLibrary.Element Should Contain                   xpath:/html/body/app-root/app-pages/div/div/div/app-split/div/h1    Gerenciamento Split de Pagamento
+    SeleniumLibrary.Click Element                            xpath:/html/body/app-root/app-pages/div/div/div/app-split/div/div/form/mat-expansion-panel/div/div/div/div/div[2]/button
+    Sleep                                    2s
+    SeleniumLibrary.Element Should Contain                   xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]            Selecione um Modo de Pagamento
+    
+Então valido se a tela de Gerenciamento de Compradores foi carregada corretamente
+    Sleep                                    2s
+    SeleniumLibrary.Element Should Contain   xpath:/html/body/app-root/app-pages/div/div/div/app-compradores/h1    Gerenciamento de Compradores
+    Sleep                                    1s
+    #Seleciona o tipo de comprador
+    SeleniumLibrary.Click Element            xpath:/html/body/app-root/app-pages/div/div/div/app-compradores/div/mat-expansion-panel/div/div/div/div/form/div[1]/mat-form-field[1]/div[1]
+    Sleep                                    1s
+    RPA.Desktop.Press Keys                   Down
+    RPA.Desktop.Press Keys                   Enter
+    Sleep                                    1s
+    #Seleciona o período de venda para o dia de hoje
+    SeleniumLibrary.Click Element            xpath:/html/body/app-root/app-pages/div/div/div/app-compradores/div/mat-expansion-panel/div/div/div/div/form/div[1]/mat-form-field[2]/div[1]/div/div[3]/mat-datepicker-toggle/button
+    Sleep                                    1s
+    Repetidor de Teclas                      Enter    2
+    Sleep                                    1s
+    #Seleciona o estabelecimento
+    SeleniumLibrary.Click Element            xpath:/html/body/app-root/app-pages/div/div/div/app-compradores/div/mat-expansion-panel/div/div/div/div/form/div[2]/mat-form-field[3]/div[1]
+    Sleep                                    1s
+    RPA.Desktop.Type Text                    ZANOTTO Bilheteria ONLINE
+    RPA.Desktop.Press Keys                   Down
+    RPA.Desktop.Press Keys                   Enter
+    Sleep                                    1s
+    SeleniumLibrary.Click Element            xpath:/html/body/app-root/app-pages/div/div/div/app-compradores/div/mat-expansion-panel/div/div/div/div/div/button
+    
+Então valido se a tela de Horário de Vendas foi carregada corretamente
+    Sleep                                        2s
+    Configurar o Relatório                       Horário de Vendas    
+    Sleep                                        1s
+
+Então configuro o relatório com o nome
+    [Arguments]    ${nome_relatorio}
+    Sleep                                        2s
+    Configurar o Relatório                       ${nome_relatorio}
+    Sleep                                        1s
