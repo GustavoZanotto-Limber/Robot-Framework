@@ -156,6 +156,7 @@ Então valido o titulo e clico em novo 2
     [Arguments]    ${titulo_pagina}    ${tiulo_pagina_novo}    ${rota_html}    ${rota_html_novo}
     Validar o titulo e clicar em novo     ${titulo_pagina}     ${rota_html}
     Element Should Contain                xpath:/html/body/app-root/app-pages/div/div/div/${rota_html_novo}/div[1]/h1    ${tiulo_pagina_novo}
+                                                
 
 Então valido o titulo das TAG clico em novo 
     Validar o titulo e clicar em novo      Gerenciamento de Tag's     app-tag
@@ -163,3 +164,37 @@ Então valido o titulo das TAG clico em novo
     Element Should Contain                 xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-tag/div[1]/div/h1    Nova TAG
 
                                                   
+Então valido se a tela de Configuração de preços e Disponibilidades foi carregada corretamente
+    Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/div/h1    Configuração de preço
+    Filtrar dropdown           6275    /html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div/mat-form-field/div[1]/div/div[2]
+    Sleep                      4s
+    Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[1]/span[2]/span/span    Tabela de Preço
+    Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[2]
+    Sleep                      2s
+    Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[2]/span[2]/span/span    Tabela de Disponibilidade
+    Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]
+    Sleep                      2s
+    Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]/span[2]/span/span    Calendário
+
+Então valido se a tela de Gerenciamento de Lotes foi carregada corretamente
+    Validar o titulo e clicar em novo    Gerenciamento de Grupos de Lotes    app-grupo-lotes
+    Sleep                                1s
+    Element Should Contain               xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/div/h1    Grupo de Lotes
+    Input Text                           xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/mat-form-field[1]/div[1]/div/div[2]/input    Grupo Gerado por Automação
+    Filtrar dropdown                     1927        /html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/mat-form-field[2]/div[1]/div/div[2]
+    Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/buttons/div/div/button[2]
+    Sleep                                2s
+    Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
+    Sleep                                1s    
+    Element Should Contain               xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[2]/div/tabela-config-lotes/div/div[1]/h3    Selecione a data de visita
+    Sleep                                2s
+    Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
+    Sleep                                1s
+    Element Should Contain               xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[2]/div/tabela-config-lotes/div/div[1]/h3    Selecione a data de visita
+    
+Então valido se a tela de Ocupação de Disponibilidade Online foi carregada corretamente
+    Sleep                      2s
+    Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-disp-online/div/h1    Calendário de disponibilidade online
+    Filtrar dropdown           5787    /html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div/mat-form-field/div[1]/div/div[2]
+    Sleep                      4s  
+    Element Should Be Visible  xpath:/html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div[2]/div[1]/mat-tab-group/div/mat-tab-body[1]/div

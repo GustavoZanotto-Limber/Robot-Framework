@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.9.13 on win32)" generated="2025-10-13T11:54:46.837953" rpa="false" schemaversion="5">
+<suite id="s1" name="Precos e Disponibilidades" source="c:\Users\gustavo.zanotto_limb\Robot-Framework\EstruturasBase\DESKTOP\Tests\SmokeTest\CARD\Precos e Disponibilidades.robot">
+<kw name="Abrir CARD e logar" owner="BaseKeywordsWeb" type="SETUP">
+<kw name="Abrir pagina login card" owner="BaseKeywordsWeb">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:54:48.587747" level="INFO">Opening browser 'Chrome' to base url 'https://testescard.limbersoftware.com.br/#/auth/login'.</msg>
+<arg>https://testescard.limbersoftware.com.br/#/auth/login</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-13T11:54:48.587747" elapsed="1.858016"/>
+</kw>
+<status status="PASS" start="2025-10-13T11:54:48.586743" elapsed="1.859020"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:54:52.455690" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:54:50.447270" elapsed="2.009425"/>
+</kw>
+<kw name="Minimize Browser Window" owner="SeleniumLibrary">
+<doc>Minimizes current browser window.</doc>
+<status status="PASS" start="2025-10-13T11:54:52.456695" elapsed="0.040790"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:54:53.511883" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:54:52.498453" elapsed="1.014422"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-13T11:54:53.513886" elapsed="0.063207"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:54:54.592135" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:54:53.577093" elapsed="1.015042"/>
+</kw>
+<kw name="Preencher email" owner="BaseKeywordsWeb">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:54:55.605258" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:54:54.593147" elapsed="1.012622"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:54:55.607788" level="INFO">Typing text 'gustavozanotto119@gmail.com' into text field 'xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input'.</msg>
+<arg>xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input</arg>
+<arg>gustavozanotto119@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:54:55.606787" elapsed="0.132530"/>
+</kw>
+<status status="PASS" start="2025-10-13T11:54:54.593147" elapsed="1.147173"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:54:56.750326" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:54:55.740320" elapsed="1.011118"/>
+</kw>
+<kw name="Preencher senha" owner="BaseKeywordsWeb">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:54:57.760152" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:54:56.752441" elapsed="1.007711"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:54:57.761239" level="INFO">Typing text 'Zanotto123@' into text field 'name:senha'.</msg>
+<arg>${Senha}</arg>
+<arg>Zanotto123@</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:54:57.761239" elapsed="0.084983"/>
+</kw>
+<status status="PASS" start="2025-10-13T11:54:56.751438" elapsed="1.094784"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:54:58.860651" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:54:57.846222" elapsed="1.014948"/>
+</kw>
+<kw name="clicar em continuar" owner="BaseKeywordsWeb">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:54:58.862182" level="INFO">Clicking element 'xpath:/html/body/app-root/login/div/mat-card/form/button'.</msg>
+<arg>xpath:/html/body/app-root/login/div/mat-card/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:54:58.861170" elapsed="0.072810"/>
+</kw>
+<status status="PASS" start="2025-10-13T11:54:58.861170" elapsed="0.074317"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:02.950621" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:54:58.935487" elapsed="4.016294"/>
+</kw>
+<kw name="Tirar notificação" owner="BaseKeywordsWeb">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:02.953297" level="INFO">Clicking element 'xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/popup-notificacoes/div/div[2]/div[3]/button[2]'.</msg>
+<arg>xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/popup-notificacoes/div/div[2]/div[3]/button[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:55:02.952288" elapsed="0.093290"/>
+</kw>
+<status status="PASS" start="2025-10-13T11:55:02.952288" elapsed="0.093290"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:10.061900" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:03.045578" elapsed="7.016322"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-13T11:55:10.062904" elapsed="0.008742"/>
+</kw>
+<kw name="Colocar Filtro de estabelecimento" owner="BaseKeywordsWeb">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:10.074186" level="INFO">Clicking element 'xpath:/html/body/app-root/app-pages/div/card-toolbar/mat-toolbar/div/button'.</msg>
+<arg>xpath:/html/body/app-root/app-pages/div/card-toolbar/mat-toolbar/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:55:10.074186" elapsed="0.086873"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:12.165980" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:10.161059" elapsed="2.004921"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:12.166987" level="INFO">Typing text 'Zanotto' into text field 'xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/filtro-estabs/table-with-selection/div/div[1]/mat-form-field/div[1]/div[2]/div[1]/input'.</msg>
+<arg>xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/filtro-estabs/table-with-selection/div/div[1]/mat-form-field/div[1]/div[2]/div[1]/input</arg>
+<arg>${estabelecimento}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:55:12.165980" elapsed="0.094940"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-10-13T11:55:12.262428" level="INFO">Pressing keys: Key.tab</msg>
+<arg>Tab</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-10-13T11:55:12.262428" elapsed="0.001012"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:14.277956" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:12.264950" elapsed="2.013006"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-10-13T11:55:14.279651" level="INFO">Pressing keys: Key.space</msg>
+<arg>SPACE</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-10-13T11:55:14.279057" elapsed="0.001596"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:17.284398" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:14.280653" elapsed="3.004371"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:17.287057" level="INFO">Clicking element 'xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/filtro-estabs/div/button[3]'.</msg>
+<arg>xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/filtro-estabs/div/button[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:55:17.286054" elapsed="0.274761"/>
+</kw>
+<arg>Zanotto</arg>
+<status status="PASS" start="2025-10-13T11:55:10.073153" elapsed="7.487662"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:19.565448" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:17.560815" elapsed="2.004633"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:21.567329" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:19.566451" elapsed="2.001864"/>
+</kw>
+<status status="PASS" start="2025-10-13T11:54:48.586743" elapsed="32.981572"/>
+</kw>
+<test id="s1-t1" name="Ocupação de Disponibilidade Online" line="32">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-13T11:55:21.571312" level="INFO">${nome_print} = Ocupação de Disponibilidade Online</msg>
+<var>${nome_print}</var>
+<arg>Ocupação de Disponibilidade Online</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-13T11:55:21.571312" elapsed="0.001010"/>
+</kw>
+<kw name="Dado que estou na página inicial do CARD" owner="BDDSmokeCard">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:21.574332" level="INFO">Opening url 'https://testescard.limbersoftware.com.br/'</msg>
+<arg>${URL_Card}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-13T11:55:21.574332" elapsed="0.204947"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:24.787319" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:21.779279" elapsed="3.008040"/>
+</kw>
+<status status="PASS" start="2025-10-13T11:55:21.573326" elapsed="3.213993"/>
+</kw>
+<kw name="Quando acesso o menu lateral" owner="BDDSmokeCard">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:25.801071" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:24.789239" elapsed="1.011832"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:25.803296" level="INFO">Simulating Mouse Over on element 'xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[5]'.</msg>
+<arg>xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:55:25.802282" elapsed="0.412494"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:28.229913" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:26.215755" elapsed="2.014158"/>
+</kw>
+<if>
+<branch type="IF" condition="'${numero_submenu}' != '0'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:28.230933" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div/div/section[3]/a'.</msg>
+<arg>xpath:/html/body/div[3]/div/div/div/div/section[${numero_submenu}]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:55:28.230933" elapsed="0.082944"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:30.323341" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:28.313877" elapsed="2.009464"/>
+</kw>
+<status status="PASS" start="2025-10-13T11:55:28.229913" elapsed="2.094428"/>
+</branch>
+<status status="PASS" start="2025-10-13T11:55:28.229913" elapsed="2.094428"/>
+</if>
+<arg>5</arg>
+<arg>3</arg>
+<status status="PASS" start="2025-10-13T11:55:24.788233" elapsed="5.536108"/>
+</kw>
+<kw name="Então valido se a tela de Ocupação de Disponibilidade Online foi carregada corretamente" owner="BDDSmokeCard">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:32.326657" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:30.326332" elapsed="2.000325"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:32.354040" level="INFO">Element 'xpath:/html/body/app-root/app-pages/div/div/div/app-disp-online/div/h1' contains text 'Calendário de disponibilidade online'.</msg>
+<arg>xpath:/html/body/app-root/app-pages/div/div/div/app-disp-online/div/h1</arg>
+<arg>Calendário de disponibilidade online</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-10-13T11:55:32.327796" elapsed="0.026244"/>
+</kw>
+<kw name="Filtrar dropdown" owner="BaseSmokeTestCard">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:32.355730" level="INFO">Clicking element 'xpath:/html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div/mat-form-field/div[1]/div/div[2]'.</msg>
+<arg>xpath:${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:55:32.355136" elapsed="0.068638"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:32.424877" level="INFO">Typing text '5787' into text field 'xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input'.</msg>
+<arg>xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input</arg>
+<arg>${codigo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:55:32.423774" elapsed="0.074175"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:34.513802" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:32.497949" elapsed="2.016448"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:34.516606" level="INFO">Clicking element 'xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]'.</msg>
+<arg>xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T11:55:34.515500" elapsed="0.245373"/>
+</kw>
+<arg>5787</arg>
+<arg>/html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div/mat-form-field/div[1]/div/div[2]</arg>
+<status status="PASS" start="2025-10-13T11:55:32.355136" elapsed="2.405737"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T11:55:38.766997" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T11:55:34.761892" elapsed="4.006299"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-10-13T11:55:38.828995" level="INFO">Element 'xpath:/html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div[2]/div[1]/mat-tab-group/div/mat-tab-body[1]/div' is displayed.</msg>
+<arg>xpath:/html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div[2]/div[1]/mat-tab-group/div/mat-tab-body[1]/div</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T11:55:38.768191" elapsed="0.061806"/>
+</kw>
+<status status="PASS" start="2025-10-13T11:55:30.326332" elapsed="8.503665"/>
+</kw>
+<tag>CARD</tag>
+<tag>Precos e Disponibilidades</tag>
+<tag>SmokeTest</tag>
+<status status="PASS" start="2025-10-13T11:55:21.569316" elapsed="17.261680"/>
+</test>
+<kw name="Fechar navegador" owner="BaseKeywordsWeb" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-13T11:55:38.833514" elapsed="2.304350"/>
+</kw>
+<status status="PASS" start="2025-10-13T11:55:38.831995" elapsed="2.306994"/>
+</kw>
+<doc>Smoke Test: CARD</doc>
+<status status="PASS" start="2025-10-13T11:54:46.843956" elapsed="54.295033"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CARD</stat>
+<stat pass="1" fail="0" skip="0">Precos e Disponibilidades</stat>
+<stat pass="1" fail="0" skip="0">SmokeTest</stat>
+</tag>
+<suite>
+<stat name="Precos e Disponibilidades" id="s1" pass="1" fail="0" skip="0">Precos e Disponibilidades</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-13T11:54:46.886248" level="WARN">Error in file 'c:\Users\gustavo.zanotto_limb\Robot-Framework\EstruturasBase\DESKTOP\Resources\BaseKeywordsWeb.robot' on line 218: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

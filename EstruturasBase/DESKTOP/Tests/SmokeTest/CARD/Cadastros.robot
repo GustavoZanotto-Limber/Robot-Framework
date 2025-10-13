@@ -114,29 +114,30 @@ Blocos de Texto
     Então valido o titulo clico em novo    Gerenciamento de Blocos de Texto    Novo Bloco de Texto    app-bloco-texto    app-new-or-edit-bloco-texto
 
 Envios de E-mails
-    [Tags]        CARD    SmokeTest    Cadastros    Teste
+    [Tags]        CARD    SmokeTest    Cadastros    
     ${nome_print}=    Set Variable     Envios de E-mails
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral    4    15
     Então valido o titulo clico em novo    Gerenciamento de Envios de E-mails    Novo envio de e-mails    app-envio-de-emails    app-new-or-edit-envio-de-email
 
 Relatórios V2
-    [Tags]        CARD    SmokeTest    Cadastros    Teste
+    [Tags]        CARD    SmokeTest    Cadastros    
     ${nome_print}=    Set Variable     Relatórios V2
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral    4    16
     Então valido o titulo clico em novo    Gerenciamento de Relatórios    Novo Relatório V2    app-relatorios-v2    app-new-or-edit-relatorio-v2
 
 Agendamentos WhatsApp
-    [Tags]        CARD    SmokeTest    Cadastros    Teste
+    [Tags]        CARD    SmokeTest    Cadastros    
     ${nome_print}=    Set Variable     Agendamentos WhatsApp
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral    4    17
     Então valido o titulo clico em novo    Gerenciamento de Agendamentos    Novo Agendamento    app-agendamentos-wpp    app-new-or-edit-agendamento-wpp
 
 Metas
-    [Tags]        CARD    SmokeTest    Cadastros    Teste
+    [Tags]        CARD    SmokeTest    Cadastros    
     ${nome_print}=    Set Variable     Metas    
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral    4    18
     Então valido o a pagina de metas      
+    
