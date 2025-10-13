@@ -44,4 +44,10 @@ Validar titulo de criar ou editar cadastros
         [Arguments]    ${tiulo_pagina_novo}    ${rota_html_novo}
         Element Should Contain                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html_novo}/div/div/h1    ${tiulo_pagina_novo}
         Sleep                                     2s
-                                 
+
+Filtrar dropdown
+    [Arguments]    ${codigo}    ${xpath}
+    Click Element                        xpath:${xpath}             
+    Input Text                           xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
+    Sleep                                2s
+    Click Element                        xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]                            
