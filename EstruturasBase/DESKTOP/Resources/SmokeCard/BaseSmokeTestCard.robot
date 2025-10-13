@@ -32,3 +32,22 @@ Configurar o Relatório
     Selecionar estabelecimento nos relatórios
     Selecionar a data de hoje nos relatórios
     Sleep    2
+
+Validar o titulo e clicar em novo
+    [Arguments]    ${titulo_pagina}    ${rota_html}  
+    Sleep                                     2s
+    Element Should Contain                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html}/lista-cadastros-com-busca/div/div/h1    ${titulo_pagina}
+    Click Element                             xpath:/html/body/app-root/app-pages/div/div/div//${rota_html}/lista-cadastros-com-busca/div/div/h1/button
+    Sleep                                     2s
+
+Validar titulo de criar ou editar cadastros
+        [Arguments]    ${tiulo_pagina_novo}    ${rota_html_novo}
+        Element Should Contain                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html_novo}/div/div/h1    ${tiulo_pagina_novo}
+        Sleep                                     2s
+
+Filtrar dropdown
+    [Arguments]    ${codigo}    ${xpath}
+    Click Element                        xpath:${xpath}             
+    Input Text                           xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
+    Sleep                                2s
+    Click Element                        xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]                            

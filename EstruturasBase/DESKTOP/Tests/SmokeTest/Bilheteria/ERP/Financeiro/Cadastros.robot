@@ -21,9 +21,9 @@ Terceiros > Cadastro de Terceiros
     RPA.Windows.Click         Terceiros
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
-    RPA.Windows.Click       Novo
+    RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros/Cadastro de Terceiros
-    RPA.Windows.Click       Cancelar (F3)
+    RPA.Windows.Click         Cancelar (F3)
     Fechar com Sim
 
 Terceiros > Contatos > Registros de Contatos
