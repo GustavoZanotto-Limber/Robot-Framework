@@ -225,3 +225,18 @@ Então valido as Requisições de Acordo
     RPA.Desktop.Press Keys    ESC
     Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/div[1]/button
     Sleep                     3s
+
+Então Valido a tela de bilheteria
+    Sleep                     2s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-lista-bilheterias/lista-cadastros-com-busca/div/div/h1    Configurações de bilheteria
+    Sleep                     2s
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-lista-bilheterias/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr/td[6]/button
+    Sleep                     2s
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-editar-bilheteria/div/a
+    Sleep                     2s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-popups-totem/lista-cadastros-com-busca/div/div/h1    Popups - Totem
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-popups-totem/lista-cadastros-com-busca/div/div/h1/button    
+    Sleep                     2s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-popup-totem/div[1]/div/h2    Novo pop-up
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-popup-totem/div[1]/mat-card/div[2]/title-btn-add/div/button
+    Sleep                     2s       
