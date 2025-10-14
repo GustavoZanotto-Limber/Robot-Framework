@@ -1,7 +1,5 @@
 *** Settings ***
 Documentation    Smoke Test: CARD
-Resource         ../../../Resources/BaseKeywordsWeb.robot
-Resource         ../../../Resources/BDDKeywordsWeb.robot
 Resource         ../../../Resources/SmokeCard/BDDSmokeCard.robot
 Resource         ../../../Resources/SmokeCard/BaseSmokeTestCard.robot
 Suite Setup      Abrir CARD e logar 
@@ -10,14 +8,14 @@ Test Teardown    Caso aconteca erro SmokeWeb  ${Caminho_Screenshots}Erros/    ${
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/CARD/Dashboard/
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/CARD/Bilheteria/
 ${nome_print}
 
 *** Test Cases ***
 
-Dashboard
-    [Tags]        CARD    SmokeTest    Dashboard    SmokeCARD
-    ${nome_print}=    Set Variable    Dashboard
+Bilheteria 
+    [Tags]        CARD    SmokeTest    Bilheteria    SmokeCARD
+    ${nome_print}=    Set Variable     Bilheteria 
     Dado que estou na página inicial do CARD
-    Quando acesso o menu lateral    1
-    Então o sistema deve apresentar o Dashboard corretamente
+    Quando acesso o menu lateral    8   
+    Então Valido a tela de bilheteria

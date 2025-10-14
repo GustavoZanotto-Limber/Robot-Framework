@@ -30,7 +30,10 @@ Quando acesso o menu lateral
     SeleniumLibrary.Mouse Over        xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]
     sleep                    2s
     IF    '${numero_submenu}' != '0'
-        SeleniumLibrary.Click Element    xpath:/html/body/div[3]/div/div/div/div/section[${numero_submenu}]/a                                     
+        SeleniumLibrary.Click Element    xpath:/html/body/div[3]/div/div/div/div/section[${numero_submenu}]/a
+        sleep                2s
+    ELSE
+        SeleniumLibrary.Click Element    xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]
         sleep                2s
     END
 
@@ -198,3 +201,42 @@ Então valido se a tela de Ocupação de Disponibilidade Online foi carregada co
     Filtrar dropdown           5787    /html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div/mat-form-field/div[1]/div/div[2]
     Sleep                      4s  
     Element Should Be Visible  xpath:/html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div[2]/div[1]/mat-tab-group/div/mat-tab-body[1]/div
+
+Então Valido a tela de SAC
+    Sleep                     2s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-sac/div/h1    Registro de Chamados
+    Sleep                     2s
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-sac/div/mat-form-field/div[2]/div/mat-hint
+    Sleep                     2s
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-sac/div/mat-card/div/table/tbody/tr/td[9]/button
+    Sleep                     1s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/div/h1    Chamado: 2025-09-700347
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/mat-card/div[2]/mat-form-field/div[1]/div/div[2]/textarea    aaaaaaaaaaaaaa
+    
+Então valido as Requisições de Acordo
+    Sleep                     2s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/h2    Agências/Parceiros que requisitaram um acordo
+    Sleep                     2s
+    Filtrar dropdown          304      /html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/div[1]/mat-form-field[1]/div[1]/div/div[2]
+    RPA.Desktop.Press Keys    ESC        
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/div[1]/mat-form-field[2]/div[1]/div/div[2]
+    Repetidor de Teclas       Down    2
+    RPA.Desktop.Press Keys    Enter
+    RPA.Desktop.Press Keys    ESC
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/div[1]/button
+    Sleep                     3s
+
+Então Valido a tela de bilheteria
+    Sleep                     2s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-lista-bilheterias/lista-cadastros-com-busca/div/div/h1    Configurações de bilheteria
+    Sleep                     2s
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-lista-bilheterias/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr/td[6]/button
+    Sleep                     2s
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-editar-bilheteria/div/a
+    Sleep                     2s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-popups-totem/lista-cadastros-com-busca/div/div/h1    Popups - Totem
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-popups-totem/lista-cadastros-com-busca/div/div/h1/button    
+    Sleep                     2s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-popup-totem/div[1]/div/h2    Novo pop-up
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-popup-totem/div[1]/mat-card/div[2]/title-btn-add/div/button
+    Sleep                     2s       

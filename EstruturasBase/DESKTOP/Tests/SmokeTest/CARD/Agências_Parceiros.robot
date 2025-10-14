@@ -10,14 +10,14 @@ Test Teardown    Caso aconteca erro SmokeWeb  ${Caminho_Screenshots}Erros/    ${
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/CARD/Dashboard/
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/CARD/Agências_Parceiros/
 ${nome_print}
 
 *** Test Cases ***
 
-Dashboard
-    [Tags]        CARD    SmokeTest    Dashboard    SmokeCARD
-    ${nome_print}=    Set Variable    Dashboard
+Requisições de Acordo
+    [Tags]        CARD    SmokeTest    Agências_Parceiros    SmokeCARD
+    ${nome_print}=    Set Variable     Requisições de Acordo
     Dado que estou na página inicial do CARD
-    Quando acesso o menu lateral    1
-    Então o sistema deve apresentar o Dashboard corretamente
+    Quando acesso o menu lateral    7    1
+    Então valido as Requisições de Acordo

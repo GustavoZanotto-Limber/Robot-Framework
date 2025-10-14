@@ -147,7 +147,7 @@ Terceiros > Troca de Vendedor
 
 Terceiros > Cadastro Categoria SICOR (PRONAF)
     ${nome_print}=     Set Variable     Cadastro Categoria SICOR (PRONAF)
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  S
@@ -159,8 +159,9 @@ Terceiros > Cadastro Categoria SICOR (PRONAF)
 
 Terceiros > Aprovação/Rejeição atualização Cadastral Força de Vendas
     ${nome_print}=     Set Variable     Aprovação/Rejeição atualização Cadastral Força de Vendas
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]    Vendas   Cadastros   SmokeTest    
     Cadastros
+    Sleep                   1s
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  P
     RPA.Windows.Get Text    Atualização Cadastral (1)
