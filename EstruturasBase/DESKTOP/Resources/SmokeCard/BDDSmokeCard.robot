@@ -212,3 +212,16 @@ Então Valido a tela de SAC
     Sleep                     1s
     Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/div/h1    Chamado: 2025-09-700347
     Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/mat-card/div[2]/mat-form-field/div[1]/div/div[2]/textarea    aaaaaaaaaaaaaa
+    
+Então valido as Requisições de Acordo
+    Sleep                     2s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/h2    Agências/Parceiros que requisitaram um acordo
+    Sleep                     2s
+    Filtrar dropdown          304      /html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/div[1]/mat-form-field[1]/div[1]/div/div[2]
+    RPA.Desktop.Press Keys    ESC        
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/div[1]/mat-form-field[2]/div[1]/div/div[2]
+    Repetidor de Teclas       Down    2
+    RPA.Desktop.Press Keys    Enter
+    RPA.Desktop.Press Keys    ESC
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/div[1]/button
+    Sleep                     3s
