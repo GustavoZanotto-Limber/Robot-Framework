@@ -60,6 +60,7 @@ Saldos de Lotes/Sintético
     RPA.Windows.Get Text    Relatório de Saldo de Lotes/Sintético (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
+    Sleep                   1s
     BaseKeywordsDesktop.Screenshot  Relatório de Saldo de Lotes/Sintético (1)    ${Caminho_Screenshots}Saldos de Lotes_Sintético
     RPA.Windows.Click       Confirmar
     Fechar janela
