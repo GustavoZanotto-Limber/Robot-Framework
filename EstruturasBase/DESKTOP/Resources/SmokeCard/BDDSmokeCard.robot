@@ -262,3 +262,23 @@ Então valido se a tela de Logs Nuvem foi carregada corretamente
     RPA.Desktop.Press Keys    Enter
     Filtrar dropdown          1927    /html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/mat-form-field[2]/div[1]
     Click Element             xpath:/html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/div/button
+
+Então valido o cadastro de e-commerce
+    Validar o titulo e clicar em novo    Gerenciamento de E-Commerce's    ec-config
+    Sleep                        1s
+    RPA.Desktop.Press Keys    Enter
+    Validar titulo de criar ou editar cadastros    Novo Ecommerce   ew-or-edit-ec-config
+    FOR    ${counter}    IN RANGE    1    5    
+        Click Element    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[${counter}]
+        Sleep            2s
+    END
+
+Então valido o cadastro de Clientes de E-Commerce's
+    Sleep                     2s    
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/clientes-ecommerce/lista-cadastros/div/div[1]/h1    Clientes de E-commerce`s
+    Input Text                xpath:/html/body/app-root/app-pages/div/div/div/clientes-ecommerce/lista-cadastros/div/div[2]/form/mat-form-field[1]/div[1]/div/div[2]/input    Gustavo Zanotto
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/clientes-ecommerce/lista-cadastros/div/div[2]/div/button[1]
+    Sleep                     1s
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/clientes-ecommerce/lista-cadastros/div/mat-card/div/table/tbody/tr[1]/td[7]/button
+    Sleep                     1s
+    Element Should Contain    xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/info-cliente/form/div[1]/div/h2[1]    609 - Gustavo Zanotto Limber
