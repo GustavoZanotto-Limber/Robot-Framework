@@ -2,9 +2,9 @@
 Documentation     Testes regressivos: Programação de Preços
 Resource          ../../../Resources/BaseKeywordsWeb.robot
 Resource          ../../../Resources/BDDKeywordsWeb.robot
-Suite Setup       Abrir CARD e logar 
-Suite Teardown    Inativar Bilhete    ${numero_bilhete}
-Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
+#Suite Setup       Abrir CARD e logar 
+#Suite Teardown    Inativar Bilhete    ${numero_bilhete}
+#Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
 
 *** Variables ***
 
@@ -52,3 +52,4 @@ Cenário 5: Associação de Receita à configuração de preços
     Dado que estou na tela de preço e disponibilidade
     Quando crio uma nova tabela de preço e disponibilidade para o bilhete
     Então valido se o preço foi salvo corretamente   
+
