@@ -247,4 +247,18 @@ Então valido a tela de Perfil de Venda
     Element Should Contain               xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/div/h2    Novo Perfil
     Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
     Sleep                                1s
-    Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[3]           
+    Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[3]      
+
+Então valido se a tela de Notificações foi carregada corretamente     
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/notificacoes/h1    Notificações
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/notificacoes/h1
+    Sleep                     2s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/notificacoes/div/mat-card[5]/logs/div[2]/table/tbody/tr[1]/td[1]    ZANOTTO NAO MEXER
+
+Então valido se a tela de Logs Nuvem foi carregada corretamente
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-title    Gerenciamento de Logs - Nuvem
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/mat-form-field[1]/div[1]/div[2]/div[2]/mat-datepicker-toggle/button
+    Sleep                     1s
+    RPA.Desktop.Press Keys    Enter
+    Filtrar dropdown          1927    /html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/mat-form-field[2]/div[1]
+    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/div/button
