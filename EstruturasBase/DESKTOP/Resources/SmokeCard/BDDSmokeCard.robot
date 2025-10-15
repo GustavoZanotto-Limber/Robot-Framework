@@ -239,4 +239,12 @@ Então Valido a tela de bilheteria
     Sleep                     2s
     Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-popup-totem/div[1]/div/h2    Novo pop-up
     Click Element             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-popup-totem/div[1]/mat-card/div[2]/title-btn-add/div/button
-    Sleep                     2s       
+    Sleep                     2s    
+
+Então valido a tela de Perfil de Venda
+    Validar o titulo e clicar em novo    Gerenciamento de Perfis    app-perfil
+    Sleep                                1s
+    Element Should Contain               xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/div/h2    Novo Perfil
+    Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
+    Sleep                                1s
+    Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[3]           
