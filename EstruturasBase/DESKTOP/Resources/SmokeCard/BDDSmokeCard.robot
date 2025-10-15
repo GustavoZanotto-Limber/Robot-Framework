@@ -37,6 +37,12 @@ Quando acesso o menu lateral
         sleep                2s
     END
 
+Quando acesso a tela de consulta de terminal
+    sleep                    1s
+    SeleniumLibrary.Mouse Over        xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[12]
+    sleep                    1s
+    Click Element            xpath:/html/body/div[3]/div/div/div/div/section[2]/div
+
 #--------------------------------------------ENTÃO--------------------------------------------
 
 Então o sistema deve apresentar o Dashboard corretamente
@@ -282,3 +288,17 @@ Então valido o cadastro de Clientes de E-Commerce's
     Click Element             xpath:/html/body/app-root/app-pages/div/div/div/clientes-ecommerce/lista-cadastros/div/mat-card/div/table/tbody/tr[1]/td[7]/button
     Sleep                     1s
     Element Should Contain    xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/info-cliente/form/div[1]/div/h2[1]    609 - Gustavo Zanotto Limber
+
+Então valido o cadastro de Tick Ingressos
+    Então valido o titulo clico em novo    Gerenciamento de Tick Ingressos - POS    Novo Tick Ingresso    tick_ingressos    new-or-edit-tick
+    Click Element                          xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-tick/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
+    Sleep                                  1s
+    Click Element                          xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-tick/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/div/title-btn-add/div/button
+    Element Should Contain                 xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/add-estabelecimento-usuario/div/div[1]/h2     Novo Terminal
+
+Então valido a localização de Terminal
+    Element Should Contain     xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/h2    Localizar Terminal
+    Input Text                 xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div/mat-form-field/div[1]/div/div[2]/input    18CDFA831895
+    Click Button               xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div/button
+    Sleep                      1s
+    Element Should Be Visible  xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div[2]/div[1]
