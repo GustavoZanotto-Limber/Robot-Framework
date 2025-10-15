@@ -36,7 +36,7 @@ Configurar o Relatório
 Validar o titulo e clicar em novo
     [Arguments]    ${titulo_pagina}    ${rota_html}  
     Sleep                                     2s
-    Element Should Contain                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html}/lista-cadastros-com-busca/div/div/h1    ${titulo_pagina}
+    Element Should Contain                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html}/lista-cadastros-com-busca/div/div/h1    ${titulo_pagina}                                               
     Click Element                             xpath:/html/body/app-root/app-pages/div/div/div//${rota_html}/lista-cadastros-com-busca/div/div/h1/button
     Sleep                                     2s
 
