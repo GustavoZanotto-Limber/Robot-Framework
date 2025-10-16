@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Testes regressivos: Programação de Preços
-Resource          ../../../Resources/BaseKeywordsWeb.robot
-Resource          ../../../Resources/BDDKeywordsWeb.robot
+Resource          ../../../Resources/BILHETERIA/BaseKeywordsWeb.robot
+Resource          ../../../Resources/BILHETERIA/BDDKeywordsWeb.robot
 Suite Setup       Abrir CARD e logar 
 Suite Teardown    Inativar Bilhete    ${numero_bilhete}
 Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
