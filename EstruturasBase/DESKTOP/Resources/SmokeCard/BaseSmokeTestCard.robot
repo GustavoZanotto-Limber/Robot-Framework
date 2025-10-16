@@ -51,3 +51,10 @@ Filtrar dropdown
     Input Text                           xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
     Sleep                                2s
     Click Element                        xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]                            
+    Click Element                        xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]
+
+Mudar para a nova janela
+    @{handles}=    SeleniumLibrary.Get Window Handles
+    ${new_handle}=    Set Variable    ${handles[1]}
+    SeleniumLibrary.Switch Window    ${new_handle}
+    Log    Mudou para a nova janela com o handle: ${new_handle}
