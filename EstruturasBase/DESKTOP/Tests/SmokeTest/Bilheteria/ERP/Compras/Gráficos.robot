@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Compras
-Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
+Resource         ../../../../../Resources/BILHETERIA/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  cde_win_compras
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Smoke Test: Balança
-Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
-Suite Setup         Iniciar sessao  ${nome_exe}
+Resource         ../../../../../Resources/BILHETERIA/BaseKeywordsDesktop.robot
+Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
