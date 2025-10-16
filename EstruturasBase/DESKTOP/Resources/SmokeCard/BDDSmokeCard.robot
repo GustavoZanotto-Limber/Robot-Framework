@@ -137,7 +137,7 @@ Então configuro o relatório com o nome
 
 Então valido se a tela de bilhetes abriu corretamente
     Sleep                                        2s
-    SeleniumLibrary.Element Should Contain       xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/div/h1    Gerenciamento de Bilhetes
+    SeleniumLibrary.Element Should Contain       xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/div/h1  Gerenciamento de Bilhetes
     Sleep                                        2s
     SeleniumLibrary.Click Element                xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/div/h1/button
     Sleep                                        2s
@@ -302,3 +302,21 @@ Então valido a localização de Terminal
     Click Button               xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div/button
     Sleep                      1s
     Element Should Be Visible  xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div[2]/div[1]
+
+Então valido o cadastro de Agrupador de Agências
+    Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/div/h1    Agrupador de Agências/Parceiros
+    Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[1]/mat-form-field/div[1]/div/div[2]
+    RPA.Desktop.Press Keys     Enter
+    Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[2]/mat-form-field/div[1]/div/div[2]
+
+Então valido se a tela de Central de Vendas foi carregada corretamente
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/mat-toolbar     Central de Vendas
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/central-vendas-estabelecimentos/lista-cadastros-com-busca/div/div/h1    Estabelecimentos
+    Click Element             xpath:/html/body/app-root/app-central-vendas/div/div/div/central-vendas-estabelecimentos/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[3]
+    Sleep                     2s
+    Go To    https://testescard.limbersoftware.com.br/#/central-vendas/estabelecimentos/1916/Central%20de%20Vendas%20Zanotto/venda
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[1]/h1    Dados Iniciais
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[3]/h1    Experiências   
+    Click Element             xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/div/ul/li[2]/a/span/span/div
+    Sleep                     1s    
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-gerenciador-vendas/div/div[1]/h1    Gerenciamento de Vendas
