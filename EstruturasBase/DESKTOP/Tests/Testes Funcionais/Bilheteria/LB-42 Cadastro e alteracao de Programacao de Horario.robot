@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Testes regressivos: Cadastro e alteracao de Programacao de Horario
-Resource          ../../../Resources/BaseKeywordsWeb.robot
-Resource          ../../../Resources/BDDKeywordsWeb.robot
+Resource          ../../../Resources/BILHETERIA/BaseKeywordsWeb.robot
+Resource          ../../../Resources/BILHETERIA/BDDKeywordsWeb.robot
 Suite Setup       Abrir CARD e logar 
 Suite Teardown    Inativar bilhete    ${numero_bilhete}
 Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
