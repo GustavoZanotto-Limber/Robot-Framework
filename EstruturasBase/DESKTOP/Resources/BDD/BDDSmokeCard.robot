@@ -9,8 +9,8 @@ Library    String
 Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\DESKTOP\\ScreenShots\\Selenium
 Library    Collections
 Library    RPA.PDF
-Resource   ../BaseKeywordsWeb.robot
-Resource   BaseSmokeTestCard.robot
+Resource   ../Base/BaseKeywordsCARD.robot
+
 
 *** Variables ***
 ${URL_Card}=    https://testescard.limbersoftware.com.br/

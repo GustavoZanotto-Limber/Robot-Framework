@@ -7,8 +7,8 @@ Library    Process
 Library    RPA.PDF
 Library    Collections
 Library    String
-Resource   BaseKeywordsDesktop.robot
-Resource   BaseKeywordsWeb.robot
+Resource   ../Base/BaseKeywordsDesktop.robot
+Resource  ../Base/BaseKeywordsCARD.robot
 
 *** Variables ***
 ${qtd_vagas}

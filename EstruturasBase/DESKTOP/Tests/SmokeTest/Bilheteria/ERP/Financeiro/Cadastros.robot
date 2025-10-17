@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
-Resource         ../../../../../Resources/BaseKeywordsDesktop.robot
+Resource         ../../../../../Resources/Base/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 
