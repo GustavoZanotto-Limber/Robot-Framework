@@ -10,7 +10,7 @@ Library    RPA.PDF
 Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\DESKTOP\\ScreenShots\\Selenium
 Library    RPA.Desktop
 Resource    BaseKeywordsDesktop.robot
-Resource    BDDKeywordsDesktop.robot
+Resource    ../BDD/BDDKeywordsDesktop.robot
 
 *** Variables ***
 ${front}
@@ -450,42 +450,11 @@ Adicionar no perfil
         Log    Bilhete já adicionado ao perfil.
     END
 
-Abro o E-commerce
-    Go to                     https://automacao.testescard.limber.net.br/
-    Sleep                     4s
-    Click Element             accountButton   
-    sleep                     3s
-    Input Text                xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    gustavozanotto119@gmail.com
-    RPA.Desktop.Press keys    Backspace
-    RPA.Desktop.Type Text     m
-    RPA.Desktop.Press keys    Enter
-    Sleep                     15s
-    Input Text                xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    Z
-    RPA.Desktop.Press keys    Backspace
-    RPA.Desktop.Type Text     Zanotto123@
-    RPA.Desktop.Press keys    Enter
-    Sleep                     15s
-
-Pesquisar bilhete no e-commerce
-    [Arguments]   ${nome_bilhete}=Bilhete Automatizado: Por Horario
-    Sleep              4s
-    Input Text         xpath:/html/body/app-root/app-home/div/main/app-dashboard/div/mat-form-field/div[1]/div/div[3]/input       ${nome_bilhete}
-    Sleep              2s
-    Repetidor de teclas       tab    2
-    sleep                     1s    
-    RPA.Desktop.PRess Keys    Enter
-
-Coletar quantidade de vagas (E-Commerce)
-    [Arguments]    ${qtd_vagas}
-    sleep                         4s
-    ${qtd_vagas_no_ecommerce}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[2]/section/div[2]/div[1]/span[2]/span
-    log     ${qtd_vagas_no_ecommerce}
-    Should Contain    ${qtd_vagas_no_ecommerce}    ${qtd_vagas} Vagas
-
 Comparar valores
     [Arguments]    ${valor1}    ${valor2}   
     ${resultado}=    Run keyword and ignore error    Should Be Equal    ${valor1}    ${valor2}  
     RETURN    ${resultado}
+
 
 Inativar bilhete
     [Arguments]    ${numero_bilhete}=6275
@@ -520,34 +489,6 @@ Inativar bilhete
         Sleep            1s
         Click element    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
     END
-
-    
-Coleta Valor bilhete (E-commerce)
-    [Arguments]    ${valor_bilhete}   ${numero_categoria}=1     ${valor_taxa}=0  
-    Sleep                   3s  
-    ${valor_bilhete_EC}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit[${numero_categoria}]/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/section/div
-    IF    $valor_taxa != 0                                    
-    ${valor_taxa_EC}=       SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/div
-    END
-    Log    ${valor_bilhete_EC}
-    Log    ${valor_taxa_EC}
-    Comparar Valores    R$ ${valor_bilhete}    ${valor_bilhete_EC}
-    Comparar Valores    (+R$ ${valor_taxa} Taxa)       ${valor_taxa_EC}
-    Sleep        1s
-
-Adicionar categoria (Compra E-Commerce)
-    [Arguments]    ${categoria}    ${quantidade}
-    Sleep            3s
-    FOR    ${i}    IN RANGE    ${quantidade}
-        Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${categoria}]/div/div[2]/button[2]
-    END
-
-# Retirar categoria (Compra E-Commerce)
-#     [Arguments]    ${categoria}    ${quantidade}
-#     Sleep            3s
-#     FOR    ${i}    IN RANGE    ${quantidade}
-#         Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${categoria}]/div/div[2]/button[1]
-#     END
 
 Retirar Categoria
     [Arguments]        ${numero_categoria}    ${numero_bilhete}=6275
@@ -644,10 +585,6 @@ Preencher convênio
     ELSE
         Fail    Convênio errado ou não existênte.
     END    
-
-Comprar Ingressos
-    Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/div[3]/button
-    sleep            1s
     
 Retirar Exceção
     [Arguments]    ${numero_bilhete}=6275
@@ -670,3 +607,65 @@ Adicionar nova temporada em um bilhete
     Sleep                     1s
     # RPA.Desktop.Press Keys    tab
     # RPA.Desktop.Press Keys    Enter
+
+Caso aconteca erro SmokeWeb
+        [Arguments]     ${Caminho_Screenshots}        ${nome_print}    
+        Run Keyword If Test Failed    Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
+        Run Keyword If Test Failed    Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
+        Run Keyword If Test Failed    Fechar navegador
+        Sleep                         1s
+        Run Keyword If Test Failed    Abrir CARD e logar
+
+Selecionar estabelecimento nos relatórios
+    SeleniumLibrary.Click Element    xpath:/html/body/app-root/app-relatorios/div/div/div/div[2]/mat-select
+    Sleep                            2s
+    SeleniumLibrary.Click Element    xpath:/html/body/div[2]/div[2]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input
+    SeleniumLibrary.Input Text       xpath:/html/body/div[2]/div[2]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input            1929
+    Sleep                            1s
+    RPA.Desktop.Press Keys           Enter
+    Sleep                            2s
+
+Selecionar a data de hoje nos relatórios
+    Sleep    2s
+    SeleniumLibrary.Click Element    xpath:/html/body/app-root/app-relatorios/div/div/div/div[1]/div[2]/mat-datepicker-toggle/button
+    Repetidor de Teclas              Enter    2
+
+Configurar o Relatório
+    [Arguments]    ${nome_relatorio}
+    SeleniumLibrary.Element Should Contain        xpath:/html/body/app-root/app-relatorios/div/div/div/div[1]/h2    ${nome_relatorio}
+    Selecionar estabelecimento nos relatórios
+    Selecionar a data de hoje nos relatórios
+    Sleep    2
+
+Validar o titulo e clicar em novo
+    [Arguments]    ${titulo_pagina}    ${rota_html}  
+    Sleep                                     2s
+    Element Should Contain                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html}/lista-cadastros-com-busca/div/div/h1    ${titulo_pagina}                                               
+    Click Element                             xpath:/html/body/app-root/app-pages/div/div/div//${rota_html}/lista-cadastros-com-busca/div/div/h1/button
+    Sleep                                     2s
+
+Validar titulo de criar ou editar cadastros
+        [Arguments]    ${tiulo_pagina_novo}    ${rota_html_novo}
+        Element Should Contain                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html_novo}/div/div/h1    ${tiulo_pagina_novo}
+        Sleep                                     2s
+
+Filtrar dropdown
+    [Arguments]    ${codigo}    ${xpath}
+    Click Element                        xpath:${xpath}             
+    Input Text                           xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
+    Sleep                                2s
+    Click Element                        xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]                            
+
+Mudar para a nova janela
+    @{handles}=    SeleniumLibrary.Get Window Handles
+    ${new_handle}=    Set Variable    ${handles[1]}
+    SeleniumLibrary.Switch Window    ${new_handle}
+    Log    Mudou para a nova janela com o handle: ${new_handle}
+
+Caso aconteca erro Regressivos CARD
+        [Arguments]     ${Caminho_Screenshots}        ${nome_print}    
+        Run Keyword If Test Failed    Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
+        Run Keyword If Test Failed    Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
+        Run Keyword If Test Failed    Fechar navegador
+        Sleep                         1s
+        Run Keyword If Test Failed    Abrir CARD e logar

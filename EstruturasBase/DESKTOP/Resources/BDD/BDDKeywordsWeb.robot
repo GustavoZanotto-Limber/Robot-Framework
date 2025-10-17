@@ -4,9 +4,10 @@ Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\DESKTOP\
 Library    Process
 Library    Collections
 Library    String
-Resource   BaseKeywordsDesktop.robot
+Resource   ../Base/BaseKeywordsDesktop.robot
 Resource   BDDKeywordsDesktop.robot
-Resource   BaseKeywordsWeb.robot
+Resource  ../Base/BaseKeywordsCARD.robot
+Resource    ../Base/BaseKeywordE-Commerce.robot
 
 *** Variables ***
 ${qtd_vagas}
@@ -167,7 +168,7 @@ Então valido se a disponibilidade integrou corretamente
 Então valido a Exceção no E-commerce e na bilheteria
     [Arguments]    ${numero_bilhete}=6275    ${qtd_vagas}=5
     Colocar o bilhete no e-commerce    ${numero_bilhete}
-    Abro o E-Commerce
+    Abro o E-commerce
     Pesquisar bilhete no e-commerce    
     Coletar quantidade de vagas (E-Commerce)    ${qtd_vagas}
     Então valido se a disponibilidade integrou corretamente    ${numero_bilhete}    ${qtd_vagas}
