@@ -10,7 +10,7 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/LB-45 Emissão de Bilhetes/ 
 ${caminho_logs}=     C:/Users/testes/Documents/Testes Regressivos/
-${nome_exe}=    cde_win_bca_frontR40
+${nome_exe}=    cde_win_bca_front
 ${nome_print}
 ${texto_bilhete}
 *** Keywords ***

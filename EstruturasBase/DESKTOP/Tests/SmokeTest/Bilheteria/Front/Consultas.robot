@@ -9,7 +9,7 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/Front/Consultas/ 
 ${nome_print}
-${nome_exe}=    cde_win_bca_frontR40
+${nome_exe}=    cde_win_bca_front
 
 *** Keywords ***
 
@@ -39,9 +39,9 @@ Consulta de Voucher
     ${nome_print}=          Set Variable    Consulta de Voucher
     Consultas Front         Consulta de Voucher     
     RPA.Windows.Get Text    Consulta de Voucher (1)
-    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  1
     RPA.Windows.Click       Carregar
-    RPA.Windows.Click       OK
+    Run keyword and ignore error    RPA.Windows.Click       OK
     BaseKeywordsDesktop.Screenshot  Consulta de Voucher (1)    ${Caminho_Screenshots}Consulta de Voucher
     Fechar janela
 

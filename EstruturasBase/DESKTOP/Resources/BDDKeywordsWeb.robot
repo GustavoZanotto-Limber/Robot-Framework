@@ -39,7 +39,7 @@ Dado que estou na tela de Exceções de Preço e Disponibilidade
     Sleep                       2s
     
 Dado que estou na tela de emissão de bilhetes
-    Iniciar sessao        cde_win_bca_frontR40
+    Iniciar sessao        cde_win_bca_front
     Ir Para Emissão de Bilhetes
     Sleep    2s
 
@@ -126,7 +126,7 @@ Então valido se o bilhete foi criado corretamente
     Wait Until Element Is Visible      xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]
     ${codigo_e_nome}=    Pegar codigo e nome do Ultimo Bilhete
     Should Contain        ${codigo_e_nome[1]}     Bilhete Automatizado: Por Horario
-    Iniciar sessao        cde_win_bca_frontR40
+    Iniciar sessao        cde_win_bca_front
     Ir Para Emissão de Bilhetes
     Escrever para consultar    ${codigo_e_nome[0]}
     ${texto}=    Run keyword and ignore error    RPA.Windows.Get Text       	Bilhete não cadastrado, ou específico para venda em outro PDV.
@@ -150,7 +150,7 @@ Então valido se o bilhete foi criado corretamente
 
 Então valido se a disponibilidade integrou corretamente  
     [Arguments]    ${numero_bilhete}=6275    ${qtd_vagas}=1000
-    Iniciar sessao    cde_win_bca_frontR40
+    Iniciar sessao    cde_win_bca_front
     Ir Para Emissão de Bilhetes
     ${qtd_vagas_bilhete}=    Selecionar o bilhete e retornar quantidade de vagas (categoria)   ${numero_bilhete}    1
     ${qtd_vagas_bilhete}=        Convert to Integer    ${qtd_vagas_bilhete}
@@ -208,7 +208,7 @@ Então Valido se o convênio foi salvo corretamente
     Comprar Ingressos
     Preencher convênio
     sleep                1s
-    Iniciar sessao       cde_win_bca_frontR40 
+    Iniciar sessao       cde_win_bca_front 
     Ir Para Emissão de Bilhetes
     ${nome_coletado}=    Selecionar o bilhete e o convênio    6275    1
     IF    $nome_coletado != CONVÊNIO
@@ -230,7 +230,7 @@ Então valido se os preços foram salvos corretamente
     Coleta Valor bilhete (E-commerce)     ${valor_cat2}       2
     Coleta Valor bilhete (E-commerce)     ${valor_cat3}       3
     sleep                1s
-    Iniciar sessao       cde_win_bca_frontR40 
+    Iniciar sessao       cde_win_bca_front 
     Ir Para Emissão de Bilhetes
     Selecionar o bilhete  6275   1
     Selecionar o bilhete  6275   2
@@ -259,7 +259,7 @@ Então valido se o preço foi salvo corretamente
     Adicionar categoria (Compra E-Commerce)    1    1
     Coleta Valor bilhete (E-commerce)     ${valor_cat1}       1
     sleep                1s
-    Iniciar sessao       cde_win_bca_frontR40 
+    Iniciar sessao       cde_win_bca_front 
 
 Então valido as temporadas no E-Commerce
     [Arguments]    ${numero_bilhete}=6275
