@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Smoke Test: Front
-Resource         ../../../../Resources/BaseKeywordsDesktop.robot
-Resource         ../../../../Resources/BDDKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/BDD/BDDKeywordsDesktop.robot
 Suite Setup      Iniciar sessao     ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -17,7 +17,7 @@ ${nome_exe}=    cde_win_bca_front
 *** Test Cases    ***
 
 Abertura / Fechamento
-    [Tags]    Caixa Operador    Front    SmokeTest  
+    [Tags]    Caixa Operador    Front    SmokeTest  SmokeTestERP
     ${nome_print}=                      Set Variable    Abertura_Fechamento
     Caixa Operador
     RPA.Windows.Click                   Abertura / Fechamento
@@ -29,7 +29,7 @@ Abertura / Fechamento
     RPA.Windows.Click                   OK
 
 Suprimento / Sangria
-    [Tags]    Caixa Operador    Front    SmokeTest  
+    [Tags]    Caixa Operador    Front    SmokeTest    SmokeTestERP
     ${nome_print}=          Set Variable    Suprimento _ Sangria
     Caixa Operador
     RPA.Windows.Click       Suprimento / Sangria

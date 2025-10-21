@@ -10,14 +10,7 @@ Test Teardown    Caso aconteca erro SmokeWeb  ${Caminho_Screenshots}Erros/    ${
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/CARD/Dashboard/
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/CARD/Paginas sem atenticação/
 ${nome_print}
 
 *** Test Cases ***
-
-Dashboard
-    [Tags]        CARD    SmokeTest    Dashboard    SmokeCARD
-    ${nome_print}=    Set Variable    Dashboard
-    Dado que estou na página inicial do CARD
-    Quando acesso o menu lateral    1
-    Então o sistema deve apresentar o Dashboard corretamente

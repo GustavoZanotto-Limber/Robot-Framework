@@ -361,6 +361,7 @@ Selecionar o bilhete e o convênio
     RPA.Desktop.Press Keys    F6
     Sleep                     0.5s
     Repetidor de teclas       down    ${qtd_clicks_categoria}   
+    Sleep                     1s
     RPA.Windows.Click         Confirmar
     Sleep                     1s
     RPA.Desktop.Press Keys    right

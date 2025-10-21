@@ -9,8 +9,8 @@ Library    String
 Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\DESKTOP\\ScreenShots\\Selenium
 Library    Collections
 Library    RPA.PDF
-Resource   ../BaseKeywordsWeb.robot
-Resource   BaseSmokeTestCard.robot
+Resource   ../Base/BaseKeywordsCARD.robot
+
 
 *** Variables ***
 ${URL_Card}=    https://testescard.limbersoftware.com.br/
@@ -28,12 +28,11 @@ Quando acesso o menu lateral
     [Arguments]    ${numero_menu}    ${numero_submenu}=0
     sleep                    1s
     SeleniumLibrary.Mouse Over        xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]
-    sleep                    2s
     IF    '${numero_submenu}' != '0'
-        SeleniumLibrary.Click Element    xpath:/html/body/div[3]/div/div/div/div/section[${numero_submenu}]/a
+        Clicar no Elemento    xpath:/html/body/div[3]/div/div/div/div/section[${numero_submenu}]/a
         sleep                2s
     ELSE
-        SeleniumLibrary.Click Element    xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]
+        Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/card-sidenav/div/app-menu-item[${numero_menu}]
         sleep                2s
     END
 
@@ -46,16 +45,13 @@ Quando acesso a tela de consulta de terminal
 #--------------------------------------------ENTÃO--------------------------------------------
 
 Então o sistema deve apresentar o Dashboard corretamente
-    Sleep                                    5s
-    SeleniumLibrary.Click Element  xpath:/html/body/app-root/app-pages/div/div/div/dashboard/div/div[1]/button[1]
-    Sleep    5s
-    SeleniumLibrary.Click Element  xpath:/html/body/app-root/app-pages/div/div/div/dashboard/div/div[1]/button[3]
-    Sleep    1s
-    SeleniumLibrary.Click Element  xpath:/html/body/div[3]/div[2]/div/div/mat-form-field
-    RPA.Desktop.Type Text          Zanotto
+    Clicar no Botão                xpath:/html/body/app-root/app-pages/div/div/div/dashboard/div/div[1]/button[1]
+    Clicar no Botão                xpath:/html/body/app-root/app-pages/div/div/div/dashboard/div/div[1]/button[3]
+    Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/div/mat-form-field
+    RPA.Desktop.Type Text          Automação
     Repetidor de Teclas            Down    2
     RPA.Desktop.Press Keys         Enter
-    SeleniumLibrary.Click Element  xpath:/html/body/div[3]/div[2]/div/div/div/button[2]
+    Clicar no Botão                xpath:/html/body/div[3]/div[2]/div/div/div/button[2]
     Sleep                          2s
     
 Então valido se a tela de Gerenciamento de Vendas foi carregada corretamente
@@ -137,7 +133,7 @@ Então configuro o relatório com o nome
 
 Então valido se a tela de bilhetes abriu corretamente
     Sleep                                        2s
-    SeleniumLibrary.Element Should Contain       xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/div/h1    Gerenciamento de Bilhetes
+    SeleniumLibrary.Element Should Contain       xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/div/h1  Gerenciamento de Bilhetes
     Sleep                                        2s
     SeleniumLibrary.Click Element                xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/div/h1/button
     Sleep                                        2s
@@ -154,12 +150,12 @@ Então valido o titulo clico em novo
 Então valido o a pagina de metas 
     Sleep                                 1s
     Element Should Contain                xpath:/html/body/app-root/app-pages/div/div/div/app-metas/div/div/h1    Configurações de Meta
-    Click Element                         xpath:/html/body/app-root/app-pages/div/div/div/app-metas/div[1]/mat-card/div/form/mat-form-field[1]/div[1]/div/div[2]
+    Clicar no Elemento                    xpath:/html/body/app-root/app-pages/div/div/div/app-metas/div[1]/mat-card/div/form/mat-form-field[1]/div[1]/div/div[2]
     Sleep                                 1s
-    RPA.Desktop.Type Text                 ZANOTTO Bilheteria ONLINE   
+    RPA.Desktop.Type Text                 Automação  
     RPA.Desktop.Press Keys                Down
     RPA.Desktop.Press Keys                Enter
-    Click Element                         xpath:/html/body/app-root/app-pages/div/div/div/app-metas/div[1]/mat-card/div/form/button  
+    Clicar no Botão                       xpath:/html/body/app-root/app-pages/div/div/div/app-metas/div[1]/mat-card/div/form/button  
 
 Então valido o titulo e clico em novo 2   
     [Arguments]    ${titulo_pagina}    ${tiulo_pagina_novo}    ${rota_html}    ${rota_html_novo}
@@ -187,34 +183,33 @@ Então valido se a tela de Configuração de preços e Disponibilidades foi carr
 
 Então valido se a tela de Gerenciamento de Lotes foi carregada corretamente
     Validar o titulo e clicar em novo    Gerenciamento de Grupos de Lotes    app-grupo-lotes
-    Sleep                                1s
+    Sleep    1s
     Element Should Contain               xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/div/h1    Grupo de Lotes
-    Input Text                           xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/mat-form-field[1]/div[1]/div/div[2]/input    Grupo Gerado por Automação
-    Filtrar dropdown                     1927        /html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/mat-form-field[2]/div[1]/div/div[2]
-    Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/buttons/div/div/button[2]
-    Sleep                                2s
-    Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
+    Inserir Texto                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/mat-form-field[1]/div[1]/div/div[2]/input    Grupo Gerado por Automação
+    Filtrar dropdown                     2503        /html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/mat-form-field[2]/div[1]/div/div[2]
+    Clicar no Elemento                   xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/buttons/div/div/button[2]
+    Clicar no Elemento                   xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
     Sleep                                1s    
     Element Should Contain               xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[2]/div/tabela-config-lotes/div/div[1]/h3    Selecione a data de visita
-    Sleep                                2s
-    Click Element                        xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
+    Clicar no Elemento                   xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
     Sleep                                1s
     Element Should Contain               xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[2]/div/tabela-config-lotes/div/div[1]/h3    Selecione a data de visita
-    
+    Clicar no Elemento                   xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[1]
+    Clicar no Botão                      xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/buttons/div/div/button[1]
+    Clicar no Botão                      xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/confirm-dialog/div/div[3]/button[2]
+
 Então valido se a tela de Ocupação de Disponibilidade Online foi carregada corretamente
     Sleep                      2s
     Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-disp-online/div/h1    Calendário de disponibilidade online
-    Filtrar dropdown           5787    /html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div/mat-form-field/div[1]/div/div[2]
+    Filtrar dropdown           6436    /html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div/mat-form-field/div[1]/div/div[2]
     Sleep                      4s  
     Element Should Be Visible  xpath:/html/body/app-root/app-pages/div/div/div/app-disp-online/mat-card/div[2]/div[1]/mat-tab-group/div/mat-tab-body[1]/div
 
 Então Valido a tela de SAC
     Sleep                     2s
     Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-sac/div/h1    Registro de Chamados
-    Sleep                     2s
-    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-sac/div/mat-form-field/div[2]/div/mat-hint
-    Sleep                     2s
-    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-sac/div/mat-card/div/table/tbody/tr/td[9]/button
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/app-sac/div/mat-form-field/div[2]/div/mat-hint
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/app-sac/div/mat-card/div/table/tbody/tr/td[9]/button
     Sleep                     1s
     Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/div/h1    Chamado: 2025-09-700347
     Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/mat-card/div[2]/mat-form-field/div[1]/div/div[2]/textarea    aaaaaaaaaaaaaa
@@ -223,7 +218,7 @@ Então valido as Requisições de Acordo
     Sleep                     2s
     Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/h2    Agências/Parceiros que requisitaram um acordo
     Sleep                     2s
-    Filtrar dropdown          304      /html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/div[1]/mat-form-field[1]/div[1]/div/div[2]
+    Filtrar dropdown          349      /html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/div[1]/mat-form-field[1]/div[1]/div/div[2]
     RPA.Desktop.Press Keys    ESC        
     Click Element             xpath:/html/body/app-root/app-pages/div/div/div/app-requisicoes-acordo/div[1]/mat-form-field[2]/div[1]/div/div[2]
     Repetidor de Teclas       Down    2
@@ -257,17 +252,17 @@ Então valido a tela de Perfil de Venda
 
 Então valido se a tela de Notificações foi carregada corretamente     
     Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/notificacoes/h1    Notificações
-    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/notificacoes/h1
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/notificacoes/h1
     Sleep                     2s
-    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/notificacoes/div/mat-card[5]/logs/div[2]/table/tbody/tr[1]/td[1]    ZANOTTO NAO MEXER
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/notificacoes/div/mat-card[5]/logs/div[2]/table/tbody/tr[1]/td[1]    Automação
 
 Então valido se a tela de Logs Nuvem foi carregada corretamente
     Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-title    Gerenciamento de Logs - Nuvem
-    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/mat-form-field[1]/div[1]/div[2]/div[2]/mat-datepicker-toggle/button
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/mat-form-field[1]/div[1]/div[2]/div[2]/mat-datepicker-toggle/button
     Sleep                     1s
     RPA.Desktop.Press Keys    Enter
-    Filtrar dropdown          1927    /html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/mat-form-field[2]/div[1]
-    Click Element             xpath:/html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/div/button
+    Filtrar dropdown          2503    /html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/mat-form-field[2]/div[1]
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/div/button
 
 Então valido o cadastro de e-commerce
     Validar o titulo e clicar em novo    Gerenciamento de E-Commerce's    ec-config
@@ -275,8 +270,7 @@ Então valido o cadastro de e-commerce
     RPA.Desktop.Press Keys    Enter
     Validar titulo de criar ou editar cadastros    Novo Ecommerce   ew-or-edit-ec-config
     FOR    ${counter}    IN RANGE    1    5    
-        Click Element    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[${counter}]
-        Sleep            2s
+        Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[${counter}]
     END
 
 Então valido o cadastro de Clientes de E-Commerce's
@@ -302,3 +296,21 @@ Então valido a localização de Terminal
     Click Button               xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div/button
     Sleep                      1s
     Element Should Be Visible  xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div[2]/div[1]
+
+Então valido o cadastro de Agrupador de Agências
+    Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/div/h1    Agrupador de Agências/Parceiros
+    Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[1]/mat-form-field/div[1]/div/div[2]
+    RPA.Desktop.Press Keys     Enter
+    Click Element              xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[2]/mat-form-field/div[1]/div/div[2]
+
+Então valido se a tela de Central de Vendas foi carregada corretamente
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/mat-toolbar     Central de Vendas
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/central-vendas-estabelecimentos/lista-cadastros-com-busca/div/div/h1    Estabelecimentos
+    Click Element             xpath:/html/body/app-root/app-central-vendas/div/div/div/central-vendas-estabelecimentos/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[3]
+    Sleep                     2s
+    Go To    https://testescard.limbersoftware.com.br/#/central-vendas/estabelecimentos/1916/Central%20de%20Vendas%20Zanotto/venda
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[1]/h1    Dados Iniciais
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[3]/h1    Experiências   
+    Click Element             xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/div/ul/li[2]/a/span/span/div
+    Sleep                     1s    
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-gerenciador-vendas/div/div[1]/h1    Gerenciamento de Vendas
