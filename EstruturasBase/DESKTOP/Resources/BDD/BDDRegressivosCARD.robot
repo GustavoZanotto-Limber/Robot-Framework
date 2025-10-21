@@ -10,6 +10,7 @@ Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\DESK
 Library    Collections
 Library    RPA.PDF
 Resource   ../Base/BaseKeywordsCARD.robot
+Resource    ../Base/BaseKeywordE-Commerce.robot
 
 
 *** Variables ***
@@ -19,14 +20,22 @@ ${URL_E-Commerce}=     https://regressivoscard.testescard.limber.net.br/
     
 # ---------------------DADO---------------------
 Dado que estou no e-commerce
-    Go To   ${URL_E-Commerce}
+    Abro o E-commerce
     Sleep    2s
 
 
 # ---------------------Quando---------------------
 
-
-    
-
+Quando faço a venda do bilhete
+    [Arguments]    ${nome_bilhete}
+    Pesquisar bilhete no e-commerce    ${nome_bilhete}
+    Selecionar o dia de hoje no calendario
+    Adicionar Categoria (Compra E-Commerce)    1    2
+    Comprar Ingressos
+    Ir Para o Pagamento
+    Preencher dados do cartão
 
 # ---------------------Então---------------------
+
+# Então valido a impressão no e-commerce
+    

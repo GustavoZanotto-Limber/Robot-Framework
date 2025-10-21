@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 *** Variables ***
 ${Caminho_Screenshots}=   ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/Front/Manutenções/
 ${nome_print}
-${nome_exe}=    cde_win_bca_frontR40
+${nome_exe}=    cde_win_bca_front
 
 *** Keywords ***
 
@@ -19,7 +19,7 @@ Manutenções
 *** Test Cases    ***
 
 Emissão de Bilhetes
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Emissão de Bilhetes
     Manutenções
     RPA.Windows.Click         Emissão de Bilhetes
@@ -32,7 +32,7 @@ Emissão de Bilhetes
     RPA.Windows.Click         Sim
 
 Reimpressão de Bilhetes
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Reimpressão de Bilhetes
     Manutenções
     RPA.Windows.Click       Reimpressão de Bilhetes
@@ -44,7 +44,7 @@ Reimpressão de Bilhetes
     Fechar janela
 
 Cancelamentos de Bilhetes
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Cancelamento de Bilhetes
     Manutenções
     RPA.Windows.Click       Cancelamento de Bilhetes
@@ -58,7 +58,7 @@ Cancelamentos de Bilhetes
     RPA.Windows.Click       Fechar
 
 Remarcações de Visitas
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Remarcação de Vendas
     Manutenções
     RPA.Windows.Click       Remarcação de Visitas
@@ -69,7 +69,7 @@ Remarcações de Visitas
     RPA.Windows.Click       Fechar
 
 Reservas -> Lançamentos
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Lançamento de Reservas
     Manutenções
     RPA.Windows.Click         Reservas
@@ -80,7 +80,7 @@ Reservas -> Lançamentos
     Fechar com Sim
 
 Reservas -> Cancelamento
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Cancelamento de Reservas
     Manutenções
     RPA.Windows.Click       Reservas
@@ -93,7 +93,7 @@ Reservas -> Cancelamento
     Fechar janela
 
 Reservas -> Alteração
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Alteração de Reservas
     Manutenções
     RPA.Windows.Click         Reservas
@@ -106,7 +106,7 @@ Reservas -> Alteração
     Fechar janela
 
 Reservas -> Remarcação de Visitas
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Remarcação de Visitas
     Manutenções
     RPA.Windows.Click         Reservas
@@ -118,7 +118,7 @@ Reservas -> Remarcação de Visitas
     RPA.Windows.Click         Fechar
 
 Lançamento de Isenções
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Lançamento de Isenções
     Manutenções
     RPA.Windows.Click       Lançamento de Isenções
@@ -129,7 +129,7 @@ Lançamento de Isenções
 
 
 Lançamento de Veículos
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Lançamento de Veículos
     Manutenções
     RPA.Windows.Click       Lançamento de Veículos
@@ -141,7 +141,7 @@ Lançamento de Veículos
     Fechar com Sim
 
 Lançamento de Vouchers Pendentes
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Lançamento de Vouchers Pendentes
     Manutenções
     RPA.Windows.Click       Lançamento de Vouchers Pendentes
@@ -152,7 +152,7 @@ Lançamento de Vouchers Pendentes
     RPA.Windows.Click       Fechar
 
 Comissões de Guias -> Pagamento
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Pagamento de Comissões
     Manutenções
     RPA.Windows.Click         Comissões de Guias
@@ -164,7 +164,7 @@ Comissões de Guias -> Pagamento
     Fechar janela
 
 Comissões de Guias -> Estorno
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Estorno de Comissões
     Manutenções
     RPA.Windows.Click         Comissões de Guias
@@ -175,7 +175,7 @@ Comissões de Guias -> Estorno
     Fechar janela
 
 Comissões de Guias -> Vincular Guia em Venda
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Vincular Guia em Venda
     Manutenções
     RPA.Windows.Click         Comissões de Guias
@@ -186,7 +186,7 @@ Comissões de Guias -> Vincular Guia em Venda
     Fechar janela
 
 Comissões de Guias -> Relatório
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Relatório de Comissões
     Manutenções
     RPA.Windows.Click         Comissões de Guias
@@ -199,7 +199,7 @@ Comissões de Guias -> Relatório
     Fechar janela
 
 Consulta/Manutenção Consumo Interno
-    [Tags]    Manutenções    Front    SmokeTest     
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP     
     ${nome_print}=          Set Variable    Consulta/Manutenção Consumo Interno
     Manutenções
     RPA.Windows.Click       Consulta/Manutenção Consumo Interno
@@ -209,7 +209,7 @@ Consulta/Manutenção Consumo Interno
     Fechar janela
 
 Bloqueio/Desbloqueio Consumo Interno
-    [Tags]    Manutenções    Front    SmokeTest     
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP     
     ${nome_print}=          Set Variable    Bloqueio/Desbloqueio Consumo Interno
     Manutenções
     RPA.Windows.Click       Bloqueio/Desbloqueio Consumo Interno
@@ -220,7 +220,7 @@ Bloqueio/Desbloqueio Consumo Interno
     Fechar janela
 
 Devoluções de Vendas
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Devoluções de Vendas
     Manutenções
     RPA.Windows.Click       Devoluções de Vendas
@@ -230,7 +230,7 @@ Devoluções de Vendas
     Fechar janela
 
 Configurações Totem
-    [Tags]    Manutenções    Front    SmokeTest  
+    [Tags]    Manutenções    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=          Set Variable    Configurações Totem
     Manutenções
     RPA.Windows.Click       Configurações Totem

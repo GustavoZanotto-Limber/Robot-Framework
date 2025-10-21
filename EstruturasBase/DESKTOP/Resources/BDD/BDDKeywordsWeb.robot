@@ -23,13 +23,13 @@ Dado que estou na tela de criação de bilhete
     Sleep    1s
 
 Dado que estou na tela de preço e disponibilidade
-    [Arguments]    ${numero_bilhete}=6275    ${nome_tabela}=Tabela de Preço Automatizada     ${taxa}=0
-    Adicionar no Perfil    ${numero_bilhete}
+    [Arguments]    ${numero_bilhete}    ${nome_tabela}=Tabela de Preço Automatizada     ${taxa}=0
+    Adicionar no Perfil    ${numero_bilhete}    962
     Criar tabela de preço               ${numero_bilhete}   ${nome_tabela}     500    ${taxa}
     Sleep    1s
 
 Dado que estou na tela de Exceções de Preço e Disponibilidade
-    [Arguments]    ${numero_bilhete}=6275
+    [Arguments]    ${numero_bilhete}
     Sleep          2s
     Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
     Sleep    2s
@@ -40,19 +40,21 @@ Dado que estou na tela de Exceções de Preço e Disponibilidade
     Sleep                       2s
     
 Dado que estou na tela de emissão de bilhetes
-    Iniciar sessao        cde_win_bca_frontR40
+    Iniciar sessao        cde_win_bca_front
     Ir Para Emissão de Bilhetes
     Sleep    2s
 
 Dado que o usuário acessa o Cadastro de Categorias
-    Cadastrar nova categoria      Categoria Gerada pelos Testes Automatizados: CONVÊNIO    CONVÊNIO
+    Cadastrar nova categoria      Categoria Convênio    CONVÊNIO
+    ${nome_numero}=    Pegar codigo e nome da Ultima Categoria
+    Set Suite Variable    $numero_categoria   ${nome_numero[0]}
 
 Dado que adicionei uma categoria no bilhete 
-     Adicionar categoria em bilhetes ja existente    CATEGORIA 2 - INTEGRADA   2    3627
-     Adicionar categoria em bilhetes ja existente    CATEGORIA 3 - INTEGRADA   3    3627
+     Adicionar categoria em bilhetes ja existente    Categoria 2    2    3752    6422
+     Adicionar categoria em bilhetes ja existente    Categoria 3    3    3752    6422
 
 Dado que criei novas temporadas
-    [Arguments]    ${numero_bilhete}=6275
+    [Arguments]    ${numero_bilhete}
     Adicionar nova temporada em um bilhete    ${numero_bilhete}
     
 #---------------------------------------QUANDO---------------------------------------
@@ -62,7 +64,7 @@ Quando insiro as informações para um novo cadastro de bilhete
     Criar Bilhete     Bilhete Automatizado: Por Horario     ZANOTTO NAO MEXER   1
 
 Quando crio uma nova tabela de preço e disponibilidade para o bilhete
-    [Arguments]    ${numero_bilhete}=6275
+    [Arguments]    ${numero_bilhete}
     Sleep                    1s
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
@@ -73,7 +75,7 @@ Quando crio uma Exceção de Disponibilidade para o bilhete
     Criar exceção de disponibilidade     
    
 Quando emito um bilhete com saldo atualizado 
-    [Arguments]    ${numero_bilhete}=6275    ${qtd_vagas}=5
+    [Arguments]    ${numero_bilhete}    ${qtd_vagas}=5
     Sleep                    2s
     ${qtd_vagas_coletada}=    Selecionar o bilhete e retornar quantidade de vagas (categoria)   ${numero_bilhete}    1
     log    Quantidade de vagas antes da emissão: ${qtd_vagas_coletada}
@@ -86,20 +88,20 @@ Quando emito um bilhete com saldo atualizado
     Quando finalizo o pagamento    1
 
 Quando realizo o bloqueio de horário para o bilhete
-    [Arguments]    ${numero_bilhete}=6275
+    [Arguments]    ${numero_bilhete}
     Criar bloqueio de disponibilidade
     Sleep    2s
 
 Quando ele insere a tabela com taxa no calendario
-    [Arguments]                ${numero_bilhete}=6275
+    [Arguments]                ${numero_bilhete}
     Criar tabela de disponibilidade    ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
     Sleep                          3s
     
 Quando adiciono o convênio no bilhete
-    [Arguments]    ${numero_bilhete}=6275
-    Adicionar categoria em bilhetes ja existente    Categoria Gerada pelos Testes Automatizados: CONVÊNIO    2    3627
+    [Arguments]    ${numero_bilhete}
+    Adicionar categoria em bilhetes ja existente   Categoria Convênio    2    3752    ${numero_bilhete}
     Criar tabela de preço               ${numero_bilhete}   Tabela de Preço com Convênio     500    0    2
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
@@ -109,7 +111,7 @@ Quando cadastro a tabela de preço
     Criar tabela de preço               ${numero_bilhete}   Tabela de Preço com multiplas categorias     500    0    3
 
 Quando coloco as temporadas no calendario
-    [Arguments]    ${numero_bilhete}=6275
+    [Arguments]    ${numero_bilhete}
     Criar tabela de preço               ${numero_bilhete}   tabela de preço     500
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
@@ -127,7 +129,7 @@ Então valido se o bilhete foi criado corretamente
     Wait Until Element Is Visible      xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]
     ${codigo_e_nome}=    Pegar codigo e nome do Ultimo Bilhete
     Should Contain        ${codigo_e_nome[1]}     Bilhete Automatizado: Por Horario
-    Iniciar sessao        cde_win_bca_frontR40
+    Iniciar sessao        cde_win_bca_front
     Ir Para Emissão de Bilhetes
     Escrever para consultar    ${codigo_e_nome[0]}
     ${texto}=    Run keyword and ignore error    RPA.Windows.Get Text       	Bilhete não cadastrado, ou específico para venda em outro PDV.
@@ -150,8 +152,8 @@ Então valido se o bilhete foi criado corretamente
     
 
 Então valido se a disponibilidade integrou corretamente  
-    [Arguments]    ${numero_bilhete}=6275    ${qtd_vagas}=1000
-    Iniciar sessao    cde_win_bca_frontR40
+    [Arguments]    ${numero_bilhete}    ${qtd_vagas}=1000
+    Iniciar sessao    cde_win_bca_front
     Ir Para Emissão de Bilhetes
     ${qtd_vagas_bilhete}=    Selecionar o bilhete e retornar quantidade de vagas (categoria)   ${numero_bilhete}    1
     ${qtd_vagas_bilhete}=        Convert to Integer    ${qtd_vagas_bilhete}
@@ -166,7 +168,7 @@ Então valido se a disponibilidade integrou corretamente
     Encerrar Tudo
 
 Então valido a Exceção no E-commerce e na bilheteria
-    [Arguments]    ${numero_bilhete}=6275    ${qtd_vagas}=5
+    [Arguments]    ${numero_bilhete}    ${qtd_vagas}=5
     Colocar o bilhete no e-commerce    ${numero_bilhete}
     Abro o E-commerce
     Pesquisar bilhete no e-commerce    
@@ -178,7 +180,7 @@ Então valido a Exceção no E-commerce e na bilheteria
 
 
 Então valido o bloqueio de horário no E-commerce e na bilheteria
-    [Arguments]    ${numero_bilhete}=6275    
+    [Arguments]    ${numero_bilhete}    
     Abro o E-commerce
     Pesquisar bilhete no e-commerce   
     Sleep             4s
@@ -194,34 +196,33 @@ Então valido o bloqueio de horário no E-commerce e na bilheteria
     Encerrar Tudo
 
 Então valido se a tarifa foi salva corretamente 
-    [Arguments]     ${valor}=5,00    ${nome_bilhete}=Bilhete Automatizado: Por Horario
+    [Arguments]     ${valor}=5,00 
     Abro o E-commerce
-    Pesquisar bilhete no e-commerce    Z - Data de Evento
-    Adicionar categoria (Compra E-Commerce)    1    100
-    Coleta Valor bilhete (E-commerce)     5,00    0,08
-    Inativar bilhete
+    Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
+    Adicionar categoria (Compra E-Commerce)    1    1
+    Coleta Valor bilhete (E-commerce)     5,00    1    0,08    
     
+
 Então Valido se o convênio foi salvo corretamente
-    [Arguments]    ${nome_bilhete}=Bilhete Automatizado: Por Horario
+    [Arguments]    ${nome_bilhete}=LB-41 Programação de Preços
     Abro o E-commerce
     Pesquisar bilhete no e-commerce    ${nome_bilhete}
     Adicionar categoria (Compra E-Commerce)    2    1
     Comprar Ingressos
     Preencher convênio
     sleep                1s
-    Iniciar sessao       cde_win_bca_frontR40 
+    Iniciar sessao       cde_win_bca_front 
+    Abrir caixa operador
     Ir Para Emissão de Bilhetes
-    ${nome_coletado}=    Selecionar o bilhete e o convênio    6275    1
-    IF    $nome_coletado != CONVÊNIO
+    ${nome_coletado}=    Selecionar o bilhete e o convênio    6422    2
+    IF    '${nome_coletado}' != 'CONVÊNIO'
         FAIL    Convênio errado ou não aplicado corretamente.
     END
-    Encerrar Tudo
-    Retirar Categoria    2
-    Excluir Categoria 
-    Inativar bilhete   
+    Encerrar Tudo    
+
 
 Então valido se os preços foram salvos corretamente
-    [Arguments]    ${numero_bilhete}=6275   ${valor_cat1}=5,00      ${valor_cat2}=10,00    ${valor_cat3}=15,00
+    [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      ${valor_cat2}=10,00    ${valor_cat3}=15,00
     Abro o E-commerce
     Pesquisar bilhete no e-commerce    Bilhete Automatizado: Por Horario
     Adicionar categoria (Compra E-Commerce)    1    1
@@ -231,7 +232,7 @@ Então valido se os preços foram salvos corretamente
     Coleta Valor bilhete (E-commerce)     ${valor_cat2}       2
     Coleta Valor bilhete (E-commerce)     ${valor_cat3}       3
     sleep                1s
-    Iniciar sessao       cde_win_bca_frontR40 
+    Iniciar sessao       cde_win_bca_front 
     Ir Para Emissão de Bilhetes
     Selecionar o bilhete  6275   1
     Selecionar o bilhete  6275   2
@@ -254,16 +255,16 @@ Então valido se os preços foram salvos corretamente
     Inativar bilhete
 
 Então valido se o preço foi salvo corretamente
-    [Arguments]    ${numero_bilhete}=6275   ${valor_cat1}=5,00      
+    [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      
     Abro o E-commerce
     Pesquisar bilhete no e-commerce    Bilhete Automatizado: Por Horario
     Adicionar categoria (Compra E-Commerce)    1    1
     Coleta Valor bilhete (E-commerce)     ${valor_cat1}       1
     sleep                1s
-    Iniciar sessao       cde_win_bca_frontR40 
+    Iniciar sessao       cde_win_bca_front 
 
 Então valido as temporadas no E-Commerce
-    [Arguments]    ${numero_bilhete}=6275
+    [Arguments]    ${numero_bilhete}
     Abro o E-commerce
     Sleep                              1s
     Pesquisar bilhete no e-commerce    Bilhete Automatizado: Por Horario

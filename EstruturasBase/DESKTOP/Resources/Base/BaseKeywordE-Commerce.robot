@@ -33,8 +33,8 @@ Abro o E-commerce
     Sleep                     15s
 
 Pesquisar bilhete no e-commerce
-    [Arguments]   ${nome_bilhete}=Bilhete Automatizado: Por Horario
-    Sleep              4s
+    [Arguments]   ${nome_bilhete}
+    Sleep              5s
     Input Text         xpath:/html/body/app-root/app-home/div/main/app-dashboard/div/mat-form-field/div[1]/div/div[3]/input       ${nome_bilhete}
     Sleep              2s
     Repetidor de teclas       tab    2
@@ -51,19 +51,15 @@ Coletar quantidade de vagas (E-Commerce)
 Coleta Valor bilhete (E-commerce)
     [Arguments]    ${valor_bilhete}   ${numero_categoria}=1     ${valor_taxa}=0  
     Sleep                   3s  
-    ${valor_bilhete_EC}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit[${numero_categoria}]/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/section/div
+        SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit[${numero_categoria}]/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/section/div    R$ ${valor_bilhete}
     IF    $valor_taxa != 0                                    
-    ${valor_taxa_EC}=       SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/div
+        SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/div    ${valor_taxa}
     END
-    Log    ${valor_bilhete_EC}
-    Log    ${valor_taxa_EC}
-    Comparar Valores    R$ ${valor_bilhete}    ${valor_bilhete_EC}
-    Comparar Valores    (+R$ ${valor_taxa} Taxa)       ${valor_taxa_EC}
     Sleep        1s
 
 Adicionar categoria (Compra E-Commerce)
     [Arguments]    ${categoria}    ${quantidade}
-    Sleep            3s
+    Sleep            5s
     FOR    ${i}    IN RANGE    ${quantidade}
         Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${categoria}]/div/div[2]/button[2]
     END
@@ -78,3 +74,40 @@ Adicionar categoria (Compra E-Commerce)
 Comprar Ingressos
     Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/div[3]/button
     sleep            1s
+
+Selecionar o dia de hoje no calendario
+    @{ano_mes_dia}=  Get Time	year month day 
+    FOR    ${counter}    IN RANGE    1    7    
+        ${RETURN VALUE}=    Run Keyword And Ignore Error    SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/ec-calendar/table/tbody[1]/tr[1]/td[${counter}]/div/div/button    ${ano_mes_dia[2]}
+        IF    '${RETURN VALUE[0]}' == 'PASS'
+            Click Element    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/ec-calendar/table/tbody[1]/tr[1]/td[${counter}]/div/div/button
+            Exit For Loop
+        END
+    END
+
+Ir Para o Pagamento
+    Click Element    xpath:/html/body/app-root/app-home/div/main/app-my-cart/ec-wrapper/div[2]/div[6]/button
+    Sleep            4s
+
+Preencher dados do cartão
+    Input Text    xpath:/html/body/app-root/app-home/div/main/page-payment/ec-wrapper/div/div[2]/app-payment-cartao/div/form/mat-form-field[3]/div[1]/div/div[2]/input      Gustavo Zanotto
+    Input Text    xpath:/html/body/app-root/app-home/div/main/page-payment/ec-wrapper/div/div[2]/app-payment-cartao/div/form/mat-form-field[4]/div[1]/div/div[2]/input      4000 0000 0010
+    Input Text    xpath:/html/body/app-root/app-home/div/main/page-payment/ec-wrapper/div/div[2]/app-payment-cartao/div/form/mat-form-field[5]/div[1]/div/div[2]/input      12/2030
+    Input Text    xpath:/html/body/app-root/app-home/div/main/page-payment/ec-wrapper/div/div[2]/app-payment-cartao/div/form/mat-form-field[6]/div[1]/div/div[2]/input      123
+
+Efetuar Pagamento
+    Click Element    xpath:/html/body/app-root/app-home/div/main/page-payment/ec-wrapper/div/div[2]/app-payment-cartao/div/button
+    Sleep            10s
+
+Visualizar Ingressos
+    Click Element    xpath:/html/body/app-root/app-home/div/main/app-approved-purchase/ec-splash-alert/ec-wrapper/a
+    Sleep            2s
+
+Compartilhar Ingressos
+    [Arguments]    ${tipo_compartilhamento}
+    IF    '${tipo_compartilhamento}' == '0'
+        Click Element    xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-share-ticket/div/button
+    ELSE
+        Click Element    xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-share-ticket/div/button[${tipo_compartilhamento}]
+    END
+    
