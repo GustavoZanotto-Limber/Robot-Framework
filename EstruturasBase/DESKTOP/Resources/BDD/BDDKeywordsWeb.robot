@@ -273,21 +273,18 @@ Então valido se o preço foi salvo corretamente
 Então valido as temporadas no E-Commerce
     [Arguments]    ${numero_bilhete}
     Abro o E-commerce
-    Sleep                              1s
-    Pesquisar bilhete no e-commerce    Bilhete Automatizado: Por Horario
+    Pesquisar bilhete no e-commerce    LB-41 
     Sleep                              3s
     ${temporada1}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span
     ${temporada2}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[4]/div/div/div/span
     Should Be Equal    ${temporada1}    Temporada 1
     Should Be Equal    ${temporada2}    Temporada 2
     Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
-    sleep    5s
     Navegar configuração de bilhete    7
-    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[2]/div/div/div[2]/button[2]
+    Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[2]/div/div/div[2]/button[2]
     Sleep    1s
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    enter
-    Click Element    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
-    Sleep    4s
-    Inativar bilhete    
+    Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
+    Sleep    3s   
     

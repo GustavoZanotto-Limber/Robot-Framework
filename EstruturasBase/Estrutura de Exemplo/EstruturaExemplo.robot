@@ -9,6 +9,7 @@ Library     SeleniumLibrary     # Cuidado com o nome das bibliotecas 1 letra err
 #   Library e o nome da biblioteca caso você coloque apenas um espaço ele não ira identificar corretamente o comando
 #   E sua biblioteca não sera importada
 
+Resource    ../DESKTOP/Resources/Base/BaseKeywordsCARD.robot
 
 *** Variables ***
 
@@ -31,13 +32,13 @@ Abrir pagina login card
     Open Browser    https://testescard.limbersoftware.com.br/#/auth/login     Chrome
 
 Preencher email
-    Input Text  xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input     Gustavo@limbersoftware.com.br
+    Inserir Texto  xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input     Gustavo@limbersoftware.com.br
 
 Preencher senha
-    Input Text  ${Senha}      Gustavo1!
+    Inserir Texto  ${Senha}      Gustavo1!
 
 clicar em continuar
-    Click Element   xpath:/html/body/app-root/login/div/mat-card/button
+    Clicar no Elemento   xpath:/html/body/app-root/login/div/mat-card/button
 
 Fechar navegador
     Close Browser
