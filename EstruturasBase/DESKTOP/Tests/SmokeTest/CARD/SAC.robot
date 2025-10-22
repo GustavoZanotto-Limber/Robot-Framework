@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: CARD
 Resource         ../../../Resources/BDD/BDDSmokeCard.robot
-
 Resource         ../../../Resources/Base/BaseKeywordsCARD.robot
 Suite Setup      Abrir CARD e logar 
 Suite Teardown   Fechar Navegador
