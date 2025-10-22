@@ -462,7 +462,7 @@ Abrir arquivo
 Repetidor de teclas
     [Arguments]               ${tecla}                   ${quantidade_de_clicks}    
     FOR                       ${quantidade_de_clicks}    IN RANGE                   1    ${quantidade_de_clicks}+1
-    Sleep                     0.3
+    Sleep                     0.1
     RPA.Desktop.Press Keys    ${tecla}     
     END
 
