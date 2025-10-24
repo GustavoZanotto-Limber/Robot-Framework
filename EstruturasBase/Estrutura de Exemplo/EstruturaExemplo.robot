@@ -9,6 +9,7 @@ Library     SeleniumLibrary     # Cuidado com o nome das bibliotecas 1 letra err
 #   Library e o nome da biblioteca caso você coloque apenas um espaço ele não ira identificar corretamente o comando
 #   E sua biblioteca não sera importada
 
+Resource    ../DESKTOP/Resources/Base/BaseKeywordsCARD.robot
 
 *** Variables ***
 
