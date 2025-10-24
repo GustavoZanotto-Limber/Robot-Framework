@@ -49,8 +49,7 @@ Então o sistema deve apresentar o Dashboard corretamente
     Clicar no Botão                xpath:/html/body/app-root/app-pages/div/div/div/dashboard/div/div[1]/button[3]
     Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/div/mat-form-field
     RPA.Desktop.Type Text          Automação
-    Repetidor de Teclas            Down    2
-    RPA.Desktop.Press Keys         Enter
+    Clicar no Elemento             xpath:/html/body/div[3]/div[4]/div/div/div/internal-limber-option[2]
     Clicar no Botão                xpath:/html/body/div[3]/div[2]/div/div/div/button[2]
     Sleep                          2s
     
@@ -60,7 +59,7 @@ Então valido se a tela de Gerenciamento de Vendas foi carregada corretamente
     Sleep                                    2s
     Clicar no Elemento            xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]
     Sleep                                    1s
-    RPA.Desktop.Type Text                    ZANOTTO Bilheteria ONLINE
+    RPA.Desktop.Type Text                    Automação
     sleep                                    1s 
     RPA.Desktop.Press Keys                   Down
     RPA.Desktop.Press Keys                   Enter
@@ -299,9 +298,9 @@ Então valido a localização de Terminal
 
 Então valido o cadastro de Agrupador de Agências
     Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/div/h1    Agrupador de Agências/Parceiros
-    Clicar no Elemento              xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[1]/mat-form-field/div[1]/div/div[2]
-    RPA.Desktop.Press Keys     Enter
-    Clicar no Elemento              xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[2]/mat-form-field/div[1]/div/div[2]
+    Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[1]/mat-form-field/div[1]/div/div[2]
+    Clicar no Elemento         xpath:/html/body/div[3]/div[2]
+    Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[2]/mat-form-field/div[1]/div/div[2]
 
 Então valido se a tela de Central de Vendas foi carregada corretamente
     Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/mat-toolbar     Central de Vendas

@@ -560,7 +560,7 @@ Selecionar a data de hoje nos relatórios
 
 Configurar o Relatório
     [Arguments]    ${nome_relatorio}
-    SeleniumLibrary.Element Should Contain        xpath:/html/body/app-root/app-relatorios/div/div/div/div[1]/h2    ${nome_relatorio}
+    Conferir Texto       xpath:/html/body/app-root/app-relatorios/div/div/div/div[1]/h2    ${nome_relatorio}
     Selecionar estabelecimento nos relatórios
     Selecionar a data de hoje nos relatórios
     Sleep    2
@@ -623,3 +623,8 @@ Inserir Texto
     [Arguments]    ${xpath_input}    ${texto}
     Wait Until Element Is Visible    ${xpath_input}
     Input Text                       ${xpath_input}    ${texto}
+
+Conferir Texto
+    [Arguments]    ${xpath_texto}    ${texto}
+    Wait Until Element Is Visible    ${xpath_texto}
+    Element Should Contain           ${xpath_texto}    ${texto}

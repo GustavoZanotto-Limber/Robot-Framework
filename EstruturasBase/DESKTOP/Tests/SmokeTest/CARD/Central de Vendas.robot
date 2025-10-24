@@ -19,5 +19,5 @@ Central de Vendas
     [Tags]        CARD    SmokeTest    Páginas sem autenticação    SmokeCARD
     ${nome_print}=    Set Variable     Central de Vendas
     Dado que estou na página inicial do CARD
-    Quando acesso o menu lateral    13    
+    Quando acesso o menu lateral    15    
     Então valido se a tela de Central de Vendas foi carregada corretamente
