@@ -28,11 +28,11 @@ Abrir pagina login card
 
 Preencher email
     Sleep       1s
-    Inserir Texto  xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input     gustavozanotto119@gmail.com
+    Inserir Texto  xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input     automacao@limbersoftware.com.br
 
 Preencher senha
     Sleep       1s
-    Inserir Texto  ${Senha}      Zanotto123@
+    Inserir Texto  ${Senha}      Auto123@
 
 clicar em continuar
     Clicar no Botão   xpath:/html/body/app-root/login/div/mat-card/form/button
@@ -42,8 +42,6 @@ Fechar navegador
 
 Abrir CARD e logar 
     Abrir pagina login card
-    Sleep                      2s
-    # RPA.Windows.Click          Google Chrome - 1 executando o windows
     Minimize Browser Window
     Sleep                      1s
     Maximize Browser Window
@@ -51,13 +49,11 @@ Abrir CARD e logar
     Sleep                      1s
     Preencher senha
     clicar em continuar
-    Tirar notificação
     Maximize Browser Window
     Sleep                      1s
     Colocar Filtro de estabelecimento    Automação
-    Sleep                      2s
+    # Sleep                      2s
     # Tirar notificação
-    Sleep                      2s
 
 Caso aconteca erro WEB
         [Arguments]     ${Caminho_Screenshots}        ${nome_print}    
@@ -74,13 +70,11 @@ Mudar Página
 
 Criar Bilhete
     [Arguments]    ${nome}    ${bilheteria}    ${controla_por:int}    ${descrição_do_bilhete}=${None}
-    Sleep                     2s
     Inserir Texto                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/div[2]/mat-form-field[1]/div[1]/div/div[2]/input    ${nome}
     Sleep                     1s
     Repetidor de teclas       tab    2
     Sleep                     1s
     RPA.Desktop.Press Keys    Enter
-    Sleep                     1s
     Inserir Texto                xpath:/html/body/div[3]/div[2]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input    ${bilheteria}
     RPA.Desktop.Press Keys    Enter
     #Valida se a bilheteria é a integrada para colocar no grupo de bilhetes
@@ -99,12 +93,9 @@ Criar Bilhete
     ELSE
         RPA.Desktop.Type Text     ${descrição_do_bilhete}
     END
-    sleep                              2s
     Adicionar categoria                
     Adicionar receita                  1    3627
-    sleep                              1s
-    Navegar Configurações de venda > sessões    2
-    Sleep                        1s       
+    Navegar Configurações de venda > sessões    2    
     Clicar no Elemento                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[2]/div/div/div[3]/block-with-title[1]/div/section/div/mat-form-field[1]/div[1]
     Clicar no Elemento           xpath:/html/body/div[3]/div[2]/div/div/mat-option[${controla_por:int}]
     Criar Temporada    
@@ -148,20 +139,14 @@ Adicionar Categoria
             RPA.Desktop.Press Keys      Down
         END
     END
-    Sleep                     3s
     Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[2]/buttons/div/div/button[2]
 
 Adicionar Receita
     [Arguments]    ${categoria}    ${receita}
-    Sleep                     1s
     Clicar no Elemento             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/div/mat-accordion/mat-expansion-panel[${categoria}]/mat-expansion-panel-header/span[1]
-    Sleep                     2s
     Clicar no Elemento             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/div/mat-accordion/mat-expansion-panel[${categoria}]/div/div/div/div/title-btn-add/div/button
-    sleep                     2s
     Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-receitas/div/form/mat-form-field[1]/div[1]/div/div[2]
-    sleep                     2s
     Inserir Texto                xpath:/html/body/div[3]/div[4]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${receita}
-    Sleep                     1s
     Clicar no Elemento             xpath:/html/body/div[3]/div[4]/div/div/mat-option[2]
     Inserir Texto                xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-receitas/div/form/mat-form-field[2]/div[1]/div/div[2]/input     100
     Clicar no Botão           xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-receitas/div/div/button[2]
@@ -172,7 +157,7 @@ Criar Temporada
     Sleep                              1s
     Navegar configuração de bilhete    7
     Sleep                        1s
-    Clicar no Elemento                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[1]/title-btn-add/div/button
+    Clicar no Botão                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[1]/title-btn-add/div/button
     sleep                     1s   
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    ${codigo_temporada}
@@ -575,7 +560,7 @@ Selecionar a data de hoje nos relatórios
 
 Configurar o Relatório
     [Arguments]    ${nome_relatorio}
-    SeleniumLibrary.Element Should Contain        xpath:/html/body/app-root/app-relatorios/div/div/div/div[1]/h2    ${nome_relatorio}
+    Conferir Texto       xpath:/html/body/app-root/app-relatorios/div/div/div/div[1]/h2    ${nome_relatorio}
     Selecionar estabelecimento nos relatórios
     Selecionar a data de hoje nos relatórios
     Sleep    2
@@ -638,3 +623,8 @@ Inserir Texto
     [Arguments]    ${xpath_input}    ${texto}
     Wait Until Element Is Visible    ${xpath_input}
     Input Text                       ${xpath_input}    ${texto}
+
+Conferir Texto
+    [Arguments]    ${xpath_texto}    ${texto}
+    Wait Until Element Is Visible    ${xpath_texto}
+    Element Should Contain           ${xpath_texto}    ${texto}

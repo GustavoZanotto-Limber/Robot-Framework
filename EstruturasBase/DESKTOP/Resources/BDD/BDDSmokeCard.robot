@@ -49,8 +49,7 @@ Então o sistema deve apresentar o Dashboard corretamente
     Clicar no Botão                xpath:/html/body/app-root/app-pages/div/div/div/dashboard/div/div[1]/button[3]
     Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/div/mat-form-field
     RPA.Desktop.Type Text          Automação
-    Repetidor de Teclas            Down    2
-    RPA.Desktop.Press Keys         Enter
+    Clicar no Elemento             xpath:/html/body/div[3]/div[4]/div/div/div/internal-limber-option[2]
     Clicar no Botão                xpath:/html/body/div[3]/div[2]/div/div/div/button[2]
     Sleep                          2s
     
@@ -60,7 +59,7 @@ Então valido se a tela de Gerenciamento de Vendas foi carregada corretamente
     Sleep                                    2s
     Clicar no Elemento            xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]
     Sleep                                    1s
-    RPA.Desktop.Type Text                    ZANOTTO Bilheteria ONLINE
+    RPA.Desktop.Type Text                    Automação
     sleep                                    1s 
     RPA.Desktop.Press Keys                   Down
     RPA.Desktop.Press Keys                   Enter
@@ -265,10 +264,10 @@ Então valido se a tela de Logs Nuvem foi carregada corretamente
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/ng-component/mat-card[1]/mat-card-content/form/div/div/button
 
 Então valido o cadastro de e-commerce
-    Validar o titulo e clicar em novo    Gerenciamento de E-Commerce's    ec-config
+    Validar o titulo e clicar em novo    Gerenciamento de E-commerce`s    ec-config
     Sleep                        1s
     RPA.Desktop.Press Keys    Enter
-    Validar titulo de criar ou editar cadastros    Novo Ecommerce   ew-or-edit-ec-config
+    Validar titulo de criar ou editar cadastros    Novo Ecommerce   new-or-edit-ec-config
     FOR    ${counter}    IN RANGE    1    5    
         Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[${counter}]
     END
@@ -284,11 +283,11 @@ Então valido o cadastro de Clientes de E-Commerce's
     Element Should Contain    xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/info-cliente/form/div[1]/div/h2[1]    609 - Gustavo Zanotto Limber
 
 Então valido o cadastro de Tick Ingressos
-    Então valido o titulo clico em novo    Gerenciamento de Tick Ingressos - POS    Novo Tick Ingresso    tick_ingressos    new-or-edit-tick
+    Então valido o titulo clico em novo    Gerenciamento de Tick Ingressos - POS    Novo Tick Ingresso    tick-ingressos    new-or-edit-tick
     Clicar no Elemento                          xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-tick/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
     Sleep                                  1s
     Clicar no Elemento                          xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-tick/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/div/title-btn-add/div/button
-    Element Should Contain                 xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/add-estabelecimento-usuario/div/div[1]/h2     Novo Terminal
+    Element Should Contain                 xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/add-estabelecimento-usuario/div/div[1]/h2    Novo Terminal
 
 Então valido a localização de Terminal
     Element Should Contain     xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/h2    Localizar Terminal
@@ -299,9 +298,9 @@ Então valido a localização de Terminal
 
 Então valido o cadastro de Agrupador de Agências
     Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/div/h1    Agrupador de Agências/Parceiros
-    Clicar no Elemento              xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[1]/mat-form-field/div[1]/div/div[2]
-    RPA.Desktop.Press Keys     Enter
-    Clicar no Elemento              xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[2]/mat-form-field/div[1]/div/div[2]
+    Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[1]/mat-form-field/div[1]/div/div[2]
+    Clicar no Elemento         xpath:/html/body/div[3]/div[2]
+    Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[2]/mat-form-field/div[1]/div/div[2]
 
 Então valido se a tela de Central de Vendas foi carregada corretamente
     Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/mat-toolbar     Central de Vendas
@@ -314,3 +313,20 @@ Então valido se a tela de Central de Vendas foi carregada corretamente
     Clicar no Elemento             xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/div/ul/li[2]/a/span/span/div
     Sleep                     1s    
     Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-gerenciador-vendas/div/div[1]/h1    Gerenciamento de Vendas
+
+Então valido o Load Balancing
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-load-balancing/h1     Load Balacing - E-commerce's  
+    Clicar no Botão           xpath:/html/body/app-root/app-pages/div/div/div/app-load-balancing/h1/button
+    Element Should Be Disabled    xpath:/html/body/app-root/app-pages/div/div/div/app-load-balancing/div[2]/buttons/div/div/button
+
+Então valido se a tela de Verificar Transações foi carregada corretamente
+    Element should Contain    xpath:/html/body/app-root/app-pages/div/div/div/app-transacoes/mat-expansion-panel/mat-expansion-panel-header/span[1]/mat-panel-title/h1    Verificador de Transações
+    Clicar no Botão           xpath:/html/body/app-root/app-pages/div/div/div/app-transacoes/mat-expansion-panel/div/div/div/div/form/mat-form-field[1]/div[1]/div/div[3]/mat-datepicker-toggle/button
+    Repetidor de teclas       Enter    2
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/app-transacoes/mat-expansion-panel/div/div/div/div/form/mat-form-field[2]/div[1]/div/div[2]
+    Inserir Texto             xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input    61
+    Clicar no Elemento        xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]
+    RPA.Desktop.Press Keys    ESC
+    Clicar no Botão           xpath:/html/body/app-root/app-pages/div/div/div/app-transacoes/mat-expansion-panel/div/div/div/div/form/button
+    Sleep    1
+    Element Should Contain    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]     Pesquisa das Transações realizada.

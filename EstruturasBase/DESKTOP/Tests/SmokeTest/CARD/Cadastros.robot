@@ -125,7 +125,7 @@ Relatórios V2
     ${nome_print}=    Set Variable     Relatórios V2
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral    4    16
-    Então valido o titulo clico em novo    Gerenciamento de Relatórios    Novo Relatório V2    app-relatorios-v2    app-new-or-edit-relatorio-v2
+    Então valido o titulo clico em novo    Gerenciamento de Relatórios    Novo Relatório    app-relatorios-v2    app-new-or-edit-relatorio-v2
 
 Agendamentos WhatsApp
     [Tags]        CARD    SmokeTest    Cadastros        SmokeCARD    

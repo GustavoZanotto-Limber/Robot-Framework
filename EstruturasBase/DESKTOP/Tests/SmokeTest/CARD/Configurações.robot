@@ -19,7 +19,7 @@ Estabelecimentos
     ${nome_print}=    Set Variable     Estabelecimentos 
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral        9    1
-    Então valido o titulo clico em novo    Estabelecimentos    Novo Estabelecimento    estabelecimento    new-or-edit-estabelecimento
+    Então valido o titulo e clico em novo 2   Estabelecimentos    Novo Estabelecimento    estabelecimento    new-or-edit-estabelecimento
 
 Perfis de Venda
     [Tags]        CARD    SmokeTest    Configurações    SmokeCARD
@@ -48,3 +48,10 @@ Webhook
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral        9    5
     Então valido o titulo clico em novo    Gerenciamento de Webhooks    Novo Webhook    app-webhook    app-new-or-edit-webhook
+
+Load Balancing
+    [Tags]        CARD    SmokeTest    Configurações    SmokeCARD
+    ${nome_print}=    Set Variable     Load Balancing
+    Dado que estou na página inicial do CARD
+    Quando acesso o menu lateral        9    6
+    Então valido o Load Balancing
