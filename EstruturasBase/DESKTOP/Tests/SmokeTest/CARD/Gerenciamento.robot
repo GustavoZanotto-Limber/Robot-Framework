@@ -49,3 +49,10 @@ Compradores
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral    2    5
     Então valido se a tela de Gerenciamento de Compradores foi carregada corretamente
+
+Verificar Transações
+    [Tags]        CARD    SmokeTest    Gerenciamento    SmokeCARD
+    ${nome_print}=    Set Variable    Verificar Transações
+    Dado que estou na página inicial do CARD
+    Quando acesso o menu lateral    2    6
+    Então valido se a tela de Verificar Transações foi carregada corretamente

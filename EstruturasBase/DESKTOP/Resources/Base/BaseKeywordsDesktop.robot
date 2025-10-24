@@ -36,17 +36,17 @@ ${i}=    0
 #     Add Image Path    ${EXECDIR}\\EstruturasBase\\DESKTOP\\Elements
 
 Cadastros
-    Sleep                     1s
+    Sleep                     0.5s
     RPA.Desktop.Press Keys    Alt
     RPA.Desktop.Press Keys    Enter
     
 Fechar janela
     RPA.Desktop.Press Keys    Ctrl     F4
-    Sleep                     1s        
+    Sleep                     0.5s        
 
 Fechar com Sim
     Fechar janela
-    Sleep                   1s
+    Sleep                   0.5s
     RPA.Windows.Click       Sim
 
 Fechar com OK
@@ -61,7 +61,7 @@ Iniciar sessao
     RPA.Windows.Click               Abrir
     Sleep                           2s
     RPA.Desktop.Press keys                      enter
-    Sleep                           10s          Carregando a base...
+    Sleep                           5s          Carregando a base...
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
@@ -155,7 +155,7 @@ Caixa Operador
     repetidor de teclas    right    4
 
 Abrir Caixa
-    Sleep                               2s
+    Sleep                               0.5s
     RPA.Windows.Click                   Abrir Caixa
     RPA.Desktop.Press Keys              Enter
     RPA.Desktop.Press Keys              Enter
@@ -169,7 +169,7 @@ Ir Para Emissão de Bilhetes
         Repetidor de teclas    right    1
         RPA.Windows.Click      Emissão de Bilhetes
     END
-    Sleep                  25s
+    Sleep                  15s
     RPA.Windows.Get Text   Emissão de Bilhetes (1)
 
 Ir Para Reimpressão de Bilhetes
@@ -188,7 +188,7 @@ Exportar bilhetes vendidos para bloco de notas
     RPA.Desktop.Press Keys     enter
     repetidor de teclas        down    1
     RPA.Desktop.Press Keys     enter
-    Sleep                      5s
+    Sleep                      3s
     ${texto}=    RPA.Windows.Get Value      Editor de texto		
     RETURN    ${texto}
 
@@ -222,7 +222,7 @@ Exportar pagamentos da venda para bloco de notas
     RPA.Desktop.Press Keys     enter
     repetidor de teclas        down    1
     RPA.Desktop.Press Keys     enter
-    Sleep                      5s
+    Sleep                      3s
     ${texto}=    RPA.Windows.Get Value      Editor de texto		
     RETURN    ${texto}
 
