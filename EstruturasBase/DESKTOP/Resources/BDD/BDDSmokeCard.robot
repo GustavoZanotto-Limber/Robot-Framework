@@ -194,6 +194,7 @@ Então valido se a tela de Gerenciamento de Lotes foi carregada corretamente
     Sleep                                1s
     Element Should Contain               xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[2]/div/tabela-config-lotes/div/div[1]/h3    Selecione a data de visita
     Clicar no Elemento                   xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[1]
+    Sleep                                1s
     Clicar no Botão                      xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-grupo-lote/div/mat-card/mat-tab-group/div/mat-tab-body[1]/div/buttons/div/div/button[1]
     Clicar no Botão                      xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/confirm-dialog/div/div[3]/button[2]
 
@@ -290,7 +291,7 @@ Então valido o cadastro de Tick Ingressos
     Element Should Contain                 xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/add-estabelecimento-usuario/div/div[1]/h2    Novo Terminal
 
 Então valido a localização de Terminal
-    Element Should Contain     xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/h2    Localizar Terminal
+    Conferir Texto     xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/h2    Localizar Terminal
     Inserir Texto                 xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div/mat-form-field/div[1]/div/div[2]/input    18CDFA831895
     Clicar no Botão               xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div/button
     Sleep                      1s
@@ -299,7 +300,7 @@ Então valido a localização de Terminal
 Então valido o cadastro de Agrupador de Agências
     Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/div/h1    Agrupador de Agências/Parceiros
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[1]/mat-form-field/div[1]/div/div[2]
-    Clicar no Elemento         xpath:/html/body/div[3]/div[2]
+    RPA.Desktop.Press Keys     ESC
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/mat-card/div[1]/section[2]/mat-form-field/div[1]/div/div[2]
 
 Então valido se a tela de Central de Vendas foi carregada corretamente
@@ -329,4 +330,5 @@ Então valido se a tela de Verificar Transações foi carregada corretamente
     RPA.Desktop.Press Keys    ESC
     Clicar no Botão           xpath:/html/body/app-root/app-pages/div/div/div/app-transacoes/mat-expansion-panel/div/div/div/div/form/button
     Sleep    1
+    Wait Until Element Is Visible    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1] 
     Element Should Contain    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]     Pesquisa das Transações realizada.
