@@ -25,19 +25,16 @@ Dado que estou na tela de criação de bilhete
 Dado que estou na tela de preço e disponibilidade
     [Arguments]    ${numero_bilhete}    ${nome_tabela}=Tabela de Preço Automatizada     ${taxa}=0
     Adicionar no Perfil    ${numero_bilhete}    962
-    Criar tabela de preço               ${numero_bilhete}   ${nome_tabela}     500    ${taxa}
-    Sleep    1s
+    Criar tabela de preço               ${numero_bilhete}   ${nome_tabela}     500    ${taxa}    
 
 Dado que estou na tela de Exceções de Preço e Disponibilidade
     [Arguments]    ${numero_bilhete}
     Sleep          2s
     Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
-    Sleep    2s
     Criar tabela de preço               ${numero_bilhete}   tabela de preço     500
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
-    Sleep                       2s
     
 Dado que estou na tela de emissão de bilhetes
     Iniciar sessao        cde_win_bca_front
@@ -51,27 +48,27 @@ Dado que o usuário acessa o Cadastro de Categorias
 
 Dado que adicionei uma categoria no bilhete 
      Adicionar categoria em bilhetes ja existente    Categoria 2    2    3752    6422
+     Sleep    1s
      Adicionar categoria em bilhetes ja existente    Categoria 3    3    3752    6422
 
 Dado que criei novas temporadas
     [Arguments]    ${numero_bilhete}
     Adicionar nova temporada em um bilhete    ${numero_bilhete}
+    Sleep    2s
     
 #---------------------------------------QUANDO---------------------------------------
 
 Quando insiro as informações para um novo cadastro de bilhete
     Sleep    1s
-    Criar Bilhete     Bilhete Automatizado: Por Horario     ZANOTTO NAO MEXER   1
+    Criar Bilhete     LB-42 Cadastro e alteração de Programação de Horario (Criado)     Bilheteria Automação   1
 
 Quando crio uma nova tabela de preço e disponibilidade para o bilhete
     [Arguments]    ${numero_bilhete}
-    Sleep                    1s
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
 
 Quando crio uma Exceção de Disponibilidade para o bilhete
-    Sleep                    2s
     Criar exceção de disponibilidade     
    
 Quando emito um bilhete com saldo atualizado 
@@ -102,6 +99,8 @@ Quando ele insere a tabela com taxa no calendario
 Quando adiciono o convênio no bilhete
     [Arguments]    ${numero_bilhete}
     Adicionar categoria em bilhetes ja existente   Categoria Convênio    2    3752    ${numero_bilhete}
+    Sleep    2s
+    RPA.Desktop.Press Keys              F5
     Criar tabela de preço               ${numero_bilhete}   Tabela de Preço com Convênio     500    0    2
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
@@ -109,6 +108,7 @@ Quando adiciono o convênio no bilhete
 
 Quando cadastro a tabela de preço
     Criar tabela de preço               ${numero_bilhete}   Tabela de Preço com multiplas categorias     500    0    3
+    Criar tabela de disponibilidade     6422    qtd_vagas=250
 
 Quando coloco as temporadas no calendario
     [Arguments]    ${numero_bilhete}
@@ -119,16 +119,17 @@ Quando coloco as temporadas no calendario
     ${amanha}=       Evaluate       ${dia} + 1
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
     Sleep                       1s
-    Preencher dia do calendario    ${ano_mes_dia[1]}    ${amanha}     n°_temporada=2
+    Preencher dia do calendario    ${ano_mes_dia[1]}    ${amanha}     n°_temporada=3
     Sleep                       2s
-
+    Set Global Variable    ${dia}    ${dia}
+    Set Global Variable    ${mês}       ${ano_mes_dia[1]}    
 
 #---------------------------------------ENTAO----------------------------------------
 
 Então valido se o bilhete foi criado corretamente
     Wait Until Element Is Visible      xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]
     ${codigo_e_nome}=    Pegar codigo e nome do Ultimo Bilhete
-    Should Contain        ${codigo_e_nome[1]}     Bilhete Automatizado: Por Horario
+    Should Contain        ${codigo_e_nome[1]}     LB-42 Cadastro e alteração de Programação de Horario (Criado)
     Iniciar sessao        cde_win_bca_front
     Ir Para Emissão de Bilhetes
     Escrever para consultar    ${codigo_e_nome[0]}
@@ -171,18 +172,15 @@ Então valido a Exceção no E-commerce e na bilheteria
     [Arguments]    ${numero_bilhete}    ${qtd_vagas}=5
     Colocar o bilhete no e-commerce    ${numero_bilhete}
     Abro o E-commerce
-    Pesquisar bilhete no e-commerce    
+    Pesquisar bilhete no e-commerce      LB-42 Cadastro e alteração de Programação de Horario
     Coletar quantidade de vagas (E-Commerce)    ${qtd_vagas}
     Então valido se a disponibilidade integrou corretamente    ${numero_bilhete}    ${qtd_vagas}
-    Inativar bilhete
-    Retirar Exceção
-
-
+    Retirar Exceção    ${numero_bilhete}
 
 Então valido o bloqueio de horário no E-commerce e na bilheteria
     [Arguments]    ${numero_bilhete}    
     Abro o E-commerce
-    Pesquisar bilhete no e-commerce   
+    Pesquisar bilhete no e-commerce   LB-42 Cadastro e alteração de Programação de Horario
     Sleep             4s
     ${bloqueio}=      SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span
     Should Contain    ${bloqueio}    Esgotado
@@ -190,7 +188,7 @@ Então valido o bloqueio de horário no E-commerce e na bilheteria
     Ir Para Emissão de Bilhetes
     Selecionar o bilhete   ${numero_bilhete}    4321
     RPA.Desktop.Press Keys           F5
-    RPA.Windows.Get Text           Bilhete com configuração por horário mas horário não definido.
+    RPA.Windows.Get Text             Bilhete com configuração por horário mas horário não definido.
     RPA.Desktop.Press Keys           Enter
     Fechar com Sim
     Encerrar Tudo
@@ -224,60 +222,53 @@ Então Valido se o convênio foi salvo corretamente
 Então valido se os preços foram salvos corretamente
     [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      ${valor_cat2}=10,00    ${valor_cat3}=15,00
     Abro o E-commerce
-    Pesquisar bilhete no e-commerce    Bilhete Automatizado: Por Horario
+    Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
     Adicionar categoria (Compra E-Commerce)    1    1
     Adicionar categoria (Compra E-Commerce)    2    1
     Adicionar categoria (Compra E-Commerce)    3    1
-    Coleta Valor bilhete (E-commerce)     ${valor_cat1}       1
-    Coleta Valor bilhete (E-commerce)     ${valor_cat2}       2
-    Coleta Valor bilhete (E-commerce)     ${valor_cat3}       3
+    Coleta Valor bilhete (E-commerce)     ${valor_cat1}       1    
+    Coleta Valor bilhete (E-commerce)     ${valor_cat2}       2        
+    Coleta Valor bilhete (E-commerce)     ${valor_cat3}       3    
     sleep                1s
     Iniciar sessao       cde_win_bca_front 
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete  6275   1
-    Selecionar o bilhete  6275   2
-    Selecionar o bilhete  6275   3
+    Selecionar o bilhete  6422   4651
+    Selecionar o bilhete  6422   4683
+    Selecionar o bilhete abrir filtro    6422   3
     ${nome_coletado}=    Coleta valor atraves da planilha    3    1
-    IF    $nome_coletado != Inteira
-        FAIL    Categoria errada ou não aplicada corretamente.
-    END
+    Sleep    1s
+    Should Contain    ${nome_coletado}    Categoria 1
+    # IF    '$nome_coletado' != 'Categoria 1\r\n'
+    #     FAIL    Categoria errada ou não aplicada corretamente.
+    # END
+    Sleep    2
     ${nome_coletado}=    Coleta valor atraves da planilha    3    2
-    IF    $nome_coletado != CATEGORIA 2 - INTEGRADA
-        FAIL    Categoria 2 errada ou não aplicada corretamente.
-    END
+    Should Contain    ${nome_coletado}    Categoria 2
+    # IF    '$nome_coletado' != 'Categoria 2\r\n'
+    #     FAIL    Categoria 2 errada ou não aplicada corretamente.
+    # END
+    Sleep    2
     ${nome_coletado}=    Coleta valor atraves da planilha    3    3
-    IF    $nome_coletado != CATEGORIA 3 - INTEGRADA
-        FAIL    Categoria 3 errada ou não aplicada corretamente.
-    END
+    Should Contain    ${nome_coletado}    Categoria 3
+    # IF    '$nome_coletado' != 'Categoria 3\r\n'
+    #     FAIL    Categoria 3 errada ou não aplicada corretamente.
+    # END
     Encerrar Tudo
-    Retirar Categoria    2
-    Retirar Categoria    3
-    Inativar bilhete
 
 Então valido se o preço foi salvo corretamente
     [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      
     Abro o E-commerce
-    Pesquisar bilhete no e-commerce    Bilhete Automatizado: Por Horario
+    Pesquisar bilhete no e-commerce    LB - 41 Programaçāo de Preços
     Adicionar categoria (Compra E-Commerce)    1    1
     Coleta Valor bilhete (E-commerce)     ${valor_cat1}       1
-    sleep                1s
     Iniciar sessao       cde_win_bca_front 
 
 Então valido as temporadas no E-Commerce
     [Arguments]    ${numero_bilhete}
     Abro o E-commerce
-    Pesquisar bilhete no e-commerce    LB-41 
+    Pesquisar bilhete no e-commerce    LB - 41 Programaçāo de Preços
     Sleep                              3s
-    ${temporada1}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span
-    ${temporada2}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[4]/div/div/div/span
-    Should Be Equal    ${temporada1}    Temporada 1
-    Should Be Equal    ${temporada2}    Temporada 2
-    Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
-    Navegar configuração de bilhete    7
-    Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[2]/div/div/div[2]/button[2]
-    Sleep    1s
-    RPA.Desktop.Press Keys    tab
-    RPA.Desktop.Press Keys    enter
-    Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
-    Sleep    3s   
+    Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span       Temporada 1
+    Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div[2]/span    Temporada 2
+    
     
