@@ -22,7 +22,7 @@ Consultas
 
 Consultas Personalizadas
     ${nome_print}=     Set Variable     Consultas Personalizadas
-    [Tags]    Frotas   Consultas   SmokeTest
+    [Tags]   SmokeERP   Frotas   Consultas   SmokeTest
     Consultas               Consultas Personalizadas
     RPA.Windows.Get Text   	Consultas Personalizadas (1) 
     RPA.Windows.Click       Cadastrar Nova Consulta
@@ -32,7 +32,7 @@ Consultas Personalizadas
 
 Consulta de Pneus
     ${nome_print}=     Set Variable     Consulta de Pneus
-    [Tags]    Frotas   Consultas   SmokeTest
+    [Tags]   SmokeERP   Frotas   Consultas   SmokeTest
     Consultas               Consulta de Pneus
     RPA.Windows.Get Text    Consulta de Pneus (1) 
     RPA.Windows.Click       Carregar
@@ -41,7 +41,7 @@ Consulta de Pneus
 
 Consulta de Avisos
     ${nome_print}=     Set Variable     Consulta de Avisos
-    [Tags]    Frotas   Consultas   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Consultas   SmokeTest    
     Consultas               Consulta de Avisos
     RPA.Windows.Get Text    Consulta de Avisos (1) 
     BaseKeywordsDesktop.Screenshot  Consulta de Avisos (1)                              ${Caminho_Screenshots}Consulta de Avisos
@@ -49,7 +49,7 @@ Consulta de Avisos
 
 Consulta de Receitas e Despesas
     ${nome_print}=     Set Variable     Consulta de Receitas e Despesas
-    [Tags]    Frotas   Consultas   SmokeTest
+    [Tags]   SmokeERP   Frotas   Consultas   SmokeTest
     Consultas               Consulta de Receitas e Despesas
     RPA.Windows.Get Text   	Consulta de Receitas e Despesas (1) 
     RPA.Desktop.Press Keys  0
@@ -60,7 +60,7 @@ Consulta de Receitas e Despesas
 
 Consulta de Mov. de Veículos
     ${nome_print}=     Set Variable     Consulta de Mov. de Veículos
-    [Tags]    Frotas   Consultas   SmokeTest
+    [Tags]   SmokeERP   Frotas   Consultas   SmokeTest
     Consultas               Consulta de Mov. de Veículos
     RPA.Windows.Get Text   	Consulta de Movimentação de Veículos (1) 
     RPA.Desktop.Press Keys  0
@@ -71,7 +71,7 @@ Consulta de Mov. de Veículos
 
 Consulta de Infrações de Trânsito
     ${nome_print}=     Set Variable     Consulta de Infrações de Trânsito
-    [Tags]    Frotas   Consultas   SmokeTest
+    [Tags]   SmokeERP   Frotas   Consultas   SmokeTest
     Consultas               Consulta de Infrações de Trânsito
     RPA.Windows.Get Text   	Consulta de Infrações de Trânsito (1) 
     RPA.Desktop.Press Keys  tab
@@ -83,7 +83,7 @@ Consulta de Infrações de Trânsito
 
 Consulta de Abastecimentos(PoliFrotas)
     ${nome_print}=     Set Variable     Consulta de Abastecimentos(PoliFrotas)
-    [Tags]    Frotas   Consultas   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Consultas   SmokeTest    
     Consultas               Consulta de Abastecimentos(PoliFrotas)
     RPA.Windows.Get Text   	Consulta de Abastecidas PoliFrotas (1) 
     repetidor de teclas     tab      2
@@ -95,7 +95,7 @@ Consulta de Abastecimentos(PoliFrotas)
 
 Consulta de Conhecimento de Transporte
     ${nome_print}=     Set Variable     Consulta de Conhecimento de Transporte
-    [Tags]    Frotas   Consultas   SmokeTest              
+    [Tags]   SmokeERP   Frotas   Consultas   SmokeTest              
     Consultas               Consulta de Conhecimento de Transporte
     RPA.Windows.Get Text   	Consulta de Conhecimento de Transporte (1)
     repetidor de teclas     tab      3

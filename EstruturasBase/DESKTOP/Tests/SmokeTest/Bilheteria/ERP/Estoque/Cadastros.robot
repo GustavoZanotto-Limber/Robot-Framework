@@ -17,7 +17,7 @@ ${nome_exe}=    cde_win_est
 
 Terceiros
     ${nome_print}=     Set Variable     Terceiros
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Get Text    Cadastro de Terceiros (1)
@@ -28,7 +28,7 @@ Terceiros
 
 Grupo de Terceiros
     ${nome_print}=     Set Variable     Grupo de Terceiros
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Grupo de Terceiros
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
@@ -38,7 +38,7 @@ Grupo de Terceiros
 
 Setores
     ${nome_print}=     Set Variable     Setores
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Setores
     RPA.Windows.Get Text    Cadastro de Setores (1)
@@ -48,7 +48,7 @@ Setores
 
 Safras
     ${nome_print}=     Set Variable     Safras
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Safras
     RPA.Windows.Get Text    Cadastro de Safras (1)
@@ -58,7 +58,7 @@ Safras
 
 Produtos > Produtos
     ${nome_print}=     Set Variable     Produtos
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  P
@@ -69,7 +69,7 @@ Produtos > Produtos
 
 Produtos > Depósitos
     ${nome_print}=     Set Variable     Depósitos
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  D
@@ -80,7 +80,7 @@ Produtos > Depósitos
 
 Produtos > Unidades
     ${nome_print}=     Set Variable     Unidades
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  U
@@ -91,7 +91,7 @@ Produtos > Unidades
 
 Produtos > Marcas
     ${nome_print}=     Set Variable     Marcas
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  M
@@ -102,7 +102,7 @@ Produtos > Marcas
 
 Produtos > Cores
     ${nome_print}=     Set Variable     Cores
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  C
@@ -113,7 +113,7 @@ Produtos > Cores
 
 Produtos > Tamanhos
     ${nome_print}=     Set Variable     Tamanhos
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  T
@@ -124,7 +124,7 @@ Produtos > Tamanhos
 
 Produtos > Estampas
     ${nome_print}=     Set Variable     Estampas
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  E
@@ -135,7 +135,7 @@ Produtos > Estampas
 
 Produtos > Categorias
     ${nome_print}=     Set Variable     Categorias
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Produtos
     RPA.Desktop.Press Keys  A
@@ -146,7 +146,7 @@ Produtos > Categorias
 
 Veículos > Veículos
     ${nome_print}=     Set Variable     Veículos
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  V
@@ -157,7 +157,7 @@ Veículos > Veículos
 
 Veículos > Tipos de Veículos
     ${nome_print}=     Set Variable     Tipos de Veículos
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  T
@@ -168,7 +168,7 @@ Veículos > Tipos de Veículos
 
 Tipo Movimentação
     ${nome_print}=     Set Variable     Tipo Movimentação
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Tipo Movimentação
     RPA.Windows.Get Text    Cadastro de Tipos de Movimentação (1)
@@ -178,7 +178,7 @@ Tipo Movimentação
 
 Categoria de Lote
     ${nome_print}=     Set Variable     Categoria de Lote
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Categoria de Lote
     RPA.Windows.Get Text    Cadastro de Categoria de Lote (1)
@@ -188,7 +188,7 @@ Categoria de Lote
 
 Tipo de Teste Lotes
     ${nome_print}=     Set Variable     Tipo De Teste Lotes
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     repetidor de teclas     down    8
     RPA.Desktop.Press Keys  ENTER
@@ -199,7 +199,7 @@ Tipo de Teste Lotes
 
 Países
     ${nome_print}=     Set Variable     Países
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -209,7 +209,7 @@ Países
 
 Municípios
     ${nome_print}=     Set Variable     Municípios
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -219,7 +219,7 @@ Municípios
 
 Estados
     ${nome_print}=     Set Variable     Estados
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -229,7 +229,7 @@ Estados
 
 Localidades
     ${nome_print}=     Set Variable     Localidades
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
@@ -239,7 +239,7 @@ Localidades
 
 Regiões
     ${nome_print}=     Set Variable     Regiões
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -249,7 +249,7 @@ Regiões
 
 Fiscais > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    T
@@ -260,7 +260,7 @@ Fiscais > Tabela Tributária
 
 Fiscais > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    S
@@ -271,7 +271,7 @@ Fiscais > Situação Tributária
 
 Fiscais > Operações Fiscais
     ${nome_print}=     Set Variable     Operações Fiscais
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    O
@@ -282,7 +282,7 @@ Fiscais > Operações Fiscais
 
 Fiscais > Classificações Fiscais
     ${nome_print}=     Set Variable     Classificações Fiscais
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    C
@@ -293,7 +293,7 @@ Fiscais > Classificações Fiscais
 
 Fiscais > Classificações de Serviços Prestado - REINF
     ${nome_print}=     Set Variable     Classificações de Serviços Prestado - REINF    
-    [Tags]     Estoque    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscais
     RPA.Desktop.Press Keys    L
@@ -305,7 +305,7 @@ Fiscais > Classificações de Serviços Prestado - REINF
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]     Estoque    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -317,7 +317,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -329,7 +329,7 @@ Parâmetros > Estabelecimentos
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
@@ -339,7 +339,7 @@ Parâmetros > Usuários
 
 Parâmetros > Grupo de Usuários
     ${nome_print}=     Set Variable     Grupo de Usuários
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -351,7 +351,7 @@ Parâmetros > Grupo de Usuários
 
 Parâmetros > Configurações da Estação
     ${nome_print}=     Set Variable     Configurações da Estação
-    [Tags]     Estoque    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Estoque    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    C

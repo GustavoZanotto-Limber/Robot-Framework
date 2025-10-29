@@ -22,7 +22,7 @@ Relatorios
 
 *** Test Cases ***
 Resumo Geral
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Resumo Geral
     Relatorios              Resumo Geral
     RPA.Windows.Get Text    Resumo de Movimentação (1)
@@ -34,7 +34,7 @@ Resumo Geral
     Fechar janela
 
 Fechamento de Caixa
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Fechamento de Caixa
     Relatorios              Fechamento de Caixa
     RPA.Windows.Get Text    Fechamento de Caixa $ESPAÇO(1)
@@ -45,7 +45,7 @@ Fechamento de Caixa
     Fechar janela
 
 Formas de Pagamento
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Formas de Pagamento
     Relatorios              Formas de Pagamento
     RPA.Windows.Get Text    Relatório de Formas de Pagamento (1)
@@ -57,7 +57,7 @@ Formas de Pagamento
     Fechar janela
 
 Formas de Pagamento Agrupada
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Formas de Pagamento Agrupada
     Relatorios              Formas de Pagamento Agrupada
     RPA.Windows.Get Text    Relatório de Formas de Pagamento Agrupadas (1)
@@ -69,7 +69,7 @@ Formas de Pagamento Agrupada
     Fechar janela
 
 Bilhetes Isentos
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Bilhetes Isentos
     Relatorios              Bilhetes Isentos
     RPA.Windows.Get Text    Relátorio de Bilhetes Isentos (1)
@@ -81,7 +81,7 @@ Bilhetes Isentos
     Fechar janela
 
 Lançamento de Isenções
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Lançamento de Isenções
     Relatorios              Lançamentos de Isenções
     RPA.Windows.Get Text    Relatório de Lançamentos de Isenções (1)
@@ -93,7 +93,7 @@ Lançamento de Isenções
     Fechar janela
 
 Lançamentos de Reservas
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Lançamentos de Reservas
     Sleep                   1s
     Relatorios              Lançamentos de Reservas
@@ -105,7 +105,7 @@ Lançamentos de Reservas
     Fechar janela
 
 Bilhetes Reimpressos
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Bilhetes Reimpressos
     Relatorios              Bilhetes Reimpressos
     RPA.Windows.Get Text    Relatório de Bilhetes Reimpressos (1)
@@ -117,7 +117,7 @@ Bilhetes Reimpressos
     Fechar janela
 
 Bilhetes Cancelados
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Bilhetes Cancelados
     Relatorios              Bilhetes Cancelados
     RPA.Windows.Get Text    Relatório de Bilhetes Cancelados (1)
@@ -129,7 +129,7 @@ Bilhetes Cancelados
     Fechar janela
 
 Desconto de Venda
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Desconto de Venda
     Relatorios              Desconto de Venda
     RPA.Windows.Get Text    Relatório de Desconto por Venda (1)
@@ -141,7 +141,7 @@ Desconto de Venda
     Fechar janela
 
 Bilhetes por Tipo de Autorização
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Bilhetes por Tipo de Autorização
     Sleep                   1s
     Relatorios              Bilhetes por Tipo de Autorização
@@ -154,7 +154,7 @@ Bilhetes por Tipo de Autorização
     Fechar janela
 
 Guias
-    [Tags]    Relatórios    Front    SmokeTest  SmokeTestERP  
+    [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Guias
     Relatorios              Guias
     RPA.Windows.Get Text    Relatório de Guias (1)

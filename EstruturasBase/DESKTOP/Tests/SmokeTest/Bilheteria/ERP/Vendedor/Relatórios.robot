@@ -23,7 +23,7 @@ Relatórios
 
 Análise da Disponibilidade do Estoque
     ${nome_print}=     Set Variable     Análise da Disponibilidade do Estoque
-    [Tags]    Vendedor   Relatórios   SmokeTest    
+    [Tags]   SmokeERP   Vendedor   Relatórios   SmokeTest    
     Relatórios                Análise da Disponibilidade do Estoque   
     RPA.Windows.Get Text      Análise da Disponibilidade do Estoque (1)
     RPA.Desktop.Press Keys    tab
@@ -35,7 +35,7 @@ Análise da Disponibilidade do Estoque
 
 Relatório de Cobrança
     ${nome_print}=     Set Variable     Relatório de Cobrança
-    [Tags]    Vendedor   Relatórios   SmokeTest        
+    [Tags]   SmokeERP   Vendedor   Relatórios   SmokeTest        
     Relatórios                Relatório de Cobrança  
     RPA.Windows.Get Text      Relatório de Cobrança
     RPA.Desktop.Press Keys    tab
@@ -47,7 +47,7 @@ Relatório de Cobrança
 
 Posição Financeira/Vendedor/Terceiro
     ${nome_print}=     Set Variable     Posição Financeira/Vendedor/Terceiro
-    [Tags]    Vendedor   Relatórios   SmokeTest    
+    [Tags]   SmokeERP   Vendedor   Relatórios   SmokeTest    
     Relatórios                Posição Financeira/Vendedor/Terceiro  
     RPA.Windows.Get Text      Posição Financeira por Representante/Terceiro
     RPA.Desktop.Press Keys    tab

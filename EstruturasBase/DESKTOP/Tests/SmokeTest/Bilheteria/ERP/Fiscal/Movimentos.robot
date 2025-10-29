@@ -24,7 +24,7 @@ Movimentos
 
 Liberações > Lançamentos de Entrada
     ${nome_print}=     Set Variable     Lançamentos de Entrada
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Liberações
     RPA.Desktop.Press Keys    L  
     RPA.Windows.Get Text      Liberação de Lançamentos Fiscais de Entrada (1)
@@ -37,7 +37,7 @@ Liberações > Lançamentos de Entrada
 
 Liberações > Lançamentos de Saída
     ${nome_print}=     Set Variable     Lançamentos de Saída
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Liberações
     RPA.Desktop.Press Keys    A  
     RPA.Windows.Get Text      Liberação de Lançamentos Fiscais de Saídas (1)
@@ -50,7 +50,7 @@ Liberações > Lançamentos de Saída
 
 Estornar Liberações > Lançamentos de Entrada
     ${nome_print}=     Set Variable     Lançamentos de Entrada
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Estornar Liberações
     RPA.Desktop.Press Keys    L  
     RPA.Windows.Get Text      Estorno de Liberação de Lançamentos Fiscais de Entrada (1)
@@ -63,7 +63,7 @@ Estornar Liberações > Lançamentos de Entrada
 
 Estornar Liberações > Lançamentos de Saída
     ${nome_print}=     Set Variable     Lançamentos de Saída
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Estornar Liberações
     RPA.Desktop.Press Keys    A  
     RPA.Windows.Get Text      Estorno de Liberação de Lançamentos Fiscais de Saídas (1)
@@ -76,7 +76,7 @@ Estornar Liberações > Lançamentos de Saída
 
 Informações > Complementares de ICMS
     ${nome_print}=     Set Variable     Complementares de ICMS
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos              Informações
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Informações Complementares ICMS (1)
@@ -87,7 +87,7 @@ Informações > Complementares de ICMS
 
 Informações > Obrigações do ICMS a recolher
     ${nome_print}=     Set Variable     Obrigações do ICMS a recolher
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos              Informações
     RPA.Desktop.Press Keys  O  
     RPA.Windows.Get Text    Obrigações do ICMS a Recolher (1)
@@ -97,7 +97,7 @@ Informações > Obrigações do ICMS a recolher
 
 Informações > Obrigações do PIS/Cofins a recolher
     ${nome_print}=     Set Variable     Obrigações do PIS_Cofins a recolher
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos              Informações
     RPA.Desktop.Press Keys  B  
     RPA.Windows.Get Text    Obrigações do PIS/COFINS a Recolher (1)
@@ -107,7 +107,7 @@ Informações > Obrigações do PIS/Cofins a recolher
 
 Outros > ICMS > Outros Débitos
     ${nome_print}=     Set Variable     Outros Débitos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Desktop.Press Keys    O  
@@ -119,7 +119,7 @@ Outros > ICMS > Outros Débitos
 
 Outros > ICMS > Estorno de Créditos
     ${nome_print}=     Set Variable     Estorno de Créditos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Desktop.Press Keys    E  
@@ -131,7 +131,7 @@ Outros > ICMS > Estorno de Créditos
 
 Outros > ICMS > Outros Créditos
     ${nome_print}=     Set Variable     Outros Créditos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Desktop.Press Keys    U  
@@ -143,7 +143,7 @@ Outros > ICMS > Outros Créditos
 
 Outros > ICMS > Estorno de Débitos
     ${nome_print}=     Set Variable     Estorno de Débitos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Desktop.Press Keys    S  
@@ -155,7 +155,7 @@ Outros > ICMS > Estorno de Débitos
 
 Outros > ICMS > Específicos > SC
     ${nome_print}=     Set Variable     SC
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Windows.Click         Específicos
@@ -168,7 +168,7 @@ Outros > ICMS > Específicos > SC
 
 Outros > ICMS > Específicos > Apuração de Crédito de ICMS - TTD
     ${nome_print}=     Set Variable     Apuração de Crédito de ICMS - TTD
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Windows.Click         Específicos
@@ -181,7 +181,7 @@ Outros > ICMS > Específicos > Apuração de Crédito de ICMS - TTD
 
 Outros > ICMS > Deduções
     ${nome_print}=     Set Variable     Deduções
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         ICMS
     RPA.Desktop.Press Keys    D  
@@ -193,7 +193,7 @@ Outros > ICMS > Deduções
 
 Outros > IPI > Outros Débitos
     ${nome_print}=     Set Variable     Outros Débitos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         IPI
     RPA.Desktop.Press Keys    O  
@@ -205,7 +205,7 @@ Outros > IPI > Outros Débitos
 
 Outros > IPI > Estorno de Créditos
     ${nome_print}=     Set Variable     Estorno de Créditos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         IPI
     RPA.Desktop.Press Keys    E  
@@ -217,7 +217,7 @@ Outros > IPI > Estorno de Créditos
 
 Outros > IPI > Outros Créditos
     ${nome_print}=     Set Variable     Outros Créditos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         IPI
     RPA.Desktop.Press Keys    U  
@@ -229,7 +229,7 @@ Outros > IPI > Outros Créditos
 
 Outros > IPI > Estorno de Débitos
     ${nome_print}=     Set Variable     Estorno de Débitos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         IPI
     RPA.Desktop.Press Keys    S  
@@ -241,7 +241,7 @@ Outros > IPI > Estorno de Débitos
 
 Outros > Outras Bases > PIS > Outras Receitas - PIS
     ${nome_print}=     Set Variable     Outras Receitas - PIS
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         PIS
@@ -255,7 +255,7 @@ Outros > Outras Bases > PIS > Outras Receitas - PIS
 
 Outros > Outras Bases > PIS > Deduções - PIS
     ${nome_print}=     Set Variable     Deduções - PIS
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         PIS
@@ -269,7 +269,7 @@ Outros > Outras Bases > PIS > Deduções - PIS
 
 Outros > Outras Bases > PIS > Compensações - PIS
     ${nome_print}=     Set Variable     Compensações - PIS
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         PIS
@@ -283,7 +283,7 @@ Outros > Outras Bases > PIS > Compensações - PIS
 
 Outros > Outras Bases > COFINS > Outras Receitas - COFINS
     ${nome_print}=     Set Variable     Outras Receitas - COFINS
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Desktop.Press Keys    C
@@ -297,7 +297,7 @@ Outros > Outras Bases > COFINS > Outras Receitas - COFINS
 
 Outros > Outras Bases > COFINS > Deduções - COFINS
     ${nome_print}=     Set Variable     Deduções - COFINS
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Desktop.Press Keys    C
@@ -311,7 +311,7 @@ Outros > Outras Bases > COFINS > Deduções - COFINS
 
 Outros > Outras Bases > COFINS > Compensações - COFINS
     ${nome_print}=     Set Variable     Compensações - COFINS
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Desktop.Press Keys    C
@@ -325,7 +325,7 @@ Outros > Outras Bases > COFINS > Compensações - COFINS
 
 Outros > Outras Bases > CS > Outras Receitas - CS
     ${nome_print}=     Set Variable     Outras Receitas - CS
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         CS
@@ -339,7 +339,7 @@ Outros > Outras Bases > CS > Outras Receitas - CS
 
 Outros > Outras Bases > CS > Deduções - CS
     ${nome_print}=     Set Variable     Deduções - CS
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         CS
@@ -353,7 +353,7 @@ Outros > Outras Bases > CS > Deduções - CS
 
 Outros > Outras Bases > CS > Compensações - CS
     ${nome_print}=     Set Variable     Compensações - CS
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         CS
@@ -367,7 +367,7 @@ Outros > Outras Bases > CS > Compensações - CS
 
 Outros > Outras Bases > IRPJ > Demais Resultados - IRPJ
     ${nome_print}=     Set Variable     Demais Resultados - IRPJ
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         IRPJ
@@ -381,7 +381,7 @@ Outros > Outras Bases > IRPJ > Demais Resultados - IRPJ
 
 Outros > Outras Bases > IRPJ > Deduções - IRPJ
     ${nome_print}=     Set Variable     Deduções - IRPJ
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         IRPJ
@@ -395,7 +395,7 @@ Outros > Outras Bases > IRPJ > Deduções - IRPJ
 
 Outros > Outras Bases > IRPJ > Compensações - IRPJ
     ${nome_print}=     Set Variable     Compensações - IRPJ
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         IRPJ
@@ -409,7 +409,7 @@ Outros > Outras Bases > IRPJ > Compensações - IRPJ
 
 Outros > Outras Bases > IRPJ > Outras Deduções do IRF p/ IRPJ - IRPJ
     ${nome_print}=     Set Variable     Outras Deduções do IRF p_ IRPJ - IRPJ
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Outras Bases
     RPA.Windows.Click         IRPJ
@@ -423,7 +423,7 @@ Outros > Outras Bases > IRPJ > Outras Deduções do IRF p/ IRPJ - IRPJ
 
 Outros > PIS/COFINS > Lançamentos
     ${nome_print}=     Set Variable     Lançamentos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Desktop.Press Keys    L
@@ -435,7 +435,7 @@ Outros > PIS/COFINS > Lançamentos
 
 Outros > PIS/COFINS > Informações > Ajustes Bebidas
     ${nome_print}=     Set Variable     Ajustes Bebidas
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Windows.Click         Informações
@@ -448,7 +448,7 @@ Outros > PIS/COFINS > Informações > Ajustes Bebidas
 
 Outros > PIS/COFINS > Informações > Créditos Não Cumulativos
     ${nome_print}=     Set Variable     Créditos Não Cumulativos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Windows.Click         Informações
@@ -461,7 +461,7 @@ Outros > PIS/COFINS > Informações > Créditos Não Cumulativos
 
 Outros > PIS/COFINS > Lançamento de Crédito do Pis/Cofins
     ${nome_print}=     Set Variable     Lançamento de Crédito do Pis_Cofins
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Desktop.Press Keys    A
@@ -473,7 +473,7 @@ Outros > PIS/COFINS > Lançamento de Crédito do Pis/Cofins
 
 Outros > PIS/COFINS > Utilização de Crédito de Pis/Cofins
     ${nome_print}=     Set Variable     Utilização de Crédito de Pis_Cofins
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Desktop.Press Keys    U
@@ -485,7 +485,7 @@ Outros > PIS/COFINS > Utilização de Crédito de Pis/Cofins
 
 Outros > PIS/COFINS > Gerar Lançamentos Automáticos
     ${nome_print}=     Set Variable     Gerar Lançamentos Automáticos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Desktop.Press Keys    G
@@ -498,7 +498,7 @@ Outros > PIS/COFINS > Gerar Lançamentos Automáticos
 
 Outros > PIS/COFINS > Estornar Lançamentos Automáticos
     ${nome_print}=     Set Variable     Estornar Lançamentos Automáticos
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         PIS/COFINS
     RPA.Desktop.Press Keys    E
@@ -512,7 +512,7 @@ Outros > PIS/COFINS > Estornar Lançamentos Automáticos
 
 Outros > Exportações > Exportações
     ${nome_print}=     Set Variable     Exportações
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Exportações
     RPA.Desktop.Press Keys    E
@@ -524,7 +524,7 @@ Outros > Exportações > Exportações
 
 Outros > Exportações > Saldo de NF's p/ Exportação
     ${nome_print}=     Set Variable     Saldo de NF's p/ Exportação
-    [Tags]    Fiscal   Movimentos   SmokeTest
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest
     Movimentos                Outros
     RPA.Windows.Click         Exportações
     RPA.Desktop.Press Keys    S
@@ -537,7 +537,7 @@ Outros > Exportações > Saldo de NF's p/ Exportação
 
 Outros > Exportações > PH > S-1250
     ${nome_print}=     Set Variable     S-1250
-    [Tags]    Fiscal   Movimentos   SmokeTest    
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest    
     Movimentos                Outros
     RPA.Windows.Click         Exportações
     RPA.Windows.Click         PH
@@ -552,7 +552,7 @@ Outros > Exportações > PH > S-1250
 
 Alterar Lcto Entrada
     ${nome_print}=     Set Variable     Alterar Lcto Entrada
-    [Tags]    Fiscal   Movimentos   SmokeTest    
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest    
     Movimentos                Alterar Lcto Entrada
     Sleep                     1s
     RPA.Windows.Get Text      Entradas/Compras - Incluir/Alterar (1)
@@ -562,7 +562,7 @@ Alterar Lcto Entrada
 
 Alterar Lcto Saída
     ${nome_print}=     Set Variable     Alterar Lcto Saída
-    [Tags]    Fiscal   Movimentos   SmokeTest    
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest    
     Movimentos                Alterar Lcto Saída
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Alterar Saídas/Vendas (1)
     RPA.Desktop.Press Keys    0
@@ -574,7 +574,7 @@ Alterar Lcto Saída
 
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
-    [Tags]    Fiscal   Movimentos   SmokeTest    
+    [Tags]   SmokeERP   Fiscal   Movimentos   SmokeTest    
     Movimentos                Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
     RPA.Windows.Click         Cadastrar Novo Processo

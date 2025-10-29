@@ -20,7 +20,7 @@ Orçamentos
 
 Liberação Orçamentária
     ${nome_print}=     Set Variable     Liberação Orçamentária
-    [Tags]     Financeiro    Orçamento   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Orçamento   SmokeTest
     Orçamentos
     RPA.Windows.Click         Liberação Orçamentária
     RPA.Windows.Get Text      Liberação Orçamentária (1)
@@ -31,7 +31,7 @@ Liberação Orçamentária
 
 Previsão Orçamentária
     ${nome_print}=     Set Variable     Previsão Orçamentária
-    [Tags]     Financeiro    Orçamento   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Orçamento   SmokeTest
     Orçamentos
     RPA.Windows.Click         Previsão Orçamentária
     RPA.Windows.Get Text      Previsão Orçamentária (1)
@@ -42,7 +42,7 @@ Previsão Orçamentária
 
 Transferência de Orçamentos
     ${nome_print}=     Set Variable     Transferência de Orçamentos
-    [Tags]     Financeiro    Orçamento   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Orçamento   SmokeTest
     Orçamentos
     RPA.Windows.Click         Transferência de Orçamentos
     RPA.Windows.Get Text      Transferência de Orçamentos (1)
@@ -52,7 +52,7 @@ Transferência de Orçamentos
 
 Previsão X Realizado
     ${nome_print}=     Set Variable     Previsão X Realizado
-    [Tags]     Financeiro    Orçamento   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Orçamento   SmokeTest
     Orçamentos
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    P
@@ -64,7 +64,7 @@ Previsão X Realizado
 
 Previsão X Realizado 2
     ${nome_print}=     Set Variable     Previsão X Realizado 2
-    [Tags]     Financeiro    Orçamento   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Orçamento   SmokeTest
     Orçamentos
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    R

@@ -22,7 +22,7 @@ Cheques
 
 Cheques Emitidos
     ${nome_print}=     Set Variable     Cheques Emitidos
-    [Tags]     Financeiro    Cheques   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Cheques Emitidos
     RPA.Windows.Get Text      Manutenção de Cheques (1)
@@ -34,7 +34,7 @@ Cheques Emitidos
 
 Cheques de Terceiros
     ${nome_print}=     Set Variable     Cheques de Terceiros
-    [Tags]     Financeiro    Cheques   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Cheques de Terceiros
     RPA.Windows.Get Text      Movimentação de Cheques de Terceiros (1)
@@ -44,7 +44,7 @@ Cheques de Terceiros
 
 Relatório de Cheque de Terceiros
     ${nome_print}=     Set Variable     Relatório de Cheque de Terceiros
-    [Tags]     Financeiro    Cheques   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Relatório de Cheques de Terceiros
     RPA.Windows.Get Text      Relatório de Cheque de Terceiros (1)
@@ -56,7 +56,7 @@ Relatório de Cheque de Terceiros
 
 Relatório de Cheques Emitidos
     ${nome_print}=     Set Variable     Relatório de Cheques Emitidos
-    [Tags]     Financeiro    Cheques   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Relatório de Cheques Emitidos
     RPA.Windows.Get Text      Relatório de Cheques (1)
@@ -68,7 +68,7 @@ Relatório de Cheques Emitidos
 
 Relatórios de Cheques Cancelados/Excluídos
     ${nome_print}=     Set Variable     Relatórios de Cheques Cancelados_Excluídos
-    [Tags]     Financeiro    Cheques   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Relatório de Cheques Cancelados/Excluídos
     RPA.Windows.Get Text      Relatório de cheques cancelados (1)
@@ -81,7 +81,7 @@ Relatórios de Cheques Cancelados/Excluídos
 
 Layouts de Cheques para Emissão
     ${nome_print}=     Set Variable     Layouts de Cheques para Emissão
-    [Tags]     Financeiro    Cheques   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Layouts de Cheques para Emissão
     RPA.Windows.Get Text      Configuração de Cheques (1)
@@ -91,7 +91,7 @@ Layouts de Cheques para Emissão
 
 Imprimir Multiplos Cheques
     ${nome_print}=     Set Variable     Imprimir Multiplos Cheques
-    [Tags]     Financeiro    Cheques   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cheques   SmokeTest
     Cheques
     RPA.Windows.Click         Imprimir Multiplos Cheques
     RPA.Windows.Get Text      Imprimir Cheques (1)

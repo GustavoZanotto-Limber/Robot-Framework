@@ -21,7 +21,7 @@ Gráficos
 
 Vendas/Prestação de Serviços - Evolução Diária
     ${nome_print}=     Set Variable     Vendas_Prestação de Serviços Evolução Diária
-    [Tags]    Vendas   Gráficos   SmokeTest
+    [Tags]   SmokeERP   Vendas   Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Diária
     RPA.Windows.Get Text      Evolução Diária. (1)
@@ -32,7 +32,7 @@ Vendas/Prestação de Serviços - Evolução Diária
 
 Vendas/Prestação de Serviços - Evolução Mensal
     ${nome_print}=     Set Variable     Vendas_Prestação de Serviços Evolução Mensal
-    [Tags]    Vendas   Gráficos   SmokeTest
+    [Tags]   SmokeERP   Vendas   Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Mensal
     RPA.Windows.Get Text      Evolução Mensal. (1)
@@ -43,7 +43,7 @@ Vendas/Prestação de Serviços - Evolução Mensal
 
 Vendas/Prestação de Serviços - Evolução Anual
     ${nome_print}=     Set Variable     Vendas_Prestação de Serviços Evolução Anual
-    [Tags]    Vendas   Gráficos   SmokeTest
+    [Tags]   SmokeERP   Vendas   Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Anual 
     RPA.Windows.Get Text      Evolução Anual. (1)
@@ -54,7 +54,7 @@ Vendas/Prestação de Serviços - Evolução Anual
 
 Vendas/Prestação de Serviços - Sintético/Cliente
     ${nome_print}=     Set Variable     Vendas_Prestação de Serviços Sintético_Cliente
-    [Tags]    Vendas   Gráficos   SmokeTest
+    [Tags]   SmokeERP   Vendas   Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Cliente
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Cliente (1)
@@ -65,7 +65,7 @@ Vendas/Prestação de Serviços - Sintético/Cliente
 
 Vendas/Prestação de Serviços - Sintético/Setor
     ${nome_print}=     Set Variable     Vendas_Prestação de Serviços Sintético_Setor
-    [Tags]    Vendas   Gráficos   SmokeTest
+    [Tags]   SmokeERP   Vendas   Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Setor
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Setor (1)
@@ -75,7 +75,7 @@ Vendas/Prestação de Serviços - Sintético/Setor
 
 Vendas/Prestação de Serviços - Sintético/Item
     ${nome_print}=     Set Variable     Vendas_Prestação de Serviços Sintético_Item
-    [Tags]    Vendas   Gráficos   SmokeTest
+    [Tags]   SmokeERP   Vendas   Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Item
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Item (1)

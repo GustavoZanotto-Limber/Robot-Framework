@@ -21,7 +21,7 @@ Consultas
 
 Consulta Simplificada do Estoque
     ${nome_print}=     Set Variable     Consulta Simplificada do Estoque
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Consulta Simplificada do Estoque
     RPA.Windows.Get Text    Consulta de Itens (1)
@@ -31,7 +31,7 @@ Consulta Simplificada do Estoque
 
 Consulta Simplificada do Estoque (Modelo 2)
     ${nome_print}=     Set Variable     Consulta Simplificada do Estoque (Modelo 2)
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Consulta Simplificada do Estoque (Modelo 2)
     RPA.Windows.Get Text    Consulta de Itens (1)
@@ -41,7 +41,7 @@ Consulta Simplificada do Estoque (Modelo 2)
 
 Consulta do Estoque/Estabelecimento/Setor
     ${nome_print}=     Set Variable     Consulta do Estoque_Estabelecimento_Setor
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Consulta do Estoque/Estabelecimento/Setor
     RPA.Windows.Get Text    Consulta de Estoque/Estabelecimento/Depósito (1)
@@ -51,7 +51,7 @@ Consulta do Estoque/Estabelecimento/Setor
 
 Consulta Inventário de Estoque
     ${nome_print}=     Set Variable     Consulta Inventário de Estoque
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Consulta Inventário de Estoque
     RPA.Windows.Get Text    Consulta de Inventário de Estoque (1)
@@ -62,7 +62,7 @@ Consulta Inventário de Estoque
 
 Disponibilidade de Estoque
     ${nome_print}=     Set Variable     Disponibilidade de Estoque
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Disponibilidade de Estoque
     RPA.Windows.Get Text    Disponibilidade do Estoque (1)
@@ -73,7 +73,7 @@ Disponibilidade de Estoque
 
 Ficha Kardex de Produtos
     ${nome_print}=     Set Variable     Ficha Kardex de Produtos
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Ficha Kardex de Produtos
     RPA.Windows.Get Text    Kardex do Estoque (1)
@@ -84,7 +84,7 @@ Ficha Kardex de Produtos
 
 Saldo Sintético de Produtos
     ${nome_print}=     Set Variable     Saldo Sintético de Produtos
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Saldo Sintético de Produtos
     RPA.Windows.Get Text    Consulta Saldo Sintético de Produtos (1)
@@ -95,7 +95,7 @@ Saldo Sintético de Produtos
 
 Consulta Saldo Sintético de Operações
     ${nome_print}=     Set Variable     Consulta Saldo Sintético de Operações
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Consulta Saldo Sintético de Operações
     RPA.Windows.Get Text    Consulta Saldo Sintético de Operações (1)
@@ -105,7 +105,7 @@ Consulta Saldo Sintético de Operações
 
 Movimentação de Operações
     ${nome_print}=     Set Variable     Movimentação de Operações
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Movimentação de Operações
     RPA.Windows.Get Text    Movimentação de Operações (1)
@@ -115,7 +115,7 @@ Movimentação de Operações
 
 Saldo de Operações
     ${nome_print}=     Set Variable     Saldo de Operações
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Saldo de Operações
     RPA.Windows.Get Text    Consulta Saldo de Operações (1)
@@ -125,7 +125,7 @@ Saldo de Operações
 
 Saldo de Terceiros
     ${nome_print}=     Set Variable     Saldo de Terceiros
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Saldo de Terceiros
     RPA.Windows.Get Text    Saldos de Terceiros (1)
@@ -135,7 +135,7 @@ Saldo de Terceiros
 
 Movimentação de Terceiros
     ${nome_print}=     Set Variable     Movimentação de Terceiros
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Movimentação de Terceiros
     RPA.Windows.Get Text    Movimentação de Terceiros (1)
@@ -146,7 +146,7 @@ Movimentação de Terceiros
 
 Lotes de Terceiros
     ${nome_print}=     Set Variable     Lotes de Terceiros
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Lotes de Terceiros
     RPA.Windows.Get Text    Consulta de Lotes de Terceiro (1)
@@ -156,7 +156,7 @@ Lotes de Terceiros
 
 Análise do Estoque
     ${nome_print}=     Set Variable     Análise do Estoque
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Análise do Estoque
     RPA.Windows.Get Text    Análise do Estoque (1)
@@ -167,7 +167,7 @@ Análise do Estoque
 
 Consulta Kardex de Vasilhames
     ${nome_print}=     Set Variable     Consulta Kardex de Vasilhames
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Consulta Kardex de Vasilhames
     RPA.Windows.Get Text    Kardex do Estoque de Vasilhames (1)
@@ -178,7 +178,7 @@ Consulta Kardex de Vasilhames
 
 Consulta de Saldo de Vasilhames
     ${nome_print}=     Set Variable     Consulta de Saldo de Vasilhames
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Consulta de Saldo de Vasilhames
     RPA.Windows.Get Text    Saldo de Vasilhames (1)
@@ -188,7 +188,7 @@ Consulta de Saldo de Vasilhames
 
 Consultas Personalizadas
     ${nome_print}=     Set Variable     Consultas Personalizadas
-    [Tags]     Estoque    Consultas   SmokeTest
+    [Tags]   SmokeERP    Estoque    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Consultas Personalizadas
     RPA.Windows.Get Text    Consultas Personalizadas (1)

@@ -18,7 +18,7 @@ ${nome_exe}=    cde_win_crt
 
 Itens > Itens
     ${nome_print}=     Set Variable     Itens
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    I
@@ -30,7 +30,7 @@ Itens > Itens
 
 Terceiros
     ${nome_print}=     Set Variable     Terceiros
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
@@ -42,7 +42,7 @@ Terceiros
 
 Contrato > Configuração de Contrato
     ${nome_print}=     Set Variable     Configuração de Contrato
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Contrato
     RPA.Desktop.Press Keys    C
@@ -57,7 +57,7 @@ Contrato > Configuração de Contrato
 
 Contrato > Mensagens para Contrato
     ${nome_print}=     Set Variable     Mensagens para Contrato
-    [Tags]     Corretagem    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Contrato
     RPA.Desktop.Press Keys    M
@@ -69,7 +69,7 @@ Contrato > Mensagens para Contrato
 
 Confirmação de Negócio > Configuração de Confirmação de Negócio
     ${nome_print}=     Set Variable     Configuração de Confirmação de Negócio
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Confirmação de Negócio 
     RPA.Desktop.Press Keys    C
@@ -84,7 +84,7 @@ Confirmação de Negócio > Configuração de Confirmação de Negócio
 
 Confirmação de Negócio > Status de Confirmação de Negócio
     ${nome_print}=     Set Variable     Status de Confirmação de Negócio
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Confirmação de Negócio 
     RPA.Desktop.Press Keys    S
@@ -96,7 +96,7 @@ Confirmação de Negócio > Status de Confirmação de Negócio
 
 Confirmação de Negócio > Motivos Acrésc/Descontos
     ${nome_print}=     Set Variable     Motivos Acrésc_Descontos
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Confirmação de Negócio 
     RPA.Desktop.Press Keys    M
@@ -107,7 +107,7 @@ Confirmação de Negócio > Motivos Acrésc/Descontos
 
 Confirmação de Negócio > Cadastro Tipo de Custos
     ${nome_print}=     Set Variable     Cadastro Tipo de Custos
-    [Tags]     Corretagem    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Confirmação de Negócio 
     RPA.Desktop.Press Keys    A
@@ -118,7 +118,7 @@ Confirmação de Negócio > Cadastro Tipo de Custos
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]     Corretagem    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -129,7 +129,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]     Corretagem    Cadastros   SmokeTest   
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest   
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -140,7 +140,7 @@ Parâmetros > Estabelecimentos
 
 Parâmetros > Grupo de Usuários
     ${nome_print}=     Set Variable     Grupo de Usuários
-    [Tags]     Corretagem    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -151,7 +151,7 @@ Parâmetros > Grupo de Usuários
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
-    [Tags]     Corretagem    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U

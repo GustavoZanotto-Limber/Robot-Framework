@@ -21,7 +21,7 @@ Contas
 
 Movimentação de Contas
     ${nome_print}=     Set Variable     Movimentação de Contas
-    [Tags]     Financeiro    Contas   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest    
     Contas
     RPA.Windows.Click         Movimentação de Contas
     RPA.Windows.Get Text      Movimento de Contas (1)
@@ -31,7 +31,7 @@ Movimentação de Contas
 
 Transferências entre Contas
     ${nome_print}=     Set Variable     Transferências entre Contas
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Transferências entre Contas
     RPA.Windows.Get Text      Transferências (1)
@@ -42,7 +42,7 @@ Transferências entre Contas
 
 Transferências entre Estabelecimentos
     ${nome_print}=     Set Variable     Transferências entre Estabelecimentos
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Transferências entre Estabelecimentos
     RPA.Windows.Get Text      Transferência Entre Estabelecimentos (1)
@@ -52,7 +52,7 @@ Transferências entre Estabelecimentos
 
 Conciliação de Cheques Emitidos
     ${nome_print}=     Set Variable     Conciliação de Cheques Emitidos
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Cheques Emitidos
     RPA.Windows.Get Text      Conciliação de Cheques Emitidos
@@ -63,7 +63,7 @@ Conciliação de Cheques Emitidos
 
 Conciliação de Cheques de Terceiros
     ${nome_print}=     Set Variable     Conciliação de Cheques de Terceiros
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Cheques de Terceiros
     RPA.Windows.Get Text      Conciliação de Cheques de Terceiros (1)
@@ -74,7 +74,7 @@ Conciliação de Cheques de Terceiros
 
 Conciliação de Contas
     ${nome_print}=     Set Variable     Conciliação de Contas
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Contas
     RPA.Windows.Get Text      Conciliação de Contas
@@ -85,7 +85,7 @@ Conciliação de Contas
 
 Estorna Conciliação
     ${nome_print}=     Set Variable     Estorna Conciliação
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Estorna Conciliação
     RPA.Windows.Get Text      Estorna Conciliação de Lançamentos Bancários (1)
@@ -96,7 +96,7 @@ Estorna Conciliação
 
 Estorno de Conciliação Cheques Terceiros
     ${nome_print}=     Set Variable     Estorno de Conciliação Cheques Terceiros
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Estorno de Conciliação Cheques Terceiros
     RPA.Windows.Get Text      Estorno de Conciliação de Cheques de Terceiros (1)
@@ -107,7 +107,7 @@ Estorno de Conciliação Cheques Terceiros
 
 Conciliação de Transações Eletrônicas > Conciliação de Transações Eletrônicas Simplificadas
     ${nome_print}=     Set Variable     Conciliação de Transações Eletrônicas Simplificadas
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Transações Eletrônicas
     RPA.Desktop.Press Keys    C
@@ -119,7 +119,7 @@ Conciliação de Transações Eletrônicas > Conciliação de Transações Eletr
 
 Conciliação de Transações Eletrônicas > Conciliação Arquivo PIX CNAB 750
     ${nome_print}=     Set Variable     Conciliação Arquivo PIX CNAB 750
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Transações Eletrônicas
     RPA.Desktop.Press Keys    o
@@ -131,7 +131,7 @@ Conciliação de Transações Eletrônicas > Conciliação Arquivo PIX CNAB 750
 
 Conciliação de Transações Eletrônicas > Conciliação de Transações PIX > API
     ${nome_print}=     Set Variable     API
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Transações Eletrônicas
     RPA.Desktop.Press Keys    n
@@ -144,7 +144,7 @@ Conciliação de Transações Eletrônicas > Conciliação de Transações PIX >
 
 Conciliação de Transações Eletrônicas > Configuração de Arquivo de Importação
     ${nome_print}=     Set Variable     Configuração de Arquivo de Importação
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Conciliação de Transações Eletrônicas
     RPA.Desktop.Press Keys    f
@@ -155,7 +155,7 @@ Conciliação de Transações Eletrônicas > Configuração de Arquivo de Import
 
 Apropriação de Custos (Centro de Custos)
     ${nome_print}=     Set Variable     Apropriação de Custos (Centro de Custos)
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Apropriação de Custos (Centro de Custos)
     RPA.Windows.Get Text      Apropriação de Custos (1)
@@ -166,7 +166,7 @@ Apropriação de Custos (Centro de Custos)
 
 Apropriação de Consumo de Adiantamentos
     ${nome_print}=     Set Variable     Apropriação de Consumo de Adiantamentos
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Apropriação de Consumo de Adiantamentos
     RPA.Windows.Get Text      Apropriação de consumo de adiantamento (1)
@@ -176,7 +176,7 @@ Apropriação de Consumo de Adiantamentos
 
 Encontro de Contas > Encontro de Contas
     ${nome_print}=     Set Variable     Encontro de Contas
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Encontro de Contas
     RPA.Desktop.Press Keys    E
@@ -188,7 +188,7 @@ Encontro de Contas > Encontro de Contas
 
 Encontro de Contas > Estorno de Encontro de Contas
     ${nome_print}=     Set Variable     Estorno de Encontro de Contas
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Encontro de Contas
     RPA.Desktop.Press Keys    s
@@ -200,7 +200,7 @@ Encontro de Contas > Estorno de Encontro de Contas
 
 Geração de Receitas Mapa Resumo > Geração de Receitas Mapa Resumo
     ${nome_print}=     Set Variable     Geração de Receitas Mapa Resumo
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    g
@@ -212,7 +212,7 @@ Geração de Receitas Mapa Resumo > Geração de Receitas Mapa Resumo
 
 Geração de Receitas Mapa Resumo > Configuração para geração de receitas
     ${nome_print}=     Set Variable     Configuração para geração de receitas
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    c
@@ -223,7 +223,7 @@ Geração de Receitas Mapa Resumo > Configuração para geração de receitas
 
 Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Tipos de Deduções
     ${nome_print}=     Set Variable     Tipos de Deduções
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    d
@@ -235,7 +235,7 @@ Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Tipos de Dedu
 
 Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Lançamento de Deduções
     ${nome_print}=     Set Variable     Lançamento de Deduções
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    d
@@ -247,7 +247,7 @@ Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Lançamento d
 
 Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Consulta de Lançamentos
     ${nome_print}=     Set Variable     Consulta de Lançamentos
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    d
@@ -259,7 +259,7 @@ Geração de Receitas Mapa Resumo > Deduções Adicionais de ISS > Consulta de L
 
 Geração de Receitas Mapa Resumo > Vinculo Cliente em Venda
     ${nome_print}=     Set Variable     Vinculo Cliente em Venda
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    v
@@ -272,7 +272,7 @@ Geração de Receitas Mapa Resumo > Vinculo Cliente em Venda
 
 Geração de Receitas Mapa Resumo > Emissão de NFS-e/CT-e sobre Reduções
     ${nome_print}=     Set Variable     Emissão de NFS-e_CT-e sobre Reduções
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    e
@@ -284,7 +284,7 @@ Geração de Receitas Mapa Resumo > Emissão de NFS-e/CT-e sobre Reduções
 
 Geração de Receitas Mapa Resumo > Mapa Resumo da ECF
     ${nome_print}=     Set Variable     Mapa Resumo da ECF
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    m
@@ -295,7 +295,7 @@ Geração de Receitas Mapa Resumo > Mapa Resumo da ECF
 
 Geração de Receitas Mapa Resumo > Fechamento de Caixas
     ${nome_print}=     Set Variable     Fechamento de Caixas
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    f
@@ -306,7 +306,7 @@ Geração de Receitas Mapa Resumo > Fechamento de Caixas
 
 Geração de Receitas Mapa Resumo > Configuração de Centros de Custos por PDV
     ${nome_print}=     Set Variable     Configuração de Centros de Custos por PDV
-    [Tags]     Financeiro    Contas   SmokeTest      
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest      
     Contas
     RPA.Windows.Click         Geração de Receitas Mapa Resumo
     RPA.Desktop.Press Keys    o
@@ -320,7 +320,7 @@ Geração de Receitas Mapa Resumo > Configuração de Centros de Custos por PDV
 
 Zeramento de Cartões Crédito Interno
     ${nome_print}=     Set Variable     Zeramento de Cartões Crédito Interno
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Zeramento de Cartões Crédito Interno
     RPA.Windows.Get Text      Zeramento de Saldo de Cartões Crédito Interno Pré Pago (1)
@@ -331,7 +331,7 @@ Zeramento de Cartões Crédito Interno
 
 Bloqueia Lançamentos
     ${nome_print}=     Set Variable     Bloqueia Lançamentos
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Bloqueia Lançamentos
     RPA.Windows.Get Text      Bloqueia Lançamentos (1)
@@ -344,7 +344,7 @@ Bloqueia Lançamentos
 
 Consultas > Razão de Contas
     ${nome_print}=     Set Variable     Razão de Contas
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    r
@@ -356,7 +356,7 @@ Consultas > Razão de Contas
 
 Consultas > Balancete
     ${nome_print}=     Set Variable     Balancete
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    b
@@ -368,7 +368,7 @@ Consultas > Balancete
 
 Consultas > Diário
     ${nome_print}=     Set Variable     Diário
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    d
@@ -380,7 +380,7 @@ Consultas > Diário
 
 Consultas > Pesquisa de Lançamentos
     ${nome_print}=     Set Variable     Pesquisa de Lançamentos
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    p
@@ -392,7 +392,7 @@ Consultas > Pesquisa de Lançamentos
 
 Consultas > Livro Caixa
     ${nome_print}=     Set Variable     Livro Caixa
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Consultas
     RPA.Desktop.Press Keys    l
@@ -404,7 +404,7 @@ Consultas > Livro Caixa
 
 Relatórios > Razão Gerencial
     ${nome_print}=     Set Variable     Razão Gerencial
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    r
@@ -418,7 +418,7 @@ Relatórios > Razão Gerencial
 
 Relatórios > Balancete
     ${nome_print}=     Set Variable     Balancete
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    b
@@ -431,7 +431,7 @@ Relatórios > Balancete
 
 Relatórios > Livro caixa
     ${nome_print}=     Set Variable     Livro caixa
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    l
@@ -445,7 +445,7 @@ Relatórios > Livro caixa
 
 Relatórios > Movimentação de Caixa
     ${nome_print}=     Set Variable     Movimentação de Caixa
-    [Tags]     Financeiro    Contas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas   SmokeTest
     Contas
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    m

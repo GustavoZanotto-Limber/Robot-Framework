@@ -22,7 +22,7 @@ Relatórios/Consultas
 
 Informe de Rendimentos
     ${nome_print}=     Set Variable     Informe de Rendimentos
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Informe de Rendimentos
     RPA.Windows.Get Text      Informativo de Rendimentos (1)
@@ -32,7 +32,7 @@ Informe de Rendimentos
 
 Relatório de Receitas e Despesas
     ${nome_print}=     Set Variable     Relatório de Receitas e Despesas
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Relatório de Receitas e Despesas
     RPA.Windows.Get Text      Relatório de Receitas e Despesas (1)
@@ -44,7 +44,7 @@ Relatório de Receitas e Despesas
 
 Consulta de Receitas e Despesas
     ${nome_print}=     Set Variable     Consulta de Receitas e Despesas
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Consulta de Receitas e Despesas
     RPA.Windows.Get Text      Consulta de Receitas e Despesas (1)
@@ -56,7 +56,7 @@ Consulta de Receitas e Despesas
 
 Saldo de Pedidos de Venda
     ${nome_print}=     Set Variable     Saldo de Pedidos de Venda
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Saldo de Pedidos de Venda
     RPA.Windows.Get Text      Relatório de Saldos de Pedidos de Venda (1)
@@ -69,7 +69,7 @@ Saldo de Pedidos de Venda
 
 Posição Financeira > Configuração
     ${nome_print}=     Set Variable     Configuração
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Posição Financeira
     RPA.Desktop.Press Keys    c
@@ -86,7 +86,7 @@ Posição Financeira > Configuração
 
 Posição Financeira > Relatório
     ${nome_print}=     Set Variable     Relatório
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Posição Financeira
     RPA.Desktop.Press Keys    r
@@ -96,7 +96,7 @@ Posição Financeira > Relatório
 
 Relatório Crédito Interno
     ${nome_print}=     Set Variable     Relatório Crédito Interno
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Relatório Crédito Interno
     RPA.Windows.Get Text      Relatório de Crédito Interno (1)
@@ -109,7 +109,7 @@ Relatório Crédito Interno
 
 Consultas Personalizadas
     ${nome_print}=     Set Variable     Consultas Personalizadas
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
@@ -120,7 +120,7 @@ Consultas Personalizadas
 
 Rateio de Centro de Custo
     ${nome_print}=     Set Variable     Rateio de Centro de Custo
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Rateio de Centro de Custo
     RPA.Windows.Get Text      Consulta de Rateio de Centro de Custos (1)
@@ -132,7 +132,7 @@ Rateio de Centro de Custo
 
 Centro de Custos
     ${nome_print}=     Set Variable     Centro de Custos
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Centro de Custos
     RPA.Windows.Get Text      Centro de Custos (1)
@@ -143,7 +143,7 @@ Centro de Custos
 
 Consumo de Adiantamento
     ${nome_print}=     Set Variable     Consumo de Adiantamento
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Consumo de Adiantamento
     RPA.Windows.Get Text      Consulta de Consumo de Adiantamentos (1)
@@ -153,7 +153,7 @@ Consumo de Adiantamento
 
 Análise de Terceiro
     ${nome_print}=     Set Variable     Análise de Terceiro
-    [Tags]     Financeiro    Relatórios Consultas   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Relatórios Consultas   SmokeTest
     Relatórios/Consultas
     RPA.Windows.Click         Análise de Terceiro
     Sleep                     1s

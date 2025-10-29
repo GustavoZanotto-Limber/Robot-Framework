@@ -17,7 +17,7 @@ ${nome_exe}=    cde_win_ven
 
 Terceiros > Cadastro de Terceiros
     ${nome_print}=     Set Variable     Cadastro de Terceiros
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Desktop.Press Keys    C
@@ -30,7 +30,7 @@ Terceiros > Cadastro de Terceiros
 
 Terceiros > Limite de Crédito
     ${nome_print}=     Set Variable     Limite de Crédito
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  L
@@ -43,7 +43,7 @@ Terceiros > Limite de Crédito
 
 Terceiros > Tipos de Garantia
     ${nome_print}=     Set Variable     Tipos de Garantia
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  T
@@ -54,7 +54,7 @@ Terceiros > Tipos de Garantia
 
 Terceiros > Categorias de Terceiros
     ${nome_print}=     Set Variable     Categorias de Terceiros
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  A
@@ -65,7 +65,7 @@ Terceiros > Categorias de Terceiros
 
 Terceiros > Grupo de Terceiros
     ${nome_print}=     Set Variable     Grupo de Terceiros
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  G
@@ -76,7 +76,7 @@ Terceiros > Grupo de Terceiros
 
 Terceiros > Grupo de Terceiros Fidelizados
     ${nome_print}=     Set Variable     Grupo de Terceiros Fidelizados
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  R
@@ -87,7 +87,7 @@ Terceiros > Grupo de Terceiros Fidelizados
 
 Terceiros > Contatos > Registros de Contatos
     ${nome_print}=     Set Variable     Registros de Contatos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -100,7 +100,7 @@ Terceiros > Contatos > Registros de Contatos
 
 Terceiros > Contatos > Tipo de Histórico de Contatos
     ${nome_print}=     Set Variable     Tipo de Histórico de Contatos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -112,7 +112,7 @@ Terceiros > Contatos > Tipo de Histórico de Contatos
 
 Terceiros > Contatos > Atividades de Contatos
     ${nome_print}=     Set Variable     Atividades de Contatos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -124,7 +124,7 @@ Terceiros > Contatos > Atividades de Contatos
 
 Terceiros > Contatos > Consulta de contatos realizados
     ${nome_print}=     Set Variable     Consulta de contatos realizados
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -136,7 +136,7 @@ Terceiros > Contatos > Consulta de contatos realizados
 
 Terceiros > Troca de Vendedor
     ${nome_print}=     Set Variable     Troca de Vendedor
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  D
@@ -147,7 +147,7 @@ Terceiros > Troca de Vendedor
 
 Terceiros > Cadastro Categoria SICOR (PRONAF)
     ${nome_print}=     Set Variable     Cadastro Categoria SICOR (PRONAF)
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  S
@@ -159,7 +159,7 @@ Terceiros > Cadastro Categoria SICOR (PRONAF)
 
 Terceiros > Aprovação/Rejeição atualização Cadastral Força de Vendas
     ${nome_print}=     Set Variable     Aprovação/Rejeição atualização Cadastral Força de Vendas
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     Sleep                   1s
     RPA.Windows.Click       Terceiros
@@ -171,7 +171,7 @@ Terceiros > Aprovação/Rejeição atualização Cadastral Força de Vendas
 
 Terceiros > Rating > Cadastro Perguntas/Respostas
     ${nome_print}=     Set Variable     Cadastro Perguntas_Respostas
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Rating
@@ -185,7 +185,7 @@ Terceiros > Rating > Cadastro Perguntas/Respostas
 
 Terceiros > Rating > Cálculo Rating
     ${nome_print}=     Set Variable     Cálculo Rating
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Rating
@@ -197,7 +197,7 @@ Terceiros > Rating > Cálculo Rating
 
 Setores
     ${nome_print}=     Set Variable     Setores
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Setores
     RPA.Windows.Get Text    Cadastro de Setores (1)
@@ -207,7 +207,7 @@ Setores
 
 Itens > Itens
     ${nome_print}=     Set Variable     Itens
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  I
@@ -218,7 +218,7 @@ Itens > Itens
 
 Itens > Itens - Edição em massa
     ${nome_print}=     Set Variable     Itens - Edição em massa
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Itens - Edição em massa
@@ -229,7 +229,7 @@ Itens > Itens - Edição em massa
 
 Itens > Depósitos
     ${nome_print}=     Set Variable     Depósitos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  D
@@ -240,7 +240,7 @@ Itens > Depósitos
 
 Itens > Fabricantes
     ${nome_print}=     Set Variable     Fabricantes
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    F  
@@ -252,7 +252,7 @@ Itens > Fabricantes
 
 Itens > Grupo de Inspeção
     ${nome_print}=     Set Variable     Grupo de Inspeção
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Windows.Click         Grupo de Inspeção
@@ -264,7 +264,7 @@ Itens > Grupo de Inspeção
 
 Itens > Inspeção de Itens
     ${nome_print}=     Set Variable     Inspeção de Itens
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Windows.Click         Inspeção de Itens
@@ -276,7 +276,7 @@ Itens > Inspeção de Itens
 
 Itens > Marcas
     ${nome_print}=     Set Variable     Marcas
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Marcas
@@ -287,7 +287,7 @@ Itens > Marcas
 
 Itens > Estampas
     ${nome_print}=     Set Variable     Estampas
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Estampas
@@ -298,7 +298,7 @@ Itens > Estampas
 
 Itens > Tamanhos
     ${nome_print}=     Set Variable     Tamanhos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  T
@@ -309,7 +309,7 @@ Itens > Tamanhos
 
 Itens > Tipo do Serviço
     ${nome_print}=     Set Variable     Tipo Serviço
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    V  
@@ -320,7 +320,7 @@ Itens > Tipo do Serviço
 
 Itens > Gênero do produto
     ${nome_print}=     Set Variable     Gênero produto
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Windows.Click         Gênero do Produto
@@ -331,7 +331,7 @@ Itens > Gênero do produto
 
 Itens > Produtos Pizza
     ${nome_print}=     Set Variable     Produtos Pizza
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    Z  
@@ -345,7 +345,7 @@ Itens > Produtos Pizza
 
 Itens > Unidades
     ${nome_print}=     Set Variable     Unidades
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  U
@@ -356,7 +356,7 @@ Itens > Unidades
 
 Itens > Conversões de Unidades
     ${nome_print}=     Set Variable     Conversões de Unidades
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Conversões de Unidades
@@ -369,7 +369,7 @@ Itens > Conversões de Unidades
 
 Itens > Tabelas de Frete
     ${nome_print}=     Set Variable     Tabelas de Frete
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  B
@@ -380,7 +380,7 @@ Itens > Tabelas de Frete
 
 Itens > Modos de Preparo
     ${nome_print}=     Set Variable     Modos de Preparo
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  M
@@ -391,7 +391,7 @@ Itens > Modos de Preparo
 
 Itens > Grades
     ${nome_print}=     Set Variable     Grades
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    G  
@@ -403,7 +403,7 @@ Itens > Grades
 
 Itens > Tabela de Preços
     ${nome_print}=     Set Variable     Tabela de Preços
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Tabela de Preços
@@ -414,7 +414,7 @@ Itens > Tabela de Preços
 
 Itens > Cores
     ${nome_print}=     Set Variable     Cores
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  C
@@ -425,7 +425,7 @@ Itens > Cores
 
 Itens > Tabela de Umidade
     ${nome_print}=     Set Variable     Tabela de Umidade
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Tabela de Umidade   
@@ -436,7 +436,7 @@ Itens > Tabela de Umidade
 
 Itens > Descontos para Grãos
     ${nome_print}=     Set Variable     Descontos para Grãos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    E 
@@ -448,7 +448,7 @@ Itens > Descontos para Grãos
 
 Itens > Locais de Entrega - Retirada
     ${nome_print}=     Set Variable     Locais de Entrega - Retirada
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    L
@@ -460,7 +460,7 @@ Itens > Locais de Entrega - Retirada
 
 Itens > Safras
     ${nome_print}=     Set Variable     Safras
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    S 
@@ -471,7 +471,7 @@ Itens > Safras
 
 Itens > Classificação Gerencial
     ${nome_print}=     Set Variable     Classificação Gerencial
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    A
@@ -483,7 +483,7 @@ Itens > Classificação Gerencial
 
 Itens > Tipo de Produto
     ${nome_print}=     Set Variable     Tipo de Produto
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Itens
     RPA.Desktop.Press Keys    P 
@@ -495,7 +495,7 @@ Itens > Tipo de Produto
 
 Itens > Categorias
     ${nome_print}=     Set Variable     Categorias
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  O
@@ -506,7 +506,7 @@ Itens > Categorias
 
 Itens > Grupo de Variedade de Produção
     ${nome_print}=     Set Variable     Grupo de Variedade de Produção
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Grupo de Variedade de Produção
@@ -517,7 +517,7 @@ Itens > Grupo de Variedade de Produção
 
 Itens > Ecommerce > Características
     ${nome_print}=     Set Variable     Características
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Ecommerce
@@ -529,7 +529,7 @@ Itens > Ecommerce > Características
 
 Itens > Ecommerce > Categorias
     ${nome_print}=     Set Variable     Categorias
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Ecommerce
@@ -541,7 +541,7 @@ Itens > Ecommerce > Categorias
 
 Itens > Ecommerce > Informações Adicionais
     ${nome_print}=     Set Variable     Informações Adicionais
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Ecommerce
@@ -553,7 +553,7 @@ Itens > Ecommerce > Informações Adicionais
 
 Itens > Recorrências
     ${nome_print}=     Set Variable     Recorrências
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  N
@@ -564,7 +564,7 @@ Itens > Recorrências
 
 Itens > Catálogo de Produtos
     ${nome_print}=     Set Variable     Catálogo de Produtos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Windows.Click       Catálogo de Produtos
@@ -575,7 +575,7 @@ Itens > Catálogo de Produtos
 
 Veículos > Veículos
     ${nome_print}=     Set Variable     Veículos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  V
@@ -586,7 +586,7 @@ Veículos > Veículos
 
 Veículos > Tipos de Veículos
     ${nome_print}=     Set Variable     Tipos de Veículos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  T
@@ -597,7 +597,7 @@ Veículos > Tipos de Veículos
 
 Seguros de Carga
     ${nome_print}=     Set Variable     Seguros de Carga
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Seguros de Carga
     RPA.Windows.Get Text    Cadastro de Seguro de Carga (1)
@@ -607,7 +607,7 @@ Seguros de Carga
 
 Grupos de Equipamentos
     ${nome_print}=     Set Variable     Grupos de Equipamentos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Grupos de Equipamentos
     RPA.Windows.Get Text    Cadastro de Grupos de Equipamentos (1)
@@ -617,7 +617,7 @@ Grupos de Equipamentos
 
 Equipamentos
     ${nome_print}=     Set Variable     Equipamentos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Equipamentos
     RPA.Windows.Get Text    Cadastro de Equipamentos (1)
@@ -627,7 +627,7 @@ Equipamentos
 
 ECF/SAT > Situação Tributária (Totalizadores)
     ${nome_print}=     Set Variable     Situação Tributária (Totalizadores)
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       ECF/SAT
     RPA.Desktop.Press Keys  S
@@ -638,7 +638,7 @@ ECF/SAT > Situação Tributária (Totalizadores)
 
 Observações
     ${nome_print}=     Set Variable     Observações
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Observações
     RPA.Windows.Get Text    Cadastro de Observações Fiscais (1)
@@ -648,7 +648,7 @@ Observações
 
 Contabilista
     ${nome_print}=     Set Variable     Contabilista
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Contabilista
     RPA.Windows.Get Text    Cadastro de Contabilistas (1)
@@ -658,7 +658,7 @@ Contabilista
 
 Navios
     ${nome_print}=     Set Variable     Navios
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Navios
     RPA.Windows.Get Text    Cadastro de Navios (1)
@@ -668,7 +668,7 @@ Navios
 
 Berço de Embarque
     ${nome_print}=     Set Variable     Berço de Embarque
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Berço de Embarque
     RPA.Windows.Get Text    Cadastro de Berços de Embarque (1)
@@ -678,7 +678,7 @@ Berço de Embarque
 
 Rotas Simplificado
     ${nome_print}=     Set Variable     Rotas Simplificado
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Rotas Simplificado
     RPA.Windows.Get Text    Cadastro de Rotas Simplificado (1)
@@ -688,7 +688,7 @@ Rotas Simplificado
 
 Feriados
     ${nome_print}=     Set Variable     Feriados
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Feriados
     RPA.Windows.Get Text    Cadastro de Feriados (1)
@@ -699,7 +699,7 @@ Feriados
 
 Tipos de Visitas
     ${nome_print}=     Set Variable     Tipos de Visitas
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Tipos de Visita
     RPA.Windows.Get Text    Cadastro de Tipos de Visitas (1)
@@ -709,7 +709,7 @@ Tipos de Visitas
 
 Finalidade de Visita
     ${nome_print}=     Set Variable     Finalidade de Visita
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Finalidade de Visita
     RPA.Windows.Get Text    Cadastro de Finalidade de Visita (1)
@@ -719,7 +719,7 @@ Finalidade de Visita
 
 Jornada de Trabalho
     ${nome_print}=     Set Variable     Jornada de Trabalho
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Jornada de Trabalho
     RPA.Windows.Get Text    Cadastro de Jornada de Trabalho (1)
@@ -729,7 +729,7 @@ Jornada de Trabalho
 
 Configuração de mensagem para nota fiscal
     ${nome_print}=     Set Variable     Configuração de mensagem para nota fiscal
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Configuração de mensagem para nota fiscal
     RPA.Windows.Get Text    Configuração de mensagem para nota fiscal (1)
@@ -742,7 +742,7 @@ Configuração de mensagem para nota fiscal
 
 Programa de Recompensas > Cadastro de Pontos de Resgate
     ${nome_print}=     Set Variable     Cadastro de Pontos de Resgate
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Programa de Recompensas
     RPA.Desktop.Press Keys  C
@@ -753,7 +753,7 @@ Programa de Recompensas > Cadastro de Pontos de Resgate
 
 Programa de Recompensas > Configuração de Acúmulo de Pontos
     ${nome_print}=     Set Variable     Configuração de Acúmulo de Pontos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Programa de Recompensas
     RPA.Desktop.Press Keys  O
@@ -766,7 +766,7 @@ Programa de Recompensas > Configuração de Acúmulo de Pontos
 
 Programa de Recompensas > Consulta de Saldo de Pontuação de Terceiros
     ${nome_print}=     Set Variable     Consulta de Saldo de Pontuação de Terceiros
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Programa de Recompensas
     RPA.Desktop.Press Keys  N
@@ -779,7 +779,7 @@ Programa de Recompensas > Consulta de Saldo de Pontuação de Terceiros
 
 Programa de Recompensas > Manutenção de Pontuação
     ${nome_print}=     Set Variable     Manutenção de Pontuação
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Programa de Recompensas
     RPA.Desktop.Press Keys  M
@@ -790,7 +790,7 @@ Programa de Recompensas > Manutenção de Pontuação
 
 Metas Mensais
     ${nome_print}=     Set Variable     Metas Mensais
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Metas Mensais
     RPA.Windows.Get Text    Cadastro de Metas Mensais para Vendedores (1)
@@ -800,7 +800,7 @@ Metas Mensais
 
 Documentos > Tipos de Documentos
     ${nome_print}=     Set Variable     Tipos de Documentos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Documentos
     RPA.Desktop.Press Keys  T
@@ -811,7 +811,7 @@ Documentos > Tipos de Documentos
 
 Documentos > Manutenção de Tipos de Documentos Terceiros
     ${nome_print}=     Set Variable     Manutenção de Tipos de Documentos Terceiros
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Documentos
     RPA.Desktop.Press Keys  M
@@ -822,7 +822,7 @@ Documentos > Manutenção de Tipos de Documentos Terceiros
 
 Impressões Configuraveis
     ${nome_print}=     Set Variable     Impressões Configuraveis
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Impressões Configuraveis
     RPA.Windows.Get Text    Cadastro de Impressões Configuráveis (1)
@@ -832,7 +832,7 @@ Impressões Configuraveis
 
 Países
     ${nome_print}=     Set Variable     Países
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -842,7 +842,7 @@ Países
 
 Estados
     ${nome_print}=     Set Variable     Estados
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -852,7 +852,7 @@ Estados
 
 Municípios
     ${nome_print}=     Set Variable     Municípios
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -862,7 +862,7 @@ Municípios
 
 Localidades
     ${nome_print}=     Set Variable     Localidades
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
@@ -872,7 +872,7 @@ Localidades
 
 Regiões
     ${nome_print}=     Set Variable     Regiões
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -882,7 +882,7 @@ Regiões
 
 Bairros
     ${nome_print}=     Set Variable     Bairros
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Bairros
     RPA.Windows.Get Text      Cadastro de Bairros (1)
@@ -892,7 +892,7 @@ Bairros
 
 Comunidades
     ${nome_print}=     Set Variable     Comunidades
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Comunidades
     RPA.Windows.Get Text      Cadastro de Comunidades (1)
@@ -902,7 +902,7 @@ Comunidades
 
 Financeiro > Formas de Pagamento
     ${nome_print}=     Set Variable     Formas de Pagamento
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Financeiro
     RPA.Desktop.Press Keys    F
@@ -913,7 +913,7 @@ Financeiro > Formas de Pagamento
 
 Financeiro > Bandeira Cartão
     ${nome_print}=     Set Variable     Bandeira Cartão
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Financeiro
     RPA.Desktop.Press Keys    B
@@ -925,7 +925,7 @@ Financeiro > Bandeira Cartão
 
 Financeiro > Autorizadoras de Cartões
     ${nome_print}=     Set Variable     Autorizadoras de Cartões
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Financeiro
     RPA.Desktop.Press Keys    A
@@ -938,7 +938,7 @@ Financeiro > Autorizadoras de Cartões
 
 Fiscal > Configuração Int. Contabil
     ${nome_print}=     Set Variable     Configuração Int. Contabil
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    G
@@ -949,7 +949,7 @@ Fiscal > Configuração Int. Contabil
 
 Fiscal > Classificações Fiscais
     ${nome_print}=     Set Variable     Classificações Fiscais
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    A
@@ -960,7 +960,7 @@ Fiscal > Classificações Fiscais
 
 Fiscal > Mensagem de Notas Fiscais
     ${nome_print}=     Set Variable     Mensagem de Notas Fiscais
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    N
@@ -970,7 +970,7 @@ Fiscal > Mensagem de Notas Fiscais
 
 Fiscal > Espécies de Documentos
     ${nome_print}=     Set Variable     Espécies de Documentos
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    E
@@ -982,7 +982,7 @@ Fiscal > Espécies de Documentos
 
 Fiscal > Operações Fiscais
     ${nome_print}=     Set Variable     Operações Fiscais
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    O
@@ -993,7 +993,7 @@ Fiscal > Operações Fiscais
 
 Fiscal > Séries
     ${nome_print}=     Set Variable     Séries
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    R
@@ -1004,7 +1004,7 @@ Fiscal > Séries
 
 Fiscal > CFOP's
     ${nome_print}=     Set Variable     CFOP's
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    C
@@ -1015,7 +1015,7 @@ Fiscal > CFOP's
 
 Fiscal > Ramo de Atividade
     ${nome_print}=     Set Variable     Ramo de Atividade
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Ramo de Atividade
@@ -1027,7 +1027,7 @@ Fiscal > Ramo de Atividade
 
 Fiscal > Simples Nacional > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Simples Nacional
@@ -1039,7 +1039,7 @@ Fiscal > Simples Nacional > Tabela Tributária
 
 Fiscal > Simples Nacional > Situação Tributária (CSOSN)
     ${nome_print}=     Set Variable     Situação Tributária (CSOSN)
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Simples Nacional
@@ -1051,7 +1051,7 @@ Fiscal > Simples Nacional > Situação Tributária (CSOSN)
 
 Fiscal > IPI > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IPI
@@ -1063,7 +1063,7 @@ Fiscal > IPI > Tabela Tributária
 
 Fiscal > IPI > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IPI
@@ -1075,7 +1075,7 @@ Fiscal > IPI > Situação Tributária
 
 Fiscal > ICMS > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -1087,7 +1087,7 @@ Fiscal > ICMS > Tabela Tributária
 
 Fiscal > ICMS > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -1099,7 +1099,7 @@ Fiscal > ICMS > Situação Tributária
 
 Fiscal > ICMS > Tabela Tributária - FCP
     ${nome_print}=     Set Variable     Tabela Tributária - FCP
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -1111,7 +1111,7 @@ Fiscal > ICMS > Tabela Tributária - FCP
 
 Fiscal > ICMS > Configuração Benefício Fiscal
     ${nome_print}=     Set Variable     Configuração Benefício Fiscal
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -1123,7 +1123,7 @@ Fiscal > ICMS > Configuração Benefício Fiscal
 
 Fiscal > ICMS > Importar Tabelas Padrões
     ${nome_print}=     Set Variable     Importar Tabelas Padrões
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -1137,7 +1137,7 @@ Fiscal > ICMS > Importar Tabelas Padrões
 
 Fiscal > PIS > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         PIS
@@ -1149,7 +1149,7 @@ Fiscal > PIS > Tabela Tributária
 
 Fiscal > PIS > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         PIS
@@ -1161,7 +1161,7 @@ Fiscal > PIS > Situação Tributária
 
 Fiscal > COFINS > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         COFINS
@@ -1173,7 +1173,7 @@ Fiscal > COFINS > Tabela Tributária
 
 Fiscal > COFINS > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         COFINS
@@ -1185,7 +1185,7 @@ Fiscal > COFINS > Situação Tributária
 
 Fiscal > CSLL > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         CSLL
@@ -1197,7 +1197,7 @@ Fiscal > CSLL > Tabela Tributária
 
 Fiscal > CSLL > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         CSLL
@@ -1209,7 +1209,7 @@ Fiscal > CSLL > Situação Tributária
 
 Fiscal > IRPJ > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IRPJ
@@ -1221,7 +1221,7 @@ Fiscal > IRPJ > Tabela Tributária
 
 Fiscal > IRPJ > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IRPJ
@@ -1233,7 +1233,7 @@ Fiscal > IRPJ > Situação Tributária
 
 Fiscal > ISSQN > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ISSQN
@@ -1245,7 +1245,7 @@ Fiscal > ISSQN > Tabela Tributária
 
 Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa jurídica
     ${nome_print}=     Set Variable     Tabela Tributária - Pessoa jurídica
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -1258,7 +1258,7 @@ Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa jurídica
 
 Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa Física
     ${nome_print}=     Set Variable     Tabela Tributária - Pessoa Física
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -1271,7 +1271,7 @@ Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa Física
 
 Fiscal > Impostos Retidos > IR > Cadastro de Serviço
     ${nome_print}=     Set Variable     Cadastro de Serviço
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -1284,7 +1284,7 @@ Fiscal > Impostos Retidos > IR > Cadastro de Serviço
 
 Fiscal > Impostos Retidos > CSRF > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -1297,7 +1297,7 @@ Fiscal > Impostos Retidos > CSRF > Tabela Tributária
 
 Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
     ${nome_print}=     Set Variable     Cadastro de Serviços
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -1310,7 +1310,7 @@ Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
 
 Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa jurídica
     ${nome_print}=     Set Variable     Tabela Tributária - Pessoa jurídica
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -1323,7 +1323,7 @@ Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa jurídica
 
 Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa Física
     ${nome_print}=     Set Variable     Tabela Tributária - Pessoa Física
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -1336,7 +1336,7 @@ Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa Física
 
 Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
     ${nome_print}=     Set Variable     Cadastro de Serviços
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -1349,7 +1349,7 @@ Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
 
 Fiscal > Impostos Retidos > SEST/SENAT
     ${nome_print}=     Set Variable     SEST_SENAT
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -1361,7 +1361,7 @@ Fiscal > Impostos Retidos > SEST/SENAT
 
 Fiscal > Tabela de Alíquota Nacional de Impostos por NCM > Cadastro de Tabela
     ${nome_print}=     Set Variable     Cadastro de Tabela
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Tabela de Alíquota Nacional de Impostos por NCM
@@ -1373,7 +1373,7 @@ Fiscal > Tabela de Alíquota Nacional de Impostos por NCM > Cadastro de Tabela
 
 Fiscal > Tabela de Alíquota Nacional de Impostos por NCM > Importação de Tabela
     ${nome_print}=     Set Variable     Importação de Tabela
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Tabela de Alíquota Nacional de Impostos por NCM
@@ -1386,7 +1386,7 @@ Fiscal > Tabela de Alíquota Nacional de Impostos por NCM > Importação de Tabe
 
 Fiscal > Classificações de Serviços Prestado - REINF
     ${nome_print}=     Set Variable     Classificações de Serviços Prestado - REINF
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    V
@@ -1399,7 +1399,7 @@ Fiscal > Classificações de Serviços Prestado - REINF
 
 Fiscal > Tabela Pauta Fiscal
     ${nome_print}=     Set Variable     Tabela Pauta Fiscal
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Tabela Pauta Fiscal
@@ -1411,7 +1411,7 @@ Fiscal > Tabela Pauta Fiscal
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -1422,7 +1422,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
@@ -1434,7 +1434,7 @@ Parâmetros > Estabelecimentos
 
 Parâmetros > Grupos Usuários
     ${nome_print}=     Set Variable     Grupos Usuários
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    g
@@ -1446,7 +1446,7 @@ Parâmetros > Grupos Usuários
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
@@ -1457,7 +1457,7 @@ Parâmetros > Usuários
 
 Parâmetros > Configurações de Estação
     ${nome_print}=     Set Variable     Configurações de Estação
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    O
@@ -1468,7 +1468,7 @@ Parâmetros > Configurações de Estação
 
 Parâmetros > Configurações de E-Mail > Servidores
     ${nome_print}=     Set Variable     Servidores
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Configurações de E-mail
@@ -1481,7 +1481,7 @@ Parâmetros > Configurações de E-Mail > Servidores
 
 Parâmetros > Configurações de E-Mail > Contas
     ${nome_print}=     Set Variable     Contas
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Configurações de E-mail
@@ -1494,7 +1494,7 @@ Parâmetros > Configurações de E-Mail > Contas
 
 Parâmetros > Configurações de E-Mail > Modelos
     ${nome_print}=     Set Variable     Modelos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Configurações de E-mail
@@ -1507,7 +1507,7 @@ Parâmetros > Configurações de E-Mail > Modelos
 
 Parâmetros > Configurações de E-Mail > Opções de Envio
     ${nome_print}=     Set Variable     Opções de Envio
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Configurações de E-mail
@@ -1520,7 +1520,7 @@ Parâmetros > Configurações de E-Mail > Opções de Envio
 
 Parâmetros > Força de Vendas > Cadastro de Dispositivos
     ${nome_print}=     Set Variable     Cadastro de Dispositivos
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Força de Vendas
@@ -1533,7 +1533,7 @@ Parâmetros > Força de Vendas > Cadastro de Dispositivos
 
 Parâmetros > Força de Vendas > Cadastro de Metas
     ${nome_print}=     Set Variable     Cadastro de Metas
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Força de Vendas
@@ -1546,7 +1546,7 @@ Parâmetros > Força de Vendas > Cadastro de Metas
 
 Parâmetros > Força de Vendas > Metas dos Vendedores
     ${nome_print}=     Set Variable     Metas dos Vendedores
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Força de Vendas
@@ -1564,7 +1564,7 @@ Parâmetros > Força de Vendas > Metas dos Vendedores
 
 Parâmetros > Força de Vendas > Configurações de Tabela de Preço
     ${nome_print}=     Set Variable     Configurações de Tabela de Preço
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Windows.Click         Força de Vendas
@@ -1578,7 +1578,7 @@ Parâmetros > Força de Vendas > Configurações de Tabela de Preço
 
 Parâmetros > Sistema Web
     ${nome_print}=     Set Variable     Sistema Web
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    I
@@ -1590,7 +1590,7 @@ Parâmetros > Sistema Web
 
 PDV > Cadastro de PDVs
     ${nome_print}=     Set Variable     Cadastro de PDVs
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    C
@@ -1602,7 +1602,7 @@ PDV > Cadastro de PDVs
 
 PDV > Cadastro de Scripts
     ${nome_print}=     Set Variable     Cadastro de Scripts
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    A
@@ -1614,7 +1614,7 @@ PDV > Cadastro de Scripts
 
 PDV > Cadastro de Cupons de Desconto > Cadastro de Cupons de Desconto
     ${nome_print}=     Set Variable     Cadastro de Cupons de Desconto
-    [Tags]    Vendas   Cadastros   SmokeTest     
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest     
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Windows.Click         Cadastro de Cupons de Desconto
@@ -1627,7 +1627,7 @@ PDV > Cadastro de Cupons de Desconto > Cadastro de Cupons de Desconto
 
 PDV > Cadastro de Cupons de Desconto > Config. Cupons PDV
     ${nome_print}=     Set Variable     Config. Cupons PDV
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Windows.Click         Cadastro de Cupons de Desconto
@@ -1641,7 +1641,7 @@ PDV > Cadastro de Cupons de Desconto > Config. Cupons PDV
 
 PDV > Cadastro de Cupons de Desconto > Config. Cupons Bilheteria
     ${nome_print}=     Set Variable     Config. Cupons Bilheteria
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Windows.Click         Cadastro de Cupons de Desconto
@@ -1655,7 +1655,7 @@ PDV > Cadastro de Cupons de Desconto > Config. Cupons Bilheteria
 
 PDV > Configuração para impressão de comandas
     ${nome_print}=     Set Variable     Configuração para impressão de comandas
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    O
@@ -1669,7 +1669,7 @@ PDV > Configuração para impressão de comandas
 
 PDV > Cadastro de Tipos de Pensão
     ${nome_print}=     Set Variable     Cadastro de Tipos de Pensão
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    S
@@ -1681,7 +1681,7 @@ PDV > Cadastro de Tipos de Pensão
 
 PDV > Motivos de Cancelamento
     ${nome_print}=     Set Variable     Motivos de Cancelamento
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    M
@@ -1693,7 +1693,7 @@ PDV > Motivos de Cancelamento
 
 PDV > Motivos de Sangria/Suprimento
     ${nome_print}=     Set Variable     Motivos de Sangria_Suprimento
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    T
@@ -1705,7 +1705,7 @@ PDV > Motivos de Sangria/Suprimento
 
 PDV > Cadastro de Descontos NFC
     ${nome_print}=     Set Variable     Cadastro de Descontos NFC
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    R
@@ -1717,7 +1717,7 @@ PDV > Cadastro de Descontos NFC
 
 PDV > Tipos de Locação
     ${nome_print}=     Set Variable     Tipos de Locação
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    I
@@ -1729,7 +1729,7 @@ PDV > Tipos de Locação
 
 PDV > Cadastro/Configuração Grupos de Locação
     ${nome_print}=     Set Variable     Cadastro_Configuração Grupos de Locação
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    N
@@ -1741,7 +1741,7 @@ PDV > Cadastro/Configuração Grupos de Locação
 
 PDV > Ambientes para Mesas/Totens/Comandas/Delivery
     ${nome_print}=     Set Variable     Ambientes para Mesas_Totens_Comandas_Delivery
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    B
@@ -1752,7 +1752,7 @@ PDV > Ambientes para Mesas/Totens/Comandas/Delivery
 
 PDV > Grades para Mesas/Totens/Comanda
     ${nome_print}=     Set Variable     Grades para Mesas_Totens_Comanda
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    G
@@ -1765,7 +1765,7 @@ PDV > Grades para Mesas/Totens/Comanda
 
 PDV > Configuração de Ambiente por Horários
     ${nome_print}=     Set Variable     Configuração de Ambiente por Horários
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    F
@@ -1780,7 +1780,7 @@ PDV > Configuração de Ambiente por Horários
 
 PDV > Vincular NFC com Mesa/Cartão
     ${nome_print}=     Set Variable     Vincular NFC com Mesa_Cartão
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    V
@@ -1792,7 +1792,7 @@ PDV > Vincular NFC com Mesa/Cartão
 
 PDV > Tipo de Crédito Interno
     ${nome_print}=     Set Variable     Tipo de Crédito Interno
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    P
@@ -1804,7 +1804,7 @@ PDV > Tipo de Crédito Interno
 
 PDV > Cadastro de Tipos de Cartão para Crédito Interno
     ${nome_print}=     Set Variable     Cadastro de Tipos de Cartão para Crédito Interno
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    E
@@ -1816,7 +1816,7 @@ PDV > Cadastro de Tipos de Cartão para Crédito Interno
 
 PDV > Taxa de Entrega
     ${nome_print}=     Set Variable     Taxa de Entrega
-    [Tags]    Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    X
@@ -1828,7 +1828,7 @@ PDV > Taxa de Entrega
 
 PDV > Integração Abrahao
     ${nome_print}=     Set Variable     Integração Abrahao
-    [Tags]    Vendas   Cadastros   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    H

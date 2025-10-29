@@ -22,7 +22,7 @@ Conhecimento de Transporte
 
 Conhecimento de Transporte > Emissão
     ${nome_print}=     Set Variable     Emissão    
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest    
     Conhecimento de Transporte                  Conhecimento de Transporte
     RPA.Desktop.Press Keys  E  
     RPA.Windows.Get Text    Conhecimento de Transporte (1)
@@ -32,7 +32,7 @@ Conhecimento de Transporte > Emissão
 
 Conhecimento de Transporte > Cancelamento
     ${nome_print}=     Set Variable     Cancelamento
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest
     Conhecimento de Transporte                  Conhecimento de Transporte
     RPA.Desktop.Press Keys  C  
     RPA.Windows.Get Text    Conhecimento de Transporte Eletrônico - Cancelamento (1)
@@ -44,7 +44,7 @@ Conhecimento de Transporte > Cancelamento
 
 Conhecimento de Transporte > Carta de Correção
     ${nome_print}=     Set Variable     Carta de Correção
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest
     Conhecimento de Transporte                  Conhecimento de Transporte
     RPA.Desktop.Press Keys  A  
     RPA.Windows.Click       OK
@@ -57,7 +57,7 @@ Conhecimento de Transporte > Carta de Correção
 
 Conhecimento de Transporte > Cálculo Desconto Quebra
     ${nome_print}=     Set Variable     Cálculo Desconto Quebra
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest
     Conhecimento de Transporte                  Conhecimento de Transporte
     RPA.Desktop.Press Keys  L  
     RPA.Windows.Get Text    Cálculo Desconto Quebra (1)
@@ -69,7 +69,7 @@ Conhecimento de Transporte > Cálculo Desconto Quebra
 
 Envio de Lote
     ${nome_print}=     Set Variable     Envio em Lote
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest
     Conhecimento de Transporte                  Envio em Lote
     RPA.Windows.Click       OK
     RPA.Windows.Get Text    Emissão em Lote - Conhecimento de Transporte Eletrônico (1)
@@ -79,7 +79,7 @@ Envio de Lote
 
 Monitor de CT-e
     ${nome_print}=     Set Variable     Monitor de CT-e
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest
     Conhecimento de Transporte                  Monitor de CT-e
     RPA.Windows.Get Text    Monitor - CT-e (1)
     RPA.Desktop.Press Keys  0
@@ -90,7 +90,7 @@ Monitor de CT-e
 
 Insucesso/Cancelar Insucesso
     ${nome_print}=     Set Variable     Insucesso_Cancelar Insucesso
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest
     Conhecimento de Transporte                  Insucesso/Cancelar Insucesso
     RPA.Windows.Get Text    CT-e Insucesso/Cancelamento de Insucesso (1)
     RPA.Windows.Click       Selecionar CTe
@@ -101,7 +101,7 @@ Insucesso/Cancelar Insucesso
 
 Averbação Online
     ${nome_print}=     Set Variable     Averbação Online
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest    
     Conhecimento de Transporte                  Averbação Online
     RPA.Windows.Get Text    Averbação Online (1)
     RPA.Desktop.Press Keys  0
@@ -112,7 +112,7 @@ Averbação Online
 
 Notas Fiscais Pendentes de Emissão de CT-e
     ${nome_print}=     Set Variable     Notas Fiscais Pendentes de Emissão de CT-e
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest
     Conhecimento de Transporte                  Notas Fiscais Pendentes de Emissão de CT-e
     RPA.Windows.Get Text   	Notas Fiscais Pendentes de Emissão de CTe. (1)
     RPA.Windows.Click       Atualizar
@@ -121,7 +121,7 @@ Notas Fiscais Pendentes de Emissão de CT-e
 
 Subcontratação de CT-e
     ${nome_print}=     Set Variable     Subcontratação de CT-e
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest
     Conhecimento de Transporte                  Subcontratação de CT-e
     RPA.Windows.Get Text   	Subcontratação de CT-e (1)
     RPA.Windows.Click       Atualizar
@@ -130,7 +130,7 @@ Subcontratação de CT-e
 
 Recibo de Pagamento a Autônomo (RPA) > Emissão
     ${nome_print}=     Set Variable     Emissão
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest
     Conhecimento de Transporte                  Recibo de Pagamento a Autônomo (RPA)
     RPA.Desktop.Press Keys       E
     RPA.Windows.Get Text    Emissão de RPA (1)
@@ -140,7 +140,7 @@ Recibo de Pagamento a Autônomo (RPA) > Emissão
 
 Recibo de Pagamento a Autônomo (RPA) > Exclusão/Reimpressão
     ${nome_print}=     Set Variable     Exclusão_Reimpressão
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest
     Conhecimento de Transporte                  Recibo de Pagamento a Autônomo (RPA)
     RPA.Desktop.Press Keys       X  
     RPA.Windows.Get Text   	Reimpressão/Exclusão de RPAs (1)
@@ -150,7 +150,7 @@ Recibo de Pagamento a Autônomo (RPA) > Exclusão/Reimpressão
 
 Recibo de Pagamento a Autônomo (RPA) > Consulta/Conferência de Conhecimento de Transporte
     ${nome_print}=     Set Variable     Consulta_Conferência de Conhecimento de Transporte
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest    
     Conhecimento de Transporte                  Recibo de Pagamento a Autônomo (RPA)
     RPA.Desktop.Press Keys      C  
     RPA.Windows.Get Text     	Consulta/Conferência de CTEs (1)
@@ -162,7 +162,7 @@ Recibo de Pagamento a Autônomo (RPA) > Consulta/Conferência de Conhecimento de
 
 Documentos emitidos contra o estabelecimento para CT-e
     ${nome_print}=     Set Variable     Documentos emitidos contra o estabelecimento para CT-e
-    [Tags]    Frotas   Conhecimento de Transporte   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Conhecimento de Transporte   SmokeTest    
     Conhecimento de Transporte                  Documentos emitidos contra o estabelecimento para CT-e
     RPA.Windows.Get Text   	Documentos emitidos contra o estabelecimento para CT-e (1)
     RPA.Windows.Click       Carregar

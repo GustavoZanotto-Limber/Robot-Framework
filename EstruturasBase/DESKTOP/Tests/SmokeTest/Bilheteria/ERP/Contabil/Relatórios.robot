@@ -21,7 +21,7 @@ Relatórios
 
 Livro Diário
     ${nome_print}=     Set Variable     Livro Diário
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Livro Diário
     RPA.Windows.Get Text      Livro Diário (1) 
@@ -33,7 +33,7 @@ Livro Diário
 
 Razão
     ${nome_print}=     Set Variable     Razão
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Razão
     RPA.Windows.Get Text      Razão Contabil (1) 
@@ -46,7 +46,7 @@ Razão
 
 Balancete
     ${nome_print}=     Set Variable     Balancete
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Balancete
     RPA.Windows.Get Text      Balancete (1) 
@@ -58,7 +58,7 @@ Balancete
 
 Balancete por Plano de Contas Referencial
     ${nome_print}=     Set Variable     Balancete por Plano de Contas Referencial
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Balancete por Plano de Contas Referencial
     RPA.Windows.Get Text      Balancete por Plano de Contas Referencial (1) 
@@ -68,7 +68,7 @@ Balancete por Plano de Contas Referencial
 
 Balanço Patrimonial/Demonstrativo DRE
     ${nome_print}=     Set Variable     Balanço Patrimonial_Demonstrativo DRE
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Balanço Patrimonial/Demonstrativo DRE
     RPA.Windows.Get Text      Balanço/Demonstrativo Integrado (1) 
@@ -80,7 +80,7 @@ Balanço Patrimonial/Demonstrativo DRE
 
 Demonstrativo de Fluxo de Caixa - DFC
     ${nome_print}=     Set Variable     Demonstrativo de Fluxo de Caixa - DFC
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Demonstrativo de Fluxo de Caixa - DFC
     RPA.Windows.Get Text      Demonstrativo de Fluxo de Caixa - DFC (1)
@@ -92,7 +92,7 @@ Demonstrativo de Fluxo de Caixa - DFC
 
 Balanço Patrimonial Comparado
     ${nome_print}=     Set Variable     Balanço Patrimonial Comparado
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Balanço Patrimonial Comparado
     RPA.Windows.Get Text      Balanço Patrimonial Comparado (1) 
@@ -104,7 +104,7 @@ Balanço Patrimonial Comparado
 
 DMPL/DMPS
     ${nome_print}=     Set Variable     DMPL_DMPS
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         DMPL/DMPS
     RPA.Windows.Get Text      DMPL/DMPS (1)
@@ -116,7 +116,7 @@ DMPL/DMPS
 
 Extrato de Conta
     ${nome_print}=     Set Variable     Extrato de Conta
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Extrato de Conta
     RPA.Windows.Get Text      Extrato de Conta (1) 
@@ -126,7 +126,7 @@ Extrato de Conta
 
 Lançamentos
     ${nome_print}=     Set Variable     Lançamentos
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Lançamentos
     RPA.Windows.Get Text      Relação de Lançamentos (1)
@@ -136,7 +136,7 @@ Lançamentos
 
 Termos
     ${nome_print}=     Set Variable     Termos
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Termos
     RPA.Windows.Get Text      Emissão dos Termos de Abertura/Encerramento (1)
@@ -149,7 +149,7 @@ Termos
 
 Cadastros > Plano de Contas
     ${nome_print}=     Set Variable     Plano de Contas
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Cadastros
     RPA.Desktop.Press Keys    P
@@ -160,7 +160,7 @@ Cadastros > Plano de Contas
 
 Cadastros > Históricos
     ${nome_print}=     Set Variable     Históricos
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Cadastros
     RPA.Desktop.Press Keys    H
@@ -171,7 +171,7 @@ Cadastros > Históricos
 
 Cadastros > Centros de Custos
     ${nome_print}=     Set Variable     Centros de Custos
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Cadastros
     RPA.Desktop.Press Keys    C
@@ -182,7 +182,7 @@ Cadastros > Centros de Custos
 
 Cadastros > Estabelecimento
     ${nome_print}=     Set Variable     Estabelecimento
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  E
@@ -193,7 +193,7 @@ Cadastros > Estabelecimento
 
 Cadastros > Países
     ${nome_print}=     Set Variable     Países
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  A
@@ -204,7 +204,7 @@ Cadastros > Países
 
 Cadastros > Estados
     ${nome_print}=     Set Variable     Estados
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  S
@@ -215,7 +215,7 @@ Cadastros > Estados
 
 Cadastros > Municípios
     ${nome_print}=     Set Variable     Municípios
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  M
@@ -226,7 +226,7 @@ Cadastros > Municípios
 
 Cadastros > Regiões
     ${nome_print}=     Set Variable     Regiões
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Cadastros
     RPA.Desktop.Press Keys  R
@@ -237,7 +237,7 @@ Cadastros > Regiões
 
 Cadastros > Localidades
     ${nome_print}=     Set Variable     Localidades
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Cadastros
     RPA.Desktop.Press Keys    L
@@ -248,7 +248,7 @@ Cadastros > Localidades
 
 Cadastros > Terceiros
     ${nome_print}=     Set Variable     Terceiros
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Cadastros
     RPA.Desktop.Press Keys    T
@@ -262,7 +262,7 @@ Cadastros > Terceiros
 
 Informativo de Rendimentos
     ${nome_print}=     Set Variable     Informativo de Rendimentos
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Informativo de Rendimentos
     RPA.Windows.Get Text      Informativo de Rendimentos (1) 
@@ -272,7 +272,7 @@ Informativo de Rendimentos
 
 Customizados > Relatório de Imobilização
     ${nome_print}=     Set Variable     Relatório de Imobilização
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Customizados
     RPA.Desktop.Press Keys    R
@@ -285,7 +285,7 @@ Customizados > Relatório de Imobilização
 
 Receitas / Despesas
     ${nome_print}=     Set Variable     Receitas _ Despesas
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Receitas / Despesas
     RPA.Windows.Get Text      Relatório de Receitas e Despesas (1)
@@ -297,7 +297,7 @@ Receitas / Despesas
 
 Despesas Antecipadas
     ${nome_print}=     Set Variable     Despesas Antecipadas
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Despesas Antecipadas
     RPA.Windows.Get Text      Relatório de Despesas Antecipadas (1)
@@ -310,7 +310,7 @@ Despesas Antecipadas
 
 Centro de Custos (Borderô)
     ${nome_print}=     Set Variable     Centro de Custos (Borderô)
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Centro de Custos (Borderô)
     RPA.Windows.Get Text      Relatório de Centro de Custos (Borderô) (1)
@@ -323,7 +323,7 @@ Centro de Custos (Borderô)
 
 Faturamento
     ${nome_print}=     Set Variable     Faturamento
-    [Tags]     Contabil    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Contabil    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Faturamento
     RPA.Windows.Get Text      Relatório de Faturamento (1)

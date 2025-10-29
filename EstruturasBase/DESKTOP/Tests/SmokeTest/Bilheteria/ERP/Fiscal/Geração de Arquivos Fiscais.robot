@@ -24,7 +24,7 @@ Geração de Arquivos Fiscais
 
 SPED Fiscal (ICMS/IPI)
     ${nome_print}=     Set Variable     SPED Fiscal (ICMS/IPI)
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                SPED Fiscal (ICMS/IPI)
     RPA.Windows.Get Text      SPED Fiscal (1)
     RPA.Desktop.Press Keys    Shift    tab
@@ -38,7 +38,7 @@ SPED Fiscal (ICMS/IPI)
 
 SPED Contribuições (PIS/COFINS)
     ${nome_print}=     Set Variable     SPED Contribuições (PIS/COFINS)
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                SPED Contribuições (PIS/COFINS)
     RPA.Windows.Get Text      SPED Contribuições (1)
     RPA.Desktop.Press Keys    0
@@ -50,7 +50,7 @@ SPED Contribuições (PIS/COFINS)
 
 SPED Contabil (ECD)
     ${nome_print}=     Set Variable     SPED Contabil (ECD)
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                SPED Contábil (ECD)
     RPA.Windows.Get Text      SPED Contábil (1)
     RPA.Desktop.Press Keys    Shift    tab
@@ -62,7 +62,7 @@ SPED Contabil (ECD)
 
 SPED ECF
     ${nome_print}=     Set Variable     SPED ECF
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                SPED ECF
     RPA.Windows.Get Text      Sped ECF (1)
     RPA.Desktop.Press Keys    0
@@ -73,7 +73,7 @@ SPED ECF
 
 SPED REINF > Geração
     ${nome_print}=     Set Variable     Geração
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                SPED REINF
     RPA.Desktop.Press Keys    G  
     RPA.Windows.Get Text      Escrituração fiscal digital de retenções e outras informações fiscais (EFD-REINF) (1)
@@ -86,7 +86,7 @@ SPED REINF > Geração
 
 SPED REINF > Relatório
     ${nome_print}=     Set Variable     Relatório
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                SPED REINF
     RPA.Desktop.Press Keys    R  
     RPA.Windows.Get Text      Relatório - EFD REINF (1)
@@ -98,7 +98,7 @@ SPED REINF > Relatório
 
 GIA-PR
     ${nome_print}=     Set Variable     GIA-PR    
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                GIA-PR
     RPA.Windows.Get Text      Guia de Informação e Apuração do ICMS - Paraná (GIA-PR) (1)
     RPA.Desktop.Press Keys    0
@@ -110,7 +110,7 @@ GIA-PR
 
 GIA-MS
     ${nome_print}=     Set Variable     GIA-MS
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                GIA-MS
     RPA.Windows.Get Text      Guia de Informação e Apuração do ICMS - Mato Grosso do Sul (GIA-MS) (1)
     repetidor de teclas       tab      3
@@ -122,7 +122,7 @@ GIA-MS
 
 GIA-RJ
     ${nome_print}=     Set Variable     GIA-RJ
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                GIA-RJ
     RPA.Windows.Get Text      Guia de informação e apuração do ICMS - Rio de Janeiro (GIA-RJ) (1)
     RPA.Desktop.Press Keys    0
@@ -133,7 +133,7 @@ GIA-RJ
 
 GIA-SP
     ${nome_print}=     Set Variable     GIA-SP
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                GIA-SP
     RPA.Windows.Get Text      Guia de Informação e Apuração do ICMS - São Paulo (GIA-SP) (1)
     Repetidor de 2 teclas     Shift    tab    2
@@ -146,7 +146,7 @@ GIA-SP
 
 Registro Magnético (SINTEGRA)
     ${nome_print}=     Set Variable     Registro Magnético (SINTEGRA)
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Registro Magnético (SINTEGRA)
     RPA.Windows.Get Text      Registro Magnético (1)
     repetidor de teclas       tab      3
@@ -159,7 +159,7 @@ Registro Magnético (SINTEGRA)
 
 Registro Magnético SISCRED - PR
     ${nome_print}=     Set Variable     Registro Magnético SISCRED - PR
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                Arquivo Magnético SISCRED - PR
     RPA.Windows.Get Text      Arquivo Magnético SISCRED - PR (1)
     RPA.Desktop.Press Keys    0
@@ -171,7 +171,7 @@ Registro Magnético SISCRED - PR
 
 SEF-PE
     ${nome_print}=     Set Variable     SEF-PE
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                SEF-PE
     RPA.Windows.Get Text      Geração do Arquivo SEF 2012 - Pernambuco (1)
     repetidor de teclas       tab      2
@@ -183,7 +183,7 @@ SEF-PE
 
 DIME-SC > Geração
     ${nome_print}=     Set Variable     Geração
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                DIME-SC
     RPA.Desktop.Press Keys    G  
     RPA.Windows.Get Text      Declaração do ICMS e do Movimento Econômico (DIME) (1)
@@ -196,7 +196,7 @@ DIME-SC > Geração
 
 DIME-SC > Montagem
     ${nome_print}=     Set Variable     Montagem
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                DIME-SC
     RPA.Desktop.Press Keys    M  
     RPA.Windows.Get Text      Montagem DIME SC (1)
@@ -207,7 +207,7 @@ DIME-SC > Montagem
 
 DFC GI/ICMS - PR
     ${nome_print}=     Set Variable     DFC GI/ICMS - PR
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                DFC GI/ICMS - PR
     RPA.Windows.Get Text      DFC e GI/ICMS (1)
     RPA.Desktop.Press Keys    0
@@ -218,7 +218,7 @@ DFC GI/ICMS - PR
 
 DEISS
     ${nome_print}=     Set Variable     DEISS
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest    
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest    
     Geração de Arquivos Fiscais                DEISS
     RPA.Windows.Get Text      Declaração Eletrônica de Imposto Sobre Serviço (DEISS) (1)
     RPA.Desktop.Press Keys    0
@@ -230,7 +230,7 @@ DEISS
 
 SISCOSERV
     ${nome_print}=     Set Variable     SISCOSERV
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest        
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest        
     Geração de Arquivos Fiscais                SISCOSERV
     RPA.Windows.Get Text      Geração de Arquivos SISCOSERV (1)
     RPA.Desktop.Press Keys    0
@@ -241,7 +241,7 @@ SISCOSERV
 
 Outros Arquivos > Ato Declaratório Executivo Cofis n°25, de 7 de junho de 2010
     ${nome_print}=     Set Variable     Ato Declaratório Executivo Cofis n°25, de 7 de junho de 2010
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Outros Arquivos
     RPA.Desktop.Press Keys    A  
     RPA.Windows.Get Text      Geração do Arquivo Digital solicitados por Auditor Fiscal da Receita Federal do Brasil (AFRFB) (1)
@@ -253,7 +253,7 @@ Outros Arquivos > Ato Declaratório Executivo Cofis n°25, de 7 de junho de 2010
 
 Outros Arquivos > DIPJ - Declaração de Informações Econômico-Fiscais da Pessoa Jurídica
     ${nome_print}=     Set Variable     DIPJ - Declaração de Informações Econômico-Fiscais da Pessoa Jurídica
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                Outros Arquivos
     RPA.Desktop.Press Keys    D  
     RPA.Windows.Get Text      Consulta de IPI da DIPJ - Declaração de Informações Econômico-Fiscais da Pessoa Jurídica (1)
@@ -266,7 +266,7 @@ Outros Arquivos > DIPJ - Declaração de Informações Econômico-Fiscais da Pes
 
 DCTF MIT
     ${nome_print}=     Set Variable     DCTF MIT
-    [Tags]    Fiscal    Geração de Arquivos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Fiscal    Geração de Arquivos Fiscais   SmokeTest
     Geração de Arquivos Fiscais                DCTF MIT
     RPA.Windows.Get Text      DCTF MIT (1)
     Repetidor de 2 teclas     Shift    Tab    2

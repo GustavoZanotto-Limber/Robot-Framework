@@ -24,7 +24,7 @@ Movimentação
 
 Pedidos de Venda
     ${nome_print}=     Set Variable     Pedidos de Venda
-    [Tags]    Vendedor   Movimentação   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Movimentação   SmokeTest
     Movimentação              Pedidos de Venda    
     RPA.Windows.Get Text      Pedidos de Venda (1)
     RPA.Windows.Click         Novo
@@ -33,7 +33,7 @@ Pedidos de Venda
 
 Orçamentos
     ${nome_print}=     Set Variable     Orçamentos
-    [Tags]    Vendedor   Movimentação   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Movimentação   SmokeTest
     Movimentação              Orçamentos    
     RPA.Windows.Get Text      Orçamentos (1)
     RPA.Windows.Click         Novo
@@ -43,7 +43,7 @@ Orçamentos
 
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
-    [Tags]    Vendedor   Movimentação   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Movimentação   SmokeTest
     Movimentação              Processos Personalizados    
     RPA.Windows.Get Text      Processos Personalizados (1)
     RPA.Windows.Click         Cadastrar Novo Processo

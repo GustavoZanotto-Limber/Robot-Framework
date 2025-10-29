@@ -21,7 +21,7 @@ Lotes
 
 Manutenção de Lotes
     ${nome_print}=     Set Variable     Manutenção de Lotes
-    [Tags]     Estoque    Lotes   SmokeTest
+    [Tags]   SmokeERP    Estoque    Lotes   SmokeTest
     Lotes 
     RPA.Windows.Click       Manutenção de Lotes
     RPA.Windows.Get Text    Manutenção de Lotes (1)
@@ -31,7 +31,7 @@ Manutenção de Lotes
 
 Saldo de Lotes/Sintético
     ${nome_print}=     Set Variable     Saldo de Lotes_Sintético
-    [Tags]     Estoque    Lotes   SmokeTest
+    [Tags]   SmokeERP    Estoque    Lotes   SmokeTest
     Lotes 
     RPA.Windows.Click       Saldo de Lotes/Sintético
     RPA.Windows.Get Text    Consulta de Lotes/Sintético (1)
@@ -41,7 +41,7 @@ Saldo de Lotes/Sintético
 
 Movimentação de Lotes
     ${nome_print}=     Set Variable     Movimentação de Lotes
-    [Tags]     Estoque    Lotes   SmokeTest
+    [Tags]   SmokeERP    Estoque    Lotes   SmokeTest
     Lotes 
     RPA.Windows.Click       Movimentação de Lotes
     RPA.Windows.Get Text    Relatório de Movimentação de Lotes (1)

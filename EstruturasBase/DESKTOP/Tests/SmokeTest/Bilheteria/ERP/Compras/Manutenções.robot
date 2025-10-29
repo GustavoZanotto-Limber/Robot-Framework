@@ -21,7 +21,7 @@ Manutenções
 
 Entradas/Compras > Incluir/Alterar
     ${nome_print}=     Set Variable     Incluir_Alterar
-    [Tags]     Compras    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  I
@@ -33,7 +33,7 @@ Entradas/Compras > Incluir/Alterar
 
 Entradas/Compras > Consultar
     ${nome_print}=     Set Variable     Consultar
-    [Tags]     Compras    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  C
@@ -47,7 +47,7 @@ Entradas/Compras > Consultar
 
 Entradas/Compras > Excluir Entradas/Compras
     ${nome_print}=     Set Variable     Excluir Entradas_Compras
-    [Tags]     Compras    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  E
@@ -58,7 +58,7 @@ Entradas/Compras > Excluir Entradas/Compras
 
 Entradas/Compras > Manutenção de Devolução de Venda
     ${nome_print}=     Set Variable     Manutenção de Devolução de Venda
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  M
@@ -70,7 +70,7 @@ Entradas/Compras > Manutenção de Devolução de Venda
 
 Entradas/Compras > Transferências realizadas pendentes de Entrada
     ${nome_print}=     Set Variable     Transferências realizadas pendentes de Entrada
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  T
@@ -81,7 +81,7 @@ Entradas/Compras > Transferências realizadas pendentes de Entrada
 
 Entradas/Compras > Entradas pendentes de conferência de Mercadoria
     ${nome_print}=     Set Variable     Entradas pendentes de conferência de Mercadoria
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  N
@@ -92,7 +92,7 @@ Entradas/Compras > Entradas pendentes de conferência de Mercadoria
 
 Entradas/Compras > Conferência de Mercadoria de Entrada
     ${nome_print}=     Set Variable     Conferência de Mercadoria de Entrada
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  O
@@ -103,7 +103,7 @@ Entradas/Compras > Conferência de Mercadoria de Entrada
 
 Entradas/Compras > Alteração em Massa de Operação
     ${nome_print}=     Set Variable     Alteração em Massa de Operação
-    [Tags]     Compras    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  A
@@ -114,7 +114,7 @@ Entradas/Compras > Alteração em Massa de Operação
 
 Entradas/Compras > Lançamento de Outros Custos de Entrada
     ${nome_print}=     Set Variable     Lançamento de Outros Custos de Entrada
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  L
@@ -125,7 +125,7 @@ Entradas/Compras > Lançamento de Outros Custos de Entrada
 
 Requisição de Compra > Manutenção
     ${nome_print}=     Set Variable     Manutenção
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Requisição de Compra
     RPA.Desktop.Press Keys  M
@@ -136,7 +136,7 @@ Requisição de Compra > Manutenção
 
 Requisição de Compra > Consultar
     ${nome_print}=     Set Variable     Consultar
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Requisição de Compra
     RPA.Desktop.Press Keys  C
@@ -147,7 +147,7 @@ Requisição de Compra > Consultar
 
 Requisição de Compra > Aprovação/Rejeição de Requisição
     ${nome_print}=     Set Variable     Aprovação_Rejeição de Requisição
-    [Tags]     Compras    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Requisição de Compra
     RPA.Desktop.Press Keys  A
@@ -158,7 +158,7 @@ Requisição de Compra > Aprovação/Rejeição de Requisição
 
 Requisição de Compra > Acompanhamento de Requisição
     ${nome_print}=     Set Variable     Acompanhamento de Requisição
-    [Tags]     Compras    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Requisição de Compra
     RPA.Desktop.Press Keys  O
@@ -169,7 +169,7 @@ Requisição de Compra > Acompanhamento de Requisição
 
 Requisição de Compra > Config. Usuário Requisição
     ${nome_print}=     Set Variable     Config. Usuário Requisição
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Requisição de Compra
     RPA.Desktop.Press Keys  N
@@ -180,7 +180,7 @@ Requisição de Compra > Config. Usuário Requisição
 
 Cotação > Cadastro de Cotação
     ${nome_print}=     Set Variable     Cadastro de Cotação
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Cotação
     RPA.Desktop.Press Keys  C
@@ -193,7 +193,7 @@ Cotação > Cadastro de Cotação
 
 Cotação > Fechamento/Manutenção de Preços
     ${nome_print}=     Set Variable     Fechamento_Manutenção de Preços
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Cotação
     RPA.Desktop.Press Keys  F
@@ -206,7 +206,7 @@ Cotação > Fechamento/Manutenção de Preços
 
 Pedidos de Compra > Pedidos de Compra
     ${nome_print}=     Set Variable     Pedidos de Compra
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Pedidos de Compra
     RPA.Desktop.Press Keys  P
@@ -217,7 +217,7 @@ Pedidos de Compra > Pedidos de Compra
 
 Pedidos de Compra > Aprovação/Rejeição
     ${nome_print}=     Set Variable     Aprovação_Rejeição
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Pedidos de Compra
     RPA.Desktop.Press Keys  A
@@ -228,7 +228,7 @@ Pedidos de Compra > Aprovação/Rejeição
 
 Pedidos de Compra > Zeramento de Pedido
     ${nome_print}=     Set Variable     Zeramento de Pedido
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Pedidos de Compra
     RPA.Desktop.Press Keys  Z
@@ -242,7 +242,7 @@ Pedidos de Compra > Zeramento de Pedido
 
 Pedidos de Compra > Modelo de Impressão
     ${nome_print}=     Set Variable     Modelo de Impressão
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Pedidos de Compra
     RPA.Desktop.Press Keys  M
@@ -256,7 +256,7 @@ Pedidos de Compra > Modelo de Impressão
 
 Consulta de Notas Fiscais Emitidas
     ${nome_print}=     Set Variable     Consulta de Notas Fiscais Emitidas
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Consulta de Notas Fiscais Emitidas
     RPA.Windows.Get Text    Consulta de Notas Fiscais Emitidas (1)
@@ -267,7 +267,7 @@ Consulta de Notas Fiscais Emitidas
 
 NF-e > Emissão de Notas Fiscais Eletrônicas
     ${nome_print}=     Set Variable     Emissão de Notas Fiscais Eletrônicas
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       NF-e
     RPA.Desktop.Press Keys  E
@@ -278,7 +278,7 @@ NF-e > Emissão de Notas Fiscais Eletrônicas
 
 NF-e > Monitorar NFE's
     ${nome_print}=     Set Variable     Monitorar NFE's
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       NF-e
     RPA.Desktop.Press Keys  M
@@ -289,7 +289,7 @@ NF-e > Monitorar NFE's
 
 NF-e > Inutilizar Númeração
     ${nome_print}=     Set Variable     Inutilizar Númeração
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       NF-e
     RPA.Desktop.Press Keys  I
@@ -300,7 +300,7 @@ NF-e > Inutilizar Númeração
 
 NF-e > Carta de Correção Eletrônica
     ${nome_print}=     Set Variable     Carta de Correção Eletrônica
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       NF-e
     RPA.Desktop.Press Keys  C
@@ -312,7 +312,7 @@ NF-e > Carta de Correção Eletrônica
 
 NF-e > Monitor de Manifesto do Destinatário
     ${nome_print}=     Set Variable     Monitor de Manifesto do Destinatário
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       NF-e
     RPA.Desktop.Press Keys  O
@@ -323,7 +323,7 @@ NF-e > Monitor de Manifesto do Destinatário
 
 Documentos emitidos contra o estabelecimento p/ entrada
     ${nome_print}=     Set Variable     Documentos emitidos contra o estabelecimento p_ entrada
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Documentos emitidos contra o estabelecimento p/ entrada 
     RPA.Windows.Get Text    Documentos emitidos contra o estabelecimento p/ entrada (1)
@@ -333,7 +333,7 @@ Documentos emitidos contra o estabelecimento p/ entrada
 
 Documentos emitidos contra o estabelecimento para CT-e
     ${nome_print}=     Set Variable     Documentos emitidos contra o estabelecimento para CT-e
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Documentos emitidos contra o estabelecimento para CT-e
     RPA.Windows.Get Text    Documentos emitidos contra o estabelecimento para CT-e (1)
@@ -343,7 +343,7 @@ Documentos emitidos contra o estabelecimento para CT-e
 
 Importação em massa de CT-e
     ${nome_print}=     Set Variable     Importação em massa de CT-e
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Importação em massa de CT-e
     RPA.Windows.Get Text    Importação em massa da CT-e (1)
@@ -354,7 +354,7 @@ Importação em massa de CT-e
 
 Formação de Preços de Venda
     ${nome_print}=     Set Variable     Formação de Preços de Venda
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Formação de Preços de Venda
     RPA.Windows.Get Text    Formação de Preços de Venda (1)
@@ -365,7 +365,7 @@ Formação de Preços de Venda
 
 Tabela de Preços Condicional
     ${nome_print}=     Set Variable     Tabela de Preços Condicional
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Tabela de Preços Condicional
     RPA.Windows.Get Text    Tabela de Preço Condicional (1)
@@ -375,7 +375,7 @@ Tabela de Preços Condicional
 
 Transferência entre Terceiros (NF) > Transferência entre Terceiros
     ${nome_print}=     Set Variable     Transferência entre Terceiros
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Transferência entre Terceiros (NF)
     RPA.Desktop.Press Keys  T
@@ -388,7 +388,7 @@ Transferência entre Terceiros (NF) > Transferência entre Terceiros
 
 Transferência entre Terceiros (NF) > Transferências Pendentes
     ${nome_print}=     Set Variable     Transferências Pendentes
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Transferência entre Terceiros (NF)
     RPA.Desktop.Press Keys  R
@@ -400,7 +400,7 @@ Transferência entre Terceiros (NF) > Transferências Pendentes
 
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Processos Personalizados
     RPA.Windows.Get Text    Processos Personalizados (1)
@@ -411,7 +411,7 @@ Processos Personalizados
 
 Conferência Valores IPI Entrada
     ${nome_print}=     Set Variable     Conferência Valores IPI Entrada
-    [Tags]     Compras    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Compras    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click       Conferência Valores IPI Entrada
     RPA.Windows.Get Text    Conferência Valores IPI Entrada (1)

@@ -22,7 +22,7 @@ Consultas
 
 Lançamentos Diários
     ${nome_print}=     Set Variable     Lançamentos Diários
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Lançamentos Diários
     RPA.Windows.Get Text      Lançamentos Diários (1)
@@ -33,7 +33,7 @@ Lançamentos Diários
 
 Diferenças do Diário
     ${nome_print}=     Set Variable     Diferenças do Diário
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Diferenças do Diário
     RPA.Windows.Get Text      Diferenças do Diário (1)
@@ -43,7 +43,7 @@ Diferenças do Diário
 
 Planos de Contas
     ${nome_print}=     Set Variable     Planos de Contas
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Planos de Contas
     RPA.Windows.Get Text      Plano de Contas (1)
@@ -53,7 +53,7 @@ Planos de Contas
 
 Razão de Contas
     ${nome_print}=     Set Variable     Razão de Contas
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Razão de Contas
     RPA.Windows.Get Text      Razão de Contas (1)
@@ -64,7 +64,7 @@ Razão de Contas
 
 Balancete
     ${nome_print}=     Set Variable     Balancete
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Balancete
     RPA.Windows.Get Text      Balancete (1)
@@ -75,7 +75,7 @@ Balancete
 
 Depreciação de Bens do Ativo Imobilizado
     ${nome_print}=     Set Variable     Depreciação de Bens do Ativo Imobilizado
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Depreciação de Bens do Ativo Imobilizado
     RPA.Windows.Get Text      Consulta Depreciação de Bens do Ativo Imobilizado (1)
@@ -85,7 +85,7 @@ Depreciação de Bens do Ativo Imobilizado
 
 Centro de Custos
     ${nome_print}=     Set Variable     Centro de Custos
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Centro de Custos
     RPA.Windows.Get Text      Centro de Custos (1)
@@ -96,7 +96,7 @@ Centro de Custos
 
 Rateio de Centro de Custos
     ${nome_print}=     Set Variable     Rateio de Centro de Custos
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Rateio de Centro de Custos
     RPA.Windows.Get Text      Consulta de Rateio de Centro de Custos (1) 
@@ -107,7 +107,7 @@ Rateio de Centro de Custos
 
 Consumo de Adiantamentos
     ${nome_print}=     Set Variable     Consumo de Adiantamentos
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consumo de Adiantamentos
     RPA.Windows.Get Text      Consulta de Consumo de Adiantamentos (1) 
@@ -117,7 +117,7 @@ Consumo de Adiantamentos
 
 Consultas Personalizadas
     ${nome_print}=     Set Variable     Consultas Personalizadas
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1) 
@@ -128,7 +128,7 @@ Consultas Personalizadas
 
 Sped Contabil > Gerar Sped Contabil
     ${nome_print}=     Set Variable     Gerar Sped Contabil
-    [Tags]     Contabil    Consultas   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Sped Contábil
     RPA.Desktop.Press Keys    G
@@ -139,7 +139,7 @@ Sped Contabil > Gerar Sped Contabil
 
 Sped Contabil > Conglomerados Econômicos
     ${nome_print}=     Set Variable     Conglomerados Econômicos
-    [Tags]     Contabil    Consultas   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Sped Contábil
     RPA.Desktop.Press Keys    C
@@ -151,7 +151,7 @@ Sped Contabil > Conglomerados Econômicos
 
 Sped Contabil > Conglomerados Eliminações
     ${nome_print}=     Set Variable     Conglomerados Eliminações
-    [Tags]     Contabil    Consultas   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Sped Contábil
     RPA.Desktop.Press Keys    O
@@ -163,7 +163,7 @@ Sped Contabil > Conglomerados Eliminações
 
 Sped Contabil > Cadastro de SCP
     ${nome_print}=     Set Variable     Cadastro de SCP
-    [Tags]     Contabil    Consultas   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Sped Contábil
     RPA.Desktop.Press Keys    A
@@ -176,7 +176,7 @@ Sped Contabil > Cadastro de SCP
 
 Sped Contabil > Transferência de Plano de Contas
     ${nome_print}=     Set Variable     Transferência de Plano de Contas
-    [Tags]     Contabil    Consultas   SmokeTest   
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest   
     Consultas
     RPA.Windows.Click         Sped Contábil
     RPA.Desktop.Press Keys    T
@@ -190,7 +190,7 @@ Sped Contabil > Transferência de Plano de Contas
 
 Consulta CMV por período
     ${nome_print}=     Set Variable     Consulta CMV por período
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consulta CMV por período
     RPA.Windows.Get Text      Consulta CMV por período (1) 
@@ -201,7 +201,7 @@ Consulta CMV por período
 
 Consulta de Alterações de Lançamentos
     ${nome_print}=     Set Variable     Consulta de Alterações de Lançamentos
-    [Tags]     Contabil    Consultas   SmokeTest
+    [Tags]   SmokeERP    Contabil    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consulta de Alterações de Lançamentos
     RPA.Windows.Get Text      Consulta Log de Lançamentos Contábeis (1) 

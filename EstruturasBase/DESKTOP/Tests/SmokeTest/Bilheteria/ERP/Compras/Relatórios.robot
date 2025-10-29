@@ -21,7 +21,7 @@ Relatórios
 
 Compras/Aquisição de Serviços - Lançamentos
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Lançamentos
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Lançamentos
     RPA.Windows.Get Text    Lançamentos de Compras/Aquisição de Serviços (1)
@@ -31,7 +31,7 @@ Compras/Aquisição de Serviços - Lançamentos
 
 Compras/Aquisição de Serviços - Sintético/Item
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Item
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Item
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Item (1)
@@ -41,7 +41,7 @@ Compras/Aquisição de Serviços - Sintético/Item
 
 Compras/Aquisição de Serviços - Sintético/Fornecedor
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Fornecedor
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Fornecedor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor (1)
@@ -51,7 +51,7 @@ Compras/Aquisição de Serviços - Sintético/Fornecedor
 
 Compras/Aquisição de Serviços - Sintético/Forn/Item
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Forn_Item
-    [Tags]     Compras    Relatórios   SmokeTest        
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest        
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Forn/Item
     RPA.Windows.Get Text    	Compras/Aquisição de Serviços / Fornecedor / Item $ESPAÇO (1)
@@ -61,7 +61,7 @@ Compras/Aquisição de Serviços - Sintético/Forn/Item
 
 Compras/Aquisição de Serviços - Sintético/Setor
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Setor
-    [Tags]     Compras    Relatórios   SmokeTest    
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest    
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Setor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços por Setor (1)
@@ -73,7 +73,7 @@ Compras/Aquisição de Serviços - Sintético/Setor
 
 Compras/Aquisição de Serviços - Evolução Diária
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Diária
-    [Tags]     Compras    Relatórios   SmokeTest    
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest    
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Diária
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Diária (1)
@@ -86,7 +86,7 @@ Compras/Aquisição de Serviços - Evolução Diária
 
 Compras/Aquisição de Serviços - Evolução Mensal
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Mensal
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Mensal
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Mensal (1)
@@ -99,7 +99,7 @@ Compras/Aquisição de Serviços - Evolução Mensal
 
 Compras/Aquisição de Serviços - Evolução Anual
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Anual
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Anual
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Anual (1)
@@ -112,7 +112,7 @@ Compras/Aquisição de Serviços - Evolução Anual
 
 Compras/Aquisição de Serviços - CFOP
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - CFOP
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Compras/Aquisição de Serviços - CFOP
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - CFOP (1)
@@ -124,7 +124,7 @@ Compras/Aquisição de Serviços - CFOP
 
 Lançamento de Entradas
     ${nome_print}=     Set Variable     Lançamento de Entradas
-    [Tags]     Compras    Relatórios   SmokeTest    
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest    
     Relatórios
     RPA.Windows.Click       Lançamento de Entradas
     RPA.Windows.Get Text    Relatório de Lançamentos de Entradas${ESPAÇO} (1)
@@ -134,7 +134,7 @@ Lançamento de Entradas
 
 Produtos/Fornecedor
     ${nome_print}=     Set Variable     Produtos_Fornecedor
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Produtos/Fornecedor
     RPA.Windows.Get Text    Relatório Ultimo Fornecedor (1)
@@ -147,7 +147,7 @@ Produtos/Fornecedor
 
 Fornecedor/Produtos
     ${nome_print}=     Set Variable     Fornecedor_Produtos
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Fornecedor/Produtos
     RPA.Windows.Get Text    Relatório de fornecedores por produto (1)
@@ -159,7 +159,7 @@ Fornecedor/Produtos
 
 Notas Fiscais Emitidas
     ${nome_print}=     Set Variable     Notas Fiscais Emitidas
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Notas Fiscais Emitidas
     RPA.Windows.Get Text    Relatório de Notas Fiscais Emitidas (1)
@@ -169,7 +169,7 @@ Notas Fiscais Emitidas
 
 Pedidos de Compra
     ${nome_print}=     Set Variable     Pedidos de Compra
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Pedidos de Compra
     RPA.Windows.Get Text    Relatório de Pedidos de Compra (1)
@@ -179,7 +179,7 @@ Pedidos de Compra
 
 Pedidos de Compra - Saldo Produtos
     ${nome_print}=     Set Variable     Pedidos de Compra - Saldo Produtos
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Pedidos de Compra - Saldo Produtos
     RPA.Windows.Get Text    Relatório de Pedidos de Compra - Saldo dos produtos (1)
@@ -189,7 +189,7 @@ Pedidos de Compra - Saldo Produtos
 
 Giro de Fornecedores
     ${nome_print}=     Set Variable     Giro de Fornecedores
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Giro de Fornecedores
     RPA.Windows.Get Text    Relatório Giro de Fornecedores (1)
@@ -199,7 +199,7 @@ Giro de Fornecedores
 
 Resumo Retenção Monsanto
     ${nome_print}=     Set Variable     Resumo Retenção Monsanto
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Resumo Retenção Monsanto
     RPA.Windows.Get Text    Consulta Monsanto (1)
@@ -209,7 +209,7 @@ Resumo Retenção Monsanto
 
 Resumo Geral de Movimentos/Saldos
     ${nome_print}=     Set Variable     Resumo Geral de Movimentos_Saldos
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Resumo Geral de Movimentos/Saldos
     RPA.Windows.Get Text    Resumo Geral de Movimentos/Saldos (1)
@@ -221,7 +221,7 @@ Resumo Geral de Movimentos/Saldos
 
 Customizados > Projeção de Compras
     ${nome_print}=     Set Variable     Projeção de Compras
-    [Tags]     Compras    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Compras    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click       Customizados
     RPA.Desktop.Press Keys  P

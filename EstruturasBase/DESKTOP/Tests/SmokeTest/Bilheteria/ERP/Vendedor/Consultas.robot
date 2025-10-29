@@ -23,7 +23,7 @@ Consultas
 
 Pedidos de Venda
     ${nome_print}=     Set Variable     Pedidos de Venda
-    [Tags]    Vendedor   Consultas   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Consultas   SmokeTest
     Consultas                 Pedidos de Venda    
     RPA.Windows.Get Text      Consulta de Pedidos de Venda (1)
     RPA.Desktop.Press Keys    Shift    tab
@@ -35,7 +35,7 @@ Pedidos de Venda
     
 Contas a Receber
     ${nome_print}=     Set Variable     Contas a Receber
-    [Tags]    Vendedor   Consultas   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Consultas   SmokeTest
     Consultas                 Contas a Receber 
     RPA.Windows.Get Text      Consulta do Contas a Receber (1)
     repetidor de teclas       tab      11

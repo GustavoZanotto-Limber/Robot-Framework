@@ -18,7 +18,7 @@ ${nome_exe}=    cde_win_Balanca
 
 Produtos
     ${nome_print}=            Set Variable     Produtos
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Produtos
     RPA.Windows.Get Text      Cadastro de Itens (1)
@@ -29,7 +29,7 @@ Produtos
     
 Terceiros
     ${nome_print}=     Set Variable     Terceiros
-    [Tags]     Balancas    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
@@ -41,7 +41,7 @@ Terceiros
 
 Operações Fiscais
     ${nome_print}=     Set Variable     Operações Fiscais
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Operações Fiscais
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
@@ -52,7 +52,7 @@ Operações Fiscais
 
 Descontos/Classificações para Grãos
     ${nome_print}=     Set Variable     Descontos_Classificações para Grãos
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Descontos/Classificações para Grãos
     RPA.Windows.Get Text      Cadastro de Descontos/Classificações para Grãos (1)
@@ -63,7 +63,7 @@ Descontos/Classificações para Grãos
 
 Classificação de Grãos
     ${nome_print}=     Set Variable     Classificação de Grãos
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Classificação de Grãos
     RPA.Windows.Get Text      Cadastro de Classificação de Grãos (1)
@@ -74,7 +74,7 @@ Classificação de Grãos
 
 Tabela de Índices de Descontos
     ${nome_print}=     Set Variable     Tabela de Índices de Descontos
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Tabela de Índices de Descontos
     RPA.Windows.Get Text      Cadastro de Índices de Descontos (1)
@@ -85,7 +85,7 @@ Tabela de Índices de Descontos
 
 Melhorias do Peso Hectolítrico
     ${nome_print}=     Set Variable     Melhorias do Peso Hectolítrico
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Melhorias do Peso Hectolítrico
     RPA.Windows.Get Text      Cadastro de Melhorias do Peso Hectolítrico (PH) (1)
@@ -96,7 +96,7 @@ Melhorias do Peso Hectolítrico
 
 Tipos de Romaneio
     ${nome_print}=     Set Variable     Tipos de Romaneio
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Tipos de Romaneio
     RPA.Windows.Get Text      Cadastro de Tipos de Romaneio (1)
@@ -107,7 +107,7 @@ Tipos de Romaneio
 
 Conf. Modelos Impressao de Processos
     ${nome_print}=     Set Variable     Conf. Modelos Impressao de Processos
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Conf. Modelos Impressao de Processos
     RPA.Windows.Get Text      Conf. Modelos Impressão de Processos (1)
@@ -120,7 +120,7 @@ Conf. Modelos Impressao de Processos
 
 Conf. Movimentação de Estoque de Produtos
     ${nome_print}=     Set Variable     Conf. Movimentação de Estoque de Produtos
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Conf. Movimentação de Estoque de Produto
     RPA.Windows.Get Text      Configuração de Movimentação de Estoque de Produto (1)
@@ -133,7 +133,7 @@ Conf. Movimentação de Estoque de Produtos
 
 Configuração de Troca de Produto p/ emissão de NF
     ${nome_print}=     Set Variable     Configuração de Troca de Produto p_ emissão de NF
-    [Tags]     Balancas    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Configuração de Troca de Produto p/ emissão de NF
     RPA.Windows.Get Text      Configuração de Troca de Produto p/ emissão de NF (1)
@@ -144,7 +144,7 @@ Configuração de Troca de Produto p/ emissão de NF
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable      Empresas
-    [Tags]     Balancas    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -156,7 +156,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable      Estabelecimentos
-    [Tags]     Balancas    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -168,7 +168,7 @@ Parâmetros > Estabelecimentos
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable      Usuários
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
@@ -178,7 +178,7 @@ Parâmetros > Usuários
 
 Grupo de Usuários
     ${nome_print}=     Set Variable      Grupo de Usuários
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -190,7 +190,7 @@ Grupo de Usuários
 
 Parâmetros > Configurações da Estação
     ${nome_print}=     Set Variable      Configurações da Estação
-    [Tags]     Balancas    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Balancas    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    C

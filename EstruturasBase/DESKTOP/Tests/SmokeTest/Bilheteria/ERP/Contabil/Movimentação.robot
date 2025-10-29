@@ -22,7 +22,7 @@ Movimentação
 
 Lançamentos Contábeis
     ${nome_print}=     Set Variable     Lançamentos Contábeis
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Lançamentos Contábeis
     RPA.Windows.Get Text      Lançamentos Contábeis (1)  
@@ -32,7 +32,7 @@ Lançamentos Contábeis
 
 Lançamentos Contábeis por Lote
     ${nome_print}=     Set Variable     Lançamentos Contábeis por Lote
-    [Tags]     Contabil    Movimentação   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Lançamentos Contábeis por Lote
     RPA.Windows.Get Text      Lançamento contabil por lote (1)  
@@ -42,7 +42,7 @@ Lançamentos Contábeis por Lote
 
 Manutenção de Lançamentos contábeis
     ${nome_print}=     Set Variable     Manutenção de Lançamentos contábeis
-    [Tags]     Contabil    Movimentação   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Manutenção de Lançamentos contábeis
     RPA.Windows.Get Text      Manutenção de Lançamentos contábeis (1)
@@ -53,7 +53,7 @@ Manutenção de Lançamentos contábeis
 
 Liberação de Lançamentos
     ${nome_print}=     Set Variable     Liberação de Lançamentos
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Liberação de Lançamentos
     RPA.Windows.Get Text      Liberação de Lançamentos (1) 
@@ -63,7 +63,7 @@ Liberação de Lançamentos
 
 Estornar Liberação
     ${nome_print}=     Set Variable     Estornar Liberação
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Estornar Liberação
     RPA.Windows.Get Text      Estorno de Liberação de Lançamentos (1)
@@ -74,7 +74,7 @@ Estornar Liberação
 
 Zeramento de Contas > Zeramento de Contas
     ${nome_print}=     Set Variable     Zeramento de Contas
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Zeramento de Contas
     RPA.Desktop.Press Keys    Z
@@ -87,7 +87,7 @@ Zeramento de Contas > Zeramento de Contas
 
 Zeramento de Contas > Estornar Zeramento
     ${nome_print}=     Set Variable     Estornar Zeramento
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Zeramento de Contas
     RPA.Desktop.Press Keys    E
@@ -100,7 +100,7 @@ Zeramento de Contas > Estornar Zeramento
 
 Zeramento de Contas > Parâmetros Zeramento
     ${nome_print}=     Set Variable     Parâmetros Zeramento
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Zeramento de Contas
     RPA.Desktop.Press Keys    P
@@ -114,7 +114,7 @@ Zeramento de Contas > Parâmetros Zeramento
 
 Conciliação de Cheques Emitidos
     ${nome_print}=     Set Variable     Conciliação de Cheques Emitidos
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     repetidor de teclas   Down       6
     RPA.Desktop.Press Keys    Enter
@@ -126,7 +126,7 @@ Conciliação de Cheques Emitidos
 
 Estorna Conciliação
     ${nome_print}=     Set Variable     Estorna Conciliação
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     repetidor de teclas   Down       7
     RPA.Desktop.Press Keys    Enter
@@ -138,7 +138,7 @@ Estorna Conciliação
 
 Apropriação de custos
     ${nome_print}=     Set Variable     Apropriação de custos
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Apropriação de custos
     RPA.Windows.Get Text      Apropriação de Custos (1) 
@@ -149,7 +149,7 @@ Apropriação de custos
 
 Apropriação de consumo de adiantamentos
     ${nome_print}=     Set Variable     Apropriação de consumo de adiantamentos
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Apropriação de consumo de adiantamentos
     RPA.Windows.Get Text      Apropriação de consumo de adiantamento (1)  
@@ -159,7 +159,7 @@ Apropriação de consumo de adiantamentos
 
 Apropriação de despesas antecipadas
     ${nome_print}=     Set Variable     Apropriação de despesas antecipadas
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Apropriação de despesas antecipadas
     RPA.Windows.Get Text      Apropriação de Despesas Antecipadas (1)  
@@ -170,7 +170,7 @@ Apropriação de despesas antecipadas
 
 Estornar Apropriação por Rateio de Contas
     ${nome_print}=     Set Variable     Estornar Apropriação por Rateio de Contas
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Estornar Apropriação por Rateio de Contas
     RPA.Windows.Get Text      Estornar Apropriação por Rateio de Contas (1)  
@@ -182,7 +182,7 @@ Estornar Apropriação por Rateio de Contas
 
 Rateio Cooperativismo > Método 1
     ${nome_print}=     Set Variable     Método 1
-    [Tags]     Contabil    Movimentação   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    1
@@ -195,7 +195,7 @@ Rateio Cooperativismo > Método 1
 
 Rateio Cooperativismo > Método 2
     ${nome_print}=     Set Variable     Método 2
-    [Tags]     Contabil    Movimentação   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    2
@@ -209,7 +209,7 @@ Rateio Cooperativismo > Método 2
 
 Rateio Cooperativismo > Método 3 - Setor
     ${nome_print}=     Set Variable     Método 3 - Setor
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Rateio Cooperativismo
     RPA.Desktop.Press Keys    M
@@ -220,7 +220,7 @@ Rateio Cooperativismo > Método 3 - Setor
 
 Bloqueia Lançamentos
     ${nome_print}=     Set Variable     Bloqueia Lançamentos
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Bloqueia Lançamentos
     RPA.Windows.Get Text      Bloqueia Lançamentos (1)  
@@ -233,7 +233,7 @@ Bloqueia Lançamentos
 
 Controle Patrimonial > Cálculo_Geração da Depreciação
     ${nome_print}=     Set Variable     Cálculo_Geração da Depreciação
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    C
@@ -248,7 +248,7 @@ Controle Patrimonial > Cálculo_Geração da Depreciação
 
 Controle Patrimonial > Consulta de Depreciação
     ${nome_print}=     Set Variable     Consulta de Depreciação
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    O
@@ -262,7 +262,7 @@ Controle Patrimonial > Consulta de Depreciação
 
 Controle Patrimonial > Estornar Depreciação
     ${nome_print}=     Set Variable     Estornar Depreciação
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    E
@@ -276,7 +276,7 @@ Controle Patrimonial > Estornar Depreciação
 
 Controle Patrimonial > Consulta da Ficha CIAP
     ${nome_print}=     Set Variable     Consulta da Ficha CIAP
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    N
@@ -289,7 +289,7 @@ Controle Patrimonial > Consulta da Ficha CIAP
 
 Controle Patrimonial > Emissão de Crédito do CIAP
     ${nome_print}=     Set Variable     Emissão de Crédito do CIAP
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    M
@@ -301,7 +301,7 @@ Controle Patrimonial > Emissão de Crédito do CIAP
 
 Controle Patrimonial > Estorno de Crédito do CIAP
     ${nome_print}=     Set Variable     Estorno de Crédito do CIAP
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    S
@@ -313,7 +313,7 @@ Controle Patrimonial > Estorno de Crédito do CIAP
 
 Controle Patrimonial > Ajuste de Fator do CIAP
     ${nome_print}=     Set Variable     Ajuste de Fator do CIAP
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    A
@@ -326,7 +326,7 @@ Controle Patrimonial > Ajuste de Fator do CIAP
 
 Controle Patrimonial > Consulta Fator CIAP
     ${nome_print}=     Set Variable     Consulta Fator CIAP
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Controle Patrimonial
     RPA.Desktop.Press Keys    U
@@ -340,7 +340,7 @@ Controle Patrimonial > Consulta Fator CIAP
 
 CMV > Cálculo_Geração do CMV
     ${nome_print}=     Set Variable     Cálculo_Geração do CMV
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    C
@@ -353,7 +353,7 @@ CMV > Cálculo_Geração do CMV
 
 CMV > Preço de Mercado
     ${nome_print}=     Set Variable     Preço de Mercado
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    P
@@ -364,7 +364,7 @@ CMV > Preço de Mercado
 
 CMV > Cálculo_Geração do CMV por período
     ${nome_print}=     Set Variable     Cálculo_Geração do CMV por período
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    L
@@ -376,7 +376,7 @@ CMV > Cálculo_Geração do CMV por período
 
 CMV > Estorna CMV por período
     ${nome_print}=     Set Variable     Estorna CMV por período
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         CMV
     RPA.Desktop.Press Keys    E
@@ -389,7 +389,7 @@ CMV > Estorna CMV por período
 
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
@@ -400,7 +400,7 @@ Processos Personalizados
 
 Ajuste a Valor Presente > Configuração
     ${nome_print}=     Set Variable     Configuração
-    [Tags]     Contabil    Movimentação   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    C
@@ -411,7 +411,7 @@ Ajuste a Valor Presente > Configuração
 
 Ajuste a Valor Presente > Execução do Ajuste
     ${nome_print}=     Set Variable     Execução do Ajuste
-    [Tags]     Contabil    Movimentação   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest    
     Movimentação
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    E
@@ -425,7 +425,7 @@ Ajuste a Valor Presente > Execução do Ajuste
 
 Ajuste a Valor Presente > Consulta do Ajuste
     ${nome_print}=     Set Variable     Consulta do Ajuste
-    [Tags]     Contabil    Movimentação   SmokeTest
+    [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
     RPA.Windows.Click         Ajuste a Valor Presente 
     RPA.Desktop.Press Keys    O

@@ -21,7 +21,7 @@ Utilitários
 
 Configurar Nota Fiscal
     ${nome_print}=     Set Variable     Configurar Nota Fiscal
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Nota Fiscal
     RPA.Windows.Get Text    Configuração da Nota Fiscal (1)
@@ -31,7 +31,7 @@ Configurar Nota Fiscal
 
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -42,7 +42,7 @@ Favoritos
 
 Papel de Parede
     ${nome_print}=     Set Variable     Papel de Parede
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -52,7 +52,7 @@ Papel de Parede
 
 Configurar Menu Principal
     ${nome_print}=     Set Variable     Configurar Menu Principal
-    [Tags]     Compras    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -64,7 +64,7 @@ Configurar Menu Principal
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
@@ -74,7 +74,7 @@ Configurar Barra de Atalhos
 
 Estilo do Menu Principal
     ${nome_print}=     Set Variable     Estilo do Menu Principal
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -84,7 +84,7 @@ Estilo do Menu Principal
 
 Controle de Acessos
     ${nome_print}=     Set Variable     Controle de Acessos
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -95,7 +95,7 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]     Compras    Utilitários   SmokeTest     
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest     
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     Sleep                   2s
@@ -109,7 +109,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]     Compras    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -122,7 +122,7 @@ Relatórios Personalizados > Cadastro de Categorias
 
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]     Compras    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -135,7 +135,7 @@ Relatórios Personalizados > Cadastro de Relatórios
 
 Configurador de Impressões > Ordem se Serviço
     ${nome_print}=     Set Variable     Ordem se Serviço
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  O
@@ -146,7 +146,7 @@ Configurador de Impressões > Ordem se Serviço
 
 Configurador de Impressões > Saídas Vendas
     ${nome_print}=     Set Variable     Saídas Vendas
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  S
@@ -157,7 +157,7 @@ Configurador de Impressões > Saídas Vendas
 
 Configurador de Impressões > Ordem de Fixação
     ${nome_print}=     Set Variable     Ordem de Fixação
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  R
@@ -168,7 +168,7 @@ Configurador de Impressões > Ordem de Fixação
 
 Configurador de Impressões > Fixação de Produtos
     ${nome_print}=     Set Variable     Fixação de Produtos
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  F
@@ -179,7 +179,7 @@ Configurador de Impressões > Fixação de Produtos
 
 Configurador de Impressões > Entradas/Compras
     ${nome_print}=     Set Variable     Entradas_Compras
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  E
@@ -190,7 +190,7 @@ Configurador de Impressões > Entradas/Compras
 
 Configurador de Impressões > Transferência entre Terceiros
     ${nome_print}=     Set Variable     Transferência entre Terceiros
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  T
@@ -201,7 +201,7 @@ Configurador de Impressões > Transferência entre Terceiros
 
 Verificar Transações Abertas
     ${nome_print}=     Set Variable     Verificar Transações Abertas
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Verificar Transações Abertas
     RPA.Windows.Get Text    Verificar Transações Abertas (1)
@@ -211,7 +211,7 @@ Verificar Transações Abertas
 
 Etiquetas
     ${nome_print}=     Set Variable     Etiquetas
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Etiquetas
     RPA.Windows.Get Text    Emissão de Etiquetas (1)
@@ -222,7 +222,7 @@ Etiquetas
 
 Etiquetas (Terceiros)
     ${nome_print}=     Set Variable     Etiquetas (Terceiros)
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Etiquetas (Terceiros)
     RPA.Windows.Get Text    Emissão de Etiquetas (1)
@@ -233,7 +233,7 @@ Etiquetas (Terceiros)
 
 Registro Magnético
     ${nome_print}=     Set Variable     Registro Magnético
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Registro Magnético
     RPA.Windows.Get Text    Registro Magnético (1)
@@ -244,7 +244,7 @@ Registro Magnético
 
 Agenda Telefônica
     ${nome_print}=     Set Variable     Agenda Telefônica
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
@@ -254,7 +254,7 @@ Agenda Telefônica
 
 Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
     ${nome_print}=     Set Variable     Salvar arquivo XML NFe de Terceiros
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Exportação de Arquivos
     RPA.Desktop.Press Keys  S
@@ -266,7 +266,7 @@ Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
 
 Exportação de Arquivos > Salvar o Arquivo XML NFe Própria
     ${nome_print}=     Set Variable     Salvar o Arquivo XML NFe Própria
-    [Tags]     Compras    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Exportação de Arquivos
     RPA.Desktop.Press Keys  A
@@ -278,7 +278,7 @@ Exportação de Arquivos > Salvar o Arquivo XML NFe Própria
 
 Integração Royalties Monsanto > Consulta de Entregas/Cancelamentos
     ${nome_print}=     Set Variable     Consulta de Entregas_Cancelamentos
-    [Tags]     Compras    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Integração Royalties Monsanto
     RPA.Desktop.Press Keys  C
@@ -291,7 +291,7 @@ Integração Royalties Monsanto > Consulta de Entregas/Cancelamentos
 
 Integração Royalties Monsanto > Consulta Lista de Pendências
     ${nome_print}=     Set Variable     Consulta Lista de Pendências
-    [Tags]     Compras    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Compras    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Integração Royalties Monsanto
     RPA.Desktop.Press Keys  O

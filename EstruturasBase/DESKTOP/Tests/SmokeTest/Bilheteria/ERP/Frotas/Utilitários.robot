@@ -28,7 +28,7 @@ Utilitários com tecla
 
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
-    [Tags]    Frotas   Utilitários   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest    
     Utilitários             Favoritos       
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
@@ -38,7 +38,7 @@ Favoritos
 
 Papel de Parede
     ${nome_print}=     Set Variable     Papel de Parede
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários             Papel de Parede     
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
@@ -47,7 +47,7 @@ Papel de Parede
 
 Configurar Menu Pincipal
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
-    [Tags]    Frotas   Utilitários   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest    
     Utilitários             Configurar Menu Principal       
     RPA.Windows.Get Text    Configurador de Menus (1)
     RPA.Desktop.Press Keys  0
@@ -58,7 +58,7 @@ Configurar Menu Pincipal
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários             Configurar Barra de Atalhos       
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
@@ -67,7 +67,7 @@ Configurar Barra de Atalhos
 
 Estilo do Menu Principal
     ${nome_print}=     Set Variable     Estilo do Menu Principal
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários             Estilo do Menu Principal       
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
     RPA.Windows.Click       Standard
@@ -76,7 +76,7 @@ Estilo do Menu Principal
 
 Controle de Acessos
     ${nome_print}=     Set Variable     Controle de Acessos
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários             Controle de Acessos   
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
     RPA.Windows.Click       Confirmar
@@ -86,7 +86,7 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]    Frotas   Utilitários   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest    
     Utilitários             Configuração de Liberação   
     Sleep                   2s
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -99,7 +99,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]    Frotas   Utilitários   SmokeTest   
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest   
     Utilitários             Relatórios Personalizados      
     RPA.Desktop.Press Keys  c
     RPA.Windows.Get Text    Cadastro de Categoria (1)
@@ -111,7 +111,7 @@ Relatórios Personalizados > Cadastro de Categorias
 
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]    Frotas   Utilitários   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest    
     Utilitários             Relatórios Personalizados      
     RPA.Desktop.Press Keys  a
     RPA.Desktop.Press Keys  0
@@ -123,7 +123,7 @@ Relatórios Personalizados > Cadastro de Relatórios
 
 Verificar Transações Abertas
     ${nome_print}=     Set Variable     Verificar Transações Abertas
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários             Verificar Transações Abertas  
     RPA.Windows.Get Text    Verificar Transações Abertas (1)
     RPA.Windows.Click      Carregar
@@ -132,7 +132,7 @@ Verificar Transações Abertas
 
 Configurador de Impressões > Ordem se Interna
     ${nome_print}=     Set Variable     Ordem se Serviço Interna
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários             Configurador de Impressões   
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Configurador de Impressões - Ordem de Serviço Interna (1)
@@ -142,7 +142,7 @@ Configurador de Impressões > Ordem se Interna
 
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários             Processos Personalizados        
     RPA.Windows.Get Text    Processos Personalizados (1)
     RPA.Windows.Click       Cadastrar Novo Processo
@@ -152,7 +152,7 @@ Processos Personalizados
 
 Leiaute Carta Frete
     ${nome_print}=     Set Variable     Leiaute Carta Frete
-    [Tags]    Frotas   Utilitários   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest    
     Utilitários             Leiaute Carta Frete    
     Sleep                   3s
     RPA.Windows.Get Text    FastReport - Untitled.fr3
@@ -164,7 +164,7 @@ Leiaute Carta Frete
 
 Integrações > Importação de CT-e/MDF-e
     ${nome_print}=     Set Variable     Importação de CT-e_MDF-e
-    [Tags]    Frotas   Utilitários   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest    
     Utilitários com tecla   I 
     RPA.Desktop.Press Keys  I
     Sleep                   1s
@@ -176,7 +176,7 @@ Integrações > Importação de CT-e/MDF-e
 
 Integrações > Vincular Valores MDF-e
     ${nome_print}=     Set Variable     Vincular Valores MDF-e
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários com tecla   I 
     RPA.Desktop.Press Keys  V
     RPA.Windows.Get Text   	Vincular Valores Viagens - MDFe (1)
@@ -186,7 +186,7 @@ Integrações > Vincular Valores MDF-e
 
 Integrações > Sênior > Configurações
     ${nome_print}=     Set Variable     Configurações
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários com tecla   I 
     RPA.Windows.Click       Sênior
     RPA.Desktop.Press Keys  C
@@ -197,7 +197,7 @@ Integrações > Sênior > Configurações
 
 Integrações > Sênior > RPAs > Envio
     ${nome_print}=     Set Variable     Envio
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários com tecla   I 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs
@@ -211,7 +211,7 @@ Integrações > Sênior > RPAs > Envio
 
 Integrações > Sênior > RPAs > Exclusão
     ${nome_print}=     Set Variable     Exclusão
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários com tecla   I 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs
@@ -225,7 +225,7 @@ Integrações > Sênior > RPAs > Exclusão
 
 Integrações > Sênior > RPAs > Consulta
     ${nome_print}=     Set Variable     Consulta
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários com tecla   I 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs
@@ -239,7 +239,7 @@ Integrações > Sênior > RPAs > Consulta
 
 Integrações > Poli Frotas > Configuração
     ${nome_print}=     Set Variable     Configuração
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários com tecla   I 
     RPA.Windows.Click       Poli Frotas
     RPA.Desktop.Press Keys  C
@@ -250,7 +250,7 @@ Integrações > Poli Frotas > Configuração
 
 Integrações > Poli Frotas > Abastecidas > Importar
     ${nome_print}=     Set Variable     Importar
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários com tecla   I 
     RPA.Windows.Click       Poli Frotas
     RPA.Windows.Click       Abastecidas
@@ -265,7 +265,7 @@ Integrações > Poli Frotas > Abastecidas > Importar
 
 Integrações > Poli Frotas > Abastecidas > Consultar
     ${nome_print}=     Set Variable     Consultar
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários com tecla   I 
     RPA.Windows.Click       Poli Frotas
     RPA.Windows.Click       Abastecidas
@@ -280,7 +280,7 @@ Integrações > Poli Frotas > Abastecidas > Consultar
 
 Integrações > Poli Frotas > Abastecidas > Relatório
     ${nome_print}=     Set Variable     Relatório
-    [Tags]    Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
     Utilitários com tecla   I 
     RPA.Windows.Click       Poli Frotas
     RPA.Windows.Click       Abastecidas
@@ -295,7 +295,7 @@ Integrações > Poli Frotas > Abastecidas > Relatório
 
 Exportação de Arquivos > Salvar o Arquivo de XML NFe Própria
     ${nome_print}=     Set Variable     Salvar o Arquivo de XML NFe Própria
-    [Tags]    Frotas   Utilitários   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest    
     Utilitários             Exportação de Arquivos  
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Salvar arquivo XML NF-e / NFS-e / CT-e / SAT própria(o) (1)

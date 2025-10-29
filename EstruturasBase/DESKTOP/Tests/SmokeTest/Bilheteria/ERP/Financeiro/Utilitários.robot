@@ -19,7 +19,7 @@ Utilitários
 
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -30,7 +30,7 @@ Favoritos
 
 Papel de Parede
     ${nome_print}=     Set Variable     Papel de Parede
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -40,7 +40,7 @@ Papel de Parede
 
 Configurar Menu Pincipal
     ${nome_print}=     Set Variable     Configurar Menu Pincipal
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -52,7 +52,7 @@ Configurar Menu Pincipal
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
@@ -62,7 +62,7 @@ Configurar Barra de Atalhos
 
 Estilo do Menu Principal
     ${nome_print}=     Set Variable     Estilo do Menu Principal
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -72,7 +72,7 @@ Estilo do Menu Principal
 
 Controle de Acessos
     ${nome_print}=     Set Variable     Controle de Acessos
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -83,7 +83,7 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -95,7 +95,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]     Financeiro    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -108,7 +108,7 @@ Relatórios Personalizados > Cadastro de Categorias
 
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]     Financeiro    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -121,7 +121,7 @@ Relatórios Personalizados > Cadastro de Relatórios
 
 Configurador de Impressões > Relatórios > Contas a Pagar
     ${nome_print}=     Set Variable     Contas a Pagar
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  R
@@ -133,7 +133,7 @@ Configurador de Impressões > Relatórios > Contas a Pagar
 
 Configurador de Impressões > Relatórios > Contas a Receber
     ${nome_print}=     Set Variable     Contas a Receber
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  R
@@ -145,7 +145,7 @@ Configurador de Impressões > Relatórios > Contas a Receber
 
 Configurador de Impressões > Recibos > Contas a Pagar
     ${nome_print}=     Set Variable     Recibos Contas a Pagar
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  E
@@ -157,7 +157,7 @@ Configurador de Impressões > Recibos > Contas a Pagar
 
 Configurador de Impressões > Recibos > Contas a Receber
     ${nome_print}=     Set Variable     Recibos Contas a Receber
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  E
@@ -169,7 +169,7 @@ Configurador de Impressões > Recibos > Contas a Receber
 
 Verificar Transações Abertas
     ${nome_print}=     Set Variable     Verificar Transações Abertas
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Verificar Transações Abertas
     RPA.Windows.Get Text    Verificar Transações Abertas (1)
@@ -179,7 +179,7 @@ Verificar Transações Abertas
 
 Configurar de Dup/Boletos/Carnês
     ${nome_print}=     Set Variable     Configurar de Dup/Boletos/Carnês
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar de Dup/Boletos/Carnês
     RPA.Windows.Get Text    Configuração de Duplicatas/Carnes/Boletos (1)
@@ -189,7 +189,7 @@ Configurar de Dup/Boletos/Carnês
 
 Importador Extrato Bancário (OFX)
     ${nome_print}=     Set Variable     Importador Extrato Bancário (OFX)
-    [Tags]     Financeiro    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Importador Extrato Bancário (OFX)
     RPA.Windows.Get Text    Importador Extrato Bancário (OFX) (1)
@@ -203,7 +203,7 @@ Importador Extrato Bancário (OFX)
 
 Arquivo Relato - Serasa
     ${nome_print}=     Set Variable     Arquivo Relato - Serasa
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Arquivo Relato - Serasa
     RPA.Windows.Get Text    ARQUIVO RELATO - SERASA (1)
@@ -214,7 +214,7 @@ Arquivo Relato - Serasa
 
 Agenda Telefônica
     ${nome_print}=     Set Variable     Agenda Telefônica
-    [Tags]     Financeiro    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
@@ -226,7 +226,7 @@ Agenda Telefônica
 
 Faturamento de Agências - Bilheteria > Geração de Faturas
     ${nome_print}=     Set Variable     Geração de Faturas
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Faturamento de Agências - Bilheteria
     RPA.Desktop.Press Keys  G
@@ -238,7 +238,7 @@ Faturamento de Agências - Bilheteria > Geração de Faturas
 
 Faturamento de Agências - Bilheteria > Estorno de Faturas
     ${nome_print}=     Set Variable     Estorno de Faturas
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Faturamento de Agências - Bilheteria
     RPA.Desktop.Press Keys  E
@@ -250,7 +250,7 @@ Faturamento de Agências - Bilheteria > Estorno de Faturas
 
 Cadastro de Bilheterias
     ${nome_print}=     Set Variable     Cadastro de Bilheterias
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Cadastro de Bilheterias
     RPA.Windows.Get Text    Cadastro de Bilheterias (1)
@@ -260,7 +260,7 @@ Cadastro de Bilheterias
 
 Liberações Contratos de Serviços
     ${nome_print}=     Set Variable     Liberações Contratos de Serviços
-    [Tags]     Financeiro    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Liberações Contratos de Serviços
     RPA.Windows.Get Text    Liberações Contratos de Serviços (1)
@@ -270,7 +270,7 @@ Liberações Contratos de Serviços
 
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Processos Personalizados
     RPA.Windows.Get Text    Processos Personalizados (1)
@@ -281,7 +281,7 @@ Processos Personalizados
 
 Relatório de Análise de Veículos
     ${nome_print}=     Set Variable     Relatório de Análise de Veículos
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Relatório de Análise de Veículos
     RPA.Windows.Get Text    Relatório de Análise de Veículos (1)
@@ -294,7 +294,7 @@ Relatório de Análise de Veículos
 
 Importação de Planilha Excel Personalizada
     ${nome_print}=     Set Variable     Importação de Planilha Excel Personalizada
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Importação de Planilha Excel Personalizada
     RPA.Windows.Get Text    Importação de Planilha Excel Personalizada (1)
@@ -306,7 +306,7 @@ Importação de Planilha Excel Personalizada
 
 Bilheteria > Cadastro de Tipos de Receita
     ${nome_print}=     Set Variable     Cadastro de Tipos de Receita
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Bilheteria
     RPA.Desktop.Press Keys  T
@@ -317,7 +317,7 @@ Bilheteria > Cadastro de Tipos de Receita
 
 Bilheteria > Config. Plano Contas X Produtos
     ${nome_print}=     Set Variable     Config. Plano Contas X Produtos
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Bilheteria
     RPA.Desktop.Press Keys  C
@@ -333,7 +333,7 @@ Bilheteria > Config. Plano Contas X Produtos
 
 Bilheteria > Config. Tipo Receita Trib.
     ${nome_print}=     Set Variable     Config. Tipo Receita Trib.
-    [Tags]     Financeiro    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Bilheteria
     RPA.Desktop.Press Keys  O
