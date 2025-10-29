@@ -78,7 +78,7 @@ Criar Bilhete
     Inserir Texto                xpath:/html/body/div[3]/div[2]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input    ${bilheteria}
     RPA.Desktop.Press Keys    Enter
     #Valida se a bilheteria é a integrada para colocar no grupo de bilhetes
-    ${integrada}=             Run Keyword And Ignore error    Should Contain    ${bilheteria}    ZANOTTO NAO MEXER
+    ${integrada}=             Run Keyword And Ignore error    Should Contain    ${bilheteria}    Bilheteria Automação
     IF    ${integrada} == ('PASS', None)
         Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/div[2]/mat-form-field[6]
         Sleep                     1s
@@ -94,14 +94,23 @@ Criar Bilhete
         RPA.Desktop.Type Text     ${descrição_do_bilhete}
     END
     Adicionar categoria                
-    Adicionar receita                  1    3627
+    Adicionar receita                  1    3752
     Navegar Configurações de venda > sessões    2    
-    Clicar no Elemento                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[2]/div/div/div[3]/block-with-title[1]/div/section/div/mat-form-field[1]/div[1]
-    Clicar no Elemento           xpath:/html/body/div[3]/div[2]/div/div/mat-option[${controla_por:int}]
-    Criar Temporada    
-    Clicar no Botão             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[2]
-    Sleep                     5s       
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[2]/div/div/div[3]/block-with-title[1]/div/section/div/mat-form-field[1]/div[1]
+    Clicar no Elemento        xpath:/html/body/div[3]/div[2]/div/div/mat-option[${controla_por:int}]
+    Criar Temporada   
+    Colocar Imagem no bilhete
+    Clicar no Botão           xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[2]
+    Sleep                     12s       
 
+Colocar Imagem no bilhete
+    Navegar configuração de bilhete    8
+    Clicar no Elemento                 xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[8]/div/app-galeria-bilhete/div/div[2]/upload-files/div[1]
+    Sleep    2s
+    RPA.Desktop.Type Text              C:\\Users\\gustavo.zanotto_limb\\Desktop\\Importante\\Imagens\\robot escuro.png
+    Sleep    1s
+    RPA.Desktop.Press Keys             Enter
+    Clicar no Botão                    xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/ng-component/div[2]/buttons/div/div/button[2]
 
 Navegar configuração de bilhete
     [Arguments]    ${numero}
@@ -122,7 +131,7 @@ Tirar notificação
     Clicar no Botão    xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/popup-notificacoes/div/div[2]/div[3]/button[2]
 
 Adicionar Categoria
-    [Arguments]        ${nome_categoria}=Inteira
+    [Arguments]        ${nome_categoria}=Categoria 1
     Navegar configuração de bilhete    2
     Navegar Configurações de venda > sessões    1
     Clicar no Elemento             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/title-btn-add/div/button
@@ -135,8 +144,8 @@ Adicionar Categoria
             Clicar no Elemento             xpath:/html/body/div[3]/div[4]/div/div/div/mat-option[${contador}]
             BREAK
         ELSE
-            ${contador}=    Evaluate    ${contador} + 1
-            RPA.Desktop.Press Keys      Down
+                ${contador}=    Evaluate    ${contador} + 1
+                RPA.Desktop.Press Keys      Down
         END
     END
     Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[2]/buttons/div/div/button[2]
@@ -168,10 +177,8 @@ Criar Temporada
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    Enter
     Sleep                     1s
-    Clicar no Elemento             xpath:/html/body/div[3]/div[4]/div/div/mat-option
-    RPA.Desktop.Press Keys    tab
-    RPA.Desktop.Press Keys    Enter
-    Colocar cor               ${vermelho}    ${verde}    ${azul}
+    Clicar no Elemento        xpath:/html/body/div[3]/div[4]/div/div/mat-option
+    Colocar cor               ${vermelho}    ${verde}    ${azul}    xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/mat-dialog-content/mat-tab-group/div/mat-tab-body[1]/div/form/mat-form-field[4]/div[1]/div/div[2]
     sleep                     2s
     Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/div[2]/button[2]
     sleep                     1s
@@ -198,7 +205,7 @@ Pegar codigo e nome da Ultima Categoria
 
 Colocar cor 
     [Arguments]    ${RED}    ${GREEN}    ${BLUE}    ${xpath}
-    Clicar no Elemento         xpath:${xpath}
+    Clicar no Elemento         ${xpath}
     Sleep    1
     Repetidor de teclas        Up    5
     Repetidor de teclas        Down    5
@@ -238,17 +245,17 @@ Criar tabela de preço
         Repetidor de teclas        Down    2
     END
     Sleep                      1s
-    Colocar cor                49    0    53    /html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/div/div/mat-form-field[3]/div[1]/div/div[2]
+    Colocar cor                49    0    53    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/div/div/mat-form-field[3]/div[1]/div/div[2]
     Clicar no Botão            xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[2]/buttons/div/div/button[3]
     Sleep                      2s
 
 Criar tabela de disponibilidade
     [Arguments]    ${numero_bilhete}    ${nome_tabela}=Tabela de Disponibilidade Automatizada    ${hora_inico}=0600    ${hora_fim}=2200    ${qtd_vagas}=1000
-    Clicar no Elemento         id:mat-tab-link-1
+    Clicar no Elemento         Xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[2]
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[1]/div/table/thead/tr/th[4]/div/button
     Inserir Texto              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[2]/div/config-disp/div[1]/div/div/mat-form-field[1]/div[1]/div/div[2]/input    ${nome_tabela}
     Repetidor de teclas        tab    1
-    Colocar cor                106    0    28    /html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[2]/div/config-disp/div[1]/div/div/mat-form-field[2]/div[1]/div/div[2]
+    Colocar cor                106    0    28    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[2]/div/config-disp/div[1]/div/div/mat-form-field[2]/div[1]/div/div[2]
     Repetidor de teclas        tab    3
     RPA.Desktop.Press Keys     Enter
     Repetidor de teclas        tab      2
@@ -264,26 +271,36 @@ Criar tabela de disponibilidade
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[2]/div/config-disp/div[2]/buttons/div/div/button[3]
     Sleep                      2s
 
+Rolar para Cima
+    [Arguments]    ${vezes}=1
+    Log    Rolando a tela para cima ${vezes} vez(es).
+    Repetidor de teclas    pageup    ${vezes}
+
+Retirar temporada
+    [Arguments]    ${numero_bilhete}    ${numero_temporada}
+    Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
+    Navegar configuração de bilhete    7
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[2]/table/tbody/tr[${numero_temporada}]/td[6]/div/button[2]
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
+    Sleep    3s   
+
 Preencher dia do calendario
-    [Arguments]    ${mês}    ${dia}    ${n°_tabela_preco}=1    ${n°_tabela_dispo}=1    ${n°_temporada}=1
-    Clicar no Elemento              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]
-    Clicar no Elemento              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib
+    [Arguments]    ${mês}    ${dia}    ${n°_tabela_preco}=2    ${n°_tabela_dispo}=2    ${n°_temporada}=2
+    Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]
+    Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib
     sleep                      1s
-    Selecionar dia do calendário    ${mês}    ${dia}
+    Selecionar dia do calendário    ${mês}    ${dia}      
     RPA.Desktop.Press Keys     Tab
     RPA.Desktop.Press Keys     Enter
-    Repetidor de teclas        Down    ${n°_tabela_preco}
+    Clicar no Elemento         xpath:/html/body/div[3]/div[2]/div/div/mat-option[${n°_tabela_preco}]
+    Repetidor de teclas        tab   2
     RPA.Desktop.Press Keys     Enter
-    Repetidor de teclas        tab    2
+    Clicar no Elemento         xpath:/html/body/div[3]/div[2]/div/div/mat-option[${n°_tabela_dispo}]
+    Repetidor de teclas        tab   1
     RPA.Desktop.Press Keys     Enter
-    Repetidor de teclas        Down    ${n°_tabela_dispo}
-    RPA.Desktop.Press Keys     Enter
-    RPA.Desktop.Press Keys     Tab
-    RPA.Desktop.Press Keys     Enter
-    Repetidor de teclas        Down    ${n°_temporada}
-    RPA.Desktop.Press Keys     Enter
-    Repetidor de teclas        tab    2
-    RPA.Desktop.Press Keys     Enter
+    Sleep    2s
+    Clicar no Elemento         xpath:/html/body/div[3]/div[2]/div/div/mat-option[${n°_temporada}]
+    Clicar no Botão            xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card/footer/button[2]
 
 Selecionar dia do calendário
     [Arguments]    ${mês}    ${dia}
@@ -327,6 +344,14 @@ Selecionar dia do calendário
             BREAK 
         END
     END
+
+Limpar dia do calendário    
+    Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]
+    Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib
+    sleep                      1s
+    @{ano_mes_dia}=  Get Time	year month day 
+    Selecionar dia do calendário    ${ano_mes_dia[1]}   ${ano_mes_dia[2]}
+    Clicar no Botão                 xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card/footer/button[1]
 
 Criar exceção de disponibilidade
     [Arguments]    ${qtd_vagas}=5
@@ -416,7 +441,7 @@ Comparar valores
 
 Inativar bilhete
     [Arguments]    ${numero_bilhete}
-    IF    ${numero_bilhete} == 6275
+    IF    ${numero_bilhete} == 6491
             Go to            https://testescard.limbersoftware.com.br/
             sleep            5s
             Go to            https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete 
@@ -432,9 +457,9 @@ Inativar bilhete
             RPA.Desktop.Press Keys    tab
             Sleep                     1s
             RPA.Desktop.Press Keys    Enter
-            Run Keyword and Ignore Error    Retirar Categoria  2
+            Run Keyword and Ignore Error    Retirar Categoria  2    ${numero_bilhete}
             Sleep                     2s
-            Run Keyword and Ignore Error    Retirar Categoria  2
+            Run Keyword and Ignore Error    Retirar Categoria  2    ${numero_bilhete}
             sleep                     1s
     ELSE
         Go to     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
@@ -496,12 +521,13 @@ Cadastrar nova categoria
 Adicionar categoria em bilhetes ja existente
     [Arguments]    ${categoria}    ${qtd_de_categorias}    ${receita}    ${numero_bilhete}
     Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
+    Sleep    1
     Adicionar categoria       ${categoria}
     Adicionar receita         ${qtd_de_categorias}    ${receita}
-    Clicar no Elemento             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
-    Sleep                     1s
-    RPA.Desktop.Press Keys    Enter
-    Sleep                     1s
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
+    Sleep    4s
+    Clicar no Botão           xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/confirm-dialog/div/div[3]/button[1]
+    Sleep    2s
 
 Preencher convênio
     [Arguments]    ${nome_convênio}=CONVÊNIO
@@ -531,7 +557,7 @@ Adicionar nova temporada em um bilhete
     [Arguments]    ${numero_bilhete}
     Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
     sleep    5s
-    Criar Temporada   2    Temporada 2     0    255    0
+    Criar Temporada                2    Temporada 2     0    255    0
     Clicar no Elemento             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
     Sleep                     1s
     # RPA.Desktop.Press Keys    tab

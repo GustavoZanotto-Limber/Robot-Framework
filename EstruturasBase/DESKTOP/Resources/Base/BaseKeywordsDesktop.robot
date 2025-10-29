@@ -65,7 +65,7 @@ Iniciar sessao
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
-    Sleep                           3s
+    Sleep                           2s
 
 Iniciar sessao e abrir caixa
     [Arguments]    ${nome_exe} 
@@ -78,7 +78,7 @@ Iniciar sessao e abrir caixa
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
-    Sleep                           1s
+    Sleep                           2s
     Abrir caixa operador
 
 Consultas Front
@@ -169,7 +169,7 @@ Ir Para Emissão de Bilhetes
         Repetidor de teclas    right    1
         RPA.Windows.Click      Emissão de Bilhetes
     END
-    Sleep                  15s
+    Sleep                  5s
     RPA.Windows.Get Text   Emissão de Bilhetes (1)
 
 Ir Para Reimpressão de Bilhetes
@@ -283,6 +283,21 @@ Selecionar o bilhete
     Escrever para consultar   ${bilhete}
     #Selecionando categorias
     Escrever para consultar   ${categoria}
+    Repetidor de teclas       enter    6
+
+Selecionar o bilhete abrir filtro
+    [Arguments]    ${bilhete}    ${categoria}
+    #Selecionando o bilhete
+    Escrever para consultar   ${bilhete}
+    #Selecionando categorias
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    enter
+    Sleep                     1s
+    RPA.Desktop.Press Keys    F6
+    repetidor de teclas       Down    ${categoria}     0.5
+    Sleep                     2s
+    RPA.Windows.Click         Confirmar
+    Sleep                     1s
     Repetidor de teclas       enter    6
 
 Selecionar o bilhete e retornar quantidade de vagas
@@ -460,9 +475,9 @@ Abrir arquivo
 
 
 Repetidor de teclas
-    [Arguments]               ${tecla}                   ${quantidade_de_clicks}    
+    [Arguments]               ${tecla}                   ${quantidade_de_clicks}        ${sleep}=0.1
     FOR                       ${quantidade_de_clicks}    IN RANGE                   1    ${quantidade_de_clicks}+1
-    Sleep                     0.1
+    Sleep                     ${sleep}
     RPA.Desktop.Press Keys    ${tecla}     
     END
 
@@ -613,5 +628,3 @@ Escrever para consultar
     Sleep                     1s
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
-
-

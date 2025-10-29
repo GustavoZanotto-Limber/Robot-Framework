@@ -18,25 +18,24 @@ Resource    ../BDD/BDDKeywordsDesktop.robot
 
 Abro o E-commerce
     Go to                     https://automacao.testescard.limber.net.br/
-    Clicar no Elemento             accountButton   
-    Inserir Texto                xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    gustavozanotto119@gmail.com
+    Sleep                     7s
+    Clicar no Elemento        id:accountButton  
+    Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    gustavozanotto119@gmail.com
     RPA.Desktop.Press keys    Backspace
     RPA.Desktop.Type Text     m
     RPA.Desktop.Press keys    Enter
-    Sleep    5
+    Sleep    3
     Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    Z
     RPA.Desktop.Press keys    Backspace
     RPA.Desktop.Type Text     Zanotto123@
     RPA.Desktop.Press keys    Enter
-    Sleep                     5s
+    Sleep                     2s
 
 Pesquisar bilhete no e-commerce
     [Arguments]   ${nome_bilhete}
     Inserir Texto         xpath:/html/body/app-root/app-home/div/main/app-dashboard/div/mat-form-field/div[1]/div/div[3]/input       ${nome_bilhete}
-    Sleep              2s
-    Repetidor de teclas       tab    2
-    sleep                     1s    
-    RPA.Desktop.PRess Keys    Enter
+    Sleep                 2s
+    Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-dashboard/section[2]/app-highlights/div[2]/div[1]/div/app-product-card/div/section/a
 
 Coletar quantidade de vagas (E-Commerce)
     [Arguments]    ${qtd_vagas}
@@ -46,10 +45,11 @@ Coletar quantidade de vagas (E-Commerce)
     Should Contain    ${qtd_vagas_no_ecommerce}    ${qtd_vagas} Vagas
 
 Coleta Valor bilhete (E-commerce)
-    [Arguments]    ${valor_bilhete}   ${numero_categoria}=1     ${valor_taxa}=0  
-    Sleep                   3s  
-        SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit[${numero_categoria}]/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/section/div    R$ ${valor_bilhete}
-    IF    $valor_taxa != 0                                    
+    [Arguments]    ${valor_bilhete}   ${numero_categoria}=1     ${valor_taxa}=n  
+        Wait Until Element Is Visible    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${numero_categoria}]/div/div[2]/div[1]/section/div
+        SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${numero_categoria}]/div/div[2]/div[1]/section/div    R$ ${valor_bilhete}
+    ${cleaned_valor_taxa}=    Evaluate    "${valor_taxa}".strip().lower()
+    IF    '${cleaned_valor_taxa}' != 'n'
         SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/div    ${valor_taxa}
     END
 
