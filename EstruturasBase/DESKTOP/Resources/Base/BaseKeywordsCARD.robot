@@ -346,12 +346,12 @@ Selecionar dia do calendário
         END
     END
 
-Limpar dia do calendário    
+Limpar dia do calendário
+    [Arguments]        ${dia}    ${mes}
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib
     sleep                      1s
-    @{ano_mes_dia}=  Get Time	year month day 
-    Selecionar dia do calendário    ${ano_mes_dia[1]}   ${ano_mes_dia[2]}
+    Selecionar dia do calendário    ${dia}    ${mes}
     Clicar no Botão                 xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card/footer/button[1]
 
 Criar exceção de disponibilidade
@@ -395,11 +395,10 @@ Valida campo
 Colocar o bilhete no e-commerce
     [Arguments]     ${numero_bilhete}    
     Mudar Página    https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=349
-    Sleep           1s
     Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[4]
-    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel/mat-expansion-panel-header
-    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel/div/div/div/mat-card/div/div[2]/div/button
-    Inserir Texto      xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[1]/mat-form-field/div[1]/div/div[2]/input    ${numero_bilhete}
+    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[2]/mat-expansion-panel-header
+    Clicar no Botão      xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[2]/div/div/div/mat-card/div/div[2]/div/button
+    Inserir Texto        xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[1]/mat-form-field/div[1]/div/div[2]/input    ${numero_bilhete}
     Sleep           1s
     ${ativo}=       Get Element Attribute     xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]/img   style
     Log    ${ativo}
@@ -463,6 +462,8 @@ Inativar bilhete
             Sleep                     2s
             Run Keyword and Ignore Error    Retirar Categoria  2    ${numero_bilhete}
             sleep                     1s
+            Go To    https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=349
+
     ELSE
         Go to     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
         Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/div[1]/mat-checkbox
@@ -538,7 +539,7 @@ Preencher convênio
     sleep            1s
     ${nome_coletado}=    Tentar coletar texto em um dos Elementos    id:mat-option-1    id:mat-option-2
     IF    $nome_convênio == $nome_coletado
-        Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[4]/div[4]/div/div/mat-option   xpath:/html/body/div[3]/div[4]/div/div/mat-option
+        Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[2]/div[4]/div/div/mat-option   xpath:/html/body/div[3]/div[4]/div/div/mat-option
     ELSE
         Fail    Convênio errado ou não existênte.
     END    
