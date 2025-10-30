@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-51 Impressão de Bilhete e Reimpressão de bilhetes/ 
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/    LB-51 Impressão de Bilhete e Reimpressão de bilhetes/ 
 ${Caminho_arquivos}=     C:/Users/testes/Documents/Testes Regressivos/
 ${nome_exe}=    cde_win_bca_front
 ${nome_print}

@@ -8,7 +8,7 @@ Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${no
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/LB-42 Cadastro e alteracao de Programacao de Horario/ 
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-42 Cadastro e alteracao de Programacao de Horario/ 
 ${nome_print}
 ${texto_bilhete}
 ${numero_bilhete}=  6491

@@ -134,8 +134,8 @@ Adicionar Categoria
     [Arguments]        ${nome_categoria}=Categoria 1
     Navegar configuração de bilhete    2
     Navegar Configurações de venda > sessões    1
-    Clicar no Elemento             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/title-btn-add/div/button
-    Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[1]/mat-form-field/div[1]/div/div[2]
+    Clicar no Elemento                            xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/title-btn-add/div/button
+    Tentar Clicar Em Um Dos Elementos             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[1]/mat-form-field/div[1]/div/div[2]    xpath:/html/body/div[2]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[1]/mat-form-field/div[1]/div/div[2]
     ${contador}=    Set Variable    0
     WHILE    ${contador} < 100 
         ${nome_coletado}=         Run Keyword and Ignore Error    Seleniumlibrary.Get Text    xpath:/html/body/div[3]/div[4]/div/div/div/mat-option[${contador}]/span
@@ -224,6 +224,7 @@ Colocar cor
 Criar tabela de preço
     [Arguments]    ${numero_bilhete}    ${nome_tabela}=Tabela de Preço Automatizada    ${preço}=100    ${taxa}=0    ${qtd_de_categorias}=1    
     Go To                      https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+    RPA.Desktop.Press Keys     F5
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[1]/div/table/thead/tr/th[4]/div/button
     Inserir Texto              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/div/div/mat-form-field[1]/div[1]/div/div[2]/input    ${nome_tabela}
     Sleep                      2s
@@ -417,6 +418,7 @@ Colocar o bilhete no e-commerce
 Adicionar no perfil
     [Arguments]    ${numero_bilhete}   ${id_perfil_de_venda}   
     Go To          https://testescard.limbersoftware.com.br/#/pages/config/perfil?id=${id_perfil_de_venda}
+    Sleep          1s
     Clicar no Elemento  xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[3]
     Inserir Texto     xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/div/mat-tab-body[3]/div/div/limber-select-product/div/div[1]/mat-form-field/div[1]/div/div[2]/input    ${numero_bilhete}
     Sleep          1s
@@ -532,15 +534,35 @@ Adicionar categoria em bilhetes ja existente
 Preencher convênio
     [Arguments]    ${nome_convênio}=CONVÊNIO
     Sleep            2s
-    Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form/mat-form-field/div[1]/div/div[2]/mat-select
+    Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form/mat-form-field/div[1]/div/div[2]/mat-select    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form/mat-form-field/div[1]/div/div[2]/mat-select
     sleep            1s
-    ${nome_coletado}=    SeleniumLibrary.get text    xpath:/html/body/div[3]/div[4]/div/div/mat-option/span
+    ${nome_coletado}=    Tentar coletar texto em um dos Elementos    id:mat-option-1    id:mat-option-2
     IF    $nome_convênio == $nome_coletado
-        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option
+        Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[4]/div[4]/div/div/mat-option   xpath:/html/body/div[3]/div[4]/div/div/mat-option
     ELSE
         Fail    Convênio errado ou não existênte.
     END    
     
+Tentar Clicar Em Um Dos Elementos
+    [Arguments]    ${xpath_1}    ${xpath_2}
+    ${resultado}=    Run Keyword And Ignore Error   Run Keyword and return Status     Clicar no Elemento    ${xpath_1}
+    IF    ${resultado[1]}
+        Log    Clicou no elemento 1
+    ELSE
+        Clicar no Elemento    ${xpath_2}
+        Log    Clicou no elemento 2
+    END
+
+Tentar coletar texto em um dos Elementos
+    [Arguments]    ${xpath_1}    ${xpath_2}
+    ${resultado}=    Run Keyword And Ignore Error   Run Keyword and return Status     SeleniumLibrary.get text    ${xpath_1}
+    IF    ${resultado[1]}
+        RETURN    ${resultado[1]}
+    ELSE
+        ${texto}=    SeleniumLibrary.get text    ${xpath_2}
+        RETURN    ${texto}
+    END
+
 Retirar Exceção
     [Arguments]    ${numero_bilhete}
     Go to    https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/calendario?bilhete=${numero_bilhete}
