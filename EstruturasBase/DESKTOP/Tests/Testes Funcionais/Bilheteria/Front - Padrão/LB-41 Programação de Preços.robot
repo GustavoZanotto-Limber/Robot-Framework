@@ -18,7 +18,8 @@ Encerrar Cenário
     Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
     Run Keyword and ignore error    Excluir tabela de preço e disponibilidade    6422
     Sleep    2s
-    Run Keyword and ignore error    Limpar dia do calendário        
+    @{ano_mes_dia}=  Get Time	year month day 
+    Run Keyword and ignore error    Limpar dia do calendário           ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
     Sleep    2s    
 
 Encerrar Cenário 2
@@ -26,6 +27,7 @@ Encerrar Cenário 2
     Encerrar Cenário    ${nome_print}
     Run Keyword And Ignore Error    Retirar Categoria  2  6422
     Run Keyword And Ignore Error    Excluir Categoria   ${numero_categoria}
+    Sleep    2s
     
 Encerrar cenário 3
     [Arguments]    ${nome_print}
@@ -36,6 +38,9 @@ Encerrar cenário 3
 Encerrar Cenário 4
     [Arguments]    ${nome_print}
     Encerrar Cenário    ${nome_print}
+    @{ano_mes_dia}=  Get Time	year month day 
+    ${amanaha}=    Evaluate    ${ano_mes_dia[2]} + 1
+    Run Keyword and ignore error    Limpar dia do calendário       ${ano_mes_dia[1]}    ${amanaha}
     Retirar temporada    6422    2
     
 

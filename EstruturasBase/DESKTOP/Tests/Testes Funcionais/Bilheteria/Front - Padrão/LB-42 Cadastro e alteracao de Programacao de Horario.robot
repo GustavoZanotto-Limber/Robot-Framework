@@ -3,8 +3,8 @@ Documentation     Testes regressivos: Cadastro e alteracao de Programacao de Hor
 Resource          ../../../../Resources/Base/BaseKeywordsCARD.robot
 Resource          ../../../../Resources/BDD/BDDKeywordsWeb.robot
 Suite Setup       Abrir CARD e logar 
-Suite Teardown    Inativar bilhete    ${numero_bilhete}
-Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}Erros/    ${nome_print}
+Suite Teardown    Inativar bilhete    ${numero_bilhete}    
+Test Teardown     Encerrar Cenário    $nome_print    ${numero_bilhete}
 
 *** Variables ***
 
@@ -15,7 +15,13 @@ ${numero_bilhete}=  6491
 ${nome_bilhete}=  LB-42 Cadastro e alteração de Programação de Horario
 *** Keywords ***
 
-
+Encerrar Cenário
+    [Arguments]    ${nome_print}    ${numero_bilhete}    
+    
+    Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
+    Run Keyword and ignore error    Excluir tabela de preço e disponibilidade    ${numero_bilhete}
+    Sleep    1s
+    Run Keyword and ignore error    Limpar dia do calendário        
 
 *** Test Cases    ***
 

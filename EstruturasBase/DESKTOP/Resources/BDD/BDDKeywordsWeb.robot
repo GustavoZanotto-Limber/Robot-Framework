@@ -257,20 +257,18 @@ Então valido se os preços foram salvos corretamente
     # END
     Encerrar Tudo
 
-Então valido se o preço foi salvo corretamente
-    [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      
-    Abro o E-commerce
-    Pesquisar bilhete no e-commerce    LB - 41 Programaçāo de Preços
-    Adicionar categoria (Compra E-Commerce)    1    1
-    Coleta Valor bilhete (E-commerce)     ${valor_cat1}       1
-    Iniciar sessao       cde_win_bca_front 
-
 Então valido as temporadas no E-Commerce
     [Arguments]    ${numero_bilhete}
     Abro o E-commerce
-    Pesquisar bilhete no e-commerce    LB - 41 Programaçāo de Preços
+    Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
     Sleep                              3s
     Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span       Temporada 1
     Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div[2]/span    Temporada 2
     
-    
+Então valido se o preço foi salvo corretamente
+    [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      
+    Abro o E-commerce
+    Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
+    Adicionar categoria (Compra E-Commerce)    1    1
+    Coleta Valor bilhete (E-commerce)     ${valor_cat1}       1
+    Iniciar sessao       cde_win_bca_front 
