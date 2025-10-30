@@ -109,6 +109,8 @@ Quando adiciono o convênio no bilhete
 Quando cadastro a tabela de preço
     Criar tabela de preço               ${numero_bilhete}   Tabela de Preço com multiplas categorias     500    0    3
     Criar tabela de disponibilidade     6422    qtd_vagas=250
+    @{ano_mes_dia}=  Get Time	year month day 
+    Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
 
 Quando coloco as temporadas no calendario
     [Arguments]    ${numero_bilhete}
