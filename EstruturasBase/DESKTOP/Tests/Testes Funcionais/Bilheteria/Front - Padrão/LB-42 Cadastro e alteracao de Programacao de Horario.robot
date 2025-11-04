@@ -4,7 +4,7 @@ Resource          ../../../../Resources/Base/BaseKeywordsCARD.robot
 Resource          ../../../../Resources/BDD/BDDKeywordsWeb.robot
 Suite Setup       Abrir CARD e logar 
 Suite Teardown    Inativar bilhete    ${numero_bilhete}    
-Test Teardown     Encerrar Cenário    $nome_print    ${numero_bilhete}
+Test Teardown     Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
 
 *** Variables ***
 
@@ -13,18 +13,8 @@ ${nome_print}
 ${texto_bilhete}
 ${numero_bilhete}=  6491
 ${nome_bilhete}=  LB-42 Cadastro e alteração de Programação de Horario
-*** Keywords ***
-
-Encerrar Cenário
-    [Arguments]    ${nome_print}    ${numero_bilhete}    
-    
-    Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
-    Run Keyword and ignore error    Excluir tabela de preço e disponibilidade    ${numero_bilhete}
-    Sleep    1s
-    Run Keyword and ignore error    Limpar dia do calendário        
 
 *** Test Cases    ***
-
 
 Cenário 1: Cadastro de um bilhete por Horario/Vaga
     ${nome_print}=    Set Variable     Cadastro de um bilhete por Horario_Vaga
@@ -50,7 +40,7 @@ Cenário 3: Alteração do saldo de horário com motivo registrado
 Cenário 4: Emissão de bilhete com saldo atualizado
     ${nome_print}=    Set Variable     Emissão de bilhete com saldo atualizado    
     [Tags]    Testes_Funcionais    LB-42
-    Dado que estou na tela de emissão de bilhetes
+    Dado que estou na tela de emissão de bilhetes                  ${numero_bilhete}
     Quando emito um bilhete com saldo atualizado                   ${numero_bilhete}    5
     Então valido se a quantidade foi reduzida corretamente    5    ${numero_bilhete}
 
