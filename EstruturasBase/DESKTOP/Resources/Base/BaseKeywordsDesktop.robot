@@ -61,7 +61,7 @@ Iniciar sessao
     RPA.Windows.Click               Abrir
     Sleep                           2s
     RPA.Desktop.Press keys                      enter
-    Sleep                           5s          Carregando a base...
+    Sleep                           10s          Carregando a base...
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
@@ -74,11 +74,11 @@ Iniciar sessao e abrir caixa
     RPA.Windows.Click               Abrir
     Sleep                           2s
     RPA.Desktop.Press keys                      enter
-    Sleep                           5s          Carregando a base...
+    Sleep                           10s          Carregando a base...
     Type text                       1
     RPA.Desktop.Press keys                      enter
     RPA.Desktop.Press keys                      enter
-    Sleep                           2s
+    Sleep                           4s
     Abrir caixa operador
 
 Consultas Front
@@ -470,6 +470,8 @@ Abrir arquivo
     Sleep                     1s
     Run Keyword and Ignore error     RPA.Windows.Click         OK
     Sleep                     1s
+    RPA.Desktop.Type Text     Procurar...
+    Sleep    1s
     RPA.Desktop.Type Text     ${Caminho_arquivo}${nome_Arquivo_com_o_tipo}
     RPA.Desktop.Press Keys    enter
 

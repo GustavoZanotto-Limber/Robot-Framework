@@ -276,6 +276,7 @@ Quando Fecho o caixa operador E pego o Resumo Geral
     ${valor_final}=    Dividir Texto    ${valor_1}    Data    0
     sleep                     5s
     RPA.Desktop.Press Keys    ALT    f4
+    Set Global Variable    ${texto}    ${valor_final}
     RETURN  ${valor_final}
 
 
@@ -301,7 +302,10 @@ Então valido a venda foi realizada com sucesso (valor zerado)
     Analisa texto da forma de pagamento (não contém)  ${metodo}    ${valor}    
     
 Então valido se a quantidade foi reduzida corretamente
-    [Arguments]    ${qtd_vagas}    ${numero_bilhete}=5875
+    [Arguments]    ${qtd_vagas}    ${numero_bilhete}
+    IF    $numero_bilhete == 6491 
+        ${qtd_vagas}=    Set Variable        1000
+    END
     Sleep                         1s
     ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    ${numero_bilhete}    1
     ${qtd_vagas_novo}=            Convert to Integer    ${qtd_vagas_novo_string}

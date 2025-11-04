@@ -31,13 +31,23 @@ Dado que estou na tela de Exceções de Preço e Disponibilidade
     [Arguments]    ${numero_bilhete}
     Sleep          2s
     Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
-    Criar tabela de preço               ${numero_bilhete}   tabela de preço     500
+    Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada     500
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
     
 Dado que estou na tela de emissão de bilhetes
-    Iniciar sessao        cde_win_bca_front
+    [Arguments]    ${numero_bilhete}
+    IF    ${numero_bilhete} == 6491 
+        Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+        Criar tabela de preço               ${numero_bilhete}   tabela de preço     1000
+        Criar tabela de disponibilidade     ${numero_bilhete}
+        @{ano_mes_dia}=  Get Time	year month day 
+        Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
+        Sleep    2s
+    END
+    Sleep    2s
+    Iniciar sessao e abrir caixa    cde_win_bca_front       
     Ir Para Emissão de Bilhetes
     Sleep    2s
 
@@ -73,6 +83,9 @@ Quando crio uma Exceção de Disponibilidade para o bilhete
    
 Quando emito um bilhete com saldo atualizado 
     [Arguments]    ${numero_bilhete}    ${qtd_vagas}=5
+    IF    ${numero_bilhete} == 6491 
+        ${qtd_vagas}=    Set Variable        1000
+    END
     Sleep                    2s
     ${qtd_vagas_coletada}=    Selecionar o bilhete e retornar quantidade de vagas (categoria)   ${numero_bilhete}    1
     log    Quantidade de vagas antes da emissão: ${qtd_vagas_coletada}
@@ -176,7 +189,7 @@ Então valido se a disponibilidade integrou corretamente
 
 Então valido a Exceção no E-commerce e na bilheteria
     [Arguments]    ${numero_bilhete}    ${qtd_vagas}=5
-    Colocar o bilhete no e-commerce    ${numero_bilhete}
+    Colocar o bilhete no e-commerce    ${numero_bilhete}    2
     Abro o E-commerce
     Pesquisar bilhete no e-commerce      LB-42 Cadastro e alteração de Programação de Horario
     Coletar quantidade de vagas (E-Commerce)    ${qtd_vagas}
@@ -264,20 +277,18 @@ Então valido se os preços foram salvos corretamente
     # END
     Encerrar Tudo
 
-Então valido se o preço foi salvo corretamente
-    [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      
-    Abro o E-commerce
-    Pesquisar bilhete no e-commerce    LB - 41 Programaçāo de Preços
-    Adicionar categoria (Compra E-Commerce)    1    1
-    Coleta Valor bilhete (E-commerce)     ${valor_cat1}       1
-    Iniciar sessao       cde_win_bca_front 
-
 Então valido as temporadas no E-Commerce
     [Arguments]    ${numero_bilhete}
     Abro o E-commerce
-    Pesquisar bilhete no e-commerce    LB - 41 Programaçāo de Preços
+    Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
     Sleep                              3s
     Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span       Temporada 1
     Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div[2]/span    Temporada 2
     
-    
+Então valido se o preço foi salvo corretamente
+    [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      
+    Abro o E-commerce
+    Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
+    Adicionar categoria (Compra E-Commerce)    1    1
+    Coleta Valor bilhete (E-commerce)     ${valor_cat1}       1
+    Iniciar sessao       cde_win_bca_front 
