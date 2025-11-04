@@ -1411,7 +1411,7 @@ Fiscal > Tabela Pauta Fiscal
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -1422,7 +1422,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
