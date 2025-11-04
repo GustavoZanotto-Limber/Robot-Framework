@@ -20,7 +20,7 @@ Fluxo de Caixa
 
 Fluxo de Caixa a Realizar (Projetado)
     ${nome_print}=     Set Variable     Fluxo de Caixa a Realizar (Projetado)
-    [Tags]     Financeiro    Fluxo de Caixa   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Fluxo de Caixa   SmokeTest
     Fluxo de Caixa
     RPA.Windows.Click         Fluxo de Caixa a Realizar (Projetado)
     RPA.Windows.Get Text      Fluxo de Caixa Projetado (A Realizar) (1)
@@ -31,7 +31,7 @@ Fluxo de Caixa a Realizar (Projetado)
 
 Fluxo de Caixa Realizado    
     ${nome_print}=     Set Variable     Fluxo de Caixa Realizado
-    [Tags]     Financeiro    Fluxo de Caixa   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Fluxo de Caixa   SmokeTest
     Fluxo de Caixa
     RPA.Windows.Click         Fluxo de Caixa Realizado
     RPA.Windows.Get Text      Fluxo de Caixa a Realizado (1)

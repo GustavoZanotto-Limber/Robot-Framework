@@ -21,7 +21,7 @@ Consultas
 
 Consultas Personalizadas
     ${nome_print}=     Set Variable     Consultas Personalizadas
-    [Tags]     Corretagem    Consultas   SmokeTest    
+    [Tags]   SmokeERP    Corretagem    Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
@@ -32,7 +32,7 @@ Consultas Personalizadas
 
 Log de Alterações
     ${nome_print}=     Set Variable     Log de Alterações
-    [Tags]     Corretagem    Consultas   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Log de Alterações
     RPA.Windows.Get Text      Consulta Log de Alterações (1)

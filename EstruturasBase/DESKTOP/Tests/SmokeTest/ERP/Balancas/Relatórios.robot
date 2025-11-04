@@ -21,7 +21,7 @@ Relatórios
 
 Movimentação de Cereais
     ${nome_print}=     Set Variable     Movimentação de Cereais
-    [Tags]     Balancas    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Balancas    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Movimentação de Cereais
     RPA.Windows.Get Text      Movimentação de Cereais (1)
@@ -34,7 +34,7 @@ Movimentação de Cereais
 
 Lançamentos de Saídas
     ${nome_print}=     Set Variable     Lançamentos de Saídas
-    [Tags]     Balancas    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Balancas    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Lançamentos de Saídas
     RPA.Windows.Get Text      Lançamentos de Saídas (1)
@@ -46,7 +46,7 @@ Lançamentos de Saídas
 
 Relatório de Pesagem de Terceiros
     ${nome_print}=     Set Variable     Relatório de Pesagem de Terceiros
-    [Tags]     Balancas    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Balancas    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Relatório de Pesagem de Terceiro
     RPA.Windows.Get Text      Relatório de Pesagem de Terceiro (1)
@@ -58,7 +58,7 @@ Relatório de Pesagem de Terceiros
 
 Relatório Bayer/Monsanto
     ${nome_print}=     Set Variable     Relatório Bayer_Monsanto
-    [Tags]     Balancas    Relatórios   SmokeTest
+    [Tags]   SmokeERP    Balancas    Relatórios   SmokeTest
     Relatórios
     RPA.Windows.Click         Relatório Bayer/Monsanto
     RPA.Windows.Get Text      Relatório Bayer/Monsanto (1)

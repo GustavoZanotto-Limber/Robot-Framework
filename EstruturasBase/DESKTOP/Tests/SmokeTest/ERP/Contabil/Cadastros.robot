@@ -17,7 +17,7 @@ ${nome_exe}=    cde_win_ctb
 
 Plano de Contas
     ${nome_print}=     Set Variable     Plano de Contas
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Plano de Contas
     RPA.Windows.Get Text      Cadastro do Plano de Contas (1)  
@@ -28,7 +28,7 @@ Plano de Contas
 
 Plano de Contas X Plano Referencial
     ${nome_print}=     Set Variable     Plano de Contas X Plano Referencial
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Plano de Contas x Plano Referencial
     RPA.Windows.Get Text      Relacionamento Plano de Contas x Plano Referencial
@@ -39,7 +39,7 @@ Plano de Contas X Plano Referencial
 
 Balancete X Plano Referencial
     ${nome_print}=     Set Variable     Balancete X Plano Referencial
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Balancete x Plano Referencial
     RPA.Windows.Get Text      Balancete x Plano Referencial (1)
@@ -50,7 +50,7 @@ Balancete X Plano Referencial
 
 Notas Explicativas
     ${nome_print}=     Set Variable     Notas Explicativas
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Notas Explicativas
     RPA.Windows.Get Text      Cadastro de Notas Explicativas (1)
@@ -61,7 +61,7 @@ Notas Explicativas
 
 Históricos Contábeis
     ${nome_print}=     Set Variable     Históricos Contábeis
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Históricos Contábeis
     RPA.Windows.Get Text      Cadastro de Históricos Contábeis (1)
@@ -72,7 +72,7 @@ Históricos Contábeis
 
 Centro de Custos
     ${nome_print}=     Set Variable     Centro de Custos
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Centro de Custos
     RPA.Windows.Get Text      Cadastro de Centros de Custos (1)
@@ -83,7 +83,7 @@ Centro de Custos
 
 Indexadores
     ${nome_print}=     Set Variable     Indexadores
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Indexadores
     RPA.Windows.Get Text      Cadastro de Indexadores (1)
@@ -94,7 +94,7 @@ Indexadores
 
 Contabilistas
     ${nome_print}=     Set Variable     Contabilistas
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Contabilistas
     RPA.Windows.Get Text      Cadastro de Contabilistas (1)
@@ -105,7 +105,7 @@ Contabilistas
 
 Montagem do Demonstrativo DRE
     ${nome_print}=     Set Variable     Montagem do Demonstrativo DRE
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Montagem do Demonstrativo DRE
     RPA.Windows.Get Text      Montagem do Demonstrativo (1)
@@ -116,7 +116,7 @@ Montagem do Demonstrativo DRE
 
 Montagem do Demonstrativo DFC
     ${nome_print}=     Set Variable     Montagem do Demonstrativo DFC
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Montagem do Demonstrativo DFC
     RPA.Windows.Get Text      Montagem do Demonstrativo - DFC (1)
@@ -127,7 +127,7 @@ Montagem do Demonstrativo DFC
 
 Configuração Int. Contabil
     ${nome_print}=     Set Variable     Configuração Int. Contabil
-    [Tags]     Contabil    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Configuração Int. Contabil
     RPA.Windows.Get Text      Configuração para Integração Contábil (1)
@@ -138,7 +138,7 @@ Configuração Int. Contabil
 
 Composição de Custos
     ${nome_print}=     Set Variable     Composição de Custos
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Composição de Custos
     RPA.Windows.Get Text      Configuração de Composição de Custos (1)
@@ -149,7 +149,7 @@ Composição de Custos
 
 Despesas antecipadas
     ${nome_print}=     Set Variable     Despesas antecipadas
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Despesas antecipadas
     RPA.Windows.Get Text      Cadastro de Despesas Antecipadas (1)
@@ -160,7 +160,7 @@ Despesas antecipadas
 
 Países
     ${nome_print}=     Set Variable     Países
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -170,7 +170,7 @@ Países
 
 Estados
     ${nome_print}=     Set Variable     Estados
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -181,7 +181,7 @@ Estados
 
 Municípios
     ${nome_print}=     Set Variable     Municípios
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -191,7 +191,7 @@ Municípios
 
 Localidades
     ${nome_print}=     Set Variable     Localidades
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
@@ -201,7 +201,7 @@ Localidades
 
 Regiões
     ${nome_print}=     Set Variable     Regiões
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -211,7 +211,7 @@ Regiões
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -222,7 +222,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
@@ -233,7 +233,7 @@ Parâmetros > Estabelecimentos
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
@@ -244,7 +244,7 @@ Parâmetros > Usuários
 
 Parâmetros > Grupos Usuários
     ${nome_print}=     Set Variable     Grupos Usuários
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    g
@@ -255,7 +255,7 @@ Parâmetros > Grupos Usuários
 
 Parâmetros > Configurações de Estação
     ${nome_print}=     Set Variable     Configurações de Estação
-    [Tags]     Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    c

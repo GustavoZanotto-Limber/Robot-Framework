@@ -3,7 +3,7 @@ Documentation    Smoke Test: Financeiro
 Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
-
+Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Financeiro/Cadastros/    
@@ -16,7 +16,7 @@ ${nome_exe}=    cde_win_fin
 
 Terceiros > Cadastro de Terceiros
     ${nome_print}=     Set Variable     Cadastro de Terceiros
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Desktop.Press Keys    C
@@ -28,7 +28,7 @@ Terceiros > Cadastro de Terceiros
 
 Terceiros > Contatos > Registros de Contatos
     ${nome_print}=     Set Variable     Registros de Contatos
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -41,7 +41,7 @@ Terceiros > Contatos > Registros de Contatos
 
 Terceiros > Contatos > Tipo de Histórico de Contatos
     ${nome_print}=     Set Variable     Tipo de Histórico de Contatos
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -53,7 +53,7 @@ Terceiros > Contatos > Tipo de Histórico de Contatos
 
 Terceiros > Contatos > Atividades de Contatos
     ${nome_print}=     Set Variable     Atividades de Contatos
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -65,7 +65,7 @@ Terceiros > Contatos > Atividades de Contatos
 
 Terceiros > Contatos > Consulta de contatos realizados
     ${nome_print}=     Set Variable     Consulta de contatos realizados
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Click       Contatos
@@ -77,7 +77,7 @@ Terceiros > Contatos > Consulta de contatos realizados
 
 Categorias de Terceiros
     ${nome_print}=     Set Variable     Categorias de Terceiros
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Categorias de Terceiros
     RPA.Windows.Get Text    Cadastro de Categorias de Terceiros (1)
@@ -87,7 +87,7 @@ Categorias de Terceiros
 
 Grupos de Terceiros
     ${nome_print}=     Set Variable     Grupos de Terceiros
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Grupos de Terceiros
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
@@ -97,7 +97,7 @@ Grupos de Terceiros
 
 Limite de Crédito
     ${nome_print}=     Set Variable     Limite de Crédito
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Limite de Crédito
     RPA.Windows.Get Text    Cadastro de Limite de Crédito (1)
@@ -109,7 +109,7 @@ Limite de Crédito
 
 Planos de Contas
     ${nome_print}=     Set Variable     Planos de Contas
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Plano de Contas
     RPA.Windows.Get Text    Cadastro do Plano de Contas (1)
@@ -119,7 +119,7 @@ Planos de Contas
 
 Tipos de Documento
     ${nome_print}=     Set Variable     Tipos de Documento
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Tipos de Documento
     RPA.Windows.Get Text    Cadastro de Tipos de Documentos (1)
@@ -129,7 +129,7 @@ Tipos de Documento
 
 Tipo de Consórcio
     ${nome_print}=     Set Variable     Tipo de Consórcio
-    [Tags]     Financeiro    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click       Tipo de Consórcio
     RPA.Windows.Get Text    Tipo de Consórcio (1)
@@ -139,7 +139,7 @@ Tipo de Consórcio
 
 Tipo de Financiamento
     ${nome_print}=     Set Variable     Tipo de Financiamento
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Tipo de Financiamento
     RPA.Windows.Get Text    Cadastro de Tipo de Financiamento (1)
@@ -149,7 +149,7 @@ Tipo de Financiamento
 
 Portadores
     ${nome_print}=     Set Variable     Portadores
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Portadores
     RPA.Windows.Get Text    Cadastro de Portadores (1)
@@ -159,7 +159,7 @@ Portadores
 
 Carteiras de Cobranças
     ${nome_print}=     Set Variable     Carteiras de Cobranças
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Carteiras de Cobrança
     RPA.Windows.Get Text    Cadastro de Carteiras de Cobranças (1)
@@ -169,7 +169,7 @@ Carteiras de Cobranças
 
 Tipos de Cobrança
     ${nome_print}=     Set Variable     Tipos de Cobrança
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Tipos de Cobrança
     RPA.Windows.Get Text    Cadastro de Tipos de Cobrança (1)
@@ -179,7 +179,7 @@ Tipos de Cobrança
 
 Bancos
     ${nome_print}=     Set Variable     Bancos
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Bancos
     RPA.Windows.Get Text    Cadastro de Bancos (1)
@@ -189,7 +189,7 @@ Bancos
 
 Formas de Pagamento
     ${nome_print}=     Set Variable     Formas de Pagamento
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Formas de Pagamento
     RPA.Windows.Get Text    Formas de Pagamento (1)
@@ -199,7 +199,7 @@ Formas de Pagamento
 
 Formas de Pagamento (SISPAG)
     ${nome_print}=     Set Variable     Formas de Pagamento (SISPAG)
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Formas de Pagamento (SISPAG)
     RPA.Windows.Get Text    Cadastro de Formas de Pagamento (SISPAG) (1)
@@ -209,7 +209,7 @@ Formas de Pagamento (SISPAG)
 
 Bandeiras de Cartões
     ${nome_print}=     Set Variable     Bandeiras de Cartões
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Bandeiras de Cartões
     RPA.Windows.Get Text    Cadastro de Bandeiras Cartão (1)
@@ -219,7 +219,7 @@ Bandeiras de Cartões
 
 Autorizadoras de Cartões
     ${nome_print}=     Set Variable     Autorizadoras de Cartões
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Autorizadoras de Cartões
     RPA.Windows.Get Text    Cadastro de Autorizadoras de Cartão (1)
@@ -229,7 +229,7 @@ Autorizadoras de Cartões
 
 Centros de Custos
     ${nome_print}=     Set Variable     Centros de Custos
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Centros de Custos
     RPA.Windows.Get Text    Cadastro de Centros de Custos (1)
@@ -239,7 +239,7 @@ Centros de Custos
 
 Históricos Contábeis
     ${nome_print}=     Set Variable     Históricos Contábeis
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Históricos Contábeis
     RPA.Windows.Get Text    Cadastro de Históricos Contábeis (1)
@@ -249,7 +249,7 @@ Históricos Contábeis
 
 Indexadores
     ${nome_print}=     Set Variable     Indexadores
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Indexadores
     RPA.Windows.Get Text    Cadastro de Indexadores (1)
@@ -259,7 +259,7 @@ Indexadores
 
 Índices Financeiros
     ${nome_print}=     Set Variable     Índices Financeiros
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click       Índices Financeiros
     RPA.Windows.Get Text    Cadastro de Índices Financeiros (1)
@@ -269,7 +269,7 @@ Indexadores
 
 Limite de Crédito > Documentos
     ${nome_print}=     Set Variable     Documentos
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Windows.Click         Documentos
@@ -281,7 +281,7 @@ Limite de Crédito > Documentos
 
 Limite de Crédito > Tipos Aprovação
     ${nome_print}=     Set Variable     Tipos Aprovação
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    t
@@ -292,7 +292,7 @@ Limite de Crédito > Tipos Aprovação
 
 Limite de Crédito > Níveis de Aprovação
     ${nome_print}=     Set Variable     Níveis de Aprovação
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    n
@@ -303,7 +303,7 @@ Limite de Crédito > Níveis de Aprovação
 
 Limite de Crédito > Dados para Análise
     ${nome_print}=     Set Variable     Dados para Análise
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    a
@@ -314,7 +314,7 @@ Limite de Crédito > Dados para Análise
 
 Limite de Crédito > Tipos de Cálculos/Fórmulas
     ${nome_print}=     Set Variable     Tipos de Cálculos_Fórmulas
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    i
@@ -325,7 +325,7 @@ Limite de Crédito > Tipos de Cálculos/Fórmulas
 
 Limite de Crédito > Estrutura Análise
     ${nome_print}=     Set Variable     Estrutura Análise
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    e
@@ -336,7 +336,7 @@ Limite de Crédito > Estrutura Análise
 
 Limite de Crédito > Fórmulas/Cálculo Limite de crédito
     ${nome_print}=     Set Variable     Fórmulas_Cálculo Limite de crédito
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Desktop.Press Keys    l
     RPA.Desktop.Press Keys    f
@@ -347,7 +347,7 @@ Limite de Crédito > Fórmulas/Cálculo Limite de crédito
 
 Países
     ${nome_print}=     Set Variable     Países
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -357,7 +357,7 @@ Países
 
 Estados
     ${nome_print}=     Set Variable     Estados
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -367,7 +367,7 @@ Estados
 
 Regiões
     ${nome_print}=     Set Variable     Regiões
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -377,7 +377,7 @@ Regiões
 
 Municípios
     ${nome_print}=     Set Variable     Municípios
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -387,7 +387,7 @@ Municípios
 
 Localidades
     ${nome_print}=     Set Variable     Localidades
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
@@ -397,7 +397,7 @@ Localidades
 
 Eventos
     ${nome_print}=     Set Variable     Eventos
-    [Tags]     Financeiro    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Eventos
     RPA.Windows.Get Text      Cadastro de Eventos (1)
@@ -407,7 +407,7 @@ Eventos
 
 Relatórios > Terceiros
     ${nome_print}=     Set Variable     Terceiros
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    t
@@ -418,7 +418,7 @@ Relatórios > Terceiros
 
 Relatórios > Tipos de Documentos
     ${nome_print}=     Set Variable     Tipos de Documentos
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    i
@@ -429,7 +429,7 @@ Relatórios > Tipos de Documentos
 
 Relatórios > Portadores
     ${nome_print}=     Set Variable     Portadores
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    p
@@ -440,7 +440,7 @@ Relatórios > Portadores
 
 Relatórios > Plano de Contas
     ${nome_print}=     Set Variable     Plano de Contas
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    l
@@ -451,7 +451,7 @@ Relatórios > Plano de Contas
 
 Relatórios > Históricos Contábeis
     ${nome_print}=     Set Variable     Históricos Contábeis
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    h
@@ -462,7 +462,7 @@ Relatórios > Históricos Contábeis
 
 Relatórios > Centros de Custos
     ${nome_print}=     Set Variable     Centros de Custos
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    c
@@ -473,7 +473,7 @@ Relatórios > Centros de Custos
 
 Relatórios > Países
     ${nome_print}=     Set Variable     Países
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    a
@@ -484,7 +484,7 @@ Relatórios > Países
 
 Relatórios > Estados
     ${nome_print}=     Set Variable     Estados
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    e
@@ -495,7 +495,7 @@ Relatórios > Estados
 
 Relatórios > Municípios
     ${nome_print}=     Set Variable     Municípios
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    m
@@ -506,7 +506,7 @@ Relatórios > Municípios
 
 Relatórios > Regiões
     ${nome_print}=     Set Variable     Regiões
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    r
@@ -517,7 +517,7 @@ Relatórios > Regiões
 
 Relatórios > Localidades
     ${nome_print}=     Set Variable     Localidades
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    o
@@ -528,7 +528,7 @@ Relatórios > Localidades
 
 Relatórios > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    s
@@ -539,7 +539,7 @@ Relatórios > Estabelecimentos
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]     Financeiro    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -551,7 +551,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]     Financeiro    Cadastros   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -564,7 +564,7 @@ Parâmetros > Estabelecimentos
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
@@ -574,7 +574,7 @@ Parâmetros > Usuários
 
 Parâmetros > Grupo de Usuários
     ${nome_print}=     Set Variable     Grupo de Usuários
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -586,7 +586,7 @@ Parâmetros > Grupo de Usuários
 
 Parâmetros > Configurações da Estação
     ${nome_print}=     Set Variable     Configurações da Estação
-    [Tags]     Financeiro    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    C

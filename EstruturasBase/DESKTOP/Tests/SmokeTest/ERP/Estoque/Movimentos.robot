@@ -21,7 +21,7 @@ Movimentos
 
 Movimentações de Produtos - Agrupados
     ${nome_print}=     Set Variable     Movimentações de Produtos - Agrupados
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Movimentações de Produtos - Agrupados
     RPA.Windows.Get Text    Movimentações de Produtos Agrupados (1)
@@ -31,7 +31,7 @@ Movimentações de Produtos - Agrupados
 
 Movimentações de Produtos
     ${nome_print}=     Set Variable     Movimentações de Produtos
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Movimentações de Produtos 
     RPA.Windows.Get Text    Movimentações de Produtos (1)
@@ -41,7 +41,7 @@ Movimentações de Produtos
 
 Ajuste/Contagem de Estoque
     ${nome_print}=     Set Variable     Ajuste_Contagem de Estoque
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Ajuste/Contagem de Estoque 
     RPA.Windows.Get Text    Ajuste/Contagem de Estoque (1)
@@ -51,7 +51,7 @@ Ajuste/Contagem de Estoque
 
 Balanço de Estoque
     ${nome_print}=     Set Variable     Balanço de Estoque
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Balanço de Estoque 
     RPA.Windows.Get Text    Balanço de Estoque (1)
@@ -61,7 +61,7 @@ Balanço de Estoque
 
 Quantidade Mínima/Máxima de Itens por Estabelecimento
     ${nome_print}=     Set Variable     Quantidade Mínima_Máxima de Itens por Estabelecimento
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Quantidade Mínima/Máxima de Itens por Estabelecimento
     RPA.Windows.Get Text    Cadastro de Quantidade Mínima/Máxima de Itens por Estabelecimento (1)
@@ -73,7 +73,7 @@ Quantidade Mínima/Máxima de Itens por Estabelecimento
 
 Alocação de Setores
     ${nome_print}=     Set Variable     Alocação de Setores
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Alocação de Setores
     RPA.Windows.Get Text    Alocação de Setores (1)
@@ -85,7 +85,7 @@ Alocação de Setores
 
 Transferências entre Depósitos
     ${nome_print}=     Set Variable     Transferências entre Depósitos
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Transferências entre Depósitos
     RPA.Windows.Get Text    Transferências de Depósito (1)
@@ -95,7 +95,7 @@ Transferências entre Depósitos
 
 Pré Transferências entre Depósitos
     ${nome_print}=     Set Variable     Pré Transferências entre Depósitos
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Desktop.Press Keys  P 
     RPA.Windows.Get Text    Pré - Transferências de Depósito (1)
@@ -105,7 +105,7 @@ Pré Transferências entre Depósitos
 
 Aprovação de Pré Transferências entre Depósitos
     ${nome_print}=     Set Variable     Aprovação de Pré Transferências entre Depósitos
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Aprovação de Pré Transferência entre Depósitos
     RPA.Windows.Get Text    Consulta/Aprovação/Rejeição de Pré transferência entre depósitos (1)
@@ -115,7 +115,7 @@ Aprovação de Pré Transferências entre Depósitos
 
 Tranferência entre Produtos
     ${nome_print}=     Set Variable     Tranferência entre Produtos
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Transferência entre Produtos
     RPA.Windows.Get Text    Transferência entre Produtos (1)
@@ -125,7 +125,7 @@ Tranferência entre Produtos
 
 Bloqueio de Movimentos
     ${nome_print}=     Set Variable     Bloqueio de Movimentos
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Bloqueio de Movimentos
     RPA.Windows.Get Text    Bloqueio de Movimento (1)
@@ -137,7 +137,7 @@ Bloqueio de Movimentos
 
 Inventário Manual
     ${nome_print}=     Set Variable     Inventário Manual
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Inventário Manual
     RPA.Windows.Get Text    Inventário Manual (1)
@@ -149,7 +149,7 @@ Inventário Manual
 
 Tranferência entre Terceiros
     ${nome_print}=     Set Variable     Tranferência entre Terceiros
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Transferência entre Terceiros
     RPA.Windows.Get Text    Transferência de depósitos entre terceiros (1)
@@ -160,7 +160,7 @@ Tranferência entre Terceiros
 
 Bloqueio de Saldo de Terceiros
     ${nome_print}=     Set Variable     Bloqueio de Saldo de Terceiros
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Bloqueio de Saldo de Terceiros
     RPA.Windows.Get Text    Bloqueio de Saldo de Terceiros (1)
@@ -170,7 +170,7 @@ Bloqueio de Saldo de Terceiros
 
 Controle de Empréstimos
     ${nome_print}=     Set Variable     Controle de Empréstimos
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Controle de Empréstimos
     RPA.Windows.Get Text    Controle de Empréstimos de Grãos (1)
@@ -182,7 +182,7 @@ Controle de Empréstimos
 
 Requisição de Compra/Transferência > Manutenção
     ${nome_print}=     Set Variable     Manutenção
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Requisição de Compra/Transferência
     RPA.Desktop.Press Keys  M
@@ -193,7 +193,7 @@ Requisição de Compra/Transferência > Manutenção
 
 Requisição de Compra/Transferência > Consultar
     ${nome_print}=     Set Variable     Consultar
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Requisição de Compra/Transferência
     RPA.Desktop.Press Keys  C
@@ -206,7 +206,7 @@ Requisição de Compra/Transferência > Consultar
 
 Requisição de Compra/Transferência > Aprovação/Rejeição de Requisição
     ${nome_print}=     Set Variable     Aprovação_Rejeição de Requisição
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Requisição de Compra/Transferência
     RPA.Desktop.Press Keys  A
@@ -219,7 +219,7 @@ Requisição de Compra/Transferência > Aprovação/Rejeição de Requisição
 
 Requisição de Movimentos > Emissão/Manutenção
     ${nome_print}=     Set Variable     Emissão_Manutenção
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Requisição de Movimentos
     RPA.Desktop.Press Keys  E
@@ -230,7 +230,7 @@ Requisição de Movimentos > Emissão/Manutenção
 
 Requisição de Movimentos > Consulta
     ${nome_print}=     Set Variable     Consulta
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Requisição de Movimentos
     RPA.Desktop.Press Keys  C
@@ -241,7 +241,7 @@ Requisição de Movimentos > Consulta
 
 Requisição de Movimentos > Aprovação/Rejeição
     ${nome_print}=     Set Variable     Aprovação_Rejeição
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Requisição de Movimentos
     RPA.Desktop.Press Keys  A
@@ -252,7 +252,7 @@ Requisição de Movimentos > Aprovação/Rejeição
 
 Controle de Vasilhames > Lançamento Inicial/Ajuste
     ${nome_print}=     Set Variable     Lançamento Inicial_Ajuste
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Controle de Vasilhames
     RPA.Desktop.Press Keys  L
@@ -263,7 +263,7 @@ Controle de Vasilhames > Lançamento Inicial/Ajuste
 
 Controle de Vasilhames > Movimentação de Vasilhames
     ${nome_print}=     Set Variable     Movimentação de Vasilhames
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Controle de Vasilhames
     RPA.Desktop.Press Keys  M
@@ -274,7 +274,7 @@ Controle de Vasilhames > Movimentação de Vasilhames
 
 Manutenção de Máquinas Agrícolas
     ${nome_print}=     Set Variable     Manutenção de Máquinas Agrícolas
-    [Tags]     Estoque    Movimentos   SmokeTest    
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest    
     Movimentos
     RPA.Windows.Click       Manutenção de Máquinas Agrícolas
     RPA.Windows.Get Text    Manutenção de Máquinas Agrícolas (1)
@@ -284,7 +284,7 @@ Manutenção de Máquinas Agrícolas
 
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
-    [Tags]     Estoque    Movimentos   SmokeTest
+    [Tags]   SmokeERP    Estoque    Movimentos   SmokeTest
     Movimentos
     RPA.Windows.Click       Processos Personalizados
     RPA.Windows.Get Text    Processos Personalizados (1)

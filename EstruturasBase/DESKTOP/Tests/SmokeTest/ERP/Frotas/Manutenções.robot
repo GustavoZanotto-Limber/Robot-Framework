@@ -22,7 +22,7 @@ Manutenções
 
 Requisição contra Almoxarifado
     ${nome_print}=     Set Variable     Requisição contra Almoxarifado
-    [Tags]    Frotas   Manutenções   SmokeTest
+    [Tags]   SmokeERP   Frotas   Manutenções   SmokeTest
     Manutenções             Requisição contra Almoxarifado    
     RPA.Windows.Get Text    Requisição Contra Almoxarifado (1)
     RPA.Windows.Click       Novo
@@ -32,7 +32,7 @@ Requisição contra Almoxarifado
 
 Incluir/Alterar Entradas/Compras
     ${nome_print}=     Set Variable     Incluir_Alterar Entradas_Compras
-    [Tags]    Frotas   Manutenções   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Manutenções   SmokeTest    
     Manutenções             Incluir/Alterar Entradas/Compras    
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click       Novo
@@ -41,7 +41,7 @@ Incluir/Alterar Entradas/Compras
 
 Manutenção Manual de Pneus
     ${nome_print}=     Set Variable     Manutenção Manual de Pneus
-    [Tags]    Frotas   Manutenções   SmokeTest
+    [Tags]   SmokeERP   Frotas   Manutenções   SmokeTest
     Manutenções              Manutenção Manual de Pneus    
     RPA.Windows.Get Text    Consulta de Pneus (1)
     RPA.Windows.Click       Carregar
@@ -50,7 +50,7 @@ Manutenção Manual de Pneus
 
 Ordem de Serviço Interna
     ${nome_print}=     Set Variable     Ordem de Serviço Interna
-    [Tags]    Frotas   Manutenções   SmokeTest
+    [Tags]   SmokeERP   Frotas   Manutenções   SmokeTest
     Manutenções              Ordem de Serviço Interna    
     RPA.Windows.Get Text    Ordem de Serviço Interna (1)
     RPA.Windows.Click       Novo
@@ -60,7 +60,7 @@ Ordem de Serviço Interna
 
 Ordem de Serviço Externa
     ${nome_print}=     Set Variable     Ordem de Serviço Externa
-    [Tags]    Frotas   Manutenções   SmokeTest
+    [Tags]   SmokeERP   Frotas   Manutenções   SmokeTest
     Manutenções             Ordem de Serviço Externa    
     RPA.Windows.Get Text    Ordem de Serviço Externa
     RPA.Windows.Click       Novo

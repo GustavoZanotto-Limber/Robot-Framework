@@ -21,7 +21,7 @@ Cobrança Bancária
 
 Emissão de Boletos
     ${nome_print}=     Set Variable     Emissão de Boletos
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest    
     Cobrança Bancária
     RPA.Windows.Click         Emissão de Boletos
     RPA.Windows.Get Text      Emissão de Duplicatas/Boletos/Carnês (1)
@@ -32,7 +32,7 @@ Emissão de Boletos
 
 Carteiras de Cobrança
     ${nome_print}=     Set Variable     Carteiras de Cobrança
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest    
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest    
     Cobrança Bancária
     RPA.Windows.Click         Carteiras de Cobrança
     RPA.Windows.Get Text      Cadastro de Carteiras de Cobranças (1)
@@ -42,7 +42,7 @@ Carteiras de Cobrança
 
 Tipos de Cobrança
     ${nome_print}=     Set Variable     Tipos de Cobrança
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Tipos de Cobrança
     RPA.Windows.Get Text      Cadastro de Tipos de Cobrança (1)
@@ -52,7 +52,7 @@ Tipos de Cobrança
 
 Geração de Remessas > Débito em C_C
     ${nome_print}=     Set Variable     Débito em C_C
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    d
@@ -64,7 +64,7 @@ Geração de Remessas > Débito em C_C
 
 Geração de Remessas > Cobrança
     ${nome_print}=     Set Variable     Cobrança
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    C
@@ -76,7 +76,7 @@ Geração de Remessas > Cobrança
 
 Geração de Remessas > Consulta
     ${nome_print}=     Set Variable     Consulta
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    O
@@ -87,7 +87,7 @@ Geração de Remessas > Consulta
 
 Geração de Remessas > Manutenção
     ${nome_print}=     Set Variable     Manutenção
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Geração de Remessas
     RPA.Desktop.Press Keys    M
@@ -100,7 +100,7 @@ Geração de Remessas > Manutenção
 
 Recepção de Arquivos Retornos > Débito em C_C
     ${nome_print}=     Set Variable     Débito em C_C
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Recepção de Arquivos Retornos
     RPA.Desktop.Press Keys    D
@@ -112,7 +112,7 @@ Recepção de Arquivos Retornos > Débito em C_C
 
 Recepção de Arquivos Retornos > Cobrança
     ${nome_print}=     Set Variable     Cobrança
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Recepção de Arquivos Retornos
     RPA.Desktop.Press Keys    C
@@ -124,7 +124,7 @@ Recepção de Arquivos Retornos > Cobrança
 
 Recepção de Arquivos Retornos > Log Arquivos de Retorno
     ${nome_print}=     Set Variable     Log Arquivos de Retorno
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Recepção de Arquivos Retornos
     RPA.Desktop.Press Keys    L
@@ -135,7 +135,7 @@ Recepção de Arquivos Retornos > Log Arquivos de Retorno
 
 Duplicatas Descontadas
     ${nome_print}=     Set Variable     Duplicatas Descontadas
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Duplicatas Descontadas
     RPA.Windows.Get Text      Duplicatas Descontadas (1)
@@ -146,7 +146,7 @@ Duplicatas Descontadas
 
 Extorno de Duplicatas Descontadas
     ${nome_print}=     Set Variable     Extorno de Duplicatas Descontadas
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Estorno Duplicatas Descontadas
     RPA.Windows.Get Text      Estorno - Duplicatas Descontadas (1)
@@ -157,7 +157,7 @@ Extorno de Duplicatas Descontadas
 
 Desvincular Boletos
     ${nome_print}=     Set Variable     Desvincular Boletos
-    [Tags]     Financeiro    Cobrança Bancária   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Cobrança Bancária   SmokeTest
     Cobrança Bancária
     RPA.Windows.Click         Desvincular Boletos
     RPA.Windows.Get Text      Desvincular Boletos (1)

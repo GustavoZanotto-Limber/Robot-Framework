@@ -22,7 +22,7 @@ Manifesto de Documentos Fiscais
 
 Manifesto de Documentos Fiscais
     ${nome_print}=     Set Variable     Manifesto de Documentos Fiscais
-    [Tags]    Frotas   Manifesto de Documentos Fiscais   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Manifesto de Documentos Fiscais   SmokeTest    
     Manifesto de Documentos Fiscais                 Manifesto de Documentos Fiscais
     RPA.Windows.Get Text    Manifesto Eletrônico de Documentos Fiscais (1)
     RPA.Windows.Click       Novo
@@ -31,7 +31,7 @@ Manifesto de Documentos Fiscais
 
 Monitor - MDF-E
     ${nome_print}=     Set Variable     Monitor - MDF-E
-    [Tags]    Frotas   Manifesto de Documentos Fiscais   SmokeTest    
+    [Tags]   SmokeERP   Frotas   Manifesto de Documentos Fiscais   SmokeTest    
     Manifesto de Documentos Fiscais                 	Monitor - MDF-e
     RPA.Windows.Get Text    Monitor MDF-e (1)
     RPA.Desktop.Press Keys  0
@@ -42,7 +42,7 @@ Monitor - MDF-E
 
 Importar CT-e/NF-e para MDF-e
     ${nome_print}=     Set Variable     Importar CT-e/NF-e para MDF-e
-    [Tags]    Frotas   Manifesto de Documentos Fiscais   SmokeTest
+    [Tags]   SmokeERP   Frotas   Manifesto de Documentos Fiscais   SmokeTest
     Manifesto de Documentos Fiscais                  Importar CT-e/NF-e para MDF-e
     RPA.Windows.Get Text    Importador MDF-e (1) 
     RPA.Windows.Click       Marcar Todos

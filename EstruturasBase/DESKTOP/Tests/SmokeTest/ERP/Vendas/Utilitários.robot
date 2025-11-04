@@ -21,7 +21,7 @@ Utilitários
 
 Configurar Nota Fiscal
     ${nome_print}=     Set Variable     Configurar Nota Fiscal
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Nota Fiscal
     RPA.Windows.Get Text    Configuração da Nota Fiscal (1)
@@ -31,7 +31,7 @@ Configurar Nota Fiscal
 
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -42,7 +42,7 @@ Favoritos
 
 Papel de Parede
     ${nome_print}=     Set Variable     Papel de Parede
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -52,7 +52,7 @@ Papel de Parede
 
 Configurar Menu Pincipal
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
-    [Tags]    Vendas   Utilitários   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -64,7 +64,7 @@ Configurar Menu Pincipal
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
@@ -74,7 +74,7 @@ Configurar Barra de Atalhos
 
 Estilo do Menu Principal
     ${nome_print}=     Set Variable     Estilo do Menu Principal
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -84,7 +84,7 @@ Estilo do Menu Principal
 
 Controle de Acessos
     ${nome_print}=     Set Variable     Controle de Acessos
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -95,7 +95,7 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -107,7 +107,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]    Vendas   Utilitários   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  C
@@ -120,7 +120,7 @@ Relatórios Personalizados > Cadastro de Categorias
 
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]    Vendas   Utilitários   SmokeTest    
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -131,19 +131,19 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar janela
     
-Verifica transações abertas
-    ${nome_print}=     Set Variable     Verifica transações abertas
-    [Tags]    Vendas   Utilitários   SmokeTest
+Verificar Transações Abertas
+    ${nome_print}=     Set Variable     Verificar Transações Abertas
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
-    RPA.Windows.Click       Verifica transações abertas
-    RPA.Windows.Get Text    Verifica transações abertas (1)
+    RPA.Windows.Click       Verificar Transações Abertas
+    RPA.Windows.Get Text    Verificar Transações Abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
+    BaseKeywordsDesktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
     Fechar janela
 
 Impressão de Etiquetas/Produtos
     ${nome_print}=     Set Variable     Impressão de Etiquetas_Produtos
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Impressão de Etiquetas/Produtos
     RPA.Windows.Get Text    Emissão de Etiquetas (1)
@@ -154,7 +154,7 @@ Impressão de Etiquetas/Produtos
 
 Etiquetas (Terceiros)
     ${nome_print}=     Set Variable     Etiquetas (Terceiros)
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Etiquetas (Terceiros)
     RPA.Windows.Get Text    Emissão de Etiquetas de Terceiros (1)
@@ -168,7 +168,7 @@ Etiquetas (Terceiros)
 
 Impressão de Etiquetas de Entrega
     ${nome_print}=     Set Variable     Impressão de Etiquetas de Entregas
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Impressão de Etiquetas de Entrega
     RPA.Windows.Get Text    Impressão de Etiquetas de Entrega (1)
@@ -180,7 +180,7 @@ Impressão de Etiquetas de Entrega
 
 Configurador de Impressões > Ordem se Serviço
     ${nome_print}=     Set Variable     Ordem se Serviço
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  O
@@ -191,7 +191,7 @@ Configurador de Impressões > Ordem se Serviço
 
 Configurador de Impressões > Saídas_Vendas
     ${nome_print}=     Set Variable     Saídas_Vendas
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurador de Impressões
     RPA.Desktop.Press Keys  S
@@ -202,7 +202,7 @@ Configurador de Impressões > Saídas_Vendas
 
 PDV > Atualizar Produtos
     ${nome_print}=     Set Variable     Atualizar Produtos
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    A
@@ -216,7 +216,7 @@ PDV > Atualizar Produtos
 
 PDV > Atualizar Balança
     ${nome_print}=     Set Variable     Atualizar Balança
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    T
@@ -230,7 +230,7 @@ PDV > Atualizar Balança
 
 Agenda > Agendamentos
     ${nome_print}=     Set Variable     Agendamentos
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    A
@@ -242,7 +242,7 @@ Agenda > Agendamentos
 
 Agenda > Estados
     ${nome_print}=     Set Variable     Estados
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    E
@@ -254,7 +254,7 @@ Agenda > Estados
 
 Agenda > Consulta
     ${nome_print}=     Set Variable     Consulta
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    C
@@ -267,7 +267,7 @@ Agenda > Consulta
 
 Agenda > Calendários
     ${nome_print}=     Set Variable     Calendários
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Agenda
     RPA.Desktop.Press Keys    L
@@ -279,7 +279,7 @@ Agenda > Calendários
 
 Agenda Telefônica
     ${nome_print}=     Set Variable     Agenda Telefônica
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
@@ -289,7 +289,7 @@ Agenda Telefônica
 
 Integração WhatsApp > Configuração para Integração
     ${nome_print}=     Set Variable     Configuração para Integração
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Integração WhatsApp
     RPA.Desktop.Press Keys    C
@@ -301,7 +301,7 @@ Integração WhatsApp > Configuração para Integração
 
 Integração WhatsApp > Envio de Mensagens
     ${nome_print}=     Set Variable     Envio de Mensagens
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Integração WhatsApp
     RPA.Desktop.Press Keys    E
@@ -315,7 +315,7 @@ Integração WhatsApp > Envio de Mensagens
 
 Geração de Arquivos > Projeto Cultivar
     ${nome_print}=     Set Variable     Projeto Cultivar
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    P
@@ -329,7 +329,7 @@ Geração de Arquivos > Projeto Cultivar
 
 Geração de Arquivos > Projeto Pegasus
     ${nome_print}=     Set Variable     Projeto Pegasus
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    R
@@ -343,7 +343,7 @@ Geração de Arquivos > Projeto Pegasus
 
 Geração de Arquivos > Accera Bayer
     ${nome_print}=     Set Variable     Accera Bayer
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    A
@@ -355,7 +355,7 @@ Geração de Arquivos > Accera Bayer
 
 Geração de Arquivos > Projeto Cultivar (Fase II)
     ${nome_print}=     Set Variable     Projeto Cultivar (Fase II)
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    O
@@ -369,7 +369,7 @@ Geração de Arquivos > Projeto Cultivar (Fase II)
 
 Geração de Arquivos > Histórico de Geracao de Arquivos
     ${nome_print}=     Set Variable     Histórico de Geracao de Arquivos
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Geração de Arquivos
     RPA.Desktop.Press Keys    H
@@ -384,7 +384,7 @@ Geração de Arquivos > Histórico de Geracao de Arquivos
 
 Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
     ${nome_print}=     Set Variable     Salvar arquivo XML NFe de Terceiros
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Exportação de arquivos
     RPA.Desktop.Press Keys  S
@@ -396,7 +396,7 @@ Exportação de Arquivos > Salvar arquivo XML NFe de Terceiros
 
 Exportação de arquivos > CRM Cloud > Integração
     ${nome_print}=     Set Variable     Integração
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Exportação de arquivos
     RPA.Windows.Click         CRM Cloud
@@ -409,7 +409,7 @@ Exportação de arquivos > CRM Cloud > Integração
 
 Exportação de arquivos > CRM Cloud > Configuração
     ${nome_print}=     Set Variable     Configuração
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Exportação de arquivos
     RPA.Windows.Click         CRM Cloud
@@ -422,7 +422,7 @@ Exportação de arquivos > CRM Cloud > Configuração
 
 Integradores > Integração Padrão
     ${nome_print}=     Set Variable     Integração Padrão
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Integradores
     RPA.Desktop.Press Keys    I
@@ -434,7 +434,7 @@ Integradores > Integração Padrão
 
 Importação de Planilha Excel Personalizada
     ${nome_print}=     Set Variable     Importação de Planilha Excel Personalizada
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Importação de Planilha Excel Personalizada
     RPA.Windows.Get Text      Importação de Planilha Excel Personalizada (1)
@@ -446,7 +446,7 @@ Importação de Planilha Excel Personalizada
 
 Gerador de Vendas por XML
     ${nome_print}=     Set Variable     Gerador de Vendas por XML
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Gerador de Vendas por XML
     RPA.Windows.Get Text      Importação de Nota Fiscal (1)
@@ -457,7 +457,7 @@ Gerador de Vendas por XML
 
 Configuração de Certificado Digital
     ${nome_print}=     Set Variable     Configuração de Certificado Digital
-    [Tags]    Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click         Configuração de Certificado Digital
     RPA.Windows.Get Text      Configuração de Certificado (1)
@@ -469,7 +469,7 @@ Configuração de Certificado Digital
 
 Reprocessamento de disponibilidade de itens
     ${nome_print}=     Set Variable     Reprocessamento de disponibilidade de itens
-    [Tags]     Vendas    Utilitários   SmokeTest      
+    [Tags]   SmokeERP    Vendas    Utilitários   SmokeTest      
     Utilitários
     Sleep                   1s
     RPA.Desktop.Press Keys  UP

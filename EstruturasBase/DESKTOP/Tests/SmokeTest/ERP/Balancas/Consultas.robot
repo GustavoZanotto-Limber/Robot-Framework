@@ -21,7 +21,7 @@ Consultas
 
 Romaneios
     ${nome_print}=     Set Variable     Romaneios
-    [Tags]     Balancas    Consultas   SmokeTest
+    [Tags]   SmokeERP    Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Romaneios 
     RPA.Windows.Get Text      Consulta de Romaneios (1)
@@ -31,7 +31,7 @@ Romaneios
 
 Romaneios Excluídos
     ${nome_print}=     Set Variable     Romaneios Excluídos
-    [Tags]     Balancas    Consultas   SmokeTest
+    [Tags]   SmokeERP    Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Romaneios Excluídos
     RPA.Windows.Get Text      Consulta Romaneios Excluídos (1)
@@ -43,7 +43,7 @@ Romaneios Excluídos
 
 Movimentações da Balança
     ${nome_print}=     Set Variable     Movimentações da Balança
-    [Tags]     Balancas    Consultas   SmokeTest
+    [Tags]   SmokeERP    Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Movimentações da Balança
     RPA.Windows.Get Text      Movimentação da Balança (1)
@@ -54,7 +54,7 @@ Movimentações da Balança
 
 Lançamentos de Saída
     ${nome_print}=     Set Variable     Lançamentos de Saída
-    [Tags]     Balancas    Consultas   SmokeTest
+    [Tags]   SmokeERP    Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Lançamentos de Saída
     RPA.Windows.Get Text      Lançamentos de Saída (1)
@@ -64,7 +64,7 @@ Lançamentos de Saída
 
 Consultas Personalizadas
     ${nome_print}=     Set Variable     Consultas Personalizadas
-    [Tags]     Balancas    Consultas   SmokeTest
+    [Tags]   SmokeERP    Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
@@ -75,7 +75,7 @@ Consultas Personalizadas
 
 Saldo de Terceiro
     ${nome_print}=     Set Variable     Saldo de Terceiro
-    [Tags]     Balancas    Consultas   SmokeTest
+    [Tags]   SmokeERP    Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Saldo de Terceiro 
     RPA.Windows.Get Text      Saldos de Terceiros (1)
@@ -85,7 +85,7 @@ Saldo de Terceiro
 
 Movimentação de Terceiro
     ${nome_print}=     Set Variable     Movimentação de Terceiro
-    [Tags]     Balancas    Consultas   SmokeTest
+    [Tags]   SmokeERP    Balancas    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Movimentação de Terceiro 
     RPA.Windows.Get Text      Movimentação de Terceiros (1)

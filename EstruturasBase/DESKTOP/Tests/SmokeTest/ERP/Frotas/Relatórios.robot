@@ -24,7 +24,7 @@ Relatórios
 
 CT-e > CT-e Emitidos
     ${nome_print}=     Set Variable     CT-e Emitidos
-    [Tags]    Frotas   Relatórios   SmokeTest    Testes
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest    Testes
     Relatórios              CT-e
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text   	Relatório de CT'es Emitidos (1) 
@@ -37,7 +37,7 @@ CT-e > CT-e Emitidos
 
 CT-e > CT-e Inutilizados
     ${nome_print}=     Set Variable     CT-e Inutilizados
-    [Tags]    Frotas   Relatórios   SmokeTest    Testes
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest    Testes
     Relatórios              CT-e
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Relatório de Conhecimento de Transporte Inutilizados (1) 
@@ -49,7 +49,7 @@ CT-e > CT-e Inutilizados
 
 Jornada de Trabalho
     ${nome_print}=     Set Variable     Jornada de Trabalho
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Jornada de Trabalho
     RPA.Windows.Get Text    Controle de Horário de Trabalho Externo (1) 
     RPA.Desktop.Press Keys  Shift    tab
@@ -61,7 +61,7 @@ Jornada de Trabalho
 
 Viagens
     ${nome_print}=     Set Variable     Viagens
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Viagens
     RPA.Windows.Get Text    Relatório de Viagens (1) 
     RPA.Desktop.Press Keys  0
@@ -72,7 +72,7 @@ Viagens
 
 Ordem de Serviço
     ${nome_print}=     Set Variable     Ordem de Serviço
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Ordem de Serviço
     RPA.Windows.Get Text    Relatório de Ordens de Serviços (1) 
     RPA.Desktop.Press Keys  0
@@ -84,7 +84,7 @@ Ordem de Serviço
 
 Check-list
     ${nome_print}=     Set Variable     Check-list
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Check-list
     RPA.Windows.Get Text    Relatório Checklist (1) 
     RPA.Desktop.Press Keys  0
@@ -95,7 +95,7 @@ Check-list
 
 Abastecimentos
     ${nome_print}=     Set Variable     Abastecimentos
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Abastecimentos
     RPA.Windows.Get Text    Relatório de Abastecimentos (1) 
     RPA.Desktop.Press Keys  0
@@ -106,7 +106,7 @@ Abastecimentos
 
 Pneus > Pneus
     ${nome_print}=     Set Variable     Pneus
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Pneus
     RPA.Desktop.Press Keys  P
     RPA.Windows.Get Text    Relatório de Pneus $ESPAÇO(1) 
@@ -118,7 +118,7 @@ Pneus > Pneus
 
 Pneus > Estoque de Pneus
     ${nome_print}=     Set Variable     Estoque de Pneus
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Pneus
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Relatório de Estoque de Pneus (1) 
@@ -130,7 +130,7 @@ Pneus > Estoque de Pneus
 
 Pneus > Histórico de Movimentações
     ${nome_print}=     Set Variable     Histórico de Movimentações
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Pneus
     RPA.Desktop.Press Keys  H
     RPA.Windows.Get Text    Histórico de Movimentações (1) 
@@ -143,7 +143,7 @@ Pneus > Histórico de Movimentações
 
 Resumo Frotas
     ${nome_print}=     Set Variable     Resumo Frotas
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Resumo Frotas
     RPA.Windows.Get Text    Resumo de Frota (1) 
     repetidor de teclas     tab      1
@@ -155,7 +155,7 @@ Resumo Frotas
 
 Relatório de Alertas
     ${nome_print}=     Set Variable     Relatório de Alertas
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Relatório de Alertas
     RPA.Windows.Get Text    Relatório De Alertas (1) 
     repetidor de teclas     tab      3
@@ -167,7 +167,7 @@ Relatório de Alertas
 
 Fechamento de Viagem
     ${nome_print}=     Set Variable     Fechamento de Viagem
-    [Tags]    Frotas   Relatórios   SmokeTest
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Fechamento de Viagem
     RPA.Windows.Get Text    Relatório de Fechamento de Viagens (1) 
     RPA.Desktop.Press Keys  0

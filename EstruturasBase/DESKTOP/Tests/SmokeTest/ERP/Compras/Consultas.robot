@@ -21,7 +21,7 @@ Consultas
 
 Estoque Atual
     ${nome_print}=     Set Variable     Estoque Atual
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Estoque Atual
     RPA.Windows.Get Text    Consulta de Itens (1)
@@ -31,7 +31,7 @@ Estoque Atual
 
 Estoque Atual (Modelo 2)
     ${nome_print}=     Set Variable     Estoque Atual (Modelo 2)
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Estoque Atual (Modelo 2)
     RPA.Windows.Get Text    Consulta de Itens (1)
@@ -41,7 +41,7 @@ Estoque Atual (Modelo 2)
 
 Pedidos de Compra
     ${nome_print}=     Set Variable     Pedidos de Compra
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Pedidos de Compra
     RPA.Windows.Get Text    Consulta de Pedidos de Compra (1)
@@ -51,7 +51,7 @@ Pedidos de Compra
 
 Entrega de Pedidos de Compra
     ${nome_print}=     Set Variable     Entrega de Pedidos de Compra
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Entrega de Pedidos de Compra
     RPA.Windows.Get Text    Controle de entrega de Pedido de Compras (1)
@@ -61,7 +61,7 @@ Entrega de Pedidos de Compra
 
 Ficha Kardex de Produtos
     ${nome_print}=     Set Variable     Ficha Kardex de Produtos
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Ficha Kardex de Produtos
     RPA.Windows.Get Text    Kardex do Estoque (1)
@@ -72,7 +72,7 @@ Ficha Kardex de Produtos
 
 Saldo Sintético de Produtos
     ${nome_print}=     Set Variable     Saldo Sintético de Produtos
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Saldo Sintético de Produtos
     RPA.Windows.Get Text    Consulta Saldo Sintético de Produtos (1)
@@ -83,7 +83,7 @@ Saldo Sintético de Produtos
 
 Consulta Saldo Sintético de Operações
     ${nome_print}=     Set Variable     Consulta Saldo Sintético de Operações
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Consulta Saldo Sintético de Operações
     RPA.Windows.Get Text    Consulta Saldo Sintético de Operações (1)
@@ -93,7 +93,7 @@ Consulta Saldo Sintético de Operações
 
 Movimentação de Operações
     ${nome_print}=     Set Variable     Movimentação de Operações
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Movimentação de Operações
     RPA.Windows.Get Text    Movimentação de Operações (1)
@@ -103,7 +103,7 @@ Movimentação de Operações
 
 Saldo de Operações
     ${nome_print}=     Set Variable     Saldo de Operações
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Saldo de Operações
     RPA.Windows.Get Text    Consulta Saldo de Operações (1)
@@ -113,7 +113,7 @@ Saldo de Operações
 
 Saldo de Lotes - Sintético
     ${nome_print}=     Set Variable     Saldo de Lotes - Sintético
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas 
     RPA.Windows.Click       Saldo de Lotes - Sintético
     RPA.Windows.Get Text    Consulta de Lotes/Sintético (1)
@@ -123,7 +123,7 @@ Saldo de Lotes - Sintético
 
 Movimentação de Lotes
     ${nome_print}=     Set Variable     Movimentação de Lotes
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas 
     RPA.Windows.Click       Movimentação de Lotes
     RPA.Windows.Get Text    Relatório de Movimentação de Lotes (1)
@@ -134,7 +134,7 @@ Movimentação de Lotes
 
 Saldo de Terceiros
     ${nome_print}=     Set Variable     Saldo de Terceiros
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Saldo de Terceiros
     RPA.Windows.Get Text    Saldos de Terceiros (1)
@@ -144,7 +144,7 @@ Saldo de Terceiros
 
 Movimentação de Terceiros
     ${nome_print}=     Set Variable     Movimentação de Terceiros
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Movimentação de Terceiros
     RPA.Windows.Get Text    Movimentação de Terceiros (1)
@@ -155,7 +155,7 @@ Movimentação de Terceiros
 
 Análise de Compras
     ${nome_print}=     Set Variable     Análise de Compras
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Análise de Compras
     RPA.Windows.Get Text    Consulta de Análise de Compra (1)
@@ -166,7 +166,7 @@ Análise de Compras
 
 Consulta Descontos Calculados
     ${nome_print}=     Set Variable     Consulta Descontos Calculados
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consulta Descontos Calculados
     RPA.Windows.Get Text      Consulta Descontos Calculados (1)
@@ -177,7 +177,7 @@ Consulta Descontos Calculados
 
 Consultas Personalizadas
     ${nome_print}=     Set Variable     Consultas Personalizadas
-    [Tags]     Compras    Consultas   SmokeTest
+    [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)

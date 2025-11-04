@@ -168,7 +168,11 @@ Então valido se o bilhete foi criado corretamente
     
 
 Então valido se a disponibilidade integrou corretamente  
+<<<<<<< HEAD:EstruturasBase/DESKTOP/Resources/BDDKeywordsWeb.robot
+    [Arguments]    ${numero_bilhete}=6275    ${qtd_vagas}=1000
+=======
     [Arguments]    ${numero_bilhete}    ${qtd_vagas}=1000
+>>>>>>> f011d6ccd611c2ea0b67cad3bf1c36b59836228a:EstruturasBase/DESKTOP/Resources/BDD/BDDKeywordsWeb.robot
     Iniciar sessao    cde_win_bca_front
     Ir Para Emissão de Bilhetes
     ${qtd_vagas_bilhete}=    Selecionar o bilhete e retornar quantidade de vagas (categoria)   ${numero_bilhete}    1
@@ -225,7 +229,10 @@ Então Valido se o convênio foi salvo corretamente
     Preencher convênio
     sleep                1s
     Iniciar sessao       cde_win_bca_front 
+<<<<<<< HEAD:EstruturasBase/DESKTOP/Resources/BDDKeywordsWeb.robot
+=======
     Abrir caixa operador
+>>>>>>> f011d6ccd611c2ea0b67cad3bf1c36b59836228a:EstruturasBase/DESKTOP/Resources/BDD/BDDKeywordsWeb.robot
     Ir Para Emissão de Bilhetes
     ${nome_coletado}=    Selecionar o bilhete e o convênio    6422    2
     IF    '${nome_coletado}' != 'CONVÊNIO'

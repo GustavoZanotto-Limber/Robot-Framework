@@ -21,7 +21,7 @@ Gráficos
 
 Compras/Aquisição de Serviços - Evolução Diária
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Diária
-    [Tags]     Compras    Gráficos   SmokeTest
+    [Tags]   SmokeERP    Compras    Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Diária
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Diária. (1)
@@ -32,7 +32,7 @@ Compras/Aquisição de Serviços - Evolução Diária
 
 Compras/Aquisição de Serviços - Evolução Mensal
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Mensal
-    [Tags]     Compras    Gráficos   SmokeTest
+    [Tags]   SmokeERP    Compras    Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Mensal
     RPA.Windows.Get Text    Compras - Evolução Mensal. (1)
@@ -43,7 +43,7 @@ Compras/Aquisição de Serviços - Evolução Mensal
 
 Compras/Aquisição de Serviços - Evolução Anual
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Evolução Anual
-    [Tags]     Compras    Gráficos   SmokeTest
+    [Tags]   SmokeERP    Compras    Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Anual
     RPA.Windows.Get Text    Compras - Evolução Anual. (1)
@@ -54,7 +54,7 @@ Compras/Aquisição de Serviços - Evolução Anual
 
 Compras/Aquisição de Serviços - Sintético/Fornecedor
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Fornecedor
-    [Tags]     Compras    Gráficos   SmokeTest
+    [Tags]   SmokeERP    Compras    Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Fornecedor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor. (1)
@@ -64,7 +64,7 @@ Compras/Aquisição de Serviços - Sintético/Fornecedor
 
 Compras/Aquisição de Serviços - Sintético/Setor
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Setor
-    [Tags]     Compras    Gráficos   SmokeTest
+    [Tags]   SmokeERP    Compras    Gráficos   SmokeTest
     Gráficos
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Setor
     RPA.Windows.Get Text    Compras - Aquisição de Serviços Sintético / Setor. (1)

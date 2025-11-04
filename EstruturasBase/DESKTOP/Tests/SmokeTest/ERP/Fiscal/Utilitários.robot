@@ -19,7 +19,7 @@ Utilitários
 
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
-    [Tags]     Fiscal    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -30,7 +30,7 @@ Favoritos
 
 Papel de Parede
     ${nome_print}=     Set Variable     Papel de Parede
-    [Tags]     Fiscal    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
@@ -40,7 +40,7 @@ Papel de Parede
 
 Configurar Menu Pincipal
     ${nome_print}=     Set Variable     Configurar Menu Pincipal
-    [Tags]     Fiscal    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configurar Menu Principal
     RPA.Windows.Get Text    Configurador de Menus (1)
@@ -52,7 +52,7 @@ Configurar Menu Pincipal
 
 Configurar Barra de Atalhos
     ${nome_print}=     Set Variable     Configurar Barra de Atalhos
-    [Tags]     Fiscal    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
@@ -62,7 +62,7 @@ Configurar Barra de Atalhos
 
 Estilo do Menu Principal
     ${nome_print}=     Set Variable     Estilo do Menu Principal
-    [Tags]     Fiscal    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
@@ -72,7 +72,7 @@ Estilo do Menu Principal
 
 Controle de Acessos
     ${nome_print}=     Set Variable     Controle de Acessos
-    [Tags]     Fiscal    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
@@ -83,7 +83,7 @@ Controle de Acessos
 
 Configuração de Liberação
     ${nome_print}=     Set Variable     Configuração de Liberação
-    [Tags]     Fiscal    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
@@ -95,7 +95,7 @@ Configuração de Liberação
 
 Relatórios Personalizados > Cadastro de Categorias
     ${nome_print}=     Set Variable     Cadastro de Categorias
-    [Tags]     Fiscal    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  c
@@ -108,7 +108,7 @@ Relatórios Personalizados > Cadastro de Categorias
 
 Relatórios Personalizados > Cadastro de Relatórios
     ${nome_print}=     Set Variable     Cadastro de Relatórios
-    [Tags]     Fiscal    Utilitários   SmokeTest    
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Relatórios Personalizados
     RPA.Desktop.Press Keys  a
@@ -119,19 +119,19 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar janela
 
-Verifica transações abertas
-    ${nome_print}=     Set Variable     Verifica transações abertas
-    [Tags]     Fiscal    Utilitários   SmokeTest    
+Verificar Transações Abertas
+    ${nome_print}=     Set Variable     Verificar Transações Abertas
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest    
     Utilitários
-    RPA.Windows.Click       Verifica transações abertas
-    RPA.Windows.Get Text    Verifica transações abertas (1)
+    RPA.Windows.Click       Verificar Transações Abertas
+    RPA.Windows.Get Text    Verificar Transações Abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica transações abertas
+    BaseKeywordsDesktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
     Fechar janela
 
 Importar Arquivos Transmitidos > SPED Contabil (ECD)
     ${nome_print}=     Set Variable     SPED Contabil (ECD)
-    [Tags]     Fiscal    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Importar Arquivos Transmitidos
     RPA.Desktop.Press Keys  S
@@ -142,7 +142,7 @@ Importar Arquivos Transmitidos > SPED Contabil (ECD)
 
 Reprocessar Contas ECD
     ${nome_print}=     Set Variable     Reprocessar Contas ECD
-    [Tags]     Fiscal    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Fiscal    Utilitários   SmokeTest
     Utilitários
     RPA.Windows.Click       Reprocessar Contas ECD
     RPA.Windows.Get Text    Ajustar Registros I050 - ECD (1)

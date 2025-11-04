@@ -22,7 +22,7 @@ Projeto EDI Transportes
 
 Importação NOTFIS
     ${nome_print}=     Set Variable     Importação NOTFIS
-    [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
+    [Tags]   SmokeERP   Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Importação NOTFIS
     RPA.Windows.Get Text   	Importação de Dados do Projeto EDI Transporte (NOTFIS - Dados de Notas Fiscais) (1) 
     RPA.Windows.Click       Iniciar Importação
@@ -32,7 +32,7 @@ Importação NOTFIS
 
 Exportação CONEMB
     ${nome_print}=     Set Variable     Exportação CONEMB
-    [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
+    [Tags]   SmokeERP   Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação CONEMB
     RPA.Windows.Get Text    bbbbb 
     BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação CONEMB
@@ -40,7 +40,7 @@ Exportação CONEMB
 
 Exportação DOCCOB
     ${nome_print}=     Set Variable     Exportação DOCCOB
-    [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
+    [Tags]   SmokeERP   Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação DOCCOB
     RPA.Windows.Get Text    bbbbb 
     BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação DOCCOB
@@ -48,7 +48,7 @@ Exportação DOCCOB
 
 Exportação OCOREN
     ${nome_print}=     Set Variable     Exportação OCOREN
-    [Tags]    Frotas   Projeto EDI Transportes   SmokeTest
+    [Tags]   SmokeERP   Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação OCOREN
     RPA.Windows.Get Text    bbbbb 
     BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação OCOREN

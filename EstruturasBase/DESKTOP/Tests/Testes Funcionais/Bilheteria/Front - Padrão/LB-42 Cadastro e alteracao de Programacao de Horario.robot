@@ -28,7 +28,7 @@ Cenário 2: Associação de um horario a um bilhete
     [Tags]    Testes_Funcionais    LB-42
     Dado que estou na tela de preço e disponibilidade                   ${numero_bilhete}
     Quando crio uma nova tabela de preço e disponibilidade para o bilhete    ${numero_bilhete}
-    Então valido se a disponibilidade integrou corretamente             ${numero_bilhete}    
+    Então valido se a disponibilidade integrou corretamente                
 
 Cenário 3: Alteração do saldo de horário com motivo registrado
     ${nome_print}=    Set Variable     Associação de um horario a um bilhete

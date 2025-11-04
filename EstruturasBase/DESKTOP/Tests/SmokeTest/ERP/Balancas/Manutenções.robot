@@ -21,7 +21,7 @@ Manutenções
 
 Romaneios Entrada/Saída > Inclusão de Romaneios
     ${nome_print}=     Set Variable     Inclusão de Romaneios
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    I
@@ -33,7 +33,7 @@ Romaneios Entrada/Saída > Inclusão de Romaneios
 
 Romaneios Entrada/Saída > Alteração de Romaneios
     ${nome_print}=     Set Variable     Alteração de Romaneios
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    A
@@ -45,7 +45,7 @@ Romaneios Entrada/Saída > Alteração de Romaneios
 
 Romaneios Entrada/Saída > Consulta de Romaneios
     ${nome_print}=     Set Variable     Consulta de Romaneios
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    C
@@ -57,7 +57,7 @@ Romaneios Entrada/Saída > Consulta de Romaneios
 
 Romaneios Entrada/Saída > Alteração de Romaneios - Classificação
     ${nome_print}=     Set Variable     Alteração de Romaneios - Classificação
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    L
@@ -69,7 +69,7 @@ Romaneios Entrada/Saída > Alteração de Romaneios - Classificação
 
 Romaneios Entrada/Saída > Alteração de Romaneios - Endereço
     ${nome_print}=     Set Variable     Alteração de Romaneios - Endereço
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    T
@@ -80,7 +80,7 @@ Romaneios Entrada/Saída > Alteração de Romaneios - Endereço
 
 Romaneios Entrada/Saída > Gerenciamentos de Romaneios
     ${nome_print}=     Set Variable     Gerenciamentos de Romaneios
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Romaneios Entrada/Saída
     RPA.Desktop.Press Keys    G
@@ -91,7 +91,7 @@ Romaneios Entrada/Saída > Gerenciamentos de Romaneios
 
 Pesagem para Terceiros
     ${nome_print}=     Set Variable     Pesagem para Terceiros
-    [Tags]     Balancas    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click         Pesagem para Terceiros
     RPA.Windows.Get Text      Pesagem para Terceiros (1)
@@ -103,7 +103,7 @@ Pesagem para Terceiros
 
 Emissão de Nota Fiscal
     ${nome_print}=     Set Variable     Emissão de Nota Fiscal
-    [Tags]     Balancas    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click         Emissão de Nota Fiscal
     RPA.Windows.Get Text      Emissão de Nota Fiscal (1)
@@ -113,7 +113,7 @@ Emissão de Nota Fiscal
 
 Documentos emitidos contra o estabelecimento p/ entrada
     ${nome_print}=     Set Variable     Documentos emitidos contra o estabelecimento p_ entrada
-    [Tags]     Balancas    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click         Documentos emitidos contra o estabelecimento p/ entrada
     RPA.Windows.Get Text      Documentos emitidos contra o estabelecimento p/ entrada (1)
@@ -123,7 +123,7 @@ Documentos emitidos contra o estabelecimento p/ entrada
 
 Pesagem Geral
     ${nome_print}=     Set Variable     Pesagem Geral
-    [Tags]     Balancas    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click         Pesagem Geral
     RPA.Windows.Get Text      Pesagem Geral (1)
@@ -134,7 +134,7 @@ Pesagem Geral
 
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
@@ -145,7 +145,7 @@ Processos Personalizados
 
 Pesagem de Descarga - Romaneio
     ${nome_print}=     Set Variable     Pesagem de Descarga - Romaneio
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pesagem de Descarga - Romaneio
     RPA.Windows.Get Text      Pesagem Romaneio Descarga (1)
@@ -157,7 +157,7 @@ Pesagem de Descarga - Romaneio
 
 Consulta/Manutenção Ordem Tickets Descarga
     ${nome_print}=     Set Variable     Consulta_Manutenção Ordem Tickets Descarga
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Consulta/Manutenção Ordem Tickets Descarga
     RPA.Windows.Get Text      Consulta/Manutenção Ordem Ticket Descarga (1)
@@ -167,7 +167,7 @@ Consulta/Manutenção Ordem Tickets Descarga
 
 Pesagem de Descarga - Venda
     ${nome_print}=     Set Variable     Pesagem de Descarga - Venda
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pesagem de Descarga - Venda
     RPA.Windows.Get Text      Pesagem Romaneio Descarga - Venda (1)
@@ -178,7 +178,7 @@ Pesagem de Descarga - Venda
 
 Pesagem - Ordem de Carregamento
     ${nome_print}=     Set Variable     Pesagem - Ordem de Carregamento
-    [Tags]     Balancas    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Balancas    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pesagem - Ordem de Carregamento
     RPA.Windows.Get Text      Pesagem - Ordem de Carregamento (1)

@@ -15,7 +15,7 @@ ${nome_exe}=    cde_win_bca_front
 *** Test Cases ***
 
 Guias
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP      
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP      
     ${nome_print}=          Set Variable    Guias    
     Cadastros
     RPA.Windows.Click       Guias
@@ -25,7 +25,7 @@ Guias
     Fechar com Sim
 
 Isentos
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Isentos    
     Cadastros
     RPA.Windows.Click       Isentos
@@ -35,7 +35,7 @@ Isentos
     Fechar com Sim
 
 Agências -> Agências
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Agências
     Cadastros
     RPA.Windows.Click         Agências
@@ -48,7 +48,7 @@ Agências -> Agências
     Fechar com Sim
 
 Agências -> Grupo de Agências
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Grupo de Agências
     Cadastros
     RPA.Windows.Click         Agências
@@ -59,7 +59,7 @@ Agências -> Grupo de Agências
     Fechar com Sim
 
 Locais Estacionamento
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Locais Estacionamento
     Cadastros
     RPA.Windows.Click       Locais Estacionamento
@@ -69,7 +69,7 @@ Locais Estacionamento
     Fechar com Sim
 
 Grupos de Bilhetes Totem
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Grupos de Bilhetes Totem
     Cadastros
     RPA.Windows.Click       Grupo Bilhetes Totem
@@ -79,7 +79,7 @@ Grupos de Bilhetes Totem
     Fechar com Sim
 
 Grupos de Isenção
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Grupos de Isenção
     Cadastros
     RPA.Windows.Click        Grupos de Isenção
@@ -89,7 +89,7 @@ Grupos de Isenção
     Fechar com Sim
 
 Tipos de Autorização
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Tipos de Autorização
     Cadastros
     RPA.Windows.Click       Tipos de Autorização
@@ -99,7 +99,7 @@ Tipos de Autorização
     Fechar com Sim
 
 Tipos de Documentos
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP      
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP      
     ${nome_print}=          Set Variable    Tipos de Documentos
     Cadastros
     RPA.Windows.Click       Tipos de Documentos
@@ -109,7 +109,7 @@ Tipos de Documentos
     Fechar com Sim
 
 Pessoas Autorizadas
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP     
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP     
     ${nome_print}=          Set Variable    Pessoas Autorizadas
     Cadastros
     RPA.Windows.Click       Pessoas Autorizadas
@@ -120,7 +120,7 @@ Pessoas Autorizadas
     Sleep                   5s
 
 Acesso por aproximação
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP      
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP      
     ${nome_print}=          Set Variable    Acesso por aproximação
     Cadastros
     RPA.Windows.Click       Acesso por Aproximação
@@ -130,7 +130,7 @@ Acesso por aproximação
     Fechar com Sim
 
 Catracas / Terminais de Acesso
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Catracas _ Terminais de Acesso
     Cadastros
     RPA.Windows.Click       Catracas / Terminais de Acesso
@@ -140,7 +140,7 @@ Catracas / Terminais de Acesso
     Fechar com Sim
 
 PDV -> Locais de Venda
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Locais de Venda
     Cadastros
     RPA.Windows.Click         PDV
@@ -151,7 +151,7 @@ PDV -> Locais de Venda
     Fechar com Sim
 
 PDV -> PDV
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    PDV
     Cadastros
     RPA.Windows.Click         PDV
@@ -162,7 +162,7 @@ PDV -> PDV
     Fechar com Sim
 
 Câmeras de Contagem
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Câmeras de Contagem
     Cadastros
     RPA.Windows.Click       Câmeras de Contagem
@@ -172,7 +172,7 @@ Câmeras de Contagem
     Fechar com Sim
 
 Parâmetros -> Empresas
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Empresas
     Cadastros
     RPA.Windows.Click         Parâmetros
@@ -183,7 +183,7 @@ Parâmetros -> Empresas
     Fechar com Sim
 
 Parâmetros -> Estabelecimentos
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Estabelecimentos
     Cadastros
     RPA.Windows.Click         Parâmetros
@@ -195,7 +195,7 @@ Parâmetros -> Estabelecimentos
     Fechar com Sim
 
 Parâmetros -> Usuários
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
@@ -207,7 +207,7 @@ Parâmetros -> Usuários
      RPA.Windows.Click         Sim
 
 Parâmetros -> Grupos de Usuários
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Grupos de Usuários
     Cadastros
     RPA.Windows.Click         Parâmetros
@@ -219,7 +219,7 @@ Parâmetros -> Grupos de Usuários
      RPA.Windows.Click         Sim
 
 Parâmetros -> Configurações de Estação
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Configurações de Estação
     Cadastros
     RPA.Windows.Click         Parâmetros
@@ -230,7 +230,7 @@ Parâmetros -> Configurações de Estação
     Fechar janela
 
 Parâmetros -> Configurações de Bilheteria
-    [Tags]    Cadastros    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Cadastros    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Configurações de Bilheteria
     Cadastros
     RPA.Windows.Click         Parâmetros

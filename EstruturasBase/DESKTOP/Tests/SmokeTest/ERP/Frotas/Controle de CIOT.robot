@@ -22,7 +22,7 @@ Controle de CIOT
 
 Lançamento de CIOT
     ${nome_print}=     Set Variable     Lançamento de CIOT
-    [Tags]    Frotas   Controle de CIOT   SmokeTest
+    [Tags]   SmokeERP   Frotas   Controle de CIOT   SmokeTest
     Controle de CIOT               Lançamento de CIOT
     RPA.Windows.Get Text    CIOT (1)  
     RPA.Windows.Click       Novo 
@@ -31,7 +31,7 @@ Lançamento de CIOT
 
 Monitor de CIOT
     ${nome_print}=     Set Variable     Monitor de CIOT
-    [Tags]    Frotas   Controle de CIOT   SmokeTest
+    [Tags]   SmokeERP   Frotas   Controle de CIOT   SmokeTest
     Controle de CIOT               Monitor de CIOT
     RPA.Windows.Get Text    Monitor CIOT (1) 
     RPA.Desktop.Press Keys  0

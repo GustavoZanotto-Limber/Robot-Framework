@@ -191,7 +191,7 @@ Pegar codigo e nome do Ultimo Bilhete
     ${nome_bilhete}=     SeleniumLibrary.Get Text             xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[2]/div/div
     ${nome_e_numero}=    Create List                          ${numero_bilhete}     ${nome_bilhete}
     log   ${nome_e_numero}
-    RETURN    ${nome_e_numero}
+    [Return]    ${nome_e_numero}
 
 Pegar codigo e nome da Ultima Categoria
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/categoria/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]

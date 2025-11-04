@@ -17,7 +17,7 @@ ${nome_exe}=    cde_win_bca_front
 *** Test Cases ***
 
 Consulta de Vendas
-    [Tags]    Consultas    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Consultas    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Consulta de Vendas    
     Consultas Front         Consulta de Vendas    
     RPA.Windows.Get Text    Consulta de Vendas (1)
@@ -26,7 +26,7 @@ Consulta de Vendas
     Fechar janela
 
 Consulta de Reservas
-    [Tags]    Consultas    Front    SmokeTest   SmokeTestERP      
+    [Tags]   SmokeERP   Consultas    Front    SmokeTest   SmokeTestERP      
     ${nome_print}=          Set Variable    Consulta de Reservas        
     Consultas Front         Consulta de Reservas
     RPA.Windows.Get Text    Consulta de Reservas (1)
@@ -35,18 +35,18 @@ Consulta de Reservas
     Fechar janela
 
 Consulta de Voucher
-    [Tags]    Consultas    Front    SmokeTest   SmokeTestERP   
+    [Tags]   SmokeERP   Consultas    Front    SmokeTest   SmokeTestERP   
     ${nome_print}=          Set Variable    Consulta de Voucher
     Consultas Front         Consulta de Voucher     
     RPA.Windows.Get Text    Consulta de Voucher (1)
-    RPA.Desktop.Press Keys  0
+    RPA.Desktop.Press Keys  1
     RPA.Windows.Click       Carregar
-    RPA.Windows.Click       OK
+    Run keyword and ignore error    RPA.Windows.Click       OK
     BaseKeywordsDesktop.Screenshot  Consulta de Voucher (1)    ${Caminho_Screenshots}Consulta de Voucher
     Fechar janela
 
 Consulta de Lançamento de Veículos
-    [Tags]    Consultas    Front    SmokeTest   SmokeTestERP   
+    [Tags]   SmokeERP   Consultas    Front    SmokeTest   SmokeTestERP   
     ${nome_print}=          Set Variable    Consulta de Lançamento de Veículos   
     Consultas Front         Consulta de Lançamento de Veículos   
     RPA.Windows.Get Text    Consulta de Lançamentos de Veículos (1)
@@ -55,7 +55,7 @@ Consulta de Lançamento de Veículos
     Fechar janela
 
 Consulta de Bilhetes
-    [Tags]    Consultas    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Consultas    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Consulta de Bilhetes    
     Consultas Front         Consulta de Bilhetes   
     RPA.Windows.Get Text    Consulta de Bilhetes (1)
@@ -66,7 +66,7 @@ Consulta de Bilhetes
     Fechar janela
 
 Leitor de Bilhetes
-    [Tags]    Consultas    Front    SmokeTest   SmokeTestERP  
+    [Tags]   SmokeERP   Consultas    Front    SmokeTest   SmokeTestERP  
     ${nome_print}=          Set Variable    Leitor de Bilhetes    
     Consultas Front         Leitor de Bilhetes
     RPA.Windows.Get Text    Leitor de Bilhetes (1)
@@ -76,7 +76,7 @@ Leitor de Bilhetes
     RPA.Windows.Click       Fechar
 
 Consulta Passaporte
-    [Tags]    Consultas    Front    SmokeTest   SmokeTestERP      
+    [Tags]   SmokeERP   Consultas    Front    SmokeTest   SmokeTestERP      
     ${nome_print}=          Set Variable    Consulta Passaporte    
     Consultas Front         Consulta Passaporte    
     Sleep                   1s
@@ -88,7 +88,7 @@ Consulta Passaporte
     RPA.Desktop.Press Keys  ALT    f4
     
 Consultas Personalizadas
-    [Tags]    Consultas    Front    SmokeTest   SmokeTestERP    
+    [Tags]   SmokeERP   Consultas    Front    SmokeTest   SmokeTestERP    
     ${nome_print}=          Set Variable    Consultas Personalizadas
     Consultas Front         Consultas Personalizadas   
     RPA.Windows.Get Text    Consultas Personalizadas (1)

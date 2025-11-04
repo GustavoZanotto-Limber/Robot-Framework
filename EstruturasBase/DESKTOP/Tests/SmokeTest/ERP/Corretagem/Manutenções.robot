@@ -21,7 +21,7 @@ Manutenções
 
 Confirmação de Negócio
     ${nome_print}=     Set Variable     Confirmação de Negócio
-    [Tags]     Corretagem    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Confirmação de Negócio
     RPA.Windows.Get Text      Confirmação de Negócio (1)
@@ -31,7 +31,7 @@ Confirmação de Negócio
 
 Emissão de NFS-e sobre Confirmações de Negócios
     ${nome_print}=     Set Variable     Emissão de NFS-e sobre Confirmações de Negócios
-    [Tags]     Corretagem    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Emissão de NFS-e sobre Confirmações de Negócios
     RPA.Windows.Get Text      Emissão de NFS-e sobre Confirmações de Negócios (1)
@@ -41,7 +41,7 @@ Emissão de NFS-e sobre Confirmações de Negócios
 
 Pedidos > Pedidos de Compra
     ${nome_print}=     Set Variable     Pedidos de Compra
-    [Tags]     Corretagem    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Desktop.Press Keys    P
@@ -52,7 +52,7 @@ Pedidos > Pedidos de Compra
 
 Pedidos > Pedidos de Venda
     ${nome_print}=     Set Variable     Pedidos de Venda
-    [Tags]     Corretagem    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Pedidos
     RPA.Desktop.Press Keys    E
@@ -63,7 +63,7 @@ Pedidos > Pedidos de Venda
 
 Entradas/Compras > Incluir/Alterar
     ${nome_print}=     Set Variable     Incluir_Alterar
-    [Tags]     Corretagem    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Corretagem    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  I
@@ -75,7 +75,7 @@ Entradas/Compras > Incluir/Alterar
 
 Entradas/Compras > Consultar
     ${nome_print}=     Set Variable     Consultar
-    [Tags]     Corretagem    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Corretagem    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click       Entradas/Compras
     RPA.Desktop.Press Keys  C
@@ -89,7 +89,7 @@ Entradas/Compras > Consultar
 
 Saídas/Vendas > Incluir Saídas/Vendas
     ${nome_print}=     Set Variable     Alterar Saídas_Vendas
-    [Tags]     Corretagem    Manutenções   SmokeTest    
+    [Tags]   SmokeERP    Corretagem    Manutenções   SmokeTest    
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    I
@@ -102,7 +102,7 @@ Saídas/Vendas > Incluir Saídas/Vendas
 
 Saídas/Vendas > Alterar Saídas/Vendas
     ${nome_print}=     Set Variable     Alterar Saídas_Vendas
-    [Tags]     Corretagem    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    A
@@ -116,7 +116,7 @@ Saídas/Vendas > Alterar Saídas/Vendas
 
 Saídas/Vendas > Consultar Saídas/Vendas
     ${nome_print}=     Set Variable     Consultar Saídas_Vendas
-    [Tags]     Corretagem    Manutenções   SmokeTest
+    [Tags]   SmokeERP    Corretagem    Manutenções   SmokeTest
     Manutenções
     RPA.Windows.Click         Saídas/Vendas
     RPA.Desktop.Press Keys    C

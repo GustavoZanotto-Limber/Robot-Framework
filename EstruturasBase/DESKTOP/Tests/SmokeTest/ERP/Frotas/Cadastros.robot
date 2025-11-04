@@ -17,7 +17,7 @@ ${nome_exe}=    cde_win_frotas
 
 Terceiros > Cadastro de Terceiros
     ${nome_print}=     Set Variable     Cadastro de Terceiros
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Terceiros
     RPA.Desktop.Press Keys    C
@@ -30,7 +30,7 @@ Terceiros > Cadastro de Terceiros
 
 Terceiros > Categorias de Terceiros
     ${nome_print}=     Set Variable     Categorias de Terceiros
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  A
@@ -42,7 +42,7 @@ Terceiros > Categorias de Terceiros
 
 Terceiros > Grupo de Terceiros
     ${nome_print}=     Set Variable     Grupo de Terceiros
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  G
@@ -54,7 +54,7 @@ Terceiros > Grupo de Terceiros
 
 Terceiros > Registro de Contatos
     ${nome_print}=     Set Variable     Registro de Contatos
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  R
@@ -67,7 +67,7 @@ Terceiros > Registro de Contatos
 
 Terceiros > Tipo de registro de Contatos
     ${nome_print}=     Set Variable     Tipo de registro de Contatos
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Terceiros
     RPA.Desktop.Press Keys  T
@@ -79,7 +79,7 @@ Terceiros > Tipo de registro de Contatos
 
 Itens > Produtos
     ${nome_print}=     Set Variable     Produtos
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  P
@@ -91,7 +91,7 @@ Itens > Produtos
 
 Itens > Pneus
     ${nome_print}=     Set Variable     Pneus
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Itens
     RPA.Desktop.Press Keys  N
@@ -103,7 +103,7 @@ Itens > Pneus
 
 Natureza de Cargas
     ${nome_print}=     Set Variable     Natureza de Cargas
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Natureza de Cargas
     RPA.Windows.Get Text    Cadastro de Natureza de Carga (1)
@@ -114,7 +114,7 @@ Natureza de Cargas
 
 Veículos > Veículos
     ${nome_print}=     Set Variable     Veículos
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  V
@@ -125,7 +125,7 @@ Veículos > Veículos
 
 Veículos > Tipos de Veículos
     ${nome_print}=     Set Variable     Tipos de Veículos
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  T
@@ -137,7 +137,7 @@ Veículos > Tipos de Veículos
 
 Veículos > Tipos de Chassi
     ${nome_print}=     Set Variable     Tipos de Chassi
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Veículos
     RPA.Desktop.Press Keys  I
@@ -150,7 +150,7 @@ Veículos > Tipos de Chassi
 
 Tanques de Combustíveis
     ${nome_print}=     Set Variable     Tanques de Combustíveis
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Tanques de Combustíveis
     RPA.Windows.Get Text    Cadastro de Tanques Combustíveis (1)
@@ -161,7 +161,7 @@ Tanques de Combustíveis
 
 Navios
     ${nome_print}=     Set Variable     Navios
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Navios
     RPA.Windows.Get Text    Cadastro de Navios (1)
@@ -172,7 +172,7 @@ Navios
 
 Tipo de Despesa Viagem
     ${nome_print}=     Set Variable     Tipo de Despesa Viagem
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Tipo de Despesa Viagem
     RPA.Windows.Get Text    Cadastro de Tipo de Despesa de Viagem (1)
@@ -183,7 +183,7 @@ Tipo de Despesa Viagem
 
 Seguro de Cargas
     ${nome_print}=     Set Variable     Seguro de Cargas
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Seguro de Cargas
     RPA.Windows.Get Text    Cadastro de Seguro de Carga (1)
@@ -194,7 +194,7 @@ Seguro de Cargas
 
 Infrações de Trânsito
     ${nome_print}=     Set Variable     Infrações de Trânsito
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Infrações de Trânsito
     RPA.Windows.Get Text    Cadastro de Infrações de Trânsito (1)
@@ -205,7 +205,7 @@ Infrações de Trânsito
 
 Despesas de Viagens
     ${nome_print}=     Set Variable     Despesas de Viagens
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Despesas de Viagens
     RPA.Windows.Get Text    Cadastro de Despesas de Viagens (1)
@@ -216,7 +216,7 @@ Despesas de Viagens
 
 Tipo Carga
     ${nome_print}=     Set Variable     Tipo Carga
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Tipo Carga
     RPA.Windows.Get Text    Cadastro de Tipo de Carga (1)
@@ -227,7 +227,7 @@ Tipo Carga
 
 Tipo Serviço
     ${nome_print}=     Set Variable     Tipo Serviço
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Tipo Serviço
     RPA.Windows.Get Text    Cadastro de Tipo de Serviço (1)
@@ -238,7 +238,7 @@ Tipo Serviço
 
 Status de Pedido
     ${nome_print}=     Set Variable     Status de Pedido
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Status de Pedido
     RPA.Windows.Get Text    Cadastro de Status de Pedido (1)
@@ -249,7 +249,7 @@ Status de Pedido
 
 Tipo Despesas Viagens
     ${nome_print}=     Set Variable     Tipo Despesas Viagens
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Tipo Despesas Viagens
     RPA.Windows.Get Text    Cadastro de Despesas de Viagens (1)
@@ -260,7 +260,7 @@ Tipo Despesas Viagens
 
 Configuração Layout Personalizado
     ${nome_print}=     Set Variable     Configuração Layout Personalizado
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Configuração Layout Personalizado
     RPA.Windows.Get Text    Configuração Layout Personalizado (1)
@@ -273,7 +273,7 @@ Configuração Layout Personalizado
 
 Tabela de Frete
     ${nome_print}=     Set Variable     Tabela de Frete
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Tabela de Frete
     RPA.Windows.Get Text    Cadastro de Tabela de Frete (1)
@@ -287,7 +287,7 @@ Tabela de Frete
 
 Documentos > Tipos de Documentos
     ${nome_print}=     Set Variable     Tipos de Documentos
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Documentos
     RPA.Desktop.Press Keys  T
@@ -299,7 +299,7 @@ Documentos > Tipos de Documentos
 
 Países
     ${nome_print}=     Set Variable     Países
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
@@ -310,7 +310,7 @@ Países
 
 Estados
     ${nome_print}=     Set Variable     Estados
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
@@ -321,7 +321,7 @@ Estados
 
 Municípios
     ${nome_print}=     Set Variable     Municípios
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
@@ -332,7 +332,7 @@ Municípios
 
 Regiões
     ${nome_print}=     Set Variable     Regiões
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
@@ -343,7 +343,7 @@ Regiões
 
 Históricos Contábeis
     ${nome_print}=     Set Variable     Históricos Contábeis
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Históricos Contábeis
     RPA.Windows.Get Text      Cadastro de Históricos Contábeis (1)
@@ -354,7 +354,7 @@ Históricos Contábeis
 
 Financeiro > Forma de Pagamento
     ${nome_print}=     Set Variable     Forma de Pagamento
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Financeiro
     RPA.Desktop.Press Keys  F
@@ -366,7 +366,7 @@ Financeiro > Forma de Pagamento
 
 Financeiro > Descontos Motorista
     ${nome_print}=     Set Variable     Descontos Motorista
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Financeiro
     RPA.Desktop.Press Keys  D
@@ -378,7 +378,7 @@ Financeiro > Descontos Motorista
 
 Financeiro > Moedas
     ${nome_print}=     Set Variable     Moedas
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click       Financeiro
     RPA.Desktop.Press Keys  M
@@ -390,7 +390,7 @@ Financeiro > Moedas
 
 Fiscal > Classificações Fiscais
     ${nome_print}=     Set Variable     Classificações Fiscais
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    A
@@ -402,7 +402,7 @@ Fiscal > Classificações Fiscais
 
 Fiscal > Mensagem de Notas Fiscais
     ${nome_print}=     Set Variable     Mensagem de Notas Fiscais
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    N
@@ -413,7 +413,7 @@ Fiscal > Mensagem de Notas Fiscais
 
 Fiscal > Espécies de Documentos
     ${nome_print}=     Set Variable     Espécies de Documentos
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    E
@@ -425,7 +425,7 @@ Fiscal > Espécies de Documentos
 
 Fiscal > Operações Fiscais
     ${nome_print}=     Set Variable     Operações Fiscais
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    R
@@ -437,7 +437,7 @@ Fiscal > Operações Fiscais
 
 Fiscal > Séries
     ${nome_print}=     Set Variable     Séries
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    S
@@ -449,7 +449,7 @@ Fiscal > Séries
 
 Fiscal > Simples Nacional > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Simples Nacional
@@ -462,7 +462,7 @@ Fiscal > Simples Nacional > Tabela Tributária
 
 Fiscal > Simples Nacional > Situação Tributária (CSOSN)
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Simples Nacional
@@ -475,7 +475,7 @@ Fiscal > Simples Nacional > Situação Tributária (CSOSN)
 
 Fiscal > CFOP's
     ${nome_print}=     Set Variable     CFOP's
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    F
@@ -487,7 +487,7 @@ Fiscal > CFOP's
 
 Fiscal > IPI > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IPI
@@ -500,7 +500,7 @@ Fiscal > IPI > Tabela Tributária
 
 Fiscal > IPI > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IPI
@@ -513,7 +513,7 @@ Fiscal > IPI > Situação Tributária
 
 Fiscal > ICMS > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -526,7 +526,7 @@ Fiscal > ICMS > Tabela Tributária
 
 Fiscal > ICMS > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -539,7 +539,7 @@ Fiscal > ICMS > Situação Tributária
 
 Fiscal > ICMS > Tabela Tributária - FCP
     ${nome_print}=     Set Variable     Tabela Tributária - FCP
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ICMS
@@ -552,7 +552,7 @@ Fiscal > ICMS > Tabela Tributária - FCP
 
 Fiscal > PIS > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         PIS
@@ -565,7 +565,7 @@ Fiscal > PIS > Tabela Tributária
 
 Fiscal > PIS > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         PIS
@@ -578,7 +578,7 @@ Fiscal > PIS > Situação Tributária
 
 Fiscal > COFINS > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         COFINS
@@ -591,7 +591,7 @@ Fiscal > COFINS > Tabela Tributária
 
 Fiscal > COFINS > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         COFINS
@@ -604,7 +604,7 @@ Fiscal > COFINS > Situação Tributária
 
 Fiscal > CSLL > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         CSLL
@@ -617,7 +617,7 @@ Fiscal > CSLL > Tabela Tributária
 
 Fiscal > CSLL > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         CSLL
@@ -630,7 +630,7 @@ Fiscal > CSLL > Situação Tributária
 
 Fiscal > IRPJ > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IRPJ
@@ -643,7 +643,7 @@ Fiscal > IRPJ > Tabela Tributária
 
 Fiscal > IRPJ > Situação Tributária
     ${nome_print}=     Set Variable     Situação Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         IRPJ
@@ -656,7 +656,7 @@ Fiscal > IRPJ > Situação Tributária
 
 Fiscal > ISSQN > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         ISSQN
@@ -669,7 +669,7 @@ Fiscal > ISSQN > Tabela Tributária
 
 Fiscal > Tabela de Alíquota Nacional de Impostos por NCM
     ${nome_print}=     Set Variable     Tabela de Alíquota Nacional de Impostos por NCM
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    T
@@ -680,7 +680,7 @@ Fiscal > Tabela de Alíquota Nacional de Impostos por NCM
 
 Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa jurídica
     ${nome_print}=     Set Variable     Tabela Tributária - Pessoa jurídica
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -694,7 +694,7 @@ Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa jurídica
 
 Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa Física
     ${nome_print}=     Set Variable     Tabela Tributária - Pessoa Física
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -708,7 +708,7 @@ Fiscal > Impostos Retidos > IR > Tabela Tributária - Pessoa Física
 
 Fiscal > Impostos Retidos > IR > Cadastro de Serviço
     ${nome_print}=     Set Variable     Cadastro de Serviço
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -722,7 +722,7 @@ Fiscal > Impostos Retidos > IR > Cadastro de Serviço
 
 Fiscal > Impostos Retidos > CSRF > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -736,7 +736,7 @@ Fiscal > Impostos Retidos > CSRF > Tabela Tributária
 
 Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
     ${nome_print}=     Set Variable     Cadastro de Serviços
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -750,7 +750,7 @@ Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
 
 Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa jurídica
     ${nome_print}=     Set Variable     Tabela Tributária - Pessoa jurídica
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -764,7 +764,7 @@ Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa jurídica
 
 Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa Física
     ${nome_print}=     Set Variable     Tabela Tributária - Pessoa Física
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -778,7 +778,7 @@ Fiscal > Impostos Retidos > INSS > Tabela Tributária - Pessoa Física
 
 Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
     ${nome_print}=     Set Variable     Cadastro de Serviços
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -792,7 +792,7 @@ Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
 
 Fiscal > Impostos Retidos > SEST/SENAT
     ${nome_print}=     Set Variable     SEST_SENAT
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Windows.Click         Impostos Retidos
@@ -805,7 +805,7 @@ Fiscal > Impostos Retidos > SEST/SENAT
 
 Fiscal > Classificações de Serviços Prestado - REINF
     ${nome_print}=     Set Variable     Classificações de Serviços Prestado - REINF
-    [Tags]     Frotas    Cadastros    SmokeTest
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest
     Cadastros
     RPA.Windows.Click         Fiscal
     RPA.Desktop.Press Keys    V
@@ -818,7 +818,7 @@ Fiscal > Classificações de Serviços Prestado - REINF
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -830,7 +830,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s
@@ -842,7 +842,7 @@ Parâmetros > Estabelecimentos
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    u
@@ -854,7 +854,7 @@ Parâmetros > Usuários
 
 Parâmetros > Grupos Usuários
     ${nome_print}=     Set Variable     Grupos Usuários
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    g
@@ -866,7 +866,7 @@ Parâmetros > Grupos Usuários
 
 Parâmetros > Configurações de Estação
     ${nome_print}=     Set Variable     Configurações de Estação
-    [Tags]     Frotas    Cadastros    SmokeTest    
+    [Tags]   SmokeERP    Frotas    Cadastros    SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    c

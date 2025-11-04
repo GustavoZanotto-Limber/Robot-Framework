@@ -77,9 +77,9 @@ Cenário 4: Configuração de preços por temporada
     Quando coloco as temporadas no calendario    6422
     Então valido as temporadas no E-Commerce     6422
 
-# Cenário 5: Associação de Receita à configuração de preços
-#     ${nome_print}=    Set Variable     Associação de Receita à configuração de preços
-#     [Tags]    Testes_Funcionais    LB-41
-#     Dado que estou na tela de preço e disponibilidade    6422
-#     Quando crio uma nova tabela de preço e disponibilidade para o bilhete    6422
-#     Então valido se o preço foi salvo corretamente       6422
+#Cenário 5: Associação de Receita à configuração de preços
+    #${nome_print}=    Set Variable     Associação de Receita à configuração de preços
+    #[Tags]    Testes_Funcionais    LB-41
+    #Dado que estou na tela de preço e disponibilidade    6422
+    #Quando crio uma nova tabela de preço e disponibilidade para o bilhete    6422
+    #Então valido se o preço foi salvo corretamente       6422

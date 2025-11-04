@@ -21,7 +21,7 @@ Cadastro
 
 Terceiros
     ${nome_print}=     Set Variable     Terceiros
-    [Tags]    Vendedor   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Cadastros   SmokeTest
     Cadastro                  Terceiros    
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
     RPA.Windows.Click         Novo
@@ -31,7 +31,7 @@ Terceiros
 
 Permissões de Acesso
     ${nome_print}=     Set Variable     Permissões de Acesso
-    [Tags]    Vendedor   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Cadastros   SmokeTest
     Cadastro                  Permissões de Acesso    
     RPA.Windows.Get Text      Permissões de Acesso para Vendedores (1)
     RPA.Desktop.Press Keys    0
@@ -42,7 +42,7 @@ Permissões de Acesso
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]    Vendedor   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    E
@@ -53,7 +53,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]    Vendedor   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    S
@@ -64,7 +64,7 @@ Parâmetros > Estabelecimentos
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
-    [Tags]    Vendedor   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
@@ -74,7 +74,7 @@ Parâmetros > Usuários
 
 Parâmetros > Grupo de Usuários
     ${nome_print}=     Set Variable     Grupo de Usuários
-    [Tags]    Vendedor   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    G
@@ -85,7 +85,7 @@ Parâmetros > Grupo de Usuários
 
 Parâmetros > Configurações da Estação
     ${nome_print}=     Set Variable     Configurações da Estação
-    [Tags]    Vendedor   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendedor   Cadastros   SmokeTest
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    C

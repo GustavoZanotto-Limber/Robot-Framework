@@ -22,7 +22,7 @@ Contas a Pagar
 
 Lançamentos > Lançamento - Simplificado
     ${nome_print}=     Set Variable     Lançamento - Simplificado
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    l
@@ -33,7 +33,7 @@ Lançamentos > Lançamento - Simplificado
 
 Lançamentos > Lançamento - Múltiplas Parcelas
     ${nome_print}=     Set Variable     Lançamento - Múltiplas Parcelas
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    a
@@ -44,7 +44,7 @@ Lançamentos > Lançamento - Múltiplas Parcelas
 
 Lançamentos > Lançamento - Com Baixa Automática
     ${nome_print}=     Set Variable     Lançamento - Com Baixa Automática
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Lançamentos
     RPA.Desktop.Press Keys    n
@@ -55,7 +55,7 @@ Lançamentos > Lançamento - Com Baixa Automática
 
 Financiamento
     ${nome_print}=     Set Variable     Financiamento
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Financiamento
     RPA.Windows.Get Text    Cronograma de Liberação e Amortização (1)
@@ -65,7 +65,7 @@ Financiamento
 
 Baixas
     ${nome_print}=     Set Variable     Baixas
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Baixas
     RPA.Windows.Get Text    Baixas do Contas a Pagar (1)
@@ -76,7 +76,7 @@ Baixas
 
 Estornar Baixas
     ${nome_print}=     Set Variable     Estornar Baixas
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Estornar Baixas
     RPA.Windows.Get Text    Estorno de Baixas do Contas a Pagar (1)
@@ -88,7 +88,7 @@ Estornar Baixas
 
 Renegociações
     ${nome_print}=     Set Variable     Renegociações
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Renegociações
     RPA.Windows.Get Text    Renegociação do Contas a Pagar (1)
@@ -99,7 +99,7 @@ Renegociações
 
 Estornar Renegociações
     ${nome_print}=     Set Variable     Estornar Renegociações
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Estornar Renegociações
     RPA.Windows.Get Text    Estorno de Renegociações do Contas a Pagar (1)
@@ -111,7 +111,7 @@ Estornar Renegociações
 
 Alterar Vencimento_Portador
     ${nome_print}=     Set Variable     Alterar Vencimento_Portador
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Alterar Vencimento/Portador
     RPA.Windows.Get Text    Alteração de Vencimento/Portador do Contas a Pagar (1)
@@ -123,7 +123,7 @@ Alterar Vencimento_Portador
 
 Adiantamentos > Adiantamento a Fornecedores
     ${nome_print}=     Set Variable     Adiantamento a Fornecedores
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    a
@@ -134,7 +134,7 @@ Adiantamentos > Adiantamento a Fornecedores
 
 Adiantamentos > Extrato dos Adiantamentos_Fornecedor
     ${nome_print}=     Set Variable     Extrato dos Adiantamentos_Fornecedor
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    e
@@ -147,7 +147,7 @@ Adiantamentos > Extrato dos Adiantamentos_Fornecedor
 
 Adiantamentos > Saldo de Adiantamentos Fornecedores
     ${nome_print}=     Set Variable     Saldo de Adiantamentos Fornecedores
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    s
@@ -160,7 +160,7 @@ Adiantamentos > Saldo de Adiantamentos Fornecedores
 
 Adiantamento a Funcionários
     ${nome_print}=     Set Variable     Adiantamento a Funcionários
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    d
@@ -172,7 +172,7 @@ Adiantamento a Funcionários
 
 Extrato dos Adiantamentos_Funcionário
     ${nome_print}=     Set Variable     Extrato dos Adiantamentos_Funcionário
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    x
@@ -185,7 +185,7 @@ Extrato dos Adiantamentos_Funcionário
 
 Saldo de Adiantamentos Funcionários
     ${nome_print}=     Set Variable     Saldo de Adiantamentos Funcionários
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    l
@@ -198,7 +198,7 @@ Saldo de Adiantamentos Funcionários
 
 Relatório de Lançamento
     ${nome_print}=     Set Variable     Relatório de Lançamento
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    r
@@ -211,7 +211,7 @@ Relatório de Lançamento
 
 Antecipação de Pedido de Compras
     ${nome_print}=     Set Variable     Antecipação de Pedido de Compras
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Adiantamentos
     RPA.Desktop.Press Keys    n
@@ -222,7 +222,7 @@ Antecipação de Pedido de Compras
 
 Empenhos
     ${nome_print}=     Set Variable     Empenhos
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Empenhos
     RPA.Windows.Get Text    Cadastro de Empenhos (1)
@@ -232,7 +232,7 @@ Empenhos
 
 Recibos Avulsos
     ${nome_print}=     Set Variable     Recibos Avulsos
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Recibos Avulsos
     RPA.Windows.Get Text    Emissão de Recibo - Contas a Pagar (1)
@@ -242,7 +242,7 @@ Recibos Avulsos
 
 Consultas
     ${nome_print}=     Set Variable     Consultas
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click       Consultas
     RPA.Windows.Get Text    Consulta do Contas a Pagar (1)
@@ -254,7 +254,7 @@ Consultas
 
 Contas a Pagar
     ${nome_print}=     Set Variable     Contas a Pagar
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    c
@@ -268,7 +268,7 @@ Contas a Pagar
 
 Contas a Pagar a Prazo Resumido
     ${nome_print}=     Set Variable     Contas a Pagar a Prazo Resumido
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    o
@@ -283,7 +283,7 @@ Contas a Pagar a Prazo Resumido
 
 Pagamentos
     ${nome_print}=     Set Variable     Pagamentos
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    p
@@ -297,7 +297,7 @@ Pagamentos
 
 Empenhos_Credor
     ${nome_print}=     Set Variable     Empenhos_Credor
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Relatórios 
     RPA.Desktop.Press Keys    e
@@ -312,7 +312,7 @@ Empenhos_Credor
 
 Manutenção de Pagamento de Comissões
     ${nome_print}=     Set Variable     Manutenção de Pagamento de Comissões
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    m
@@ -325,7 +325,7 @@ Manutenção de Pagamento de Comissões
 
 Provisionamento de Pagamento
     ${nome_print}=     Set Variable     Provisionamento de Pagamento
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    p
@@ -337,7 +337,7 @@ Provisionamento de Pagamento
 
 Relatório de Comissões
     ${nome_print}=     Set Variable     Relatório de Comissões
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    r
@@ -350,7 +350,7 @@ Relatório de Comissões
 
 Relatório de Comissões por Vendedor
     ${nome_print}=     Set Variable     Relatório de Comissões por Vendedor
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    e
@@ -365,7 +365,7 @@ Relatório de Comissões por Vendedor
 
 Reprocessar Valores da Comissão
     ${nome_print}=     Set Variable     Reprocessar Valores da Comissão
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    o
@@ -379,7 +379,7 @@ Reprocessar Valores da Comissão
 
 Cadastro De Comissão por Faixa de Descontos
     ${nome_print}=     Set Variable     Cadastro De Comissão por Faixa de Descontos
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Comissões de Venda
     RPA.Desktop.Press Keys    c
@@ -390,7 +390,7 @@ Cadastro De Comissão por Faixa de Descontos
 
 Remessa
     ${nome_print}=     Set Variable     Remessa
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Pagamentos Eletrônicos
     RPA.Windows.Click         Pagamentos a Fornecedores
@@ -404,7 +404,7 @@ Remessa
 
 Retorno
     ${nome_print}=     Set Variable     Retorno
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Pagamentos Eletrônicos
     RPA.Windows.Click         Pagamentos a Fornecedores
@@ -417,7 +417,7 @@ Retorno
 
 Pagamentos a Funcionarios
     ${nome_print}=     Set Variable     Pagamentos a Funcionarios
-    [Tags]     Financeiro    Contas a Pagar   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Pagar   SmokeTest
     Contas a Pagar 
     RPA.Windows.Click         Pagamentos Eletrônicos
     RPA.Desktop.Press Keys    a
