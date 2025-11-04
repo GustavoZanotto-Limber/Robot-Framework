@@ -310,7 +310,8 @@ Então valido se a tela de Central de Vendas foi carregada corretamente
     Sleep                     2s
     Go To    https://testescard.limbersoftware.com.br/#/central-vendas/estabelecimentos/1916/Central%20de%20Vendas%20Zanotto/venda
     Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[1]/h1    Dados Iniciais
-    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[3]/h1    Experiências   
+    Preencher dados central de vendas
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[3]/div[1]/h1    Experiências   
     Clicar no Elemento             xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/div/ul/li[2]/a/span/span/div
     Sleep                     1s    
     Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-gerenciador-vendas/div/div[1]/h1    Gerenciamento de Vendas

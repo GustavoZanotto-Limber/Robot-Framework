@@ -9,7 +9,7 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-43 Abertura e fechamento e Caixa/ 
-${caminho_arquivos}=     C:/Users/testes/Documents/Testes Regressivos/
+${caminho_arquivos}=     C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\
 ${nome_exe}=    cde_win_bca_front
 ${nome_print}
 ${texto_bilhete}
@@ -49,12 +49,11 @@ Cenário 4: Geração e impressão do fechamento de caixa
     [Tags]    Testes_Funcionais    LB-43
     Dado que estou na tela do caixa operador
     ${texto2}=    Quando realizo a impressão do caixa      
-    Então valido se a impressão saiu corretamente 2    ${Caminho_arquivos}    Fechamento de Caixa.pdf    Fechamento de Caixa.pdf - WPS Office    ${Caminho_Screenshots}     Fechamento de Caixa    ${texto}    ${texto2}
-    
+    Então valido se a impressão saiu corretamente 2    ${Caminho_arquivos}    Fechamento_de_Caixa.pdf    Fechamento de Caixa.pdf - WPS Office    ${Caminho_Screenshots}     Fechamento de Caixa    ${texto}    ${texto2}
     
 Cenário 5: Fechamento dos caixas e validar a geração da receita (módulo financeiro)
     ${nome_print}=    Set Variable     Fechamento dos caixas e validar a geração da receita
     [Tags]    Testes_Funcionais    LB-43
-    #Dado que abri o caixa operador E realizei uma venda
-    #${texto}=    Quando Fecho o caixa operador E pego o Resumo Geral    ${Caminho_arquivos}    Resumo Geral.pdf    Resumo Geral.pdf - WPS Office    ${Caminho_Screenshots}     Resumo Geral
-    Então abro o financeiro e valido as informações   600,00
+    Dado que abri o caixa operador E realizei uma venda
+    Quando Fecho o caixa operador E pego o Resumo Geral    ${Caminho_arquivos}    Resumo Geral.pdf    Resumo Geral.pdf - WPS Office    ${Caminho_Screenshots}     Resumo Geral
+    Então abro o financeiro e valido as informações   ${texto}
