@@ -162,30 +162,19 @@ Adicionar Receita
 
 Criar Temporada
     [Arguments]    ${codigo_temporada}=1    ${nome_temporada}=Temporada 1    ${vermelho}=255    ${verde}=0    ${azul}=0
-    Navegar configuração de bilhete    6
-    Sleep                              1s
+    # Navegar configuração de bilhete    6
     Navegar configuração de bilhete    7
-    Sleep                        1s
-    Clicar no Botão                xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[1]/title-btn-add/div/button
-    sleep                     1s   
-    RPA.Desktop.Press Keys    tab
-    RPA.Desktop.Press Keys    ${codigo_temporada}
-    Sleep                     1s
-    RPA.Desktop.Press Keys    tab
-    Sleep                     1s
-    RPA.Desktop.Type Text     ${nome_temporada}
-    RPA.Desktop.Press Keys    tab
-    RPA.Desktop.Press Keys    Enter
-    Sleep                     1s
+    Clicar no Botão           xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[1]/title-btn-add/div/button 
+    Inserir Texto             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/mat-dialog-content/mat-tab-group/div/mat-tab-body[1]/div/form/mat-form-field[1]/div[1]/div/div[2]/input    ${codigo_temporada}
+    Inserir Texto             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/mat-dialog-content/mat-tab-group/div/mat-tab-body[1]/div/form/mat-form-field[2]/div[1]/div/div[2]/input    ${nome_temporada}
+    Clicar no Elemento        xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/mat-dialog-content/mat-tab-group/div/mat-tab-body[1]/div/form/mat-form-field[3]/div[1]/div/div[2]
     Clicar no Elemento        xpath:/html/body/div[3]/div[4]/div/div/mat-option
     Colocar cor               ${vermelho}    ${verde}    ${azul}    xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/mat-dialog-content/mat-tab-group/div/mat-tab-body[1]/div/form/mat-form-field[4]/div[1]/div/div[2]
-    sleep                     2s
     Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/div[2]/button[2]
     sleep                     1s
 
 Pegar codigo e nome do Ultimo Bilhete
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]
-    Sleep                1s
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]
     ${numero_bilhete}=   SeleniumLibrary.Get Text             xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[1]/div/div
     ${nome_bilhete}=     SeleniumLibrary.Get Text             xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[2]/div/div
@@ -195,7 +184,6 @@ Pegar codigo e nome do Ultimo Bilhete
 
 Pegar codigo e nome da Ultima Categoria
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/categoria/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]
-    Sleep                1s
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/categoria/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]
     ${numero_bilhete}=   SeleniumLibrary.Get Text             xpath:/html/body/app-root/app-pages/div/div/div/categoria/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[1]/div/div
     ${nome_bilhete}=     SeleniumLibrary.Get Text             xpath:/html/body/app-root/app-pages/div/div/div/categoria/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[2]/div/div
@@ -225,12 +213,9 @@ Criar tabela de preço
     [Arguments]    ${numero_bilhete}    ${nome_tabela}=Tabela de Preço Automatizada    ${preço}=100    ${taxa}=0    ${qtd_de_categorias}=1    
     Go To                      https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
     RPA.Desktop.Press Keys     F5
-    Sleep    2s
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[1]/div/table/thead/tr/th[4]/div/button
     Inserir Texto              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/div/div/mat-form-field[1]/div[1]/div/div[2]/input    ${nome_tabela}
-    Sleep                      2s
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/mat-card/mat-card-content/table/thead/tr/th[6]/div/button[1] 
-    sleep                      2s
     FOR    ${i}    IN RANGE    0    ${qtd_de_categorias}   
         ${valor}=                  Evaluate    ${i} + 1
         Repetidor de teclas        Down    2
@@ -246,7 +231,6 @@ Criar tabela de preço
         Sleep                      1s
         Repetidor de teclas        Down    2
     END
-    Sleep                      1s
     Colocar cor                49    0    53    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/div/div/mat-form-field[3]/div[1]/div/div[2]
     Clicar no Botão            xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[2]/buttons/div/div/button[3]
     Sleep                      2s
