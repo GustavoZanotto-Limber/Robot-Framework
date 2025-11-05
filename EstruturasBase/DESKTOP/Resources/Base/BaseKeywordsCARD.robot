@@ -403,9 +403,13 @@ Colocar o bilhete no e-commerce
 Retirar bilhete do e-commerce
     [Arguments]     ${numero_bilhete}    ${grupo}    
     Mudar Página         https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=349
-    Sleep                3s
-    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[${grupo}]/mat-expansion-panel-header/span/mat-painel-tittle
-    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[${grupo}]/div/div/div/mat-card/div/div[2]/view-product[$numero_bilhete]/mat-card/div/mat-icon
+    Sleep                5s
+    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[4]
+    Sleep    1
+    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[${grupo}]/mat-expansion-panel-header
+    Sleep    2
+    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[${grupo}]/div/div/div/mat-card/div/div[2]/view-product/mat-card/div/mat-icon
+    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[2]/buttons/div/div/button[3]
     sleep           10s
     Log             Bilhete retirado do E-commerce.
 
@@ -446,14 +450,15 @@ Inativar bilhete
         Run Keyword and Ignore Error    Retirar Categoria  2    ${numero_bilhete}
         Sleep                     2s
         Run Keyword and Ignore Error    Retirar Categoria  2    ${numero_bilhete}
-        sleep                     3s 
+        sleep                     6s 
     ELSE
         Go to     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
         Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/div[1]/mat-checkbox
         Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
-        Sleep                     2s
+        Sleep                     6s
     END
-    Retirar bilhete do e-commerce    1    2  
+        Retirar bilhete do e-commerce    1    2
+      
       
 
 Retirar Categoria
@@ -468,8 +473,6 @@ Retirar Categoria
     RPA.Desktop.Press Keys    Enter
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
     Sleep                     6s
-    RPA.Desktop.Press Keys    Enter
-    Sleep                     2s
     
 Excluir Categoria
     [Arguments]    ${codigo_categoria}=1

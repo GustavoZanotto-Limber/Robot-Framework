@@ -168,7 +168,7 @@ Então valido se o bilhete foi criado corretamente
     
 
 Então valido se a disponibilidade integrou corretamente  
-    [Arguments]    ${numero_bilhete}=6275    ${qtd_vagas}=1000
+    [Arguments]    ${numero_bilhete}=6491    ${qtd_vagas}=1000
     Iniciar sessao    cde_win_bca_front
     Ir Para Emissão de Bilhetes
     ${qtd_vagas_bilhete}=    Selecionar o bilhete e retornar quantidade de vagas (categoria)   ${numero_bilhete}    1
