@@ -39,8 +39,9 @@ Encerrar Cenário 4
     [Arguments]    ${nome_print}
     Encerrar Cenário    ${nome_print}
     @{ano_mes_dia}=  Get Time	year month day 
-    ${amanaha}=    Evaluate    ${ano_mes_dia[2]} + 01
-    Run Keyword and ignore error    Limpar dia do calendário       ${ano_mes_dia[1]}    ${amanaha}
+    ${dia_numero}=    Convert To Integer    ${ano_mes_dia[2]}
+    ${amanha}=    Evaluate    ${dia_numero} + 1
+    Run Keyword and ignore error    Limpar dia do calendário       ${ano_mes_dia[1]}    ${amanha}
     Retirar temporada    6422    2
     
 

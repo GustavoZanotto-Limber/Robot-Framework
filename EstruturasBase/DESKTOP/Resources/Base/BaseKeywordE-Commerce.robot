@@ -26,14 +26,46 @@ Logar no e-commerce
     Sleep    1s
     Log    ${logado[1]}
     IF    ${logado[1]}
-        Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    gustavozanotto119@gmail.com
+        # Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    gustavozanotto119@gmail.com
+        Clicar no Elemento        xpath:xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]
+        RPA.Desktop.Press Keys    g
+        RPA.Desktop.Press Keys    u
+        RPA.Desktop.Press Keys    s
+        RPA.Desktop.Press Keys    t
+        RPA.Desktop.Press Keys    a
+        RPA.Desktop.Press Keys    v
+        RPA.Desktop.Press Keys    o
+        RPA.Desktop.Press Keys    z
+        RPA.Desktop.Press Keys    a
+        RPA.Desktop.Press Keys    n
+        RPA.Desktop.Press Keys    o
+        RPA.Desktop.Press Keys    t
+        RPA.Desktop.Press Keys    t
+        RPA.Desktop.Press Keys    o
+        RPA.Desktop.Press Keys    1
+        RPA.Desktop.Press Keys    1
+        RPA.Desktop.Press Keys    9
+        RPA.Desktop.Press Keys    @
+        RPA.Desktop.Press Keys    g
+        RPA.Desktop.Press Keys    m
+        RPA.Desktop.Press Keys    a
+        RPA.Desktop.Press Keys    i
+        RPA.Desktop.Press Keys    l
+        RPA.Desktop.Press Keys    .
+        RPA.Desktop.Press Keys    c
+        RPA.Desktop.Press Keys    o
+        RPA.Desktop.Press Keys    m
+        Sleep    1s
         RPA.Desktop.Press keys    Backspace
         RPA.Desktop.Type Text     m
+        Sleep    1s
         RPA.Desktop.Press keys    Enter
         Sleep    3
         Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    Z
+        Sleep    1s
         RPA.Desktop.Press keys    Backspace
         RPA.Desktop.Type Text     Zanotto123@
+        Sleep    1s
         RPA.Desktop.Press keys    Enter
     ELSE
         Log    Já está logado no e-commerce
