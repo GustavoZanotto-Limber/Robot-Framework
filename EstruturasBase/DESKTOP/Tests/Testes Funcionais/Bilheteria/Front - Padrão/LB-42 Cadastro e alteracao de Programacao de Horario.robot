@@ -3,7 +3,7 @@ Documentation     Testes regressivos: Cadastro e alteracao de Programacao de Hor
 Resource          ../../../../Resources/Base/BaseKeywordsCARD.robot
 Resource          ../../../../Resources/BDD/BDDKeywordsWeb.robot
 Suite Setup       Abrir CARD e logar 
-Suite Teardown    Inativar bilhete    ${numero_bilhete}    
+Suite Teardown    Inativar bilhete   ${numero_bilhete}    
 Test Teardown     Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
 
 *** Variables ***
@@ -26,7 +26,7 @@ Cenário 1: Cadastro de um bilhete por Horario/Vaga
 Cenário 2: Associação de um horario a um bilhete
     ${nome_print}=    Set Variable     Associação de um horario a um bilhete
     [Tags]    Testes_Funcionais    LB-42
-    Dado que estou na tela de preço e disponibilidade                   ${numero_bilhete}
+    Dado que estou na tela de preço e disponibilidade                        ${numero_bilhete}
     Quando crio uma nova tabela de preço e disponibilidade para o bilhete    ${numero_bilhete}
     Então valido se a disponibilidade integrou corretamente                
 

@@ -27,33 +27,59 @@ Logar no e-commerce
     Log    ${logado[1]}
     IF    ${logado[1]}
         # Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    gustavozanotto119@gmail.com
-        Clicar no Elemento        xpath:xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]
+        Clicar no Elemento        xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]
         RPA.Desktop.Press Keys    g
+        Sleep    0.1s
         RPA.Desktop.Press Keys    u
+        Sleep    0.1s
         RPA.Desktop.Press Keys    s
+        Sleep    0.1s
         RPA.Desktop.Press Keys    t
+        Sleep    0.1s
         RPA.Desktop.Press Keys    a
+        Sleep    0.1s
         RPA.Desktop.Press Keys    v
+        Sleep    0.1s
         RPA.Desktop.Press Keys    o
+        Sleep    0.1s
         RPA.Desktop.Press Keys    z
+        Sleep    0.1s
         RPA.Desktop.Press Keys    a
+        Sleep    0.1s
         RPA.Desktop.Press Keys    n
+        Sleep    0.1s
         RPA.Desktop.Press Keys    o
+        Sleep    0.1s
         RPA.Desktop.Press Keys    t
+        Sleep    0.1s
         RPA.Desktop.Press Keys    t
+        Sleep    0.1s
         RPA.Desktop.Press Keys    o
+        Sleep    0.1s
         RPA.Desktop.Press Keys    1
+        Sleep    0.1s
         RPA.Desktop.Press Keys    1
+        Sleep    0.1s
         RPA.Desktop.Press Keys    9
-        RPA.Desktop.Press Keys    @
+        Sleep    0.1s
+        RPA.Desktop.Type Text     @
+        Sleep    0.1s
         RPA.Desktop.Press Keys    g
+        Sleep    0.1s
         RPA.Desktop.Press Keys    m
+        Sleep    0.1s
         RPA.Desktop.Press Keys    a
+        Sleep    0.1s
         RPA.Desktop.Press Keys    i
+        Sleep    0.1s
         RPA.Desktop.Press Keys    l
+        Sleep    0.1s
         RPA.Desktop.Press Keys    .
+        Sleep    0.1s
         RPA.Desktop.Press Keys    c
+        Sleep    0.1s
         RPA.Desktop.Press Keys    o
+        Sleep    0.1s
         RPA.Desktop.Press Keys    m
         Sleep    1s
         RPA.Desktop.Press keys    Backspace
