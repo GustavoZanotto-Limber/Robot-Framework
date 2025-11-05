@@ -114,6 +114,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Desktop.Press Keys  a
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
+    RPA.Windows.Click       Confirmar
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
     BaseKeywordsDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
