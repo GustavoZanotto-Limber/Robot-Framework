@@ -469,8 +469,6 @@ Abrir arquivo
     Windows Run               a                 
     Sleep                     1s
     Run Keyword and Ignore error     RPA.Windows.Click         OK
-    Sleep                     1s
-    RPA.Desktop.Type Text     Procurar...
     Sleep    1s
     RPA.Desktop.Type Text     ${Caminho_arquivo}${nome_Arquivo_com_o_tipo}
     RPA.Desktop.Press Keys    enter
