@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.9.13 on win32)" generated="2025-11-06T13:41:59.646470" rpa="false" schemaversion="5">
+<suite id="s1" name="LB-43 Abertura e fechamento e Caixa" source="c:\Users\gustavo.zanotto_limb\Robot-Framework\EstruturasBase\DESKTOP\Tests\Testes Funcionais\Bilheteria\Front - Padrão\LB-43 Abertura e fechamento e Caixa.robot">
+<kw name="Iniciar sessao e abrir caixa" owner="BaseKeywordsDesktop" type="SETUP">
+<kw name="Open Application" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:04.013492" level="INFO">Starting application: C:\Limber\ERP Executaveis\cde_win_bca_front.exe</msg>
+<arg>C:\\Limber\\ERP Executaveis\\${nome_exe}.exe</arg>
+<doc>Start a given application by name (if in PATH),
+or by path to executable.</doc>
+<status status="PASS" start="2025-11-06T13:42:04.008200" elapsed="0.019029"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:06.038133" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:04.034212" elapsed="2.003921"/>
+</kw>
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:06.038133" level="INFO">Getting element with locator: Abrir</msg>
+<msg time="2025-11-06T13:42:06.052875" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:06.052875" level="INFO">Locator 'Abrir' produced matcher: MatchObject(locators=[('Name', 'Abrir', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:06.404013" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='' AutomationId=DropDown Rect=(1393,310,1412,335)[19x25] Name='Abrir' Handle=0x0(0)&gt;, locator='Abrir', name='Abrir', automation_id='DropDown', control_type='ButtonControl', class_name='', left=1393, right=1412, top=310, bottom=335, width=19, height=25, xcenter=1402, ycenter=322)</msg>
+<arg>Abrir</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:06.038133" elapsed="0.951540"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:08.992806" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:06.989673" elapsed="2.003133"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:08.992806" level="INFO">Pressing keys: Key.enter</msg>
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:08.992806" elapsed="0.002768"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:19.010828" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-11-06T13:42:19.010828" level="INFO">Carregando a base...</msg>
+<arg>10s</arg>
+<arg>Carregando a base...</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:08.995574" elapsed="10.016305"/>
+</kw>
+<kw name="Type Text" owner="RPA.Desktop">
+<arg>1</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="PASS" start="2025-11-06T13:42:19.011879" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:19.017803" level="INFO">Pressing keys: Key.enter</msg>
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:19.015766" elapsed="0.102587"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:19.118353" level="INFO">Pressing keys: Key.enter</msg>
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:19.118353" elapsed="0.115751"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:23.239229" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:19.234104" elapsed="4.005125"/>
+</kw>
+<kw name="Abrir caixa operador" owner="BaseKeywordsDesktop">
+<kw name="Caixa Operador" owner="BaseKeywordsDesktop">
+<kw name="Cadastros" owner="BaseKeywordsDesktop">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:23.749284" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:23.239229" elapsed="0.510055"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:23.749284" level="INFO">Pressing keys: Key.alt</msg>
+<arg>Alt</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:23.749284" elapsed="0.004105"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:23.755940" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:23.754916" elapsed="0.113954"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:23.239229" elapsed="0.629641"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:24.377582" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:23.868870" elapsed="0.509218"/>
+</kw>
+<kw name="Repetidor de teclas" owner="BaseKeywordsDesktop">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:24.484954" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:24.383213" elapsed="0.101741"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:24.487459" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:24.484954" elapsed="0.003545"/>
+</kw>
+<var name="${quantidade_de_clicks}">1</var>
+<status status="PASS" start="2025-11-06T13:42:24.378088" elapsed="0.112929"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:24.602406" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:24.493013" elapsed="0.109393"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:24.604008" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:24.602406" elapsed="0.001602"/>
+</kw>
+<var name="${quantidade_de_clicks}">2</var>
+<status status="PASS" start="2025-11-06T13:42:24.491017" elapsed="0.112991"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:24.718276" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:24.610586" elapsed="0.107690"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:24.720985" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:24.718276" elapsed="0.004348"/>
+</kw>
+<var name="${quantidade_de_clicks}">3</var>
+<status status="PASS" start="2025-11-06T13:42:24.609576" elapsed="0.115574"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:24.833188" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:24.727278" elapsed="0.105910"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:24.833188" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:24.833188" elapsed="0.004569"/>
+</kw>
+<var name="${quantidade_de_clicks}">4</var>
+<status status="PASS" start="2025-11-06T13:42:24.725150" elapsed="0.114130"/>
+</iter>
+<var>${quantidade_de_clicks}</var>
+<value>1</value>
+<value>${quantidade_de_clicks}+1</value>
+<status status="PASS" start="2025-11-06T13:42:24.378088" elapsed="0.461865"/>
+</for>
+<arg>right</arg>
+<arg>4</arg>
+<status status="PASS" start="2025-11-06T13:42:24.378088" elapsed="0.461865"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:23.239229" elapsed="1.601882"/>
+</kw>
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:24.843149" level="INFO">Getting element with locator: Abertura / Fechamento</msg>
+<msg time="2025-11-06T13:42:24.848730" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:24.848730" level="INFO">Locator 'Abertura / Fechamento' produced matcher: MatchObject(locators=[('Name', 'Abertura / Fechamento', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:25.125093" level="INFO">Returning element: WindowsElement(item=&lt;MenuItemControl ClassName='' AutomationId=133 Rect=(359,56,628,84)[269x28] Name='Abertura / Fechamento' Handle=0x0(0)&gt;, locator='Abertura / Fechamento', name='Abertura / Fechamento', automation_id='133', control_type='MenuItemControl', class_name='', left=359, right=628, top=56, bottom=84, width=269, height=28, xcenter=493, ycenter=70)</msg>
+<arg>Abertura / Fechamento</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:24.841111" elapsed="0.884995"/>
+</kw>
+<kw name="Fechar caixa caso esteja aberto" owner="BaseKeywordsDesktop">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:27.742086" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:25.727646" elapsed="2.014440"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Get Text" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:27.742086" level="INFO">Getting element with locator: Fechar Caixa</msg>
+<msg time="2025-11-06T13:42:27.747678" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:27.747678" level="INFO">Locator 'Fechar Caixa' produced matcher: MatchObject(locators=[('Name', 'Fechar Caixa', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:28.058643" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='TBitBtn' AutomationId=9373946 Rect=(915,690,1150,735)[235x45] Name='Fechar Caixa' Handle=0x8F08FA(9373946)&gt;, locator='Fechar Caixa', name='Fechar Caixa', automation_id='9373946', control_type='ButtonControl', class_name='TBitBtn', left=915, right=1150, top=690, bottom=735, width=235, height=45, xcenter=1032, ycenter=712)</msg>
+<arg>Fechar Caixa</arg>
+<tag>action</tag>
+<doc>Get text from Control element defined by the locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:27.742086" elapsed="0.323311"/>
+</kw>
+<msg time="2025-11-06T13:42:28.065397" level="INFO">${caixa_aberto} = ('PASS', 'Fechar Caixa')</msg>
+<var>${caixa_aberto}</var>
+<arg>RPA.Windows.Get Text</arg>
+<arg>Fechar Caixa</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-11-06T13:42:27.742086" elapsed="0.323311"/>
+</kw>
+<if>
+<branch type="IF" condition="${caixa_aberto} != (\'FAIL\', &quot;ElementNotFound: Element not found with locator \'Fechar Caixa\'&quot;)">
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:28.065397" level="INFO">Getting element with locator: Fechar Caixa</msg>
+<msg time="2025-11-06T13:42:28.072785" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:28.072785" level="INFO">Locator 'Fechar Caixa' produced matcher: MatchObject(locators=[('Name', 'Fechar Caixa', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:28.385194" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='TBitBtn' AutomationId=9373946 Rect=(915,690,1150,735)[235x45] Name='Fechar Caixa' Handle=0x8F08FA(9373946)&gt;, locator='Fechar Caixa', name='Fechar Caixa', automation_id='9373946', control_type='ButtonControl', class_name='TBitBtn', left=915, right=1150, top=690, bottom=735, width=235, height=45, xcenter=1032, ycenter=712)</msg>
+<arg>Fechar Caixa</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:28.065397" elapsed="0.912438"/>
+</kw>
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:28.977835" level="INFO">Getting element with locator: Sim</msg>
+<msg time="2025-11-06T13:42:28.986000" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:28.987100" level="INFO">Locator 'Sim' produced matcher: MatchObject(locators=[('Name', 'Sim', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:29.141967" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='Button' AutomationId=6 Rect=(920,591,1014,620)[94x29] Name='Sim' Handle=0x7309BA(7539130)&gt;, locator='Sim', name='Sim', automation_id='6', control_type='ButtonControl', class_name='Button', left=920, right=1014, top=591, bottom=620, width=94, height=29, xcenter=967, ycenter=605)</msg>
+<arg>Sim</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:28.977835" elapsed="0.747857"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:32.740806" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:29.725692" elapsed="3.015114"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:32.740806" level="INFO">Pressing keys: Key.esc</msg>
+<arg>Esc</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:32.740806" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:35.758188" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:32.740806" elapsed="3.017917"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:35.761745" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:35.758723" elapsed="0.005262"/>
+</kw>
+<kw name="Caixa Operador" owner="BaseKeywordsDesktop">
+<kw name="Cadastros" owner="BaseKeywordsDesktop">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:36.279864" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:35.768387" elapsed="0.511477"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:36.279864" level="INFO">Pressing keys: Key.alt</msg>
+<arg>Alt</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:36.279864" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:36.279864" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:36.279864" elapsed="0.104097"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:35.767390" elapsed="0.616571"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:36.892130" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:36.383961" elapsed="0.508169"/>
+</kw>
+<kw name="Repetidor de teclas" owner="BaseKeywordsDesktop">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:36.999886" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:36.894138" elapsed="0.105748"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:37.001910" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:37.001910" elapsed="0.002013"/>
+</kw>
+<var name="${quantidade_de_clicks}">1</var>
+<status status="PASS" start="2025-11-06T13:42:36.894138" elapsed="0.109785"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:37.116760" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:37.009734" elapsed="0.107026"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:37.116760" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:37.116760" elapsed="0.005995"/>
+</kw>
+<var name="${quantidade_de_clicks}">2</var>
+<status status="PASS" start="2025-11-06T13:42:37.008767" elapsed="0.113988"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:37.233333" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:37.126331" elapsed="0.107002"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:37.233333" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:37.233333" elapsed="0.007322"/>
+</kw>
+<var name="${quantidade_de_clicks}">3</var>
+<status status="PASS" start="2025-11-06T13:42:37.124920" elapsed="0.115735"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:37.350672" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:37.243101" elapsed="0.107571"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:37.350672" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:37.350672" elapsed="0.000000"/>
+</kw>
+<var name="${quantidade_de_clicks}">4</var>
+<status status="PASS" start="2025-11-06T13:42:37.240655" elapsed="0.110017"/>
+</iter>
+<var>${quantidade_de_clicks}</var>
+<value>1</value>
+<value>${quantidade_de_clicks}+1</value>
+<status status="PASS" start="2025-11-06T13:42:36.894138" elapsed="0.464868"/>
+</for>
+<arg>right</arg>
+<arg>4</arg>
+<status status="PASS" start="2025-11-06T13:42:36.892130" elapsed="0.467349"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:35.765149" elapsed="1.595639"/>
+</kw>
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:37.363441" level="INFO">Getting element with locator: Abertura / Fechamento</msg>
+<msg time="2025-11-06T13:42:37.368479" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:37.369473" level="INFO">Locator 'Abertura / Fechamento' produced matcher: MatchObject(locators=[('Name', 'Abertura / Fechamento', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:37.614017" level="INFO">Returning element: WindowsElement(item=&lt;MenuItemControl ClassName='' AutomationId=133 Rect=(359,56,628,84)[269x28] Name='Abertura / Fechamento' Handle=0x0(0)&gt;, locator='Abertura / Fechamento', name='Abertura / Fechamento', automation_id='133', control_type='MenuItemControl', class_name='', left=359, right=628, top=56, bottom=84, width=269, height=28, xcenter=493, ycenter=70)</msg>
+<arg>Abertura / Fechamento</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:37.361915" elapsed="0.844117"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:28.065397" elapsed="10.140635"/>
+</branch>
+<status status="PASS" start="2025-11-06T13:42:28.065397" elapsed="10.140635"/>
+</if>
+<status status="PASS" start="2025-11-06T13:42:25.727646" elapsed="12.480925"/>
+</kw>
+<kw name="Abrir Caixa" owner="BaseKeywordsDesktop">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:38.727131" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:38.210585" elapsed="0.517137"/>
+</kw>
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:38.728797" level="INFO">Getting element with locator: Abrir Caixa</msg>
+<msg time="2025-11-06T13:42:38.734059" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:38.735066" level="INFO">Locator 'Abrir Caixa' produced matcher: MatchObject(locators=[('Name', 'Abrir Caixa', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:39.030761" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='TBitBtn' AutomationId=3607062 Rect=(915,335,1150,380)[235x45] Name='Abrir Caixa' Handle=0x370A16(3607062)&gt;, locator='Abrir Caixa', name='Abrir Caixa', automation_id='3607062', control_type='ButtonControl', class_name='TBitBtn', left=915, right=1150, top=335, bottom=380, width=235, height=45, xcenter=1032, ycenter=357)</msg>
+<arg>Abrir Caixa</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:38.728797" elapsed="0.882438"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:39.611235" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:39.611235" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:39.619087" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:39.611235" elapsed="0.105645"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:38.208571" elapsed="1.508309"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:23.239229" elapsed="16.477651"/>
+</kw>
+<arg>${nome_exe}</arg>
+<status status="PASS" start="2025-11-06T13:42:04.004128" elapsed="35.712752"/>
+</kw>
+<test id="s1-t1" name="Cenário 5: Fechamento dos caixas e validar a geração da receita (módulo financeiro)" line="49">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-06T13:42:39.729065" level="INFO">${nome_print} = Fechamento dos caixas e validar a geração da receita</msg>
+<var>${nome_print}</var>
+<arg>Fechamento dos caixas e validar a geração da receita</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-06T13:42:39.727541" elapsed="0.001524"/>
+</kw>
+<kw name="Dado que abri o caixa operador E realizei uma venda" owner="BDDKeywordsDesktop">
+<kw name="Dado que estou na tela do caixa operador" owner="BDDKeywordsDesktop">
+<kw name="Ir para:" owner="BaseKeywordsDesktop">
+<kw name="Cadastros" owner="BaseKeywordsDesktop">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:40.252497" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:39.745416" elapsed="0.507621"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:40.254704" level="INFO">Pressing keys: Key.alt</msg>
+<arg>Alt</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.254704" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:40.254704" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.254704" elapsed="0.100630"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:39.742628" elapsed="0.612706"/>
+</kw>
+<kw name="Repetidor de teclas" owner="BaseKeywordsDesktop">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:40.469490" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.363328" elapsed="0.106971"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:40.472397" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.470891" elapsed="0.005136"/>
+</kw>
+<var name="${quantidade_de_clicks}">1</var>
+<status status="PASS" start="2025-11-06T13:42:40.363328" elapsed="0.112699"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:40.587072" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.479496" elapsed="0.108151"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:40.587647" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.587647" elapsed="0.004808"/>
+</kw>
+<var name="${quantidade_de_clicks}">2</var>
+<status status="PASS" start="2025-11-06T13:42:40.478485" elapsed="0.113970"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:40.702627" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.592455" elapsed="0.111208"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:40.705292" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.705292" elapsed="0.003962"/>
+</kw>
+<var name="${quantidade_de_clicks}">3</var>
+<status status="PASS" start="2025-11-06T13:42:40.592455" elapsed="0.116799"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:40.820388" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.713023" elapsed="0.108100"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:40.822259" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.822259" elapsed="0.000000"/>
+</kw>
+<var name="${quantidade_de_clicks}">4</var>
+<status status="PASS" start="2025-11-06T13:42:40.711492" elapsed="0.110767"/>
+</iter>
+<var>${quantidade_de_clicks}</var>
+<value>1</value>
+<value>${quantidade_de_clicks}+1</value>
+<status status="PASS" start="2025-11-06T13:42:40.362207" elapsed="0.466803"/>
+</for>
+<arg>right</arg>
+<arg>${sessao}</arg>
+<status status="PASS" start="2025-11-06T13:42:40.355334" elapsed="0.473676"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:41.835993" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:40.831018" elapsed="1.005893"/>
+</kw>
+<if>
+<branch type="IF" condition="$sub_sessão1 != None">
+<kw name="Click" owner="RPA.Windows">
+<arg>${sub_sessão1}</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="NOT RUN" start="2025-11-06T13:42:41.851753" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="$sub_sessão2 != None">
+<kw name="Click" owner="RPA.Windows">
+<arg>${sub_sessão2}</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="NOT RUN" start="2025-11-06T13:42:41.853565" elapsed="0.001005"/>
+</kw>
+<if>
+<branch type="IF" condition="$sub_sessão3 != None">
+<kw name="Click" owner="RPA.Windows">
+<arg>${sub_sessão3}</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="NOT RUN" start="2025-11-06T13:42:41.855589" elapsed="0.000986"/>
+</kw>
+<status status="NOT RUN" start="2025-11-06T13:42:41.854570" elapsed="0.002005"/>
+</branch>
+<status status="NOT RUN" start="2025-11-06T13:42:41.854570" elapsed="0.002005"/>
+</if>
+<status status="NOT RUN" start="2025-11-06T13:42:41.851753" elapsed="0.004822"/>
+</branch>
+<status status="NOT RUN" start="2025-11-06T13:42:41.851753" elapsed="0.006515"/>
+</if>
+<status status="NOT RUN" start="2025-11-06T13:42:41.837520" elapsed="0.020748"/>
+</branch>
+<status status="PASS" start="2025-11-06T13:42:41.837520" elapsed="0.020748"/>
+</if>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:42.869807" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:41.858268" elapsed="1.012649"/>
+</kw>
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:42.871921" level="INFO">Getting element with locator: Abertura / Fechamento</msg>
+<msg time="2025-11-06T13:42:42.878804" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:42.878804" level="INFO">Locator 'Abertura / Fechamento' produced matcher: MatchObject(locators=[('Name', 'Abertura / Fechamento', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:43.085323" level="INFO">Returning element: WindowsElement(item=&lt;MenuItemControl ClassName='' AutomationId=133 Rect=(359,56,628,84)[269x28] Name='Abertura / Fechamento' Handle=0x0(0)&gt;, locator='Abertura / Fechamento', name='Abertura / Fechamento', automation_id='133', control_type='MenuItemControl', class_name='', left=359, right=628, top=56, bottom=84, width=269, height=28, xcenter=493, ycenter=70)</msg>
+<arg>${janela}</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:42.871921" elapsed="0.798765"/>
+</kw>
+<kw name="Get Text" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:43.670686" level="INFO">Getting element with locator: Controle de Caixa (1)</msg>
+<msg time="2025-11-06T13:42:43.670686" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:43.679056" level="INFO">Locator 'Controle de Caixa (1)' produced matcher: MatchObject(locators=[('Name', 'Controle de Caixa (1)', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:43.980212" level="INFO">Returning element: WindowsElement(item=&lt;WindowControl ClassName='TFrmControleCaixa' AutomationId=65280 Rect=(240,69,1165,753)[925x684] Name='Controle de Caixa (1)' Handle=0x78049A(7865498)&gt;, locator='Controle de Caixa (1)', name='Controle de Caixa (1)', automation_id='65280', control_type='WindowControl', class_name='TFrmControleCaixa', left=240, right=1165, top=69, bottom=753, width=925, height=684, xcenter=702, ycenter=411)</msg>
+<arg>${nome_tela}</arg>
+<tag>action</tag>
+<doc>Get text from Control element defined by the locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:43.670686" elapsed="0.312030"/>
+</kw>
+<arg>Abertura / Fechamento</arg>
+<arg>4</arg>
+<arg>Controle de Caixa (1)</arg>
+<status status="PASS" start="2025-11-06T13:42:39.738775" elapsed="4.243941"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:39.733617" elapsed="4.251118"/>
+</kw>
+<kw name="Quando abro o caixa operador" owner="BDDKeywordsDesktop">
+<kw name="Fechar caixa caso esteja aberto" owner="BaseKeywordsDesktop">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:46.002614" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:43.989758" elapsed="2.014064"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Get Text" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:46.003822" level="INFO">Getting element with locator: Fechar Caixa</msg>
+<msg time="2025-11-06T13:42:46.003822" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:46.003822" level="INFO">Locator 'Fechar Caixa' produced matcher: MatchObject(locators=[('Name', 'Fechar Caixa', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:46.319192" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='TBitBtn' AutomationId=3672598 Rect=(915,690,1150,735)[235x45] Name='Fechar Caixa' Handle=0x380A16(3672598)&gt;, locator='Fechar Caixa', name='Fechar Caixa', automation_id='3672598', control_type='ButtonControl', class_name='TBitBtn', left=915, right=1150, top=690, bottom=735, width=235, height=45, xcenter=1032, ycenter=712)</msg>
+<arg>Fechar Caixa</arg>
+<tag>action</tag>
+<doc>Get text from Control element defined by the locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:46.003822" elapsed="0.316653"/>
+</kw>
+<msg time="2025-11-06T13:42:46.320475" level="INFO">${caixa_aberto} = ('PASS', 'Fechar Caixa')</msg>
+<var>${caixa_aberto}</var>
+<arg>RPA.Windows.Get Text</arg>
+<arg>Fechar Caixa</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-11-06T13:42:46.003822" elapsed="0.318896"/>
+</kw>
+<if>
+<branch type="IF" condition="${caixa_aberto} != (\'FAIL\', &quot;ElementNotFound: Element not found with locator \'Fechar Caixa\'&quot;)">
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:46.322718" level="INFO">Getting element with locator: Fechar Caixa</msg>
+<msg time="2025-11-06T13:42:46.328936" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:46.330040" level="INFO">Locator 'Fechar Caixa' produced matcher: MatchObject(locators=[('Name', 'Fechar Caixa', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:46.603725" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='TBitBtn' AutomationId=3672598 Rect=(915,690,1150,735)[235x45] Name='Fechar Caixa' Handle=0x380A16(3672598)&gt;, locator='Fechar Caixa', name='Fechar Caixa', automation_id='3672598', control_type='ButtonControl', class_name='TBitBtn', left=915, right=1150, top=690, bottom=735, width=235, height=45, xcenter=1032, ycenter=712)</msg>
+<arg>Fechar Caixa</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:46.322718" elapsed="0.896610"/>
+</kw>
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:47.222320" level="INFO">Getting element with locator: Sim</msg>
+<msg time="2025-11-06T13:42:47.222320" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:47.222320" level="INFO">Locator 'Sim' produced matcher: MatchObject(locators=[('Name', 'Sim', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:47.403665" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='Button' AutomationId=6 Rect=(920,591,1014,620)[94x29] Name='Sim' Handle=0xCE0394(13501332)&gt;, locator='Sim', name='Sim', automation_id='6', control_type='ButtonControl', class_name='Button', left=920, right=1014, top=591, bottom=620, width=94, height=29, xcenter=967, ycenter=605)</msg>
+<arg>Sim</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:47.220313" elapsed="0.781833"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:51.019756" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:48.004161" elapsed="3.016608"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:51.020769" level="INFO">Pressing keys: Key.esc</msg>
+<arg>Esc</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:51.020769" elapsed="0.002752"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:54.035778" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:51.023521" elapsed="3.012257"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:54.037047" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:54.037047" elapsed="0.002412"/>
+</kw>
+<kw name="Caixa Operador" owner="BaseKeywordsDesktop">
+<kw name="Cadastros" owner="BaseKeywordsDesktop">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:54.552160" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:54.041928" elapsed="0.511404"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:54.553332" level="INFO">Pressing keys: Key.alt</msg>
+<arg>Alt</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:54.553332" elapsed="0.002993"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:54.558787" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:54.556325" elapsed="0.113176"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:54.041928" elapsed="0.629170"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:55.186233" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:54.671098" elapsed="0.516181"/>
+</kw>
+<kw name="Repetidor de teclas" owner="BaseKeywordsDesktop">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:55.301859" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:55.187279" elapsed="0.115469"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:55.303300" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:55.303300" elapsed="0.002644"/>
+</kw>
+<var name="${quantidade_de_clicks}">1</var>
+<status status="PASS" start="2025-11-06T13:42:55.187279" elapsed="0.121192"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:55.418769" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:55.308471" elapsed="0.111427"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:55.419898" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:55.419898" elapsed="0.000000"/>
+</kw>
+<var name="${quantidade_de_clicks}">2</var>
+<status status="PASS" start="2025-11-06T13:42:55.308471" elapsed="0.111427"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:55.535351" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:55.427148" elapsed="0.108831"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:55.536547" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:55.536547" elapsed="0.000000"/>
+</kw>
+<var name="${quantidade_de_clicks}">3</var>
+<status status="PASS" start="2025-11-06T13:42:55.419898" elapsed="0.116649"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:55.652074" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:55.543204" elapsed="0.109519"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:55.654318" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:55.653729" elapsed="0.000589"/>
+</kw>
+<var name="${quantidade_de_clicks}">4</var>
+<status status="PASS" start="2025-11-06T13:42:55.543204" elapsed="0.111114"/>
+</iter>
+<var>${quantidade_de_clicks}</var>
+<value>1</value>
+<value>${quantidade_de_clicks}+1</value>
+<status status="PASS" start="2025-11-06T13:42:55.187279" elapsed="0.467039"/>
+</for>
+<arg>right</arg>
+<arg>4</arg>
+<status status="PASS" start="2025-11-06T13:42:55.187279" elapsed="0.467039"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:54.041928" elapsed="1.612390"/>
+</kw>
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:55.663098" level="INFO">Getting element with locator: Abertura / Fechamento</msg>
+<msg time="2025-11-06T13:42:55.663098" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:55.669921" level="INFO">Locator 'Abertura / Fechamento' produced matcher: MatchObject(locators=[('Name', 'Abertura / Fechamento', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:55.936475" level="INFO">Returning element: WindowsElement(item=&lt;MenuItemControl ClassName='' AutomationId=133 Rect=(359,56,628,84)[269x28] Name='Abertura / Fechamento' Handle=0x0(0)&gt;, locator='Abertura / Fechamento', name='Abertura / Fechamento', automation_id='133', control_type='MenuItemControl', class_name='', left=359, right=628, top=56, bottom=84, width=269, height=28, xcenter=493, ycenter=70)</msg>
+<arg>Abertura / Fechamento</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:55.654318" elapsed="0.880594"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:46.322718" elapsed="10.213198"/>
+</branch>
+<status status="PASS" start="2025-11-06T13:42:46.322718" elapsed="10.213800"/>
+</if>
+<status status="PASS" start="2025-11-06T13:42:43.987757" elapsed="12.548761"/>
+</kw>
+<kw name="Abrir Caixa" owner="BaseKeywordsDesktop">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:57.050554" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:56.536518" elapsed="0.514036"/>
+</kw>
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:57.053170" level="INFO">Getting element with locator: Abrir Caixa</msg>
+<msg time="2025-11-06T13:42:57.053170" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:57.053170" level="INFO">Locator 'Abrir Caixa' produced matcher: MatchObject(locators=[('Name', 'Abrir Caixa', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:57.353268" level="INFO">Returning element: WindowsElement(item=&lt;ButtonControl ClassName='TBitBtn' AutomationId=10094362 Rect=(915,335,1150,380)[235x45] Name='Abrir Caixa' Handle=0x9A071A(10094362)&gt;, locator='Abrir Caixa', name='Abrir Caixa', automation_id='10094362', control_type='ButtonControl', class_name='TBitBtn', left=915, right=1150, top=335, bottom=380, width=235, height=45, xcenter=1032, ycenter=357)</msg>
+<arg>Abrir Caixa</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:57.052610" elapsed="0.883271"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:57.937519" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:57.937519" elapsed="0.002624"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:57.940143" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:57.940143" elapsed="0.114112"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:56.536518" elapsed="1.520089"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:43.984735" elapsed="14.071872"/>
+</kw>
+<kw name="Dado que realizei uma venda" owner="BDDKeywordsDesktop">
+<kw name="Ir Para Emissão de Bilhetes" owner="BaseKeywordsDesktop">
+<kw name="Cadastros" owner="BaseKeywordsDesktop">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:58.567750" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:58.064638" elapsed="0.503112"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:58.571397" level="INFO">Pressing keys: Key.alt</msg>
+<arg>Alt</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:58.569800" elapsed="0.002198"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:58.574531" level="INFO">Pressing keys: Key.enter</msg>
+<arg>Enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:58.573515" elapsed="0.112877"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:58.062630" elapsed="0.625367"/>
+</kw>
+<kw name="Repetidor de teclas" owner="BaseKeywordsDesktop">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:42:58.801709" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:58.688555" elapsed="0.113954"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:42:58.805195" level="INFO">Pressing keys: Key.right</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:42:58.803175" elapsed="0.004047"/>
+</kw>
+<var name="${quantidade_de_clicks}">1</var>
+<status status="PASS" start="2025-11-06T13:42:58.688555" elapsed="0.118667"/>
+</iter>
+<var>${quantidade_de_clicks}</var>
+<value>1</value>
+<value>${quantidade_de_clicks}+1</value>
+<status status="PASS" start="2025-11-06T13:42:58.688555" elapsed="0.118667"/>
+</for>
+<arg>right</arg>
+<arg>1</arg>
+<status status="PASS" start="2025-11-06T13:42:58.688555" elapsed="0.121185"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click" owner="RPA.Windows">
+<msg time="2025-11-06T13:42:58.814399" level="INFO">Getting element with locator: Emissão de Bilhetes</msg>
+<msg time="2025-11-06T13:42:58.819199" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:42:58.820207" level="INFO">Locator 'Emissão de Bilhetes' produced matcher: MatchObject(locators=[('Name', 'Emissão de Bilhetes', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:42:59.019144" level="INFO">Returning element: WindowsElement(item=&lt;MenuItemControl ClassName='' AutomationId=68 Rect=(86,56,470,84)[384x28] Name='Emissão de Bilhetes' Handle=0x0(0)&gt;, locator='Emissão de Bilhetes', name='Emissão de Bilhetes', automation_id='68', control_type='MenuItemControl', class_name='', left=86, right=470, top=56, bottom=84, width=384, height=28, xcenter=278, ycenter=70)</msg>
+<arg>Emissão de Bilhetes</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="PASS" start="2025-11-06T13:42:58.810273" elapsed="0.776288"/>
+</kw>
+<arg>RPA.Windows.Click</arg>
+<arg>Emissão de Bilhetes</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-11-06T13:42:58.810273" elapsed="0.776288"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:58.810273" elapsed="0.777795"/>
+</branch>
+<branch type="EXCEPT">
+<pattern>Erro:*</pattern>
+<kw name="Repetidor de teclas" owner="BaseKeywordsDesktop">
+<arg>right</arg>
+<arg>1</arg>
+<status status="NOT RUN" start="2025-11-06T13:42:59.590106" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="RPA.Windows">
+<arg>Emissão de Bilhetes</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<status status="NOT RUN" start="2025-11-06T13:42:59.590106" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-11-06T13:42:59.588068" elapsed="0.002038"/>
+</branch>
+<status status="PASS" start="2025-11-06T13:42:58.810273" elapsed="0.779833"/>
+</try>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:04.600936" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:42:59.590106" elapsed="5.010830"/>
+</kw>
+<kw name="Get Text" owner="RPA.Windows">
+<msg time="2025-11-06T13:43:04.602768" level="INFO">Getting element with locator: Emissão de Bilhetes (1)</msg>
+<msg time="2025-11-06T13:43:04.608909" level="INFO">Resulted root element: WindowsElement(item=&lt;PaneControl ClassName='#32769' AutomationId= Rect=(0,0,1920,1080)[1920x1080] Name='Área de Trabalho 1' Handle=0x1000C(65548)&gt;, locator=None, name='Área de Trabalho 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg time="2025-11-06T13:43:04.609973" level="INFO">Locator 'Emissão de Bilhetes (1)' produced matcher: MatchObject(locators=[('Name', 'Emissão de Bilhetes (1)', 0)], _classes=set(), max_level=0)</msg>
+<msg time="2025-11-06T13:43:04.885986" level="INFO">Returning element: WindowsElement(item=&lt;WindowControl ClassName='TFrmBcaEmissaoBilhetesMod2' AutomationId=65280 Rect=(-10,69,1930,1005)[1940x936] Name='Emissão de Bilhetes (1)' Handle=0x8E0928(9308456)&gt;, locator='Emissão de Bilhetes (1)', name='Emissão de Bilhetes (1)', automation_id='65280', control_type='WindowControl', class_name='TFrmBcaEmissaoBilhetesMod2', left=-10, right=1930, top=69, bottom=1005, width=1940, height=936, xcenter=960, ycenter=537)</msg>
+<arg>Emissão de Bilhetes (1)</arg>
+<tag>action</tag>
+<doc>Get text from Control element defined by the locator.</doc>
+<status status="PASS" start="2025-11-06T13:43:04.602768" elapsed="0.291096"/>
+</kw>
+<status status="PASS" start="2025-11-06T13:42:58.060624" elapsed="6.833240"/>
+</kw>
+<kw name="Selecionar o bilhete" owner="BaseKeywordsDesktop">
+<kw name="Escrever para consultar" owner="BaseKeywordsDesktop">
+<kw name="Type Text" owner="RPA.Desktop">
+<arg>${texto}</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="PASS" start="2025-11-06T13:43:04.898344" elapsed="0.012195"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:05.918128" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:43:04.910539" elapsed="1.008247"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:43:05.919292" level="INFO">Pressing keys: Key.enter</msg>
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:43:05.919292" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:06.934598" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:43:05.919292" elapsed="1.016112"/>
+</kw>
+<arg>${bilhete}</arg>
+<status status="PASS" start="2025-11-06T13:43:04.898344" elapsed="2.037665"/>
+</kw>
+<kw name="Escrever para consultar" owner="BaseKeywordsDesktop">
+<kw name="Type Text" owner="RPA.Desktop">
+<arg>${texto}</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="PASS" start="2025-11-06T13:43:06.938015" elapsed="0.007414"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:07.951526" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:43:06.945429" elapsed="1.007162"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:43:07.953560" level="INFO">Pressing keys: Key.enter</msg>
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:43:07.953560" elapsed="0.002655"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:08.967581" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:43:07.958740" elapsed="1.008841"/>
+</kw>
+<arg>${categoria}</arg>
+<status status="PASS" start="2025-11-06T13:43:06.936009" elapsed="2.032636"/>
+</kw>
+<kw name="Repetidor de teclas" owner="BaseKeywordsDesktop">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:09.084838" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:43:08.971369" elapsed="0.114541"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:43:09.087501" level="INFO">Pressing keys: Key.enter</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.086431" elapsed="0.001070"/>
+</kw>
+<var name="${quantidade_de_clicks}">1</var>
+<status status="PASS" start="2025-11-06T13:43:08.971369" elapsed="0.116132"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:09.201284" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.093550" elapsed="0.108865"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:43:09.204440" level="INFO">Pressing keys: Key.enter</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.203421" elapsed="0.001019"/>
+</kw>
+<var name="${quantidade_de_clicks}">2</var>
+<status status="PASS" start="2025-11-06T13:43:09.091544" elapsed="0.115922"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:09.317576" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.208487" elapsed="0.110048"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:43:09.320021" level="INFO">Pressing keys: Key.enter</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.319557" elapsed="0.000464"/>
+</kw>
+<var name="${quantidade_de_clicks}">3</var>
+<status status="PASS" start="2025-11-06T13:43:09.207466" elapsed="0.112555"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:09.434384" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.325745" elapsed="0.109494"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:43:09.436419" level="INFO">Pressing keys: Key.enter</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.436419" elapsed="0.000000"/>
+</kw>
+<var name="${quantidade_de_clicks}">4</var>
+<status status="PASS" start="2025-11-06T13:43:09.324718" elapsed="0.111701"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:09.550783" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.436419" elapsed="0.114364"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:43:09.552532" level="INFO">Pressing keys: Key.enter</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.552532" elapsed="0.003021"/>
+</kw>
+<var name="${quantidade_de_clicks}">5</var>
+<status status="PASS" start="2025-11-06T13:43:09.436419" elapsed="0.119134"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-06T13:43:09.669210" level="INFO">Slept 100 milliseconds.</msg>
+<arg>${sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.559005" elapsed="0.110710"/>
+</kw>
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:43:09.670300" level="INFO">Pressing keys: Key.enter</msg>
+<arg>${tecla}</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="PASS" start="2025-11-06T13:43:09.670300" elapsed="0.003307"/>
+</kw>
+<var name="${quantidade_de_clicks}">6</var>
+<status status="PASS" start="2025-11-06T13:43:09.557984" elapsed="0.115623"/>
+</iter>
+<var>${quantidade_de_clicks}</var>
+<value>1</value>
+<value>${quantidade_de_clicks}+1</value>
+<status status="PASS" start="2025-11-06T13:43:08.969268" elapsed="0.704339"/>
+</for>
+<arg>enter</arg>
+<arg>6</arg>
+<status status="PASS" start="2025-11-06T13:43:08.969268" elapsed="0.704339"/>
+</kw>
+<arg>5875</arg>
+<arg>4321</arg>
+<status status="PASS" start="2025-11-06T13:43:04.893864" elapsed="4.779743"/>
+</kw>
+<kw name="Finalizar compra" owner="BaseKeywordsDesktop">
+<kw name="Press Keys" owner="RPA.Desktop">
+<msg time="2025-11-06T13:43:09.673607" level="INFO">Pressing keys: Key.f5</msg>
+<arg>F5</arg>
+<doc>

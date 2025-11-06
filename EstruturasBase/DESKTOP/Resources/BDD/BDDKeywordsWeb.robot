@@ -29,12 +29,18 @@ Dado que estou na tela de preço e disponibilidade
 
 Dado que estou na tela de Exceções de Preço e Disponibilidade
     [Arguments]    ${numero_bilhete}
-    Sleep          2s
-    Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
-    Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada     500
-    Criar tabela de disponibilidade     ${numero_bilhete}
-    @{ano_mes_dia}=  Get Time	year month day 
-    Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
+    IF    ${numero_bilhete} == 6491
+        Colocar o bilhete no e-commerce    6491    2
+        Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+        Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada     500
+        Criar tabela de disponibilidade     ${numero_bilhete}
+        @{ano_mes_dia}=  Get Time	year month day 
+        Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
+    ELSE
+        Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+        Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]     
+    END
+    
     
 Dado que estou na tela de emissão de bilhetes
     [Arguments]    ${numero_bilhete}
@@ -162,13 +168,13 @@ Então valido se o bilhete foi criado corretamente
         Fail    O Bilhete não foi cadastrado com sucesso, ou não integrou na bilheteria.
     END
     Sleep                    1s
-    ${numero_bilhete}=    Set Variable    ${codigo_e_nome[0]}
-    Set Suite Variable    ${numero_bilhete}
+    ${numero_bilheteColetado}=    Set Variable    ${codigo_e_nome[0]}
+    Set Suite Variable    ${numero_bilhete}       ${numero_bilheteColetado}   
     RETURN    ${codigo_e_nome[0]}
     
 
 Então valido se a disponibilidade integrou corretamente  
-    [Arguments]    ${numero_bilhete}=6491    ${qtd_vagas}=1000
+    [Arguments]    ${numero_bilhete}    ${qtd_vagas}=1000
     Iniciar sessao    cde_win_bca_front
     Ir Para Emissão de Bilhetes
     ${qtd_vagas_bilhete}=    Selecionar o bilhete e retornar quantidade de vagas (categoria)   ${numero_bilhete}    1
@@ -196,12 +202,12 @@ Então valido o bloqueio de horário no E-commerce e na bilheteria
     [Arguments]    ${numero_bilhete}    
     Abro o E-commerce
     Pesquisar bilhete no e-commerce   LB-42 Cadastro e alteração de Programação de Horario
-    Sleep             4s
+    Sleep             2s
     ${bloqueio}=      SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span
     Should Contain    ${bloqueio}    Esgotado
-    Iniciar sessao    cde_win_bcs_frontR40
+    Iniciar sessao    cde_win_bca_front
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete   ${numero_bilhete}    4321
+    Selecionar o bilhete   ${numero_bilhete}    4651
     RPA.Desktop.Press Keys           F5
     RPA.Windows.Get Text             Bilhete com configuração por horário mas horário não definido.
     RPA.Desktop.Press Keys           Enter

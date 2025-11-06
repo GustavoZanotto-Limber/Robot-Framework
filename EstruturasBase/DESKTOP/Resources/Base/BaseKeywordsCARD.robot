@@ -62,6 +62,7 @@ Caso aconteca erro WEB
         Run Keyword If Test Failed    Encerrar Tudo
         Run Keyword If Test Failed    Fechar navegador
         Run Keyword If Test Failed    Abrir CARD e logar
+        
     
 Mudar Página
     [Arguments]    ${url}
@@ -134,7 +135,8 @@ Adicionar Categoria
     [Arguments]        ${nome_categoria}=Categoria 1
     Navegar configuração de bilhete    2
     Navegar Configurações de venda > sessões    1
-    Clicar no Elemento                            xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/title-btn-add/div/button
+    Sleep                                         1s
+    Clicar no Botão                               xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/title-btn-add/div/button
     Tentar Clicar Em Um Dos Elementos             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[1]/mat-form-field/div[1]/div/div[2]    xpath:/html/body/div[2]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[1]/mat-form-field/div[1]/div/div[2]
     ${contador}=    Set Variable    0
     WHILE    ${contador} < 100 
@@ -164,13 +166,14 @@ Criar Temporada
     [Arguments]    ${codigo_temporada}=1    ${nome_temporada}=Temporada 1    ${vermelho}=255    ${verde}=0    ${azul}=0
     # Navegar configuração de bilhete    6
     Navegar configuração de bilhete    7
+    sleep                     1s
     Clicar no Botão           xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[1]/title-btn-add/div/button 
     Inserir Texto             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/mat-dialog-content/mat-tab-group/div/mat-tab-body[1]/div/form/mat-form-field[1]/div[1]/div/div[2]/input    ${codigo_temporada}
     Inserir Texto             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/mat-dialog-content/mat-tab-group/div/mat-tab-body[1]/div/form/mat-form-field[2]/div[1]/div/div[2]/input    ${nome_temporada}
     Clicar no Elemento        xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/mat-dialog-content/mat-tab-group/div/mat-tab-body[1]/div/form/mat-form-field[3]/div[1]/div/div[2]
     Clicar no Elemento        xpath:/html/body/div[3]/div[4]/div/div/mat-option
     Colocar cor               ${vermelho}    ${verde}    ${azul}    xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/mat-dialog-content/mat-tab-group/div/mat-tab-body[1]/div/form/mat-form-field[4]/div[1]/div/div[2]
-    Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/div[2]/button[2]
+    Clicar no Elemento        xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-temporada/div[2]/button[2]
     sleep                     1s
 
 Pegar codigo e nome do Ultimo Bilhete
@@ -180,7 +183,7 @@ Pegar codigo e nome do Ultimo Bilhete
     ${nome_bilhete}=     SeleniumLibrary.Get Text             xpath:/html/body/app-root/app-pages/div/div/div/lista-bilhetes/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[2]/div/div
     ${nome_e_numero}=    Create List                          ${numero_bilhete}     ${nome_bilhete}
     log   ${nome_e_numero}
-    [Return]    ${nome_e_numero}
+    RETURN    ${nome_e_numero}
 
 Pegar codigo e nome da Ultima Categoria
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/categoria/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]
@@ -342,8 +345,8 @@ Limpar dia do calendário
 
 Criar exceção de disponibilidade
     [Arguments]    ${qtd_vagas}=5
-    ${validador}=              Valida campo               /html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button    Configurar exceções e alta procura
-    IF    ${validador} == 1
+    ${validador}=              Run Keyword And Return Status     Element Should Contain                  xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button/span[2]    Configurar exceções e alta procura
+    IF    ${validador}
         Clicar no Elemento          xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button
     ELSE
         Clicar no Elemento          xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button[2]
@@ -355,40 +358,33 @@ Criar exceção de disponibilidade
     RPA.Desktop.Press Keys     Enter
 
 Criar bloqueio de disponibilidade
-    ${validador}=              Valida campo               /html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button    Configurar exceções e alta procura
-    IF    ${validador} == 1
+    ${validador}=              Run Keyword And Return Status     Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button/span[2]    Configurar exceções e alta procura
+    Log    ${validador}
+    Sleep    2s
+    IF    ${validador}
         Clicar no Elemento          xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button
     ELSE
         Clicar no Elemento          xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button[2]
     END
-    Clicar no Elemento            xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-excecoes/section/table/tbody/tr/td[4]/div/mat-checkbox
-    Inserir Texto                 xpath:/html/body/div[3]/div[4]/div/mat-dialog-container/div/div/app-bloqueio-dialog/div/div[1]/mat-form-field/div[1]/div/div[2]/textarea    Bloqueado pelo Teste Automatizado
-    Sleep                      1s
-    Repetidor de teclas        tab    2
-    Sleep                      1s
-    RPA.Desktop.Press Keys     Enter
+    Clicar no Elemento              xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-excecoes/section/table/tbody/tr/td[4]/div/mat-checkbox
+    Inserir Texto                   xpath:/html/body/div[3]/div[4]/div/mat-dialog-container/div/div/app-bloqueio-dialog/div/div[1]/mat-form-field/div[1]/div/div[2]/textarea    Bloqueado pelo Teste Automatizado
+    Sleep                           1s
+    Repetidor de teclas             tab    2
+    Sleep                           1s
+    RPA.Desktop.Press Keys          Enter
     Clicar no Elemento              xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/app-excecoes/mat-dialog-actions/button[2]
-    
-Valida campo
-    [Arguments]   ${xpath}   ${texto_esperado}    
-    ${texto_obtido}=    Run Keyword and ignore error    SeleniumLibrary.Get Text    xpath:${xpath}
-    IF    $texto_esperado == $texto_obtido[1]
-        RETURN    1
-    ELSE
-        RETURN    0
-    END
 
 Colocar o bilhete no e-commerce
-    [Arguments]     ${numero_bilhete}    ${grupo}    
-    Mudar Página    https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=349
+    [Arguments]          ${numero_bilhete}    ${grupo}    
+    Mudar Página         https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=349
     Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[4]
     Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[${grupo}]/mat-expansion-panel-header
     Clicar no Botão      xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[${grupo}]/div/div/div/mat-card/div/div[2]/div/button
     Inserir Texto        xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[1]/mat-form-field/div[1]/div/div[2]/input    ${numero_bilhete}
-    Sleep           1s
-    ${ativo}=       Get Element Attribute     xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]/img   style
+    Sleep                1s
+    ${ativo}=            Get Element Attribute     xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]/img   style
     Log    ${ativo}
-    ${resultado}=    Run Keyword and ignore error     Should Be Equal    ${ativo}    opacity 1;
+    ${resultado}=        Run Keyword and ignore error     Should Be Equal    ${ativo}    opacity 1;
     Log    ${resultado}
     IF    ${resultado} == ('FAIL', 'opacity: 0; != opacity 1;') 
         Clicar no Elemento   xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]
@@ -457,9 +453,7 @@ Inativar bilhete
         Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
         Sleep                     6s
     END
-        Retirar bilhete do e-commerce    1    2
-      
-      
+        Run Keyword and Ignore Error    Retirar bilhete do e-commerce    1    2
 
 Retirar Categoria
     [Arguments]        ${numero_categoria}    ${numero_bilhete}
