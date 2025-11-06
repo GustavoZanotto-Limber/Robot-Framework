@@ -20,7 +20,7 @@ ${i}=    0
 #----------------------------------------DADO----------------------------------------
 Dado que realizei uma venda
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete   5875    4321
+    Selecionar o bilhete   6568    4321
     Finalizar compra
 
 Dado que realizei uma venda com convênio

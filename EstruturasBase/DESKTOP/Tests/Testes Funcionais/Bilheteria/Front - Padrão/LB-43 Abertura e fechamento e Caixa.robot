@@ -14,12 +14,7 @@ ${nome_exe}=    cde_win_bca_front
 ${nome_print}
 ${texto_bilhete}
 
-*** Keywords ***
-
-
 *** Test Cases    ***
-
-
 
 Cenário 1: Cadastro e configuração de um novo PDV  
     ${nome_print}=    Set Variable     Cadastro e configuração de um novo PDV
@@ -49,7 +44,7 @@ Cenário 4: Geração e impressão do fechamento de caixa
     [Tags]    Testes_Funcionais    LB-43
     Dado que estou na tela do caixa operador
     ${texto2}=    Quando realizo a impressão do caixa      
-    Então valido se a impressão saiu corretamente 2    ${Caminho_arquivos}    Fechamento_de_Caixa.pdf    Fechamento de Caixa.pdf - WPS Office    ${Caminho_Screenshots}     Fechamento de Caixa    ${texto}    ${texto2}
+    Então valido se a impressão saiu corretamente 2    ${Caminho_arquivos}    Fechamento de Caixa.pdf    Fechamento de Caixa.pdf - WPS Office    ${Caminho_Screenshots}     Fechamento de Caixa    ${texto}    ${texto2}
     
 Cenário 5: Fechamento dos caixas e validar a geração da receita (módulo financeiro)
     ${nome_print}=    Set Variable     Fechamento dos caixas e validar a geração da receita
