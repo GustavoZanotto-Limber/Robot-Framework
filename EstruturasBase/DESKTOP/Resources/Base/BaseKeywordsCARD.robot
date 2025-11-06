@@ -520,7 +520,8 @@ Preencher convênio
     Sleep            2s
     Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form/mat-form-field/div[1]/div/div[2]/mat-select    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form/mat-form-field/div[1]/div/div[2]/mat-select
     sleep            1s
-    ${nome_coletado}=    Tentar coletar texto em um dos Elementos    id:mat-option-1    id:mat-option-2
+    ${nome_coletado}=    Tentar coletar texto em um dos Elementos    id:mat-option-2    xpath:/html/body/div[2]/div[4]/div/div/mat-option/span    
+    Log    ${nome_coletado}
     IF    $nome_convênio == $nome_coletado
         Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[2]/div[4]/div/div/mat-option   xpath:/html/body/div[3]/div[4]/div/div/mat-option
     ELSE
@@ -541,7 +542,8 @@ Tentar coletar texto em um dos Elementos
     [Arguments]    ${xpath_1}    ${xpath_2}
     ${resultado}=    Run Keyword And Ignore Error   Run Keyword and return Status     SeleniumLibrary.get text    ${xpath_1}
     IF    ${resultado[1]}
-        RETURN    ${resultado[1]}
+        ${nome}=    SeleniumLibrary.get text    ${xpath_1}
+        RETURN    ${nome}
     ELSE
         ${texto}=    SeleniumLibrary.get text    ${xpath_2}
         RETURN    ${texto}
