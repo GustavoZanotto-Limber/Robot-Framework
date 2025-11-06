@@ -42,7 +42,7 @@ Encerrar Cenário 4
     ${dia_numero}=    Convert To Integer    ${ano_mes_dia[2]}
     ${amanha}=    Evaluate    ${dia_numero} + 1
     Run Keyword and ignore error    Limpar dia do calendário       ${ano_mes_dia[1]}    ${amanha}
-    Retirar temporada    6422    2
+    Run Keyword and ignore error    Retirar temporada    6422    2
     
 
 *** Test Cases ***
