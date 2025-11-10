@@ -129,8 +129,7 @@ Pesagem Geral
     RPA.Windows.Get Text      Pesagem Geral (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Pesagem Geral (1)    ${Caminho_Screenshots}Pesagem Geral
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Processos Personalizados
     ${nome_print}=     Set Variable     Processos Personalizados
@@ -173,8 +172,7 @@ Pesagem de Descarga - Venda
     RPA.Windows.Get Text      Pesagem Romaneio Descarga - Venda (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Pesagem Romaneio Descarga - Venda (1)    ${Caminho_Screenshots}Pesagem de Descarga - Venda
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Pesagem - Ordem de Carregamento
     ${nome_print}=     Set Variable     Pesagem - Ordem de Carregamento

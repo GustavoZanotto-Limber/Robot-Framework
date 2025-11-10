@@ -268,6 +268,7 @@ Rolar para Cima
 Retirar temporada
     [Arguments]    ${numero_bilhete}    ${numero_temporada}
     Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
+    Sleep    1s
     Navegar configuração de bilhete    7
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[2]/table/tbody/tr[${numero_temporada}]/td[6]/div/button[2]
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
@@ -287,7 +288,6 @@ Preencher dia do calendario
     Clicar no Elemento         xpath:/html/body/div[3]/div[2]/div/div/mat-option[${n°_tabela_dispo}]
     Repetidor de teclas        tab   1
     RPA.Desktop.Press Keys     Enter
-    Sleep    2s
     Clicar no Elemento         xpath:/html/body/div[3]/div[2]/div/div/mat-option[${n°_temporada}]
     Clicar no Botão            xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card/footer/button[2]
     
@@ -306,7 +306,7 @@ Selecionar dia do calendário
        ${dia}=    Convert To Integer    ${dia}
        ${dia_max}=    Evaluate    ${linha}*7
         IF  ${dia} < ${dia_max}
-            FOR    ${coluna}    IN RANGE    0    7   
+            FOR    ${coluna}    IN RANGE    0    8   
                 # Sleep    1s
                 @{dia_calendario}=    Run Keyword And Ignore Error     SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div/section
                 Log    ${dia_calendario[1]}
@@ -314,6 +314,7 @@ Selecionar dia do calendário
                 Log    ${tem_dia}
                 IF    ${tem_dia} == ('PASS', None)
                     Log    Dia incorreto.
+                    Sleep    1s
                 ELSE
                     IF    ${dia_calendario[1]} == ${dia}
                     Clicar no Elemento     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div
@@ -331,6 +332,8 @@ Selecionar dia do calendário
         END      
         IF    ${termina_loop} == 1
             Log    Dia encontrado, saindo do loop
+            ${coluna}=    Set Variable    0
+            ${linha}=    Set Variable    0
             BREAK 
         END
     END
@@ -346,6 +349,8 @@ Limpar dia do calendário
 Criar exceção de disponibilidade
     [Arguments]    ${qtd_vagas}=5
     ${validador}=              Run Keyword And Return Status     Element Should Contain                  xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button/span[2]    Configurar exceções e alta procura
+    Log    ${validador}
+    Sleep    1s
     IF    ${validador}
         Clicar no Elemento          xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button
     ELSE
@@ -670,3 +675,12 @@ Preencher dados central de vendas
     Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[2]/div[2]/div[1]/mat-form-field/div[1]/div/div[2]/input   ${data_nascimento}
     Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[2]/div[2]/div[2]/mat-form-field/div[1]/div/div[2]/input   ${telefone}
     Clicar no Botão   xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[2]/div[3]/custom-button/button
+
+Encerrar Cenário
+    [Arguments]    ${nome_print}    ${Caminho_Screenshots}
+    Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
+    Run Keyword and ignore error    Excluir tabela de preço e disponibilidade    6422
+    Sleep    2s
+    @{ano_mes_dia}=  Get Time	year month day 
+    Run Keyword and ignore error    Limpar dia do calendário           ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
+    Sleep    2s    

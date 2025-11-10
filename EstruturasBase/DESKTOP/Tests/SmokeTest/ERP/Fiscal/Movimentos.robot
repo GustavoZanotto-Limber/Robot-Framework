@@ -83,7 +83,7 @@ Informações > Complementares de ICMS
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     BaseKeywordsDesktop.Screenshot  Informações Complementares ICMS (1)    ${Caminho_Screenshots}Informações/Complementares de ICMS
-    Fechar janela
+    Fechar com Sim
 
 Informações > Obrigações do ICMS a recolher
     ${nome_print}=     Set Variable     Obrigações do ICMS a recolher
@@ -114,8 +114,7 @@ Outros > ICMS > Outros Débitos
     RPA.Windows.Get Text      Outros Débitos ICMS (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Outros Débitos ICMS (1)    ${Caminho_Screenshots}Outros/ICMS/Outros Débitos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > ICMS > Estorno de Créditos
     ${nome_print}=     Set Variable     Estorno de Créditos
@@ -126,8 +125,7 @@ Outros > ICMS > Estorno de Créditos
     RPA.Windows.Get Text      Estorno Créditos ICMS (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Estorno Créditos ICMS (1)    ${Caminho_Screenshots}Outros/ICMS/Estorno de Créditos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > ICMS > Outros Créditos
     ${nome_print}=     Set Variable     Outros Créditos
@@ -138,8 +136,7 @@ Outros > ICMS > Outros Créditos
     RPA.Windows.Get Text      Outros Créditos ICMS (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Outros Créditos ICMS (1)    ${Caminho_Screenshots}Outros/ICMS/Outros Créditos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > ICMS > Estorno de Débitos
     ${nome_print}=     Set Variable     Estorno de Débitos
@@ -150,8 +147,7 @@ Outros > ICMS > Estorno de Débitos
     RPA.Windows.Get Text      Estorno Débitos ICMS (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Estorno Débitos ICMS (1)   ${Caminho_Screenshots}Outros/ICMS/Estorno de Débitos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > ICMS > Específicos > SC
     ${nome_print}=     Set Variable     SC
@@ -163,8 +159,7 @@ Outros > ICMS > Específicos > SC
     RPA.Windows.Get Text      Débitos/Créditos Específicos-SC (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Débitos/Créditos Específicos-SC (1)    ${Caminho_Screenshots}Outros/ICMS/Específicos/SC        
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > ICMS > Específicos > Apuração de Crédito de ICMS - TTD
     ${nome_print}=     Set Variable     Apuração de Crédito de ICMS - TTD
@@ -188,8 +183,7 @@ Outros > ICMS > Deduções
     RPA.Windows.Get Text      Deduções Fiscais (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Deduções Fiscais (1)    ${Caminho_Screenshots}Outros/ICMS/Deduções
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > IPI > Outros Débitos
     ${nome_print}=     Set Variable     Outros Débitos
@@ -200,8 +194,7 @@ Outros > IPI > Outros Débitos
     RPA.Windows.Get Text      Outros Débitos IPI (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Outros Débitos IPI (1)   ${Caminho_Screenshots}Outros/IPI/Outros Débitos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > IPI > Estorno de Créditos
     ${nome_print}=     Set Variable     Estorno de Créditos
@@ -212,8 +205,7 @@ Outros > IPI > Estorno de Créditos
     RPA.Windows.Get Text      Estorno Créditos IPI (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Estorno Créditos IPI (1)   ${Caminho_Screenshots}Outros/IPI/Estorno de Créditos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > IPI > Outros Créditos
     ${nome_print}=     Set Variable     Outros Créditos
@@ -224,8 +216,7 @@ Outros > IPI > Outros Créditos
     RPA.Windows.Get Text      Outros Creditos IPI (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Outros Creditos IPI (1)   ${Caminho_Screenshots}Outros/IPI/Outros Créditos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > IPI > Estorno de Débitos
     ${nome_print}=     Set Variable     Estorno de Débitos
@@ -236,8 +227,7 @@ Outros > IPI > Estorno de Débitos
     RPA.Windows.Get Text      Estorno Débitos IPI (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Estorno Débitos IPI (1)   ${Caminho_Screenshots}Outros/IPI/Estorno de Débitos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > Outras Bases > PIS > Outras Receitas - PIS
     ${nome_print}=     Set Variable     Outras Receitas - PIS
@@ -430,8 +420,7 @@ Outros > PIS/COFINS > Lançamentos
     RPA.Windows.Get Text      Lançamento PIS/COFINS (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Lançamento PIS/COFINS (1)   ${Caminho_Screenshots}Outros/PIS_COFINS/Lançamentos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > PIS/COFINS > Informações > Ajustes Bebidas
     ${nome_print}=     Set Variable     Ajustes Bebidas
@@ -443,8 +432,7 @@ Outros > PIS/COFINS > Informações > Ajustes Bebidas
     RPA.Windows.Get Text      Ajustes Mensais de Bebidas PIS/COFINS (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Ajustes Mensais de Bebidas PIS/COFINS (1)   ${Caminho_Screenshots}Outros/PIS_COFINS/Informações/Ajustes Bebidas
-    Fechar janela
-    RPA.Windows.Click         Sim    
+    Fechar com Sim    
 
 Outros > PIS/COFINS > Informações > Créditos Não Cumulativos
     ${nome_print}=     Set Variable     Créditos Não Cumulativos
@@ -456,8 +444,7 @@ Outros > PIS/COFINS > Informações > Créditos Não Cumulativos
     RPA.Windows.Get Text      Crédito PIS/COFINS Não Cumulativos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Crédito PIS/COFINS Não Cumulativos (1)   ${Caminho_Screenshots}Outros/PIS_COFINS/Informações/Créditos Não Cumulativos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > PIS/COFINS > Lançamento de Crédito do Pis/Cofins
     ${nome_print}=     Set Variable     Lançamento de Crédito do Pis_Cofins
@@ -468,8 +455,7 @@ Outros > PIS/COFINS > Lançamento de Crédito do Pis/Cofins
     RPA.Windows.Get Text      Lançamento de Crédito do Pis/Cofins (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Lançamento de Crédito do Pis/Cofins (1)   ${Caminho_Screenshots}Outros/PIS_COFINS/Lançamento de Crédito do Pis_Cofins
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > PIS/COFINS > Utilização de Crédito de Pis/Cofins
     ${nome_print}=     Set Variable     Utilização de Crédito de Pis_Cofins
@@ -480,8 +466,7 @@ Outros > PIS/COFINS > Utilização de Crédito de Pis/Cofins
     RPA.Windows.Get Text      Lançamentos de Utilização de Créditos do Pis/Cofins (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Lançamentos de Utilização de Créditos do Pis/Cofins (1)   ${Caminho_Screenshots}Outros/PIS_COFINS/Utilização de Crédito de Pis_Cofins
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > PIS/COFINS > Gerar Lançamentos Automáticos
     ${nome_print}=     Set Variable     Gerar Lançamentos Automáticos
@@ -519,8 +504,7 @@ Outros > Exportações > Exportações
     RPA.Windows.Get Text      Informações sobre Exportações (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Informações sobre Exportações (1)          ${Caminho_Screenshots}Outros/Exportações/Exportações
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Outros > Exportações > Saldo de NF's p/ Exportação
     ${nome_print}=     Set Variable     Saldo de NF's p/ Exportação

@@ -90,7 +90,29 @@ Logar no e-commerce
         Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    Z
         Sleep    1s
         RPA.Desktop.Press keys    Backspace
-        RPA.Desktop.Type Text     Zanotto123@
+        RPA.Desktop.Type Text     Z
+        Sleep    0.1s
+        RPA.Desktop.Type Text     a
+        Sleep    0.1s
+        RPA.Desktop.Type Text     n
+        Sleep    0.1s
+        RPA.Desktop.Type Text     o
+        Sleep    0.1s
+        RPA.Desktop.Type Text     t
+        Sleep    0.1s
+        RPA.Desktop.Type Text     t
+        Sleep    0.1s
+        RPA.Desktop.Type Text     t
+        Sleep    0.1s
+        RPA.Desktop.Type Text     o
+        Sleep    0.1s
+        RPA.Desktop.Type Text     1
+        Sleep    0.1s
+        RPA.Desktop.Type Text     2
+        Sleep    0.1s
+        RPA.Desktop.Type Text     3
+        Sleep    0.1s
+        RPA.Desktop.Type Text     @
         Sleep    1s
         RPA.Desktop.Press keys    Enter
     ELSE

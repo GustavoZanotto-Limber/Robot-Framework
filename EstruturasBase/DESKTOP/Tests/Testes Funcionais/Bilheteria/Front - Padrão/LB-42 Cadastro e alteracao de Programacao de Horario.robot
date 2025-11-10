@@ -4,7 +4,7 @@ Resource          ../../../../Resources/Base/BaseKeywordsCARD.robot
 Resource          ../../../../Resources/BDD/BDDKeywordsWeb.robot
 Suite Setup       Abrir CARD e logar 
 Suite Teardown    Inativar bilhete   ${numero_bilhete}    
-Test Teardown     Caso ocorra erro
+Test Teardown     Caso ocorra erro    ${nome_print}
 
 *** Variables ***
 
@@ -17,9 +17,9 @@ ${nome_bilhete}=           LB-42 Cadastro e alteração de Programação de Hora
 *** Keywords ***
 
 Caso ocorra erro
+    [Arguments]    ${nome_print}
     Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
-    Set Suite Variable              ${numero_bilhete}    6491
-
+    Run Keyword if test Failed    Set Suite Variable              ${numero_bilhete}    6491
 
 *** Test Cases    ***
 
@@ -28,7 +28,7 @@ Cenário 1: Cadastro de um bilhete por Horario/Vaga
     [Tags]    Testes_Funcionais    LB-42
     Dado que estou na tela de criação de bilhete
     Quando insiro as informações para um novo cadastro de bilhete 
-    Então valido se o bilhete foi criado corretamente
+    ${numero_bilhete}=    Então valido se o bilhete foi criado corretamente
 
 Cenário 2: Associação de um horario a um bilhete
     ${nome_print}=    Set Variable     Associação de um horario a um bilhete
@@ -38,7 +38,7 @@ Cenário 2: Associação de um horario a um bilhete
     Então valido se a disponibilidade integrou corretamente                  ${numero_bilhete}
 
 Cenário 3: Alteração do saldo de horário com motivo registrado
-    ${nome_print}=    Set Variable     Associação de um horario a um bilhete
+    ${nome_print}=    Set Variable     Alteração do saldo de horário com motivo registrado
     [Tags]    Testes_Funcionais    LB-42
     Dado que estou na tela de Exceções de Preço e Disponibilidade    ${numero_bilhete}
     Quando crio uma Exceção de Disponibilidade para o bilhete

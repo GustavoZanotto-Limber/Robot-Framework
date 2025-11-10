@@ -24,6 +24,7 @@ Estoque Atual
     [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Estoque Atual
+    Sleep    1s
     RPA.Windows.Get Text    Consulta de Itens (1)
     RPA.Windows.Click       Carregar
     BaseKeywordsDesktop.Screenshot  Consulta de Itens (1)    ${Caminho_Screenshots}Estoque Atual

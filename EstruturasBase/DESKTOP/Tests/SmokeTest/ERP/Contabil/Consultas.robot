@@ -146,8 +146,7 @@ Sped Contabil > Conglomerados Econômicos
     RPA.Windows.Get Text      Cadastro de Conglomerados Econômicos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Conglomerados Econômicos (1)     ${Caminho_Screenshots}Sped Contabil/Conglomerados Econômicos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Sped Contabil > Conglomerados Eliminações
     ${nome_print}=     Set Variable     Conglomerados Eliminações

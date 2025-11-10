@@ -28,6 +28,7 @@ Emissão de Boletos
     RPA.Windows.Click         Executar
     BaseKeywordsDesktop.Screenshot    Emissão de Duplicatas/Boletos/Carnês (1)    ${Caminho_Screenshots}Emissão de Boletos
     RPA.Windows.Click         Sim
+    Run Keyword And Ignore Error    RPA.Windows.Click    OK
     Fechar janela
 
 Carteiras de Cobrança
