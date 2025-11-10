@@ -3,7 +3,7 @@ Documentation     Testes regressivos: Programação de Preços
 Resource          ../../../../Resources/Base/BaseKeywordsCARD.robot
 Resource          ../../../../Resources/BDD/BDDKeywordsWeb.robot
 Suite Setup       Abrir CARD e logar 
-Test Teardown     Encerrar Cenário    ${nome_print}
+Test Teardown     Encerrar Cenário    ${nome_print}    ${Caminho_Screenshots}
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-41 Programacao de Preço/ 
@@ -13,35 +13,28 @@ ${numero_bilhete}=  6422
 
 
 *** Keywords ***
-Encerrar Cenário
-    [Arguments]    ${nome_print}
-    Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
-    Run Keyword and ignore error    Excluir tabela de preço e disponibilidade    6422
-    Sleep    2s
-    @{ano_mes_dia}=  Get Time	year month day 
-    Run Keyword and ignore error    Limpar dia do calendário           ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
-    Sleep    2s    
 
 Encerrar Cenário 2
     [Arguments]    ${nome_print}
-    Encerrar Cenário    ${nome_print}
-    Run Keyword And Ignore Error    Retirar Categoria  2  6422
+    Encerrar Cenário    ${nome_print}    ${Caminho_Screenshots}
+    Retirar Categoria  2  6422
     Run Keyword And Ignore Error    Excluir Categoria   ${numero_categoria}
     Sleep    2s
     
 Encerrar cenário 3
     [Arguments]    ${nome_print}
-    Encerrar Cenário    ${nome_print}
+    Encerrar Cenário    ${nome_print}    ${Caminho_Screenshots}
     Run Keyword And Ignore Error    Retirar Categoria  3  6422
     Run Keyword And Ignore Error    Retirar Categoria  2  6422
 
 Encerrar Cenário 4
     [Arguments]    ${nome_print}
-    Encerrar Cenário    ${nome_print}
+    Encerrar Cenário    ${nome_print}    ${Caminho_Screenshots}
     @{ano_mes_dia}=  Get Time	year month day 
     ${dia_numero}=    Convert To Integer    ${ano_mes_dia[2]}
     ${amanha}=    Evaluate    ${dia_numero} + 1
     Run Keyword and ignore error    Limpar dia do calendário       ${ano_mes_dia[1]}    ${amanha}
+    Sleep    3s
     Retirar temporada    6422    2
     
 

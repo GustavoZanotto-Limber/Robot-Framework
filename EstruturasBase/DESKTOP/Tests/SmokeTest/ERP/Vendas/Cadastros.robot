@@ -25,8 +25,7 @@ Terceiros > Cadastro de Terceiros
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros/Cadastro de Terceiros
     RPA.Windows.Click         Cancelar (F3)
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Terceiros > Limite de Crédito
     ${nome_print}=     Set Variable     Limite de Crédito
@@ -247,8 +246,7 @@ Itens > Fabricantes
     RPA.Windows.Get Text      Cadastro de Fabricantes (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Fabricantes (1)    ${Caminho_Screenshots}Itens/Fabricantes
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Itens > Grupo de Inspeção
     ${nome_print}=     Set Variable     Grupo de Inspeção
@@ -259,8 +257,7 @@ Itens > Grupo de Inspeção
     RPA.Windows.Get Text      Cadastro de Grupo Inspeção de Itens (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Grupo Inspeção de Itens (1)    ${Caminho_Screenshots}Itens/Grupo de Inspeção
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Itens > Inspeção de Itens
     ${nome_print}=     Set Variable     Inspeção de Itens
@@ -271,8 +268,7 @@ Itens > Inspeção de Itens
     RPA.Windows.Get Text      Cadastro Inspeção de Itens (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro Inspeção de Itens (1)    ${Caminho_Screenshots}Itens/Inspeção de Itens
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Itens > Marcas
     ${nome_print}=     Set Variable     Marcas
@@ -398,8 +394,7 @@ Itens > Grades
     RPA.Windows.Get Text      Cadastro de Grades (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Grades (1)    ${Caminho_Screenshots}Itens/Grades
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Itens > Tabela de Preços
     ${nome_print}=     Set Variable     Tabela de Preços
@@ -443,8 +438,7 @@ Itens > Descontos para Grãos
     RPA.Windows.Get Text      Cadastro de Descontos/Classificações para Grãos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Descontos/Classificações para Grãos (1)    ${Caminho_Screenshots}Itens/Descontos para Grãos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Itens > Locais de Entrega - Retirada
     ${nome_print}=     Set Variable     Locais de Entrega - Retirada
@@ -455,8 +449,7 @@ Itens > Locais de Entrega - Retirada
     RPA.Windows.Get Text      Locais Entrega - Retirada (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Locais Entrega - Retirada (1)    ${Caminho_Screenshots}Itens/Locais de Entrega - Retirada
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Itens > Safras
     ${nome_print}=     Set Variable     Safras
@@ -478,8 +471,7 @@ Itens > Classificação Gerencial
     RPA.Windows.Get Text      Cadastro de Classificação Gerencial de Itens (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Classificação Gerencial de Itens (1)    ${Caminho_Screenshots}Itens/Classificação Gerencial
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Itens > Tipo de Produto
     ${nome_print}=     Set Variable     Tipo de Produto
@@ -490,8 +482,7 @@ Itens > Tipo de Produto
     RPA.Windows.Get Text      Cadastro Tipo de Produto (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro Tipo de Produto (1)    ${Caminho_Screenshots}Itens/Tipo de Produto
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Itens > Categorias
     ${nome_print}=     Set Variable     Categorias
@@ -920,8 +911,7 @@ Financeiro > Bandeira Cartão
     RPA.Windows.Get Text      Cadastro de Bandeiras Cartão (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Bandeiras Cartão (1)    ${Caminho_Screenshots}Financeiro/Bandeira Cartão
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Financeiro > Autorizadoras de Cartões
     ${nome_print}=     Set Variable     Autorizadoras de Cartões
@@ -932,8 +922,7 @@ Financeiro > Autorizadoras de Cartões
     RPA.Windows.Get Text      Cadastro de Autorizadoras de Cartão (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Autorizadoras de Cartão (1)    ${Caminho_Screenshots}Financeiro/Autorizadoras de Cartões
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 
 Fiscal > Configuração Int. Contabil
@@ -1022,8 +1011,7 @@ Fiscal > Ramo de Atividade
     RPA.Windows.Get Text      Cadastro Ramo de Atividade (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro Ramo de Atividade (1)    ${Caminho_Screenshots}Fiscal/Ramo de Atividade
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Fiscal > Simples Nacional > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária
@@ -1406,8 +1394,7 @@ Fiscal > Tabela Pauta Fiscal
     RPA.Windows.Get Text      Cadastro Tabela Pauta Fiscal (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro Tabela Pauta Fiscal (1)    ${Caminho_Screenshots}Fiscal/Tabela Pauta Fiscal
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
@@ -1429,8 +1416,7 @@ Parâmetros > Estabelecimentos
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Grupos Usuários
     ${nome_print}=     Set Variable     Grupos Usuários
@@ -1441,8 +1427,7 @@ Parâmetros > Grupos Usuários
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupos Usuários
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
@@ -1476,8 +1461,7 @@ Parâmetros > Configurações de E-Mail > Servidores
     RPA.Windows.Get Text      Cadastro de Servidores (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Servidores (1)    ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/Servidores
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Configurações de E-Mail > Contas
     ${nome_print}=     Set Variable     Contas
@@ -1489,8 +1473,7 @@ Parâmetros > Configurações de E-Mail > Contas
     RPA.Windows.Get Text      Cadastro de Contas de e-mail (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Contas de e-mail (1)    ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/Contas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Configurações de E-Mail > Modelos
     ${nome_print}=     Set Variable     Modelos
@@ -1502,8 +1485,7 @@ Parâmetros > Configurações de E-Mail > Modelos
     RPA.Windows.Get Text      Cadastro de Modelo de e-mails (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Modelo de e-mails (1)    ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/Modelos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Configurações de E-Mail > Opções de Envio
     ${nome_print}=     Set Variable     Opções de Envio
@@ -1515,8 +1497,7 @@ Parâmetros > Configurações de E-Mail > Opções de Envio
     RPA.Windows.Get Text      Cadastro de Opções de Envio (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Opções de Envio (1)    ${Caminho_Screenshots}Parâmetros/Configurações de E-Mail/Opções de Envio
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Força de Vendas > Cadastro de Dispositivos
     ${nome_print}=     Set Variable     Cadastro de Dispositivos
@@ -1528,8 +1509,7 @@ Parâmetros > Força de Vendas > Cadastro de Dispositivos
     RPA.Windows.Get Text      Configuração de Dispositivos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Configuração de Dispositivos (1)    ${Caminho_Screenshots}Parâmetros/Força de Vendas/Cadastro de Dispositivos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Força de Vendas > Cadastro de Metas
     ${nome_print}=     Set Variable     Cadastro de Metas
@@ -1541,8 +1521,7 @@ Parâmetros > Força de Vendas > Cadastro de Metas
     RPA.Windows.Get Text      Cadastro de Metas (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Metas (1)    ${Caminho_Screenshots}Parâmetros/Força de Vendas/Cadastro de Metas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Força de Vendas > Metas dos Vendedores
     ${nome_print}=     Set Variable     Metas dos Vendedores
@@ -1557,8 +1536,7 @@ Parâmetros > Força de Vendas > Metas dos Vendedores
     RPA.Desktop.Press Keys    Enter
     BaseKeywordsDesktop.Screenshot    Cadastro das Metas do Vendedor (1)    ${Caminho_Screenshots}Parâmetros/Força de Vendas/Metas dos Vendedores
     RPA.Windows.Click         Confirmar
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
     RPA.Windows.Click         OK
     Fechar Janela
 
@@ -1573,8 +1551,7 @@ Parâmetros > Força de Vendas > Configurações de Tabela de Preço
     RPA.Windows.Click         Região
     RPA.Windows.Click         Carregar todas as Regiões
     BaseKeywordsDesktop.Screenshot    Configuração de Tabela de Preço (1)    ${Caminho_Screenshots}Parâmetros/Força de Vendas/Configurações de Tabela de Preço
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Sistema Web
     ${nome_print}=     Set Variable     Sistema Web
@@ -1585,8 +1562,7 @@ Parâmetros > Sistema Web
     RPA.Windows.Get Text      Cadastro de Login Portal Web (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Login Portal Web (1)    ${Caminho_Screenshots}Parâmetros/Sistema Web
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Cadastro de PDVs
     ${nome_print}=     Set Variable     Cadastro de PDVs
@@ -1597,8 +1573,7 @@ PDV > Cadastro de PDVs
     RPA.Windows.Get Text      Cadastro de PDV (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de PDV (1)    ${Caminho_Screenshots}PDV/Cadastro de PDVs
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Cadastro de Scripts
     ${nome_print}=     Set Variable     Cadastro de Scripts
@@ -1609,8 +1584,7 @@ PDV > Cadastro de Scripts
     RPA.Windows.Get Text      Cadastro de Script PDV (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Script PDV (1)    ${Caminho_Screenshots}PDV/Cadastro de Scripts
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Cadastro de Cupons de Desconto > Cadastro de Cupons de Desconto
     ${nome_print}=     Set Variable     Cadastro de Cupons de Desconto
@@ -1622,8 +1596,7 @@ PDV > Cadastro de Cupons de Desconto > Cadastro de Cupons de Desconto
     RPA.Windows.Get Text      Cadastro de Cupons de Desconto (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Cupons de Desconto (1)    ${Caminho_Screenshots}PDV/Cadastro de Cupons de Desconto/Cadastro de Cupons de Desconto
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Cadastro de Cupons de Desconto > Config. Cupons PDV
     ${nome_print}=     Set Variable     Config. Cupons PDV
@@ -1655,7 +1628,7 @@ PDV > Cadastro de Cupons de Desconto > Config. Cupons Bilheteria
 
 PDV > Configuração para impressão de comandas
     ${nome_print}=     Set Variable     Configuração para impressão de comandas
-    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    O
@@ -1665,31 +1638,29 @@ PDV > Configuração para impressão de comandas
     RPA.Desktop.Press Keys    Enter
     BaseKeywordsDesktop.Screenshot    Configuração de Impressoras (1)    ${Caminho_Screenshots}PDV/Configuração para impressão de comandas
     RPA.Windows.Click         Confirmar
-    Fechar janela
+    Fechar com Sim
 
 PDV > Cadastro de Tipos de Pensão
     ${nome_print}=     Set Variable     Cadastro de Tipos de Pensão
-    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Tipos de Pensão (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Tipos de Pensão (1)    ${Caminho_Screenshots}PDV/Cadastro de Tipos de Pensão
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Motivos de Cancelamento
     ${nome_print}=     Set Variable     Motivos de Cancelamento
-    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest
+    [Tags]   SmokeERP   Vendas   Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         PDV
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Motivo do Cancelamento (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Motivo do Cancelamento (1)    ${Caminho_Screenshots}PDV/Motivos de Cancelamento
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Motivos de Sangria/Suprimento
     ${nome_print}=     Set Variable     Motivos de Sangria_Suprimento
@@ -1700,8 +1671,7 @@ PDV > Motivos de Sangria/Suprimento
     RPA.Windows.Get Text      Cadastro de Motivo de Sangria/Suprimento (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Motivo de Sangria/Suprimento (1)    ${Caminho_Screenshots}PDV/Motivos de Sangria_Suprimento
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Cadastro de Descontos NFC
     ${nome_print}=     Set Variable     Cadastro de Descontos NFC
@@ -1712,8 +1682,7 @@ PDV > Cadastro de Descontos NFC
     RPA.Windows.Get Text      Cadastro de Descontos PDV (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Descontos PDV (1)    ${Caminho_Screenshots}PDV/Cadastro de Descontos NFC
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Tipos de Locação
     ${nome_print}=     Set Variable     Tipos de Locação
@@ -1724,8 +1693,7 @@ PDV > Tipos de Locação
     RPA.Windows.Get Text      Cadastro de Tipo de Guarda Volumes (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Tipo de Guarda Volumes (1)    ${Caminho_Screenshots}PDV/Tipos de Locação
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Cadastro/Configuração Grupos de Locação
     ${nome_print}=     Set Variable     Cadastro_Configuração Grupos de Locação
@@ -1736,8 +1704,7 @@ PDV > Cadastro/Configuração Grupos de Locação
     RPA.Windows.Get Text      Cadastro de Setores/Grupos de Locações (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Setores/Grupos de Locações (1)    ${Caminho_Screenshots}PDV/Cadastro_Configuração Grupos de Locação
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Ambientes para Mesas/Totens/Comandas/Delivery
     ${nome_print}=     Set Variable     Ambientes para Mesas_Totens_Comandas_Delivery
@@ -1747,8 +1714,7 @@ PDV > Ambientes para Mesas/Totens/Comandas/Delivery
     RPA.Desktop.Press Keys    B
     RPA.Windows.Get Text      Cadastro de Ambientes para Mesas/Totens/Comanda/Delivery (1)
     BaseKeywordsDesktop.Screenshot    Cadastro de Ambientes para Mesas/Totens/Comanda/Delivery (1)    ${Caminho_Screenshots}PDV/Ambientes para Mesas_Totens_Comandas_Delivery
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Grades para Mesas/Totens/Comanda
     ${nome_print}=     Set Variable     Grades para Mesas_Totens_Comanda
@@ -1775,8 +1741,7 @@ PDV > Configuração de Ambiente por Horários
     RPA.Desktop.Press Keys    Enter
     BaseKeywordsDesktop.Screenshot    Configuração de Mesas por faixa de horários (1)    ${Caminho_Screenshots}PDV/Configuração de Ambiente por Horários
     RPA.Windows.Click         Confirmar
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Vincular NFC com Mesa/Cartão
     ${nome_print}=     Set Variable     Vincular NFC com Mesa_Cartão
@@ -1799,8 +1764,7 @@ PDV > Tipo de Crédito Interno
     RPA.Windows.Get Text      Cadastro de Tipos de Crédito Interno (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Tipos de Crédito Interno (1)    ${Caminho_Screenshots}PDV/Tipo de Crédito Interno
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Cadastro de Tipos de Cartão para Crédito Interno
     ${nome_print}=     Set Variable     Cadastro de Tipos de Cartão para Crédito Interno
@@ -1811,8 +1775,7 @@ PDV > Cadastro de Tipos de Cartão para Crédito Interno
     RPA.Windows.Get Text      Cadastro de Tipo de Cartão de Crédito Interno (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Tipo de Cartão de Crédito Interno (1)    ${Caminho_Screenshots}PDV/Cadastro de Tipos de Cartão para Crédito Interno
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Taxa de Entrega
     ${nome_print}=     Set Variable     Taxa de Entrega
@@ -1823,8 +1786,7 @@ PDV > Taxa de Entrega
     RPA.Windows.Get Text      Cadastro de Taxa de Entrega (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Taxa de Entrega (1)    ${Caminho_Screenshots}PDV/Taxa de Entrega
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 PDV > Integração Abrahao
     ${nome_print}=     Set Variable     Integração Abrahao

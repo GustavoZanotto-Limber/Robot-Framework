@@ -440,8 +440,7 @@ Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Estados (1)    ${Caminho_Screenshots}Estados
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Municípios
     ${nome_print}=     Set Variable     Municípios

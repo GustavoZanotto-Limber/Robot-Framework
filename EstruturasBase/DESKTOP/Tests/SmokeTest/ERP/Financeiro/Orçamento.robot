@@ -26,8 +26,7 @@ Liberação Orçamentária
     RPA.Windows.Get Text      Liberação Orçamentária (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Liberação Orçamentária (1)    ${Caminho_Screenshots}Liberação Orçamentária
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Previsão Orçamentária
     ${nome_print}=     Set Variable     Previsão Orçamentária
@@ -37,8 +36,7 @@ Previsão Orçamentária
     RPA.Windows.Get Text      Previsão Orçamentária (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Previsão Orçamentária (1)    ${Caminho_Screenshots}Previsão Orçamentária
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Transferência de Orçamentos
     ${nome_print}=     Set Variable     Transferência de Orçamentos

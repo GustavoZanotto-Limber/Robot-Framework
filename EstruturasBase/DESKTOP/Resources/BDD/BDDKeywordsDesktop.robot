@@ -306,6 +306,7 @@ Então valido se a quantidade foi reduzida corretamente
     IF    $numero_bilhete == 6491 
         ${qtd_vagas}=    Set Variable        1000
     END
+    Ir Para Emissão de Bilhetes
     Sleep                         1s
     ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    ${numero_bilhete}    1
     ${qtd_vagas_novo}=            Convert to Integer    ${qtd_vagas_novo_string}

@@ -89,8 +89,8 @@ Consulta de Abastecimentos(PoliFrotas)
     repetidor de teclas     tab      2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot 	Consulta de Abastecidas PoliFrotas (1)                              ${Caminho_Screenshots}Consulta de Abastecimentos(PoliFrotas)
     RPA.Windows.Click       Confirmar
+    BaseKeywordsDesktop.Screenshot 	Consulta de Abastecidas PoliFrotas (1)                              ${Caminho_Screenshots}Consulta de Abastecimentos(PoliFrotas)
     RPA.Windows.Click       Fechar
 
 Consulta de Conhecimento de Transporte
@@ -102,4 +102,5 @@ Consulta de Conhecimento de Transporte
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     BaseKeywordsDesktop.Screenshot 	Consulta de Conhecimento de Transporte (1)                             ${Caminho_Screenshots}Consulta de Conhecimento de Transporte
+    RPA.Windows.Click       Confirmar
     Fechar Janela

@@ -25,8 +25,7 @@ Terceiros > Cadastro de Terceiros
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros/Cadastro de Terceiros
     RPA.Windows.Click         Cancelar (F3)
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Terceiros > Categorias de Terceiros
     ${nome_print}=     Set Variable     Categorias de Terceiros
@@ -269,7 +268,7 @@ Configuração Layout Personalizado
     RPA.Desktop.Press Keys  Enter
     BaseKeywordsDesktop.Screenshot  Configuração Layout Personalizado (1)    ${Caminho_Screenshots}Configuração Layout Personalizado
     RPA.Windows.Click       Confirmar
-    Fechar Janela
+    Fechar com Sim
 
 Tabela de Frete
     ${nome_print}=     Set Variable     Tabela de Frete
@@ -349,8 +348,7 @@ Históricos Contábeis
     RPA.Windows.Get Text      Cadastro de Históricos Contábeis (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Históricos Contábeis (1)    ${Caminho_Screenshots}Históricos Contábeis
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Financeiro > Forma de Pagamento
     ${nome_print}=     Set Variable     Forma de Pagamento
@@ -547,8 +545,7 @@ Fiscal > ICMS > Tabela Tributária - FCP
     RPA.Windows.Get Text      Cadastro da Tabela Tributária FCP (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro da Tabela Tributária FCP (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária - FCP
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Fiscal > PIS > Tabela Tributária
     ${nome_print}=     Set Variable     Tabela Tributária

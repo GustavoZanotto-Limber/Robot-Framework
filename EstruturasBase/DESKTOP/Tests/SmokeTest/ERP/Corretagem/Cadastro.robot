@@ -25,8 +25,7 @@ Itens > Itens
     RPA.Windows.Get Text      Cadastro de Itens (1)  
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Itens (1)      ${Caminho_Screenshots}Itens/Itens
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Terceiros
     ${nome_print}=     Set Variable     Terceiros
@@ -37,8 +36,7 @@ Terceiros
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
     RPA.Windows.Click         Cancelar (F3)
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Contrato > Configuração de Contrato
     ${nome_print}=     Set Variable     Configuração de Contrato
@@ -52,8 +50,7 @@ Contrato > Configuração de Contrato
     RPA.Desktop.Press Keys  Enter 
     BaseKeywordsDesktop.Screenshot    Configuração de Contratos (1)    ${Caminho_Screenshots}Contrato/Configuração de Contrato
     RPA.Windows.Click         Confirmar
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Contrato > Mensagens para Contrato
     ${nome_print}=     Set Variable     Mensagens para Contrato
@@ -64,8 +61,7 @@ Contrato > Mensagens para Contrato
     RPA.Windows.Get Text      Configuração de Mensagens para $ESPAÇOContrato (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Configuração de Mensagens para $ESPAÇOContrato (1)    ${Caminho_Screenshots}Contrato/Mensagens para Contrato
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Confirmação de Negócio > Configuração de Confirmação de Negócio
     ${nome_print}=     Set Variable     Configuração de Confirmação de Negócio
@@ -79,8 +75,7 @@ Confirmação de Negócio > Configuração de Confirmação de Negócio
     RPA.Desktop.Press Keys    Enter 
     BaseKeywordsDesktop.Screenshot    Cadastro de Modelo de Impressão de Confirmação de Negócio (1)    ${Caminho_Screenshots}Confirmação de Negócio/Configuração de Confirmação de Negócio
     RPA.Windows.Click         Confirmar
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Confirmação de Negócio > Status de Confirmação de Negócio
     ${nome_print}=     Set Variable     Status de Confirmação de Negócio
@@ -91,8 +86,7 @@ Confirmação de Negócio > Status de Confirmação de Negócio
     RPA.Windows.Get Text      Cadastro de Status de Confirmação de Negócio (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Status de Confirmação de Negócio (1)    ${Caminho_Screenshots}Confirmação de Negócio/Status de Confirmação de Negócio
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Confirmação de Negócio > Motivos Acrésc/Descontos
     ${nome_print}=     Set Variable     Motivos Acrésc_Descontos

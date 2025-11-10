@@ -34,8 +34,8 @@ Dado que estou na tela de Exceções de Preço e Disponibilidade
         Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
         Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada     500
         Criar tabela de disponibilidade     ${numero_bilhete}
-        @{ano_mes_dia}=  Get Time	year month day 
-        Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
+        Sleep    1s
+        
     ELSE
         Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
         Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]     
@@ -85,6 +85,8 @@ Quando crio uma nova tabela de preço e disponibilidade para o bilhete
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
 
 Quando crio uma Exceção de Disponibilidade para o bilhete
+    @{ano_mes_dia}=  Get Time	year month day 
+    Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
     Criar exceção de disponibilidade     
    
 Quando emito um bilhete com saldo atualizado 
@@ -126,6 +128,7 @@ Quando adiciono o convênio no bilhete
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
 
 Quando cadastro a tabela de preço
+    Sleep    2s
     Criar tabela de preço               ${numero_bilhete}   Tabela de Preço com multiplas categorias     500    0    3
     Criar tabela de disponibilidade     6422    qtd_vagas=250
     @{ano_mes_dia}=  Get Time	year month day 
@@ -139,7 +142,7 @@ Quando coloco as temporadas no calendario
     ${dia}=     Convert To Integer     ${ano_mes_dia[2]}    
     ${amanha}=       Evaluate       ${dia} + 1
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
-    Sleep                       1s
+    Sleep                       2s
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${amanha}     n°_temporada=3
     Sleep                       2s
     Set Global Variable    ${dia}    ${dia}
