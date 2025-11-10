@@ -21,7 +21,7 @@ Utilitários
 
 Configurar Nota Fiscal
     ${nome_print}=     Set Variable     Configurar Nota Fiscal
-    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest    Teste
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Configurar Nota Fiscal
     RPA.Windows.Get Text    Configuração da Nota Fiscal (1)
@@ -31,7 +31,7 @@ Configurar Nota Fiscal
 
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
-    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest    Teste
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)

@@ -13,7 +13,7 @@ ${nome_print}
 
 *** Test Cases ***
 
-SAC 
+SAC (ERRO)
     [Tags]        CARD    SmokeTest    SAC    SmokeCARD
     ${nome_print}=    Set Variable     SAC 
     Dado que estou na página inicial do CARD

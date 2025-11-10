@@ -24,7 +24,7 @@ Relatórios
 
 CT-e > CT-e Emitidos
     ${nome_print}=     Set Variable     CT-e Emitidos
-    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest    Testes
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest    
     Relatórios              CT-e
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text   	Relatório de CT'es Emitidos (1) 
@@ -37,7 +37,7 @@ CT-e > CT-e Emitidos
 
 CT-e > CT-e Inutilizados
     ${nome_print}=     Set Variable     CT-e Inutilizados
-    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest    Testes
+    [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest    
     Relatórios              CT-e
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Relatório de Conhecimento de Transporte Inutilizados (1) 
@@ -104,7 +104,7 @@ Abastecimentos
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
-Pneus > Pneus
+Pneus > Pneus (ERRO)
     ${nome_print}=     Set Variable     Pneus
     [Tags]   SmokeERP   Frotas   Relatórios   SmokeTest
     Relatórios              Pneus

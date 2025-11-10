@@ -126,10 +126,10 @@ Verificar Transações Abertas
     [Tags]   SmokeERP   Utilitários    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Verificar Transações Abertas
     Utilitários
-    RPA.Windows.Click       Verificar Transações Abertas
-    RPA.Windows.Get Text    Verificar Transações Abertas (1)
+    RPA.Windows.Click       Verifica transações abertas
+    RPA.Windows.Get Text    Verifica transações abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
+    BaseKeywordsDesktop.Screenshot  Verifica transações abertas (1)    ${Caminho_Screenshots}Verifica Transações Abertas
     Fechar janela
 
 Abrir Gaveta
