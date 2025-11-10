@@ -21,7 +21,7 @@ Utilitários
 
 Configurar Nota Fiscal
     ${nome_print}=     Set Variable     Configurar Nota Fiscal
-    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest    Teste
     Utilitários
     RPA.Windows.Click       Configurar Nota Fiscal
     RPA.Windows.Get Text    Configuração da Nota Fiscal (1)
@@ -31,7 +31,7 @@ Configurar Nota Fiscal
 
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
-    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Vendas   Utilitários   SmokeTest    Teste
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
@@ -237,8 +237,7 @@ Agenda > Agendamentos
     RPA.Windows.Get Text      Agenda (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Agenda (1)    ${Caminho_Screenshots}Agenda/Agendamentos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Agenda > Estados
     ${nome_print}=     Set Variable     Estados
@@ -249,8 +248,7 @@ Agenda > Estados
     RPA.Windows.Get Text      Cadastro Estados de Agendamentos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro Estados de Agendamentos (1)    ${Caminho_Screenshots}Agenda/Estados
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Agenda > Consulta
     ${nome_print}=     Set Variable     Consulta

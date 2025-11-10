@@ -276,8 +276,7 @@ Limite de Crédito > Documentos
     RPA.Windows.Get Text      Documentos para Limite de Crédito (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Documentos para Limite de Crédito (1)    ${Caminho_Screenshots}Limite de Crédito/Documentos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Limite de Crédito > Tipos Aprovação
     ${nome_print}=     Set Variable     Tipos Aprovação
@@ -546,8 +545,7 @@ Parâmetros > Empresas
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
@@ -559,8 +557,7 @@ Parâmetros > Estabelecimentos
     Sleep                     1s
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários
@@ -581,8 +578,7 @@ Parâmetros > Grupo de Usuários
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Configurações da Estação
     ${nome_print}=     Set Variable     Configurações da Estação

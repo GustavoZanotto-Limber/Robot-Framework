@@ -23,8 +23,7 @@ Plano de Contas
     RPA.Windows.Get Text      Cadastro do Plano de Contas (1)  
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro do Plano de Contas (1)      ${Caminho_Screenshots}Plano de Contas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Plano de Contas X Plano Referencial
     ${nome_print}=     Set Variable     Plano de Contas X Plano Referencial
@@ -56,8 +55,7 @@ Notas Explicativas
     RPA.Windows.Get Text      Cadastro de Notas Explicativas (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Notas Explicativas (1)   ${Caminho_Screenshots}Notas Explicativas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Históricos Contábeis
     ${nome_print}=     Set Variable     Históricos Contábeis
@@ -67,8 +65,7 @@ Históricos Contábeis
     RPA.Windows.Get Text      Cadastro de Históricos Contábeis (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Históricos Contábeis (1)    ${Caminho_Screenshots}Históricos Contábeis
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Centro de Custos
     ${nome_print}=     Set Variable     Centro de Custos
@@ -78,8 +75,7 @@ Centro de Custos
     RPA.Windows.Get Text      Cadastro de Centros de Custos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Centros de Custos (1)    ${Caminho_Screenshots}Centro de Custos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Indexadores
     ${nome_print}=     Set Variable     Indexadores
@@ -89,8 +85,7 @@ Indexadores
     RPA.Windows.Get Text      Cadastro de Indexadores (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Indexadores (1)    ${Caminho_Screenshots}Indexadores
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Contabilistas
     ${nome_print}=     Set Variable     Contabilistas
@@ -100,8 +95,7 @@ Contabilistas
     RPA.Windows.Get Text      Cadastro de Contabilistas (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Contabilistas (1)    ${Caminho_Screenshots}Contabilistas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Montagem do Demonstrativo DRE
     ${nome_print}=     Set Variable     Montagem do Demonstrativo DRE
@@ -133,8 +127,7 @@ Configuração Int. Contabil
     RPA.Windows.Get Text      Configuração para Integração Contábil (1)
     RPA.Windows.Click         Cooperado
     BaseKeywordsDesktop.Screenshot    Configuração para Integração Contábil (1)    ${Caminho_Screenshots}Configuração Int. Contabil
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Composição de Custos
     ${nome_print}=     Set Variable     Composição de Custos
@@ -144,8 +137,7 @@ Composição de Custos
     RPA.Windows.Get Text      Configuração de Composição de Custos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Configuração de Composição de Custos (1)    ${Caminho_Screenshots}Composição de Custos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Despesas antecipadas
     ${nome_print}=     Set Variable     Despesas antecipadas
@@ -155,8 +147,7 @@ Despesas antecipadas
     RPA.Windows.Get Text      Cadastro de Despesas Antecipadas (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Despesas Antecipadas (1)    ${Caminho_Screenshots}Despesas antecipadas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Países
     ${nome_print}=     Set Variable     Países
@@ -176,8 +167,7 @@ Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Estados (1)    ${Caminho_Screenshots}Estados
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Municípios
     ${nome_print}=     Set Variable     Municípios
@@ -211,7 +201,7 @@ Regiões
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable     Empresas
-    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    e
@@ -222,7 +212,7 @@ Parâmetros > Empresas
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable     Estabelecimentos
-    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest
+    [Tags]   SmokeERP    Contabil    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    s

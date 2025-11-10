@@ -97,8 +97,7 @@ Saídas/Vendas > Incluir Saídas/Vendas
     RPA.Windows.Get Text      Saidas/Vendas - Produtos - Com Fechamento (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Saidas/Vendas - Produtos - Com Fechamento (1)    ${Caminho_Screenshots}Saídas_Vendas/Alterar Saídas_Vendas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Saídas/Vendas > Alterar Saídas/Vendas
     ${nome_print}=     Set Variable     Alterar Saídas_Vendas

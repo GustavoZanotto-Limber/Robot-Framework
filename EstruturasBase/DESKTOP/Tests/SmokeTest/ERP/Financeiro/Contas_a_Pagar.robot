@@ -167,8 +167,7 @@ Adiantamento a Funcionários
     RPA.Windows.Get Text      Adiantamentos a Funcionários (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Adiantamentos a Funcionários (1)    ${Caminho_Screenshots}Adiantamentos/Adiantamento a Funcionários
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Extrato dos Adiantamentos_Funcionário
     ${nome_print}=     Set Variable     Extrato dos Adiantamentos_Funcionário

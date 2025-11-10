@@ -29,8 +29,7 @@ Lançamentos > Lançamento - Simplificado
     RPA.Windows.Get Text      Provisões do Contas a Receber (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Provisões do Contas a Receber (1)    ${Caminho_Screenshots}Lançamentos/Lançamento - Simplificado
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Lançamentos > Lançamento - Múltiplas Parcelas
     ${nome_print}=     Set Variable     Lançamento - Múltiplas Parcelas
@@ -41,8 +40,7 @@ Lançamentos > Lançamento - Múltiplas Parcelas
     RPA.Windows.Get Text      Lançamento do Contas a Receber - Múltiplas Parcelas (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Lançamento do Contas a Receber - Múltiplas Parcelas (1)    ${Caminho_Screenshots}Lançamentos/Lançamento - Múltiplas Parcelas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Lançamentos > Lançamento - Com Baixa Automática
     ${nome_print}=     Set Variable     Lançamento - Com Baixa Automática
@@ -132,6 +130,7 @@ Alterar Vencimento_Portador
     RPA.Windows.Click       Executar
     BaseKeywordsDesktop.Screenshot  Alteração de Vencimento/Portador do Contas a Receber (1)    ${Caminho_Screenshots}Alterar Vencimento_Portador
     RPA.Windows.Click       Sim
+    Run Keyword And Ignore Error    RPA.Windows.Click    OK
     Fechar janela
 
 Transferência entre Clientes
@@ -268,6 +267,7 @@ Consultas
     RPA.Windows.Click       Carregar
     BaseKeywordsDesktop.Screenshot  Consulta do Contas a Receber (1)    ${Caminho_Screenshots}Consultas
     RPA.Windows.Click       Sim
+    Run Keyword And Ignore Error    RPA.Desktop.Click    OK
     Fechar janela
 
 Emissão de Documentos
@@ -279,6 +279,7 @@ Emissão de Documentos
     RPA.Windows.Click       Executar
     BaseKeywordsDesktop.Screenshot  Emissão de Duplicatas/Boletos/Carnês (1)    ${Caminho_Screenshots}Emissão de Documentos
     RPA.Windows.Click       Sim
+    Run Keyword And Ignore Error    RPA.Desktop.Click    OK
     Fechar janela
 
 Relatórios > Contas a Receber
@@ -375,8 +376,7 @@ Contratos de Terceiros > Emissão_Manutenção
     RPA.Windows.Get Text      Contrato de Terceiros (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Contrato de Terceiros (1)    ${Caminho_Screenshots}Contratos de Terceiros/Emissão_Manutenção
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Contratos de Terceiros > Assinatura
     ${nome_print}=     Set Variable     Assinatura
@@ -449,8 +449,7 @@ Contratos de Prestação de Serviços > Manutenção de Contratos
     RPA.Windows.Get Text      Manutenção de Contrato de Prestação de Serviços (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Manutenção de Contrato de Prestação de Serviços (1)    ${Caminho_Screenshots}Contratos de Pestação de Serviços /Manutenção de Contratos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Contratos de Prestação de Serviços > Consulta _ Emissão de NF
     ${nome_print}=     Set Variable     Consulta_Emissão de NF

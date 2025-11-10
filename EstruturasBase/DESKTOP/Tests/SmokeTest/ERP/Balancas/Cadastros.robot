@@ -24,8 +24,7 @@ Produtos
     RPA.Windows.Get Text      Cadastro de Itens (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Itens (1)    ${Caminho_Screenshots}Produtos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
     
 Terceiros
     ${nome_print}=     Set Variable     Terceiros
@@ -36,8 +35,7 @@ Terceiros
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
     RPA.Windows.Click         Cancelar (F3)
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Operações Fiscais
     ${nome_print}=     Set Variable     Operações Fiscais
@@ -47,8 +45,7 @@ Operações Fiscais
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Operações Fiscais
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Descontos/Classificações para Grãos
     ${nome_print}=     Set Variable     Descontos_Classificações para Grãos
@@ -58,8 +55,7 @@ Descontos/Classificações para Grãos
     RPA.Windows.Get Text      Cadastro de Descontos/Classificações para Grãos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Descontos/Classificações para Grãos (1)    ${Caminho_Screenshots}Descontos_Classificações para Grãos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Classificação de Grãos
     ${nome_print}=     Set Variable     Classificação de Grãos
@@ -69,8 +65,7 @@ Classificação de Grãos
     RPA.Windows.Get Text      Cadastro de Classificação de Grãos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Classificação de Grãos (1)    ${Caminho_Screenshots}Classificação de Grãos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Tabela de Índices de Descontos
     ${nome_print}=     Set Variable     Tabela de Índices de Descontos
@@ -80,8 +75,7 @@ Tabela de Índices de Descontos
     RPA.Windows.Get Text      Cadastro de Índices de Descontos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Índices de Descontos (1)    ${Caminho_Screenshots}Tabela de Índices de Descontos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Melhorias do Peso Hectolítrico
     ${nome_print}=     Set Variable     Melhorias do Peso Hectolítrico
@@ -91,8 +85,7 @@ Melhorias do Peso Hectolítrico
     RPA.Windows.Get Text      Cadastro de Melhorias do Peso Hectolítrico (PH) (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Melhorias do Peso Hectolítrico (PH) (1)    ${Caminho_Screenshots}Melhorias do Peso Hectolítrico
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Tipos de Romaneio
     ${nome_print}=     Set Variable     Tipos de Romaneio
@@ -102,8 +95,7 @@ Tipos de Romaneio
     RPA.Windows.Get Text      Cadastro de Tipos de Romaneio (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Tipos de Romaneio (1)    ${Caminho_Screenshots}Tipos de Romaneio
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Conf. Modelos Impressao de Processos
     ${nome_print}=     Set Variable     Conf. Modelos Impressao de Processos
@@ -139,8 +131,7 @@ Configuração de Troca de Produto p/ emissão de NF
     RPA.Windows.Get Text      Configuração de Troca de Produto p/ emissão de NF (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Configuração de Troca de Produto p/ emissão de NF (1)    ${Caminho_Screenshots}Configuração de Troca de Produto p_ emissão de NF
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Empresas
     ${nome_print}=     Set Variable      Empresas
@@ -151,8 +142,7 @@ Parâmetros > Empresas
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Estabelecimentos
     ${nome_print}=     Set Variable      Estabelecimentos
@@ -163,8 +153,7 @@ Parâmetros > Estabelecimentos
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable      Usuários
@@ -185,8 +174,7 @@ Grupo de Usuários
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click         Novo
     BaseKeywordsDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
-    Fechar janela
-    RPA.Windows.Click         Sim
+    Fechar com Sim
 
 Parâmetros > Configurações da Estação
     ${nome_print}=     Set Variable      Configurações da Estação

@@ -21,7 +21,7 @@ Utilitários
 
 Favoritos
     ${nome_print}=     Set Variable     Favoritos
-    [Tags]   SmokeERP    Contabil    Utilitários   SmokeTest
+    [Tags]   SmokeERP    Contabil    Utilitários   SmokeTest    
     Utilitários
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
