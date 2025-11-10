@@ -33,7 +33,7 @@ Análise da Disponibilidade do Estoque
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Relatório de Cobrança
+Relatório de Cobrança (SEM PERMISSÂO)
     ${nome_print}=     Set Variable     Relatório de Cobrança
     [Tags]   SmokeERP   Vendedor   Relatórios   SmokeTest        
     Relatórios                Relatório de Cobrança  
@@ -45,7 +45,7 @@ Relatório de Cobrança
     RPA.Windows.Click         Confirmar
     Fechar janela
 
-Posição Financeira/Vendedor/Terceiro
+Posição Financeira/Vendedor/Terceiro (SEM PERMISSÂO)
     ${nome_print}=     Set Variable     Posição Financeira/Vendedor/Terceiro
     [Tags]   SmokeERP   Vendedor   Relatórios   SmokeTest    
     Relatórios                Posição Financeira/Vendedor/Terceiro  

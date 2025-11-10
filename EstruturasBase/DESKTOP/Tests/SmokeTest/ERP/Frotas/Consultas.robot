@@ -39,7 +39,7 @@ Consulta de Pneus
     BaseKeywordsDesktop.Screenshot  Consulta de Pneus (1)                              ${Caminho_Screenshots}Consulta de Pneus
     RPA.Windows.Click       Fechar
 
-Consulta de Avisos
+Consulta de Avisos (ERRO)
     ${nome_print}=     Set Variable     Consulta de Avisos
     [Tags]   SmokeERP   Frotas   Consultas   SmokeTest    
     Consultas               Consulta de Avisos

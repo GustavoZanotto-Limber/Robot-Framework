@@ -20,7 +20,7 @@ Manifesto de Documentos Fiscais
 
 *** Test Cases ***
 
-Manifesto de Documentos Fiscais
+Manifesto de Documentos Fiscais (CONFIGURAÇÂO)
     ${nome_print}=     Set Variable     Manifesto de Documentos Fiscais
     [Tags]   SmokeERP   Frotas   Manifesto de Documentos Fiscais   SmokeTest    
     Manifesto de Documentos Fiscais                 Manifesto de Documentos Fiscais

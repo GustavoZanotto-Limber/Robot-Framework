@@ -71,7 +71,7 @@ Consulta de Notas Fiscais Emitidas
     RPA.Windows.Click       Sim
     Fechar janela
 
-Movimentação de Clientes/Veículos
+Movimentação de Clientes/Veículos (ERRO)
     ${nome_print}=     Set Variable     Movimentação de Clientes/Veículos
     [Tags]   SmokeERP   Vendas   Consultas   SmokeTest    
     Consultas
@@ -82,8 +82,8 @@ Movimentação de Clientes/Veículos
     Fechar janela
 
 Clientes/Veículos
-    ${nome_print}=     Set Variable     Clientes/Veículos
-    [Tags]   SmokeERP   Vendas   Consultas   SmokeTest
+    ${nome_print}=     Set Variable     Clientes/Veículos    
+    [Tags]   SmokeERP   Vendas   Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Clientes/Veículo
     RPA.Windows.Get Text      Consulta de Clientes/Veículo (1)
@@ -96,7 +96,7 @@ Clientes/Veículos
 
 Orçamentos
     ${nome_print}=     Set Variable     Orçamentos
-    [Tags]   SmokeERP   Vendas   Consultas   SmokeTest
+    [Tags]   SmokeERP   Vendas   Consultas   SmokeTest    
     Consultas
     RPA.Windows.Click         Orçamentos
     RPA.Desktop.Press Keys    O

@@ -180,7 +180,7 @@ Estornar Apropriação por Rateio de Contas
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
 
-Rateio Cooperativismo > Método 1
+Rateio Cooperativismo > Método 1 (ERRO)
     ${nome_print}=     Set Variable     Método 1
     [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest    
     Movimentação
@@ -193,7 +193,7 @@ Rateio Cooperativismo > Método 1
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
 
-Rateio Cooperativismo > Método 2
+Rateio Cooperativismo > Método 2 (ERRO)
     ${nome_print}=     Set Variable     Método 2
     [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest    
     Movimentação
@@ -207,7 +207,7 @@ Rateio Cooperativismo > Método 2
     Fechar janela
     RPA.Windows.Click         OK
 
-Rateio Cooperativismo > Método 3 - Setor
+Rateio Cooperativismo > Método 3 - Setor (ERRO)
     ${nome_print}=     Set Variable     Método 3 - Setor
     [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest
     Movimentação
@@ -398,7 +398,7 @@ Processos Personalizados
     RPA.Windows.Click         Fechar
     Fechar janela
 
-Ajuste a Valor Presente > Configuração
+Ajuste a Valor Presente > Configuração (ERRO)
     ${nome_print}=     Set Variable     Configuração
     [Tags]   SmokeERP    Contabil    Movimentação   SmokeTest    
     Movimentação

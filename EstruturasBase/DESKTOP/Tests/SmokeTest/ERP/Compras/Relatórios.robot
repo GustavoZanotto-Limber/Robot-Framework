@@ -49,7 +49,7 @@ Compras/Aquisição de Serviços - Sintético/Fornecedor
     BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Fornecedor
     Fechar janela
 
-Compras/Aquisição de Serviços - Sintético/Forn/Item
+Compras/Aquisição de Serviços - Sintético/Forn/Item (ERRO)
     ${nome_print}=     Set Variable     Compras_Aquisição de Serviços - Sintético_Forn_Item
     [Tags]   SmokeERP    Compras    Relatórios   SmokeTest        
     Relatórios
@@ -122,7 +122,7 @@ Compras/Aquisição de Serviços - CFOP
     RPA.Windows.Click       Confirmar
     Fechar janela
 
-Lançamento de Entradas
+Lançamento de Entradas (ERRO)
     ${nome_print}=     Set Variable     Lançamento de Entradas
     [Tags]   SmokeERP    Compras    Relatórios   SmokeTest    
     Relatórios

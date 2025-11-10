@@ -267,7 +267,7 @@ Consultas
     RPA.Windows.Click       Carregar
     BaseKeywordsDesktop.Screenshot  Consulta do Contas a Receber (1)    ${Caminho_Screenshots}Consultas
     RPA.Windows.Click       Sim
-    Run Keyword And Ignore Error    RPA.Desktop.Click    OK
+    Run Keyword And Ignore Error    RPA.Windows.Click    OK
     Fechar janela
 
 Emissão de Documentos

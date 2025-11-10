@@ -33,7 +33,7 @@ Resumo Geral
     RPA.Windows.Click       Confirmar
     Fechar janela
 
-Fechamento de Caixa
+Fechamento de Caixa (ERRO)
     [Tags]   SmokeERP   Relatórios    Front    SmokeTest  SmokeTestERP  
     ${nome_print}=     Set Variable     Fechamento de Caixa
     Relatorios              Fechamento de Caixa

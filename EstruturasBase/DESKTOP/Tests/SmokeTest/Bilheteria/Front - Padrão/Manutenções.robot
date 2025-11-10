@@ -138,7 +138,7 @@ Lançamento de Veículos
     RPA.Desktop.Press Keys  Enter
     BaseKeywordsDesktop.Screenshot  Lançamento de Veiculos (1)    ${Caminho_Screenshots}Lançamento de Veículos
     RPA.Windows.Click       OK
-    Fechar com Sim
+    Fechar janela
 
 Lançamento de Vouchers Pendentes
     [Tags]   SmokeERP   Manutenções    Front    SmokeTest  SmokeTestERP  
