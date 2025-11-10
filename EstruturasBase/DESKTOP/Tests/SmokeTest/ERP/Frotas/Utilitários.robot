@@ -197,7 +197,7 @@ Integrações > Sênior > Configurações
 
 Integrações > Sênior > RPAs > Envio
     ${nome_print}=     Set Variable     Envio
-    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest    
     Utilitários com tecla   I 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs
@@ -211,7 +211,7 @@ Integrações > Sênior > RPAs > Envio
 
 Integrações > Sênior > RPAs > Exclusão
     ${nome_print}=     Set Variable     Exclusão
-    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest
+    [Tags]   SmokeERP   Frotas   Utilitários   SmokeTest    
     Utilitários com tecla   I 
     RPA.Windows.Click       Sênior
     RPA.Windows.Click       RPAs

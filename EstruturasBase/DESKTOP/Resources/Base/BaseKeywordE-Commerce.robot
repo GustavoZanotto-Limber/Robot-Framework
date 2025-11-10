@@ -29,39 +29,39 @@ Logar no e-commerce
         # Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    gustavozanotto119@gmail.com
         Clicar no Elemento        xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]
         RPA.Desktop.Press Keys    g
-        Sleep    0.1s
+        Sleep    0.2s
         RPA.Desktop.Press Keys    u
-        Sleep    0.1s
+        Sleep    0.4s
         RPA.Desktop.Press Keys    s
         Sleep    0.1s
         RPA.Desktop.Press Keys    t
-        Sleep    0.1s
+        Sleep    0.3s
         RPA.Desktop.Press Keys    a
         Sleep    0.1s
         RPA.Desktop.Press Keys    v
-        Sleep    0.1s
+        Sleep    0.5s
         RPA.Desktop.Press Keys    o
         Sleep    0.1s
         RPA.Desktop.Press Keys    z
-        Sleep    0.1s
+        Sleep    0.3s
         RPA.Desktop.Press Keys    a
         Sleep    0.1s
         RPA.Desktop.Press Keys    n
-        Sleep    0.1s
+        Sleep    0.2s
         RPA.Desktop.Press Keys    o
-        Sleep    0.1s
+        Sleep    0.2s
         RPA.Desktop.Press Keys    t
         Sleep    0.1s
         RPA.Desktop.Press Keys    t
-        Sleep    0.1s
+        Sleep    0.4s
         RPA.Desktop.Press Keys    o
         Sleep    0.1s
         RPA.Desktop.Press Keys    1
-        Sleep    0.1s
+        Sleep    0.3s
         RPA.Desktop.Press Keys    1
         Sleep    0.1s
         RPA.Desktop.Press Keys    9
-        Sleep    0.1s
+        Sleep    0.3s
         RPA.Desktop.Type Text     @
         Sleep    0.1s
         RPA.Desktop.Press Keys    g
@@ -69,21 +69,25 @@ Logar no e-commerce
         RPA.Desktop.Press Keys    m
         Sleep    0.1s
         RPA.Desktop.Press Keys    a
-        Sleep    0.1s
+        Sleep    0.5s
         RPA.Desktop.Press Keys    i
         Sleep    0.1s
         RPA.Desktop.Press Keys    l
-        Sleep    0.1s
+        Sleep    0.5s
         RPA.Desktop.Press Keys    .
-        Sleep    0.1s
-        RPA.Desktop.Press Keys    c
-        Sleep    0.1s
+        Sleep    0.2s
+        RPA.Desktop.Press Keys    v
+        Sleep    0.3s
         RPA.Desktop.Press Keys    o
-        Sleep    0.1s
+        Sleep    0.3s
         RPA.Desktop.Press Keys    m
         Sleep    1s
-        RPA.Desktop.Press keys    Backspace
-        RPA.Desktop.Type Text     m
+        Repetidor de teclas       Backspace     3
+        RPA.Desktop.Press Keys    C
+        Sleep    0.3s
+        RPA.Desktop.Press Keys    o
+        Sleep    0.3s
+        RPA.Desktop.Press Keys    m
         Sleep    1s
         RPA.Desktop.Press keys    Enter
         Sleep    3
@@ -91,11 +95,11 @@ Logar no e-commerce
         Sleep    1s
         RPA.Desktop.Press keys    Backspace
         RPA.Desktop.Type Text     Z
-        Sleep    0.1s
+        Sleep    0.2s
         RPA.Desktop.Type Text     a
-        Sleep    0.1s
+        Sleep    0.5s
         RPA.Desktop.Type Text     n
-        Sleep    0.1s
+        Sleep    0.2s
         RPA.Desktop.Type Text     o
         Sleep    0.1s
         RPA.Desktop.Type Text     t
@@ -103,18 +107,18 @@ Logar no e-commerce
         RPA.Desktop.Type Text     t
         Sleep    0.1s
         RPA.Desktop.Type Text     t
-        Sleep    0.1s
+        Sleep    0.3s
         RPA.Desktop.Type Text     o
         Sleep    0.1s
         RPA.Desktop.Type Text     1
         Sleep    0.1s
         RPA.Desktop.Type Text     2
-        Sleep    0.1s
+        Sleep    0.4s
         RPA.Desktop.Type Text     3
         Sleep    0.1s
         RPA.Desktop.Type Text     @
         Sleep    1s
-        RPA.Desktop.Press keys    Enter
+        Clicar no Botão           xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/button[2]
     ELSE
         Log    Já está logado no e-commerce
     END

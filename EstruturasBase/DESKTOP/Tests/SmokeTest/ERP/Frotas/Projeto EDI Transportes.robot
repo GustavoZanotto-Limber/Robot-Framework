@@ -30,7 +30,7 @@ Importação NOTFIS
     RPA.Windows.Click       OK                             
     Fechar Janela
 
-Exportação CONEMB
+Exportação CONEMB (ERRO)
     ${nome_print}=     Set Variable     Exportação CONEMB
     [Tags]   SmokeERP   Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação CONEMB
@@ -38,7 +38,7 @@ Exportação CONEMB
     BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação CONEMB
     Fechar Janela
 
-Exportação DOCCOB
+Exportação DOCCOB (ERRO)
     ${nome_print}=     Set Variable     Exportação DOCCOB
     [Tags]   SmokeERP   Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação DOCCOB
@@ -46,7 +46,7 @@ Exportação DOCCOB
     BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação DOCCOB
     Fechar Janela
 
-Exportação OCOREN
+Exportação OCOREN (ERRO)
     ${nome_print}=     Set Variable     Exportação OCOREN
     [Tags]   SmokeERP   Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação OCOREN

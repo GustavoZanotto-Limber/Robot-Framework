@@ -20,7 +20,7 @@ Controle de CIOT
 
 *** Test Cases ***
 
-Lançamento de CIOT
+Lançamento de CIOT (CONFIGURAÇÂO)
     ${nome_print}=     Set Variable     Lançamento de CIOT
     [Tags]   SmokeERP   Frotas   Controle de CIOT   SmokeTest
     Controle de CIOT               Lançamento de CIOT
@@ -29,7 +29,7 @@ Lançamento de CIOT
     BaseKeywordsDesktop.Screenshot  CIOT (1)                               ${Caminho_Screenshots}Lançamento de CIOT
     Fechar com Sim
 
-Monitor de CIOT
+Monitor de CIOT (CONFIGURAÇÂO)
     ${nome_print}=     Set Variable     Monitor de CIOT
     [Tags]   SmokeERP   Frotas   Controle de CIOT   SmokeTest
     Controle de CIOT               Monitor de CIOT
