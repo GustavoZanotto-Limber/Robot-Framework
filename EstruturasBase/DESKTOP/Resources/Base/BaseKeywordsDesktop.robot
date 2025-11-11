@@ -597,7 +597,7 @@ Gerar aquivo de resumo Geral
     sleep                               1s
     Repetidor de teclas                 enter        1
     sleep                               1s
-    Salvar arquivo                      C:\\Users\\Gustavo Zanotto\\Documents\\Testes Regressivos\\Resumo Geral    2
+    Salvar arquivo                      C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\Resumo Geral.pdf   2
 
 Pegar informações da 1° Pagina do arquivo
     [Arguments]     ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
@@ -629,3 +629,23 @@ Escrever para consultar
     Sleep                     1s
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
+
+Arrumar geração de receitas financeiro 
+    Iniciar sessao                      cde_win_fin
+    Cadastros
+    repetidor de teclas                 right    6
+    sleep                               2s
+    RPA.Windows.Click                   Geração de Receitas Mapa Resumo
+    RPA.Desktop.Press Keys              g
+    Sleep                               2s
+    RPA.Windows.Get Text                Geração de receitas pela redução Z (1)
+    Repetidor de teclas                 enter    1
+    Repetidor de teclas em sequencia    space    enter    2
+    RPA.Windows.Click                   Carregar
+    RPA.Windows.Click                   Excluir Receitas
+    Sleep                               1s
+    RPA.Windows.Click                   Sim
+    Sleep                               1s
+    RPA.Windows.Click                   Estornar
+    Sleep                               1s
+    RPA.Windows.Click                   Sim

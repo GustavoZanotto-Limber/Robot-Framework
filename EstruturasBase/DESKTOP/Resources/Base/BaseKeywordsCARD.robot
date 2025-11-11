@@ -394,12 +394,12 @@ Colocar o bilhete no e-commerce
     IF    ${resultado} == ('FAIL', 'opacity: 0; != opacity 1;') 
         Clicar no Elemento   xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]
         Clicar no Elemento   xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[4]/button[2]
-        Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[2]/buttons/div/div/button[3]
-        sleep           15s
+        Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[2]/buttons/div/div/button[3] 
         Log             Bilhete adicionado ao E-commerce. 
     ELSE
         Log    Bilhete já adicionado ao E-commerce.
     END
+    sleep           15s
 
 Retirar bilhete do e-commerce
     [Arguments]     ${numero_bilhete}    ${grupo}    

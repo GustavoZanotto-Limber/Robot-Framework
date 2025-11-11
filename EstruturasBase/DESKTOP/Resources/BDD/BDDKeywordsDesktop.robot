@@ -20,7 +20,7 @@ ${i}=    0
 #----------------------------------------DADO----------------------------------------
 Dado que realizei uma venda
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete   6568    4321
+    Selecionar o bilhete   6568    4651
     Finalizar compra
 
 Dado que realizei uma venda com convênio
@@ -385,6 +385,7 @@ Então valido se a impressão saiu corretamente 2
     RPA.Desktop.Press Keys    Alt    F4
     Sleep                     3s
     
+    
 
 Então valido se o usuário tem permissão
     ${mensagem}=    Capturar mensagem em tela    Atenção    
@@ -461,9 +462,9 @@ Então abro o financeiro e valido as informações
     ${data_atual}=                      Formatar Data Para DD/MM/AAAA            @{data_sem_formatar}
     Should Contain                      ${reduções_Z}    ${texto}
     Should Contain                      ${reduções_Z}    ${data_atual} 
-    Should Contain                      ${reduções_Z}    Conta 5
+    Should Contain                      ${reduções_Z}    Conta Débito
     RPA.Desktop.Press Keys              Alt    F4
-    Sleep                               1s
+    Sleep                               2s
     RPA.Windows.Click                   Fechar
     Sleep                               1s
     RPA.Windows.Click                   Excluir Receitas
@@ -473,4 +474,5 @@ Então abro o financeiro e valido as informações
     RPA.Windows.Click                   Estornar
     Sleep                               1s
     RPA.Windows.Click                   Sim
+    
     

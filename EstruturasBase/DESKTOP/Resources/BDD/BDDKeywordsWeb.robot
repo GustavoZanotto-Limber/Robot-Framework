@@ -31,10 +31,10 @@ Dado que estou na tela de Exceções de Preço e Disponibilidade
     [Arguments]    ${numero_bilhete}
     Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada     500
     Criar tabela de disponibilidade     ${numero_bilhete}
-    IF    ${numero_bilhete} == 6491
-        Colocar o bilhete no e-commerce    6491    2
-    END
+    Colocar o bilhete no e-commerce     ${numero_bilhete}    2
+    Sleep    5s
     Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+    Sleep    1s
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]    
     
     
@@ -83,7 +83,7 @@ Quando crio uma Exceção de Disponibilidade para o bilhete
     Criar exceção de disponibilidade     
    
 Quando emito um bilhete com saldo atualizado 
-    [Arguments]    ${numero_bilhete}    ${qtd_vagas}=5
+    [Arguments]    ${numero_bilhete}    ${qtd_vagas}
     IF    ${numero_bilhete} == 6491 
         ${qtd_vagas}=    Set Variable        1000
     END
