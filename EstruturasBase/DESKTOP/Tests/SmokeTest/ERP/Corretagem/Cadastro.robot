@@ -52,7 +52,7 @@ Contrato > Configuração de Contrato
     RPA.Windows.Click         Confirmar
     Fechar com Sim
 
-Contrato > Mensagens para Contrato
+Contrato > Mensagens para Contrato (ERRO)
     ${nome_print}=     Set Variable     Mensagens para Contrato
     [Tags]   SmokeERP    Corretagem    Cadastros   SmokeTest    
     Cadastros

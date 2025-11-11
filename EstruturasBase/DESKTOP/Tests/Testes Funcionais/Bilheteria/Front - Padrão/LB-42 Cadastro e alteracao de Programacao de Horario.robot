@@ -21,14 +21,15 @@ Caso ocorra erro
     Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
     Run keyword and ignore error    Excluir tabela de preço e disponibilidade    ${numero_bilhete}
     Sleep    2s
-    @{ano_mes_dia}=  Get Time	year month day 
+    @{ano_mes_dia}=  Get Time	    year month day 
     Run keyword and ignore error    Limpar dia do calendário    ${ano_mes_dia[2]}    ${ano_mes_dia[1]}
-    Run Keyword if test Failed    Set Suite Variable              ${numero_bilhete}    6491
+    Run Keyword if test Failed      Retirar bilhete do e-commerce   ${numero_bilhete}    2
+    Run Keyword if test Failed      Set Suite Variable              ${numero_bilhete}    6491
+    
 
 Cenario 1
     [Arguments]    ${nome_print}
     Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
-    Run keyword and ignore error    Excluir tabela de preço e disponibilidade    ${numero_bilhete}
 
 *** Test Cases    ***
 
@@ -58,8 +59,8 @@ Cenário 4: Emissão de bilhete com saldo atualizado
     ${nome_print}=    Set Variable     Emissão de bilhete com saldo atualizado    
     [Tags]    Testes_Funcionais    LB-42
     Dado que estou na tela de emissão de bilhetes                  ${numero_bilhete}
-    Quando emito um bilhete com saldo atualizado                   ${numero_bilhete}    5
-    Então valido se a quantidade foi reduzida corretamente    5    ${numero_bilhete}
+    Quando emito um bilhete com saldo atualizado                   ${numero_bilhete}    1000
+    Então valido se a quantidade foi reduzida corretamente         1000    ${numero_bilhete}
 
 Cenário 5: Bloqueio de Horário
     ${nome_print}=    Set Variable     Bloqueio de Horário
