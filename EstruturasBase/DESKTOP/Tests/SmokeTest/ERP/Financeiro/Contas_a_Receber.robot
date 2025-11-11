@@ -279,12 +279,12 @@ Emissão de Documentos
     RPA.Windows.Click       Executar
     BaseKeywordsDesktop.Screenshot  Emissão de Duplicatas/Boletos/Carnês (1)    ${Caminho_Screenshots}Emissão de Documentos
     RPA.Windows.Click       Sim
-    Run Keyword And Ignore Error    RPA.Desktop.Click    OK
+    Run Keyword And Ignore Error    RPA.Windows.Click    OK
     Fechar janela
 
 Relatórios > Contas a Receber
     ${nome_print}=     Set Variable     Contas a Receber
-    [Tags]   SmokeERP    Financeiro    Contas a Receber   SmokeTest
+    [Tags]   SmokeERP    Financeiro    Contas a Receber   SmokeTest    
     Contas a Receber
     RPA.Windows.Click         Relatórios
     RPA.Desktop.Press Keys    c
