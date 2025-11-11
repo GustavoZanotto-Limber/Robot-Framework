@@ -541,9 +541,11 @@ Parâmetros > Estabelecimentos
     Cadastro                  Parâmetros    
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
-    RPA.Windows.Click         Novo
+    RPA.Desktop.Press Keys    0
+    RPA.Desktop.Press Keys    Enter
     BaseKeywordsDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
-    Fechar com Sim
+    RPA.Windows.Click         Confirmar
+    Fechar janela
 
 Parâmetros > Usuários
     ${nome_print}=     Set Variable     Usuários

@@ -29,29 +29,22 @@ Dado que estou na tela de preço e disponibilidade
 
 Dado que estou na tela de Exceções de Preço e Disponibilidade
     [Arguments]    ${numero_bilhete}
+    Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada     500
+    Criar tabela de disponibilidade     ${numero_bilhete}
     IF    ${numero_bilhete} == 6491
         Colocar o bilhete no e-commerce    6491    2
-        Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
-        Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada     500
-        Criar tabela de disponibilidade     ${numero_bilhete}
-        Sleep    1s
-        
-    ELSE
-        Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
-        Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]     
     END
+    Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+    Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]    
     
     
 Dado que estou na tela de emissão de bilhetes
     [Arguments]    ${numero_bilhete}
-    IF    ${numero_bilhete} == 6491 
-        Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
-        Criar tabela de preço               ${numero_bilhete}   tabela de preço     1000
-        Criar tabela de disponibilidade     ${numero_bilhete}
-        @{ano_mes_dia}=  Get Time	year month day 
-        Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
-        Sleep    2s
-    END
+    Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+    Criar tabela de preço               ${numero_bilhete}   tabela de preço     1000
+    Criar tabela de disponibilidade     ${numero_bilhete}
+    @{ano_mes_dia}=  Get Time	year month day 
+    Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
     Sleep    2s
     Iniciar sessao e abrir caixa    cde_win_bca_front       
     Ir Para Emissão de Bilhetes
@@ -262,21 +255,12 @@ Então valido se os preços foram salvos corretamente
     ${nome_coletado}=    Coleta valor atraves da planilha    3    1
     Sleep    1s
     Should Contain    ${nome_coletado}    Categoria 1
-    # IF    '$nome_coletado' != 'Categoria 1\r\n'
-    #     FAIL    Categoria errada ou não aplicada corretamente.
-    # END
     Sleep    2
     ${nome_coletado}=    Coleta valor atraves da planilha    3    2
     Should Contain    ${nome_coletado}    Categoria 2
-    # IF    '$nome_coletado' != 'Categoria 2\r\n'
-    #     FAIL    Categoria 2 errada ou não aplicada corretamente.
-    # END
     Sleep    2
     ${nome_coletado}=    Coleta valor atraves da planilha    3    3
     Should Contain    ${nome_coletado}    Categoria 3
-    # IF    '$nome_coletado' != 'Categoria 3\r\n'
-    #     FAIL    Categoria 3 errada ou não aplicada corretamente.
-    # END
     Encerrar Tudo
 
 Então valido as temporadas no E-Commerce

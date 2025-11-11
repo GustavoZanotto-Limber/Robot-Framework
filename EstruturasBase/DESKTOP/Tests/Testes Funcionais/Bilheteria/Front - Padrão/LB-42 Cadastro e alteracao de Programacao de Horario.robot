@@ -19,11 +19,21 @@ ${nome_bilhete}=           LB-42 Cadastro e alteração de Programação de Hora
 Caso ocorra erro
     [Arguments]    ${nome_print}
     Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
+    Run keyword and ignore error    Excluir tabela de preço e disponibilidade    ${numero_bilhete}
+    Sleep    2s
+    @{ano_mes_dia}=  Get Time	year month day 
+    Run keyword and ignore error    Limpar dia do calendário    ${ano_mes_dia[2]}    ${ano_mes_dia[1]}
     Run Keyword if test Failed    Set Suite Variable              ${numero_bilhete}    6491
+
+Cenario 1
+    [Arguments]    ${nome_print}
+    Caso aconteca erro WEB          ${Caminho_Screenshots}Erros/    ${nome_print}
+    Run keyword and ignore error    Excluir tabela de preço e disponibilidade    ${numero_bilhete}
 
 *** Test Cases    ***
 
 Cenário 1: Cadastro de um bilhete por Horario/Vaga
+     [Teardown]     Cenario 1    ${nome_print}
     ${nome_print}=    Set Variable     Cadastro de um bilhete por Horario_Vaga
     [Tags]    Testes_Funcionais    LB-42
     Dado que estou na tela de criação de bilhete

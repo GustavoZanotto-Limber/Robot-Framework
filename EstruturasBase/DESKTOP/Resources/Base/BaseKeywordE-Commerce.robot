@@ -105,8 +105,6 @@ Logar no e-commerce
         RPA.Desktop.Type Text     t
         Sleep    0.1s
         RPA.Desktop.Type Text     t
-        Sleep    0.1s
-        RPA.Desktop.Type Text     t
         Sleep    0.3s
         RPA.Desktop.Type Text     o
         Sleep    0.1s

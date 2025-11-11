@@ -303,19 +303,26 @@ Então valido a venda foi realizada com sucesso (valor zerado)
     
 Então valido se a quantidade foi reduzida corretamente
     [Arguments]    ${qtd_vagas}    ${numero_bilhete}
-    IF    $numero_bilhete == 6491 
-        ${qtd_vagas}=    Set Variable        1000
-    END
+    
     Ir Para Emissão de Bilhetes
     Sleep                         1s
     ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    ${numero_bilhete}    1
     ${qtd_vagas_novo}=            Convert to Integer    ${qtd_vagas_novo_string}
     ${qtd_vagas}=            Evaluate    ${qtd_vagas}-1
-    IF     ${qtd_vagas} == ${qtd_vagas_novo}
-        Log    A quantidade de vagas foi reduzida corretamente de ${qtd_vagas} para ${qtd_vagas_novo}
+    IF    $numero_bilhete == 6491 
+        IF     999 == ${qtd_vagas_novo}
+            Log    A quantidade de vagas foi reduzida corretamente de ${qtd_vagas} para ${qtd_vagas_novo}
+        ELSE
+            Fail    A quantidade de vagas não foi reduzida corretamente. Esperado: ${qtd_vagas}, Obtido: ${qtd_vagas_novo} 
+        END
     ELSE
-        Fail    A quantidade de vagas não foi reduzida corretamente. Esperado: ${qtd_vagas}, Obtido: ${qtd_vagas_novo} 
+        IF     ${qtd_vagas} == ${qtd_vagas_novo}
+            Log    A quantidade de vagas foi reduzida corretamente de ${qtd_vagas} para ${qtd_vagas_novo}
+        ELSE
+            Fail    A quantidade de vagas não foi reduzida corretamente. Esperado: ${qtd_vagas}, Obtido: ${qtd_vagas_novo} 
+        END
     END
+    
     Fechar com Sim
 
 Então valido se a impressão saiu corretamente

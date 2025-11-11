@@ -294,7 +294,8 @@ Selecionar o bilhete abrir filtro
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
     RPA.Desktop.Press Keys    F6
-    repetidor de teclas       Down    ${categoria}     0.5
+    sleep                     1s
+    repetidor de teclas       Down    ${categoria}     1
     Sleep                     2s
     RPA.Windows.Click         Confirmar
     Sleep                     1s
