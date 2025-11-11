@@ -14,6 +14,12 @@ ${nome_exe}=    cde_win_bca_front
 ${nome_print}
 ${texto_bilhete}
 
+*** Keywords ***
+
+Cenário 5
+    Caso aconteca erro 2            ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+    Run Keyword If Test Failed      Arrumar geração de receitas financeiro
+
 *** Test Cases    ***
 
 Cenário 1: Cadastro e configuração de um novo PDV  
@@ -22,7 +28,6 @@ Cenário 1: Cadastro e configuração de um novo PDV
     Dado que estou na tela de cadastro do PDV
     Quando insiro as informações para um novo cadastro de PDV
     Então salvo o cadastro do PDV
-
 	
 Cenário 2: Abertura do caixa pelo operador    
     ${nome_print}=    Set Variable     Abertura do caixa pelo operador
@@ -47,6 +52,7 @@ Cenário 4: Geração e impressão do fechamento de caixa
     Então valido se a impressão saiu corretamente 2    ${Caminho_arquivos}    Fechamento de Caixa.pdf    Fechamento de Caixa.pdf - WPS Office    ${Caminho_Screenshots}     Fechamento de Caixa    ${texto}    ${texto2}
     
 Cenário 5: Fechamento dos caixas e validar a geração da receita (módulo financeiro)
+    [Teardown]    Cenário 5
     ${nome_print}=    Set Variable     Fechamento dos caixas e validar a geração da receita
     [Tags]    Testes_Funcionais    LB-43
     Dado que abri o caixa operador E realizei uma venda
