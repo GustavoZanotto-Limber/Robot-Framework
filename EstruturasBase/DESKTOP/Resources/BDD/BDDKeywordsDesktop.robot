@@ -116,13 +116,13 @@ Dado que realizei um novo cadastro de Sangria E Suprimento
     ${tempo1}=  Get Time   
     ${tempo1_split}=    Split String    ${tempo1}    ${SPACE}
     ${hora_minuto_segundo1}=    Get From List    ${tempo1_split}    1 
-    ${tempo_final1}=    Somar Tempos    ${hora_minuto_segundo1}    00:01:34  
+    ${tempo_final1}=    Somar Tempos    ${hora_minuto_segundo1}    00:00:34  
     Quando salvo o arquivo de suprimento
     Dado que realizei um novo cadastro de Sangria
     ${tempo2}=  Get Time   
     ${tempo2_split}=    Split String    ${tempo2}    ${SPACE}
     ${hora_minuto_segundo2}=    Get From List    ${tempo2_split}    1  
-    ${tempo_final2}=    Somar Tempos    ${hora_minuto_segundo2}    00:01:35  
+    ${tempo_final2}=    Somar Tempos    ${hora_minuto_segundo2}    00:00:35  
     @{ano_mes_dia}=  Get Time	year month day 
     ${data_formatada}=    Formatar Data Para DD/MM/AAAA    @{ano_mes_dia} 
     Quando salvo o arquivo de Sangria
@@ -205,7 +205,10 @@ Quando salvo a edição do Suprimento/Sangria
     RPA.Windows.Click         Confirmar
 
 Quando vou consultar o histórico de operações do caixa
-    Ir para:                Fechamento de Caixa    3    Fechamento de Caixa $Espaço(1)
+    # Ir para:                Fechamento de Caixa    3    Fechamento de Caixa (1)
+    Cadastros
+    repetidor de teclas     right        3
+    RPA.Windows.Click       Fechamento de Caixa
     Repetidor de teclas     enter                  2
     Consultar Cadastros     1
     Repetidor de teclas     enter                  2
@@ -217,7 +220,7 @@ Quando vou consultar o histórico de operações do caixa
     RPA.Desktop.Press Keys  Enter
     RPA.Desktop.Press Keys  Shift    Tab
     Sleep                   1s
-    RPA.Desktop.Type Text   C:\\Users\\testes\\Documents\\Testes Regressivos\\Relatório de Caixa
+    RPA.Desktop.Type Text   C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\Relatorio_De_Caixa.pdf
     Repetidor de teclas     TAB                   2
     Sleep                   1s
     RPA.Desktop.Press Keys  Enter
@@ -231,14 +234,17 @@ Quando vou consultar o histórico de operações do caixa por turno
     Sleep                   3s
     RPA.Desktop.Press Keys  Enter 
     Sleep                   1s
-    Ir para:                Fechamento de Caixa    3    Fechamento de Caixa ${Espaço}(1)
+    # Ir para:                Fechamento de Caixa    3    Fechamento de Caixa ${Espaço}(1)
+    Cadastros
+    repetidor de teclas     right        3
+    RPA.Windows.Click       Fechamento de Caixa
     Repetidor de teclas     enter                  2
     Consultar Cadastros     1
     Sleep                   1s
     Consultar ultimo registro
     RPA.Desktop.Press Keys  Enter 
     Sleep                   1s
-    Salvar arquivo          C:\\Users\\testes\\Documents\\Testes Regressivos\\Relatório de Caixa por Turno    5
+    Salvar arquivo          C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\Relatório_de_Caixa_por_Turno.pdf    5
     
 Quando insiro as informações para um novo cadastro de PDV
     RPA.Windows.Click         Novo
@@ -322,8 +328,8 @@ Então valido se a quantidade foi reduzida corretamente
             Fail    A quantidade de vagas não foi reduzida corretamente. Esperado: ${qtd_vagas}, Obtido: ${qtd_vagas_novo} 
         END
     END
-    
     Fechar com Sim
+    Encerrar Tudo
 
 Então valido se a impressão saiu corretamente
     [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
@@ -462,8 +468,9 @@ Então abro o financeiro e valido as informações
     ${data_atual}=                      Formatar Data Para DD/MM/AAAA            @{data_sem_formatar}
     Should Contain                      ${reduções_Z}    ${texto}
     Should Contain                      ${reduções_Z}    ${data_atual} 
-    Should Contain                      ${reduções_Z}    Conta Débito
-    RPA.Desktop.Press Keys              Alt    F4
+    Should Contain                      ${reduções_Z}    Conta Débit
+    Sleep    2s
+    RPA.Windows.Click                   Fechar
     Sleep                               2s
     RPA.Windows.Click                   Fechar
     Sleep                               1s

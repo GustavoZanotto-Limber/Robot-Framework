@@ -372,7 +372,7 @@ Criar bloqueio de disponibilidade
     ELSE
         Clicar no Elemento          xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button[2]
     END
-    Clicar no Elemento              xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-excecoes/section/table/tbody/tr/td[4]/div/mat-checkbox
+    Clicar no Elemento              xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/app-excecoes/section/table/tbody/tr/td[4]/div/mat-checkbox
     Inserir Texto                   xpath:/html/body/div[3]/div[4]/div/mat-dialog-container/div/div/app-bloqueio-dialog/div/div[1]/mat-form-field/div[1]/div/div[2]/textarea    Bloqueado pelo Teste Automatizado
     Sleep                           1s
     Repetidor de teclas             tab    2
