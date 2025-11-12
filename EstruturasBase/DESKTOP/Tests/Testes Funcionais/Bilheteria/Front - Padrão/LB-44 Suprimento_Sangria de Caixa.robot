@@ -9,7 +9,7 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-44 Suprimento_Sangria de Caixa/ 
-${Caminho_arquivos}=     C:/Users/testes/Documents/Testes Regressivos/
+${Caminho_arquivos}=     C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\
 ${nome_exe}=    cde_win_bca_front
 ${nome_print}
 *** Keywords ***
@@ -45,12 +45,12 @@ Cenário 4: Verificação do histórico de operações no caixa
     [Tags]    Testes_Funcionais    LB-44   
     @{tempo}=    Dado que realizei um novo cadastro de Sangria E Suprimento
     Quando vou consultar o histórico de operações do caixa
-    Então o sistema deve exibir corretamente todos os registros    ${Caminho_arquivos}   Relatório de Caixa.pdf    Relatório de Caixa.pdf - WPS Office    ${Caminho_Screenshots}        Relatório de Caixa        @{tempo}
+    Então o sistema deve exibir corretamente todos os registros    ${Caminho_arquivos}   Relatorio_de_Caixa.pdf    Relatorio_de_Caixa.pdf - WPS Office    ${Caminho_Screenshots}        Relatório de Caixa        @{tempo}
     
 Cenário 5: Geração do relatório de fechamento de caixa por turno   
     ${nome_print}=    Set Variable     Verificação do histórico de operações no caixa  
     [Tags]    Testes_Funcionais    LB-44   
     @{tempo}=    Dado que realizei um novo cadastro de Sangria E Suprimento
     Quando vou consultar o histórico de operações do caixa por turno
-    Então o sistema deve exibir corretamente todos os registros    ${Caminho_arquivos}   Relatório de Caixa por Turno.pdf    Relatório de Caixa por Turno.pdf - WPS Office    ${Caminho_Screenshots}        Relatório de Caixa por Turno        @{tempo}
+    Então o sistema deve exibir corretamente todos os registros    ${Caminho_arquivos}   Relatório_de_Caixa_por_Turno.pdf    Relatório_de_Caixa_por_Turno.pdf - WPS Office    ${Caminho_Screenshots}        Relatório de Caixa por Turno        @{tempo}
     

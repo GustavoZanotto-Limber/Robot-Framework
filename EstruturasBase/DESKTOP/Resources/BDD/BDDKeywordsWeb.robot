@@ -31,10 +31,6 @@ Dado que estou na tela de Exceções de Preço e Disponibilidade
     [Arguments]    ${numero_bilhete}
     Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada     500
     Criar tabela de disponibilidade     ${numero_bilhete}
-    Colocar o bilhete no e-commerce     ${numero_bilhete}    2
-    Sleep    5s
-    Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
-    Sleep    1s
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]    
     
     
@@ -100,8 +96,12 @@ Quando emito um bilhete com saldo atualizado
 
 Quando realizo o bloqueio de horário para o bilhete
     [Arguments]    ${numero_bilhete}
+    @{ano_mes_dia}=  Get Time	    year month day 
+    Preencher dia do calendario            ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
     Criar bloqueio de disponibilidade
     Sleep    2s
+    Colocar o bilhete no e-commerce    ${numero_bilhete}    2
+    Sleep    10s
 
 Quando ele insere a tabela com taxa no calendario
     [Arguments]                ${numero_bilhete}
