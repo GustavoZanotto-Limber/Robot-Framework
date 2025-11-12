@@ -2,7 +2,6 @@
 #Esse arquivo comporta as keyword que carregam elementos para dentro do programa para posteriormente serem
 #utilizados, assim quando temos varias suites de testes apenas importamos esse arquivo para a pasta o
 #que otimiza a utilização do aplicativo.
-# Library    SikuliLibrary
 Documentation   Keywords para automação DESKTOP com Robot Framework e RPA Framework
 Library    RPA.Desktop
 Library    RPA.Windows    timeout=1s
@@ -29,11 +28,6 @@ ${i}=    0
 #Essa biblioteca permite tirar prints da tela para podermos localizar os elementos e permitir interagir com
 #eles atraves do robot ou seja o sikuli é um meio termo assim como o selenium que permite a interação do
 #codigo com o que tem em tela.
-
-# Carregar os elementos do app
-#     #Essa keyword "add Image Path" é da biblioteca Sikuli você pode conferir mais comandos
-#     #dessa biblioteca no link: https://rainmanwy.github.io/robotframework-SikuliLibrary/doc/SikuliLibrary.html
-#     Add Image Path    ${EXECDIR}\\EstruturasBase\\DESKTOP\\Elements
 
 Cadastros
     Sleep                     0.5s
@@ -505,8 +499,6 @@ Salvar arquivo
 Encerrar Tudo
     RPA.Desktop.Close All Applications
 
-
-
 Caso aconteça erro
     [Arguments]     ${Caminho_Screenshots}        ${nome_print}
     Set Global Timeout    0.01
@@ -642,6 +634,11 @@ Arrumar geração de receitas financeiro
     Repetidor de teclas                 enter    1
     Repetidor de teclas em sequencia    space    enter    2
     RPA.Windows.Click                   Carregar
+    Sleep    3s
+    RPA.Desktop.Press Keys              Fechar
+    Sleep    1s
+    RPA.Windows.Click                   Sim
+    Sleep    1s
     RPA.Windows.Click                   Excluir Receitas
     Sleep                               1s
     RPA.Windows.Click                   Sim
