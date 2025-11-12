@@ -88,7 +88,7 @@ Dado que realizei um novo cadastro de suprimento
     RPA.Desktop.Press Keys    Enter
     RPA.Desktop.Type Text     200,00
     RPA.Desktop.Press Keys    Enter
-    Consultar Cadastros       4
+    Escrever para consultar    1
     RPA.Desktop.Type Text     Suprimento gerado a partir de testes automatizados
 
     RPA.Windows.Click         Confirmar
@@ -103,7 +103,7 @@ Dado que realizei um novo cadastro de Sangria
     RPA.Desktop.Press Keys    Enter
     RPA.Desktop.Type Text     200,00
     RPA.Desktop.Press Keys    Enter
-    Consultar Cadastros       4
+    Escrever para consultar    1
     RPA.Desktop.Type Text     Sangria gerado a partir de testes automatizados
     RPA.Windows.Click         Confirmar
 
@@ -210,7 +210,7 @@ Quando vou consultar o histórico de operações do caixa
     repetidor de teclas     right        3
     RPA.Windows.Click       Fechamento de Caixa
     Repetidor de teclas     enter                  2
-    Consultar Cadastros     1
+    Escrever para consultar    99
     Repetidor de teclas     enter                  2
     Sleep                   1s
     RPA.Windows.Click       Arquivo
@@ -239,7 +239,7 @@ Quando vou consultar o histórico de operações do caixa por turno
     repetidor de teclas     right        3
     RPA.Windows.Click       Fechamento de Caixa
     Repetidor de teclas     enter                  2
-    Consultar Cadastros     1
+    Escrever para consultar    99
     Sleep                   1s
     Consultar ultimo registro
     RPA.Desktop.Press Keys  Enter 
