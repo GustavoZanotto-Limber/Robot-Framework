@@ -17,7 +17,7 @@ ${nome_print}
 
 Iniciar Suite
     ${caminho}=       Replace String    ${EXECDIR}       \\Robot_Framework     ${EMPTY}
-    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos\\
+    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos
     Iniciar sessao e abrir caixa    ${nome_exe} 
 
 *** Test Cases    ***
@@ -42,20 +42,20 @@ Cenário 3: Realização de um lançamento de Sangria no caixa
     @{texto_bilhete}=   Create List     COMPROVANTE DE SANGRIA    PDV: 1 - BIL 01    CODIGO MOVIMENTO    MOTIVO: Sangria gerado a partir de testes  automatizados
     [Tags]    Testes_Funcionais    LB-44   
     Dado que realizei um novo cadastro de Sangria
-    Quando salvo o arquivo de Sangria
+    Quando salvo o arqu ivo de Sangria
     Então valido se a impressão saiu corretamente 2   ${Caminho_arquivos}   Sangria.pdf    Sangria.pdf - WPS Office    ${Caminho_Screenshots}        Sangria        @{texto_bilhete}
 
 Cenário 4: Verificação do histórico de operações no caixa  
     ${nome_print}=    Set Variable     Verificação do histórico de operações no caixa  
     [Tags]    Testes_Funcionais    LB-44   
     @{tempo}=    Dado que realizei um novo cadastro de Sangria E Suprimento
-    Quando vou consultar o histórico de operações do caixa
+    Quando vou consultar o histórico de operações do caixa    ${Caminho_arquivos}
     Então o sistema deve exibir corretamente todos os registros    ${Caminho_arquivos}   Relatorio_de_Caixa.pdf    Relatorio_de_Caixa.pdf - WPS Office    ${Caminho_Screenshots}        Relatório de Caixa        @{tempo}
     
 Cenário 5: Geração do relatório de fechamento de caixa por turno   
     ${nome_print}=    Set Variable     Verificação do histórico de operações no caixa  
     [Tags]    Testes_Funcionais    LB-44   
     @{tempo}=    Dado que realizei um novo cadastro de Sangria E Suprimento
-    Quando vou consultar o histórico de operações do caixa por turno
+    Quando vou consultar o histórico de operações do caixa por turno    ${Caminho_arquivos}
     Então o sistema deve exibir corretamente todos os registros    ${Caminho_arquivos}   Relatório_de_Caixa_por_Turno.pdf    Relatório_de_Caixa_por_Turno.pdf - WPS Office    ${Caminho_Screenshots}        Relatório de Caixa por Turno        @{tempo}
     

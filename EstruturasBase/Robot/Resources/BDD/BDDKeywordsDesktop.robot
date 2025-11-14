@@ -205,6 +205,7 @@ Quando salvo a edição do Suprimento/Sangria
     RPA.Windows.Click         Confirmar
 
 Quando vou consultar o histórico de operações do caixa
+    [Arguments]    ${Caminho_impressão}
     # Ir para:                Fechamento de Caixa    3    Fechamento de Caixa (1)
     Cadastros
     repetidor de teclas     right        3
@@ -220,12 +221,13 @@ Quando vou consultar o histórico de operações do caixa
     RPA.Desktop.Press Keys  Enter
     RPA.Desktop.Press Keys  Shift    Tab
     Sleep                   1s
-    RPA.Desktop.Type Text   C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\Relatorio_De_Caixa.pdf
+    RPA.Desktop.Type Text   ${Caminho_impressão}\\Relatorio_De_Caixa.pdf
     Repetidor de teclas     TAB                   2
     Sleep                   1s
     RPA.Desktop.Press Keys  Enter
     
 Quando vou consultar o histórico de operações do caixa por turno
+    [Arguments]    ${Caminho_impressão}
     Ir para:                Abertura / Fechamento  4    Controle de Caixa (1)
     RPA.Windows.Click       Fechar Caixa
     RPA.Windows.Click       Sim
@@ -244,7 +246,7 @@ Quando vou consultar o histórico de operações do caixa por turno
     Consultar ultimo registro
     RPA.Desktop.Press Keys  Enter 
     Sleep                   1s
-    Salvar arquivo          C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\Relatório_de_Caixa_por_Turno.pdf    5
+    Salvar arquivo          ${Caminho_impressão}\\Relatório_de_Caixa_por_Turno.pdf    5
     
 Quando insiro as informações para um novo cadastro de PDV
     RPA.Windows.Click         Novo
@@ -365,7 +367,7 @@ Então valido se a impressão saiu corretamente 2
     [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}    @{texto_impressão}    ${texto_impressão2}=${None}
     Sleep                     1s
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
-    Sleep                     8s
+    Sleep                     3s
     RPA.Windows.Get Element   ${Nome_da_tela}
     BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}  
@@ -382,7 +384,7 @@ Então valido se a impressão saiu corretamente 2
         Should Contain      ${pagina1}        ${element}
         END
     END
-    Sleep                     8s
+    Sleep                     3s
     RPA.Desktop.Press Keys    Alt    F4
     Sleep                     3s
     
