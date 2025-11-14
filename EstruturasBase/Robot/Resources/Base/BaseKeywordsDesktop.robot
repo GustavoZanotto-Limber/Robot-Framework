@@ -476,6 +476,7 @@ Abrir arquivo
     RPA.Desktop.Press Keys    enter
 
 
+
 Repetidor de teclas
     [Arguments]               ${tecla}                   ${quantidade_de_clicks}        ${sleep}=0.1
     FOR                       ${quantidade_de_clicks}    IN RANGE                   1    ${quantidade_de_clicks}+1

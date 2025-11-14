@@ -2,19 +2,24 @@
 Documentation    Testes regressivos: Abertura e fechamento e Caixa
 Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
 Resource         ../../../../Resources/BDD/BDDKeywordsDesktop.robot
-Suite Setup      Iniciar sessao e abrir caixa    ${nome_exe}   
+Suite Setup      Iniciar Suite 
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-43 Abertura e fechamento e Caixa/ 
-${caminho_arquivos}=     C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\
 ${nome_exe}=    cde_win_bca_front
+${caminho_user}
+${Caminho_arquivos}=       ${caminho_user}\\Documents\\Testes_Regressivos\\
 ${nome_print}
 ${texto_bilhete}
 
 *** Keywords ***
+Iniciar Suite
+    ${caminho}=       Replace String    ${EXECDIR}       \\Robot_Framework     ${EMPTY}
+    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos\\
+    Iniciar sessao e abrir caixa    ${nome_exe} 
 
 Cenário 5
     Caso aconteca erro 2            ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
