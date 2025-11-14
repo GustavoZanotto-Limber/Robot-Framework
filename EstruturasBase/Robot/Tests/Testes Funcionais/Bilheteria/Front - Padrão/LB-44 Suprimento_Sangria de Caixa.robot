@@ -2,18 +2,23 @@
 Documentation    Testes regressivos: Impressão de Bilhete e Reimpressão de bilhetes
 Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
 Resource         ../../../../Resources/BDD/BDDKeywordsDesktop.robot
-Suite Setup      Iniciar sessao e abrir caixa    ${nome_exe}
+Suite Setup      Iniciar Suite
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-44 Suprimento_Sangria de Caixa/ 
-${Caminho_arquivos}=     C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\
-${nome_exe}=    cde_win_bca_front
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-44 Suprimento_Sangria de Caixa/          
+${Caminho_arquivos}      
+${nome_exe}=               cde_win_bca_front
 ${nome_print}
+
 *** Keywords ***
 
+Iniciar Suite
+    ${caminho}=       Replace String    ${EXECDIR}       \\Robot_Framework     ${EMPTY}
+    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos\\
+    Iniciar sessao e abrir caixa    ${nome_exe} 
 
 *** Test Cases    ***
 
