@@ -43,14 +43,14 @@ Usuários
     Então valido o titulo e clico em novo 2     Gerenciamento de Usuários    Novo Usuário    usuario    new-or-edit-usuario
 
 Webhook
-    [Tags]        CARD    SmokeTest    Configurações    SmokeCARD
+    [Tags]        CARD    SmokeTest    Configurações    SmokeCARD    
     ${nome_print}=    Set Variable     Webhook
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral        9    5
     Então valido o titulo clico em novo    Gerenciamento de Webhooks    Novo Webhook    app-webhook    app-new-or-edit-webhook
 
 Load Balancing
-    [Tags]        CARD    SmokeTest    Configurações    SmokeCARD
+    [Tags]        CARD    SmokeTest    Configurações    SmokeCARD    
     ${nome_print}=    Set Variable     Load Balancing
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral        9    6
