@@ -17,7 +17,7 @@ ${nome_print}
 
 Iniciar Suite
     ${caminho}=       Replace String    ${EXECDIR}       \\Robot_Framework     ${EMPTY}
-    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos\\
+    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos
     Iniciar sessao e abrir caixa    ${nome_exe} 
 
 *** Test Cases    ***
@@ -49,13 +49,13 @@ Cenário 4: Verificação do histórico de operações no caixa
     ${nome_print}=    Set Variable     Verificação do histórico de operações no caixa  
     [Tags]    Testes_Funcionais    LB-44   
     @{tempo}=    Dado que realizei um novo cadastro de Sangria E Suprimento
-    Quando vou consultar o histórico de operações do caixa
+    Quando vou consultar o histórico de operações do caixa    ${Caminho_arquivos}
     Então o sistema deve exibir corretamente todos os registros    ${Caminho_arquivos}   Relatorio_de_Caixa.pdf    Relatorio_de_Caixa.pdf - WPS Office    ${Caminho_Screenshots}        Relatório de Caixa        @{tempo}
     
 Cenário 5: Geração do relatório de fechamento de caixa por turno   
     ${nome_print}=    Set Variable     Verificação do histórico de operações no caixa  
     [Tags]    Testes_Funcionais    LB-44   
     @{tempo}=    Dado que realizei um novo cadastro de Sangria E Suprimento
-    Quando vou consultar o histórico de operações do caixa por turno
+    Quando vou consultar o histórico de operações do caixa por turno    ${Caminho_arquivos}
     Então o sistema deve exibir corretamente todos os registros    ${Caminho_arquivos}   Relatório_de_Caixa_por_Turno.pdf    Relatório_de_Caixa_por_Turno.pdf - WPS Office    ${Caminho_Screenshots}        Relatório de Caixa por Turno        @{tempo}
     

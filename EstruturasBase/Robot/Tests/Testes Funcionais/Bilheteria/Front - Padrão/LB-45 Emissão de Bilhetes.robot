@@ -14,11 +14,7 @@ ${nome_exe}=    cde_win_bca_front
 ${nome_print}
 ${texto_bilhete}
 
-*** Keywords ***
-
-
 *** Test Cases    ***
-
 
 Cenário 1: Emissão de bilhetes para diferentes categorias
     ${nome_print}=    Set Variable     Emissão de Bilhetes para diferentes categorias

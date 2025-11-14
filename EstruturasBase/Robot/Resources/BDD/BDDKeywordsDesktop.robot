@@ -205,6 +205,7 @@ Quando salvo a edição do Suprimento/Sangria
     RPA.Windows.Click         Confirmar
 
 Quando vou consultar o histórico de operações do caixa
+    [Arguments]    ${Caminho_impressão}
     # Ir para:                Fechamento de Caixa    3    Fechamento de Caixa (1)
     Cadastros
     repetidor de teclas     right        3
@@ -220,12 +221,13 @@ Quando vou consultar o histórico de operações do caixa
     RPA.Desktop.Press Keys  Enter
     RPA.Desktop.Press Keys  Shift    Tab
     Sleep                   1s
-    RPA.Desktop.Type Text   C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\Relatorio_De_Caixa.pdf
+    RPA.Desktop.Type Text   ${Caminho_impressão}\\Relatorio_De_Caixa.pdf
     Repetidor de teclas     TAB                   2
     Sleep                   1s
     RPA.Desktop.Press Keys  Enter
     
 Quando vou consultar o histórico de operações do caixa por turno
+    [Arguments]    ${Caminho_impressão}
     Ir para:                Abertura / Fechamento  4    Controle de Caixa (1)
     RPA.Windows.Click       Fechar Caixa
     RPA.Windows.Click       Sim
@@ -244,7 +246,7 @@ Quando vou consultar o histórico de operações do caixa por turno
     Consultar ultimo registro
     RPA.Desktop.Press Keys  Enter 
     Sleep                   1s
-    Salvar arquivo          C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\Relatório_de_Caixa_por_Turno.pdf    5
+    Salvar arquivo          ${Caminho_impressão}\\Relatório_de_Caixa_por_Turno.pdf    5
     
 Quando insiro as informações para um novo cadastro de PDV
     RPA.Windows.Click         Novo
