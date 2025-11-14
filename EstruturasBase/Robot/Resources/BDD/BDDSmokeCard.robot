@@ -286,17 +286,18 @@ Então valido o cadastro de Clientes de E-Commerce's
 
 Então valido o cadastro de Tick Ingressos
     Então valido o titulo clico em novo    Gerenciamento de Tick Ingressos - POS    Novo Tick Ingresso    tick-ingressos    new-or-edit-tick
-    Clicar no Elemento                          xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-tick/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
+    Clicar no Elemento                     xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-tick/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
     Sleep                                  1s
-    Clicar no Elemento                          xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-tick/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/div/title-btn-add/div/button
+    Clicar no Elemento                     xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-tick/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/div/title-btn-add/div/button
+    Sleep                                  1s
     Element Should Contain                 xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/add-estabelecimento-usuario/div/div[1]/h2    Novo Terminal
 
 Então valido a localização de Terminal
-    Conferir Texto     xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/h2    Localizar Terminal
+    Conferir Texto                xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/h2    Localizar Terminal
     Inserir Texto                 xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div/mat-form-field/div[1]/div/div[2]/input    18CDFA831895
     Clicar no Botão               xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div/button
-    Sleep                      1s
-    Element Should Be Visible  xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div[2]/div[1]
+    Sleep                         1s
+    Element Should Be Visible     xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/app-localizar-terminal/div[2]/div[1]
 
 Então valido o cadastro de Agrupador de Agências
     Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-agrupador-agencias/div/div/h1    Agrupador de Agências/Parceiros
@@ -307,13 +308,14 @@ Então valido o cadastro de Agrupador de Agências
 Então valido se a tela de Central de Vendas foi carregada corretamente
     Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/mat-toolbar     Central de Vendas
     Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/central-vendas-estabelecimentos/lista-cadastros-com-busca/div/div/h1    Estabelecimentos
-    Clicar no Elemento             xpath:/html/body/app-root/app-central-vendas/div/div/div/central-vendas-estabelecimentos/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[3]
-    Sleep                     2s
+    Clicar no Elemento        xpath:/html/body/app-root/app-central-vendas/div/div/div/central-vendas-estabelecimentos/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[3]
+    Sleep                     1s
+    RPA.Desktop.Press Keys    CTRL    TAB
     Go To    https://testescard.limbersoftware.com.br/#/central-vendas/estabelecimentos/1916/Central%20de%20Vendas%20Zanotto/venda
-    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[1]/h1    Dados Iniciais
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/mat-card/h1    Dados Iniciais
     Preencher dados central de vendas
-    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[3]/div[1]/h1    Experiências   
-    Clicar no Elemento             xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/div/ul/li[2]/a/span/span/div
+    Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div/mat-card/h1    Experiências   
+    Clicar no Elemento        xpath:/html/body/app-root/app-central-vendas/div/central-vendas-toolbar/div/ul/li[2]
     Sleep                     1s    
     Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-gerenciador-vendas/div/div[1]/h1    Gerenciamento de Vendas
 

@@ -9,18 +9,20 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-45 Emissão de Bilhetes/ 
-${caminho_logs}=     C:/Users/testes/Documents/Testes Regressivos/
+${caminho_logs}=     C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\
 ${nome_exe}=    cde_win_bca_front
 ${nome_print}
 ${texto_bilhete}
+
 *** Keywords ***
 
 
 *** Test Cases    ***
 
+
 Cenário 1: Emissão de bilhetes para diferentes categorias
     ${nome_print}=    Set Variable     Emissão de Bilhetes para diferentes categorias
-    @{texto_bilhete}=   Set Variable     5875 - Z - Bilhete integrado    4321 - CATEGORIA 1    4369 - CATEGORIA 2 - INTEGRADA    4389 - CATEGORIA 3 - INTEGRADA
+    @{texto_bilhete}=   Set Variable     6660 - LB-45 Bilhete Integrado    4651 - Categoria 1    4683 - Categoria 2    4684 - Categoria 3
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma venda com multiplas categorias
     Quando finalizo o pagamento    3
@@ -28,7 +30,7 @@ Cenário 1: Emissão de bilhetes para diferentes categorias
 
 Cenário 2: Emissão de bilhetes com categoria e convênio
     ${nome_print}=    Set Variable     Emissão de bilhetes com categoria e convênio
-    @{texto_bilhete}=   Create List     5875 - Z - Bilhete integrado    4401 - Categoria Convênio
+    @{texto_bilhete}=   Create List     6660 - LB-45 Bilhete Integrado    4916 - Convênio
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma venda com convênio
     Quando finalizo o pagamento    1
@@ -45,7 +47,7 @@ Cenário 2: Emissão de bilhetes com categoria e convênio
 
 Cenário 4: Compra de bilhetes diferentes na mesma venda  
     ${nome_print}=    Set Variable     Compra de bilhetes diferentes na mesma venda  
-    @{texto_bilhete}=   Create List     5875 - Z - Bilhete integrado    4321 - CATEGORIA 1    6080 - Z - Bilhete integrado - 2
+    @{texto_bilhete}=   Create List     6660 - LB-45 Bilhete Integrado    4651 - Categoria 1    6661 - LB-45 Bilhete Integrado 2
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma venda com dois bilhetes
     Quando finalizo o pagamento    2
@@ -53,7 +55,7 @@ Cenário 4: Compra de bilhetes diferentes na mesma venda
 
 Cenário 5: Cadastro de dados do titular e visitante na emissão de bilhete
     ${nome_print}=    Set Variable     Cadastro de dados do titular e visitante na emissão de bilhete  
-    @{texto_bilhete}=   Create List     6081 - Z - Bilhete integrado - Coleta dados do usuário     4321 - CATEGORIA 1    PR    1 - BRASIL    GUSTAVO ZANOTTO AUTOMATIZADO     09285844960    5546999999999    Masculino     Ensino Superior Incompleto    22/08/2000
+    @{texto_bilhete}=   Create List     6663 - LB-45 Bilhete Integrado - Coleta dados do Usuário     4651 - Categoria 1    PR    1 - BRASIL    GUSTAVO ZANOTTO AUTOMATIZADO     09285844960    5546999999999    Masculino     Ensino Superior Incompleto    22/08/2000
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma reserva preenchendo os dados do titular e visitante
     Quando finalizo o pagamento    1
@@ -61,15 +63,15 @@ Cenário 5: Cadastro de dados do titular e visitante na emissão de bilhete
 
 Cenário 6: Redução da disponibilidade após cada venda  
     ${nome_print}=    Set Variable     Redução da disponibilidade após cada venda  
-    @{texto_bilhete}=   Create List     5875 - Z - Bilhete integrado    4321 - CATEGORIA 1
+    @{texto_bilhete}=   Create List     6660 - LB-45 Bilhete Integrado    4651 - Categoria 1
     [Tags]    Testes_Funcionais    LB-45   
     ${qtd_vagas}=    Dado que realizei uma reserva verificando a quantidade de bilhetes    
     Quando finalizo o pagamento (sem fechar a janela)    1
-    Então valido se a quantidade foi reduzida corretamente    ${qtd_vagas}
+    Então valido se a quantidade foi reduzida corretamente    ${qtd_vagas}       6660
     
 Cenário 7: Verificação de vendas realizadas
     ${nome_print}=    Set Variable     Verificação de vendas realizadas
-    @{texto_bilhete}=   Create List     5875 - Z - Bilhete integrado    4401 - Categoria Convênio
+    @{texto_bilhete}=   Create List     6660 - LB-45 Bilhete Integrado    4916 - Convênio
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma venda com convênio
     Quando finalizo o pagamento    1
@@ -77,7 +79,7 @@ Cenário 7: Verificação de vendas realizadas
 
 Cenário 8: Geração de comprovante RPS e bilhete após a venda
     ${nome_print}=    Set Variable     Geração de comprovante RPS e bilhete após a venda
-    @{texto_bilhete}=   Create List     5875 - Z - Bilhete integrado    4401 - Categoria Convênio
+    @{texto_bilhete}=   Create List     6660 - LB-45 Bilhete Integrado    4651 - Categoria 1
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma venda
     Quando imprimo o bilhete
@@ -93,7 +95,7 @@ Cenário 9: Venda de bilhete comum (visitação e atrativos)
 
 Cenário 10: Venda de bilhete com Constribuição de Fundo
     ${nome_print}=    Set Variable     Venda de bilhete com Constribuição de Fundo
-    @{texto_bilhete}=   Create List     6080 - Z - Bilhete integrado - 2     4321 - CATEGORIA 1 
+    @{texto_bilhete}=   Create List     6080 Bilhete Integrado - 2     4651 Categoria 1 
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma reserva com fundo iguaçu
     Quando finalizo o pagamento    1
@@ -101,7 +103,7 @@ Cenário 10: Venda de bilhete com Constribuição de Fundo
 
 Cenário 11: Venda de bilhete zerado com coleta de observação
     ${nome_print}=    Set Variable     Venda de bilhete zerado com coleta de observação
-    @{texto_bilhete}=   Create List     6163 - Z - Valor Zerado INTEGRADO      4321 - CATEGORIA 1 
+    @{texto_bilhete}=   Create List     6163 - Z - Valor Zerado INTEGRADO      4651 Categoria 1 
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma reserva com valor Zerado
     Quando preencho a observação    
