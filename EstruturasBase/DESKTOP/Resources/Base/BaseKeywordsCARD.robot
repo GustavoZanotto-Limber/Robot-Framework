@@ -157,10 +157,10 @@ Adicionar Receita
     Clicar no Elemento             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/div/mat-accordion/mat-expansion-panel[${categoria}]/mat-expansion-panel-header/span[1]
     Clicar no Elemento             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/div/mat-accordion/mat-expansion-panel[${categoria}]/div/div/div/div/title-btn-add/div/button
     Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-receitas/div/form/mat-form-field[1]/div[1]/div/div[2]
-    Inserir Texto                xpath:/html/body/div[3]/div[4]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${receita}
+    Inserir Texto                  xpath:/html/body/div[3]/div[4]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${receita}
     Clicar no Elemento             xpath:/html/body/div[3]/div[4]/div/div/mat-option[2]
-    Inserir Texto                xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-receitas/div/form/mat-form-field[2]/div[1]/div/div[2]/input     100
-    Clicar no Botão           xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-receitas/div/div/button[2]
+    Inserir Texto                  xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-receitas/div/form/mat-form-field[2]/div[1]/div/div[2]/input     100
+    Clicar no Botão                xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-receitas/div/div/button[2]
 
 Criar Temporada
     [Arguments]    ${codigo_temporada}=1    ${nome_temporada}=Temporada 1    ${vermelho}=255    ${verde}=0    ${azul}=0
@@ -326,7 +326,7 @@ Selecionar dia do calendário
                 ${exists}=     Run Keyword And Return Status    Element Should Be Visible    /html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/div/ng-full-year-calendar-lib/dts-select-container/div[1]/div[${mês}]/table/tbody/tr[${linha}]/td[${coluna}]/div/section
                 IF    ${exists} and ${dia} >= 29
                     ${dia}=    Set Variable    1
-                     ${mês}=    Evaluate        ${mês} + 1
+                    ${mês}=    Evaluate        ${mês} + 1
                 END 
             END
         END      
@@ -668,13 +668,13 @@ Conferir Texto
     Element Should Contain           ${xpath_texto}    ${texto}
 
 Preencher dados central de vendas
-    [Arguments]    ${nome}=Gustavo Zanotto   ${documento}=123456789    ${email}=Automacao@gmail.com   ${data_nascimento}=22082006     ${telefone}=05546999999999      
-    Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[2]/div[1]/div[1]/mat-form-field/div[1]/div/div[2]/input   ${nome}
-    Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[2]/div[1]/div[2]/mat-form-field/div[1]/div/div[2]/input   ${documento}
-    Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[2]/div[1]/div[3]/mat-form-field/div[1]/div/div[2]/input   ${email}
-    Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[2]/div[2]/div[1]/mat-form-field/div[1]/div/div[2]/input   ${data_nascimento}
-    Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[2]/div[2]/div[2]/mat-form-field/div[1]/div/div[2]/input   ${telefone}
-    Clicar no Botão   xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div[2]/div[3]/custom-button/button
+    [Arguments]    ${nome}=Gustavo Zanotto   ${documento}=123456789    ${email}=Automacao@gmail.com   ${data_nascimento}=22082006     ${telefone}=5546999999999      
+    Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/mat-card/div[1]/mat-form-field[1]/div[1]/div/div[2]/input   ${nome}
+    Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/mat-card/div[1]/mat-form-field[2]/div[1]/div/div[2]/input   ${documento}
+    Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/mat-card/div[1]/mat-form-field[3]/div[1]/div/div[2]/input   ${email}
+    Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/mat-card/div[1]/mat-form-field[4]/div[1]/div/div[2]/input   ${data_nascimento}
+    Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/mat-card/div[1]/mat-form-field[5]/div[1]/div/div[2]/app-cellphone-input/div/input   ${telefone}
+    Clicar no Botão   xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/mat-card/div[2]/custom-button/button
 
 Encerrar Cenário
     [Arguments]    ${nome_print}    ${Caminho_Screenshots}

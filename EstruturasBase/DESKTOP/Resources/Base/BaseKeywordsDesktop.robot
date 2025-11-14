@@ -192,12 +192,16 @@ Analisa texto dos bilhetes vendidos
     FOR    ${item}    IN    @{Texto_no_bilhete}
     Should Contain    ${bilhetes_vendidos}        ${item}     
     END
-    RPA.Desktop.Press Keys    Alt    F4
+    RPA.Windows.Click    Editor de texto
+    sleep    1s
+    RPA.Windows.Click    Fechar
 
 Analisa texto da forma de pagamento (contém)
     [Arguments]    ${metodo}    ${valor}
     ${pagamentos}=   Exportar pagamentos da venda para bloco de notas
     Should Contain   ${pagamentos}    ${metodo}    ${valor} 
+    RPA.Windows.Click    Editor de texto
+    Sleep    1s
     RPA.Desktop.Press Keys    Alt    F4
     Fechar janela  
 
@@ -205,6 +209,8 @@ Analisa texto da forma de pagamento (não contém)
     [Arguments]    ${metodo}    ${valor}
     ${pagamentos}=   Exportar pagamentos da venda para bloco de notas
     Should not Contain   ${pagamentos}    ${metodo}    ${valor} 
+    RPA.Windows.Click    Editor de texto
+    Sleep    1s
     RPA.Desktop.Press Keys    Alt    F4
     Fechar janela  
 
@@ -361,7 +367,7 @@ Trocar Operação
     RPA.Desktop.Press Keys     Enter
 
 Selecionar o bilhete e o convênio
-    [Arguments]    ${numero_bilhete}=5875    ${qtd_clicks_categoria}=4
+    [Arguments]    ${numero_bilhete}    ${qtd_clicks_categoria}=4
     #Selecionando o bilhete
     Escrever para consultar   ${numero_bilhete}
     #Selecionando categorias
@@ -386,6 +392,7 @@ Selecionar o bilhete e o convênio
 
 Finalizar compra 
     RPA.Desktop.Press Keys    F5
+    Repetidor de teclas       Down    2
     RPA.Desktop.Press Keys    space
     RPA.Desktop.Press Keys    enter
     
@@ -542,6 +549,7 @@ Caso aconteca erro 2
         Run Keyword If Test Failed    Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
         Run Keyword If Test Failed    Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
         Run Keyword If Test Failed    Encerrar Tudo
+        Run Keyword If Test Failed    RPA.Windows.Click               Fechar Guia
         Run Keyword If Test Failed    Iniciar sessao    ${nome_exe}
 
 

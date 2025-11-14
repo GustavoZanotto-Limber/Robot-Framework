@@ -20,35 +20,35 @@ ${i}=    0
 #----------------------------------------DADO----------------------------------------
 Dado que realizei uma venda
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete   6568    4651
+    Selecionar o bilhete   6660    4651
     Finalizar compra
 
 Dado que realizei uma venda com convênio
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete e o convênio
+    Selecionar o bilhete e o convênio    6660
     Finalizar compra
 
 Dado que realizei uma venda com dois bilhetes
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete    5875    4321
-    Selecionar o bilhete    6080    4321
+    Selecionar o bilhete    6660    4651
+    Selecionar o bilhete    6661    4651
     RPA.Desktop.Press Keys  Enter
     Finalizar compra
 
 Dado que realizei uma venda com multiplas categorias
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete    5875    4321
+    Selecionar o bilhete    6660    4651
     Sleep                   1s
-    Selecionar o bilhete    5875    4369
+    Selecionar o bilhete    6660    4683
     RPA.Desktop.Press Keys  Enter
     Sleep                   1s
-    Selecionar o bilhete    5875    4389
+    Selecionar o bilhete    6660    4684
     RPA.Desktop.Press Keys  Enter
     Finalizar compra
 
 Dado que realizei uma reserva preenchendo os dados do titular e visitante
     Ir Para Emissão de Bilhetes
-    Selecionar bilhete preenchendo pais, estado e município   6081    4321
+    Selecionar bilhete preenchendo pais, estado e município   6663    4651
     Sleep                   1s        
     Preencher dados do visitante
     Finalizar compra
@@ -61,7 +61,7 @@ Dado que realizei uma reserva como outras receitas
 
 Dado que realizei uma reserva verificando a quantidade de bilhetes
     Ir Para Emissão de Bilhetes
-    ${qtd_vagas_string}=   Selecionar o bilhete e retornar quantidade de vagas   5875    1
+    ${qtd_vagas_string}=   Selecionar o bilhete e retornar quantidade de vagas   6660    1
     ${qtd_vagas}=        Convert to Integer    ${qtd_vagas_string}
     Sleep    1s
     Finalizar compra
@@ -293,11 +293,9 @@ Então valido a venda foi realizada com sucesso
     Carregar
     Rolar barra até o Final
     Analisa texto dos bilhetes vendidos   @{Texto_Bilhete}
+    Sleep    1
     Analisa texto da forma de pagamento (contém)  ${metodo}    ${valor}
-    Retirar Categoria    2
-    Sleep                1s
-    Retirar Categoria    3
-    Inativar Bilhete    
+    Fechar janela
 
 Então valido a venda foi realizada com sucesso (valor zerado)
     [Arguments]    @{Texto_Bilhete}    ${metodo}    ${valor}
@@ -309,9 +307,6 @@ Então valido a venda foi realizada com sucesso (valor zerado)
     
 Então valido se a quantidade foi reduzida corretamente
     [Arguments]    ${qtd_vagas}    ${numero_bilhete}
-    
-    Ir Para Emissão de Bilhetes
-    Sleep                         1s
     ${qtd_vagas_novo_string}=     Selecionar o bilhete e retornar quantidade de vagas    ${numero_bilhete}    1
     ${qtd_vagas_novo}=            Convert to Integer    ${qtd_vagas_novo_string}
     ${qtd_vagas}=            Evaluate    ${qtd_vagas}-1
