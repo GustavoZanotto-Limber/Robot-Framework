@@ -184,6 +184,7 @@ Exportar bilhetes vendidos para bloco de notas
     RPA.Desktop.Press Keys     enter
     Sleep                      3s
     ${texto}=    RPA.Windows.Get Value      Editor de texto		
+    Log    ${texto}
     RETURN    ${texto}
 
 Analisa texto dos bilhetes vendidos
@@ -550,7 +551,7 @@ Caso aconteca erro 2
         Run Keyword If Test Failed    Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
         Run Keyword If Test Failed    Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
         Run Keyword If Test Failed    Encerrar Tudo
-        Run Keyword If Test Failed    RPA.Windows.Click               Fechar Guia
+        Run Keyword If Test Failed    Run keyword and ignore error    RPA.Windows.Click               Fechar Guia
         Run Keyword If Test Failed    Iniciar sessao    ${nome_exe}
 
 

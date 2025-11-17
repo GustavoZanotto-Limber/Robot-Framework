@@ -13,7 +13,7 @@ ${nome_print}
 
 *** Test Cases ***
 
-Impressão via E-commerce    
+Cenário 1: Impressão via E-commerce    
     ${nome_print}=    Set Variable     Impressão via E-commerce
     [Tags]    Testes_Funcionais    CARD    Regressivos_CARD    LB-26
     Dado que estou no e-commerce

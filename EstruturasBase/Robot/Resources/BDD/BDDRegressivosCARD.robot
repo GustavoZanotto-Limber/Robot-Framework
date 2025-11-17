@@ -20,7 +20,7 @@ ${URL_E-Commerce}=     https://regressivoscard.testescard.limber.net.br/
     
 # ---------------------DADO---------------------
 Dado que estou no e-commerce
-    Abro o E-commerce
+    Abro o E-commerce (Integrada)
     Sleep    2s
 
 
