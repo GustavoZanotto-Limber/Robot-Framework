@@ -56,7 +56,7 @@ Dado que realizei uma reserva preenchendo os dados do titular e visitante
 Dado que realizei uma reserva como outras receitas
     Ir Para Emissão de Bilhetes
     Trocar Operação  6  
-    Selecionar o bilhete   5774    3582
+    Selecionar o bilhete   6667    4651
     Finalizar compra
 
 Dado que realizei uma reserva verificando a quantidade de bilhetes
@@ -70,12 +70,12 @@ Dado que realizei uma reserva verificando a quantidade de bilhetes
 Dado que realizei uma reserva com fundo iguaçu
     Ir Para Emissão de Bilhetes
     RPA.Desktop.Press Keys  F4
-    Selecionar o bilhete    6080    4321
+    Selecionar o bilhete    6668    4651
     Finalizar compra
 
 Dado que realizei uma reserva com valor Zerado
     Ir Para Emissão de Bilhetes
-    Selecionar o bilhete    6163   4321
+    Selecionar o bilhete    6669   4651
     RPA.Desktop.Press Keys  F5
 
 Dado que realizei um novo cadastro de suprimento
@@ -221,7 +221,7 @@ Quando vou consultar o histórico de operações do caixa
     RPA.Desktop.Press Keys  Enter
     RPA.Desktop.Press Keys  Shift    Tab
     Sleep                   1s
-    RPA.Desktop.Type Text   ${Caminho_impressão}\\Relatorio_De_Caixa.pdf
+    RPA.Desktop.Type Text   ${Caminho_impressão}Relatorio_De_Caixa.pdf
     Repetidor de teclas     TAB                   2
     Sleep                   1s
     RPA.Desktop.Press Keys  Enter
@@ -246,7 +246,7 @@ Quando vou consultar o histórico de operações do caixa por turno
     Consultar ultimo registro
     RPA.Desktop.Press Keys  Enter 
     Sleep                   1s
-    Salvar arquivo          ${Caminho_impressão}\\Relatório_de_Caixa_por_Turno.pdf    5
+    Salvar arquivo          ${Caminho_impressão}Relatório_de_Caixa_por_Turno.pdf    5
     
 Quando insiro as informações para um novo cadastro de PDV
     RPA.Windows.Click         Novo
@@ -326,7 +326,6 @@ Então valido se a quantidade foi reduzida corretamente
         END
     END
     Fechar com Sim
-    Encerrar Tudo
 
 Então valido se a impressão saiu corretamente
     [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}
@@ -357,11 +356,11 @@ Então valido se a impressão RPS saiu corretamente
     ${primeira}=              Get From List          ${keys}    0
     ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
     Log                       ${pagina1}       
-    Should Contain            ${pagina1.lower()}             DEMONSTRACAO\nCNPJ: 000000000000000ENDEREÇO PADRÃO, 0\nMarília - SP\nCEP:  00000-000RECIBO PROVISÓRIO DE\nPRESTAÇÃO DE SERVIÇOS - RPSRPS Nº 264  Série PC1B\nEmissão  Discriminação dos serviçosCód.ItemValor00000 Acesso\nB. Cálculo 100,00 Alíq. 05%100,00\nVlr. ISS  5,00\nValor do RPS 100,00\nValor Total dos Tributos  5,00Emitido em  
-    Should Contain            ${pagina1}             PDV: 1 Operador: 1-Usuário
+    Should Contain            ${pagina1.lower()}             DEMONSTRACAO\nCNPJ: 000000000000000Rod. BR 153, KM 01, 0\nMarília - SP\nCEP:  17500-970RECIBO PROVISÓRIO DE\nPRESTAÇÃO DE SERVIÇOS - RPSRPS Nº 175  Série PC1B\nEmissão 14/11/2025Discriminação dos serviçosCód.ItemValor00000 Acesso\nB. Cálculo 100,00 Alíq. 05%100,00\nVlr. ISS  5,00\nValor do RPS 100,00\nValor Total dos Tributos  5,00
+    Should Contain            ${pagina1}                     Emitido em  as  99 Operador: 1-admin
     Sleep                     7s
     RPA.Desktop.Press Keys    Alt    F4
-
+    RPA.Windows.Click         Espaço de trabalho
 
 Então valido se a impressão saiu corretamente 2
     [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}    @{texto_impressão}    ${texto_impressão2}=${None}

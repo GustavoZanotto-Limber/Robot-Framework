@@ -9,8 +9,8 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-45 Emissão de Bilhetes/ 
-${caminho_logs}=     C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\
-${nome_exe}=    cde_win_bca_front
+${caminho_logs}=           C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\
+${nome_exe}=               cde_win_bca_front
 ${nome_print}
 ${texto_bilhete}
 
@@ -83,7 +83,7 @@ Cenário 8: Geração de comprovante RPS e bilhete após a venda
 
 Cenário 9: Venda de bilhete comum (visitação e atrativos)
     ${nome_print}=    Set Variable     Venda de bilhete comum (visitação e atrativos)
-    @{texto_bilhete}=   Create List     5774 - Teste de Agências TESTLINK    3582 - Inteira    501 - Venda de bilhete Outras Receitas
+    @{texto_bilhete}=   Create List     6667 - LB-45 Outras receitas    4651 - Categoria 1    501 - Venda de bilhete Outras Receitas
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma reserva como outras receitas
     Quando finalizo o pagamento    1
@@ -91,7 +91,7 @@ Cenário 9: Venda de bilhete comum (visitação e atrativos)
 
 Cenário 10: Venda de bilhete com Constribuição de Fundo
     ${nome_print}=    Set Variable     Venda de bilhete com Constribuição de Fundo
-    @{texto_bilhete}=   Create List     6080 Bilhete Integrado - 2     4651 Categoria 1 
+    @{texto_bilhete}=   Create List     6668 - LB-45 Fundo Iguaçu     4651 - Categoria 1 
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma reserva com fundo iguaçu
     Quando finalizo o pagamento    1
@@ -99,7 +99,7 @@ Cenário 10: Venda de bilhete com Constribuição de Fundo
 
 Cenário 11: Venda de bilhete zerado com coleta de observação
     ${nome_print}=    Set Variable     Venda de bilhete zerado com coleta de observação
-    @{texto_bilhete}=   Create List     6163 - Z - Valor Zerado INTEGRADO      4651 Categoria 1 
+    @{texto_bilhete}=   Create List     6669 - LB-45 Valor Zerado     4651 - Categoria 1 
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma reserva com valor Zerado
     Quando preencho a observação    
