@@ -17,7 +17,7 @@ ${nome_print}
 
 Iniciar Suite
     ${caminho}=       Replace String    ${EXECDIR}       \\Robot_Framework     ${EMPTY}
-    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos
+    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos\\
     Iniciar sessao e abrir caixa    ${nome_exe} 
 
 *** Test Cases    ***

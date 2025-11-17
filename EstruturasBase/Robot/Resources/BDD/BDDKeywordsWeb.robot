@@ -188,7 +188,7 @@ Então valido se a disponibilidade integrou corretamente
 Então valido a Exceção no E-commerce e na bilheteria
     [Arguments]    ${numero_bilhete}    ${qtd_vagas}=5
     Colocar o bilhete no e-commerce    ${numero_bilhete}    2
-    Abro o E-commerce
+    Abro o E-commerce (Integrada)
     Pesquisar bilhete no e-commerce      LB-42 Cadastro e alteração de Programação de Horario
     Coletar quantidade de vagas (E-Commerce)    ${qtd_vagas}
     Então valido se a disponibilidade integrou corretamente    ${numero_bilhete}    ${qtd_vagas}
@@ -196,7 +196,7 @@ Então valido a Exceção no E-commerce e na bilheteria
 
 Então valido o bloqueio de horário no E-commerce e na bilheteria
     [Arguments]    ${numero_bilhete}    
-    Abro o E-commerce
+    Abro o E-commerce (Integrada)
     Pesquisar bilhete no e-commerce   LB-42 Cadastro e alteração de Programação de Horario
     Sleep             2s
     ${bloqueio}=      SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span
@@ -212,7 +212,7 @@ Então valido o bloqueio de horário no E-commerce e na bilheteria
 
 Então valido se a tarifa foi salva corretamente 
     [Arguments]     ${valor}=5,00 
-    Abro o E-commerce
+    Abro o E-commerce (Integrada)
     Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
     Adicionar categoria (Compra E-Commerce)    1    1
     Coleta Valor bilhete (E-commerce)     5,00    1    0,08    
@@ -220,7 +220,7 @@ Então valido se a tarifa foi salva corretamente
 
 Então Valido se o convênio foi salvo corretamente
     [Arguments]    ${nome_bilhete}=LB-41 Programação de Preços
-    Abro o E-commerce
+    Abro o E-commerce (Integrada)
     Pesquisar bilhete no e-commerce    ${nome_bilhete}
     Adicionar categoria (Compra E-Commerce)    2    1
     Comprar Ingressos
@@ -238,7 +238,7 @@ Então Valido se o convênio foi salvo corretamente
 
 Então valido se os preços foram salvos corretamente
     [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      ${valor_cat2}=10,00    ${valor_cat3}=15,00
-    Abro o E-commerce
+    Abro o E-commerce (Integrada)
     Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
     Adicionar categoria (Compra E-Commerce)    1    1
     Adicionar categoria (Compra E-Commerce)    2    1
@@ -265,7 +265,7 @@ Então valido se os preços foram salvos corretamente
 
 Então valido as temporadas no E-Commerce
     [Arguments]    ${numero_bilhete}
-    Abro o E-commerce
+    Abro o E-commerce (Integrada)
     Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
     Sleep                              3s
     Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span       Temporada 1
@@ -273,7 +273,7 @@ Então valido as temporadas no E-Commerce
     
 Então valido se o preço foi salvo corretamente
     [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      
-    Abro o E-commerce
+    Abro o E-commerce (Integrada)
     Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
     Adicionar categoria (Compra E-Commerce)    1    1
     Coleta Valor bilhete (E-commerce)     ${valor_cat1}       1

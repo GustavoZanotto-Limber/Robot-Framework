@@ -16,7 +16,12 @@ Resource    ../BDD/BDDKeywordsDesktop.robot
 
 *** Keywords ***
 
-Abro o E-commerce
+Abro o E-commerce (Integrada)
+    Go to                     https://automacao.testescard.limber.net.br/
+    Sleep                     7s
+    Logar no e-commerce
+
+Abro o E-commerce (Online)
     Go to                     https://automacao.testescard.limber.net.br/
     Sleep                     7s
     Logar no e-commerce
@@ -124,9 +129,9 @@ Logar no e-commerce
 
 Pesquisar bilhete no e-commerce
     [Arguments]   ${nome_bilhete}
-    Inserir Texto         xpath:/html/body/app-root/app-home/div/main/app-dashboard/div/mat-form-field/div[1]/div/div[3]/input       ${nome_bilhete}
+    Inserir Texto                        xpath:/html/body/app-root/app-home/div/main/app-dashboard/div/mat-form-field/div[1]/div/div[3]/input       ${nome_bilhete}
     Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[3]/div/div/div/mat-option    xpath:/html/body/div[2]/div/div/div/mat-option   
-    Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-dashboard/section[2]/app-highlights/div[2]/div[1]/div/app-product-card/div/section/a
+    Clicar no Elemento                   xpath:/html/body/app-root/app-home/div/main/app-dashboard/section[2]/app-highlights/div[2]/div[1]/div/app-product-card/div/section/a
 
 Coletar quantidade de vagas (E-Commerce)
     [Arguments]    ${qtd_vagas}
