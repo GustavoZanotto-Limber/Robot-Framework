@@ -34,6 +34,8 @@ Cadastros
     RPA.Desktop.Press Keys    Alt
     RPA.Desktop.Press Keys    Enter
     
+ALT F4
+    RPA.Desktop.Press Keys    Alt     F4
 Fechar janela
     RPA.Desktop.Press Keys    Ctrl     F4
     Sleep                     0.5s        
