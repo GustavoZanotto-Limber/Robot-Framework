@@ -2,18 +2,26 @@
 Documentation    Testes regressivos: Impressão de Bilhete e Reimpressão de bilhetes
 Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
 Resource         ../../../../Resources/BDD/BDDKeywordsDesktop.robot
-Suite Setup      Iniciar sessao e abrir caixa    ${nome_exe}
+Suite Setup      Iniciar Suite
 Suite Teardown   Encerrar Tudo
-Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
+Test Teardown    Encerrar Cenário
 
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/    LB-51 Impressão de Bilhete e Reimpressão de bilhetes/ 
-${Caminho_arquivos}=     C:/Users/testes/Documents/Testes Regressivos/
+${Caminho_arquivos}
 ${nome_exe}=    cde_win_bca_front
 ${nome_print}
 *** Keywords ***
 
+Iniciar Suite
+    ${caminho}=       Replace String    ${EXECDIR}       \\Robot_Framework     ${EMPTY}
+    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos\\
+    Iniciar sessao e abrir caixa    ${nome_exe} 
+
+Encerrar Cenário
+    Run Keyword if test Failed    ALT F4
+    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
 
 *** Test Cases    ***
 

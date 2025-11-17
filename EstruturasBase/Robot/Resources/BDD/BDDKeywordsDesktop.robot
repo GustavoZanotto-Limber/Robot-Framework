@@ -338,7 +338,7 @@ Então valido se a impressão saiu corretamente
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0
     ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
-    Should Contain            ${pagina1}             Z - Bilhete integrado\nCATEGORIA 1\nValor Total R$ 100,00Válido até     PDV: 1 OP: 1-Usuário 1\nDoc:      \nEmitida em
+    Should Contain            ${pagina1}             LB-45 Bilhete Integrado\nCategoria 1\nValor Total R$ 100,00Válido até     PDV: 1 OP: 1-Usuário 1\nDoc:      \nEmitida em
     Sleep                     8s
     RPA.Desktop.Press Keys    Alt    F4
     Sleep                     3s
