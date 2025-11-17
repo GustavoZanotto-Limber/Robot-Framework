@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-43 Abertura e fechamento e Caixa/ 
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-43 Abertura e fechamento e Caixa/ 
 ${nome_exe}=    cde_win_bca_front
 ${caminho_user}
 ${Caminho_arquivos}=       ${caminho_user}\\Documents\\Testes_Regressivos\\
