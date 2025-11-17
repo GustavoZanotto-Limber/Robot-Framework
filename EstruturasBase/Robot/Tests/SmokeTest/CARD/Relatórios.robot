@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro relatorios  ${Caminho_Screenshots}Erros/    
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/CARD/Relatórios/
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/SmokeTest/CARD/Relatórios/
 ${nome_print}
 
 *** Keywords ***

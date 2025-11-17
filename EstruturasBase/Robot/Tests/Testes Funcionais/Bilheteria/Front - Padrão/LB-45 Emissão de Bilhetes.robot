@@ -8,11 +8,18 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-45 Emissão de Bilhetes/ 
-${caminho_logs}=           C:\\Users\\gustavo.zanotto_limb\\Documents\\Testes_Regressivos\\
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-45 Emissão de Bilhetes/ 
+${caminho_logs}
 ${nome_exe}=               cde_win_bca_front
 ${nome_print}
 ${texto_bilhete}
+
+*** Keywords ***
+
+Iniciar Suite
+    ${caminho}=       Replace String    ${EXECDIR}       \\Robot_Framework     ${EMPTY}
+    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos\\
+    Iniciar sessao e abrir caixa    ${nome_exe} 
 
 *** Test Cases    ***
 

@@ -23,8 +23,7 @@ ${Senha}   name:senha
 *** Keywords ***
 
 Abrir pagina login card
-    Open Browser    https://testescard.limbersoftware.com.br/#/auth/login     Chrome
-
+    Open Browser    https://testescard.limbersoftware.com.br/#/auth/login         Chrome
 
 Preencher email
     Sleep       1s

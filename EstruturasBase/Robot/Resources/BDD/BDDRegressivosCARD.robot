@@ -14,23 +14,25 @@ Resource    ../Base/BaseKeywordE-Commerce.robot
 
 
 *** Variables ***
-${URL_Card}=    https://testescard.limbersoftware.com.br/
-${URL_E-Commerce}=     https://regressivoscard.testescard.limber.net.br/
+${URL_Card}=           https://testescard.limbersoftware.com.br/
+${URL_E-Commerce}=     https://automacaoonline.testescard.limber.net.br/
+
 *** Keywords ***
     
 # ---------------------DADO---------------------
 Dado que estou no e-commerce
-    Abro o E-commerce (Integrada)
+    [Arguments]    ${nome_bilhete}
+    Abro o E-commerce (Online)
+    Pesquisar bilhete no e-commerce    ${nome_bilhete}
     Sleep    2s
 
 
 # ---------------------Quando---------------------
 
 Quando faço a venda do bilhete
-    [Arguments]    ${nome_bilhete}
-    Pesquisar bilhete no e-commerce    ${nome_bilhete}
+    [Arguments]     ${categoria}    ${qtd_categorias}
     Selecionar o dia de hoje no calendario
-    Adicionar Categoria (Compra E-Commerce)    1    2
+    Adicionar Categoria (Compra E-Commerce)    ${categoria}    ${qtd_categorias}
     Comprar Ingressos
     Ir Para o Pagamento
     Preencher dados do cartão
