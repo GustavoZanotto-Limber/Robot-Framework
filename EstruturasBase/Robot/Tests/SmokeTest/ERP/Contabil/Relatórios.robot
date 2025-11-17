@@ -8,7 +8,7 @@ Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_pr
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/Bilheteria/ERP/Contabil/Relatórios/    
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/SmokeTest/Bilheteria/ERP/Contabil/Relatórios/    
 ${nome_print}
 ${nome_exe}=    cde_win_ctb
 *** Keywords ***

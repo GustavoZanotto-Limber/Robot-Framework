@@ -10,7 +10,7 @@ Test Teardown    Caso aconteca erro SmokeWeb  ${Caminho_Screenshots}Erros/    ${
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/SmokeTest/CARD/Dashboard/
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/SmokeTest/CARD/Dashboard/
 ${nome_print}
 
 *** Test Cases ***

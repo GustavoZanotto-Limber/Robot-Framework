@@ -16,13 +16,13 @@ Resource    ../BDD/BDDKeywordsDesktop.robot
 
 *** Keywords ***
 
-Abro o E-commerce (Integrada)
-    Go to                     https://automacao.testescard.limber.net.br/
+Abro o E-commerce (Integrada)         
+    Go To              https://automacao.testescard.limber.net.br/
     Sleep                     7s
     Logar no e-commerce
 
-Abro o E-commerce (Online)
-    Go to                     https://automacao.testescard.limber.net.br/
+Abro o E-commerce (Online)  
+    Go To                     https://automacaoonline.testescard.limber.net.br/
     Sleep                     7s
     Logar no e-commerce
       

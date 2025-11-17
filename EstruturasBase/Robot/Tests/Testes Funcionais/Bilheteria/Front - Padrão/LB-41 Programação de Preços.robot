@@ -6,7 +6,7 @@ Suite Setup       Abrir CARD e logar
 Test Teardown     Encerrar Cenário    ${nome_print}    ${Caminho_Screenshots}
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/DESKTOP/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-41 Programacao de Preço/ 
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-41 Programacao de Preço/ 
 ${nome_print}
 ${texto_bilhete}
 ${numero_bilhete}=  6422
