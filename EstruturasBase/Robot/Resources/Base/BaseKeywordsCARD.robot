@@ -19,6 +19,7 @@ ${achou}
 ${Erro}
 ${i}=    0
 ${Senha}   name:senha
+${NUM_JANELAS}
 
 *** Keywords ***
 
@@ -27,7 +28,7 @@ Abrir pagina login card
 
 Preencher email
     Sleep       1s
-    Inserir Texto  xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input     automacao@limbersoftware.com.br
+    Inserir Texto      xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input     automacao@limbersoftware.com.br
 
 Preencher senha
     Sleep       1s
@@ -53,6 +54,16 @@ Abrir CARD e logar
     Colocar Filtro de estabelecimento    Automação
     # Sleep                      2s
     # Tirar notificação
+
+Ir para o CARD
+    Go To    https://testescard.limbersoftware.com.br/#/auth/login
+    Preencher email
+    Sleep                      1s
+    Preencher senha
+    clicar em continuar
+    Maximize Browser Window
+    Sleep                      1s
+    Colocar Filtro de estabelecimento    Automação
 
 Caso aconteca erro WEB
         [Arguments]     ${Caminho_Screenshots}        ${nome_print}    
@@ -137,19 +148,23 @@ Adicionar Categoria
     Sleep                                         1s
     Clicar no Botão                               xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/title-btn-add/div/button
     Tentar Clicar Em Um Dos Elementos             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[1]/mat-form-field/div[1]/div/div[2]    xpath:/html/body/div[2]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[1]/mat-form-field/div[1]/div/div[2]
+    Validar dropdown    ${nome_categoria}
+    Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[2]/buttons/div/div/button[2]
+
+Validar dropdown
+    [Arguments]    ${valor}    ${numero_div_1}=3    ${numero_div_2}=4
     ${contador}=    Set Variable    0
     WHILE    ${contador} < 100 
-        ${nome_coletado}=         Run Keyword and Ignore Error    Seleniumlibrary.Get Text    xpath:/html/body/div[3]/div[4]/div/div/div/mat-option[${contador}]/span
+        ${nome_coletado}=         Run Keyword and Ignore Error    Seleniumlibrary.Get Text    xpath:/html/body/div[${numero_div_1}]/div[${numero_div_2}]/div/div/div/mat-option[${contador}]/span
         Log                       ${nome_coletado[1]}
-        IF    $nome_coletado[1] == $nome_categoria
-            Clicar no Elemento             xpath:/html/body/div[3]/div[4]/div/div/div/mat-option[${contador}]
+        IF    $nome_coletado[1] == $valor
+            Clicar no Elemento             xpath:/html/body/div[${numero_div_1}]/div[${numero_div_2}]/div/div/div/mat-option[${contador}]
             BREAK
         ELSE
                 ${contador}=    Evaluate    ${contador} + 1
                 RPA.Desktop.Press Keys      Down
         END
     END
-    Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[2]/buttons/div/div/button[2]
 
 Adicionar Receita
     [Arguments]    ${categoria}    ${receita}
@@ -617,11 +632,12 @@ Validar titulo de criar ou editar cadastros
 Filtrar dropdown
     [Arguments]    ${codigo}    ${xpath}
     Clicar no Elemento                   ${xpath}             
-    Inserir Texto                        xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
-    Clicar no Elemento                   xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]                            
+    Run Keyword and ignore error         Inserir Texto                        xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
+    Run Keyword and ignore error         Inserir Texto                        xpath:/html/body/div[3]/div[2]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
+    Tentar Clicar Em Um Dos Elementos                  xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]                        xpath:/html/body/div[3]/div[2]/div/div/mat-option[2]        
 
 Mudar para a nova janela
-    @{handles}=    SeleniumLibrary.Get Window Handles
+     @{handles}=    SeleniumLibrary.Get Window Handles
     ${new_handle}=    Set Variable    ${handles[1]}
     SeleniumLibrary.Switch Window    ${new_handle}
     Log    Mudou para a nova janela com o handle: ${new_handle}
@@ -633,6 +649,7 @@ Caso aconteca erro Regressivos CARD
         Run Keyword If Test Failed    Fechar navegador
         Sleep                         1s
         Run Keyword If Test Failed    Abrir CARD e logar
+        
 
 Excluir tabela de preço e disponibilidade
     [Arguments]    ${numero_bilhete}
@@ -666,6 +683,12 @@ Conferir Texto
     Wait Until Element Is Visible    ${xpath_texto}
     Element Should Contain           ${xpath_texto}    ${texto}
 
+Pegar Texto
+    [Arguments]    ${xpath_texto}
+    Wait Until Element Is Visible    ${xpath_texto}
+    ${texto}=    SeleniumLibrary.Get Text         ${xpath_texto}   
+    RETURN    ${texto}
+
 Preencher dados central de vendas
     [Arguments]    ${nome}=Gustavo Zanotto   ${documento}=123456789    ${email}=Automacao@gmail.com   ${data_nascimento}=22082006     ${telefone}=5546999999999      
     Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/mat-card/div[1]/mat-form-field[1]/div[1]/div/div[2]/input   ${nome}
@@ -683,3 +706,63 @@ Encerrar Cenário
     @{ano_mes_dia}=  Get Time	year month day 
     Run Keyword and ignore error    Limpar dia do calendário           ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
     Sleep    2s    
+
+Validar impressão do bilhete
+    [Arguments]    ${Caminho_impressão}      ${nome_do_arquivo}      ${Caminho_Screenshot}      ${Nome_da_tela}       ${LB}      @{data_e_hora}    
+    Sleep    20s
+    RPA.Windows.Get Element   ${Nome_da_tela}
+    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}   
+    ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}.pdf  
+    ${keys}=                  Get Dictionary Keys    ${texto}
+    ${primeira}=              Get From List          ${keys}    0
+    ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
+    Log                       ${pagina1}       
+    Should Contain            ${pagina1}                     ${LB}
+    Should Contain            ${pagina1}                     ${data_e_hora[0]}
+    Should Contain            ${pagina1}                     ${data_e_hora[1]}
+    Should Contain            ${pagina1}                     Gustavo Zanotto    LB-26 Impressão de Bilhete    Categoria 1    Valor Total: R$1.00    Receita Automação (Online)
+    Sleep                     3s
+
+Validar impressão do bilhete (Via CARD)
+    [Arguments]    ${Caminho_impressão}      ${nome_do_arquivo}      ${Caminho_Screenshot}   ${Nome_da_tela}      ${LB}      @{data_e_hora}    
+    Sleep    20s
+    RPA.Windows.Get Element   ${Nome_da_tela} 
+    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}    
+    ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}.pdf  
+    ${keys}=                  Get Dictionary Keys    ${texto}
+    ${primeira}=              Get From List          ${keys}    0
+    ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
+    ${segunda}=               Get From List          ${keys}    1
+    ${pagina2}=               Get From Dictionary    ${texto}    ${segunda}
+    Log                       ${pagina1}       
+    Should Contain            ${pagina1}                     ${LB}
+    Should Contain            ${pagina1}                     ${data_e_hora[0]}
+    Should Contain            ${pagina1}                     ${data_e_hora[1]}
+    Should Contain            ${pagina2}                     LB-26 Impressão de Bilhete    Categoria 1    Receita Automação (Online)    AU_ON    Valor total: R$ 1.00
+    Sleep                     1s
+
+Pesquisar LB no gerenciamento de vendas
+    [Arguments]    ${LB}
+    Inserir Texto      xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[1]/div[1]/div/div[2]/input    ${LB}
+    Clicar no Botão    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/div/section[2]/button[2]
+
+Escolher impressão gerenciamento de vendas
+    [Arguments]    ${numero_impressão}
+    Clicar no Botão    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/div[1]/div[2]/div[3]/div/button
+    Clicar no Botão    xpath:/html/body/div[3]/div[2]/div/div/div/button[${numero_impressão}]
+
+Criar aquivo da Impressão CARD 
+    [Arguments]    ${caminho}
+    Escolher impressão gerenciamento de vendas    3
+    Sleep    3s
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/app-impressoes/h1
+    Repetidor de teclas       tab    9
+    Sleep    1s
+    RPA.Desktop.Press Keys    Enter
+    Sleep    1s
+    RPA.Desktop.Type Text     ${caminho}Impressão_Celular_CARD.pdf
+    Sleep    1
+    RPA.Windows.Click         Salvar
+    Sleep    1
+    RPA.Windows.Click         Sim
+
