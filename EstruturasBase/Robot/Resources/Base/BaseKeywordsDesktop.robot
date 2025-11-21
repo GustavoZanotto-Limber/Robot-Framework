@@ -36,6 +36,15 @@ Cadastros
     
 ALT F4
     RPA.Desktop.Press Keys    Alt     F4
+    TRY
+        ${text}=    Run keyword and ignore error    RPA.Windows.Get Text    Desligar o Windows
+    EXCEPT    message
+        Log    message
+        Log    O alt F4 nao tentou desligar o computador
+    END
+    IF    '$text' == 'Desligar o Windows'
+        RPA.Windows.Click    Cancelar
+    END
 Fechar janela
     RPA.Desktop.Press Keys    Ctrl     F4
     Sleep                     0.5s        

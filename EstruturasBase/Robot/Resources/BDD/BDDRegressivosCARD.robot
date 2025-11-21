@@ -84,12 +84,13 @@ Então valido a impressão com itens Cancelados Parcial
     RPA.Desktop.Press Keys    Alt    F4
 
 Então valido a impressão com cancelamento total
-    [Arguments]    ${caminho}      ${caminho_screenshots}
+    [Arguments]    ${caminho}      ${caminho_screenshots}    @{data_e_hora_pag}
     Go Back
     @{data_e_hora}=    Cancelar um ingresso pelo e-commerce    1
+    @{data_e_hora_pagamento_e_cancelameto}=    Set Variable    ${data_e_hora_pag[0]}   ${data_e_hora_pag[1]}   ${data_e_hora[0]}   ${data_e_hora[1]}
     ${LB}=             Salvar a impressão do bilhete através do e-commerce    1    ${caminho}    Impressão_Cancelada_total
     Abrir arquivo                                    ${caminho}   Impressão_Cancelada_total.pdf
-    Validar impressão do bilhete cancelado           ${caminho}    Impressão_Cancelada_total       ${caminho_screenshots}    Impressão_Cancelada_total.pdf - WPS Office      ${LB}    TRUE     @{data_e_hora}    
+    Validar impressão do bilhete cancelado           ${caminho}    Impressão_Cancelada_total       ${caminho_screenshots}    Impressão_Cancelada_total.pdf - WPS Office      ${LB}    TRUE     @{data_e_hora_pagamento_e_cancelameto}    
     RPA.Desktop.Press Keys    Alt    F4 
 
 Então valido o layout da impressão

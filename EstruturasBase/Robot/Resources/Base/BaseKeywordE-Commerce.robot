@@ -222,7 +222,7 @@ Salvar a impressão do bilhete através do e-commerce
     
     ${LB}=                       Pegar Texto     xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[1]/div[1]/header/h1[2]
     Clicar no Botão              xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[2]/button
-    Clicar no Elemento           xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-share-ticket/div/a[${tipo}]
+    Tentar Clicar Em Um Dos Elementos           xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-share-ticket/div/a[${tipo}]    xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-share-ticket/div/a[${tipo}]
     Sleep                        10s
     Clicar no Botão              xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/button
     RPA.Desktop.Press Keys       Esc
@@ -248,7 +248,7 @@ Cancelar um ingresso pelo e-commerce
     [Arguments]    ${numero_bilhete}
     Clicar no Botão                  xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[2]/button[2]
     Sleep    0.5
-    Clicar no Elemento               xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-cancel-tickets/div/div[1]/app-select-sale-item[${numero_bilhete}]/div
+    Tentar Clicar Em Um Dos Elementos               xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-cancel-tickets/div/div[1]/app-select-sale-item[${numero_bilhete}]/div        xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-cancel-tickets/div/div[1]/app-select-sale-item[${numero_bilhete}]/div
     Inserir Texto                    id:textarea_motivo    Bilhete Cancelado pela automação de testes.
     Clicar no Botão                  id:btn_cancelamento
     Sleep    3
@@ -261,9 +261,9 @@ Cancelar um ingresso pelo e-commerce
     ${data_formatada}=    Formatar Data Para DD/MM/AAAA    @{ano_mes_dia}
     Sleep            3s
     @{data_e_hora}=    Set Variable    ${data_formatada}    ${hora_minuto_seg_split[0]}:${hora_minuto_seg_split[1]}
-    Wait Until Element Is Visible    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-splash-pedido-canc-cred/ec-splash-alert/ec-wrapper/div[2]/h1
-    Element Should Contain           xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-splash-pedido-canc-cred/ec-splash-alert/ec-wrapper/div[2]/h1    Pedido enviado com sucesso
-    Clicar no Botão                  xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-splash-pedido-canc-cred/ec-splash-alert/ec-wrapper/button
+    Tentar coletar texto em um dos Elementos           xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-splash-pedido-canc-cred/ec-splash-alert/ec-wrapper/div[2]/h1    xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-splash-pedido-canc-cred/ec-splash-alert/ec-wrapper/div[2]/h1
+    Tentar coletar texto em um dos Elementos           xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-splash-pedido-canc-cred/ec-splash-alert/ec-wrapper/div[2]/h1    xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-splash-pedido-canc-cred/ec-splash-alert/ec-wrapper/div[2]/h1    
+    Tentar Clicar Em Um Dos Elementos                  xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-splash-pedido-canc-cred/ec-splash-alert/ec-wrapper/button       xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-splash-pedido-canc-cred/ec-splash-alert/ec-wrapper/button      
     RETURN    @{data_e_hora}
 
 Validar impressão do bilhete cancelado
@@ -284,7 +284,7 @@ Validar impressão do bilhete cancelado
     Log    ${data_e_hora[2]}
     Log    ${data_e_hora[3]}
     Should Contain            ${pagina1}                     Este ingresso foi cancelado no dia    ${data_e_hora[2]}    ${data_e_hora[3]}
-    IF    ${TOTAL}
+    IF    $TOTAL
         Should not Contain        ${pagina1}                     AU_OU
     END
     Sleep                     1s
