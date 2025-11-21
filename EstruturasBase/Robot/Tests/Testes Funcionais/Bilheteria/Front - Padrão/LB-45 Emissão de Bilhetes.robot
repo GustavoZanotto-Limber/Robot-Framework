@@ -9,7 +9,7 @@ Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_
 *** Variables ***
 
 ${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/Testes Regressivos/Bilheteria/Front - Padrao/LB-45 Emissão de Bilhetes/ 
-${caminho_logs}
+${caminho_arquivos}
 ${nome_exe}=               cde_win_bca_front
 ${nome_print}
 ${texto_bilhete}
@@ -18,7 +18,7 @@ ${texto_bilhete}
 
 Iniciar Suite
     ${caminho}=       Replace String    ${EXECDIR}       \\Robot_Framework     ${EMPTY}
-    Set Suite Variable    ${Caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos\\
+    Set Suite Variable    ${caminho_arquivos}     ${caminho}\\Documents\\Testes_Regressivos\\
     Iniciar sessao e abrir caixa    ${nome_exe} 
 
 *** Test Cases    ***
@@ -86,7 +86,7 @@ Cenário 8: Geração de comprovante RPS e bilhete após a venda
     [Tags]    Testes_Funcionais    LB-45   
     Dado que realizei uma venda
     Quando imprimo o bilhete
-    Então valido se a impressão RPS saiu corretamente    ${caminho_logs}     RPS.pdf    RPS.pdf - WPS Office    ${Caminho_Screenshots}     Cenário Reimpressão de RPS
+    Então valido se a impressão RPS saiu corretamente    ${caminho_arquivos}     RPS.pdf    RPS.pdf - WPS Office    ${Caminho_Screenshots}     Cenário Reimpressão de RPS
 
 Cenário 9: Venda de bilhete comum (visitação e atrativos)
     ${nome_print}=    Set Variable     Venda de bilhete comum (visitação e atrativos)
