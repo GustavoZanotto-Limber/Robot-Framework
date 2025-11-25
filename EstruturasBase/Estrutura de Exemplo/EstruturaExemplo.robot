@@ -29,7 +29,7 @@ ${Senha}   name:senha
 #   Uma keyword pode conter outras keyword dentro dela mesma, bem parecido com uma função chamando outra 
 #   na programação como por exemplo:
 Abrir pagina login card
-    Open Browser    https://testescard.limbersoftware.com.br/#/auth/login     Chrome
+    SeleniumLibrary.Open Browser    https://testescard.limbersoftware.com.br/#/auth/login     Chrome    alias=Chrome
 
 Preencher email
     Inserir Texto  xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input     Gustavo@limbersoftware.com.br
@@ -58,7 +58,7 @@ Fechar navegador
 # É importante que na hora de declarar um novo cenario ele esteja colado no inicio da linha para posteriormente
 # a identação estar correta com os demais comandos.
 Cenário 1: Teste de abrir o navegador
-        Open Browser    https://www.google.com.br/     Chrome
+        Open Browser    https://www.google.com.br/     Chrome    alias=Chrome
         Sleep    1s
         #Close Browser
 
@@ -74,7 +74,7 @@ Cenário 1: Teste de abrir o navegador
 # com a declaração de um caso de teste.
 
 Cenário 2: Teste abrir a tela de login do card
-    Open Browser    https://testescard.limbersoftware.com.br/#/auth/login     Chrome
+    SeleniumLibrary.Open Browser    https://testescard.limbersoftware.com.br/#/auth/login     Chrome
     Close Browser
 
 # Apenas escrevendo ele ja indentifica como diferentes cenarios assim mesmo declarando um cenario abaixo do outro

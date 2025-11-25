@@ -6,7 +6,7 @@ Library    Process
 Library    RPA.Excel.Files
 Library    RPA.Excel.Application
 Library    String
-Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\DESKTOP\\ScreenShots\\Selenium
+Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\Robot\\ScreenShots\\Selenium
 Library    Collections
 Library    RPA.PDF
 Resource   ../Base/BaseKeywordsCARD.robot
@@ -18,7 +18,7 @@ ${URL_Card}=    https://testescard.limbersoftware.com.br/
     
 #--------------------------------------------DADO--------------------------------------------
 Dado que estou na página inicial do CARD
-    Go To    ${URL_Card}
+    Mudar Página    ${URL_Card}
     Sleep    3s
 
 
@@ -310,7 +310,7 @@ Então valido se a tela de Central de Vendas foi carregada corretamente
     Clicar no Elemento        xpath:/html/body/app-root/app-central-vendas/div/div/div/central-vendas-estabelecimentos/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[3]
     Sleep                     1s
     RPA.Desktop.Press Keys    CTRL    TAB
-    Go To    https://testescard.limbersoftware.com.br/#/central-vendas/estabelecimentos/1916/Central%20de%20Vendas%20Zanotto/venda
+    Mudar Página    https://testescard.limbersoftware.com.br/#/central-vendas/estabelecimentos/1916/Central%20de%20Vendas%20Zanotto/venda
     Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/mat-card/h1    Dados Iniciais
     Preencher dados central de vendas
     Element Should Contain    xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/div/mat-card/h1    Experiências   

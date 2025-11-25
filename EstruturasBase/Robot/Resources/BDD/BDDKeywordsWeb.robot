@@ -1,6 +1,6 @@
 *** Settings ***   
 Library    OperatingSystem
-Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\DESKTOP\\ScreenShots\\Selenium
+Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\Robot\\ScreenShots\\Selenium
 Library    Process
 Library    Collections
 Library    String
@@ -19,7 +19,7 @@ ${Espaço}=    ${SPACE}
 #----------------------------------------DADO----------------------------------------
 
 Dado que estou na tela de criação de bilhete
-    Go to   https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/novo
+    Mudar Página   https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/novo
     Sleep    1s
 
 Dado que estou na tela de preço e disponibilidade
@@ -36,7 +36,7 @@ Dado que estou na tela de Exceções de Preço e Disponibilidade
     
 Dado que estou na tela de emissão de bilhetes
     [Arguments]    ${numero_bilhete}
-    Go To   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+    Mudar Página   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
     Criar tabela de preço               ${numero_bilhete}   tabela de preço     1000
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 

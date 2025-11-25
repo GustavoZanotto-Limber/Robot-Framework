@@ -4,7 +4,7 @@ Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
 Resource         ../../../../Resources/BDD/BDDKeywordsDesktop.robot
 Suite Setup      Iniciar Suite
 Suite Teardown   Encerrar Tudo    ${nome_print}    ${nome_exe}
-Test Teardown    Encerrar Cenário
+Test Teardown    Encerrar Cenário    ${nome_print}    ${nome_exe}
 
 *** Variables ***
 
