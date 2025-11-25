@@ -7,7 +7,7 @@ Library    RPA.Excel.Application
 Library    String
 Library    Collections
 Library    RPA.PDF
-Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\DESKTOP\\ScreenShots\\Selenium
+Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\Robot\\ScreenShots\\Selenium
 Library    RPA.Desktop
 Resource    BaseKeywordsDesktop.robot
 Resource    ../BDD/BDDKeywordsDesktop.robot
@@ -19,15 +19,16 @@ ${achou}
 ${Erro}
 ${i}=    0
 ${Senha}   name:senha
+${NUM_JANELAS}
 
 *** Keywords ***
 
 Abrir pagina login card
-    Open Browser    https://testescard.limbersoftware.com.br/#/auth/login         Chrome
+    SeleniumLibrary.Open Browser    https://testescard.limbersoftware.com.br/#/auth/login         Chrome    alias=Chrome
 
 Preencher email
     Sleep       1s
-    Inserir Texto  xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input     automacao@limbersoftware.com.br
+    Inserir Texto      xpath:/html/body/app-root/login/div/mat-card/form/mat-form-field[1]/div[1]/div/div[2]/input     automacao@limbersoftware.com.br
 
 Preencher senha
     Sleep       1s
@@ -41,9 +42,9 @@ Fechar navegador
 
 Abrir CARD e logar 
     Abrir pagina login card
-    Minimize Browser Window
+    SeleniumLibrary.Minimize Browser Window
     Sleep                      1s
-    Maximize Browser Window
+    SeleniumLibrary.Maximize Browser Window
     Preencher email
     Sleep                      1s
     Preencher senha
@@ -53,6 +54,16 @@ Abrir CARD e logar
     Colocar Filtro de estabelecimento    Automação
     # Sleep                      2s
     # Tirar notificação
+
+Ir para o CARD
+    Mudar Página    https://testescard.limbersoftware.com.br/#/auth/login
+    Preencher email
+    Sleep                      1s
+    Preencher senha
+    clicar em continuar
+    Maximize Browser Window
+    Sleep                      1s
+    Colocar Filtro de estabelecimento    Automação
 
 Caso aconteca erro WEB
         [Arguments]     ${Caminho_Screenshots}        ${nome_print}    
@@ -65,7 +76,8 @@ Caso aconteca erro WEB
     
 Mudar Página
     [Arguments]    ${url}
-    Go To    ${url}
+    Go To   ${url}
+    RPA.Desktop.Press Keys    Enter
     Sleep    2s
 
 Criar Bilhete
@@ -138,19 +150,23 @@ Adicionar Categoria
     Sleep                                         1s
     Clicar no Botão                               xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/title-btn-add/div/button
     Tentar Clicar Em Um Dos Elementos             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[1]/mat-form-field/div[1]/div/div[2]    xpath:/html/body/div[2]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[1]/mat-form-field/div[1]/div/div[2]
+    Validar dropdown    ${nome_categoria}
+    Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[2]/buttons/div/div/button[2]
+
+Validar dropdown
+    [Arguments]    ${valor}    ${numero_div_1}=3    ${numero_div_2}=4
     ${contador}=    Set Variable    0
     WHILE    ${contador} < 100 
-        ${nome_coletado}=         Run Keyword and Ignore Error    Seleniumlibrary.Get Text    xpath:/html/body/div[3]/div[4]/div/div/div/mat-option[${contador}]/span
+        ${nome_coletado}=         Run Keyword and Ignore Error    Seleniumlibrary.Get Text    xpath:/html/body/div[${numero_div_1}]/div[${numero_div_2}]/div/div/div/mat-option[${contador}]/span
         Log                       ${nome_coletado[1]}
-        IF    $nome_coletado[1] == $nome_categoria
-            Clicar no Elemento             xpath:/html/body/div[3]/div[4]/div/div/div/mat-option[${contador}]
+        IF    $nome_coletado[1] == $valor
+            Clicar no Elemento             xpath:/html/body/div[${numero_div_1}]/div[${numero_div_2}]/div/div/div/mat-option[${contador}]
             BREAK
         ELSE
                 ${contador}=    Evaluate    ${contador} + 1
                 RPA.Desktop.Press Keys      Down
         END
     END
-    Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/add-categoria/div[2]/buttons/div/div/button[2]
 
 Adicionar Receita
     [Arguments]    ${categoria}    ${receita}
@@ -214,7 +230,7 @@ Colocar cor
 
 Criar tabela de preço
     [Arguments]    ${numero_bilhete}    ${nome_tabela}=Tabela de Preço Automatizada    ${preço}=100    ${taxa}=0    ${qtd_de_categorias}=1    
-    Go To                      https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+    Mudar Página                      https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
     RPA.Desktop.Press Keys     F5
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[1]/div/table/thead/tr/th[4]/div/button
     Inserir Texto              xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[1]/div/div/mat-form-field[1]/div[1]/div/div[2]/input    ${nome_tabela}
@@ -265,9 +281,14 @@ Rolar para Cima
     Log    Rolando a tela para cima ${vezes} vez(es).
     Repetidor de teclas    pageup    ${vezes}
 
+Rolar para baixo
+    [Arguments]    ${vezes}=1
+    Log    Rolando a tela para cima ${vezes} vez(es).
+    Repetidor de teclas    page_down    ${vezes}    1
+
 Retirar temporada
     [Arguments]    ${numero_bilhete}    ${numero_temporada}
-    Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
+    Mudar Página    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
     Sleep    1s
     Navegar configuração de bilhete    7
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[7]/div/div[2]/table/tbody/tr[${numero_temporada}]/td[6]/div/button[2]
@@ -416,7 +437,7 @@ Retirar bilhete do e-commerce
 
 Adicionar no perfil
     [Arguments]    ${numero_bilhete}   ${id_perfil_de_venda}   
-    Go To          https://testescard.limbersoftware.com.br/#/pages/config/perfil?id=${id_perfil_de_venda}
+    Mudar Página          https://testescard.limbersoftware.com.br/#/pages/config/perfil?id=${id_perfil_de_venda}
     Sleep          1s
     Clicar no Elemento  xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[3]
     Inserir Texto     xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/div/mat-tab-body[3]/div/div/limber-select-product/div/div[1]/mat-form-field/div[1]/div/div[2]/input    ${numero_bilhete}
@@ -453,7 +474,7 @@ Inativar bilhete
         Run Keyword and Ignore Error    Retirar Categoria  2    ${numero_bilhete}
         sleep                     6s 
     ELSE
-        Go to     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
+        Mudar Página     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
         Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/form/div[1]/mat-checkbox
         Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
         Sleep                     6s
@@ -462,7 +483,7 @@ Inativar bilhete
 
 Retirar Categoria
     [Arguments]        ${numero_categoria}    ${numero_bilhete}
-    Go to     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
+    Mudar Página     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
     Navegar configuração de bilhete    2
     Navegar Configurações de venda > sessões    1
     Sleep    1s
@@ -477,12 +498,12 @@ Retirar Categoria
 Excluir Categoria
     [Arguments]    ${codigo_categoria}=1
     IF    ${codigo_categoria} == 1
-        Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/categorias
+        Mudar Página    https://testescard.limbersoftware.com.br/#/pages/cadastro/categorias
         Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/categoria/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]
         Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/categoria/lista-cadastros-com-busca/div/mat-card/div/table/thead/tr/th[1]
         Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/categoria/lista-cadastros-com-busca/div/mat-card/div/table/tbody/tr[1]/td[4]/button                           
     ELSE
-        Go to        https://testescard.limbersoftware.com.br/#/pages/cadastro/categoria?id=${codigo_categoria}
+        Mudar Página        https://testescard.limbersoftware.com.br/#/pages/cadastro/categoria?id=${codigo_categoria}
         
     END
     Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-categoria/div[3]/buttons/div/div/button[1]
@@ -493,7 +514,7 @@ Excluir Categoria
     
 Cadastrar nova categoria
     [Arguments]    ${nome_categoria}=Categoria Gerada Pelos Testes Automatizados       ${nome_convênio}=n 
-    Go To    https://testescard.limbersoftware.com.br/#/pages/cadastro/categoria
+    Mudar Página    https://testescard.limbersoftware.com.br/#/pages/cadastro/categoria
     Inserir Texto    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-categoria/div[2]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/form/div/div[1]/div[2]/mat-form-field[1]/div[1]/div/div[2]/input    ${nome_categoria}
     Clicar no Elemento    Xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-categoria/div[2]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[2]
     Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-categoria/div[2]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/lista-permissoes/div/title-btn-add/div/button
@@ -512,7 +533,7 @@ Cadastrar nova categoria
     
 Adicionar categoria em bilhetes ja existente
     [Arguments]    ${categoria}    ${qtd_de_categorias}    ${receita}    ${numero_bilhete}
-    Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
+    Mudar Página    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
     Sleep    1
     Adicionar categoria       ${categoria}
     Adicionar receita         ${qtd_de_categorias}    ${receita}
@@ -557,7 +578,7 @@ Tentar coletar texto em um dos Elementos
 
 Retirar Exceção
     [Arguments]    ${numero_bilhete}
-    Go to    https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/calendario?bilhete=${numero_bilhete}
+    Mudar Página    https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/calendario?bilhete=${numero_bilhete}
     sleep    4s
     Clicar no Elemento  xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[3]
     Sleep    2s
@@ -569,7 +590,7 @@ Retirar Exceção
 
 Adicionar nova temporada em um bilhete
     [Arguments]    ${numero_bilhete}
-    Go to    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
+    Mudar Página    https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
     sleep    5s
     Criar Temporada                2    Temporada 2     0    255    0
     Clicar no Elemento             xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[2]/buttons/div/div/button[3]
@@ -619,14 +640,34 @@ Validar titulo de criar ou editar cadastros
 Filtrar dropdown
     [Arguments]    ${codigo}    ${xpath}
     Clicar no Elemento                   ${xpath}             
-    Inserir Texto                        xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
-    Clicar no Elemento                   xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]                            
+    Run Keyword and ignore error         Inserir Texto                        xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
+    Run Keyword and ignore error         Inserir Texto                        xpath:/html/body/div[3]/div[2]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
+    Tentar Clicar Em Um Dos Elementos                  xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]                        xpath:/html/body/div[3]/div[2]/div/div/mat-option[2]        
 
 Mudar para a nova janela
     @{handles}=    SeleniumLibrary.Get Window Handles
     ${new_handle}=    Set Variable    ${handles[1]}
     SeleniumLibrary.Switch Window    ${new_handle}
     Log    Mudou para a nova janela com o handle: ${new_handle}
+
+Mudar entre as janelas
+    [Arguments]    ${num_janela}
+    Sleep    1s
+    @{handles}=    Get Window Handles
+    Switch Window    ${handles[${num_janela}]}
+    Log    Foco definido para a nova janela com handle: ${handles[${num_janela}]}
+
+Fechar Aba E Voltar Para Principal
+    [Arguments]    ${index_da_aba_a_fechar}
+    @{handles}=    Get Window Handles
+    Log    Fechando a aba com índice ${index_da_aba_a_fechar} e handle ${handles[${index_da_aba_a_fechar}]}.
+    Switch Window    ${handles[${index_da_aba_a_fechar}]}
+    # SeleniumLibrary.Close Window
+    RPA.Desktop.Press Keys    Ctrl    F4
+    Sleep    1s
+    @{handles}=    Get Window Handles
+    Switch Window    ${handles[0]}
+    Log    Foco retornado para a janela principal com handle ${handles[0]}.
 
 Caso aconteca erro Regressivos CARD
         [Arguments]     ${Caminho_Screenshots}        ${nome_print}    
@@ -635,10 +676,11 @@ Caso aconteca erro Regressivos CARD
         Run Keyword If Test Failed    Fechar navegador
         Sleep                         1s
         Run Keyword If Test Failed    Abrir CARD e logar
+        
 
 Excluir tabela de preço e disponibilidade
     [Arguments]    ${numero_bilhete}
-    Go To    https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
+    Mudar Página    https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
     Clicar no Botão            xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[1]/div/table/tbody/tr/td[4]/div/button[1]
     Clicar no Botão            xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[2]/buttons/div/div/button[1]
     Clicar no Botão            xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/confirm-dialog/div/div[3]/button[2]
@@ -668,6 +710,12 @@ Conferir Texto
     Wait Until Element Is Visible    ${xpath_texto}
     Element Should Contain           ${xpath_texto}    ${texto}
 
+Pegar Texto
+    [Arguments]    ${xpath_texto}
+    Wait Until Element Is Visible    ${xpath_texto}
+    ${texto}=    SeleniumLibrary.Get Text         ${xpath_texto}   
+    RETURN    ${texto}
+
 Preencher dados central de vendas
     [Arguments]    ${nome}=Gustavo Zanotto   ${documento}=123456789    ${email}=Automacao@gmail.com   ${data_nascimento}=22082006     ${telefone}=5546999999999      
     Inserir Texto     xpath:/html/body/app-root/app-central-vendas/div/div/div/app-venda/div/mat-card/div[1]/mat-form-field[1]/div[1]/div/div[2]/input   ${nome}
@@ -685,3 +733,122 @@ Encerrar Cenário
     @{ano_mes_dia}=  Get Time	year month day 
     Run Keyword and ignore error    Limpar dia do calendário           ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
     Sleep    2s    
+
+Validar impressão do bilhete
+    [Arguments]    ${Caminho_impressão}      ${nome_do_arquivo}      ${Caminho_Screenshot}      ${Nome_da_tela}       ${LB}      @{data_e_hora}    
+    Sleep    20s
+    RPA.Windows.Get Element   ${Nome_da_tela}
+    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}   
+    ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}.pdf  
+    ${keys}=                  Get Dictionary Keys    ${texto}
+    ${primeira}=              Get From List          ${keys}    0
+    ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
+    Log                       ${pagina1}       
+    Should Contain            ${pagina1}                     ${LB}
+    Should Contain            ${pagina1}                     ${data_e_hora[0]}
+    Should Contain            ${pagina1}                     ${data_e_hora[1]}
+    Should Contain            ${pagina1}                     Gustavo Zanotto    LB-26 Impressão de Bilhete    Categoria 1    Valor Total: R$1.00    Receita Automação (Online)
+    Sleep                     3s
+
+Validar impressão do bilhete (Via CARD)
+    [Arguments]    ${Caminho_impressão}      ${nome_do_arquivo}      ${Caminho_Screenshot}   ${Nome_da_tela}      ${LB}      @{data_e_hora}    
+    Sleep    20s
+    RPA.Windows.Get Element   ${Nome_da_tela} 
+    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}    
+    ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}.pdf  
+    ${keys}=                  Get Dictionary Keys    ${texto}
+    ${primeira}=              Get From List          ${keys}    0
+    ${pagina1}=               Get From Dictionary    ${texto}    ${primeira}
+    ${segunda}=               Get From List          ${keys}    1
+    ${pagina2}=               Get From Dictionary    ${texto}    ${segunda}
+    Log                       ${pagina1}       
+    Should Contain            ${pagina1}                     ${LB}
+    Should Contain            ${pagina1}                     ${data_e_hora[0]}
+    Should Contain            ${pagina1}                     ${data_e_hora[1]}
+    Should Contain            ${pagina2}                     LB-26 Impressão de Bilhete    Categoria 1    Receita Automação (Online)    AU_ON    Valor total: R$ 1.00
+    Sleep                     1s
+
+Pesquisar LB no gerenciamento de vendas
+    [Arguments]    ${LB}
+    Inserir Texto      xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[1]/div[1]/div/div[2]/input    ${LB}
+    Clicar no Botão    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/div/section[2]/button[2]
+
+Escolher impressão gerenciamento de vendas
+    [Arguments]    ${numero_impressão}
+    Clicar no Botão    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/div[1]/div[2]/div[3]/div/button
+    Clicar no Botão    xpath:/html/body/div[3]/div[2]/div/div/div/button[${numero_impressão}]
+
+Criar aquivo da Impressão CARD 
+    [Arguments]    ${caminho}
+    Escolher impressão gerenciamento de vendas    3
+    Sleep    3s
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/app-impressoes/h1
+    Repetidor de teclas       tab    9
+    Sleep    1s
+    RPA.Desktop.Press Keys    Enter
+    Sleep    1s
+    RPA.Desktop.Type Text     ${caminho}Impressão_Celular_CARD.pdf
+    Sleep    1
+    RPA.Windows.Click         Salvar
+    Sleep    1
+    RPA.Windows.Click         Sim
+
+Salvar cadastro e-commerce
+    Clicar no Botão    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[2]/buttons/div/div/button[3]
+    Wait Until Element Is Visible    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]     10s
+
+Ativar validação de cadastro duplicado no E-commerce
+    Mudar Página              https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=371
+    Sleep                5s
+    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div
+    Rolar para baixo     4
+    Sleep    1s
+    ${check_1}=          Get Element Attribute        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[7]/div/div/input    class
+    IF    "${check_1}" == "mdc-checkbox__native-control"
+        Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[7]
+    END
+    ${check_2}=          Get Element Attribute       xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[8]/div/div/input    class
+    IF    "${check_2}" == "mdc-checkbox__native-control"
+        Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[8]
+    END
+    Salvar cadastro e-commerce
+
+Desativar validação de cadastro duplicado no E-commerce
+    Mudar Página                https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=371
+    Sleep                7s
+    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div
+    Rolar para baixo     4
+    Sleep    1s
+    ${check_1}=          Get Element Attribute        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[7]/div/div/input    class
+    IF    "${check_1}" != "mdc-checkbox__native-control"
+        Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[7]
+    END
+    ${check_2}=          Get Element Attribute       xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[8]/div/div/input    class
+    IF    "${check_2}" != "mdc-checkbox__native-control"
+        Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[8]
+    END
+    Salvar cadastro e-commerce
+
+Ativar verificação de e-mail no E-commerce
+    Mudar Página                https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=371
+    Sleep                5s
+    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div
+    Rolar para baixo     4
+    Sleep    1s
+    ${check_1}=          Get Element Attribute        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[2]/div/div/input    class
+    IF    "${check_1}" == "mdc-checkbox__native-control"
+        Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[2]
+    END
+    Salvar cadastro e-commerce
+
+Desativar verificação de e-mail no E-commerce
+    Mudar Página                https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=371
+    Sleep                5s
+    Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div
+    Rolar para baixo     4
+    Sleep    1s
+    ${check_1}=          Get Element Attribute        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[2]/div/div/input    class
+    IF    "${check_1}" != "mdc-checkbox__native-control"
+        Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[2]
+    END
+    Salvar cadastro e-commerce
