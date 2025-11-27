@@ -145,7 +145,9 @@ Logar no e-commerce
 Pesquisar bilhete no e-commerce
     [Arguments]   ${nome_bilhete}
     Inserir Texto                        xpath:/html/body/app-root/app-home/div/main/app-dashboard/div/mat-form-field/div[1]/div/div[3]/input       ${nome_bilhete}
+    Sleep    0.5s
     Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[3]/div/div/div/mat-option    xpath:/html/body/div[2]/div/div/div/mat-option   
+    Sleep    0.5s
     Clicar no Elemento                   xpath:/html/body/app-root/app-home/div/main/app-dashboard/section[2]/app-highlights/div[2]/div[1]/div/app-product-card/div/section/a
 
 Coletar quantidade de vagas (E-Commerce)
@@ -168,7 +170,8 @@ Coleta Valor bilhete (E-commerce)
 Adicionar categoria (Compra E-Commerce)
     [Arguments]    ${categoria}    ${quantidade}
     FOR    ${i}    IN RANGE    ${quantidade}
-        Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${categoria}]/div/div[2]/button[2]
+        Sleep    0.7
+        Clicar no Botão    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria-produto[${categoria}]/div/div[2]/button[2]
     END
 
 # Retirar categoria (Compra E-Commerce)
@@ -192,7 +195,7 @@ Selecionar o dia de hoje no calendario
     END
 
 Ir Para o Pagamento
-    Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-my-cart/ec-wrapper/div[2]/div[6]/button[2]
+    Clicar no Botão    xpath:/html/body/app-root/app-home/div/main/app-my-cart/ec-wrapper/div[2]/div[6]/button[2]
 
 Preencher dados do cartão
     Inserir Texto    xpath:/html/body/app-root/app-home/div/main/page-payment/ec-wrapper/div/div[2]/app-payment-cartao/div/form/mat-form-field[2]/div[1]/div/div[2]/input      Gustavo Zanotto
@@ -208,13 +211,13 @@ Efetuar Pagamento
     ${hora_minuto_seg_split}=    Split String    ${hora_minuto_segundo}    :
     @{ano_mes_dia}=  Get Time	year month day 
     ${data_formatada}=    Formatar Data Para DD/MM/AAAA    @{ano_mes_dia}
-    Sleep            10s
+    Sleep            6s
     @{data_e_hora}=    Set Variable    ${data_formatada}    ${hora_minuto_seg_split[0]}:${hora_minuto_seg_split[1]}
     RETURN    @{data_e_hora}
 
 Visualizar Ingressos
     Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-approved-purchase/ec-splash-alert/ec-wrapper/a
-    Sleep            2s
+    Sleep    2s
 
 Compartilhar Ingressos
     [Arguments]    ${tipo_compartilhamento}
@@ -369,3 +372,107 @@ Alterar as informações do cadastro
     Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/div/mat-option[3]  
     Inserir Texto         xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/form/div[2]/mat-form-field[3]/div[1]/div/div[2]/input                                ${documento}
     Clicar no Botão       xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/form/div[5]/button
+
+Alterar datas ou horários
+    Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[2]/a[1]
+
+Preencher dados do visitante (E-Commerce)
+    [Arguments]    ${nome}=${None}  ${tipo_documento}=${None}     ${documento}=${None}    ${data_nascimento}=${None}    ${telefone}=${None}    ${genero}=${None}    ${escolaridade}=${None}    ${pais}=${None}   ${cep}=${None}    ${endereco}=${None}       ${estado}=${None}   ${numero_visitante}=1 
+    IF    $nome != $None
+        Inserir Texto    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[1]/div[1]/div/div[2]/input    ${nome}  
+        
+    END
+    IF    $tipo_documento != $None 
+        Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[2]/div[1]/div/div[2]
+        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option[${tipo_documento}]
+        Inserir Texto         xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[3]/div[1]/div/div[2]/input    ${documento}   
+        
+    END
+    IF    $data_nascimento != $None
+        Inserir Texto    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[4]/div[1]/div/div[2]/input    ${data_nascimento}   
+        
+    END
+    IF    $telefone != $None
+        Inserir Texto    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[5]/div[1]/div/div[2]/app-cellphone-input/div/input    ${telefone}   
+        
+    END
+    IF    $genero != $None
+        Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[6]/div[1]/div/div[2]
+        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option[${genero}]    
+        
+    END
+    IF    $escolaridade != $None
+        Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[7]/div[1]/div/div[2]
+        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option[${genero}]     
+        
+    END
+    IF    $pais != $None
+        Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/app-endereco-form/form/mat-form-field[1]/div[1]/div/div[2]
+        Inserir Texto         xpath:/html/body/div[3]/div[4]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input       ${pais}
+        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option[2]   
+        
+    END
+    IF    $CEP != $None
+        Inserir Texto         xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/app-endereco-form/form/mat-form-field[2]/div[1]/div/div[2]/input    ${cep}   
+        
+    END
+    IF    $estado != $None
+        Inserir Texto         xpath:/html/body/div[3]/div[4]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input    ${estado}
+        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option[2]
+    END
+    Sleep    1s
+    ${retorno}=    Run Keyword And Ignore Error    SeleniumLibrary.Get Element Attribute       xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[2]/button    ec-color
+    ${status}=    Run Keyword And Return Status    Should Be Equal   ${retorno[1]}      primary  
+    IF    $status
+        Clicar no Botão    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[2]/button
+    END
+Selecionar o ingresso para remarcar
+    [Arguments]    ${numero_bilhete}
+    Clicar no Elemento      xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-reschedule/div/app-select-sale-item[${numero_bilhete}]/div
+    Clicar no Botão         xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-reschedule/div/div/section[2]/button
+
+Selecionar o dia para remarcação no calendário
+    Clicar no Botão       xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-reschedule/div/section/div/app-title-with-edit/section/div[3]/ec-full-calendar/div/ec-calendar/table/thead[1]/tr[1]/th/div/section/button[2]
+    Sleep    1s
+    Clicar no Botão       xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-reschedule/div/section/div/app-title-with-edit/section/div[3]/ec-full-calendar/div/ec-calendar/table/tbody/tr[3]/td[4]/div/button
+
+Remarcar data do ingresso
+    Selecionar o ingresso para remarcar    1
+    Selecionar o dia para remarcação no calendário
+    Sleep    1s
+    Clicar no Botão    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-reschedule/div/div/section[2]/button
+    Sleep    1s
+    Element Should Contain    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]     Ingressos remarcados com sucesso
+    Sleep    1s
+
+Alterar dados do visitante
+    Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/div/a[2]
+    Inserir Texto         xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/mat-form-field[1]/div[1]/div/div[2]/input    Automação de Testes Alterado
+    Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/div/mat-form-field[1]/div[1]/div/div[2]
+    Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/div/mat-option[4]
+    Inserir Texto         xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/div/mat-form-field[2]/div[1]/div/div[2]/input    987654321
+    Inserir Texto         xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/mat-form-field[2]/div[1]/div/div[2]/input    22082006
+    Inserir Texto         xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/mat-form-field[3]/div[1]/div/div[2]/app-cellphone-input/div/input    558888888888888
+    Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/mat-form-field[4]/div[1]/div/div[2]
+    Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/div/mat-option[4]
+    Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/mat-form-field[5]/div[1]/div/div[2]
+    Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/div/mat-option[4]
+    Clicar no Botão       xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/div/button
+    Conferir Texto    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]     Alteração de dados feita com sucesso
+
+
+Validar informações do visitante
+    ${nome}=    Pegar valor de um input    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/mat-form-field[1]/div[1]/div/div[2]/input
+    Should Be Equal    ${nome}    Automação de Testes Alterado
+    ${tipo_documento}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/div/mat-form-field[1]/div[1]/div/div[2]/mat-select/div/div[1]/span/span
+    Should Be Equal    ${tipo_documento}    PASSAPORTE
+    ${documento}=    Pegar valor de um input    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/div/mat-form-field[2]/div[1]/div/div[2]/input    
+    Should Be Equal    ${documento}    987654321
+    ${data_nascimento}=    Pegar valor de um input    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/mat-form-field[2]/div[1]/div/div[2]/input
+    Should Be Equal    ${data_nascimento}    22/08/2006
+    ${telefone}=    Pegar valor de um input    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/mat-form-field[3]/div[1]/div/div[2]/app-cellphone-input/div/input
+    Should Be Equal    ${telefone}    +55 88 88888-8888
+    ${genero}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/mat-form-field[4]/div[1]/div/div[2]/mat-select/div/div[1]/span/span
+    Should Be Equal    ${genero}    Prefiro não informar
+    ${escolaridade}=    SeleniumLibrary.Get Text    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-visitors/div/app-sale-item/div/div[2]/mat-form-field[5]/div[1]/div/div[2]/mat-select/div/div[1]/span/span
+    Should Be Equal    ${escolaridade}    Ensino médio incompleto

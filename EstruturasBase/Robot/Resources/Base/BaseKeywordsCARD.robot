@@ -852,3 +852,4 @@ Desativar verificação de e-mail no E-commerce
         Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/mat-expansion-panel[1]/div/div/div/div/mat-checkbox[2]
     END
     Salvar cadastro e-commerce
+

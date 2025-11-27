@@ -42,7 +42,7 @@ Encerrar Cenário 4
 
 Cenário 1: Cadastro de uma nova tarifa
     ${nome_print}=    Set Variable     Cadastro de uma nova tarifa
-    [Tags]    Testes_Funcionais    LB-41
+    [Tags]    Testes_Funcionais    LB-41  Regressivos_BIL
     Dado que estou na tela de preço e disponibilidade    ${numero_bilhete}    Tabela de Preço Automatizada (TAXA)    taxa=150
     Quando ele insere a tabela com taxa no calendario    ${numero_bilhete}
     Então valido se a tarifa foi salva corretamente    
@@ -50,7 +50,7 @@ Cenário 1: Cadastro de uma nova tarifa
 Cenário 2: Cadastro de um novo convênio
     [Teardown]        Encerrar Cenário 2    ${nome_print}
     ${nome_print}=    Set Variable     Cadastro de um novo convênio
-    [Tags]    Testes_Funcionais    LB-41
+    [Tags]    Testes_Funcionais    LB-41  Regressivos_BIL
     Dado que o usuário acessa o Cadastro de Categorias
     Quando adiciono o convênio no bilhete    ${numero_bilhete}
     Então Valido se o convênio foi salvo corretamente
@@ -58,7 +58,7 @@ Cenário 2: Cadastro de um novo convênio
 Cenário 3: Cadastro de preços para diferentes categorias
     [Teardown]        Encerrar cenário 3    ${nome_print}
     ${nome_print}=    Set Variable     Cadastro de preços para diferentes categorias
-    [Tags]    Testes_Funcionais    LB-41
+    [Tags]    Testes_Funcionais    LB-41  Regressivos_BIL
     Dado que adicionei uma categoria no bilhete  
     Quando cadastro a tabela de preço
     Então valido se os preços foram salvos corretamente    6422
@@ -66,14 +66,14 @@ Cenário 3: Cadastro de preços para diferentes categorias
 Cenário 4: Configuração de preços por temporada
     [Teardown]        Encerrar Cenário 4    ${nome_print}
     ${nome_print}=    Set Variable     Configuração de preços por temporada
-    [Tags]    Testes_Funcionais    LB-41
+    [Tags]    Testes_Funcionais    LB-41  Regressivos_BIL
     Dado que criei novas temporadas              6422
     Quando coloco as temporadas no calendario    6422
     Então valido as temporadas no E-Commerce     6422
 
 #Cenário 5: Associação de Receita à configuração de preços
     #${nome_print}=    Set Variable     Associação de Receita à configuração de preços
-    #[Tags]    Testes_Funcionais    LB-41
+    #[Tags]    Testes_Funcionais    LB-41  Regressivos_BIL
     #Dado que estou na tela de preço e disponibilidade    6422
     #Quando crio uma nova tabela de preço e disponibilidade para o bilhete    6422
     #Então valido se o preço foi salvo corretamente       6422
