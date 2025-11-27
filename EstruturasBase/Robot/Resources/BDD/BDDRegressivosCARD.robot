@@ -57,16 +57,16 @@ Dado que o usuário está autenticado em sua conta
 Dado que usuário seleciona a opção Fale conosco no e-commerce
     Abro o E-commerce (Online) 
     Clicar no Botão    xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]
-    Clicar no Elemento    xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-my-account-menu/div/nav/a[4]
+    Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-my-account-menu/div/nav/a[4]
 
 # ---------------------Quando---------------------
 
 Quando faço a venda do bilhete
-    [Arguments]     ${categoria}    ${qtd_categorias}
+    [Arguments]     ${categoria}    ${qtd_categorias}    ${nome}=${None}  ${tipo_documento}=${None}     ${documento}=${None}    ${data_nascimento}=${None}    ${telefone}=${None}    ${genero}=${None}    ${escolaridade}=${None}    ${pais}=${None}   ${cep}=${None}    ${endereco}=${None}       ${estado}=${None}    
     Selecionar o dia de hoje no calendario
     Adicionar Categoria (Compra E-Commerce)    ${categoria}    ${qtd_categorias}
     Comprar Ingressos
-    Sleep    2s
+    Preencher dados do visitante (E-Commerce)       ${nome}   ${tipo_documento}    ${documento}   ${data_nascimento}   ${telefone}    ${genero}    ${escolaridade}    ${pais}   ${cep}    ${endereco}      ${estado}    
     Ir Para o Pagamento
     Preencher dados do cartão
 
@@ -124,7 +124,7 @@ Quando acessar a opção de edição de dados e modificar as informações
 
 Quando chegar na tela de FAQ
     Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-contact-us/ec-wrapper/div/section[2]/mat-form-field/div[1]/div/div[2]
-    Clicar no Elemento    xpath:/html/body/div[2]/div[2]/div/div/mat-option
+    Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/div/mat-option
     Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-contact-us/ec-wrapper/div/section[2]/section/mat-accordion/mat-expansion-panel/mat-expansion-panel-header
     Conferir Texto        xpath:/html/body/app-root/app-home/div/main/app-contact-us/ec-wrapper/div/section[2]/section/mat-accordion/mat-expansion-panel/div/div/div/p     FAQ Automação, FAQ Automação 
 
@@ -141,8 +141,21 @@ E posteriormente, na tela de SAC
     ${data_formatada}=    Formatar Data Para DD/MM/AAAA    @{ano_mes_dia}
     Log    ${data_formatada}
     @{data_e_hora}=    Set Variable    ${data_formatada}     ${tempo_ajustado}
-    Conferir Texto        xpath:/html/body/app-root/app-home/div/main/app-contact-us/div/ec-splash-alert/ec-wrapper/div[2]/h1    Chamado realizado com sucesso!
+    Sleep    1s
+    Conferir Texto        xpath:/html/body/app-root/app-home/div/main/app-contact-us/ec-wrapper/div/div/ec-splash-alert/ec-wrapper/div[2]/h1    Chamado realizado com sucesso!
     RETURN    @{data_e_hora}
+
+Quando faço a venda do bilhete com multiplas categorias
+    [Arguments]     ${categoria}    ${qtd_categorias}       ${categoria2}    ${qtd_categorias2}
+    Selecionar o dia de hoje no calendario
+    Adicionar Categoria (Compra E-Commerce)    ${categoria}    ${qtd_categorias}
+    Adicionar Categoria (Compra E-Commerce)    ${categoria2}    ${qtd_categorias2}
+    Comprar Ingressos
+    Preencher dados do visitante (E-Commerce)       Visitante Automação 1   3    123456789   01012001   5546999999999    1    2    Brasil   85509432       
+    Preencher dados do visitante (E-Commerce)       Visitante Automação 2   3    987654321   02022002   5546888888888    2    1    Brasil   85509432    numero_visitante=2
+    Sleep    2s
+    Ir Para o Pagamento
+    Preencher dados do cartão
 
 # ---------------------Então---------------------
 
@@ -284,10 +297,25 @@ Então as perguntas configuradas devem aparecer corretamente na tela de FAQ e SA
     Sleep    2s
     ${data_e_hora_sac}=    Pegar valor de um input    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/mat-card/mat-form-field[5]/div[1]/div/div[2]/input
     Log    ${data_e_hora_sac}
-    Should Contain    ${data_e_hora[0]}    ${data_e_hora_sac}
-    Should Contain    ${data_e_hora[1]}    ${data_e_hora_sac}
+    Should Contain        ${data_e_hora_sac}    ${data_e_hora[0]}
+    Should Contain    ${data_e_hora_sac}    ${data_e_hora[1]}    
     ${cliente}=    Pegar valor de um input    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/mat-card/mat-form-field[6]/div[1]/div/div[2]/input
-    Should Be Equal    Testes Automatizados - automacao@limbersoftware.com.br   ${cliente}
+    Should Be Equal    Teste Automatizado - automacao@limbersoftware.com.br   ${cliente}
     Conferir Texto    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/mat-card/div[1]/mat-chip-listbox/div/mat-chip/span[2]/span/span     Gustavozanotto119@gmail.com 
     ${mensagem}=    Pegar valor de um input    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/mat-card/div[2]/mat-form-field/div[1]/div/div[2]/textarea
     Should Be Equal    Esta é uma mensagem enviada pelo teste automatizado para validar o Fale Conosco.    ${mensagem}
+
+Então realizo a remarcação via E-Commerce
+    Efetuar Pagamento
+    Visualizar Ingressos
+    Alterar datas ou horários
+    Remarcar data do ingresso    
+    Alterar dados do visitante
+    RPA.Desktop.Press Keys    F5
+    Sleep    1s
+    Validar informações do visitante
+
+Então realizo a remarcação via CARD
+    Mudar Página    https://testescard.limbersoftware.com.br/#/pages/gerenciamento/vendas
+    Filtrar dropdown    Bilheteria Automacao (Online)    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[2]
+    
