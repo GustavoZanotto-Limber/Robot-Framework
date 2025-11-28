@@ -16,7 +16,7 @@ ${nome_print}
 *** Test Cases ***
 
 Dashboard
-    [Tags]        CARD    SmokeTest    Dashboard    SmokeCARD
+    [Tags]        CARD    SmokeTest    Dashboard    SmokeCARD    Teste
     ${nome_print}=    Set Variable    Dashboard
     Dado que estou na página inicial do CARD
     Quando acesso o menu lateral    1
