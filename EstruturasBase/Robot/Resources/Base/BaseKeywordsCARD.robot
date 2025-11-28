@@ -404,8 +404,11 @@ Colocar o bilhete no e-commerce
     [Arguments]          ${numero_bilhete}    ${grupo}    
     Mudar Página         https://testescard.limbersoftware.com.br/#/pages/ecommerce/ec-config?id=349
     Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[4]
+    sleep           1s
     Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[${grupo}]/mat-expansion-panel-header
+    sleep           1s
     Clicar no Botão      xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[${grupo}]/div/div/div/mat-card/div/div[2]/div/button
+    sleep           1s
     Inserir Texto        xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[1]/mat-form-field/div[1]/div/div[2]/input    ${numero_bilhete}
     Sleep                1s
     ${ativo}=            Get Element Attribute     xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]/img   style
@@ -638,7 +641,7 @@ Validar titulo de criar ou editar cadastros
 
 Filtrar dropdown
     [Arguments]    ${codigo}    ${xpath}
-    Clicar no Elemento                   ${xpath}             
+    Clicar no Elemento                   ${xpath}               30  
     Run Keyword and ignore error         Inserir Texto                        xpath:/html/body/div[3]/div[3]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
     Run Keyword and ignore error         Inserir Texto                        xpath:/html/body/div[3]/div[2]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input     ${codigo}
     Tentar Clicar Em Um Dos Elementos                  xpath:/html/body/div[3]/div[3]/div/div/mat-option[2]                        xpath:/html/body/div[3]/div[2]/div/div/mat-option[2]        
