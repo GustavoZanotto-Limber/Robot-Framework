@@ -146,7 +146,8 @@ Pesquisar bilhete no e-commerce
     [Arguments]   ${nome_bilhete}
     Inserir Texto                        xpath:/html/body/app-root/app-home/div/main/app-dashboard/div/mat-form-field/div[1]/div/div[3]/input       ${nome_bilhete}
     Sleep    0.5s
-    Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[3]/div/div/div/mat-option    xpath:/html/body/div[2]/div/div/div/mat-option   
+    # Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[3]/div/div/div/mat-option    xpath:/html/body/div[2]/div/div/div/mat-option   
+    Clicar no Elemento    xpath://span[normalize-space(text()='${nome_bilhete}')]/ancestor::mat-option
     Sleep    0.5s
     Clicar no Elemento                   xpath:/html/body/app-root/app-home/div/main/app-dashboard/section[2]/app-highlights/div[2]/div[1]/div/app-product-card/div/section/a
 
@@ -159,18 +160,17 @@ Coletar quantidade de vagas (E-Commerce)
 
 Coleta Valor bilhete (E-commerce)
     [Arguments]    ${valor_bilhete}   ${numero_categoria}=1     ${valor_taxa}=n  
-    Wait Until Element Is Visible    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${numero_categoria}]/div/div[2]/div[1]/section/div
-    Sleep    0.2
-    SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${numero_categoria}]/div/div[2]/div[1]/section/div    R$ ${valor_bilhete}
+    Conferir Texto    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria-produto[${numero_categoria}]/div/div[2]/div[1]/section/div    R$ ${valor_bilhete}
     ${cleaned_valor_taxa}=    Evaluate    "${valor_taxa}".strip().lower()
     IF    '${cleaned_valor_taxa}' != 'n'
-        SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria/div/div[2]/div[1]/div    ${valor_taxa}
+        Conferir Texto    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria-produto/div/div[2]/div[1]/div   ${valor_taxa}
     END
-
+        
 Adicionar categoria (Compra E-Commerce)
     [Arguments]    ${categoria}    ${quantidade}
+    Sleep    2s
     FOR    ${i}    IN RANGE    ${quantidade}
-        Sleep    0.7
+        Sleep    1s
         Clicar no Botão    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria-produto[${categoria}]/div/div[2]/button[2]
     END
 
@@ -185,14 +185,17 @@ Comprar Ingressos
     Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/div[3]/button
 
 Selecionar o dia de hoje no calendario
-    @{ano_mes_dia}=  Get Time	year month day 
-    FOR    ${counter}    IN RANGE    1    7    
-        ${RETURN VALUE}=    Run Keyword and Ignore Error    SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/ec-calendar/table/tbody[1]/tr[1]/td[${counter}]/div/div/button    ${ano_mes_dia[2]}
-        IF    '${RETURN VALUE[0]}' == 'PASS'
-            Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/ec-calendar/table/tbody[1]/tr[1]/td[${counter}]/div/div/button
-            Exit For Loop
-        END
-    END
+    # @{ano_mes_dia}=  Get Time	year month day 
+    # FOR    ${counter}    IN RANGE    1    7    
+    #     ${RETURN VALUE}=    Run Keyword and Ignore Error    SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/ec-calendar/table/tbody[1]/tr[1]/td[${counter}]/div/div/button    ${ano_mes_dia[2]}
+    #     IF    '${RETURN VALUE[0]}' == 'PASS'
+    #         Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/ec-calendar/table/tbody[1]/tr[1]/td[${counter}]/div/div/button
+    #         Exit For Loop
+    #     END
+    # END
+    ${diaHoje}=    Get Current Date    result_format=%d
+    Set Test variable    ${hojeCard}    ${diaHoje}
+    Click Element    xpath=//span[normalize-space(text())="${hojeCard}"]/ancestor::button
 
 Ir Para o Pagamento
     Clicar no Botão    xpath:/html/body/app-root/app-home/div/main/app-my-cart/ec-wrapper/div[2]/div[6]/button[2]
@@ -229,9 +232,8 @@ Compartilhar Ingressos
 
 Salvar a impressão do bilhete através do e-commerce  
     [Arguments]    ${tipo}      ${caminho}    ${nome_Impressão}
-    
     ${LB}=                       Pegar Texto     xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[1]/div[1]/header/h1[2]
-    Clicar no Botão              xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[2]/button
+    Clicar no Botão              xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[2]/button[2]
     Tentar Clicar Em Um Dos Elementos           xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-share-ticket/div/a[${tipo}]    xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-share-ticket/div/a[${tipo}]
     Sleep                        10s
     Clicar no Botão              xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/button

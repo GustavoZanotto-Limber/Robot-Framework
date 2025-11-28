@@ -9,6 +9,7 @@ Library    Collections
 Library    RPA.PDF
 Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\Robot\\ScreenShots\\Selenium
 Library    RPA.Desktop
+Library    DateTime
 Resource    BaseKeywordsDesktop.robot
 Resource    ../BDD/BDDKeywordsDesktop.robot
 
@@ -439,7 +440,7 @@ Adicionar no perfil
     Mudar Página          https://testescard.limbersoftware.com.br/#/pages/config/perfil?id=${id_perfil_de_venda}
     Sleep          1s
     Clicar no Elemento  xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/mat-tab-header/div[2]/div/div/div[3]
-    Inserir Texto     xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/div/mat-tab-body[3]/div/div/limber-select-product/div/div[1]/mat-form-field/div[1]/div/div[2]/input    ${numero_bilhete}
+    Inserir Texto       xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/div/mat-tab-body[3]/div/div/limber-select-product/div/div[1]/mat-form-field/div[1]/div/div[2]/input    ${numero_bilhete}
     Sleep          1s
     ${ativo}=      Get Element Attribute     xpath:/html/body/app-root/app-pages/div/div/div/app-new-or-edit-perfil/div[1]/mat-card/mat-tab-group/div/mat-tab-body[3]/div/div/limber-select-product/div/div[3]/view-product/mat-card/div[2]/img   style
     Log    ${ativo}
@@ -851,3 +852,18 @@ Desativar verificação de e-mail no E-commerce
     END
     Salvar cadastro e-commerce
 
+Remarcar Visita através do CARD
+    Clicar no Botão       xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/div/section[2]/button[2]
+    Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[3]/div/div/table/tbody/tr[1]/td[3]
+    Clicar no Botão       xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[1]/button
+    Clicar no Elemento    xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-dialog-content/div/section/mat-checkbox
+    Inserir Texto         xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-dialog-content/div/section/div[2]/mat-form-field[1]/div[1]/div/div[2]/input       Automação de Teste remarcados
+    Clicar no Elemento    xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-dialog-content/div/section/div[2]/mat-form-field[2]/div[1]/div/div[2]
+    Clicar no Elemento    xpath:/html/body/div[2]/div[5]/div/div/mat-option[6]
+    Inserir Texto         xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-dialog-content/div/section/div[2]/mat-form-field[3]/div[1]/div/div[2]/input      987654321
+    Clicar no Elemento    xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-card/div[1]
+    Clicar no Elemento    xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-card/div[2]/limber-form-receita/div/mat-form-field[1]/div[1]/div/div[3]/mat-datepicker-toggle/button
+    Clicar no Botão       xpath:/html/body/div[2]/div[5]/div/mat-datepicker-content/div[2]/mat-calendar/mat-calendar-header-config/div/div/button[2]
+    Clicar no Botão       xpath:/html/body/div[2]/div[5]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[4]/td[4]/button
+    Clicar no Elemento    xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-card/div[2]/limber-form-receita/div/mat-form-field[3]/div[1]/div/div[2]
+    Clicar no Elemento    xpath:/html/body/div[2]/div[5]/div/div/mat-option
