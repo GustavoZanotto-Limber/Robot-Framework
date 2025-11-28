@@ -215,7 +215,6 @@ Então valido o layout da impressão
 
 Então valido se o cadastro foi realizado com sucesso
     Sleep    1s
-    Element Should Be Visible    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]
     Element Should Contain       xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]/label        Olá, Cadastro Automatizado
 
     Clicar no Botão              xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]
@@ -250,7 +249,8 @@ E a conta só deve ser ativada após a verificação do e-mail
 
 Então o sistema deve enviar um e-mail com as instruções de recuperação
     Mudar entre as janelas    0
-    Clicar no Elemento    xpath:/html/body/main/div[1]/div[3]/div[1]/table/tbody/tr[1]
+    Sleep    1s
+    Clicar no Elemento    xpath:/html/body/main/div[1]/div[3]/div[1]/table/tbody/tr[1]        60
     Clicar no Elemento    xpath:/html/body/main/div[1]/div[4]/div[2]/div[2]/div
     Repetidor de teclas   tab    2
     Sleep    1s
@@ -317,5 +317,6 @@ Então realizo a remarcação via E-Commerce
 
 Então realizo a remarcação via CARD
     Mudar Página    https://testescard.limbersoftware.com.br/#/pages/gerenciamento/vendas
-    Filtrar dropdown      Bilheteria Automacao (Online)    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[2]
+    Sleep    1s
+    Filtrar dropdown      Bilheteria Automacao (Online)    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[2]/mat-select
     

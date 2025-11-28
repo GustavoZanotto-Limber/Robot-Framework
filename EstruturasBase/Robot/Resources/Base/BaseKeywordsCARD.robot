@@ -433,7 +433,7 @@ Retirar bilhete do e-commerce
     Sleep    2
     Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[1]/mat-card/mat-tab-group/div/mat-tab-body[4]/div/div/div/div[2]/mat-accordion/mat-expansion-panel[${grupo}]/div/div/div/mat-card/div/div[2]/view-product/mat-card/div/mat-icon
     Clicar no Elemento   xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-ec-config/div[2]/buttons/div/div/button[3]
-    sleep           10s
+    Wait Until Element Contains    xpath://*[@id="mat-snack-bar-container-live-4"]/div/simple-snack-bar/div[1]     E-commerce salvo com sucesso!    30
     Log             Bilhete retirado do E-commerce.
 
 Adicionar no perfil
@@ -692,28 +692,28 @@ Excluir tabela de preço e disponibilidade
     Clicar no Botão            xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/confirm-dialog/div/div[3]/button[2]
 
 Clicar no Botão
-    [Arguments]    ${xpath_botão}
-    Wait Until Element Is Enabled    ${xpath_botão}
+    [Arguments]    ${xpath_botão}    ${sleep}=5
+    Wait Until Element Is Enabled    ${xpath_botão}    ${sleep}s
     Click Button                     ${xpath_botão}
 
 Clicar no Elemento
-    [Arguments]    ${xpath_elemento}
-    Wait Until Element Is Visible    ${xpath_elemento}
+    [Arguments]    ${xpath_elemento}    ${sleep}=5
+    Wait Until Element Is Visible    ${xpath_elemento}    ${sleep}s
     Click Element                    ${xpath_elemento}
 
 Inserir Texto
-    [Arguments]    ${xpath_input}    ${texto}
-    Wait Until Element Is Visible    ${xpath_input}
+    [Arguments]    ${xpath_input}    ${texto}    ${sleep}=5
+    Wait Until Element Is Visible    ${xpath_input}    ${sleep}s
     Input Text                       ${xpath_input}    ${texto}
 
 Conferir Texto
-    [Arguments]    ${xpath_texto}    ${texto}
-    Wait Until Element Is Visible    ${xpath_texto}
+    [Arguments]    ${xpath_texto}    ${texto}    ${sleep}=5
+    Wait Until Element Is Visible    ${xpath_texto}    ${sleep}s
     Element Should Contain           ${xpath_texto}    ${texto}
 
 Pegar Texto
-    [Arguments]    ${xpath_texto}
-    Wait Until Element Is Visible    ${xpath_texto}
+    [Arguments]    ${xpath_texto}    ${sleep}=5
+    Wait Until Element Is Visible    ${xpath_texto}    ${sleep}s
     ${texto}=    SeleniumLibrary.Get Text         ${xpath_texto}   
     RETURN    ${texto}
 

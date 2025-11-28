@@ -23,7 +23,7 @@ Caso ocorra erro
     Sleep    2s
     @{ano_mes_dia}=  Get Time	    year month day 
     Run keyword and ignore error    Limpar dia do calendário    ${ano_mes_dia[2]}    ${ano_mes_dia[1]}
-    Run Keyword if test Failed      Retirar bilhete do e-commerce   ${numero_bilhete}    2
+    Run Keyword if test Failed      Run keyword and ignore error    Retirar bilhete do e-commerce   ${numero_bilhete}    2
     Run Keyword if test Failed      Set Suite Variable              ${numero_bilhete}    6491
     
 
