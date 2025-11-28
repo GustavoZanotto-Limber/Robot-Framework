@@ -57,7 +57,7 @@ Dado que o usuário está autenticado em sua conta
 Dado que usuário seleciona a opção Fale conosco no e-commerce
     Abro o E-commerce (Online) 
     Clicar no Botão    xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]
-    Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-my-account-menu/div/nav/a[4]
+    Clicar no Elemento    xpath://a[normalize-space(text())="Fale Conosco"]
 
 # ---------------------Quando---------------------
 
@@ -164,7 +164,7 @@ Então valido a impressão no e-commerce
     @{data_e_hora}=    Efetuar Pagamento  
     Clicar no Elemento           xpath:/html/body/app-root/app-home/div/main/app-approved-purchase/ec-splash-alert/ec-wrapper/a
     Sleep    1s
-    ${LB}=             Salvar a impressão do bilhete através do e-commerce    1    ${caminho}    Impressão_E-Commerce
+    ${LB}=             Salvar a impressão do bilhete através do e-commerce    2    ${caminho}    Impressão_E-Commerce
     Abrir arquivo      ${caminho}   ${nome_Arquivo_com_o_tipo} 
     Sleep    1s
     Validar impressão do bilhete    ${caminho}    Impressão_E-Commerce   ${caminho_screenshots}    Impressão_E-Commerce.pdf - WPS Office      ${LB}     @{data_e_hora}
@@ -317,5 +317,5 @@ Então realizo a remarcação via E-Commerce
 
 Então realizo a remarcação via CARD
     Mudar Página    https://testescard.limbersoftware.com.br/#/pages/gerenciamento/vendas
-    Filtrar dropdown    Bilheteria Automacao (Online)    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[2]
+    Filtrar dropdown      Bilheteria Automacao (Online)    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[2]
     
