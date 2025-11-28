@@ -318,5 +318,7 @@ Então realizo a remarcação via E-Commerce
 Então realizo a remarcação via CARD
     Mudar Página    https://testescard.limbersoftware.com.br/#/pages/gerenciamento/vendas
     Sleep    1s
-    Filtrar dropdown      Bilheteria Automacao (Online)    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[2]/mat-select
+    Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[3]/limber-clear-icon-form/div/mat-icon
+    Sleep    1s
+    Filtrar dropdown      Bilheteria Automacao (Online)    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[2]
     
