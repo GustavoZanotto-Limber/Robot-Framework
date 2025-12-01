@@ -382,6 +382,8 @@ Criar exceção de disponibilidade
     RPA.Desktop.Type Text      ${qtd_vagas}
     Repetidor de teclas        tab    4
     RPA.Desktop.Press Keys     Enter
+    sleep    1s
+    Clicar no Botão    xpath://button[normalize-space(text())="Salvar"]
 
 Criar bloqueio de disponibilidade
     ${validador}=              Run Keyword And Return Status     Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button/span[2]    Configurar exceções e alta procura
@@ -770,10 +772,6 @@ Validar impressão do bilhete (Via CARD)
     Should Contain            ${pagina2}                     LB-26 Impressão de Bilhete    Categoria 1    Receita Automação (Online)    AU_ON    Valor total: R$ 1.00
     Sleep                     1s
 
-Pesquisar LB no gerenciamento de vendas
-    [Arguments]    ${LB}
-    Inserir Texto      xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[1]/div[1]/div/div[2]/input    ${LB}
-    Clicar no Botão    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/div/section[2]/button[2]
 
 Escolher impressão gerenciamento de vendas
     [Arguments]    ${numero_impressão}
@@ -859,14 +857,51 @@ Remarcar Visita através do CARD
     Clicar no Botão       xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/div/section[2]/button[2]
     Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[3]/div/div/table/tbody/tr[1]/td[3]
     Clicar no Botão       xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[1]/button
-    Clicar no Elemento    xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-dialog-content/div/section/mat-checkbox
-    Inserir Texto         xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-dialog-content/div/section/div[2]/mat-form-field[1]/div[1]/div/div[2]/input       Automação de Teste remarcados
-    Clicar no Elemento    xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-dialog-content/div/section/div[2]/mat-form-field[2]/div[1]/div/div[2]
-    Clicar no Elemento    xpath:/html/body/div[2]/div[5]/div/div/mat-option[6]
-    Inserir Texto         xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-dialog-content/div/section/div[2]/mat-form-field[3]/div[1]/div/div[2]/input      987654321
-    Clicar no Elemento    xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-card/div[1]
-    Clicar no Elemento    xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-card/div[2]/limber-form-receita/div/mat-form-field[1]/div[1]/div/div[3]/mat-datepicker-toggle/button
-    Clicar no Botão       xpath:/html/body/div[2]/div[5]/div/mat-datepicker-content/div[2]/mat-calendar/mat-calendar-header-config/div/div/button[2]
-    Clicar no Botão       xpath:/html/body/div[2]/div[5]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[4]/td[4]/button
-    Clicar no Elemento    xpath:/html/body/div[2]/div[3]/div/mat-dialog-container/div/div/remarcacao/div/mat-card/div[2]/limber-form-receita/div/mat-form-field[3]/div[1]/div/div[2]
-    Clicar no Elemento    xpath:/html/body/div[2]/div[5]/div/div/mat-option
+    Clicar no Elemento    xpath://mat-checkbox[@id="mat-mdc-checkbox-1"]
+    Inserir Texto         xpath://mat-form-field[1]/div[1]/div/div[2]/input[@placeholder="Nome"]       Automação de Teste remarcados
+    Clicar no Elemento    xpath=//*[@id="mat-select-value-6"]/span/span
+    Clicar no Elemento    xpath=//span[normalize-space(text())='Outros']/ancestor::mat-option
+    Inserir Texto         xpath://input[@id="mat-input-61"]      987654321
+    Clicar no Elemento    xpath://div[normalize-space(text())='Clique para alterar os dados da visita']/ancestor::mat-card
+    Clicar no Elemento    xpath://*[@id="mat-mdc-dialog-0"]/div/div/remarcacao/div/mat-card/div[2]/limber-form-receita/div/mat-form-field[1]/div[1]/div/div[3]/mat-datepicker-toggle/button
+    Clicar no Botão       xpath:/html/body/div[3]/div[4]/div/mat-datepicker-content/div[2]/mat-calendar/mat-calendar-header-config/div/div/button[2]
+    Sleep    1s
+    Clicar no Botão       xpath:/html/body/div[3]/div[4]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[4]/td[4]/button
+    RPA.Desktop.Press Keys    Tab    
+    Repetidor de teclas       enter    2    1
+    Clicar no Botão       xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/remarcacao/div/mat-dialog-actions/button[2]
+
+filtrar gerenciamento de vendas
+    [Arguments]    ${bilheteria}    ${LB}=None
+    Filtrar dropdown       ${bilheteria}    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[1]
+    IF    '${LB}' == 'None'
+        Inserir Texto    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[1]/div[1]/div/div[2]/input    ${LB}
+    END
+    Clicar no Botão       xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/div/section[2]/button[2]
+
+Validar informações no gerenciamento de vendas
+    # [Arguments]     ${nome}
+    Clicar no Botão    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/div[1]/div[2]/button[2]
+    Sleep    1s
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[5]    Automação de Teste remarcados
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[6]    OUTROS-987654321
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[7]    +55 46999999999
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[8]    01/01/2001
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[9]    Masculino
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[10]   Sem escolaridade
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[14]   Brasil
+    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[15]   PR
+
+Realizar a leitura ou confirmação do bilhete vendido 
+    [Arguments]    ${LB}
+    Mudar Página    https://testescard.limbersoftware.com.br/#/pages/gerenciamento/vendas
+    Sleep    1s
+    Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[3]/limber-clear-icon-form/div/mat-icon
+    Sleep    1s
+    filtrar gerenciamento de vendas    Bilheteria Automação (Online)    ${LB}
+    Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[3]/div/div/table/tbody/tr[1]/td[3]
+    Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[1]    7
+    Rolar para baixo      1
+    Clicar no Botão       xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[2]/td/div/table/tbody/tr[1]/td[1]/div/div/button    7
+    Clicar no Botão       xpath:/html/body/div[3]/div[2]/div/div/div/button
+    Conferir Texto        xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]     Leitura realizada com sucesso!
