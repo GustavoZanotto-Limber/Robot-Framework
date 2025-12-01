@@ -185,6 +185,8 @@ Então valido se a disponibilidade integrou corretamente
     Fechar com Sim
     Encerrar Tudo
 
+
+
 Então valido a Exceção no E-commerce e na bilheteria
     [Arguments]    ${numero_bilhete}    ${qtd_vagas}=5
     Colocar o bilhete no e-commerce    ${numero_bilhete}    2
