@@ -8,7 +8,7 @@ Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}    ${nome_pri
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/Testes Regressivos/CARD/LB-26 Impressão de Bilhete/ 
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/Testes Regressivos/CARD/LB-28 Remarcação De Visitas/ 
 ${Caminho_arquivos}
 ${nome_print}
 
