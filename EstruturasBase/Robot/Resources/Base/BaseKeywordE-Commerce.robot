@@ -193,7 +193,14 @@ Selecionar o dia de hoje no calendario
     #         Exit For Loop
     #     END
     # END
-    ${diaHoje}=    Get Current Date    result_format=%d
+    ${diaHoje}=    Get Current Date    result_format=%#d
+    # ${diaHoje}=    Convert To Integer    ${diaHoje}
+    # IF    $diaHoje >= 10
+    #     ${diasplit}=    Split String    ${diaHoje}    0
+    #     ${hojeCard}=    Set Variable    ${diasplit[1]}
+    # ELSE
+    #     ${hojeCard}=    Set Variable    ${diaHoje}
+    # END
     Set Test variable    ${hojeCard}    ${diaHoje}
     Click Element    xpath=//span[normalize-space(text())="${hojeCard}"]/ancestor::button
 
@@ -359,8 +366,10 @@ Validar as informações do cadastro
 Pegar valor de um input
     [Arguments]    ${locator}
     Clicar no Elemento    ${locator}
+    Sleep    0.5
     RPA.Desktop.Press Keys    Ctrl     A
     RPA.Desktop.Press Keys    Ctrl     C
+    Sleep    0.5
     ${valor}=    RPA.Desktop.Get Clipboard Value
     Log       ${valor}
     RETURN    ${valor}
@@ -381,52 +390,45 @@ Alterar datas ou horários
 Preencher dados do visitante (E-Commerce)
     [Arguments]    ${nome}=${None}  ${tipo_documento}=${None}     ${documento}=${None}    ${data_nascimento}=${None}    ${telefone}=${None}    ${genero}=${None}    ${escolaridade}=${None}    ${pais}=${None}   ${cep}=${None}    ${endereco}=${None}       ${estado}=${None}   ${numero_visitante}=1 
     IF    $nome != $None
-        Inserir Texto    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[1]/div[1]/div/div[2]/input    ${nome}  
-        
+        Inserir Texto         xpath://form[${numero_visitante}]/mat-form-field[1]/div[1]/div/div[2]/input    ${nome}  
     END
     IF    $tipo_documento != $None 
-        Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[2]/div[1]/div/div[2]
-        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option[${tipo_documento}]
-        Inserir Texto         xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[3]/div[1]/div/div[2]/input    ${documento}   
-        
+        Clicar no Elemento    xpath://form[${numero_visitante}]/mat-form-field[2]/div[1]/div/div[2]
+        Clicar no Elemento    xpath://mat-option[${tipo_documento}]
+        Inserir Texto         xpath://form[${numero_visitante}]/mat-form-field[3]/div[1]/div/div[2]/input    ${documento}   
     END
     IF    $data_nascimento != $None
-        Inserir Texto    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[4]/div[1]/div/div[2]/input    ${data_nascimento}   
-        
+        Inserir Texto    xpath://form[${numero_visitante}]/mat-form-field[4]/div[1]/div/div[2]/input    ${data_nascimento}     
     END
     IF    $telefone != $None
-        Inserir Texto    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[5]/div[1]/div/div[2]/app-cellphone-input/div/input    ${telefone}   
-        
+        Inserir Texto    xpath://form[${numero_visitante}]/mat-form-field[5]/div[1]/div/div[2]/app-cellphone-input/div/input    ${telefone}     
     END
     IF    $genero != $None
-        Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[6]/div[1]/div/div[2]
-        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option[${genero}]    
-        
+        Clicar no Elemento    xpath://form[${numero_visitante}]/mat-form-field[6]/div[1]/div/div[2]
+        Clicar no Elemento    xpath://mat-option[${genero}]    
     END
     IF    $escolaridade != $None
-        Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/mat-form-field[7]/div[1]/div/div[2]
-        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option[${genero}]     
+        Clicar no Elemento    xpath://form[${numero_visitante}]/mat-form-field[7]/div[1]/div/div[2]
+        Clicar no Elemento    xpath://mat-option[${genero}]     
         
     END
     IF    $pais != $None
-        Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/app-endereco-form/form/mat-form-field[1]/div[1]/div/div[2]
-        Inserir Texto         xpath:/html/body/div[3]/div[4]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input       ${pais}
-        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option[2]   
-        
+        Clicar no Elemento    xpath://form[${numero_visitante}]/app-endereco-form/form/mat-form-field[1]/div[1]/div/div[2]
+        Inserir Texto         xpath://mat-option[1]/span/ngx-mat-select-search/div/div/input       ${pais}
+        Clicar no Elemento    xpath://mat-option[2]   
     END
     IF    $CEP != $None
-        Inserir Texto         xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[1]/div[2]/form[${numero_visitante}]/app-endereco-form/form/mat-form-field[2]/div[1]/div/div[2]/input    ${cep}   
-        
+        Inserir Texto         xpath://form[${numero_visitante}]/app-endereco-form/form/mat-form-field[2]/div[1]/div/div[2]/input    ${cep}   
     END
     IF    $estado != $None
-        Inserir Texto         xpath:/html/body/div[3]/div[4]/div/div/mat-option[1]/span/ngx-mat-select-search/div/div/input    ${estado}
-        Clicar no Elemento    xpath:/html/body/div[3]/div[4]/div/div/mat-option[2]
+        Inserir Texto         xpath://mat-option[1]/span/ngx-mat-select-search/div/div/input    ${estado}
+        Clicar no Elemento    xpath://mat-option[2]
     END
     Sleep    1s
-    ${retorno}=    Run Keyword And Ignore Error    SeleniumLibrary.Get Element Attribute       xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[2]/button    ec-color
+    ${retorno}=    Run Keyword And Ignore Error    SeleniumLibrary.Get Element Attribute       xpath://div/mat-bottom-sheet-container/app-visitors-form/div/div[2]/button[2]    ec-color
     ${status}=    Run Keyword And Return Status    Should Be Equal   ${retorno[1]}      primary  
     IF    $status
-        Clicar no Botão    xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-visitors-form/div/div[2]/button
+        Clicar no Botão    xpath://div/mat-bottom-sheet-container/app-visitors-form/div/div[2]/button[2]
     END
 Selecionar o ingresso para remarcar
     [Arguments]    ${numero_bilhete}

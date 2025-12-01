@@ -156,6 +156,13 @@ Quando faço a venda do bilhete com multiplas categorias
     Sleep    2s
     Ir Para o Pagamento
     Preencher dados do cartão
+    Efetuar Pagamento
+
+E realizo a leitura ou confirmação do bilhete vendido
+    ${LB}=             Pegar LB
+    Sleep    1s
+    Realizar a leitura ou confirmação do bilhete vendido    ${LB}
+    Sleep    1s
 
 # ---------------------Então---------------------
 
@@ -177,8 +184,7 @@ Então valido a impressão na plataforma CARD
     Sleep    1s
     Mudar Página    https://testescard.limbersoftware.com.br/#/pages/gerenciamento/vendas
     Sleep    1s
-    Filtrar dropdown    Bilheteria Automação (Online)       xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]
-    Pesquisar LB no gerenciamento de vendas    ${LB}
+    filtrar gerenciamento de vendas      Bilheteria Automação (Online)      ${LB}
     Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[3]/div/div/table/tbody/tr[1]/td[3]
     Criar aquivo da Impressão CARD     ${caminho}  
     Sleep    1s
@@ -320,5 +326,12 @@ Então realizo a remarcação via CARD
     Sleep    1s
     Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[3]/limber-clear-icon-form/div/mat-icon
     Sleep    1s
-    Filtrar dropdown      Bilheteria Automacao (Online)    xpath:/html/body/app-root/app-pages/div/div/div/vendas/div/div[2]/filtros-vendas/form/mat-form-field[5]/div[1]/div/div[2]
-    
+    filtrar gerenciamento de vendas    Bilheteria Automação (Online)
+    Remarcar Visita através do CARD
+    Validar informações no gerenciamento de vendas
+
+Então tento realizar a remarcação via CARD e recebo a mensagem de erro apropriada
+    Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[1]/button
+    Clicar no Elemento    xpath://mat-checkbox[@id="mat-mdc-checkbox-1"]
+    Clicar no Elemento    xpath://div[normalize-space(text())='Clique para alterar os dados da visita']/ancestor::mat-card
+    Conferir Texto        xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/remarcacao/div/mat-card/div[2]/limber-form-receita/div/div/div     Não é possível remarcar a visita pois o item de sequencia: 1 já está utilizado 
