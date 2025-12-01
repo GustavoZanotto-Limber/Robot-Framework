@@ -50,7 +50,7 @@ Cenário 2: Emissão de bilhetes com categoria e convênio
 
 Cenário 4: Compra de bilhetes diferentes na mesma venda  
     ${nome_print}=    Set Variable     Compra de bilhetes diferentes na mesma venda  
-    @{texto_bilhete}=   Create List     6660 - LB-45 Bilhete Integrado    4651 - Categoria 1    6661 - LB-45  Regressivos_BIL Bilhete Integrado 2
+    @{texto_bilhete}=   Create List     6660 - LB-45 Bilhete Integrado    4651 - Categoria 1    6661 - LB-45 Bilhete Integrado 2
     [Tags]    Testes_Funcionais    LB-45  Regressivos_BIL   
     Dado que realizei uma venda com dois bilhetes
     Quando finalizo o pagamento    2
@@ -58,7 +58,7 @@ Cenário 4: Compra de bilhetes diferentes na mesma venda
 
 Cenário 5: Cadastro de dados do titular e visitante na emissão de bilhete
     ${nome_print}=    Set Variable     Cadastro de dados do titular e visitante na emissão de bilhete  
-    @{texto_bilhete}=   Create List     6663 - LB-45  Regressivos_BIL Bilhete Integrado - Coleta dados do Usuário     4651 - Categoria 1    PR    1 - BRASIL    GUSTAVO ZANOTTO AUTOMATIZADO     09285844960    5546999999999    Masculino     Ensino Superior Incompleto    22/08/2000
+    @{texto_bilhete}=   Create List     6663 - LB-45 Bilhete Integrado - Coleta dados do Usuário     4651 - Categoria 1    PR    1 - BRASIL    GUSTAVO ZANOTTO AUTOMATIZADO     09285844960    5546999999999    Masculino     Ensino Superior Incompleto    22/08/2000
     [Tags]    Testes_Funcionais    LB-45  Regressivos_BIL   
     Dado que realizei uma reserva preenchendo os dados do titular e visitante
     Quando finalizo o pagamento    1
@@ -90,7 +90,7 @@ Cenário 8: Geração de comprovante RPS e bilhete após a venda
 
 Cenário 9: Venda de bilhete comum (visitação e atrativos)
     ${nome_print}=    Set Variable     Venda de bilhete comum (visitação e atrativos)
-    @{texto_bilhete}=   Create List     6667 - LB-45  Regressivos_BIL Outras receitas    4651 - Categoria 1    501 - Venda de bilhete Outras Receitas
+    @{texto_bilhete}=   Create List     6667 - LB-45   Outras receitas    4651 - Categoria 1    501 - Venda de bilhete Outras Receitas
     [Tags]    Testes_Funcionais    LB-45  Regressivos_BIL   
     Dado que realizei uma reserva como outras receitas
     Quando finalizo o pagamento    1
@@ -98,7 +98,7 @@ Cenário 9: Venda de bilhete comum (visitação e atrativos)
 
 Cenário 10: Venda de bilhete com Constribuição de Fundo
     ${nome_print}=    Set Variable     Venda de bilhete com Constribuição de Fundo
-    @{texto_bilhete}=   Create List     6668 - LB-45  Regressivos_BIL Fundo Iguaçu     4651 - Categoria 1 
+    @{texto_bilhete}=   Create List     6668 - LB-45   Fundo Iguaçu     4651 - Categoria 1 
     [Tags]    Testes_Funcionais    LB-45  Regressivos_BIL   
     Dado que realizei uma reserva com fundo iguaçu
     Quando finalizo o pagamento    1
@@ -106,7 +106,7 @@ Cenário 10: Venda de bilhete com Constribuição de Fundo
 
 Cenário 11: Venda de bilhete zerado com coleta de observação
     ${nome_print}=    Set Variable     Venda de bilhete zerado com coleta de observação
-    @{texto_bilhete}=   Create List     6669 - LB-45  Regressivos_BIL Valor Zerado     4651 - Categoria 1 
+    @{texto_bilhete}=   Create List     6669 - LB-45   Valor Zerado     4651 - Categoria 1 
     [Tags]    Testes_Funcionais    LB-45  Regressivos_BIL   
     Dado que realizei uma reserva com valor Zerado
     Quando preencho a observação    

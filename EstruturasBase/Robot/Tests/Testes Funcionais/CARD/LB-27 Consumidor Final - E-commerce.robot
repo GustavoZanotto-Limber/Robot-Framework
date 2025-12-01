@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Testes regressivos: Impressão de Bilhete
+Documentation     Testes regressivos: Consumidor Final
 Resource          ../../../Resources/Base/BaseKeywordsCARD.robot
 Resource          ../../../Resources/BDD/BDDKeywordsWeb.robot
 Resource          ../../../Resources/BDD/BDDRegressivosCARD.robot
@@ -8,7 +8,7 @@ Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}    ${nome_pri
 
 *** Variables ***
 
-${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/Testes Regressivos/CARD/LB-27 Impressão de Bilhete/ 
+${Caminho_Screenshots}=    ${EXECDIR}/EstruturasBase/Robot/ScreenShots/Testes Regressivos/CARD/LB-27 Consumidor Final/ 
 ${Caminho_arquivos}
 ${nome_print}
 

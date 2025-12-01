@@ -4,7 +4,7 @@ Resource          ../../../Resources/Base/BaseKeywordsCARD.robot
 Resource          ../../../Resources/BDD/BDDKeywordsWeb.robot
 Resource          ../../../Resources/BDD/BDDRegressivosCARD.robot
 Suite Setup       Iniciar Suite
-Test Teardown     Em caso de erro
+Test Teardown     Em caso de erro    ${nome_print}
 
 *** Variables ***
 
@@ -20,6 +20,7 @@ Iniciar Suite
     Abrir CARD e logar  
 
 Em caso de erro
+    [Arguments]    ${nome_print}
     Run Keyword if test Failed            Run Keyword And Ignore Error    ALT F4
     Caso aconteca erro Regressivos CARD   ${Caminho_Screenshots}Erros/    ${nome_print}
     
