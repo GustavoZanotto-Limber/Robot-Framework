@@ -28,6 +28,10 @@ Abro o E-commerce (Online)
 Abro o E-commerce (Online) Sem Logar
     Mudar Página                     https://automacaoonline.testescard.limber.net.br/
     Sleep                     2s
+
+Abro o E-commerce (Integrada) Sem Logar      
+    Mudar Página              https://automacao.testescard.limber.net.br/
+    Sleep                     2s
       
 Email login
     [Arguments]    ${email}

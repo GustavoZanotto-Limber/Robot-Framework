@@ -284,7 +284,8 @@ Selecionar a ultima venda para reimpressão
     Sleep                      1s
     RPA.Windows.Click          OK
     Sleep                      1s
-    RPA.Desktop.Press Keys     Ctrl    Down
+    Rolar barra até o Final
+    RPA.Desktop.Press Keys     Ctrl    END
     RPA.Windows.Click          Confirmar
     RPA.Desktop.Press Keys     Alt    M
     RPA.Desktop.Press Keys     ${ação}
@@ -429,7 +430,7 @@ Fechar caixa e salvar a impressão
     RETURN    ${tempo}
  
 Salvo a impressão do RPS
-    Sleep                         6s
+    Sleep                         8s
     RPA.Desktop.Type Text         RPS
     Sleep                         5s
     RPA.Windows.Click             Salvar
@@ -447,7 +448,7 @@ Salvo a Impressão
 
 Salvo a Reimpressão  
     [Arguments]    ${nome_do_arquivo}
-    Sleep                         1s  
+    Sleep                         2s  
     RPA.Desktop.Type Text         ${nome_do_arquivo}
     RPA.Windows.Click             Salvar
     Sleep                         2s
