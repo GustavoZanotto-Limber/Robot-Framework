@@ -318,7 +318,7 @@ Selecionar dia do calendário
     ${termina_loop}=    Set Variable    0    
     sleep           1s
     ${mês}=    Convert To Integer    ${mês}
-    @{dia_calendario}=  Set Variable  a    Set Variable    b
+    @{dia_calendario}=  Set Variable      a      b
     IF    ${mês} < 10
         ${mês}=    Convert to String    ${mês}
         ${mês}=    Replace String   ${mês}    0    ${EMPTY}

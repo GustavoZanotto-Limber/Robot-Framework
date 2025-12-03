@@ -316,10 +316,8 @@ Selecionar o bilhete abrir filtro
 
 Selecionar o bilhete e retornar quantidade de vagas
     [Arguments]    ${bilhete}    ${categoria}
-    #Selecionando o bilhete
     Escrever para consultar   ${bilhete}   
     Sleep                     1s
-    #Selecionando categorias
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
@@ -331,25 +329,6 @@ Selecionar o bilhete e retornar quantidade de vagas
     ${qtd_vagas}=    Coleta valor atraves da planilha
     repetidor de teclas       enter    6
     RETURN                    ${qtd_vagas}
-
-Selecionar o bilhete e retornar quantidade de vagas (categoria)
-    [Arguments]    ${bilhete}    ${categoria}
-    #Selecionando o bilhete
-    Escrever para consultar   ${bilhete}
-    #Selecionando categorias
-    RPA.Desktop.Press Keys    0
-    RPA.Desktop.Press Keys    enter
-    Sleep                     1s
-    RPA.Desktop.Press Keys    F6
-    repetidor de teclas       Down    ${categoria}
-    Sleep                     2s
-    RPA.Windows.Click         Confirmar
-    Sleep                     1s
-    Sleep                     1s
-    ${qtd_vagas}=    Coleta valor atraves da planilha
-    repetidor de teclas       enter    6
-    RETURN                    ${qtd_vagas}
-    
     
 Coleta valor atraves da planilha
     [arguments]    ${qtd_direita}=3    ${qtd_baixo}=1
@@ -381,9 +360,7 @@ Trocar Operação
 
 Selecionar o bilhete e o convênio
     [Arguments]    ${numero_bilhete}    ${qtd_clicks_categoria}=4
-    #Selecionando o bilhete
     Escrever para consultar   ${numero_bilhete}
-    #Selecionando categorias
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    enter
     Sleep                     1s
@@ -524,28 +501,15 @@ Encerrar Tudo
 Caso aconteça erro
     [Arguments]     ${Caminho_Screenshots}        ${nome_print}
     Set Global Timeout    0.01
-    Set Wait Time    0.01
-    # ${Erro}=                       Run Keyword And Ignore error     RPA.Windows.Get Element    Erro
-    # IF    ${Erro} != ('FAIL', "ElementNotFound: Element not found with locator 'Erro'")
-    #     Fail                       Ocorreu um erro ao tentar clicar no campo em tela ou fechar a janela.
-        Run Keyword If Test Failed        Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
-        Run Keyword If Test Failed        Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
-        Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Desktop.Press Keys          Alt    -
-        Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Windows.Click               Maximizar
-        Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Desktop.Press Keys          Alt    -
-        Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Windows.Click               Fechar   
-        # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          esc
-        # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Confirmar
-        # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Cancelar
-        # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Windows.Click               Cancel
-        # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          esc    
-        # Run Keyword If Test Failed      Run Keyword And Ignore error    Set Anchor                      Aplicativo
-        
-        Clear Anchor
-    # END
-    
-    # Run Keyword If Test Failed      Run Keyword And Ignore error    RPA.Desktop.Press Keys          Enter  
-     
+    Set Wait Time    0.01.
+    Run Keyword If Test Failed        Run Keyword And Ignore error    Remove File                     ${Caminho_Screenshots}${nome_print}.png
+    Run Keyword If Test Failed        Take Screenshot                 ${Caminho_Screenshots}Erro ${nome_print}.png
+    Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Desktop.Press Keys          Alt    -
+    Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Windows.Click               Maximizar
+    Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Desktop.Press Keys          Alt    -
+    Run Keyword If Test Failed        Run Keyword And Ignore error    RPA.Windows.Click               Fechar    
+    Clear Anchor
+
 Pegar Hora atual
     [Arguments]    ${tempo}
     ${tempo1_split}=    Split String    ${tempo}    ${SPACE}

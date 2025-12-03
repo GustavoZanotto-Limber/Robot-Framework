@@ -17,7 +17,7 @@ ${nome_exe}=    cde_win_bca_front
 *** Test Cases    ***
 
 Abertura / Fechamento
-    [Tags]   SmokeERP   Caixa Operador    Front    SmokeTest  SmokeTestERP
+    [Tags]   SmokeERP   Caixa Operador    Front    SmokeTest  
     ${nome_print}=                      Set Variable    Abertura_Fechamento
     Caixa Operador
     RPA.Windows.Click                   Abertura / Fechamento
@@ -29,7 +29,7 @@ Abertura / Fechamento
     RPA.Windows.Click                   OK
 
 Suprimento / Sangria
-    [Tags]   SmokeERP   Caixa Operador    Front    SmokeTest    SmokeTestERP
+    [Tags]   SmokeERP   Caixa Operador    Front    SmokeTest    
     ${nome_print}=          Set Variable    Suprimento _ Sangria
     Caixa Operador
     RPA.Windows.Click       Suprimento / Sangria
