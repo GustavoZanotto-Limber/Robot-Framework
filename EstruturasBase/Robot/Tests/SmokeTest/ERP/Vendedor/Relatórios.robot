@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Vendedor
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -29,7 +29,7 @@ Análise da Disponibilidade do Estoque
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Análise da Disponibilidade do Estoque (1)    ${Caminho_Screenshots}Análise da Disponibilidade do Estoque
+    Base_Desktop.Screenshot    Análise da Disponibilidade do Estoque (1)    ${Caminho_Screenshots}Análise da Disponibilidade do Estoque
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -41,7 +41,7 @@ Relatório de Cobrança (SEM PERMISSÂO)
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Relatório de Cobrança   ${Caminho_Screenshots}Relatório de Cobrança
+    Base_Desktop.Screenshot    Relatório de Cobrança   ${Caminho_Screenshots}Relatório de Cobrança
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -53,6 +53,6 @@ Posição Financeira/Vendedor/Terceiro (SEM PERMISSÂO)
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Posição Financeira por Representante/Terceiro   ${Caminho_Screenshots}Posição Financeira/Vendedor/Terceiro
+    Base_Desktop.Screenshot    Posição Financeira por Representante/Terceiro   ${Caminho_Screenshots}Posição Financeira/Vendedor/Terceiro
     RPA.Windows.Click         Confirmar
     Fechar janela

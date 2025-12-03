@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Compras
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  cde_win_compras
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -28,7 +28,7 @@ Entradas/Compras > Incluir/Alterar
     Sleep                   2s
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)   ${Caminho_Screenshots}Entradas_Compras/Incluir_Alterar 
+    Base_Desktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)   ${Caminho_Screenshots}Entradas_Compras/Incluir_Alterar 
     Fechar com Sim
 
 Entradas/Compras > Consultar
@@ -42,7 +42,7 @@ Entradas/Compras > Consultar
     RPA.Desktop.Press Keys  Enter
     Sleep                   1
     RPA.Windows.Click       Confirmar
-    BaseKeywordsDesktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
+    Base_Desktop.Screenshot  Entradas/Compras - Consultar (1)    ${Caminho_Screenshots}Entradas_Compras/Consultar
     Fechar Janela
 
 Entradas/Compras > Excluir Entradas/Compras
@@ -53,7 +53,7 @@ Entradas/Compras > Excluir Entradas/Compras
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Excluir Entradas/Compras (1)
     RPA.Windows.Click       Log de Mensagens
-    BaseKeywordsDesktop.Screenshot  Excluir Entradas/Compras (1)    ${Caminho_Screenshots}Entradas_Compras/Excluir Entradas/Compras
+    Base_Desktop.Screenshot  Excluir Entradas/Compras (1)    ${Caminho_Screenshots}Entradas_Compras/Excluir Entradas/Compras
     Fechar janela
 
 Entradas/Compras > Manutenção de Devolução de Venda
@@ -64,7 +64,7 @@ Entradas/Compras > Manutenção de Devolução de Venda
     RPA.Desktop.Press Keys  M
     RPA.Windows.Get Text    Manutenção de Devoluções de Venda (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Manutenção de Devoluções de Venda (1)    ${Caminho_Screenshots}Entradas_Compras/Manutenção de Devolução de Venda
+    Base_Desktop.Screenshot  Manutenção de Devoluções de Venda (1)    ${Caminho_Screenshots}Entradas_Compras/Manutenção de Devolução de Venda
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -76,7 +76,7 @@ Entradas/Compras > Transferências realizadas pendentes de Entrada
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Transferências realizadas pendentes de Entrada (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Transferências realizadas pendentes de Entrada (1)    ${Caminho_Screenshots}Entradas_Compras/Transferências realizadas pendentes de Entrada
+    Base_Desktop.Screenshot  Transferências realizadas pendentes de Entrada (1)    ${Caminho_Screenshots}Entradas_Compras/Transferências realizadas pendentes de Entrada
     Fechar janela
 
 Entradas/Compras > Entradas pendentes de conferência de Mercadoria
@@ -87,7 +87,7 @@ Entradas/Compras > Entradas pendentes de conferência de Mercadoria
     RPA.Desktop.Press Keys  N
     RPA.Windows.Get Text    Entradas pendentes de conferência (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Entradas pendentes de conferência (1)    ${Caminho_Screenshots}Entradas_Compras/Entradas pendentes de conferência de Mercadoria
+    Base_Desktop.Screenshot  Entradas pendentes de conferência (1)    ${Caminho_Screenshots}Entradas_Compras/Entradas pendentes de conferência de Mercadoria
     Fechar janela
 
 Entradas/Compras > Conferência de Mercadoria de Entrada
@@ -98,7 +98,7 @@ Entradas/Compras > Conferência de Mercadoria de Entrada
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Conferências de Entrega (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Conferências de Entrega (1)    ${Caminho_Screenshots}Entradas_Compras/Conferência de Mercadoria de Entrada
+    Base_Desktop.Screenshot  Conferências de Entrega (1)    ${Caminho_Screenshots}Entradas_Compras/Conferência de Mercadoria de Entrada
     Fechar janela
 
 Entradas/Compras > Alteração em Massa de Operação
@@ -109,7 +109,7 @@ Entradas/Compras > Alteração em Massa de Operação
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Lançamentos de Entrada
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Lançamentos de Entrada    ${Caminho_Screenshots}Entradas_Compras/Alteração em Massa de Operação
+    Base_Desktop.Screenshot  Lançamentos de Entrada    ${Caminho_Screenshots}Entradas_Compras/Alteração em Massa de Operação
     RPA.Windows.Click       Fechar
 
 Entradas/Compras > Lançamento de Outros Custos de Entrada
@@ -120,7 +120,7 @@ Entradas/Compras > Lançamento de Outros Custos de Entrada
     RPA.Desktop.Press Keys  L
     RPA.Windows.Get Text    Lançamento de outros custos de entrada (1)
     RPA.Windows.Click       Custo unitário por item
-    BaseKeywordsDesktop.Screenshot  Lançamento de outros custos de entrada (1)    ${Caminho_Screenshots}Entradas_Compras/Lançamento de Outros Custos de Entrada
+    Base_Desktop.Screenshot  Lançamento de outros custos de entrada (1)    ${Caminho_Screenshots}Entradas_Compras/Lançamento de Outros Custos de Entrada
     Fechar janela
 
 Requisição de Compra > Manutenção
@@ -131,7 +131,7 @@ Requisição de Compra > Manutenção
     RPA.Desktop.Press Keys  M
     RPA.Windows.Get Text    Requisição de Compras (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Requisição de Compras (1)    ${Caminho_Screenshots}Requisição de Compra/Manutenção
+    Base_Desktop.Screenshot  Requisição de Compras (1)    ${Caminho_Screenshots}Requisição de Compra/Manutenção
     Fechar com Sim
 
 Requisição de Compra > Consultar
@@ -142,7 +142,7 @@ Requisição de Compra > Consultar
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Consulta de Requisição de Compra (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Consulta de Requisição de Compra (1)    ${Caminho_Screenshots}Requisição de Compra/Consultar
+    Base_Desktop.Screenshot  Consulta de Requisição de Compra (1)    ${Caminho_Screenshots}Requisição de Compra/Consultar
     Fechar janela
 
 Requisição de Compra > Aprovação/Rejeição de Requisição
@@ -153,7 +153,7 @@ Requisição de Compra > Aprovação/Rejeição de Requisição
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Aprovação/Rejeição de Requisição de Compra (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Aprovação/Rejeição de Requisição de Compra (1)    ${Caminho_Screenshots}Requisição de Compra/Aprovação_Rejeição de Requisição
+    Base_Desktop.Screenshot  Aprovação/Rejeição de Requisição de Compra (1)    ${Caminho_Screenshots}Requisição de Compra/Aprovação_Rejeição de Requisição
     Fechar janela
 
 Requisição de Compra > Acompanhamento de Requisição
@@ -164,7 +164,7 @@ Requisição de Compra > Acompanhamento de Requisição
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Acompanhamento de requisições (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Acompanhamento de requisições (1)    ${Caminho_Screenshots}Requisição de Compra/Acompanhamento de Requisição
+    Base_Desktop.Screenshot  Acompanhamento de requisições (1)    ${Caminho_Screenshots}Requisição de Compra/Acompanhamento de Requisição
     Fechar janela
 
 Requisição de Compra > Config. Usuário Requisição
@@ -175,7 +175,7 @@ Requisição de Compra > Config. Usuário Requisição
     RPA.Desktop.Press Keys  N
     RPA.Windows.Get Text    Configuração Usuário Requisição (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Configuração Usuário Requisição (1)    ${Caminho_Screenshots}Requisição de Compra/Config. Usuário Requisição
+    Base_Desktop.Screenshot  Configuração Usuário Requisição (1)    ${Caminho_Screenshots}Requisição de Compra/Config. Usuário Requisição
     Fechar janela
 
 Cotação > Cadastro de Cotação
@@ -187,7 +187,7 @@ Cotação > Cadastro de Cotação
     RPA.Windows.Get Text    Cadastro de Cotação (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Cadastro de Cotação (1)    ${Caminho_Screenshots}Cotação/Cadastro de Cotação
+    Base_Desktop.Screenshot  Cadastro de Cotação (1)    ${Caminho_Screenshots}Cotação/Cadastro de Cotação
     RPA.Windows.Click       Fechar
     Fechar janela
 
@@ -200,7 +200,7 @@ Cotação > Fechamento/Manutenção de Preços
     RPA.Windows.Get Text    Fechamento de cotação (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Fechamento de cotação (1)    ${Caminho_Screenshots}Cotação/Fechamento_Manutenção de Preços
+    Base_Desktop.Screenshot  Fechamento de cotação (1)    ${Caminho_Screenshots}Cotação/Fechamento_Manutenção de Preços
     RPA.Windows.Click       Fechar
     Fechar janela
 
@@ -212,7 +212,7 @@ Pedidos de Compra > Pedidos de Compra
     RPA.Desktop.Press Keys  P
     RPA.Windows.Get Text    Pedidos de Compra (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Pedidos de Compra (1)    ${Caminho_Screenshots}Pedidos de Compra/Pedidos de Compra
+    Base_Desktop.Screenshot  Pedidos de Compra (1)    ${Caminho_Screenshots}Pedidos de Compra/Pedidos de Compra
     Fechar com Sim
 
 Pedidos de Compra > Aprovação/Rejeição
@@ -223,7 +223,7 @@ Pedidos de Compra > Aprovação/Rejeição
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Aprovação/Rejeição de Pedidos de Compra (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Aprovação/Rejeição de Pedidos de Compra (1)    ${Caminho_Screenshots}Pedidos de Compra/Aprovação_Rejeição
+    Base_Desktop.Screenshot  Aprovação/Rejeição de Pedidos de Compra (1)    ${Caminho_Screenshots}Pedidos de Compra/Aprovação_Rejeição
     Fechar janela
 
 Pedidos de Compra > Zeramento de Pedido
@@ -234,7 +234,7 @@ Pedidos de Compra > Zeramento de Pedido
     RPA.Desktop.Press Keys  Z
     RPA.Windows.Get Text    Zeramento de Pedido de Compra (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Zeramento de Pedido de Compra (1)    ${Caminho_Screenshots}Pedidos de Compra/Zeramento de Pedido
+    Base_Desktop.Screenshot  Zeramento de Pedido de Compra (1)    ${Caminho_Screenshots}Pedidos de Compra/Zeramento de Pedido
     RPA.Windows.Click       OK
     Sleep                   2s
     RPA.Windows.Click       Fechar
@@ -250,7 +250,7 @@ Pedidos de Compra > Modelo de Impressão
     repetidor de teclas     Tab    5
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configuração de Layout Personalizado (1)    ${Caminho_Screenshots}Pedidos de Compra/Modelo de Impressão
+    Base_Desktop.Screenshot  Configuração de Layout Personalizado (1)    ${Caminho_Screenshots}Pedidos de Compra/Modelo de Impressão
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
@@ -261,7 +261,7 @@ Consulta de Notas Fiscais Emitidas
     RPA.Windows.Click       Consulta de Notas Fiscais Emitidas
     RPA.Windows.Get Text    Consulta de Notas Fiscais Emitidas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Consulta de Notas Fiscais Emitidas (1)    ${Caminho_Screenshots}Consulta de Notas Fiscais Emitidas
+    Base_Desktop.Screenshot  Consulta de Notas Fiscais Emitidas (1)    ${Caminho_Screenshots}Consulta de Notas Fiscais Emitidas
     RPA.Windows.Click       Sim
     Fechar janela
 
@@ -273,7 +273,7 @@ NF-e > Emissão de Notas Fiscais Eletrônicas
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Emissão de Notas Fiscais Eletrônicas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Emissão de Notas Fiscais Eletrônicas (1)    ${Caminho_Screenshots}NF-e/Emissão de Notas Fiscais Eletrônicas
+    Base_Desktop.Screenshot  Emissão de Notas Fiscais Eletrônicas (1)    ${Caminho_Screenshots}NF-e/Emissão de Notas Fiscais Eletrônicas
     Fechar janela
 
 NF-e > Monitorar NFE's
@@ -284,7 +284,7 @@ NF-e > Monitorar NFE's
     RPA.Desktop.Press Keys  M
     RPA.Windows.Get Text    Monitor de NF-e/NFC-e (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Monitor de NF-e/NFC-e (1)    ${Caminho_Screenshots}NF-e/Monitorar NFE's
+    Base_Desktop.Screenshot  Monitor de NF-e/NFC-e (1)    ${Caminho_Screenshots}NF-e/Monitorar NFE's
     Fechar janela
 
 NF-e > Inutilizar Númeração
@@ -295,7 +295,7 @@ NF-e > Inutilizar Númeração
     RPA.Desktop.Press Keys  I
     RPA.Windows.Get Text    Nota Fiscal Eletrônica - Inutilização de Numeração (1)
     RPA.Windows.Click       Enviar
-    BaseKeywordsDesktop.Screenshot  Nota Fiscal Eletrônica - Inutilização de Numeração (1)    ${Caminho_Screenshots}NF-e/Inutilizar Númeração
+    Base_Desktop.Screenshot  Nota Fiscal Eletrônica - Inutilização de Numeração (1)    ${Caminho_Screenshots}NF-e/Inutilizar Númeração
     RPA.Windows.Click       Fechar
 
 NF-e > Carta de Correção Eletrônica
@@ -306,7 +306,7 @@ NF-e > Carta de Correção Eletrônica
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Carta de Correção Eletrônica (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Carta de Correção Eletrônica (1)    ${Caminho_Screenshots}NF-e/Carta de Correção Eletrônica
+    Base_Desktop.Screenshot  Carta de Correção Eletrônica (1)    ${Caminho_Screenshots}NF-e/Carta de Correção Eletrônica
     RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar
 
@@ -318,7 +318,7 @@ NF-e > Monitor de Manifesto do Destinatário
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Monitor Manifestação do Destinatário (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Monitor Manifestação do Destinatário (1)    ${Caminho_Screenshots}NF-e/Monitor de Manifesto do Destinatário
+    Base_Desktop.Screenshot  Monitor Manifestação do Destinatário (1)    ${Caminho_Screenshots}NF-e/Monitor de Manifesto do Destinatário
     Fechar janela
 
 Documentos emitidos contra o estabelecimento p/ entrada
@@ -328,7 +328,7 @@ Documentos emitidos contra o estabelecimento p/ entrada
     RPA.Windows.Click       Documentos emitidos contra o estabelecimento p/ entrada 
     RPA.Windows.Get Text    Documentos emitidos contra o estabelecimento p/ entrada (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Documentos emitidos contra o estabelecimento p/ entrada (1)    ${Caminho_Screenshots}Documentos emitidos contra o estabelecimento p_ entrada
+    Base_Desktop.Screenshot  Documentos emitidos contra o estabelecimento p/ entrada (1)    ${Caminho_Screenshots}Documentos emitidos contra o estabelecimento p_ entrada
     Fechar janela
 
 Documentos emitidos contra o estabelecimento para CT-e
@@ -338,7 +338,7 @@ Documentos emitidos contra o estabelecimento para CT-e
     RPA.Windows.Click       Documentos emitidos contra o estabelecimento para CT-e
     RPA.Windows.Get Text    Documentos emitidos contra o estabelecimento para CT-e (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Documentos emitidos contra o estabelecimento para CT-e (1)    ${Caminho_Screenshots}Documentos emitidos contra o estabelecimento para CT-e
+    Base_Desktop.Screenshot  Documentos emitidos contra o estabelecimento para CT-e (1)    ${Caminho_Screenshots}Documentos emitidos contra o estabelecimento para CT-e
     Fechar janela
 
 Importação em massa de CT-e
@@ -348,7 +348,7 @@ Importação em massa de CT-e
     RPA.Windows.Click       Importação em massa de CT-e
     RPA.Windows.Get Text    Importação em massa da CT-e (1)
     RPA.Windows.Click       Atualizar
-    BaseKeywordsDesktop.Screenshot  Importação em massa da CT-e (1)    ${Caminho_Screenshots}Importação em massa de CT-e
+    Base_Desktop.Screenshot  Importação em massa da CT-e (1)    ${Caminho_Screenshots}Importação em massa de CT-e
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -359,7 +359,7 @@ Formação de Preços de Venda
     RPA.Windows.Click       Formação de Preços de Venda
     RPA.Windows.Get Text    Formação de Preços de Venda (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Formação de Preços de Venda (1)    ${Caminho_Screenshots}Formação de Preços de Venda
+    Base_Desktop.Screenshot  Formação de Preços de Venda (1)    ${Caminho_Screenshots}Formação de Preços de Venda
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -370,7 +370,7 @@ Tabela de Preços Condicional
     RPA.Windows.Click       Tabela de Preços Condicional
     RPA.Windows.Get Text    Tabela de Preço Condicional (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Tabela de Preço Condicional (1)    ${Caminho_Screenshots}Tabela de Preços Condicional
+    Base_Desktop.Screenshot  Tabela de Preço Condicional (1)    ${Caminho_Screenshots}Tabela de Preços Condicional
     Fechar janela
 
 Transferência entre Terceiros (NF) > Transferência entre Terceiros
@@ -382,7 +382,7 @@ Transferência entre Terceiros (NF) > Transferência entre Terceiros
     RPA.Windows.Get Text    Transferências entre Terceiros (NF) (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Transferências entre Terceiros (NF) (1)    ${Caminho_Screenshots}Transferência entre Terceiros (NF)/Transferência entre Terceiro
+    Base_Desktop.Screenshot  Transferências entre Terceiros (NF) (1)    ${Caminho_Screenshots}Transferência entre Terceiros (NF)/Transferência entre Terceiro
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -394,7 +394,7 @@ Transferência entre Terceiros (NF) > Transferências Pendentes
     RPA.Desktop.Press Keys  R
     RPA.Windows.Get Text    Transferências entre Terceiros (NF) - Pendentes (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Transferências entre Terceiros (NF) - Pendentes (1)    ${Caminho_Screenshots}Transferência entre Terceiros (NF)/Transferências Pendentes
+    Base_Desktop.Screenshot  Transferências entre Terceiros (NF) - Pendentes (1)    ${Caminho_Screenshots}Transferência entre Terceiros (NF)/Transferências Pendentes
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -405,7 +405,7 @@ Processos Personalizados
     RPA.Windows.Click       Processos Personalizados
     RPA.Windows.Get Text    Processos Personalizados (1)
     RPA.Windows.Click       Cadastrar Novo Processo
-    BaseKeywordsDesktop.Screenshot  Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
+    Base_Desktop.Screenshot  Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
     RPA.Windows.Click       Fechar
     Fechar janela
 
@@ -416,5 +416,5 @@ Conferência Valores IPI Entrada
     RPA.Windows.Click       Conferência Valores IPI Entrada
     RPA.Windows.Get Text    Conferência Valores IPI Entrada (1)
     RPA.Windows.Click       Carregar Notas
-    BaseKeywordsDesktop.Screenshot  Conferência Valores IPI Entrada (1)    ${Caminho_Screenshots}Conferência Valores IPI Entrada
+    Base_Desktop.Screenshot  Conferência Valores IPI Entrada (1)    ${Caminho_Screenshots}Conferência Valores IPI Entrada
     Fechar janela

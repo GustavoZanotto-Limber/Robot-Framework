@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Keywords para automação WEB com Robot Framework e Selenium
+Documentation    Keywords para automação E-Commerce com Robot Framework e Selenium
 Library    OperatingSystem
 Library    Process
 Library    RPA.Excel.Files
@@ -9,8 +9,9 @@ Library    Collections
 Library    RPA.PDF
 Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\Robot\\ScreenShots\\Selenium
 Library    RPA.Desktop
-Resource    BaseKeywordsDesktop.robot
-Resource    ../BDD/BDDKeywordsDesktop.robot
+Resource    Base_Desktop.robot
+Resource    ../BDD/BDD_Desktop.robot
+Resource    Base_CARD.robot
 
 
 *** Keywords ***
@@ -32,7 +33,13 @@ Abro o E-commerce (Online) Sem Logar
 Abro o E-commerce (Integrada) Sem Logar      
     Mudar Página              https://automacao.testescard.limber.net.br/
     Sleep                     2s
-      
+    
+Deslogar do e-commerce
+    Clicar no Botão           xpath://*[@id="toolbar"]/div/div[2]/div[1]/button[2]
+    Sleep    2s
+    Clicar no Botão           xpath://app-my-account-menu/div/button
+    Sleep    2s
+
 Email login
     [Arguments]    ${email}
     Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input     ${email}
@@ -58,7 +65,6 @@ Pesquisar bilhete no e-commerce
     [Arguments]   ${nome_bilhete}
     Inserir Texto                        xpath:/html/body/app-root/app-home/div/main/app-dashboard/div/mat-form-field/div[1]/div/div[3]/input       ${nome_bilhete}
     Sleep    0.5s
-    # Tentar Clicar Em Um Dos Elementos    xpath:/html/body/div[3]/div/div/div/mat-option    xpath:/html/body/div[2]/div/div/div/mat-option   
     Clicar no Elemento    xpath://span[normalize-space(text()='${nome_bilhete}')]/ancestor::mat-option
     Sleep    0.5s
     Clicar no Elemento                   xpath:/html/body/app-root/app-home/div/main/app-dashboard/section[2]/app-highlights/div[2]/div[1]/div/app-product-card/div/section/a
@@ -180,7 +186,7 @@ Validar impressão do bilhete cancelado
     [Arguments]    ${Caminho_impressão}      ${nome_do_arquivo}      ${Caminho_Screenshot}      ${Nome_da_tela}       ${LB}     ${TOTAL}     @{data_e_hora}    
     Sleep    20s
     RPA.Windows.Get Element   ${Nome_da_tela} 
-    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}    
+    Base_Desktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}.pdf  
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0
@@ -203,7 +209,7 @@ Validar o Layout
     [Arguments]    ${Caminho_impressão}      ${nome_do_arquivo}      ${Caminho_Screenshot}      ${Nome_da_tela}           
     Sleep    20s
     RPA.Windows.Get Element   ${Nome_da_tela} 
-    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}    
+    Base_Desktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}.pdf  
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0

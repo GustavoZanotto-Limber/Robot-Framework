@@ -10,8 +10,8 @@ Library    RPA.PDF
 Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\Robot\\ScreenShots\\Selenium
 Library    RPA.Desktop
 Library    DateTime
-Resource    BaseKeywordsDesktop.robot
-Resource    ../BDD/BDDKeywordsDesktop.robot
+Resource    Base_Desktop.robot
+Resource    ../BDD/BDD_Desktop.robot
 
 *** Variables ***
 ${front}
@@ -742,7 +742,7 @@ Validar impressão do bilhete
     [Arguments]    ${Caminho_impressão}      ${nome_do_arquivo}      ${Caminho_Screenshot}      ${Nome_da_tela}       ${LB}      @{data_e_hora}    
     Sleep    20s
     RPA.Windows.Get Element   ${Nome_da_tela}
-    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}   
+    Base_Desktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}   
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}.pdf  
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0
@@ -758,7 +758,7 @@ Validar impressão do bilhete (Via CARD)
     [Arguments]    ${Caminho_impressão}      ${nome_do_arquivo}      ${Caminho_Screenshot}   ${Nome_da_tela}      ${LB}      @{data_e_hora}    
     Sleep    20s
     RPA.Windows.Get Element   ${Nome_da_tela} 
-    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}    
+    Base_Desktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_tela}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}.pdf  
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0

@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Vendas
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -26,7 +26,7 @@ Vendas/Prestação de Serviços - Evolução Diária
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Diária
     RPA.Windows.Get Text      Evolução Diária. (1)
     RPA.Windows.Click         Carregar 
-    BaseKeywordsDesktop.Screenshot    Evolução Diária. (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Evolução Diária
+    Base_Desktop.Screenshot    Evolução Diária. (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Evolução Diária
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -37,7 +37,7 @@ Vendas/Prestação de Serviços - Evolução Mensal
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Mensal
     RPA.Windows.Get Text      Evolução Mensal. (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Evolução Mensal. (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Evolução Mensal
+    Base_Desktop.Screenshot    Evolução Mensal. (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Evolução Mensal
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -48,7 +48,7 @@ Vendas/Prestação de Serviços - Evolução Anual
     RPA.Windows.Click         Vendas/Prestação de Serviços - Evolução Anual 
     RPA.Windows.Get Text      Evolução Anual. (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Evolução Anual. (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Evolução Anual
+    Base_Desktop.Screenshot    Evolução Anual. (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Evolução Anual
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -59,7 +59,7 @@ Vendas/Prestação de Serviços - Sintético/Cliente
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Cliente
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Cliente (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Vendas/Prestação de Serviços / Cliente (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Sintético_Cliente
+    Base_Desktop.Screenshot    Vendas/Prestação de Serviços / Cliente (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Sintético_Cliente
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -70,7 +70,7 @@ Vendas/Prestação de Serviços - Sintético/Setor
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Setor
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Setor (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Vendas/Prestação de Serviços / Setor (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Sintético_Setor
+    Base_Desktop.Screenshot    Vendas/Prestação de Serviços / Setor (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Sintético_Setor
     Fechar janela
 
 Vendas/Prestação de Serviços - Sintético/Item
@@ -80,5 +80,5 @@ Vendas/Prestação de Serviços - Sintético/Item
     RPA.Windows.Click         Vendas/Prestação de Serviços - Sintético/Item
     RPA.Windows.Get Text      Vendas/Prestação de Serviços / Item (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Vendas/Prestação de Serviços / Item (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Sintético_Item
+    Base_Desktop.Screenshot    Vendas/Prestação de Serviços / Item (1)    ${Caminho_Screenshots}Vendas_Prestação de Serviços Sintético_Item
     Fechar janela

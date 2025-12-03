@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Fiscal
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -24,7 +24,7 @@ Favoritos
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
+    Base_Desktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
     RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar
 
@@ -35,7 +35,7 @@ Papel de Parede
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
-    BaseKeywordsDesktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
+    Base_Desktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Pincipal
@@ -46,7 +46,7 @@ Configurar Menu Pincipal
     RPA.Windows.Get Text    Configurador de Menus (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
+    Base_Desktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -57,7 +57,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
+    Base_Desktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     Fechar com Sim
 
 Estilo do Menu Principal
@@ -67,7 +67,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
     RPA.Windows.Click       Standard
-    BaseKeywordsDesktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
+    Base_Desktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
@@ -77,7 +77,7 @@ Controle de Acessos
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
     RPA.Windows.Click       Confirmar
-    BaseKeywordsDesktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
+    Base_Desktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -89,7 +89,7 @@ Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
+    Base_Desktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
@@ -102,7 +102,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Windows.Get Text    Cadastro de Categoria (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
+    Base_Desktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -115,7 +115,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
-    BaseKeywordsDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
+    Base_Desktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -126,7 +126,7 @@ Verificar Transações Abertas
     RPA.Windows.Click       Verificar Transações Abertas
     RPA.Windows.Get Text    Verificar Transações Abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
+    Base_Desktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
     Fechar janela
 
 Importar Arquivos Transmitidos > SPED Contabil (ECD)
@@ -137,7 +137,7 @@ Importar Arquivos Transmitidos > SPED Contabil (ECD)
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Importar Arquivos SPED - ECD (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Importar Arquivos SPED - ECD (1)    ${Caminho_Screenshots}SPED Contabil (ECD)
+    Base_Desktop.Screenshot  Importar Arquivos SPED - ECD (1)    ${Caminho_Screenshots}SPED Contabil (ECD)
     Fechar com Sim
 
 Reprocessar Contas ECD
@@ -148,6 +148,6 @@ Reprocessar Contas ECD
     RPA.Windows.Get Text    Ajustar Registros I050 - ECD (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Ajustar Registros I050 - ECD (1)   ${Caminho_Screenshots}Reprocessar Contas ECD
+    Base_Desktop.Screenshot  Ajustar Registros I050 - ECD (1)   ${Caminho_Screenshots}Reprocessar Contas ECD
     RPA.Windows.Click       Confirmar
     Fechar janela

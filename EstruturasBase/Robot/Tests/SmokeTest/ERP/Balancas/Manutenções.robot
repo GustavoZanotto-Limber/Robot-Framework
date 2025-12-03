@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Balança
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup         Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -27,7 +27,7 @@ Romaneios Entrada/Saída > Inclusão de Romaneios
     RPA.Desktop.Press Keys    I
     RPA.Windows.Get Text      Balança - Inclusão de Romaneios (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Balança - Inclusão de Romaneios (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Inclusão de Romaneios
+    Base_Desktop.Screenshot    Balança - Inclusão de Romaneios (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Inclusão de Romaneios
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -39,7 +39,7 @@ Romaneios Entrada/Saída > Alteração de Romaneios
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Balança - Alteração de Romaneios (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Balança - Alteração de Romaneios (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Alteração de Romaneios
+    Base_Desktop.Screenshot    Balança - Alteração de Romaneios (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Alteração de Romaneios
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -51,7 +51,7 @@ Romaneios Entrada/Saída > Consulta de Romaneios
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Balança - Consulta de Romaneios (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Balança - Consulta de Romaneios (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Consulta de Romaneios
+    Base_Desktop.Screenshot    Balança - Consulta de Romaneios (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Consulta de Romaneios
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -63,7 +63,7 @@ Romaneios Entrada/Saída > Alteração de Romaneios - Classificação
     RPA.Desktop.Press Keys    L
     RPA.Windows.Get Text      Balança - Alteração de Romaneios - Classificação (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Balança - Alteração de Romaneios - Classificação (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Alteração de Romaneios - Classificação
+    Base_Desktop.Screenshot    Balança - Alteração de Romaneios - Classificação (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Alteração de Romaneios - Classificação
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -75,7 +75,7 @@ Romaneios Entrada/Saída > Alteração de Romaneios - Endereço
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Alterar Informações do Romaneio - Entrada (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Alterar Informações do Romaneio - Entrada (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Alteração de Romaneios - Endereço
+    Base_Desktop.Screenshot    Alterar Informações do Romaneio - Entrada (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Alteração de Romaneios - Endereço
     Fechar janela
 
 Romaneios Entrada/Saída > Gerenciamentos de Romaneios
@@ -86,7 +86,7 @@ Romaneios Entrada/Saída > Gerenciamentos de Romaneios
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Gerenciamento de Romaneios (1)
     RPA.Windows.Click         Atualizar
-    BaseKeywordsDesktop.Screenshot    Gerenciamento de Romaneios (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Gerenciamentos de Romaneios
+    Base_Desktop.Screenshot    Gerenciamento de Romaneios (1)    ${Caminho_Screenshots}Romaneios Entrada_Saída/Gerenciamentos de Romaneios
     Fechar janela
 
 Pesagem para Terceiros
@@ -97,7 +97,7 @@ Pesagem para Terceiros
     RPA.Windows.Get Text      Pesagem para Terceiros (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Pesagem para Terceiros (1)    ${Caminho_Screenshots}Pesagem para Terceiros
+    Base_Desktop.Screenshot    Pesagem para Terceiros (1)    ${Caminho_Screenshots}Pesagem para Terceiros
     RPA.Windows.Click         Cancelar
     Fechar janela
 
@@ -108,7 +108,7 @@ Emissão de Nota Fiscal
     RPA.Windows.Click         Emissão de Nota Fiscal
     RPA.Windows.Get Text      Emissão de Nota Fiscal (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Emissão de Nota Fiscal (1)    ${Caminho_Screenshots}Emissão de Nota Fiscal
+    Base_Desktop.Screenshot    Emissão de Nota Fiscal (1)    ${Caminho_Screenshots}Emissão de Nota Fiscal
     Fechar janela
 
 Documentos emitidos contra o estabelecimento p/ entrada
@@ -118,7 +118,7 @@ Documentos emitidos contra o estabelecimento p/ entrada
     RPA.Windows.Click         Documentos emitidos contra o estabelecimento p/ entrada
     RPA.Windows.Get Text      Documentos emitidos contra o estabelecimento p/ entrada (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Documentos emitidos contra o estabelecimento p/ entrada (1)    ${Caminho_Screenshots}Documentos emitidos contra o estabelecimento p_ entrada
+    Base_Desktop.Screenshot    Documentos emitidos contra o estabelecimento p/ entrada (1)    ${Caminho_Screenshots}Documentos emitidos contra o estabelecimento p_ entrada
     Fechar janela
 
 Pesagem Geral
@@ -128,7 +128,7 @@ Pesagem Geral
     RPA.Windows.Click         Pesagem Geral
     RPA.Windows.Get Text      Pesagem Geral (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Pesagem Geral (1)    ${Caminho_Screenshots}Pesagem Geral
+    Base_Desktop.Screenshot    Pesagem Geral (1)    ${Caminho_Screenshots}Pesagem Geral
     Fechar com Sim
 
 Processos Personalizados
@@ -138,7 +138,7 @@ Processos Personalizados
     RPA.Windows.Click         Processos Personalizados
     RPA.Windows.Get Text      Processos Personalizados (1)
     RPA.Windows.Click         Cadastrar Novo Processo
-    BaseKeywordsDesktop.Screenshot    Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
+    Base_Desktop.Screenshot    Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
     RPA.Windows.Click         Fechar
     Fechar janela
 
@@ -150,7 +150,7 @@ Pesagem de Descarga - Romaneio
     RPA.Windows.Get Text      Pesagem Romaneio Descarga (1)
     RPA.Desktop.Press Keys    1
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Pesagem Romaneio Descarga (1)    ${Caminho_Screenshots}Pesagem de Descarga - Romaneio
+    Base_Desktop.Screenshot    Pesagem Romaneio Descarga (1)    ${Caminho_Screenshots}Pesagem de Descarga - Romaneio
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -161,7 +161,7 @@ Consulta/Manutenção Ordem Tickets Descarga
     RPA.Windows.Click         Consulta/Manutenção Ordem Tickets Descarga
     RPA.Windows.Get Text      Consulta/Manutenção Ordem Ticket Descarga (1)
     RPA.Windows.Click         Confirmar
-    BaseKeywordsDesktop.Screenshot    Consulta/Manutenção Ordem Ticket Descarga (1)    ${Caminho_Screenshots}Consulta_Manutenção Ordem Tickets Descarga
+    Base_Desktop.Screenshot    Consulta/Manutenção Ordem Ticket Descarga (1)    ${Caminho_Screenshots}Consulta_Manutenção Ordem Tickets Descarga
     Fechar janela
 
 Pesagem de Descarga - Venda
@@ -171,7 +171,7 @@ Pesagem de Descarga - Venda
     RPA.Windows.Click         Pesagem de Descarga - Venda
     RPA.Windows.Get Text      Pesagem Romaneio Descarga - Venda (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Pesagem Romaneio Descarga - Venda (1)    ${Caminho_Screenshots}Pesagem de Descarga - Venda
+    Base_Desktop.Screenshot    Pesagem Romaneio Descarga - Venda (1)    ${Caminho_Screenshots}Pesagem de Descarga - Venda
     Fechar com Sim
 
 Pesagem - Ordem de Carregamento
@@ -182,6 +182,6 @@ Pesagem - Ordem de Carregamento
     RPA.Windows.Get Text      Pesagem - Ordem de Carregamento (1)
     RPA.Desktop.Press Keys    1
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Pesagem - Ordem de Carregamento (1)    ${Caminho_Screenshots}Pesagem - Ordem de Carregamento
+    Base_Desktop.Screenshot    Pesagem - Ordem de Carregamento (1)    ${Caminho_Screenshots}Pesagem - Ordem de Carregamento
     RPA.Windows.Click         OK
     Fechar janela

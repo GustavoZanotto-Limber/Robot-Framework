@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Contabil
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -27,7 +27,7 @@ Lançamentos Diários
     RPA.Windows.Click         Lançamentos Diários
     RPA.Windows.Get Text      Lançamentos Diários (1)
     RPA.Windows.Click         Executar 
-    BaseKeywordsDesktop.Screenshot    Lançamentos Diários (1)     ${Caminho_Screenshots}Lançamentos Diários
+    Base_Desktop.Screenshot    Lançamentos Diários (1)     ${Caminho_Screenshots}Lançamentos Diários
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -38,7 +38,7 @@ Diferenças do Diário
     RPA.Windows.Click         Diferenças do Diário
     RPA.Windows.Get Text      Diferenças do Diário (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Diferenças do Diário (1)     ${Caminho_Screenshots}Diferenças do Diário
+    Base_Desktop.Screenshot    Diferenças do Diário (1)     ${Caminho_Screenshots}Diferenças do Diário
     Fechar janela
 
 Planos de Contas
@@ -48,7 +48,7 @@ Planos de Contas
     RPA.Windows.Click         Planos de Contas
     RPA.Windows.Get Text      Plano de Contas (1)
     RPA.Windows.Click         Recarregar
-    BaseKeywordsDesktop.Screenshot    Plano de Contas (1)     ${Caminho_Screenshots}Planos de Contas
+    Base_Desktop.Screenshot    Plano de Contas (1)     ${Caminho_Screenshots}Planos de Contas
     RPA.Windows.Click         Fechar
 
 Razão de Contas
@@ -58,7 +58,7 @@ Razão de Contas
     RPA.Windows.Click         Razão de Contas
     RPA.Windows.Get Text      Razão de Contas (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Razão de Contas (1)     ${Caminho_Screenshots}Razão de Contas
+    Base_Desktop.Screenshot    Razão de Contas (1)     ${Caminho_Screenshots}Razão de Contas
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -69,7 +69,7 @@ Balancete
     RPA.Windows.Click         Balancete
     RPA.Windows.Get Text      Balancete (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Balancete (1)     ${Caminho_Screenshots}Balancete
+    Base_Desktop.Screenshot    Balancete (1)     ${Caminho_Screenshots}Balancete
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -80,7 +80,7 @@ Depreciação de Bens do Ativo Imobilizado
     RPA.Windows.Click         Depreciação de Bens do Ativo Imobilizado
     RPA.Windows.Get Text      Consulta Depreciação de Bens do Ativo Imobilizado (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Consulta Depreciação de Bens do Ativo Imobilizado (1)     ${Caminho_Screenshots}Depreciação de Bens do Ativo Imobilizado
+    Base_Desktop.Screenshot    Consulta Depreciação de Bens do Ativo Imobilizado (1)     ${Caminho_Screenshots}Depreciação de Bens do Ativo Imobilizado
     Fechar janela
 
 Centro de Custos
@@ -90,7 +90,7 @@ Centro de Custos
     RPA.Windows.Click         Centro de Custos
     RPA.Windows.Get Text      Centro de Custos (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Centro de Custos (1)     ${Caminho_Screenshots}Centro de Custos
+    Base_Desktop.Screenshot    Centro de Custos (1)     ${Caminho_Screenshots}Centro de Custos
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -101,7 +101,7 @@ Rateio de Centro de Custos
     RPA.Windows.Click         Rateio de Centro de Custos
     RPA.Windows.Get Text      Consulta de Rateio de Centro de Custos (1) 
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Consulta de Rateio de Centro de Custos (1)     ${Caminho_Screenshots}Rateio de Centro de Custos
+    Base_Desktop.Screenshot    Consulta de Rateio de Centro de Custos (1)     ${Caminho_Screenshots}Rateio de Centro de Custos
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -112,7 +112,7 @@ Consumo de Adiantamentos
     RPA.Windows.Click         Consumo de Adiantamentos
     RPA.Windows.Get Text      Consulta de Consumo de Adiantamentos (1) 
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Consulta de Consumo de Adiantamentos (1)     ${Caminho_Screenshots}Consumo de Adiantamentos
+    Base_Desktop.Screenshot    Consulta de Consumo de Adiantamentos (1)     ${Caminho_Screenshots}Consumo de Adiantamentos
     Fechar janela
 
 Consultas Personalizadas
@@ -122,7 +122,7 @@ Consultas Personalizadas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1) 
     RPA.Windows.Click         Cadastrar Nova Consulta
-    BaseKeywordsDesktop.Screenshot    Consultas Personalizadas (1)     ${Caminho_Screenshots}Consultas Personalizadas
+    Base_Desktop.Screenshot    Consultas Personalizadas (1)     ${Caminho_Screenshots}Consultas Personalizadas
     RPA.Windows.Click         Fechar
     Fechar janela
 
@@ -134,7 +134,7 @@ Sped Contabil > Gerar Sped Contabil
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      SPED Contábil (1) 
     RPA.Windows.Click         Registro 0007
-    BaseKeywordsDesktop.Screenshot    SPED Contábil (1)     ${Caminho_Screenshots}Sped Contabil/Gerar Sped Contabil
+    Base_Desktop.Screenshot    SPED Contábil (1)     ${Caminho_Screenshots}Sped Contabil/Gerar Sped Contabil
     Fechar janela
 
 Sped Contabil > Conglomerados Econômicos
@@ -145,7 +145,7 @@ Sped Contabil > Conglomerados Econômicos
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de Conglomerados Econômicos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Conglomerados Econômicos (1)     ${Caminho_Screenshots}Sped Contabil/Conglomerados Econômicos
+    Base_Desktop.Screenshot    Cadastro de Conglomerados Econômicos (1)     ${Caminho_Screenshots}Sped Contabil/Conglomerados Econômicos
     Fechar com Sim
 
 Sped Contabil > Conglomerados Eliminações
@@ -156,7 +156,7 @@ Sped Contabil > Conglomerados Eliminações
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Eliminações de Conglomerados (1) 
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Eliminações de Conglomerados (1)     ${Caminho_Screenshots}Sped Contabil/Conglomerados Eliminações
+    Base_Desktop.Screenshot    Eliminações de Conglomerados (1)     ${Caminho_Screenshots}Sped Contabil/Conglomerados Eliminações
     RPA.Windows.Click         Cancelar
     Fechar janela
 
@@ -169,7 +169,7 @@ Sped Contabil > Cadastro de SCP
     RPA.Windows.Get Text      Cadastro de SCP para Sped Contábil (1) 
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Cadastro de SCP para Sped Contábil (1)     ${Caminho_Screenshots}Sped Contabil/Cadastro de SCP
+    Base_Desktop.Screenshot    Cadastro de SCP para Sped Contábil (1)     ${Caminho_Screenshots}Sped Contabil/Cadastro de SCP
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
 
@@ -183,7 +183,7 @@ Sped Contabil > Transferência de Plano de Contas
     RPA.Desktop.Press Keys    Enter
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Transferência de Plano de Contas (1)     ${Caminho_Screenshots}Sped Contabil/Transferência de Plano de Contas
+    Base_Desktop.Screenshot    Transferência de Plano de Contas (1)     ${Caminho_Screenshots}Sped Contabil/Transferência de Plano de Contas
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -194,7 +194,7 @@ Consulta CMV por período
     RPA.Windows.Click         Consulta CMV por período
     RPA.Windows.Get Text      Consulta CMV por período (1) 
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Consulta CMV por período (1)     ${Caminho_Screenshots}Consulta CMV por período
+    Base_Desktop.Screenshot    Consulta CMV por período (1)     ${Caminho_Screenshots}Consulta CMV por período
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -205,5 +205,5 @@ Consulta de Alterações de Lançamentos
     RPA.Windows.Click         Consulta de Alterações de Lançamentos
     RPA.Windows.Get Text      Consulta Log de Lançamentos Contábeis (1) 
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Consulta Log de Lançamentos Contábeis (1)     ${Caminho_Screenshots}Consulta de Alterações de Lançamentos
+    Base_Desktop.Screenshot    Consulta Log de Lançamentos Contábeis (1)     ${Caminho_Screenshots}Consulta de Alterações de Lançamentos
     Fechar janela

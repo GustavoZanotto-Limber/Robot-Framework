@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Compras
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  cde_win_compras
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -26,7 +26,7 @@ Compras/Aquisição de Serviços - Evolução Diária
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Diária
     RPA.Windows.Get Text    Compras/Aquisição de Serviços - Evolução Diária. (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços - Evolução Diária. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Diária
+    Base_Desktop.Screenshot  Compras/Aquisição de Serviços - Evolução Diária. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Diária
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -37,7 +37,7 @@ Compras/Aquisição de Serviços - Evolução Mensal
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Mensal
     RPA.Windows.Get Text    Compras - Evolução Mensal. (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Compras - Evolução Mensal. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Mensal
+    Base_Desktop.Screenshot  Compras - Evolução Mensal. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Mensal
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -48,7 +48,7 @@ Compras/Aquisição de Serviços - Evolução Anual
     RPA.Windows.Click       Compras/Aquisição de Serviços - Evolução Anual
     RPA.Windows.Get Text    Compras - Evolução Anual. (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Compras - Evolução Anual. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Anual
+    Base_Desktop.Screenshot  Compras - Evolução Anual. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Evolução Anual
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -59,7 +59,7 @@ Compras/Aquisição de Serviços - Sintético/Fornecedor
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Fornecedor
     RPA.Windows.Get Text    Compras/Aquisição de Serviços / Fornecedor. (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Fornecedor
+    Base_Desktop.Screenshot  Compras/Aquisição de Serviços / Fornecedor. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Fornecedor
     Fechar janela
 
 Compras/Aquisição de Serviços - Sintético/Setor
@@ -69,4 +69,4 @@ Compras/Aquisição de Serviços - Sintético/Setor
     RPA.Windows.Click       Compras/Aquisição de Serviços - Sintético/Setor
     RPA.Windows.Get Text    Compras - Aquisição de Serviços Sintético / Setor. (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Compras - Aquisição de Serviços Sintético / Setor. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Setor
+    Base_Desktop.Screenshot  Compras - Aquisição de Serviços Sintético / Setor. (1)   ${Caminho_Screenshots}Compras_Aquisição de Serviços - Sintético_Setor

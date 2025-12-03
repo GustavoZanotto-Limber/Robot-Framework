@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Contabil
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -26,7 +26,7 @@ Favoritos
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
+    Base_Desktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
     RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar
     
@@ -37,7 +37,7 @@ Papel de Parede
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
-    BaseKeywordsDesktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
+    Base_Desktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Pincipal
@@ -48,7 +48,7 @@ Configurar Menu Pincipal
     RPA.Windows.Get Text    Configurador de Menus (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
+    Base_Desktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -59,7 +59,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
+    Base_Desktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     Fechar com Sim
 
 Estilo do Menu Principal
@@ -69,7 +69,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
     RPA.Windows.Click       Standard
-    BaseKeywordsDesktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
+    Base_Desktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
@@ -79,7 +79,7 @@ Controle de Acessos
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
     RPA.Windows.Click       Confirmar
-    BaseKeywordsDesktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
+    Base_Desktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -93,7 +93,7 @@ Configuração de Liberação
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     Sleep                   2s
-    BaseKeywordsDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
+    Base_Desktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar Com Sim
 
@@ -106,7 +106,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Windows.Get Text    Cadastro de Categoria (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
+    Base_Desktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar janela
     
@@ -119,7 +119,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
-    BaseKeywordsDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
+    Base_Desktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -130,7 +130,7 @@ Verificar Transações Abertas
     RPA.Windows.Click       Verificar Transações Abertas
     RPA.Windows.Get Text    Verificar Transações Abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
+    Base_Desktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
     Fechar janela
 
 Integrações > SCPH
@@ -141,7 +141,7 @@ Integrações > SCPH
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Integração Contábil SCPH (1)
     RPA.Windows.Click       Identificar conta do Cliente/Fornecedor
-    BaseKeywordsDesktop.Screenshot  Integração Contábil SCPH (1)    ${Caminho_Screenshots}Integrações/SCPH
+    Base_Desktop.Screenshot  Integração Contábil SCPH (1)    ${Caminho_Screenshots}Integrações/SCPH
     Fechar janela
 
 Integrações > Sênior > Importação
@@ -153,7 +153,7 @@ Integrações > Sênior > Importação
     RPA.Desktop.Press Keys  I
     RPA.Windows.Get Text    Sênior - Integração Folha de Pagamento (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Sênior - Integração Folha de Pagamento (1)    ${Caminho_Screenshots}Integrações/Sênior/Importação
+    Base_Desktop.Screenshot  Sênior - Integração Folha de Pagamento (1)    ${Caminho_Screenshots}Integrações/Sênior/Importação
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -167,7 +167,7 @@ Integrações > Sênior > Configuração
     RPA.Windows.Get Text    Cadastro Configuração Integração Sênior (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseKeywordsDesktop.Screenshot  Cadastro Configuração Integração Sênior (1)    ${Caminho_Screenshots}Integrações/Sênior/Configuração
+    Base_Desktop.Screenshot  Cadastro Configuração Integração Sênior (1)    ${Caminho_Screenshots}Integrações/Sênior/Configuração
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -181,7 +181,7 @@ Integrações > DPPH > Lançamentos Funcionários
     Sleep                   1s
     RPA.Windows.Get Text    Lançamentos Funcionários (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Lançamentos Funcionários (1)    ${Caminho_Screenshots}Integrações/DPPH/Lançamentos Funcionários
+    Base_Desktop.Screenshot  Lançamentos Funcionários (1)    ${Caminho_Screenshots}Integrações/DPPH/Lançamentos Funcionários
     RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar
 
@@ -193,7 +193,7 @@ Integrações > Folhas de Pagamento
     RPA.Desktop.Press Keys  F
     RPA.Windows.Get Text    Integrações de Folha de Pagamentos (1)
     RPA.Windows.Click       Mostrar Arquivo Exemplo
-    BaseKeywordsDesktop.Screenshot  Integrações de Folha de Pagamentos (1)    ${Caminho_Screenshots}Integrações/Folhas de Pagamento
+    Base_Desktop.Screenshot  Integrações de Folha de Pagamentos (1)    ${Caminho_Screenshots}Integrações/Folhas de Pagamento
     RPA.Windows.Click       Fechar
     Fechar janela
 
@@ -205,7 +205,7 @@ Integrações > Ocepar
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Geração de Arquivo Ocepar (1)
     RPA.Windows.Click       Gerar Arquivo
-    BaseKeywordsDesktop.Screenshot  Geração de Arquivo Ocepar (1)    ${Caminho_Screenshots}Integrações/Ocepar
+    Base_Desktop.Screenshot  Geração de Arquivo Ocepar (1)    ${Caminho_Screenshots}Integrações/Ocepar
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -217,7 +217,7 @@ Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseKeywordsDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
+    Base_Desktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -228,6 +228,6 @@ Upload de Arquivos
     RPA.Windows.Click       Upload de Arquivos
     RPA.Windows.Get Text    Upload de Arquivos (1)
     RPA.Windows.Click       Importar
-    BaseKeywordsDesktop.Screenshot  Upload de Arquivos (1)    ${Caminho_Screenshots}Upload de Arquivos
+    Base_Desktop.Screenshot  Upload de Arquivos (1)    ${Caminho_Screenshots}Upload de Arquivos
     RPA.Windows.Click         OK
     RPA.Windows.Click       Fechar

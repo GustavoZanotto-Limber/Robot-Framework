@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Fiscal
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -32,7 +32,7 @@ SPED Fiscal (ICMS/IPI)
     Sleep                     1s
     RPA.Desktop.Press Keys    Enter
     Sleep                     1s
-    BaseKeywordsDesktop.Screenshot    SPED Fiscal (1)    ${Caminho_Screenshots}SPED Fiscal (ICMS_IPI)
+    Base_Desktop.Screenshot    SPED Fiscal (1)    ${Caminho_Screenshots}SPED Fiscal (ICMS_IPI)
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -44,7 +44,7 @@ SPED Contribuições (PIS/COFINS)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
     RPA.Windows.Click         OK
-    BaseKeywordsDesktop.Screenshot    SPED Contribuições (1)    ${Caminho_Screenshots}SPED Contribuições (PIS_COFINS)
+    Base_Desktop.Screenshot    SPED Contribuições (1)    ${Caminho_Screenshots}SPED Contribuições (PIS_COFINS)
     Fechar janela
     RPA.Windows.Click         OK
 
@@ -56,7 +56,7 @@ SPED Contabil (ECD)
     RPA.Desktop.Press Keys    Shift    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    SPED Contábil (1)    ${Caminho_Screenshots}SPED Contabil (ECD)
+    Base_Desktop.Screenshot    SPED Contábil (1)    ${Caminho_Screenshots}SPED Contabil (ECD)
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -67,7 +67,7 @@ SPED ECF
     RPA.Windows.Get Text      Sped ECF (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Sped ECF (1)    ${Caminho_Screenshots}SPED ECF
+    Base_Desktop.Screenshot    Sped ECF (1)    ${Caminho_Screenshots}SPED ECF
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
 
@@ -80,7 +80,7 @@ SPED REINF > Geração
     Repetidor de 2 teclas     Shift    tab    2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Escrituração fiscal digital de retenções e outras informações fiscais (EFD-REINF) (1)    ${Caminho_Screenshots}SPED REINF/Geração
+    Base_Desktop.Screenshot    Escrituração fiscal digital de retenções e outras informações fiscais (EFD-REINF) (1)    ${Caminho_Screenshots}SPED REINF/Geração
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -92,7 +92,7 @@ SPED REINF > Relatório
     RPA.Windows.Get Text      Relatório - EFD REINF (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Relatório - EFD REINF (1)    ${Caminho_Screenshots}SPED REINF/Relatório
+    Base_Desktop.Screenshot    Relatório - EFD REINF (1)    ${Caminho_Screenshots}SPED REINF/Relatório
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -103,7 +103,7 @@ GIA-PR
     RPA.Windows.Get Text      Guia de Informação e Apuração do ICMS - Paraná (GIA-PR) (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Guia de Informação e Apuração do ICMS - Paraná (GIA-PR) (1)    ${Caminho_Screenshots}GIA-PR
+    Base_Desktop.Screenshot    Guia de Informação e Apuração do ICMS - Paraná (GIA-PR) (1)    ${Caminho_Screenshots}GIA-PR
     RPA.Windows.Click         Confirmar
     Fechar com Sim
     RPA.Windows.Click         OK
@@ -116,7 +116,7 @@ GIA-MS
     repetidor de teclas       tab      3
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Guia de Informação e Apuração do ICMS - Mato Grosso do Sul (GIA-MS) (1)    ${Caminho_Screenshots}GIA-MS
+    Base_Desktop.Screenshot    Guia de Informação e Apuração do ICMS - Mato Grosso do Sul (GIA-MS) (1)    ${Caminho_Screenshots}GIA-MS
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         Fechar
 
@@ -127,7 +127,7 @@ GIA-RJ
     RPA.Windows.Get Text      Guia de informação e apuração do ICMS - Rio de Janeiro (GIA-RJ) (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Guia de informação e apuração do ICMS - Rio de Janeiro (GIA-RJ) (1)    ${Caminho_Screenshots}GIA-RJ
+    Base_Desktop.Screenshot    Guia de informação e apuração do ICMS - Rio de Janeiro (GIA-RJ) (1)    ${Caminho_Screenshots}GIA-RJ
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -139,7 +139,7 @@ GIA-SP
     Repetidor de 2 teclas     Shift    tab    2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Guia de Informação e Apuração do ICMS - São Paulo (GIA-SP) (1)    ${Caminho_Screenshots}GIA-SP
+    Base_Desktop.Screenshot    Guia de Informação e Apuração do ICMS - São Paulo (GIA-SP) (1)    ${Caminho_Screenshots}GIA-SP
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         OK
     Fechar janela
@@ -152,7 +152,7 @@ Registro Magnético (SINTEGRA)
     repetidor de teclas       tab      3
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Registro Magnético (1)    ${Caminho_Screenshots}Registro Magnético (SINTEGRA)
+    Base_Desktop.Screenshot    Registro Magnético (1)    ${Caminho_Screenshots}Registro Magnético (SINTEGRA)
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         OK
     Fechar janela
@@ -164,7 +164,7 @@ Registro Magnético SISCRED - PR
     RPA.Windows.Get Text      Arquivo Magnético SISCRED - PR (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Arquivo Magnético SISCRED - PR (1)    ${Caminho_Screenshots}Registro Magnético SISCRED - PR
+    Base_Desktop.Screenshot    Arquivo Magnético SISCRED - PR (1)    ${Caminho_Screenshots}Registro Magnético SISCRED - PR
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         OK
     Fechar com OK
@@ -177,7 +177,7 @@ SEF-PE
     repetidor de teclas       tab      2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Geração do Arquivo SEF 2012 - Pernambuco (1)    ${Caminho_Screenshots}SEF-PE
+    Base_Desktop.Screenshot    Geração do Arquivo SEF 2012 - Pernambuco (1)    ${Caminho_Screenshots}SEF-PE
     RPA.Windows.Click         Confirmar 
     Fechar janela
 
@@ -189,7 +189,7 @@ DIME-SC > Geração
     RPA.Windows.Get Text      Declaração do ICMS e do Movimento Econômico (DIME) (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Declaração do ICMS e do Movimento Econômico (DIME) (1)    ${Caminho_Screenshots}DIME-SC/Geração
+    Base_Desktop.Screenshot    Declaração do ICMS e do Movimento Econômico (DIME) (1)    ${Caminho_Screenshots}DIME-SC/Geração
     RPA.Windows.Click         Confirmar 
     Fechar com Sim 
     RPA.Windows.Click         OK
@@ -201,7 +201,7 @@ DIME-SC > Montagem
     RPA.Desktop.Press Keys    M  
     RPA.Windows.Get Text      Montagem DIME SC (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Montagem DIME SC (1)    ${Caminho_Screenshots}DIME-SC/Montagem
+    Base_Desktop.Screenshot    Montagem DIME SC (1)    ${Caminho_Screenshots}DIME-SC/Montagem
     RPA.Windows.Click         OK
     Fechar com Sim
 
@@ -212,7 +212,7 @@ DFC GI/ICMS - PR
     RPA.Windows.Get Text      DFC e GI/ICMS (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    DFC e GI/ICMS (1)    ${Caminho_Screenshots}DFC GI_ICMS - PR
+    Base_Desktop.Screenshot    DFC e GI/ICMS (1)    ${Caminho_Screenshots}DFC GI_ICMS - PR
     RPA.Windows.Click         Confirmar
     Fechar com Sim
 
@@ -223,7 +223,7 @@ DEISS
     RPA.Windows.Get Text      Declaração Eletrônica de Imposto Sobre Serviço (DEISS) (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Declaração Eletrônica de Imposto Sobre Serviço (DEISS) (1)    ${Caminho_Screenshots}DEISS
+    Base_Desktop.Screenshot    Declaração Eletrônica de Imposto Sobre Serviço (DEISS) (1)    ${Caminho_Screenshots}DEISS
     RPA.Windows.Click         Confirmar
     Fechar com Sim
     RPA.Windows.Click         OK
@@ -236,7 +236,7 @@ SISCOSERV
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
     RPA.Windows.Click         Confirmar
-    BaseKeywordsDesktop.Screenshot    Geração de Arquivos SISCOSERV (1)    ${Caminho_Screenshots}SISCOSERV
+    Base_Desktop.Screenshot    Geração de Arquivos SISCOSERV (1)    ${Caminho_Screenshots}SISCOSERV
     RPA.Windows.Click         Fechar
 
 Outros Arquivos > Ato Declaratório Executivo Cofis n°25, de 7 de junho de 2010
@@ -247,7 +247,7 @@ Outros Arquivos > Ato Declaratório Executivo Cofis n°25, de 7 de junho de 2010
     RPA.Windows.Get Text      Geração do Arquivo Digital solicitados por Auditor Fiscal da Receita Federal do Brasil (AFRFB) (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Geração do Arquivo Digital solicitados por Auditor Fiscal da Receita Federal do Brasil (AFRFB) (1)    ${Caminho_Screenshots}Outros Arquivos/Ato Declaratório Executivo Cofis n°25, de 7 de junho de 2010
+    Base_Desktop.Screenshot    Geração do Arquivo Digital solicitados por Auditor Fiscal da Receita Federal do Brasil (AFRFB) (1)    ${Caminho_Screenshots}Outros Arquivos/Ato Declaratório Executivo Cofis n°25, de 7 de junho de 2010
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -260,7 +260,7 @@ Outros Arquivos > DIPJ - Declaração de Informações Econômico-Fiscais da Pes
     RPA.Desktop.Press Keys    Shift    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Consulta de IPI da DIPJ - Declaração de Informações Econômico-Fiscais da Pessoa Jurídica (1)    ${Caminho_Screenshots}Outros Arquivos/DIPJ - Declaração de Informações Econômico-Fiscais da Pessoa Jurídica
+    Base_Desktop.Screenshot    Consulta de IPI da DIPJ - Declaração de Informações Econômico-Fiscais da Pessoa Jurídica (1)    ${Caminho_Screenshots}Outros Arquivos/DIPJ - Declaração de Informações Econômico-Fiscais da Pessoa Jurídica
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -272,6 +272,6 @@ DCTF MIT
     Repetidor de 2 teclas     Shift    Tab    2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    DCTF MIT (1)    ${Caminho_Screenshots}DCTF MIT
+    Base_Desktop.Screenshot    DCTF MIT (1)    ${Caminho_Screenshots}DCTF MIT
     RPA.Windows.Click         Confirmar
     Fechar janela

@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
-Resource          ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource          ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -27,7 +27,7 @@ Requisição contra Almoxarifado
     RPA.Windows.Get Text    Requisição Contra Almoxarifado (1)
     RPA.Windows.Click       Novo
     RPA.Windows.Click       OK
-    BaseKeywordsDesktop.Screenshot  Requisição Contra Almoxarifado (1)    ${Caminho_Screenshots}Requisição contra Almoxarifado
+    Base_Desktop.Screenshot  Requisição Contra Almoxarifado (1)    ${Caminho_Screenshots}Requisição contra Almoxarifado
     Fechar com Sim
 
 Incluir/Alterar Entradas/Compras
@@ -36,7 +36,7 @@ Incluir/Alterar Entradas/Compras
     Manutenções             Incluir/Alterar Entradas/Compras    
     RPA.Windows.Get Text    Entradas/Compras - Incluir/Alterar (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)    ${Caminho_Screenshots}Incluir_Alterar Entradas_Compras
+    Base_Desktop.Screenshot  Entradas/Compras - Incluir/Alterar (1)    ${Caminho_Screenshots}Incluir_Alterar Entradas_Compras
     Fechar com Sim
 
 Manutenção Manual de Pneus
@@ -45,7 +45,7 @@ Manutenção Manual de Pneus
     Manutenções              Manutenção Manual de Pneus    
     RPA.Windows.Get Text    Consulta de Pneus (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Consulta de Pneus (1)    ${Caminho_Screenshots}Manutenção Manual de Pneus
+    Base_Desktop.Screenshot  Consulta de Pneus (1)    ${Caminho_Screenshots}Manutenção Manual de Pneus
     RPA.Windows.Click       Fechar
 
 Ordem de Serviço Interna
@@ -55,7 +55,7 @@ Ordem de Serviço Interna
     RPA.Windows.Get Text    Ordem de Serviço Interna (1)
     RPA.Windows.Click       Novo
     RPA.Windows.Click       OK
-    BaseKeywordsDesktop.Screenshot  Ordem de Serviço Interna (1)    ${Caminho_Screenshots}Ordem de Serviço Interna
+    Base_Desktop.Screenshot  Ordem de Serviço Interna (1)    ${Caminho_Screenshots}Ordem de Serviço Interna
     Fechar com Sim
 
 Ordem de Serviço Externa
@@ -64,5 +64,5 @@ Ordem de Serviço Externa
     Manutenções             Ordem de Serviço Externa    
     RPA.Windows.Get Text    Ordem de Serviço Externa
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Ordem de Serviço Externa          ${Caminho_Screenshots}Ordem de Serviço Externa
+    Base_Desktop.Screenshot  Ordem de Serviço Externa          ${Caminho_Screenshots}Ordem de Serviço Externa
     Fechar com Sim

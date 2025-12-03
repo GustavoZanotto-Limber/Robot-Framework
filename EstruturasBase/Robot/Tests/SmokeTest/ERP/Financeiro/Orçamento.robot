@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -25,7 +25,7 @@ Liberação Orçamentária
     RPA.Windows.Click         Liberação Orçamentária
     RPA.Windows.Get Text      Liberação Orçamentária (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Liberação Orçamentária (1)    ${Caminho_Screenshots}Liberação Orçamentária
+    Base_Desktop.Screenshot    Liberação Orçamentária (1)    ${Caminho_Screenshots}Liberação Orçamentária
     Fechar com Sim
 
 Previsão Orçamentária
@@ -35,7 +35,7 @@ Previsão Orçamentária
     RPA.Windows.Click         Previsão Orçamentária
     RPA.Windows.Get Text      Previsão Orçamentária (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Previsão Orçamentária (1)    ${Caminho_Screenshots}Previsão Orçamentária
+    Base_Desktop.Screenshot    Previsão Orçamentária (1)    ${Caminho_Screenshots}Previsão Orçamentária
     Fechar com Sim
 
 Transferência de Orçamentos
@@ -45,7 +45,7 @@ Transferência de Orçamentos
     RPA.Windows.Click         Transferência de Orçamentos
     RPA.Windows.Get Text      Transferência de Orçamentos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Transferência de Orçamentos (1)    ${Caminho_Screenshots}Transferência de Orçamentos
+    Base_Desktop.Screenshot    Transferência de Orçamentos (1)    ${Caminho_Screenshots}Transferência de Orçamentos
     Fechar com Sim
 
 Previsão X Realizado
@@ -56,7 +56,7 @@ Previsão X Realizado
     RPA.Desktop.Press Keys    P
     RPA.Windows.Get Text      Consulta de Acompanhamento Previsto X Realizado (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Consulta de Acompanhamento Previsto X Realizado (1)    ${Caminho_Screenshots}Consultas/Previsão X Realizado
+    Base_Desktop.Screenshot    Consulta de Acompanhamento Previsto X Realizado (1)    ${Caminho_Screenshots}Consultas/Previsão X Realizado
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -68,5 +68,5 @@ Previsão X Realizado 2
     RPA.Desktop.Press Keys    R
     RPA.Windows.Get Text      Consulta Previsto X Realizado (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Consulta Previsto X Realizado (1)    ${Caminho_Screenshots}Previsão X Realizado 2
+    Base_Desktop.Screenshot    Consulta Previsto X Realizado (1)    ${Caminho_Screenshots}Previsão X Realizado 2
     Fechar janela

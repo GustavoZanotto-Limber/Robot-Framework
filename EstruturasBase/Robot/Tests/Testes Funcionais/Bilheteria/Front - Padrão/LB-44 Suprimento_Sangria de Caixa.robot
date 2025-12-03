@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Testes regressivos: Suprimento e Sangria
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
-Resource         ../../../../Resources/BDD/BDDKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
+Resource         ../../../../Resources/BDD/BDD_Desktop.robot
 Suite Setup      Iniciar Suite
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2    ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}

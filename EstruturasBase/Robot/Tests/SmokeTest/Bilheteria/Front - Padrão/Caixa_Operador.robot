@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Smoke Test: Front
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
-Resource         ../../../../Resources/BDD/BDDKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
+Resource         ../../../../Resources/BDD/BDD_Desktop.robot
 Suite Setup      Iniciar sessao     ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -25,7 +25,7 @@ Abertura / Fechamento
     RPA.Desktop.Press Keys              Enter
     RPA.Windows.Click                   Abrir Caixa
     RPA.Desktop.Press Keys              Enter
-    BaseKeywordsDesktop.Screenshot                          Controle de Caixa (1)    ${Caminho_Screenshots}Abertura_Fechamento
+    Base_Desktop.Screenshot                          Controle de Caixa (1)    ${Caminho_Screenshots}Abertura_Fechamento
     RPA.Windows.Click                   OK
 
 Suprimento / Sangria
@@ -35,7 +35,7 @@ Suprimento / Sangria
     RPA.Windows.Click       Suprimento / Sangria
     RPA.Windows.Get Text    Movimento de Caixa (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Movimento de Caixa (1)    ${Caminho_Screenshots}Suprimento _ Sangria
+    Base_Desktop.Screenshot  Movimento de Caixa (1)    ${Caminho_Screenshots}Suprimento _ Sangria
     Fechar com Sim
 
 
