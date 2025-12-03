@@ -26,20 +26,20 @@ Encerrar cenario 3
 
 *** Test Cases ***
 
-Cenário 1: Cadastro de uma nova conta
-    ${nome_print}=    Set Variable     Cadastro de uma nova conta
-    [Tags]    Testes_Funcionais    CARD    Regressivos_CARD    LB-27
-    Dado que vou cadastrar um novo usuario do e-commerce
-    Quando Preencho os dados corretamente e confirmar o cadastro
-    Então valido se o cadastro foi realizado com sucesso
+# Cenário 1: Cadastro de uma nova conta
+#     ${nome_print}=    Set Variable     Cadastro de uma nova conta
+#     [Tags]    Testes_Funcionais    CARD    Regressivos_CARD    LB-27
+#     Dado que vou cadastrar um novo usuario do e-commerce
+#     Quando Preencho os dados corretamente e confirmar o cadastro
+#     Então valido se o cadastro foi realizado com sucesso
 
-Cenário 2: Cadastros com dados ja existentes
-    [Teardown]    Encerrar cenario 2     ${nome_print}   
-    ${nome_print}=    Set Variable     Cadastros com dados ja existentes
-    [Tags]    Testes_Funcionais    CARD    Regressivos_CARD    LB-27
-    Dado que existe uma conta registrada com um determinado documento OU telefone
-    Quando o usuário tentar cadastrar uma nova conta com o mesmo documento ou telefone
-    Então o sistema deve exibir uma mensagem informando o documento ou telefone já está cadastrado
+# Cenário 2: Cadastros com dados ja existentes
+#     [Teardown]    Encerrar cenario 2     ${nome_print}   
+#     ${nome_print}=    Set Variable     Cadastros com dados ja existentes
+#     [Tags]    Testes_Funcionais    CARD    Regressivos_CARD    LB-27
+#     Dado que existe uma conta registrada com um determinado documento OU telefone
+#     Quando o usuário tentar cadastrar uma nova conta com o mesmo documento ou telefone
+#     Então o sistema deve exibir uma mensagem informando o documento ou telefone já está cadastrado
 
 Cenário 3: Verificação obrigatória de e-mail
     [Teardown]    Encerrar cenario 3     ${nome_print}

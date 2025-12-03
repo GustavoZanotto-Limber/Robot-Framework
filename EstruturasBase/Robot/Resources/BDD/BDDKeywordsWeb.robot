@@ -84,7 +84,7 @@ Quando emito um bilhete com saldo atualizado
         ${qtd_vagas}=    Set Variable        1000
     END
     Sleep                    2s
-    ${qtd_vagas_coletada}=    Selecionar o bilhete e retornar quantidade de vagas (categoria)   ${numero_bilhete}    1
+    ${qtd_vagas_coletada}=    Selecionar o bilhete e retornar quantidade de vagas   ${numero_bilhete}    1
     log    Quantidade de vagas antes da emissão: ${qtd_vagas_coletada}
     ${qtd_vagas_coletada}=        Convert to Integer    ${qtd_vagas_coletada}
     ${qtd_vagas}=            Convert to Integer    ${qtd_vagas}
@@ -173,7 +173,7 @@ Então valido se a disponibilidade integrou corretamente
     [Arguments]    ${numero_bilhete}    ${qtd_vagas}=1000
     Iniciar sessao    cde_win_bca_front
     Ir Para Emissão de Bilhetes
-    ${qtd_vagas_bilhete}=    Selecionar o bilhete e retornar quantidade de vagas (categoria)   ${numero_bilhete}    1
+    ${qtd_vagas_bilhete}=    Selecionar o bilhete e retornar quantidade de vagas   ${numero_bilhete}    1
     ${qtd_vagas_bilhete}=        Convert to Integer    ${qtd_vagas_bilhete}
     IF    ${qtd_vagas_bilhete} == ${qtd_vagas}
         Log     A disponibilidade integrou corretamente.

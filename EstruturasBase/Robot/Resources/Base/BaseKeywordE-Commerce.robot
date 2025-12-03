@@ -40,105 +40,13 @@ Email login
 
 Logar no e-commerce    
     ${logado}=    Run Keyword and ignore error    Run Keyword and Return Status    Clicar no Elemento        id:accountButton
-    Sleep    2s
+    Sleep    5s
     Log    ${logado[1]}
-    IF    ${logado[1]}
-        # Email Login    gustavozanotto119@gmail.com
-        # Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    g
-        # Sleep    0.2s
-        # RPA.Desktop.Press Keys    u
-        # Sleep    0.4s
-        # RPA.Desktop.Press Keys    s
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    t
-        # Sleep    0.3s
-        # RPA.Desktop.Press Keys    a
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    v
-        # Sleep    0.5s
-        # RPA.Desktop.Press Keys    o
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    z
-        # Sleep    0.3s
-        # RPA.Desktop.Press Keys    a
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    n
-        # Sleep    0.2s
-        # RPA.Desktop.Press Keys    o
-        # Sleep    0.2s
-        # RPA.Desktop.Press Keys    t
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    t
-        # Sleep    0.4s
-        # RPA.Desktop.Press Keys    o
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    1
-        # Sleep    0.3s
-        # RPA.Desktop.Press Keys    1
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    9
-        # Sleep    0.3s
-        # RPA.Desktop.Type Text     @
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    g
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    m
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    a
-        # Sleep    0.5s
-        # RPA.Desktop.Press Keys    i
-        # Sleep    0.1s
-        # RPA.Desktop.Press Keys    l
-        # Sleep    0.5s
-        # RPA.Desktop.Press Keys    .
-        # Sleep    0.2s
-        # RPA.Desktop.Press Keys    v
-        # Sleep    0.3s
-        # RPA.Desktop.Press Keys    o
-        # Sleep    0.3s
-        # RPA.Desktop.Press Keys    m
-        # Sleep    1s
-        # Repetidor de teclas       Backspace     3
-        # RPA.Desktop.Press Keys    C
-        # Sleep    0.3s
-        # RPA.Desktop.Press Keys    o
-        # Sleep    0.3s
-        # RPA.Desktop.Press Keys    m
-        # Sleep    1s
-        # RPA.Desktop.Press keys    Enter
-        # Sleep    3
-        # Inserir Texto             xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input    Z
-        # Sleep    1s
-        # RPA.Desktop.Press keys    Backspace
-        # RPA.Desktop.Type Text     Z
-        # Sleep    0.2s
-        # RPA.Desktop.Type Text     a
-        # Sleep    0.5s
-        # RPA.Desktop.Type Text     n
-        # Sleep    0.2s
-        # RPA.Desktop.Type Text     o
-        # Sleep    0.1s
-        # RPA.Desktop.Type Text     t
-        # Sleep    0.1s
-        # RPA.Desktop.Type Text     t
-        # Sleep    0.3s
-        # RPA.Desktop.Type Text     o
-        # Sleep    0.1s
-        # RPA.Desktop.Type Text     1
-        # Sleep    0.1s
-        # RPA.Desktop.Type Text     2
-        # Sleep    0.4s
-        # RPA.Desktop.Type Text     3
-        # Sleep    0.1s
-        # RPA.Desktop.Type Text     @
-        # Sleep    1s
-        # Clicar no Botão           xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/button[2]
-
-        Sleep    4s   
-        Input Text    xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input   gustavozanotto119@gmail.com
+    IF    ${logado[1]}  
+        Inserir Texto    xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input   gustavozanotto119@gmail.com
         SeleniumLibrary.Press Keys    //span[contains(text(), 'Continuar')]   \ue00c
         Sleep    7s
-        Input Text    xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input   Zanotto123@
+        Inserir Texto    xpath:/html/body/app-root/app-home/div/main/ng-component/app-login-client/ec-wrapper/form/mat-form-field/div[1]/div/div[2]/input   Zanotto123@
         Sleep    6s
         SeleniumLibrary.Press Keys    //span[contains(text(), 'Entrar')]    \ue00c
     ELSE
@@ -178,33 +86,11 @@ Adicionar categoria (Compra E-Commerce)
         Clicar no Botão    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria-produto[${categoria}]/div/div[2]/button[2]
     END
 
-# Retirar categoria (Compra E-Commerce)
-#     [Arguments]    ${categoria}    ${quantidade}
-#     Sleep            3s
-#     FOR    ${i}    IN RANGE    ${quantidade}
-#         Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-title-with-edit/section/div[3]/div/app-escolha-categoria[${categoria}]/div/div[2]/button[1]
-#     END
-
 Comprar Ingressos
     Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/div[3]/button
 
 Selecionar o dia de hoje no calendario
-    # @{ano_mes_dia}=  Get Time	year month day 
-    # FOR    ${counter}    IN RANGE    1    7    
-    #     ${RETURN VALUE}=    Run Keyword and Ignore Error    SeleniumLibrary.Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/ec-calendar/table/tbody[1]/tr[1]/td[${counter}]/div/div/button    ${ano_mes_dia[2]}
-    #     IF    '${RETURN VALUE[0]}' == 'PASS'
-    #         Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/ec-calendar/table/tbody[1]/tr[1]/td[${counter}]/div/div/button
-    #         Exit For Loop
-    #     END
-    # END
     ${diaHoje}=    Get Current Date    result_format=%#d
-    # ${diaHoje}=    Convert To Integer    ${diaHoje}
-    # IF    $diaHoje >= 10
-    #     ${diasplit}=    Split String    ${diaHoje}    0
-    #     ${hojeCard}=    Set Variable    ${diasplit[1]}
-    # ELSE
-    #     ${hojeCard}=    Set Variable    ${diaHoje}
-    # END
     Set Test variable    ${hojeCard}    ${diaHoje}
     Click Element    xpath=//span[normalize-space(text())="${hojeCard}"]/ancestor::button
 
@@ -229,6 +115,7 @@ Efetuar Pagamento
     @{data_e_hora}=    Set Variable    ${data_formatada}    ${hora_minuto_seg_split[0]}:${hora_minuto_seg_split[1]}
     RETURN    @{data_e_hora}
 
+
 Visualizar Ingressos
     Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-approved-purchase/ec-splash-alert/ec-wrapper/a
     Sleep    2s
@@ -245,7 +132,7 @@ Salvar a impressão do bilhete através do e-commerce
     [Arguments]    ${tipo}      ${caminho}    ${nome_Impressão}
     ${LB}=                       Pegar Texto     xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[1]/div[1]/header/h1[2]
     Clicar no Botão              xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[2]/button[2]
-    Tentar Clicar Em Um Dos Elementos           xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-share-ticket/div/a[${tipo}]    xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-share-ticket/div/a[${tipo}]
+    Clicar no Elemento           xpath://mat-bottom-sheet-container/app-share-ticket/div/a[${tipo}]    
     Sleep                        10s
     Clicar no Botão              xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/button
     RPA.Desktop.Press Keys       Esc
@@ -269,7 +156,7 @@ Pegar LB
 
 Cancelar um ingresso pelo e-commerce
     [Arguments]    ${numero_bilhete}
-    Clicar no Botão                  xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[2]/button[2]
+    Clicar no Botão                  xpath:/html/body/app-root/app-home/div/main/app-request/ec-wrapper/div[2]/button[3]
     Sleep    0.5
     Tentar Clicar Em Um Dos Elementos               xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-cancel-tickets/div/div[1]/app-select-sale-item[${numero_bilhete}]/div        xpath:/html/body/div[2]/div[2]/div/mat-bottom-sheet-container/app-cancel-tickets/div/div[1]/app-select-sale-item[${numero_bilhete}]/div
     Inserir Texto                    id:textarea_motivo    Bilhete Cancelado pela automação de testes.

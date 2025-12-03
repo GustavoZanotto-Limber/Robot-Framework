@@ -39,7 +39,8 @@ Cenário 1: Cadastro de um bilhete por Horario/Vaga
     [Tags]    Testes_Funcionais    LB-42  Regressivos_BIL
     Dado que estou na tela de criação de bilhete
     Quando insiro as informações para um novo cadastro de bilhete 
-    ${numero_bilhete}=    Então valido se o bilhete foi criado corretamente
+    ${numero_bilhete}=    
+    ...    Então valido se o bilhete foi criado corretamente
 
 Cenário 2: Associação de um horario a um bilhete
     ${nome_print}=    Set Variable     Associação de um horario a um bilhete
