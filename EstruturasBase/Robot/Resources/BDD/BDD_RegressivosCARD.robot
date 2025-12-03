@@ -9,8 +9,8 @@ Library    String
 Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\Robot\\ScreenShots\\Selenium
 Library    Collections
 Library    RPA.PDF
-Resource   ../Base/BaseKeywordsCARD.robot
-Resource    ../Base/BaseKeywordE-Commerce.robot
+Resource   ../Base/Base_CARD.robot
+Resource    ../Base/Base_E-Commerce.robot
 
 
 *** Variables ***
@@ -56,7 +56,7 @@ Dado que o usuário está autenticado em sua conta
 
 Dado que usuário seleciona a opção Fale conosco no e-commerce
     Abro o E-commerce (Online) 
-    Clicar no Botão    xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]
+    Clicar no Botão       xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]
     Clicar no Elemento    xpath://a[normalize-space(text())="Fale Conosco"]
 
 # ---------------------Quando---------------------
@@ -250,6 +250,7 @@ E a conta só deve ser ativada após a verificação do e-mail
     Clicar no Botão                  xpath:/html/body/app-root/app-home/div/main/app-token/ec-wrapper/div/form/div/button[1]      
     Preencher dados de um novo cadastro no e-commerce
     Então valido se o cadastro foi realizado com sucesso
+    Fechar Aba E Voltar Para Principal    1
     Sleep    1s
 
 Então o sistema deve enviar um e-mail com as instruções de recuperação
@@ -275,8 +276,8 @@ Então o sistema deve enviar um e-mail com as instruções de recuperação
     Sleep    1.5s
     SeleniumLibrary.Press Keys    //span[contains(text(), 'Entrar')]    \ue00c
     Então valido se o cadastro foi realizado com sucesso
+    Deslogar do e-commerce
     Fechar Aba E Voltar Para Principal    1
-
     
 Então o sistema deve salvar as alterações corretamente
     [Arguments]    ${email}
@@ -285,7 +286,8 @@ Então o sistema deve salvar as alterações corretamente
     Sleep    1s
     Conferir Texto               xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/div[1]/div/h1    ${email}
     Validar as informações do cadastro    Cadastro Automatizado Editado    23/08/1906    55+ 98 88888-8888    12345678910    
-
+    Fechar Aba E Voltar Para Principal    1
+    
 Então as perguntas configuradas devem aparecer corretamente na tela de FAQ
     Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-faq/ec-wrapper/mat-accordion/mat-expansion-panel[1]/mat-expansion-panel-header/span[1]/mat-panel-title    Como faço para cancelar minha compra?
     Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-faq/ec-wrapper/mat-accordion/mat-expansion-panel[2]/mat-expansion-panel-header/span[1]/mat-panel-title    Como visualizar meu ingresso?

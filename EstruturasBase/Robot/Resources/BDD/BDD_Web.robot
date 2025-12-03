@@ -4,10 +4,10 @@ Library    SeleniumLibrary    screenshot_root_directory=EstruturasBase\\Robot\\S
 Library    Process
 Library    Collections
 Library    String
-Resource   ../Base/BaseKeywordsDesktop.robot
-Resource   BDDKeywordsDesktop.robot
-Resource  ../Base/BaseKeywordsCARD.robot
-Resource    ../Base/BaseKeywordE-Commerce.robot
+Resource   ../Base/Base_Desktop.robot
+Resource   BDD_Desktop.robot
+Resource  ../Base/Base_CARD.robot
+Resource    ../Base/Base_E-Commerce.robot
 
 *** Variables ***
 ${qtd_vagas}

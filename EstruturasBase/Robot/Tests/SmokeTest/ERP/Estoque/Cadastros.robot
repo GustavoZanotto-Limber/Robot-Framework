@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Estoque
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -22,7 +22,7 @@ Terceiros
     RPA.Windows.Click       Terceiros
     RPA.Windows.Get Text    Cadastro de Terceiros (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
+    Base_Desktop.Screenshot  Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
     RPA.Windows.Click       Cancelar (F3)
     Fechar com Sim
 
@@ -33,7 +33,7 @@ Grupo de Terceiros
     RPA.Windows.Click       Grupo de Terceiros
     RPA.Windows.Get Text    Cadastro de Grupo de Terceiros (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Grupo de Terceiros (1)    ${Caminho_Screenshots}Grupo de Terceiros
+    Base_Desktop.Screenshot  Cadastro de Grupo de Terceiros (1)    ${Caminho_Screenshots}Grupo de Terceiros
     Fechar com Sim
 
 Setores
@@ -43,7 +43,7 @@ Setores
     RPA.Windows.Click       Setores
     RPA.Windows.Get Text    Cadastro de Setores (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Setores (1)    ${Caminho_Screenshots}Setores
+    Base_Desktop.Screenshot  Cadastro de Setores (1)    ${Caminho_Screenshots}Setores
     Fechar com Sim
 
 Safras
@@ -53,7 +53,7 @@ Safras
     RPA.Windows.Click       Safras
     RPA.Windows.Get Text    Cadastro de Safras (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Safras (1)    ${Caminho_Screenshots}Safras
+    Base_Desktop.Screenshot  Cadastro de Safras (1)    ${Caminho_Screenshots}Safras
     Fechar Janela
 
 Produtos > Produtos
@@ -64,7 +64,7 @@ Produtos > Produtos
     RPA.Desktop.Press Keys  P
     RPA.Windows.Get Text    Cadastro de Itens (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Itens (1)    ${Caminho_Screenshots}Produtos/Produtos
+    Base_Desktop.Screenshot  Cadastro de Itens (1)    ${Caminho_Screenshots}Produtos/Produtos
     Fechar com Sim
 
 Produtos > Depósitos
@@ -75,7 +75,7 @@ Produtos > Depósitos
     RPA.Desktop.Press Keys  D
     RPA.Windows.Get Text    Cadastro de Depósitos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Depósitos (1)    ${Caminho_Screenshots}Produtos/Depósitos
+    Base_Desktop.Screenshot  Cadastro de Depósitos (1)    ${Caminho_Screenshots}Produtos/Depósitos
     Fechar com Sim
 
 Produtos > Unidades
@@ -86,7 +86,7 @@ Produtos > Unidades
     RPA.Desktop.Press Keys  U
     RPA.Windows.Get Text    Cadastro de Unidades (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Unidades (1)    ${Caminho_Screenshots}Produtos/Unidades
+    Base_Desktop.Screenshot  Cadastro de Unidades (1)    ${Caminho_Screenshots}Produtos/Unidades
     Fechar com Sim
 
 Produtos > Marcas
@@ -97,7 +97,7 @@ Produtos > Marcas
     RPA.Desktop.Press Keys  M
     RPA.Windows.Get Text    Cadastro de Marcas (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Marcas (1)    ${Caminho_Screenshots}Produtos/Marcas
+    Base_Desktop.Screenshot  Cadastro de Marcas (1)    ${Caminho_Screenshots}Produtos/Marcas
     Fechar com Sim
 
 Produtos > Cores
@@ -108,7 +108,7 @@ Produtos > Cores
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Cadastro de Cores (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Cores (1)    ${Caminho_Screenshots}Produtos/Cores
+    Base_Desktop.Screenshot  Cadastro de Cores (1)    ${Caminho_Screenshots}Produtos/Cores
     Fechar com Sim
 
 Produtos > Tamanhos
@@ -119,7 +119,7 @@ Produtos > Tamanhos
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Cadastro de Tamanhos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Tamanhos (1)    ${Caminho_Screenshots}Produtos/Tamanhos
+    Base_Desktop.Screenshot  Cadastro de Tamanhos (1)    ${Caminho_Screenshots}Produtos/Tamanhos
     Fechar com Sim
 
 Produtos > Estampas
@@ -130,7 +130,7 @@ Produtos > Estampas
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Cadastro de Estampas (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Estampas (1)    ${Caminho_Screenshots}Produtos/Estampas
+    Base_Desktop.Screenshot  Cadastro de Estampas (1)    ${Caminho_Screenshots}Produtos/Estampas
     Fechar com Sim
 
 Produtos > Categorias
@@ -141,7 +141,7 @@ Produtos > Categorias
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Cadastro de Categorias de Produtos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Categorias de Produtos (1)    ${Caminho_Screenshots}Produtos/Categorias
+    Base_Desktop.Screenshot  Cadastro de Categorias de Produtos (1)    ${Caminho_Screenshots}Produtos/Categorias
     Fechar com Sim
 
 Veículos > Veículos
@@ -152,7 +152,7 @@ Veículos > Veículos
     RPA.Desktop.Press Keys  V
     RPA.Windows.Get Text    Cadastro de Veículos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Veículos (1)    ${Caminho_Screenshots}Veículos/Veículos
+    Base_Desktop.Screenshot  Cadastro de Veículos (1)    ${Caminho_Screenshots}Veículos/Veículos
     Fechar Janela
 
 Veículos > Tipos de Veículos
@@ -163,7 +163,7 @@ Veículos > Tipos de Veículos
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Cadastro de Tipos de Veículos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Tipos de Veículos (1)    ${Caminho_Screenshots}Veículos/Tipos de Veículos
+    Base_Desktop.Screenshot  Cadastro de Tipos de Veículos (1)    ${Caminho_Screenshots}Veículos/Tipos de Veículos
     Fechar com Sim
 
 Tipo Movimentação
@@ -173,7 +173,7 @@ Tipo Movimentação
     RPA.Windows.Click       Tipo Movimentação
     RPA.Windows.Get Text    Cadastro de Tipos de Movimentação (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Tipos de Movimentação (1)    ${Caminho_Screenshots}Tipo Movimentação
+    Base_Desktop.Screenshot  Cadastro de Tipos de Movimentação (1)    ${Caminho_Screenshots}Tipo Movimentação
     Fechar com Sim
 
 Categoria de Lote
@@ -183,7 +183,7 @@ Categoria de Lote
     RPA.Windows.Click       Categoria de Lote
     RPA.Windows.Get Text    Cadastro de Categoria de Lote (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Categoria de Lote (1)    ${Caminho_Screenshots}Categoria de Lote
+    Base_Desktop.Screenshot  Cadastro de Categoria de Lote (1)    ${Caminho_Screenshots}Categoria de Lote
     Fechar com Sim
 
 Tipo de Teste Lotes
@@ -194,7 +194,7 @@ Tipo de Teste Lotes
     RPA.Desktop.Press Keys  ENTER
     RPA.Windows.Get Text    Cadastro de Tipos de Testes para Lotes (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Tipos de Testes para Lotes (1)    ${Caminho_Screenshots}Tipo de Teste Lotes
+    Base_Desktop.Screenshot  Cadastro de Tipos de Testes para Lotes (1)    ${Caminho_Screenshots}Tipo de Teste Lotes
     Fechar com Sim
 
 Países
@@ -204,7 +204,7 @@ Países
     RPA.Windows.Click         Países
     RPA.Windows.Get Text      Cadastro de Países (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Países (1)    ${Caminho_Screenshots}Países
+    Base_Desktop.Screenshot    Cadastro de Países (1)    ${Caminho_Screenshots}Países
     Fechar com Sim
 
 Municípios
@@ -214,7 +214,7 @@ Municípios
     RPA.Windows.Click         Municípios
     RPA.Windows.Get Text      Cadastro de Municípios (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Municípios (1)    ${Caminho_Screenshots}Municípios
+    Base_Desktop.Screenshot    Cadastro de Municípios (1)    ${Caminho_Screenshots}Municípios
     Fechar com Sim
 
 Estados
@@ -224,7 +224,7 @@ Estados
     RPA.Windows.Click         Estados
     RPA.Windows.Get Text      Cadastro de Estados (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Estados (1)    ${Caminho_Screenshots}Estados
+    Base_Desktop.Screenshot    Cadastro de Estados (1)    ${Caminho_Screenshots}Estados
     Fechar com Sim
 
 Localidades
@@ -234,7 +234,7 @@ Localidades
     RPA.Windows.Click         Localidades
     RPA.Windows.Get Text      Cadastro de Localidades (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
+    Base_Desktop.Screenshot    Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
     Fechar com Sim
 
 Regiões
@@ -244,7 +244,7 @@ Regiões
     RPA.Windows.Click         Regiões
     RPA.Windows.Get Text      Cadastro de Regiões (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Regiões (1)    ${Caminho_Screenshots}Regiões
+    Base_Desktop.Screenshot    Cadastro de Regiões (1)    ${Caminho_Screenshots}Regiões
     Fechar com Sim
 
 Fiscais > Tabela Tributária
@@ -255,7 +255,7 @@ Fiscais > Tabela Tributária
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Cadastro de Tabelas Tributária (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Tabelas Tributária (1)    ${Caminho_Screenshots}Fiscais/Tabela Tributária
+    Base_Desktop.Screenshot    Cadastro de Tabelas Tributária (1)    ${Caminho_Screenshots}Fiscais/Tabela Tributária
     Fechar com Sim
 
 Fiscais > Situação Tributária
@@ -266,7 +266,7 @@ Fiscais > Situação Tributária
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Situações Tributárias do ICMS (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Situações Tributárias do ICMS (1)    ${Caminho_Screenshots}Fiscais/Situação Tributária
+    Base_Desktop.Screenshot    Cadastro de Situações Tributárias do ICMS (1)    ${Caminho_Screenshots}Fiscais/Situação Tributária
     Fechar com Sim
 
 Fiscais > Operações Fiscais
@@ -277,7 +277,7 @@ Fiscais > Operações Fiscais
     RPA.Desktop.Press Keys    O
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscais/Operações Fiscais
+    Base_Desktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscais/Operações Fiscais
     Fechar com Sim
 
 Fiscais > Classificações Fiscais
@@ -288,7 +288,7 @@ Fiscais > Classificações Fiscais
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de Classificações Fiscais (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Classificações Fiscais (1)    ${Caminho_Screenshots}Fiscais/Classificações Fiscais
+    Base_Desktop.Screenshot    Cadastro de Classificações Fiscais (1)    ${Caminho_Screenshots}Fiscais/Classificações Fiscais
     Fechar com Sim
 
 Fiscais > Classificações de Serviços Prestado - REINF
@@ -299,7 +299,7 @@ Fiscais > Classificações de Serviços Prestado - REINF
     RPA.Desktop.Press Keys    L
     RPA.Windows.Get Text      Classificações de Serviços Prestados - REINF (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Classificações de Serviços Prestados - REINF (1)    ${Caminho_Screenshots}Fiscais/Classificações de Serviços Prestado - REINF
+    Base_Desktop.Screenshot    Classificações de Serviços Prestados - REINF (1)    ${Caminho_Screenshots}Fiscais/Classificações de Serviços Prestado - REINF
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -311,7 +311,7 @@ Parâmetros > Empresas
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
+    Base_Desktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
     Fechar com Sim
 
 Parâmetros > Estabelecimentos
@@ -322,7 +322,7 @@ Parâmetros > Estabelecimentos
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
+    Base_Desktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
     Fechar com Sim
 
 Parâmetros > Usuários
@@ -332,7 +332,7 @@ Parâmetros > Usuários
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
     RPA.Windows.Get Text      Cadastro de Usuários (1)
-    BaseKeywordsDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
+    Base_Desktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
     Fechar janela
 
 Parâmetros > Grupo de Usuários
@@ -343,7 +343,7 @@ Parâmetros > Grupo de Usuários
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
+    Base_Desktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
     Fechar com Sim
 
 Parâmetros > Configurações da Estação
@@ -354,5 +354,5 @@ Parâmetros > Configurações da Estação
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Configurações da Estação (1)
     RPA.Windows.Click         CDE-WIN-FIN
-    BaseKeywordsDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
+    Base_Desktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
     Fechar janela

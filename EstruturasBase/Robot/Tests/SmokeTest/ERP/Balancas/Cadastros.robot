@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Balança
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -23,7 +23,7 @@ Produtos
     RPA.Windows.Click         Produtos
     RPA.Windows.Get Text      Cadastro de Itens (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Itens (1)    ${Caminho_Screenshots}Produtos
+    Base_Desktop.Screenshot    Cadastro de Itens (1)    ${Caminho_Screenshots}Produtos
     Fechar com Sim
     
 Terceiros
@@ -33,7 +33,7 @@ Terceiros
     RPA.Windows.Click         Terceiros
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
+    Base_Desktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
     RPA.Windows.Click         Cancelar (F3)
     Fechar com Sim
 
@@ -44,7 +44,7 @@ Operações Fiscais
     RPA.Windows.Click         Operações Fiscais
     RPA.Windows.Get Text      Cadastro de Operações Fiscais (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Operações Fiscais
+    Base_Desktop.Screenshot    Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Operações Fiscais
     Fechar com Sim
 
 Descontos/Classificações para Grãos
@@ -54,7 +54,7 @@ Descontos/Classificações para Grãos
     RPA.Windows.Click         Descontos/Classificações para Grãos
     RPA.Windows.Get Text      Cadastro de Descontos/Classificações para Grãos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Descontos/Classificações para Grãos (1)    ${Caminho_Screenshots}Descontos_Classificações para Grãos
+    Base_Desktop.Screenshot    Cadastro de Descontos/Classificações para Grãos (1)    ${Caminho_Screenshots}Descontos_Classificações para Grãos
     Fechar com Sim
 
 Classificação de Grãos
@@ -64,7 +64,7 @@ Classificação de Grãos
     RPA.Windows.Click         Classificação de Grãos
     RPA.Windows.Get Text      Cadastro de Classificação de Grãos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Classificação de Grãos (1)    ${Caminho_Screenshots}Classificação de Grãos
+    Base_Desktop.Screenshot    Cadastro de Classificação de Grãos (1)    ${Caminho_Screenshots}Classificação de Grãos
     Fechar com Sim
 
 Tabela de Índices de Descontos
@@ -74,7 +74,7 @@ Tabela de Índices de Descontos
     RPA.Windows.Click         Tabela de Índices de Descontos
     RPA.Windows.Get Text      Cadastro de Índices de Descontos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Índices de Descontos (1)    ${Caminho_Screenshots}Tabela de Índices de Descontos
+    Base_Desktop.Screenshot    Cadastro de Índices de Descontos (1)    ${Caminho_Screenshots}Tabela de Índices de Descontos
     Fechar com Sim
 
 Melhorias do Peso Hectolítrico
@@ -84,7 +84,7 @@ Melhorias do Peso Hectolítrico
     RPA.Windows.Click         Melhorias do Peso Hectolítrico
     RPA.Windows.Get Text      Cadastro de Melhorias do Peso Hectolítrico (PH) (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Melhorias do Peso Hectolítrico (PH) (1)    ${Caminho_Screenshots}Melhorias do Peso Hectolítrico
+    Base_Desktop.Screenshot    Cadastro de Melhorias do Peso Hectolítrico (PH) (1)    ${Caminho_Screenshots}Melhorias do Peso Hectolítrico
     Fechar com Sim
 
 Tipos de Romaneio
@@ -94,7 +94,7 @@ Tipos de Romaneio
     RPA.Windows.Click         Tipos de Romaneio
     RPA.Windows.Get Text      Cadastro de Tipos de Romaneio (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Tipos de Romaneio (1)    ${Caminho_Screenshots}Tipos de Romaneio
+    Base_Desktop.Screenshot    Cadastro de Tipos de Romaneio (1)    ${Caminho_Screenshots}Tipos de Romaneio
     Fechar com Sim
 
 Conf. Modelos Impressao de Processos
@@ -106,7 +106,7 @@ Conf. Modelos Impressao de Processos
     repetidor de teclas       Tab         2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Conf. Modelos Impressão de Processos (1)    ${Caminho_Screenshots}Conf. Modelos Impressao de Processos
+    Base_Desktop.Screenshot    Conf. Modelos Impressão de Processos (1)    ${Caminho_Screenshots}Conf. Modelos Impressao de Processos
     RPA.Windows.Click         Confirmar
     Fechar com Sim
 
@@ -119,7 +119,7 @@ Conf. Movimentação de Estoque de Produtos
     repetidor de teclas       Tab         3
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Configuração de Movimentação de Estoque de Produto (1)    ${Caminho_Screenshots}Conf. Movimentação de Estoque de Produtos
+    Base_Desktop.Screenshot    Configuração de Movimentação de Estoque de Produto (1)    ${Caminho_Screenshots}Conf. Movimentação de Estoque de Produtos
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -130,7 +130,7 @@ Configuração de Troca de Produto p/ emissão de NF
     RPA.Windows.Click         Configuração de Troca de Produto p/ emissão de NF
     RPA.Windows.Get Text      Configuração de Troca de Produto p/ emissão de NF (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Configuração de Troca de Produto p/ emissão de NF (1)    ${Caminho_Screenshots}Configuração de Troca de Produto p_ emissão de NF
+    Base_Desktop.Screenshot    Configuração de Troca de Produto p/ emissão de NF (1)    ${Caminho_Screenshots}Configuração de Troca de Produto p_ emissão de NF
     Fechar com Sim
 
 Parâmetros > Empresas
@@ -141,7 +141,7 @@ Parâmetros > Empresas
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
+    Base_Desktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
     Fechar com Sim
 
 Parâmetros > Estabelecimentos
@@ -152,7 +152,7 @@ Parâmetros > Estabelecimentos
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
+    Base_Desktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
     Fechar com Sim
 
 Parâmetros > Usuários
@@ -162,7 +162,7 @@ Parâmetros > Usuários
     RPA.Windows.Click         Parâmetros
     RPA.Desktop.Press Keys    U
     RPA.Windows.Get Text      Cadastro de Usuários (1)
-    BaseKeywordsDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
+    Base_Desktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
     Fechar janela
 
 Grupo de Usuários
@@ -173,7 +173,7 @@ Grupo de Usuários
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
+    Base_Desktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
     Fechar com Sim
 
 Parâmetros > Configurações da Estação
@@ -184,5 +184,5 @@ Parâmetros > Configurações da Estação
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Configurações da Estação (1)
     RPA.Windows.Click         CDE-WIN-FIN
-    BaseKeywordsDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
+    Base_Desktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
     Fechar janela

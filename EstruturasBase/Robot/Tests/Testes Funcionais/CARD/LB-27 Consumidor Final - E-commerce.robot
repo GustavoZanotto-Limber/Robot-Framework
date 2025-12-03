@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation     Testes regressivos: Consumidor Final
-Resource          ../../../Resources/Base/BaseKeywordsCARD.robot
-Resource          ../../../Resources/BDD/BDDKeywordsWeb.robot
-Resource          ../../../Resources/BDD/BDDRegressivosCARD.robot
+Resource          ../../../Resources/Base/Base_CARD.robot
+Resource          ../../../Resources/BDD/BDD_Web.robot
+Resource          ../../../Resources/BDD/BDD_RegressivosCARD.robot
 Suite Setup       Abrir CARD e logar
 Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}    ${nome_print}    
 
@@ -26,20 +26,20 @@ Encerrar cenario 3
 
 *** Test Cases ***
 
-# Cenário 1: Cadastro de uma nova conta
-#     ${nome_print}=    Set Variable     Cadastro de uma nova conta
-#     [Tags]    Testes_Funcionais    CARD    Regressivos_CARD    LB-27
-#     Dado que vou cadastrar um novo usuario do e-commerce
-#     Quando Preencho os dados corretamente e confirmar o cadastro
-#     Então valido se o cadastro foi realizado com sucesso
+Cenário 1: Cadastro de uma nova conta
+    ${nome_print}=    Set Variable     Cadastro de uma nova conta
+    [Tags]    Testes_Funcionais    CARD    Regressivos_CARD    LB-27
+    Dado que vou cadastrar um novo usuario do e-commerce
+    Quando Preencho os dados corretamente e confirmar o cadastro
+    Então valido se o cadastro foi realizado com sucesso
 
-# Cenário 2: Cadastros com dados ja existentes
-#     [Teardown]    Encerrar cenario 2     ${nome_print}   
-#     ${nome_print}=    Set Variable     Cadastros com dados ja existentes
-#     [Tags]    Testes_Funcionais    CARD    Regressivos_CARD    LB-27
-#     Dado que existe uma conta registrada com um determinado documento OU telefone
-#     Quando o usuário tentar cadastrar uma nova conta com o mesmo documento ou telefone
-#     Então o sistema deve exibir uma mensagem informando o documento ou telefone já está cadastrado
+Cenário 2: Cadastros com dados ja existentes
+    [Teardown]    Encerrar cenario 2     ${nome_print}   
+    ${nome_print}=    Set Variable     Cadastros com dados ja existentes
+    [Tags]    Testes_Funcionais    CARD    Regressivos_CARD    LB-27
+    Dado que existe uma conta registrada com um determinado documento OU telefone
+    Quando o usuário tentar cadastrar uma nova conta com o mesmo documento ou telefone
+    Então o sistema deve exibir uma mensagem informando o documento ou telefone já está cadastrado
 
 Cenário 3: Verificação obrigatória de e-mail
     [Teardown]    Encerrar cenario 3     ${nome_print}
@@ -72,5 +72,5 @@ Cenário 6: Fale conosco
     @{data_e_hora}=    E posteriormente, na tela de SAC
     Então as perguntas configuradas devem aparecer corretamente na tela de FAQ e SAC    @{data_e_hora}
 
-#Cenario 7 necessita de revisão do passo a passo para automação, a tela de celulares e tablets é mais complexa a realização dos testes
-#O teste que pode ser realizado é apenas o de validação de redirecionamento para a página correta ao clicar no banner
+# Cenario 7 necessita de revisão do passo a passo para automação, a tela de celulares e tablets é mais complexa a realização dos testes
+# O teste que pode ser realizado é apenas o de validação de redirecionamento para a página correta ao clicar no banner

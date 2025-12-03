@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
-Resource          ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource          ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -26,7 +26,7 @@ Importação NOTFIS
     Projeto EDI Transportes                  Importação NOTFIS
     RPA.Windows.Get Text   	Importação de Dados do Projeto EDI Transporte (NOTFIS - Dados de Notas Fiscais) (1) 
     RPA.Windows.Click       Iniciar Importação
-    BaseKeywordsDesktop.Screenshot 	Importação de Dados do Projeto EDI Transporte (NOTFIS - Dados de Notas Fiscais) (1)                              ${Caminho_Screenshots}Importação NOTFIS
+    Base_Desktop.Screenshot 	Importação de Dados do Projeto EDI Transporte (NOTFIS - Dados de Notas Fiscais) (1)                              ${Caminho_Screenshots}Importação NOTFIS
     RPA.Windows.Click       OK                             
     Fechar Janela
 
@@ -35,7 +35,7 @@ Exportação CONEMB (ERRO)
     [Tags]   SmokeERP   Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação CONEMB
     RPA.Windows.Get Text    bbbbb 
-    BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação CONEMB
+    Base_Desktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação CONEMB
     Fechar Janela
 
 Exportação DOCCOB (ERRO)
@@ -43,7 +43,7 @@ Exportação DOCCOB (ERRO)
     [Tags]   SmokeERP   Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação DOCCOB
     RPA.Windows.Get Text    bbbbb 
-    BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação DOCCOB
+    Base_Desktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação DOCCOB
     Fechar Janela
 
 Exportação OCOREN (ERRO)
@@ -51,5 +51,5 @@ Exportação OCOREN (ERRO)
     [Tags]   SmokeERP   Frotas   Projeto EDI Transportes   SmokeTest
     Projeto EDI Transportes                  Exportação OCOREN
     RPA.Windows.Get Text    bbbbb 
-    BaseKeywordsDesktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação OCOREN
+    Base_Desktop.Screenshot  bbbbb                              ${Caminho_Screenshots}Exportação OCOREN
     Fechar Janela

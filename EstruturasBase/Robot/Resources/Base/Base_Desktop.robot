@@ -514,7 +514,7 @@ Pegar Hora atual
     [Arguments]    ${tempo}
     ${tempo1_split}=    Split String    ${tempo}    ${SPACE}
     ${hora_minuto_segundo1}=    Get From List    ${tempo1_split}    1 
-    ${tempo_final1}=    Somar Tempos    ${hora_minuto_segundo1}    00:00:00
+    ${tempo_final1}=    Somar Tempos    ${hora_minuto_segundo1}    00:00:10
     RETURN    ${tempo_final1}
 
 Dividir Texto
@@ -585,7 +585,7 @@ Pegar informações da 1° Pagina do arquivo
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
     Sleep                     6s
     RPA.Windows.Get Element   ${Nome_da_tela}
-    BaseKeywordsDesktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
+    Base_Desktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}  
     ${keys}=                  Get Dictionary Keys    ${texto}
     ${primeira}=              Get From List          ${keys}    0

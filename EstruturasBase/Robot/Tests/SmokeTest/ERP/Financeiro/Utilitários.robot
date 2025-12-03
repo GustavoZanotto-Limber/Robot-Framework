@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -24,7 +24,7 @@ Favoritos
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
+    Base_Desktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
     RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar
 
@@ -35,7 +35,7 @@ Papel de Parede
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
-    BaseKeywordsDesktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
+    Base_Desktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Pincipal
@@ -46,7 +46,7 @@ Configurar Menu Pincipal
     RPA.Windows.Get Text    Configurador de Menus (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
+    Base_Desktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -57,7 +57,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
+    Base_Desktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     Fechar com Sim
 
 Estilo do Menu Principal
@@ -67,7 +67,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
     RPA.Windows.Click       Standard
-    BaseKeywordsDesktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
+    Base_Desktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
@@ -77,7 +77,7 @@ Controle de Acessos
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
     RPA.Windows.Click       Confirmar
-    BaseKeywordsDesktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
+    Base_Desktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -89,7 +89,7 @@ Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
+    Base_Desktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
@@ -102,7 +102,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Windows.Get Text    Cadastro de Categoria (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
+    Base_Desktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -116,7 +116,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Click       Confirmar
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
-    BaseKeywordsDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
+    Base_Desktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -129,7 +129,7 @@ Configurador de Impressões > Relatórios > Contas a Pagar
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Configurador de Impressões - Contas a Pagar (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Contas a Pagar (1)    ${Caminho_Screenshots}Configurador de Impressões/Relatórios/Contas a Pagar
+    Base_Desktop.Screenshot  Configurador de Impressões - Contas a Pagar (1)    ${Caminho_Screenshots}Configurador de Impressões/Relatórios/Contas a Pagar
     Fechar com Sim
 
 Configurador de Impressões > Relatórios > Contas a Receber
@@ -141,7 +141,7 @@ Configurador de Impressões > Relatórios > Contas a Receber
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Configurador de Impressões - Contas a Receber (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Contas a Receber (1)    ${Caminho_Screenshots}Configurador de Impressões/Relatórios/Contas a Receber
+    Base_Desktop.Screenshot  Configurador de Impressões - Contas a Receber (1)    ${Caminho_Screenshots}Configurador de Impressões/Relatórios/Contas a Receber
     Fechar com Sim
 
 Configurador de Impressões > Recibos > Contas a Pagar
@@ -153,7 +153,7 @@ Configurador de Impressões > Recibos > Contas a Pagar
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Configurador de Impressões - Recibo Contas a Pagar (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Recibo Contas a Pagar (1)    ${Caminho_Screenshots}Configurador de Impressões/Recibos/Contas a Pagar
+    Base_Desktop.Screenshot  Configurador de Impressões - Recibo Contas a Pagar (1)    ${Caminho_Screenshots}Configurador de Impressões/Recibos/Contas a Pagar
     Fechar com Sim
 
 Configurador de Impressões > Recibos > Contas a Receber
@@ -165,7 +165,7 @@ Configurador de Impressões > Recibos > Contas a Receber
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Configurador de Impressões - Recibo Contas a Receber (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Recibo Contas a Receber (1)    ${Caminho_Screenshots}Configurador de Impressões/Recibos/Contas a Receber
+    Base_Desktop.Screenshot  Configurador de Impressões - Recibo Contas a Receber (1)    ${Caminho_Screenshots}Configurador de Impressões/Recibos/Contas a Receber
     Fechar com Sim
 
 Verificar Transações Abertas
@@ -175,7 +175,7 @@ Verificar Transações Abertas
     RPA.Windows.Click       Verificar Transações Abertas
     RPA.Windows.Get Text    Verificar Transações Abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
+    Base_Desktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
     Fechar janela
 
 Configurar de Dup/Boletos/Carnês
@@ -185,7 +185,7 @@ Configurar de Dup/Boletos/Carnês
     RPA.Windows.Click       Configurar de Dup/Boletos/Carnês
     RPA.Windows.Get Text    Configuração de Duplicatas/Carnes/Boletos (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configuração de Duplicatas/Carnes/Boletos (1)    ${Caminho_Screenshots}Configurar de Dup_Boletos_Carnês
+    Base_Desktop.Screenshot  Configuração de Duplicatas/Carnes/Boletos (1)    ${Caminho_Screenshots}Configurar de Dup_Boletos_Carnês
     Fechar com Sim
 
 Importador Extrato Bancário (OFX)
@@ -196,7 +196,7 @@ Importador Extrato Bancário (OFX)
     RPA.Windows.Get Text    Importador Extrato Bancário (OFX) (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Importador Extrato Bancário (OFX) (1)    ${Caminho_Screenshots}Importador Extrato Bancário (OFX)
+    Base_Desktop.Screenshot  Importador Extrato Bancário (OFX) (1)    ${Caminho_Screenshots}Importador Extrato Bancário (OFX)
     RPA.Windows.Click       Confirmar
     RPA.Windows.Click       OK
     Fechar janela
@@ -209,7 +209,7 @@ Arquivo Relato - Serasa
     RPA.Windows.Click       Arquivo Relato - Serasa
     RPA.Windows.Get Text    ARQUIVO RELATO - SERASA (1)
     RPA.Windows.Click       Gerar
-    BaseKeywordsDesktop.Screenshot  ARQUIVO RELATO - SERASA (1)    ${Caminho_Screenshots}Arquivo Relato - Serasa
+    Base_Desktop.Screenshot  ARQUIVO RELATO - SERASA (1)    ${Caminho_Screenshots}Arquivo Relato - Serasa
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -221,7 +221,7 @@ Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseKeywordsDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
+    Base_Desktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -233,7 +233,7 @@ Faturamento de Agências - Bilheteria > Geração de Faturas
     RPA.Desktop.Press Keys  G
     RPA.Windows.Get Text    Faturamento de Agências (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Faturamento de Agências (1)    ${Caminho_Screenshots}Faturamento de Agências - Bilheteria/Geração de Faturas
+    Base_Desktop.Screenshot  Faturamento de Agências (1)    ${Caminho_Screenshots}Faturamento de Agências - Bilheteria/Geração de Faturas
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -245,7 +245,7 @@ Faturamento de Agências - Bilheteria > Estorno de Faturas
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Estorno de Faturas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Estorno de Faturas (1)    ${Caminho_Screenshots}Faturamento de Agências - Bilheteria/Estorno de Faturas
+    Base_Desktop.Screenshot  Estorno de Faturas (1)    ${Caminho_Screenshots}Faturamento de Agências - Bilheteria/Estorno de Faturas
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -256,7 +256,7 @@ Cadastro de Bilheterias
     RPA.Windows.Click       Cadastro de Bilheterias
     RPA.Windows.Get Text    Cadastro de Bilheterias (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Bilheterias (1)    ${Caminho_Screenshots}Cadastro de Bilheterias
+    Base_Desktop.Screenshot  Cadastro de Bilheterias (1)    ${Caminho_Screenshots}Cadastro de Bilheterias
     Fechar com Sim
 
 Liberações Contratos de Serviços
@@ -266,7 +266,7 @@ Liberações Contratos de Serviços
     RPA.Windows.Click       Liberações Contratos de Serviços
     RPA.Windows.Get Text    Liberações Contratos de Serviços (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Liberações Contratos de Serviços (1)    ${Caminho_Screenshots}Liberações Contratos de Serviços
+    Base_Desktop.Screenshot  Liberações Contratos de Serviços (1)    ${Caminho_Screenshots}Liberações Contratos de Serviços
     Fechar com Sim
 
 Processos Personalizados
@@ -276,7 +276,7 @@ Processos Personalizados
     RPA.Windows.Click       Processos Personalizados
     RPA.Windows.Get Text    Processos Personalizados (1)
     RPA.Windows.Click       Cadastrar Novo Processo
-    BaseKeywordsDesktop.Screenshot  Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
+    Base_Desktop.Screenshot  Processos Personalizados (1)    ${Caminho_Screenshots}Processos Personalizados
     RPA.Windows.Click       Fechar
     Fechar janela
 
@@ -289,7 +289,7 @@ Relatório de Análise de Veículos
     RPA.Desktop.Press Keys  tab
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseKeywordsDesktop.Screenshot  Relatório de Análise de Veículos (1)    ${Caminho_Screenshots}Relatório de Análise de Veículos
+    Base_Desktop.Screenshot  Relatório de Análise de Veículos (1)    ${Caminho_Screenshots}Relatório de Análise de Veículos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -301,7 +301,7 @@ Importação de Planilha Excel Personalizada
     RPA.Windows.Get Text    Importação de Planilha Excel Personalizada (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseKeywordsDesktop.Screenshot  Importação de Planilha Excel Personalizada (1)    ${Caminho_Screenshots}Importação de Planilha Excel Personalizada
+    Base_Desktop.Screenshot  Importação de Planilha Excel Personalizada (1)    ${Caminho_Screenshots}Importação de Planilha Excel Personalizada
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -313,7 +313,7 @@ Bilheteria > Cadastro de Tipos de Receita
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Cadastro de Tipos de Receita (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Tipos de Receita (1)    ${Caminho_Screenshots}Bilheteria/Cadastro de Tipos de Receita
+    Base_Desktop.Screenshot  Cadastro de Tipos de Receita (1)    ${Caminho_Screenshots}Bilheteria/Cadastro de Tipos de Receita
     Fechar com Sim
 
 Bilheteria > Config. Plano Contas X Produtos
@@ -326,7 +326,7 @@ Bilheteria > Config. Plano Contas X Produtos
     repetidor de teclas    Tab                                4
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configuração Geração de Receitas Plano de Contas Produto (1)    ${Caminho_Screenshots}Bilheteria/Config. Plano Contas X Produtos
+    Base_Desktop.Screenshot  Configuração Geração de Receitas Plano de Contas Produto (1)    ${Caminho_Screenshots}Bilheteria/Config. Plano Contas X Produtos
     RPA.Windows.Click       Confirmar
     Fechar com Sim
     RPA.Windows.Click       OK
@@ -342,7 +342,7 @@ Bilheteria > Config. Tipo Receita Trib.
     repetidor de teclas    Tab                                4
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configuração Tipo Receita Produto Geração de Receitas (1)    ${Caminho_Screenshots}Bilheteria/Config. Tipo Receita Trib.
+    Base_Desktop.Screenshot  Configuração Tipo Receita Produto Geração de Receitas (1)    ${Caminho_Screenshots}Bilheteria/Config. Tipo Receita Trib.
     RPA.Windows.Click       Confirmar
     Fechar com Sim
     RPA.Windows.Click       OK

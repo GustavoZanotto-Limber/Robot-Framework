@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
-Resource          ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource          ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -26,7 +26,7 @@ Consultas Personalizadas
     Consultas               Consultas Personalizadas
     RPA.Windows.Get Text   	Consultas Personalizadas (1) 
     RPA.Windows.Click       Cadastrar Nova Consulta
-    BaseKeywordsDesktop.Screenshot 	Consultas Personalizadas (1)                              ${Caminho_Screenshots}Consultas Personalizadas
+    Base_Desktop.Screenshot 	Consultas Personalizadas (1)                              ${Caminho_Screenshots}Consultas Personalizadas
     RPA.Windows.Click       Sair
     Fechar Janela
 
@@ -36,7 +36,7 @@ Consulta de Pneus
     Consultas               Consulta de Pneus
     RPA.Windows.Get Text    Consulta de Pneus (1) 
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Consulta de Pneus (1)                              ${Caminho_Screenshots}Consulta de Pneus
+    Base_Desktop.Screenshot  Consulta de Pneus (1)                              ${Caminho_Screenshots}Consulta de Pneus
     RPA.Windows.Click       Fechar
 
 Consulta de Avisos (ERRO)
@@ -44,7 +44,7 @@ Consulta de Avisos (ERRO)
     [Tags]   SmokeERP   Frotas   Consultas   SmokeTest    
     Consultas               Consulta de Avisos
     RPA.Windows.Get Text    Consulta de Avisos (1) 
-    BaseKeywordsDesktop.Screenshot  Consulta de Avisos (1)                              ${Caminho_Screenshots}Consulta de Avisos
+    Base_Desktop.Screenshot  Consulta de Avisos (1)                              ${Caminho_Screenshots}Consulta de Avisos
     Fechar Janela
 
 Consulta de Receitas e Despesas
@@ -54,7 +54,7 @@ Consulta de Receitas e Despesas
     RPA.Windows.Get Text   	Consulta de Receitas e Despesas (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot 	Consulta de Receitas e Despesas (1)                              ${Caminho_Screenshots}Consulta de Receitas e Despesas
+    Base_Desktop.Screenshot 	Consulta de Receitas e Despesas (1)                              ${Caminho_Screenshots}Consulta de Receitas e Despesas
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -65,7 +65,7 @@ Consulta de Mov. de Veículos
     RPA.Windows.Get Text   	Consulta de Movimentação de Veículos (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot 	Consulta de Movimentação de Veículos (1)                              ${Caminho_Screenshots}Consulta de Mov. de Veículos
+    Base_Desktop.Screenshot 	Consulta de Movimentação de Veículos (1)                              ${Caminho_Screenshots}Consulta de Mov. de Veículos
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -78,7 +78,7 @@ Consulta de Infrações de Trânsito
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Click       Confirmar
-    BaseKeywordsDesktop.Screenshot 	Consulta de Infrações de Trânsito (1)                              ${Caminho_Screenshots}Consulta de Infrações de Trânsito
+    Base_Desktop.Screenshot 	Consulta de Infrações de Trânsito (1)                              ${Caminho_Screenshots}Consulta de Infrações de Trânsito
     Fechar Janela
 
 Consulta de Abastecimentos(PoliFrotas)
@@ -90,7 +90,7 @@ Consulta de Abastecimentos(PoliFrotas)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Click       Confirmar
-    BaseKeywordsDesktop.Screenshot 	Consulta de Abastecidas PoliFrotas (1)                              ${Caminho_Screenshots}Consulta de Abastecimentos(PoliFrotas)
+    Base_Desktop.Screenshot 	Consulta de Abastecidas PoliFrotas (1)                              ${Caminho_Screenshots}Consulta de Abastecimentos(PoliFrotas)
     RPA.Windows.Click       Fechar
 
 Consulta de Conhecimento de Transporte
@@ -101,6 +101,6 @@ Consulta de Conhecimento de Transporte
     repetidor de teclas     tab      3
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot 	Consulta de Conhecimento de Transporte (1)                             ${Caminho_Screenshots}Consulta de Conhecimento de Transporte
+    Base_Desktop.Screenshot 	Consulta de Conhecimento de Transporte (1)                             ${Caminho_Screenshots}Consulta de Conhecimento de Transporte
     RPA.Windows.Click       Confirmar
     Fechar Janela

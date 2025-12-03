@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Testes regressivos: Impressão de Bilhete e Reimpressão de bilhetes
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
-Resource         ../../../../Resources/BDD/BDDKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
+Resource         ../../../../Resources/BDD/BDD_Desktop.robot
 Suite Setup      Iniciar Suite
 Suite Teardown   Encerrar Tudo    
 Test Teardown    Encerrar Cenário    ${nome_print}    ${nome_exe}

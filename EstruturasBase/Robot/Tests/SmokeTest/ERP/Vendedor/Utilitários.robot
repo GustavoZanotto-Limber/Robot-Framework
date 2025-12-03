@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Vendedor
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -26,7 +26,7 @@ Favoritos
     Utilitários             Favoritos       
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
+    Base_Desktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
     RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar
     
@@ -36,7 +36,7 @@ Papel de Parede
     Utilitários             Papel de Parede     
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
-    BaseKeywordsDesktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
+    Base_Desktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
     RPA.Windows.Click       Fechar
 
 Estilo do Menu Principal
@@ -45,7 +45,7 @@ Estilo do Menu Principal
     Utilitários             Estilo do Menu Principal       
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
     RPA.Windows.Click       Standard
-    BaseKeywordsDesktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
+    Base_Desktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
@@ -54,7 +54,7 @@ Controle de Acessos
     Utilitários             Controle de Acessos   
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
     RPA.Windows.Click       Confirmar
-    BaseKeywordsDesktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
+    Base_Desktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -65,7 +65,7 @@ Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
+    Base_Desktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
@@ -77,7 +77,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Windows.Get Text    Cadastro de Categoria (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
+    Base_Desktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar janela
     
@@ -89,7 +89,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
-    BaseKeywordsDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
+    Base_Desktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar janela
     
@@ -99,5 +99,5 @@ Verificar Transações Abertas
     Utilitários             Verificar Transações Abertas  
     RPA.Windows.Get Text    Verificar Transações Abertas (1)
     RPA.Windows.Click      Carregar
-    BaseKeywordsDesktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
+    Base_Desktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
     Fechar janela

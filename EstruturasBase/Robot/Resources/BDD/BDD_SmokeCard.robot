@@ -9,7 +9,7 @@ Library    String
 Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\Robot\\ScreenShots\\Selenium
 Library    Collections
 Library    RPA.PDF
-Resource   ../Base/BaseKeywordsCARD.robot
+Resource   ../Base/Base_CARD.robot
 
 
 *** Variables ***

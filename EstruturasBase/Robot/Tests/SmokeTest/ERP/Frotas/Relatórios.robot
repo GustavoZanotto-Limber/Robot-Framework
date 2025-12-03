@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
-Resource          ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource          ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -31,7 +31,7 @@ CT-e > CT-e Emitidos
     repetidor de teclas     tab      2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot 	Relatório de CT'es Emitidos (1)                              ${Caminho_Screenshots}CT-e\CT-e Emitidos
+    Base_Desktop.Screenshot 	Relatório de CT'es Emitidos (1)                              ${Caminho_Screenshots}CT-e\CT-e Emitidos
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -43,7 +43,7 @@ CT-e > CT-e Inutilizados
     RPA.Windows.Get Text    Relatório de Conhecimento de Transporte Inutilizados (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Relatório de Conhecimento de Transporte Inutilizados (1)                              ${Caminho_Screenshots}CT-e\CT-e Inutilizados
+    Base_Desktop.Screenshot  Relatório de Conhecimento de Transporte Inutilizados (1)                              ${Caminho_Screenshots}CT-e\CT-e Inutilizados
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -55,7 +55,7 @@ Jornada de Trabalho
     RPA.Desktop.Press Keys  Shift    tab
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Controle de Horário de Trabalho Externo (1)                              ${Caminho_Screenshots}Jornada de Trabalho
+    Base_Desktop.Screenshot  Controle de Horário de Trabalho Externo (1)                              ${Caminho_Screenshots}Jornada de Trabalho
     RPA.Windows.Click       Confirmar
     RPA.Windows.Click       Fechar
 
@@ -66,7 +66,7 @@ Viagens
     RPA.Windows.Get Text    Relatório de Viagens (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Relatório de Viagens (1)                              ${Caminho_Screenshots}Viagens
+    Base_Desktop.Screenshot  Relatório de Viagens (1)                              ${Caminho_Screenshots}Viagens
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -77,7 +77,7 @@ Ordem de Serviço
     RPA.Windows.Get Text    Relatório de Ordens de Serviços (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Relatório de Ordens de Serviços (1)                              ${Caminho_Screenshots}Ordem de Serviço
+    Base_Desktop.Screenshot  Relatório de Ordens de Serviços (1)                              ${Caminho_Screenshots}Ordem de Serviço
     RPA.Windows.Click       Confirmar
     RPA.Windows.Click       OK
     Fechar Janela
@@ -89,7 +89,7 @@ Check-list
     RPA.Windows.Get Text    Relatório Checklist (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Relatório Checklist (1)                              ${Caminho_Screenshots}Check-list
+    Base_Desktop.Screenshot  Relatório Checklist (1)                              ${Caminho_Screenshots}Check-list
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -100,7 +100,7 @@ Abastecimentos
     RPA.Windows.Get Text    Relatório de Abastecimentos (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Relatório de Abastecimentos (1)                              ${Caminho_Screenshots}Abastecimentos
+    Base_Desktop.Screenshot  Relatório de Abastecimentos (1)                              ${Caminho_Screenshots}Abastecimentos
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -112,7 +112,7 @@ Pneus > Pneus (ERRO)
     RPA.Windows.Get Text    Relatório de Pneus $ESPAÇO(1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Relatório de Pneus $ESPAÇO(1)                              ${Caminho_Screenshots}Pneus\Pneus
+    Base_Desktop.Screenshot  Relatório de Pneus $ESPAÇO(1)                              ${Caminho_Screenshots}Pneus\Pneus
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -124,7 +124,7 @@ Pneus > Estoque de Pneus
     RPA.Windows.Get Text    Relatório de Estoque de Pneus (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Relatório de Estoque de Pneus (1)                              ${Caminho_Screenshots}Pneus\Estoque de Pneus
+    Base_Desktop.Screenshot  Relatório de Estoque de Pneus (1)                              ${Caminho_Screenshots}Pneus\Estoque de Pneus
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -137,7 +137,7 @@ Pneus > Histórico de Movimentações
     repetidor de teclas     tab      2
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Histórico de Movimentações (1)                              ${Caminho_Screenshots}Pneus\Histórico de Movimentações
+    Base_Desktop.Screenshot  Histórico de Movimentações (1)                              ${Caminho_Screenshots}Pneus\Histórico de Movimentações
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -149,7 +149,7 @@ Resumo Frotas
     repetidor de teclas     tab      1
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Resumo de Frota (1)                              ${Caminho_Screenshots}Resumo Frotas
+    Base_Desktop.Screenshot  Resumo de Frota (1)                              ${Caminho_Screenshots}Resumo Frotas
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -161,7 +161,7 @@ Relatório de Alertas
     repetidor de teclas     tab      3
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Relatório De Alertas (1)                              ${Caminho_Screenshots}Relatório de Alertas
+    Base_Desktop.Screenshot  Relatório De Alertas (1)                              ${Caminho_Screenshots}Relatório de Alertas
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -172,7 +172,7 @@ Fechamento de Viagem
     RPA.Windows.Get Text    Relatório de Fechamento de Viagens (1) 
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Relatório de Fechamento de Viagens (1)                              ${Caminho_Screenshots}Fechamento de Viagem
+    Base_Desktop.Screenshot  Relatório de Fechamento de Viagens (1)                              ${Caminho_Screenshots}Fechamento de Viagem
     RPA.Windows.Click       Confirmar
     RPA.Windows.Click       OK
     Fechar Janela

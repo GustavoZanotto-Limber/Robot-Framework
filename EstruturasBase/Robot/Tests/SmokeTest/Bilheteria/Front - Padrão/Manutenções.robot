@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Front
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao     ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -26,7 +26,7 @@ Emissão de Bilhetes
     Sleep                     10s
     RPA.Windows.Get Text      Emissão de Bilhetes (1)
     RPA.Windows.Click         (F8) Novo
-    BaseKeywordsDesktop.Screenshot    Emissão de Bilhetes (1)    ${Caminho_Screenshots}Emissão de Bilhetes
+    Base_Desktop.Screenshot    Emissão de Bilhetes (1)    ${Caminho_Screenshots}Emissão de Bilhetes
     Fechar janela
     Sleep                     1s
     RPA.Windows.Click         Sim
@@ -39,7 +39,7 @@ Reimpressão de Bilhetes
     RPA.Windows.Get Text    Reimpressão de Bilhetes (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Reimpressão de Bilhetes (1)    ${Caminho_Screenshots}Reimpressão de Bilhetes
+    Base_Desktop.Screenshot  Reimpressão de Bilhetes (1)    ${Caminho_Screenshots}Reimpressão de Bilhetes
     RPA.Windows.Click       Fechar
     Fechar janela
 
@@ -54,7 +54,7 @@ Cancelamentos de Bilhetes
     RPA.Desktop.Press Keys  Enter
     Sleep                   1s
     RPA.Windows.Click       Cancelar
-    BaseKeywordsDesktop.Screenshot  Cancelamento de Bilhetes (1)   ${Caminho_Screenshots}Cancelamento de Bilhetes
+    Base_Desktop.Screenshot  Cancelamento de Bilhetes (1)   ${Caminho_Screenshots}Cancelamento de Bilhetes
     RPA.Windows.Click       Fechar
 
 Remarcações de Visitas
@@ -65,7 +65,7 @@ Remarcações de Visitas
     Sleep                   4s
     RPA.Windows.Get Text    Remarcação de Vendas
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Remarcação de Vendas     ${Caminho_Screenshots}Remarcações de Visitas
+    Base_Desktop.Screenshot  Remarcação de Vendas     ${Caminho_Screenshots}Remarcações de Visitas
     RPA.Windows.Click       Fechar
 
 Reservas -> Lançamentos
@@ -76,7 +76,7 @@ Reservas -> Lançamentos
     RPA.Desktop.Press Keys    l
     RPA.Windows.Get Text      Lançamento de Reservas (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Lançamento de Reservas (1)    ${Caminho_Screenshots}Reservas/Lançamento de Reservas
+    Base_Desktop.Screenshot    Lançamento de Reservas (1)    ${Caminho_Screenshots}Reservas/Lançamento de Reservas
     Fechar com Sim
 
 Reservas -> Cancelamento
@@ -88,7 +88,7 @@ Reservas -> Cancelamento
     RPA.Windows.Get Text    Cancelamento de Reservas (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Cancelamento de Reservas (1)    ${Caminho_Screenshots}Reservas/Cancelamento de Reservas
+    Base_Desktop.Screenshot  Cancelamento de Reservas (1)    ${Caminho_Screenshots}Reservas/Cancelamento de Reservas
     RPA.Windows.Click       Fechar
     Fechar janela
 
@@ -101,7 +101,7 @@ Reservas -> Alteração
     RPA.Windows.Get Text      Alteração de Reservas/Isenções/Web (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Alteração de Reservas/Isenções/Web (1)    ${Caminho_Screenshots}Reservas/Alteração de Reservas
+    Base_Desktop.Screenshot  Alteração de Reservas/Isenções/Web (1)    ${Caminho_Screenshots}Reservas/Alteração de Reservas
     RPA.Windows.Click       Fechar
     Fechar janela
 
@@ -114,7 +114,7 @@ Reservas -> Remarcação de Visitas
     Sleep                     2s
     RPA.Windows.Get Text      Consulta de Reservas (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Consulta de Reservas (1)    ${Caminho_Screenshots}Reservas/Remarcação de Visitas
+    Base_Desktop.Screenshot    Consulta de Reservas (1)    ${Caminho_Screenshots}Reservas/Remarcação de Visitas
     RPA.Windows.Click         Fechar
 
 Lançamento de Isenções
@@ -124,7 +124,7 @@ Lançamento de Isenções
     RPA.Windows.Click       Lançamento de Isenções
     RPA.Windows.Get Text    Lançamento de Isenção (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Lançamento de Isenção (1)    ${Caminho_Screenshots}Lançamento de Isenções
+    Base_Desktop.Screenshot  Lançamento de Isenção (1)    ${Caminho_Screenshots}Lançamento de Isenções
     Fechar com Sim
 
 
@@ -136,7 +136,7 @@ Lançamento de Veículos
     RPA.Windows.Get Text    Lançamento de Veiculos (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Lançamento de Veiculos (1)    ${Caminho_Screenshots}Lançamento de Veículos
+    Base_Desktop.Screenshot  Lançamento de Veiculos (1)    ${Caminho_Screenshots}Lançamento de Veículos
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -148,7 +148,7 @@ Lançamento de Vouchers Pendentes
     Sleep                   1s
     RPA.Windows.Get Text    Alteração de Vouchers Bilhete
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Alteração de Vouchers Bilhete       ${Caminho_Screenshots}Lançamento de Vouchers Pendentes
+    Base_Desktop.Screenshot  Alteração de Vouchers Bilhete       ${Caminho_Screenshots}Lançamento de Vouchers Pendentes
     RPA.Windows.Click       Fechar
 
 Comissões de Guias -> Pagamento
@@ -159,7 +159,7 @@ Comissões de Guias -> Pagamento
     RPA.Desktop.Press Keys    p
     RPA.Windows.Get Text      Comissões de Guias (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Comissões de Guias (1)    ${Caminho_Screenshots}Pagamento
+    Base_Desktop.Screenshot    Comissões de Guias (1)    ${Caminho_Screenshots}Pagamento
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -171,7 +171,7 @@ Comissões de Guias -> Estorno
     RPA.Desktop.Press Keys    e
     RPA.Windows.Get Text      Estorno de Comissões (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Estorno de Comissões (1)    ${Caminho_Screenshots}Estorno
+    Base_Desktop.Screenshot    Estorno de Comissões (1)    ${Caminho_Screenshots}Estorno
     Fechar janela
 
 Comissões de Guias -> Vincular Guia em Venda
@@ -182,7 +182,7 @@ Comissões de Guias -> Vincular Guia em Venda
     RPA.Desktop.Press Keys    v
     RPA.Windows.Get Text      Vincular Guia em Venda (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Vincular Guia em Venda (1)    ${Caminho_Screenshots}Vincular Guia em Venda
+    Base_Desktop.Screenshot    Vincular Guia em Venda (1)    ${Caminho_Screenshots}Vincular Guia em Venda
     Fechar janela
 
 Comissões de Guias -> Relatório
@@ -194,7 +194,7 @@ Comissões de Guias -> Relatório
     RPA.Windows.Get Text      Relatório de Comissões (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot    Relatório de Comissões (1)    ${Caminho_Screenshots}Relatório
+    Base_Desktop.Screenshot    Relatório de Comissões (1)    ${Caminho_Screenshots}Relatório
     RPA.Windows.Click       Fechar
     Fechar janela
 
@@ -205,7 +205,7 @@ Consulta/Manutenção Consumo Interno
     RPA.Windows.Click       Consulta/Manutenção Consumo Interno
     RPA.Windows.Get Text    Consulta da Movimentação de Crédito Interno (1)
     RPA.Windows.Click       Carregar Dados
-    BaseKeywordsDesktop.Screenshot  Consulta da Movimentação de Crédito Interno (1)    ${Caminho_Screenshots}Consulta/Manutenção Consumo Interno
+    Base_Desktop.Screenshot  Consulta da Movimentação de Crédito Interno (1)    ${Caminho_Screenshots}Consulta/Manutenção Consumo Interno
     Fechar janela
 
 Bloqueio/Desbloqueio Consumo Interno
@@ -215,7 +215,7 @@ Bloqueio/Desbloqueio Consumo Interno
     RPA.Windows.Click       Bloqueio/Desbloqueio Consumo Interno
     RPA.Windows.Get Text    Bloqueio/Desbloqueio de RFID (1)
     RPA.Windows.Click       Carregar Dados
-    BaseKeywordsDesktop.Screenshot  Bloqueio/Desbloqueio de RFID (1)    ${Caminho_Screenshots}Bloqueio/Desbloqueio Consumo Interno
+    Base_Desktop.Screenshot  Bloqueio/Desbloqueio de RFID (1)    ${Caminho_Screenshots}Bloqueio/Desbloqueio Consumo Interno
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -226,7 +226,7 @@ Devoluções de Vendas
     RPA.Windows.Click       Devoluções de Vendas
     RPA.Windows.Get Text    Devolução de Vendas (1)
     RPA.Windows.Click       (F5) Confirmar
-    BaseKeywordsDesktop.Screenshot  Devolução de Vendas (1)    ${Caminho_Screenshots}Devoluções de Vendas
+    Base_Desktop.Screenshot  Devolução de Vendas (1)    ${Caminho_Screenshots}Devoluções de Vendas
     Fechar janela
 
 Configurações Totem
@@ -236,7 +236,7 @@ Configurações Totem
     RPA.Windows.Click       Configurações Totem
     RPA.Windows.Get Text    Configurações Totem (1)
     RPA.Windows.Click       Categorias
-    BaseKeywordsDesktop.Screenshot  Configurações Totem (1)    ${Caminho_Screenshots}Configurações Totem
+    Base_Desktop.Screenshot  Configurações Totem (1)    ${Caminho_Screenshots}Configurações Totem
     Fechar janela
 
 

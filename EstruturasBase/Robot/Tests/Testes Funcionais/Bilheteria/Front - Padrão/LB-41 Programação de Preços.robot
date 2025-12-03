@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Testes regressivos: Programação de Preços
-Resource          ../../../../Resources/Base/BaseKeywordsCARD.robot
-Resource          ../../../../Resources/BDD/BDDKeywordsWeb.robot
+Resource          ../../../../Resources/Base/Base_CARD.robot
+Resource          ../../../../Resources/BDD/BDD_Web.robot
 Suite Setup       Abrir CARD e logar 
 Test Teardown     Encerrar Cenário    ${nome_print}    ${Caminho_Screenshots}
 *** Variables ***

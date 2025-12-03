@@ -1,7 +1,7 @@
 
 *** Settings ***
 Documentation    Smoke Test: Corretagem
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -24,7 +24,7 @@ Itens > Itens
     RPA.Desktop.Press Keys    I
     RPA.Windows.Get Text      Cadastro de Itens (1)  
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Itens (1)      ${Caminho_Screenshots}Itens/Itens
+    Base_Desktop.Screenshot    Cadastro de Itens (1)      ${Caminho_Screenshots}Itens/Itens
     Fechar com Sim
 
 Terceiros
@@ -34,7 +34,7 @@ Terceiros
     RPA.Windows.Click         Terceiros
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
+    Base_Desktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
     RPA.Windows.Click         Cancelar (F3)
     Fechar com Sim
 
@@ -48,7 +48,7 @@ Contrato > Configuração de Contrato
     repetidor de teclas       tab    5
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter 
-    BaseKeywordsDesktop.Screenshot    Configuração de Contratos (1)    ${Caminho_Screenshots}Contrato/Configuração de Contrato
+    Base_Desktop.Screenshot    Configuração de Contratos (1)    ${Caminho_Screenshots}Contrato/Configuração de Contrato
     RPA.Windows.Click         Confirmar
     Fechar com Sim
 
@@ -60,7 +60,7 @@ Contrato > Mensagens para Contrato (ERRO)
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Configuração de Mensagens para $ESPAÇOContrato (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Configuração de Mensagens para $ESPAÇOContrato (1)    ${Caminho_Screenshots}Contrato/Mensagens para Contrato
+    Base_Desktop.Screenshot    Configuração de Mensagens para $ESPAÇOContrato (1)    ${Caminho_Screenshots}Contrato/Mensagens para Contrato
     Fechar com Sim
 
 Confirmação de Negócio > Configuração de Confirmação de Negócio
@@ -73,7 +73,7 @@ Confirmação de Negócio > Configuração de Confirmação de Negócio
     repetidor de teclas       tab    5
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter 
-    BaseKeywordsDesktop.Screenshot    Cadastro de Modelo de Impressão de Confirmação de Negócio (1)    ${Caminho_Screenshots}Confirmação de Negócio/Configuração de Confirmação de Negócio
+    Base_Desktop.Screenshot    Cadastro de Modelo de Impressão de Confirmação de Negócio (1)    ${Caminho_Screenshots}Confirmação de Negócio/Configuração de Confirmação de Negócio
     RPA.Windows.Click         Confirmar
     Fechar com Sim
 
@@ -85,7 +85,7 @@ Confirmação de Negócio > Status de Confirmação de Negócio
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Status de Confirmação de Negócio (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Status de Confirmação de Negócio (1)    ${Caminho_Screenshots}Confirmação de Negócio/Status de Confirmação de Negócio
+    Base_Desktop.Screenshot    Cadastro de Status de Confirmação de Negócio (1)    ${Caminho_Screenshots}Confirmação de Negócio/Status de Confirmação de Negócio
     Fechar com Sim
 
 Confirmação de Negócio > Motivos Acrésc/Descontos
@@ -96,7 +96,7 @@ Confirmação de Negócio > Motivos Acrésc/Descontos
     RPA.Desktop.Press Keys    M
     RPA.Windows.Get Text      Cadastro de Motivos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Motivos (1)    ${Caminho_Screenshots}Confirmação de Negócio/Motivos Acrésc_Descontos
+    Base_Desktop.Screenshot    Cadastro de Motivos (1)    ${Caminho_Screenshots}Confirmação de Negócio/Motivos Acrésc_Descontos
     Fechar com Sim
 
 Confirmação de Negócio > Cadastro Tipo de Custos
@@ -107,7 +107,7 @@ Confirmação de Negócio > Cadastro Tipo de Custos
     RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Cadastro Tipo de Custos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro Tipo de Custos (1)    ${Caminho_Screenshots}Confirmação de Negócio/Cadastro Tipo de Custos
+    Base_Desktop.Screenshot    Cadastro Tipo de Custos (1)    ${Caminho_Screenshots}Confirmação de Negócio/Cadastro Tipo de Custos
     Fechar com Sim
 
 Parâmetros > Empresas
@@ -118,7 +118,7 @@ Parâmetros > Empresas
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
+    Base_Desktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
     Fechar com Sim
 
 Parâmetros > Estabelecimentos
@@ -129,7 +129,7 @@ Parâmetros > Estabelecimentos
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
+    Base_Desktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
     Fechar com Sim
 
 Parâmetros > Grupo de Usuários
@@ -140,7 +140,7 @@ Parâmetros > Grupo de Usuários
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
+    Base_Desktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
     Fechar com Sim
 
 Parâmetros > Usuários
@@ -151,5 +151,5 @@ Parâmetros > Usuários
     RPA.Desktop.Press Keys    U
     RPA.Windows.Get Text      Cadastro de Usuários (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
+    Base_Desktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
     Fechar com Sim

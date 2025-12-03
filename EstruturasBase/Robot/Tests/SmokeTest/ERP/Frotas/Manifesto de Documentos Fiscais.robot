@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
-Resource          ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource          ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -26,7 +26,7 @@ Manifesto de Documentos Fiscais (CONFIGURAÇÂO)
     Manifesto de Documentos Fiscais                 Manifesto de Documentos Fiscais
     RPA.Windows.Get Text    Manifesto Eletrônico de Documentos Fiscais (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Manifesto Eletrônico de Documentos Fiscais (1)                             ${Caminho_Screenshots}Manifesto de Documentos Fiscais
+    Base_Desktop.Screenshot  Manifesto Eletrônico de Documentos Fiscais (1)                             ${Caminho_Screenshots}Manifesto de Documentos Fiscais
     Fechar com Sim
 
 Monitor - MDF-E
@@ -36,7 +36,7 @@ Monitor - MDF-E
     RPA.Windows.Get Text    Monitor MDF-e (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Monitor MDF-e (1)                              ${Caminho_Screenshots}Monitor - MDF-E
+    Base_Desktop.Screenshot  Monitor MDF-e (1)                              ${Caminho_Screenshots}Monitor - MDF-E
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -47,5 +47,5 @@ Importar CT-e/NF-e para MDF-e
     RPA.Windows.Get Text    Importador MDF-e (1) 
     RPA.Windows.Click       Marcar Todos
     RPA.Windows.Click       OK
-    BaseKeywordsDesktop.Screenshot  Importador MDF-e (1)                              ${Caminho_Screenshots}Importar CT-e/NF-e para MDF-e
+    Base_Desktop.Screenshot  Importador MDF-e (1)                              ${Caminho_Screenshots}Importar CT-e/NF-e para MDF-e
     Fechar Janela

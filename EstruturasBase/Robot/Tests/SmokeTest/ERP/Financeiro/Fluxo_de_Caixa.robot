@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Financeiro
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -25,7 +25,7 @@ Fluxo de Caixa a Realizar (Projetado)
     RPA.Windows.Click         Fluxo de Caixa a Realizar (Projetado)
     RPA.Windows.Get Text      Fluxo de Caixa Projetado (A Realizar) (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Fluxo de Caixa Projetado (A Realizar) (1)    ${Caminho_Screenshots}Fluxo de Caixa a Realizar (Projetado)
+    Base_Desktop.Screenshot    Fluxo de Caixa Projetado (A Realizar) (1)    ${Caminho_Screenshots}Fluxo de Caixa a Realizar (Projetado)
     RPA.Windows.Click         OK
     Fechar janela
 
@@ -36,6 +36,6 @@ Fluxo de Caixa Realizado
     RPA.Windows.Click         Fluxo de Caixa Realizado
     RPA.Windows.Get Text      Fluxo de Caixa a Realizado (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Fluxo de Caixa a Realizado (1)    ${Caminho_Screenshots}Fluxo de Caixa Realizado
+    Base_Desktop.Screenshot    Fluxo de Caixa a Realizado (1)    ${Caminho_Screenshots}Fluxo de Caixa Realizado
     RPA.Windows.Click         OK
     Fechar janela

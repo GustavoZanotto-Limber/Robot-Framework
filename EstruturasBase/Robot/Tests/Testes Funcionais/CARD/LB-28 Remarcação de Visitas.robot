@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation     Testes regressivos: Impressão de Bilhete
-Resource          ../../../Resources/Base/BaseKeywordsCARD.robot
-Resource          ../../../Resources/BDD/BDDKeywordsWeb.robot
-Resource          ../../../Resources/BDD/BDDRegressivosCARD.robot
+Resource          ../../../Resources/Base/Base_CARD.robot
+Resource          ../../../Resources/BDD/BDD_Web.robot
+Resource          ../../../Resources/BDD/BDD_RegressivosCARD.robot
 Suite Setup       Abrir CARD e logar
 Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}    ${nome_print}    
 

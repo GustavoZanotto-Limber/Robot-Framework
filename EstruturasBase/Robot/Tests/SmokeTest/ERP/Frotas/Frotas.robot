@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Frotas
-Resource          ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource          ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -26,7 +26,7 @@ Lançamento de Viagem
     Frotas                  Lançamento de Viagem    
     RPA.Windows.Get Text    Lançamento de Viagem (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Lançamento de Viagem (1)                             ${Caminho_Screenshots}Lançamento de Viagem
+    Base_Desktop.Screenshot  Lançamento de Viagem (1)                             ${Caminho_Screenshots}Lançamento de Viagem
     Fechar com Sim
 
 Adiantamentos/Devoluções > Adiantamentos
@@ -36,7 +36,7 @@ Adiantamentos/Devoluções > Adiantamentos
     RPA.Desktop.Press Keys  A    
     RPA.Windows.Get Text    Cadastro de Adiantamentos - Motorista (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Adiantamentos - Motorista (1)       ${Caminho_Screenshots}Adiantamentos_Devoluções\Adiantamentos
+    Base_Desktop.Screenshot  Cadastro de Adiantamentos - Motorista (1)       ${Caminho_Screenshots}Adiantamentos_Devoluções\Adiantamentos
     Fechar com Sim
 
 Adiantamentos/Devoluções > Devoluções
@@ -46,7 +46,7 @@ Adiantamentos/Devoluções > Devoluções
     RPA.Desktop.Press Keys  D
     RPA.Windows.Get Text    Cadastro de Devolução - Motorista (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Devolução - Motorista (1)       ${Caminho_Screenshots}Adiantamentos_Devoluções\Devoluções
+    Base_Desktop.Screenshot  Cadastro de Devolução - Motorista (1)       ${Caminho_Screenshots}Adiantamentos_Devoluções\Devoluções
     Fechar com Sim
 
 Acerto de Viagens
@@ -55,7 +55,7 @@ Acerto de Viagens
     Frotas                  Acerto de Viagens
     RPA.Windows.Get Text    Acerto de Viagens (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Acerto de Viagens (1)       ${Caminho_Screenshots}Acerto de Viagens
+    Base_Desktop.Screenshot  Acerto de Viagens (1)       ${Caminho_Screenshots}Acerto de Viagens
     Fechar com Sim
 
 Ordem de Carregamento
@@ -64,7 +64,7 @@ Ordem de Carregamento
     Frotas                  Ordem de carregamento    
     RPA.Windows.Get Text    Ordem de Carregamento (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Ordem de Carregamento (1)                             ${Caminho_Screenshots}Ordem de Carregamento
+    Base_Desktop.Screenshot  Ordem de Carregamento (1)                             ${Caminho_Screenshots}Ordem de Carregamento
     Fechar com Sim
 
 Gerenciamento de Ordem De Carregamento
@@ -75,7 +75,7 @@ Gerenciamento de Ordem De Carregamento
     repetidor de 2 teclas   Shift    tab    9
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Gerenciamento de Ordem de Carregamento (1)                             ${Caminho_Screenshots}Gerenciamento de Ordem De Carregamento
+    Base_Desktop.Screenshot  Gerenciamento de Ordem de Carregamento (1)                             ${Caminho_Screenshots}Gerenciamento de Ordem De Carregamento
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -85,7 +85,7 @@ CRT
     Frotas                  CRT    
     RPA.Windows.Get Text    CRT (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  CRT (1)                             ${Caminho_Screenshots}CRT
+    Base_Desktop.Screenshot  CRT (1)                             ${Caminho_Screenshots}CRT
     Fechar com Sim
 
 Enlastre
@@ -94,7 +94,7 @@ Enlastre
     Frotas                  Enlastre    
     RPA.Windows.Get Text    Enlastre 
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Enlastre                              ${Caminho_Screenshots}Enlastre
+    Base_Desktop.Screenshot  Enlastre                              ${Caminho_Screenshots}Enlastre
     Fechar com Sim
 
 Conferência de Lançamentos de Viagem 
@@ -104,7 +104,7 @@ Conferência de Lançamentos de Viagem
     RPA.Windows.Get Text    Geração de Viagem - Selecionar Registros (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Geração de Viagem - Selecionar Registros (1)                             ${Caminho_Screenshots}Conferência de Lançamentos de Viagem 
+    Base_Desktop.Screenshot  Geração de Viagem - Selecionar Registros (1)                             ${Caminho_Screenshots}Conferência de Lançamentos de Viagem 
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -114,7 +114,7 @@ Revisões Preventivas
     Frotas                  Revisões Preventivas    
     RPA.Windows.Get Text    Manutenção de Revisões Preventivas (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Manutenção de Revisões Preventivas (1)                             ${Caminho_Screenshots}Revisões Preventivas
+    Base_Desktop.Screenshot  Manutenção de Revisões Preventivas (1)                             ${Caminho_Screenshots}Revisões Preventivas
     Fechar com Sim
 
 Lançamentos de Infrações
@@ -124,7 +124,7 @@ Lançamentos de Infrações
     RPA.Windows.Get Text    Infrações de Trânsito (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Infrações de Trânsito (1)                             ${Caminho_Screenshots}Lançamentos de Infrações
+    Base_Desktop.Screenshot  Infrações de Trânsito (1)                             ${Caminho_Screenshots}Lançamentos de Infrações
     RPA.Windows.Click       Confirmar
     Fechar Janela
 
@@ -135,7 +135,7 @@ Agenciamento Transporte > Propostas de Transporte
     RPA.Desktop.Press Keys  P   
     RPA.Windows.Get Text    Proposta (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Proposta (1)                             ${Caminho_Screenshots}Agenciamento Transporte\Propostas de Transporte
+    Base_Desktop.Screenshot  Proposta (1)                             ${Caminho_Screenshots}Agenciamento Transporte\Propostas de Transporte
     Fechar com Sim
 
 Agenciamento Transporte > Pedidos de Transporte
@@ -145,5 +145,5 @@ Agenciamento Transporte > Pedidos de Transporte
     RPA.Desktop.Press Keys  E    
     RPA.Windows.Get Text    Pedido (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Pedido (1)                             ${Caminho_Screenshots}Agenciamento Transporte\Pedidos de Transporte
+    Base_Desktop.Screenshot  Pedido (1)                             ${Caminho_Screenshots}Agenciamento Transporte\Pedidos de Transporte
     Fechar com Sim
