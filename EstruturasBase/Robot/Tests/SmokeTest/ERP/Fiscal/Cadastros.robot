@@ -109,7 +109,7 @@ Mensagem de Notas Fiscais
     ${nome_print}=     Set Variable     Mensagem de Notas Fiscais
     [Tags]   SmokeERP   Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal         
-    RPA.Desktop.Press Keys  E
+    RPA.Desktop.Press Keys  G
     RPA.Windows.Click       Novo
     Base_Desktop.Screenshot  Cadastro de Mensagens de Notas Fiscais (1)    ${Caminho_Screenshots}Fiscal/Mensagem de Notas Fiscais
     Fechar com Sim
@@ -139,7 +139,7 @@ Fiscal > Operações Fiscais
     ${nome_print}=     Set Variable     Operações Fiscais
     [Tags]   SmokeERP   Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
-    RPA.Desktop.Press Keys  A
+    RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Cadastro de Operações Fiscais (1)
     RPA.Windows.Click       Novo
     Base_Desktop.Screenshot  Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Operações Fiscais
@@ -169,7 +169,7 @@ Fiscal > Incidência Contrib Previdenciária
     ${nome_print}=     Set Variable     Incidência Contrib Previdenciária
     [Tags]   SmokeERP   Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
-    RPA.Desktop.Press Keys  N
+    RPA.Desktop.Press Keys  V
     RPA.Windows.Get Text    Cadastro de Incidência Contribuição Previdenciária (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
@@ -517,7 +517,7 @@ Fiscal > Classificações de Serviços Prestado - REINF
     [Tags]   SmokeERP    Fiscal    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
-    RPA.Desktop.Press Keys    V
+    RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Classificações de Serviços Prestados - REINF (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter

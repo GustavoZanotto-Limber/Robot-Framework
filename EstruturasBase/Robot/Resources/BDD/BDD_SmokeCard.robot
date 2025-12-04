@@ -11,16 +11,15 @@ Library    Collections
 Library    RPA.PDF
 Resource   ../Base/Base_CARD.robot
 
-
 *** Variables ***
 ${URL_Card}=    https://testescard.limbersoftware.com.br/
+
 *** Keywords ***
     
 #--------------------------------------------DADO--------------------------------------------
 Dado que estou na página inicial do CARD
     Mudar Página    ${URL_Card}
     Sleep    3s
-
 
 #--------------------------------------------QUANDO--------------------------------------------
     
