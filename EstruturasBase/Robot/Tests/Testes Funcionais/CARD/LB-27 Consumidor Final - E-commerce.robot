@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation     Testes regressivos: Consumidor Final
-Resource          ../../../Resources/Base/BaseKeywordsCARD.robot
-Resource          ../../../Resources/BDD/BDDKeywordsWeb.robot
-Resource          ../../../Resources/BDD/BDDRegressivosCARD.robot
+Resource          ../../../Resources/Base/Base_CARD.robot
+Resource          ../../../Resources/BDD/BDD_Web.robot
+Resource          ../../../Resources/BDD/BDD_RegressivosCARD.robot
 Suite Setup       Abrir CARD e logar
 Test Teardown     Caso aconteca erro WEB    ${Caminho_Screenshots}    ${nome_print}    
 
@@ -72,5 +72,5 @@ Cenário 6: Fale conosco
     @{data_e_hora}=    E posteriormente, na tela de SAC
     Então as perguntas configuradas devem aparecer corretamente na tela de FAQ e SAC    @{data_e_hora}
 
-#Cenario 7 necessita de revisão do passo a passo para automação, a tela de celulares e tablets é mais complexa a realização dos testes
-#O teste que pode ser realizado é apenas o de validação de redirecionamento para a página correta ao clicar no banner
+# Cenario 7 necessita de revisão do passo a passo para automação, a tela de celulares e tablets é mais complexa a realização dos testes
+# O teste que pode ser realizado é apenas o de validação de redirecionamento para a página correta ao clicar no banner

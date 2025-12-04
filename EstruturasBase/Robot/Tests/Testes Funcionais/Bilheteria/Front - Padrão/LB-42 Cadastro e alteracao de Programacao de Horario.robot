@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     Testes regressivos: Cadastro e alteracao de Programacao de Horario
-Resource          ../../../../Resources/Base/BaseKeywordsCARD.robot
-Resource          ../../../../Resources/BDD/BDDKeywordsWeb.robot
+Resource          ../../../../Resources/Base/Base_CARD.robot
+Resource          ../../../../Resources/BDD/BDD_Web.robot
 Suite Setup       Abrir CARD e logar 
 Suite Teardown    Inativar bilhete   ${numero_bilhete}    
 Test Teardown     Caso ocorra erro    ${nome_print}
@@ -39,7 +39,7 @@ Cenário 1: Cadastro de um bilhete por Horario/Vaga
     [Tags]    Testes_Funcionais    LB-42  Regressivos_BIL
     Dado que estou na tela de criação de bilhete
     Quando insiro as informações para um novo cadastro de bilhete 
-    ${numero_bilhete}=    Então valido se o bilhete foi criado corretamente
+    ${numero_bilhete}=  Então valido se o bilhete foi criado corretamente
 
 Cenário 2: Associação de um horario a um bilhete
     ${nome_print}=    Set Variable     Associação de um horario a um bilhete

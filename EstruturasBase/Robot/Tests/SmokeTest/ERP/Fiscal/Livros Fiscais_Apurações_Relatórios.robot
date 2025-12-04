@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Fiscal
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -30,7 +30,7 @@ Livro de Entradas Mensal
     repetidor de teclas       tab      3
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Livro de Entradas (1)    ${Caminho_Screenshots}Livro de Entradas Mensal
+    Base_Desktop.Screenshot    Livro de Entradas (1)    ${Caminho_Screenshots}Livro de Entradas Mensal
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -42,7 +42,7 @@ Livro de Saídas Mensal
     repetidor de teclas       tab      3
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Livro de Saídas (1)    ${Caminho_Screenshots}Livro de Saídas Mensal
+    Base_Desktop.Screenshot    Livro de Saídas (1)    ${Caminho_Screenshots}Livro de Saídas Mensal
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -54,7 +54,7 @@ Livro de Entradas por Período
     repetidor de teclas       tab      3
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Livro de Entradas (1)    ${Caminho_Screenshots}Livro de Entradas por Período
+    Base_Desktop.Screenshot    Livro de Entradas (1)    ${Caminho_Screenshots}Livro de Entradas por Período
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -66,7 +66,7 @@ Livro de Saídas por Período
     repetidor de teclas       tab      3
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Livro de Saídas (1)    ${Caminho_Screenshots}Livro de Saídas por Período
+    Base_Desktop.Screenshot    Livro de Saídas (1)    ${Caminho_Screenshots}Livro de Saídas por Período
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -77,7 +77,7 @@ Livro de Contribuições PIS/COFINS
     RPA.Windows.Get Text      Livro de Contribuições (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Livro de Contribuições (1)    ${Caminho_Screenshots}Livro de Contribuições PIS_COFINS
+    Base_Desktop.Screenshot    Livro de Contribuições (1)    ${Caminho_Screenshots}Livro de Contribuições PIS_COFINS
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -88,7 +88,7 @@ Apuração de ICMS
     RPA.Windows.Get Text      Apuração do ICMS (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Apuração do ICMS (1)    ${Caminho_Screenshots}Apuração de ICMS
+    Base_Desktop.Screenshot    Apuração do ICMS (1)    ${Caminho_Screenshots}Apuração de ICMS
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -99,7 +99,7 @@ Apuração de ICMS-ST
     RPA.Windows.Get Text      Consulta de Obrigações de ICMS-ST (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Consulta de Obrigações de ICMS-ST (1)    ${Caminho_Screenshots}Apuração de ICMS-ST
+    Base_Desktop.Screenshot    Consulta de Obrigações de ICMS-ST (1)    ${Caminho_Screenshots}Apuração de ICMS-ST
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -110,7 +110,7 @@ Apuração do IPI
     RPA.Windows.Get Text      Apuração do IPI (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Apuração do IPI (1)    ${Caminho_Screenshots}Apuração do IPI
+    Base_Desktop.Screenshot    Apuração do IPI (1)    ${Caminho_Screenshots}Apuração do IPI
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -121,7 +121,7 @@ Apuração do FCP
     RPA.Windows.Get Text      Relatório de Apuração FCP (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Relatório de Apuração FCP (1)    ${Caminho_Screenshots}Apuração do FCP
+    Base_Desktop.Screenshot    Relatório de Apuração FCP (1)    ${Caminho_Screenshots}Apuração do FCP
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -132,7 +132,7 @@ Apuração do DIFAL
     RPA.Windows.Get Text      Apuração do Difal (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Apuração do Difal (1)    ${Caminho_Screenshots}Apuração do DIFAL
+    Base_Desktop.Screenshot    Apuração do Difal (1)    ${Caminho_Screenshots}Apuração do DIFAL
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -143,7 +143,7 @@ Apuração do ISS
     RPA.Windows.Get Text      Livro Fiscal do ISS (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Livro Fiscal do ISS (1)    ${Caminho_Screenshots}Apuração do ISS
+    Base_Desktop.Screenshot    Livro Fiscal do ISS (1)    ${Caminho_Screenshots}Apuração do ISS
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -154,7 +154,7 @@ Apuração de Impostos e Contribuições
     RPA.Windows.Get Text      Apuração de Impostos e Contribuições (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Apuração de Impostos e Contribuições (1)    ${Caminho_Screenshots}Apuração de Impostos e Contribuições
+    Base_Desktop.Screenshot    Apuração de Impostos e Contribuições (1)    ${Caminho_Screenshots}Apuração de Impostos e Contribuições
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -165,7 +165,7 @@ Apuração Funrural_Senar_Gilrat
     RPA.Windows.Get Text      Apuração Funrural/Senar/Gilrat (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Apuração Funrural/Senar/Gilrat (1)    ${Caminho_Screenshots}Apuração Funrural_Senar_Gilrat
+    Base_Desktop.Screenshot    Apuração Funrural/Senar/Gilrat (1)    ${Caminho_Screenshots}Apuração Funrural_Senar_Gilrat
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -176,7 +176,7 @@ Apuração de Antecipação de ICMS
     RPA.Windows.Get Text      Apuração de Antecipação do ICMS (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Apuração de Antecipação do ICMS (1)    ${Caminho_Screenshots}Apuração de Antecipação de ICMS
+    Base_Desktop.Screenshot    Apuração de Antecipação do ICMS (1)    ${Caminho_Screenshots}Apuração de Antecipação de ICMS
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -188,7 +188,7 @@ Apuração de Impostos Retidos
     repetidor de teclas       tab      2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Apuração de Impostos Retidos (1)    ${Caminho_Screenshots}Apuração de Impostos Retidos
+    Base_Desktop.Screenshot    Apuração de Impostos Retidos (1)    ${Caminho_Screenshots}Apuração de Impostos Retidos
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         OK
     Fechar janela
@@ -200,7 +200,7 @@ Tabela Ajustes ICMS
     RPA.Windows.Get Text      Tabela Ajustes ICMS (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Tabela Ajustes ICMS (1)    ${Caminho_Screenshots}Tabela Ajustes ICMS
+    Base_Desktop.Screenshot    Tabela Ajustes ICMS (1)    ${Caminho_Screenshots}Tabela Ajustes ICMS
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -212,7 +212,7 @@ Auditor Fiscal
     RPA.Desktop.Press Keys    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Auditor Fiscal (1)    ${Caminho_Screenshots}Auditor Fiscal
+    Base_Desktop.Screenshot    Auditor Fiscal (1)    ${Caminho_Screenshots}Auditor Fiscal
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -224,7 +224,7 @@ Relatório de Impostos dos Produtos (Lei n° 12.741, de 8 de dezembro de 2012)
     repetidor de teclas       tab      2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Relatório de Impostos de Produtos (1)    ${Caminho_Screenshots}Relatório de Impostos dos Produtos (Lei n° 12.741, de 8 de dezembro de 2012)
+    Base_Desktop.Screenshot    Relatório de Impostos de Produtos (1)    ${Caminho_Screenshots}Relatório de Impostos dos Produtos (Lei n° 12.741, de 8 de dezembro de 2012)
     RPA.Windows.Click         Confirmar
     RPA.Windows.Click         OK
     Fechar janela
@@ -236,7 +236,7 @@ Relatório de Ajustes de Documento Fiscal
     RPA.Windows.Get Text      Relatório de Ajustes de Documento Fiscal (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Relatório de Ajustes de Documento Fiscal (1)    ${Caminho_Screenshots}Relatório de Ajustes de Documento Fiscal
+    Base_Desktop.Screenshot    Relatório de Ajustes de Documento Fiscal (1)    ${Caminho_Screenshots}Relatório de Ajustes de Documento Fiscal
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -247,7 +247,7 @@ Termos
     RPA.Windows.Get Text      Termos de Abertura/Encerramento (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Termos de Abertura/Encerramento (1)    ${Caminho_Screenshots}Termos
+    Base_Desktop.Screenshot    Termos de Abertura/Encerramento (1)    ${Caminho_Screenshots}Termos
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -257,7 +257,7 @@ Consultas Personalizadas
     Geração de Arquivos Fiscais                Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
     RPA.Windows.Click         Cadastrar Nova Consulta
-    BaseKeywordsDesktop.Screenshot    Consultas Personalizadas (1)    ${Caminho_Screenshots}Consultas Personalizadas
+    Base_Desktop.Screenshot    Consultas Personalizadas (1)    ${Caminho_Screenshots}Consultas Personalizadas
     RPA.Windows.Click         Sair
     Fechar janela
 
@@ -268,7 +268,7 @@ Consulta Lalur Parte A_B
     RPA.Windows.Get Text      Consulta Lalur A/B (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Consulta Lalur A/B (1)    ${Caminho_Screenshots}Consulta Lalur Parte A_B
+    Base_Desktop.Screenshot    Consulta Lalur A/B (1)    ${Caminho_Screenshots}Consulta Lalur Parte A_B
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -280,6 +280,6 @@ Relatório de Detalhamento de Receitas
     repetidor de teclas       tab      2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Detalhamento de Receitas (1)    ${Caminho_Screenshots}Relatório de Detalhamento de Receitas
+    Base_Desktop.Screenshot    Detalhamento de Receitas (1)    ${Caminho_Screenshots}Relatório de Detalhamento de Receitas
     RPA.Windows.Click         Confirmar
     Fechar janela

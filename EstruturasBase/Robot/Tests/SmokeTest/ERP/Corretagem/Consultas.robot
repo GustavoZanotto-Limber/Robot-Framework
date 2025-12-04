@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Corretagem
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -26,7 +26,7 @@ Consultas Personalizadas
     RPA.Windows.Click         Consultas Personalizadas
     RPA.Windows.Get Text      Consultas Personalizadas (1)
     RPA.Windows.Click         Cadastrar Nova Consulta
-    BaseKeywordsDesktop.Screenshot    Consultas Personalizadas (1)      ${Caminho_Screenshots}Consultas Personalizadas
+    Base_Desktop.Screenshot    Consultas Personalizadas (1)      ${Caminho_Screenshots}Consultas Personalizadas
     RPA.Windows.Click         Fechar
     Fechar janela
 
@@ -37,5 +37,5 @@ Log de Alterações
     RPA.Windows.Click         Log de Alterações
     RPA.Windows.Get Text      Consulta Log de Alterações (1)
     RPA.Windows.Click         Carregar
-    BaseKeywordsDesktop.Screenshot    Consulta Log de Alterações (1)      ${Caminho_Screenshots}Log de Alterações
+    Base_Desktop.Screenshot    Consulta Log de Alterações (1)      ${Caminho_Screenshots}Log de Alterações
     Fechar janela

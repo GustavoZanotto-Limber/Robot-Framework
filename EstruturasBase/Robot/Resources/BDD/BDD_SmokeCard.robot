@@ -9,18 +9,17 @@ Library    String
 Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\Robot\\ScreenShots\\Selenium
 Library    Collections
 Library    RPA.PDF
-Resource   ../Base/BaseKeywordsCARD.robot
-
+Resource   ../Base/Base_CARD.robot
 
 *** Variables ***
 ${URL_Card}=    https://testescard.limbersoftware.com.br/
+
 *** Keywords ***
     
 #--------------------------------------------DADO--------------------------------------------
 Dado que estou na página inicial do CARD
     Mudar Página    ${URL_Card}
     Sleep    3s
-
 
 #--------------------------------------------QUANDO--------------------------------------------
     

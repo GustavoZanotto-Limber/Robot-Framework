@@ -9,8 +9,8 @@ Library    String
 Library    SeleniumLibrary        screenshot_root_directory=EstruturasBase\\Robot\\ScreenShots\\Selenium
 Library    Collections
 Library    RPA.PDF
-Resource   ../Base/BaseKeywordsCARD.robot
-Resource    ../Base/BaseKeywordE-Commerce.robot
+Resource   ../Base/Base_CARD.robot
+Resource    ../Base/Base_E-Commerce.robot
 
 
 *** Variables ***
@@ -56,7 +56,7 @@ Dado que o usuário está autenticado em sua conta
 
 Dado que usuário seleciona a opção Fale conosco no e-commerce
     Abro o E-commerce (Online) 
-    Clicar no Botão    xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]
+    Clicar no Botão       xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]
     Clicar no Elemento    xpath://a[normalize-space(text())="Fale Conosco"]
 
 # ---------------------Quando---------------------
@@ -124,7 +124,7 @@ Quando acessar a opção de edição de dados e modificar as informações
 
 Quando chegar na tela de FAQ
     Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-contact-us/ec-wrapper/div/section[2]/mat-form-field/div[1]/div/div[2]
-    Clicar no Elemento    xpath:/html/body/div[3]/div[2]/div/div/mat-option
+    Clicar no Elemento    xpath://div/div/mat-option
     Clicar no Elemento    xpath:/html/body/app-root/app-home/div/main/app-contact-us/ec-wrapper/div/section[2]/section/mat-accordion/mat-expansion-panel/mat-expansion-panel-header
     Conferir Texto        xpath:/html/body/app-root/app-home/div/main/app-contact-us/ec-wrapper/div/section[2]/section/mat-accordion/mat-expansion-panel/div/div/div/p     FAQ Automação, FAQ Automação 
 
@@ -194,7 +194,7 @@ Então valido a impressão na plataforma CARD
 
 Então valido a impressão com itens Cancelados Parcial
     [Arguments]    ${caminho}    ${nome_Arquivo_com_o_tipo}    ${caminho_screenshots}     @{data_e_hora}
-    ${LB}=             Salvar a impressão do bilhete através do e-commerce    1    ${caminho}    Impressão_Cancelada
+    ${LB}=             Salvar a impressão do bilhete através do e-commerce    2    ${caminho}    Impressão_Cancelada
     Abrir arquivo                                    ${caminho}   ${nome_Arquivo_com_o_tipo} 
     Validar impressão do bilhete cancelado           ${caminho}    Impressão_Cancelada       ${caminho_screenshots}    Impressão_Cancelada.pdf - WPS Office      ${LB}  FALSE    @{data_e_hora}
     RPA.Desktop.Press Keys    Alt    F4
@@ -204,7 +204,7 @@ Então valido a impressão com cancelamento total
     SeleniumLibrary.Go Back
     @{data_e_hora}=    Cancelar um ingresso pelo e-commerce    1
     @{data_e_hora_pagamento_e_cancelameto}=    Set Variable    ${data_e_hora_pag[0]}   ${data_e_hora_pag[1]}   ${data_e_hora[0]}   ${data_e_hora[1]}
-    ${LB}=             Salvar a impressão do bilhete através do e-commerce    1    ${caminho}    Impressão_Cancelada_total
+    ${LB}=             Salvar a impressão do bilhete através do e-commerce    2    ${caminho}    Impressão_Cancelada_total
     Abrir arquivo                                    ${caminho}   Impressão_Cancelada_total.pdf
     Validar impressão do bilhete cancelado           ${caminho}    Impressão_Cancelada_total       ${caminho_screenshots}    Impressão_Cancelada_total.pdf - WPS Office      ${LB}    TRUE     @{data_e_hora_pagamento_e_cancelameto}    
     RPA.Desktop.Press Keys    Alt    F4 
@@ -214,7 +214,7 @@ Então valido o layout da impressão
     Efetuar Pagamento
     Clicar no Elemento           xpath:/html/body/app-root/app-home/div/main/app-approved-purchase/ec-splash-alert/ec-wrapper/a
     Sleep    1s
-    Salvar a impressão do bilhete através do e-commerce    1    ${caminho}    Impressão_Layout
+    Salvar a impressão do bilhete através do e-commerce    2    ${caminho}    Impressão_Layout
     Abrir arquivo        ${caminho}        Impressão_Layout.pdf
     Validar o Layout                                       ${caminho}    Impressão_Layout       ${caminho_screenshots}    Impressão_Layout.pdf - WPS Office
     ALT F4
@@ -222,10 +222,9 @@ Então valido o layout da impressão
 Então valido se o cadastro foi realizado com sucesso
     Sleep    1s
     Element Should Contain       xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]/label        Olá, Cadastro Automatizado
-
     Clicar no Botão              xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]
     Clicar no Botão              xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-my-account-menu/div/button
-    Fechar Aba E Voltar Para Principal    0
+    
 
 Então o sistema deve exibir uma mensagem informando o documento ou telefone já está cadastrado
     Validar Documento ja cadastrado e trocar errado
@@ -251,6 +250,7 @@ E a conta só deve ser ativada após a verificação do e-mail
     Clicar no Botão                  xpath:/html/body/app-root/app-home/div/main/app-token/ec-wrapper/div/form/div/button[1]      
     Preencher dados de um novo cadastro no e-commerce
     Então valido se o cadastro foi realizado com sucesso
+    Fechar Aba E Voltar Para Principal    1
     Sleep    1s
 
 Então o sistema deve enviar um e-mail com as instruções de recuperação
@@ -276,6 +276,7 @@ Então o sistema deve enviar um e-mail com as instruções de recuperação
     Sleep    1.5s
     SeleniumLibrary.Press Keys    //span[contains(text(), 'Entrar')]    \ue00c
     Então valido se o cadastro foi realizado com sucesso
+    Deslogar do e-commerce
     Fechar Aba E Voltar Para Principal    1
     
 Então o sistema deve salvar as alterações corretamente
@@ -285,7 +286,8 @@ Então o sistema deve salvar as alterações corretamente
     Sleep    1s
     Conferir Texto               xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/div[1]/div/h1    ${email}
     Validar as informações do cadastro    Cadastro Automatizado Editado    23/08/1906    55+ 98 88888-8888    12345678910    
-
+    Fechar Aba E Voltar Para Principal    1
+    
 Então as perguntas configuradas devem aparecer corretamente na tela de FAQ
     Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-faq/ec-wrapper/mat-accordion/mat-expansion-panel[1]/mat-expansion-panel-header/span[1]/mat-panel-title    Como faço para cancelar minha compra?
     Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-faq/ec-wrapper/mat-accordion/mat-expansion-panel[2]/mat-expansion-panel-header/span[1]/mat-panel-title    Como visualizar meu ingresso?
@@ -297,8 +299,9 @@ E os campos de coleta de mensagem do consumidor devem coletar os dados e enviar 
 
 Então as perguntas configuradas devem aparecer corretamente na tela de FAQ e SAC
     [Arguments]    @{data_e_hora}
-    Mudar Página              https://testescard.limbersoftware.com.br/#/pages/sac/chamados    
-    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/app-sac/div/mat-card/div/table/tbody/tr/td[9]
+    Mudar Página              https://testescard.limbersoftware.com.br/#/pages/sac/chamados  
+    Sleep    2s  
+    Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/app-sac/div/mat-card/div/table/tbody/tr[1]/td[9]
     Mudar para a nova janela
     Sleep    2s
     ${data_e_hora_sac}=    Pegar valor de um input    xpath:/html/body/app-root/app-pages/div/div/div/app-view-sac/div[1]/mat-card/mat-form-field[5]/div[1]/div/div[2]/input

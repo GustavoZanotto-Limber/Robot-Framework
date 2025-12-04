@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Balança
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup         Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -28,7 +28,7 @@ Movimentação de Cereais
     repetidor de teclas       Tab         2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Movimentação de Cereais (1)    ${Caminho_Screenshots}Movimentação de Cereais
+    Base_Desktop.Screenshot    Movimentação de Cereais (1)    ${Caminho_Screenshots}Movimentação de Cereais
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -40,7 +40,7 @@ Lançamentos de Saídas
     RPA.Windows.Get Text      Lançamentos de Saídas (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Lançamentos de Saídas (1)    ${Caminho_Screenshots}Lançamentos de Saídas
+    Base_Desktop.Screenshot    Lançamentos de Saídas (1)    ${Caminho_Screenshots}Lançamentos de Saídas
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -52,7 +52,7 @@ Relatório de Pesagem de Terceiros
     RPA.Windows.Get Text      Relatório de Pesagem de Terceiro (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Relatório de Pesagem de Terceiro (1)    ${Caminho_Screenshots}Relatório de Pesagem de Terceiros
+    Base_Desktop.Screenshot    Relatório de Pesagem de Terceiro (1)    ${Caminho_Screenshots}Relatório de Pesagem de Terceiros
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -65,6 +65,6 @@ Relatório Bayer/Monsanto
     repetidor de teclas       Tab    2
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Relatório Bayer/Monsanto (1)    ${Caminho_Screenshots}Relatório Bayer_Monsanto
+    Base_Desktop.Screenshot    Relatório Bayer/Monsanto (1)    ${Caminho_Screenshots}Relatório Bayer_Monsanto
     RPA.Windows.Click         Confirmar
     Fechar janela

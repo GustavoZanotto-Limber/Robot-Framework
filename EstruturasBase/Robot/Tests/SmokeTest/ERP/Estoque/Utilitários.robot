@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Estoque
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -24,7 +24,7 @@ Favoritos
     RPA.Windows.Click       Favoritos
     RPA.Windows.Get Text    Configuração de Favoritos (1)
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
+    Base_Desktop.Screenshot  Configuração de Favoritos (1)    ${Caminho_Screenshots}Favoritos
     RPA.Windows.Click       OK
     RPA.Windows.Click       Fechar
     
@@ -35,7 +35,7 @@ Papel de Parede
     RPA.Windows.Click       Papel de Parede
     Sleep                   2s
     RPA.Windows.Get Text    Seleção de Papel de Parede
-    BaseKeywordsDesktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
+    Base_Desktop.Screenshot  Seleção de Papel de Parede    ${Caminho_Screenshots}Papel de Parede
     RPA.Windows.Click       Fechar
 
 Configurar Menu Pincipal
@@ -46,7 +46,7 @@ Configurar Menu Pincipal
     RPA.Windows.Get Text    Configurador de Menus (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
+    Base_Desktop.Screenshot  Configurador de Menus (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -57,7 +57,7 @@ Configurar Barra de Atalhos
     RPA.Windows.Click       Configurar Barra de Atalhos
     RPA.Windows.Get Text    Configurador de Atalhos (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
+    Base_Desktop.Screenshot  Configurador de Atalhos (1)    ${Caminho_Screenshots}Configurar Barra de Atalhos
     Fechar com Sim
 
 Estilo do Menu Principal
@@ -67,7 +67,7 @@ Estilo do Menu Principal
     RPA.Windows.Click       Estilo do Menu Principal
     RPA.Windows.Get Text    Seleção do Estilo do Menu Principal (1)
     RPA.Windows.Click       Standard
-    BaseKeywordsDesktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
+    Base_Desktop.Screenshot  Seleção do Estilo do Menu Principal (1)    ${Caminho_Screenshots}Estilo do Menu Principal
     RPA.Windows.Click       Fechar
 
 Controle de Acessos
@@ -77,7 +77,7 @@ Controle de Acessos
     RPA.Windows.Click       Controle de Acessos
     RPA.Windows.Get Text    Controle de Acessos : Formulários (1)
     RPA.Windows.Click       Confirmar
-    BaseKeywordsDesktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
+    Base_Desktop.Screenshot  Controle de Acessos : Formulários (1)    ${Caminho_Screenshots}Controle de Acessos
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -89,7 +89,7 @@ Configuração de Liberação
     RPA.Windows.Get Text    Configurações de Liberação (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
+    Base_Desktop.Screenshot  Configurações de Liberação (1)    ${Caminho_Screenshots}Configuração de Liberação
     RPA.Windows.Click       Confirmar
     Fechar com Sim
 
@@ -102,7 +102,7 @@ Relatórios Personalizados > Cadastro de Categorias
     RPA.Windows.Get Text    Cadastro de Categoria (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
+    Base_Desktop.Screenshot  Cadastro de Categoria (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Categorias
     RPA.Windows.Click       Confirmar
     Fechar janela
     
@@ -115,7 +115,7 @@ Relatórios Personalizados > Cadastro de Relatórios
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
     RPA.Windows.Get Text    Cadastro de Relatórios Personalizados (1)
-    BaseKeywordsDesktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
+    Base_Desktop.Screenshot  Cadastro de Relatórios Personalizados (1)    ${Caminho_Screenshots}Relatórios Personalizados/Cadastro de Relatórios
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -127,7 +127,7 @@ Configurador de Impressões > Transferência entre Terceiros
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Configurador de Impressões - Transferência entre Terceiros - Estoque (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configurador de Impressões - Transferência entre Terceiros - Estoque (1)    ${Caminho_Screenshots}Configurador de Impressões/Transferência entre Terceiros
+    Base_Desktop.Screenshot  Configurador de Impressões - Transferência entre Terceiros - Estoque (1)    ${Caminho_Screenshots}Configurador de Impressões/Transferência entre Terceiros
     Fechar com Sim
 
 Verificar Transações Abertas
@@ -137,7 +137,7 @@ Verificar Transações Abertas
     RPA.Windows.Click       Verificar Transações Abertas
     RPA.Windows.Get Text    Verificar Transações Abertas (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
+    Base_Desktop.Screenshot  Verificar Transações Abertas (1)    ${Caminho_Screenshots}Verificar Transações Abertas
     Fechar janela
 
 Registro Magnético
@@ -147,7 +147,7 @@ Registro Magnético
     RPA.Windows.Click       Registro Magnético
     RPA.Windows.Get Text    Registro Magnético (1)
     RPA.Windows.Click       Gerar
-    BaseKeywordsDesktop.Screenshot  Registro Magnético (1)    ${Caminho_Screenshots}Registro Magnético
+    Base_Desktop.Screenshot  Registro Magnético (1)    ${Caminho_Screenshots}Registro Magnético
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -158,7 +158,7 @@ Agenda Telefônica
     RPA.Windows.Click       Agenda Telefônica
     RPA.Windows.Get Text    Agenda Telefônica (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
+    Base_Desktop.Screenshot  Agenda Telefônica (1)    ${Caminho_Screenshots}Agenda Telefônica
     Fechar com Sim
 
 Configurador de Etiquetas
@@ -168,7 +168,7 @@ Configurador de Etiquetas
     RPA.Windows.Click       Configurador de Etiquetas
     RPA.Windows.Get Text    Configurador de Etiqueta (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Configurador de Etiqueta (1)    ${Caminho_Screenshots}Configurador de Etiquetas
+    Base_Desktop.Screenshot  Configurador de Etiqueta (1)    ${Caminho_Screenshots}Configurador de Etiquetas
     Fechar com Sim
 
 Etiquetas de Produtos para Transporte > Etiqueta de produtos naturais para transporte
@@ -179,7 +179,7 @@ Etiquetas de Produtos para Transporte > Etiqueta de produtos naturais para trans
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Etiqueta de produtos naturais para transporte (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Etiqueta de produtos naturais para transporte (1)    ${Caminho_Screenshots}Etiquetas de Produtos para Transporte/Etiqueta de produtos naturais para transporte
+    Base_Desktop.Screenshot  Etiqueta de produtos naturais para transporte (1)    ${Caminho_Screenshots}Etiquetas de Produtos para Transporte/Etiqueta de produtos naturais para transporte
     Fechar com Sim
 
 Etiquetas de Produtos para Transporte > Monitor de Envio de Etiquetas 
@@ -190,7 +190,7 @@ Etiquetas de Produtos para Transporte > Monitor de Envio de Etiquetas
     RPA.Desktop.Press Keys  M
     RPA.Windows.Get Text    Envio de Etiquetas de produtos naturais para transporte (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Envio de Etiquetas de produtos naturais para transporte (1)    ${Caminho_Screenshots}Etiquetas de Produtos para Transporte/Monitor de Envio de Etiquetas
+    Base_Desktop.Screenshot  Envio de Etiquetas de produtos naturais para transporte (1)    ${Caminho_Screenshots}Etiquetas de Produtos para Transporte/Monitor de Envio de Etiquetas
     Fechar janela
 
 Reprocessamento de disponibilidade de itens
@@ -202,6 +202,6 @@ Reprocessamento de disponibilidade de itens
     repetidor de teclas     tab      1
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Reprocessamento de Itens (1)    ${Caminho_Screenshots}Reprocessamento de disponibilidade de itens
+    Base_Desktop.Screenshot  Reprocessamento de Itens (1)    ${Caminho_Screenshots}Reprocessamento de disponibilidade de itens
     RPA.Windows.Click       Confirmar
     RPA.Windows.Click       Fechar

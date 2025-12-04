@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Vendedor
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -29,7 +29,7 @@ Pedidos de Venda
     RPA.Desktop.Press Keys    Shift    tab
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Consulta de Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos de Venda
+    Base_Desktop.Screenshot    Consulta de Pedidos de Venda (1)    ${Caminho_Screenshots}Pedidos de Venda
     RPA.Windows.Click         Confirmar
     Fechar janela
     
@@ -41,6 +41,6 @@ Contas a Receber
     repetidor de teclas       tab      11
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Consulta do Contas a Receber (1)    ${Caminho_Screenshots}Contas a Receber
+    Base_Desktop.Screenshot    Consulta do Contas a Receber (1)    ${Caminho_Screenshots}Contas a Receber
     RPA.Windows.Click         Confirmar
     Fechar janela

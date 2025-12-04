@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Smoke Test: Fiscal
-Resource         ../../../../Resources/Base/BaseKeywordsDesktop.robot
+Resource         ../../../../Resources/Base/Base_Desktop.robot
 Suite Setup      Iniciar sessao  ${nome_exe}
 Suite Teardown   Encerrar Tudo
 Test Teardown    Caso aconteca erro 2  ${Caminho_Screenshots}Erros/    ${nome_print}    ${nome_exe}
@@ -29,7 +29,7 @@ Terceiros
     Cadastro                  Terceiros    
     RPA.Windows.Get Text      Cadastro de Terceiros (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
+    Base_Desktop.Screenshot    Cadastro de Terceiros (1)    ${Caminho_Screenshots}Terceiros
     RPA.Windows.Click         Cancelar (F3)
     Fechar com Sim
 
@@ -39,7 +39,7 @@ Produtos
     Cadastro                  Produtos    
     RPA.Windows.Get Text      Cadastro de Itens (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Itens (1)    ${Caminho_Screenshots}Produtos
+    Base_Desktop.Screenshot    Cadastro de Itens (1)    ${Caminho_Screenshots}Produtos
     Fechar com Sim
 
 Contabilista
@@ -48,7 +48,7 @@ Contabilista
     Cadastro                  Contabilista    
     RPA.Windows.Get Text      Cadastro de Contabilistas (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Contabilistas (1)    ${Caminho_Screenshots}Contabilista
+    Base_Desktop.Screenshot    Cadastro de Contabilistas (1)    ${Caminho_Screenshots}Contabilista
     Fechar com Sim
 
 Países
@@ -57,7 +57,7 @@ Países
     Cadastro                Países   
     RPA.Windows.Get Text    Cadastro de Países (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Países (1)    ${Caminho_Screenshots}Países
+    Base_Desktop.Screenshot  Cadastro de Países (1)    ${Caminho_Screenshots}Países
     Fechar com Sim
 
 Estados
@@ -66,7 +66,7 @@ Estados
     Cadastro                Estados   
     RPA.Windows.Get Text    Cadastro de Estados (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Estados (1)    ${Caminho_Screenshots}Estados
+    Base_Desktop.Screenshot  Cadastro de Estados (1)    ${Caminho_Screenshots}Estados
     Fechar com Sim
 
 Municípios
@@ -75,7 +75,7 @@ Municípios
     Cadastro                Municípios     
     RPA.Windows.Get Text    Cadastro de Municípios (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Municípios (1)    ${Caminho_Screenshots}Municípios
+    Base_Desktop.Screenshot  Cadastro de Municípios (1)    ${Caminho_Screenshots}Municípios
     Fechar com Sim
 
 Localidades
@@ -84,7 +84,7 @@ Localidades
     Cadastro                Localidades      
     RPA.Windows.Get Text    Cadastro de Localidades (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
+    Base_Desktop.Screenshot  Cadastro de Localidades (1)    ${Caminho_Screenshots}Localidades
     Fechar com Sim
 
 Regiões
@@ -93,7 +93,7 @@ Regiões
     Cadastro                Regiões     
     RPA.Windows.Get Text    Cadastro de Regiões (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Regiões (1)    ${Caminho_Screenshots}Regiões
+    Base_Desktop.Screenshot  Cadastro de Regiões (1)    ${Caminho_Screenshots}Regiões
     Fechar com Sim
 
 Obra de construção civil(CNO)
@@ -102,16 +102,16 @@ Obra de construção civil(CNO)
     Cadastro               	Obra de contrução civil(CNO)    
     RPA.Windows.Get Text    Cadastro de obra de construção civil (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de obra de construção civil (1)    ${Caminho_Screenshots}Obra de construção civil(CNO)
+    Base_Desktop.Screenshot  Cadastro de obra de construção civil (1)    ${Caminho_Screenshots}Obra de construção civil(CNO)
     Fechar com Sim
 
 Mensagem de Notas Fiscais
     ${nome_print}=     Set Variable     Mensagem de Notas Fiscais
     [Tags]   SmokeERP   Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal         
-    RPA.Desktop.Press Keys  E
+    RPA.Desktop.Press Keys  G
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Mensagens de Notas Fiscais (1)    ${Caminho_Screenshots}Fiscal/Mensagem de Notas Fiscais
+    Base_Desktop.Screenshot  Cadastro de Mensagens de Notas Fiscais (1)    ${Caminho_Screenshots}Fiscal/Mensagem de Notas Fiscais
     Fechar com Sim
 
 Fiscal > Espécies de Documentos
@@ -121,7 +121,7 @@ Fiscal > Espécies de Documentos
     RPA.Desktop.Press Keys  D
     RPA.Windows.Get Text    Cadastro de Espécies de Documentos (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Espécies de Documentos (1)    ${Caminho_Screenshots}Fiscal/Espécies de Documentos
+    Base_Desktop.Screenshot  Cadastro de Espécies de Documentos (1)    ${Caminho_Screenshots}Fiscal/Espécies de Documentos
     RPA.Windows.Click       OK
     Fechar janela
 
@@ -132,17 +132,17 @@ Fiscal > Classificação Fiscal
     RPA.Desktop.Press Keys  L
     RPA.Windows.Get Text    Cadastro de Classificações Fiscais (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Classificações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Classificação Fiscal
+    Base_Desktop.Screenshot  Cadastro de Classificações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Classificação Fiscal
     Fechar com Sim
 
 Fiscal > Operações Fiscais
     ${nome_print}=     Set Variable     Operações Fiscais
     [Tags]   SmokeERP   Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
-    RPA.Desktop.Press Keys  A
+    RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Cadastro de Operações Fiscais (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Operações Fiscais
+    Base_Desktop.Screenshot  Cadastro de Operações Fiscais (1)    ${Caminho_Screenshots}Fiscal/Operações Fiscais
     Fechar com Sim
 
 Fiscal > Séries
@@ -152,7 +152,7 @@ Fiscal > Séries
     RPA.Desktop.Press Keys  R
     RPA.Windows.Get Text    Cadastro de Séries (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Séries (1)    ${Caminho_Screenshots}Fiscal/Séries
+    Base_Desktop.Screenshot  Cadastro de Séries (1)    ${Caminho_Screenshots}Fiscal/Séries
     Fechar com Sim
 
 Fiscal > CFOP's
@@ -162,18 +162,18 @@ Fiscal > CFOP's
     RPA.Desktop.Press Keys  F
     RPA.Windows.Get Text    Cadastro de CFOP's (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de CFOP's (1)    ${Caminho_Screenshots}Fiscal/CFOP's
+    Base_Desktop.Screenshot  Cadastro de CFOP's (1)    ${Caminho_Screenshots}Fiscal/CFOP's
     Fechar com Sim
 
 Fiscal > Incidência Contrib Previdenciária
     ${nome_print}=     Set Variable     Incidência Contrib Previdenciária
     [Tags]   SmokeERP   Fiscal    Cadastros   SmokeTest
     Cadastro                Fiscal  
-    RPA.Desktop.Press Keys  N
+    RPA.Desktop.Press Keys  V
     RPA.Windows.Get Text    Cadastro de Incidência Contribuição Previdenciária (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot  Cadastro de Incidência Contribuição Previdenciária (1)    ${Caminho_Screenshots}Fiscal/Incidência Contrib Previdenciária
+    Base_Desktop.Screenshot  Cadastro de Incidência Contribuição Previdenciária (1)    ${Caminho_Screenshots}Fiscal/Incidência Contrib Previdenciária
     RPA.Windows.Click       Confirmar
     Fechar janela
 
@@ -185,7 +185,7 @@ Fiscal > IPI > Tabela Tributária IPI
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Cadastro de Tabela Tributária do IPI (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Tabela Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Tabela Tributária
+    Base_Desktop.Screenshot  Cadastro de Tabela Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Tabela Tributária
     Fechar com Sim
 
 Fiscal > IPI > Situação Tributária IPI
@@ -196,7 +196,7 @@ Fiscal > IPI > Situação Tributária IPI
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Cadastro de Situação Tributária do IPI (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Situação Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Situação Tributária
+    Base_Desktop.Screenshot  Cadastro de Situação Tributária do IPI (1)    ${Caminho_Screenshots}Fiscal/IPI/Situação Tributária
     Fechar com Sim
 
 Fiscal > ICMS > Tabela Tributária ICMS
@@ -207,7 +207,7 @@ Fiscal > ICMS > Tabela Tributária ICMS
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Cadastro de Tabelas Tributária (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Tabelas Tributária (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária
+    Base_Desktop.Screenshot  Cadastro de Tabelas Tributária (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária
     Fechar com Sim
 
 Fiscal > ICMS > Situação Tributária ICMS
@@ -218,7 +218,7 @@ Fiscal > ICMS > Situação Tributária ICMS
     RPA.Desktop.Press Keys  S
     RPA.Windows.Get Text    Cadastro de Situações Tributárias do ICMS (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Situações Tributárias do ICMS (1)    ${Caminho_Screenshots}Fiscal/ICMS/Situação Tributária
+    Base_Desktop.Screenshot  Cadastro de Situações Tributárias do ICMS (1)    ${Caminho_Screenshots}Fiscal/ICMS/Situação Tributária
     Fechar com Sim
 
 Fiscal > ICMS > Tabela Tributária - FCP
@@ -229,7 +229,7 @@ Fiscal > ICMS > Tabela Tributária - FCP
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Cadastro da Tabela Tributária FCP (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro da Tabela Tributária FCP (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária - FCP
+    Base_Desktop.Screenshot  Cadastro da Tabela Tributária FCP (1)    ${Caminho_Screenshots}Fiscal/ICMS/Tabela Tributária - FCP
     Fechar com Sim
 
 Fiscal > ICMS > Configuração Benefício Fiscal
@@ -240,7 +240,7 @@ Fiscal > ICMS > Configuração Benefício Fiscal
     RPA.Desktop.Press Keys  C
     RPA.Windows.Get Text    Configuração Benefício Fiscal (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot  Configuração Benefício Fiscal (1)    ${Caminho_Screenshots}Fiscal/ICMS/Configuração Benefício Fiscal
+    Base_Desktop.Screenshot  Configuração Benefício Fiscal (1)    ${Caminho_Screenshots}Fiscal/ICMS/Configuração Benefício Fiscal
     Fechar janela 
 
 Fiscal > ICMS > Observações de Lançamento Fiscal
@@ -251,7 +251,7 @@ Fiscal > ICMS > Observações de Lançamento Fiscal
     RPA.Desktop.Press Keys  O
     RPA.Windows.Get Text    Cadastro de Observações Fiscais (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Cadastro de Observações Fiscais (1)    ${Caminho_Screenshots}Fiscal/ICMS/Observações de Lançamento Fiscal
+    Base_Desktop.Screenshot  Cadastro de Observações Fiscais (1)    ${Caminho_Screenshots}Fiscal/ICMS/Observações de Lançamento Fiscal
     Fechar janela 
     RPA.Windows.Click       Sim
 
@@ -265,7 +265,7 @@ Fiscal > ICMS > Importar Tabelas Padrões
     RPA.Windows.Click       Abrir
     repetidor de teclas     down      2
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot 	Importação de Tabelas Padrões (1)   ${Caminho_Screenshots}Fiscal/ICMS/Importar Tabelas Padrões
+    Base_Desktop.Screenshot 	Importação de Tabelas Padrões (1)   ${Caminho_Screenshots}Fiscal/ICMS/Importar Tabelas Padrões
     Fechar janela 
 
 Fiscal > ICMS > Configurar Tabela IPM
@@ -277,7 +277,7 @@ Fiscal > ICMS > Configurar Tabela IPM
     RPA.Windows.Get Text   	Configuração da Tabela IPM (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot 	Configuração da Tabela IPM (1)   ${Caminho_Screenshots}Fiscal/ICMS/Configurar Tabela IPM
+    Base_Desktop.Screenshot 	Configuração da Tabela IPM (1)   ${Caminho_Screenshots}Fiscal/ICMS/Configurar Tabela IPM
     RPA.Windows.Click       Confirmar
     Fechar janela 
 
@@ -290,7 +290,7 @@ Fiscal > ICMS > Configuração de Ajuste do Documento Fiscal
     RPA.Windows.Get Text   	Configuração de Ajuste do Documento Fiscal (1)
     RPA.Desktop.Press Keys  0
     RPA.Desktop.Press Keys  Enter
-    BaseKeywordsDesktop.Screenshot 	Configuração de Ajuste do Documento Fiscal (1)   ${Caminho_Screenshots}Fiscal/ICMS/Configuração de Ajuste do Documento Fiscal
+    Base_Desktop.Screenshot 	Configuração de Ajuste do Documento Fiscal (1)   ${Caminho_Screenshots}Fiscal/ICMS/Configuração de Ajuste do Documento Fiscal
     RPA.Windows.Click       Confirmar
     Fechar janela 
 
@@ -303,7 +303,7 @@ Fiscal > PIS > Tabela Tributária
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do PIS (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Tabelas Tributárias do PIS (1)    ${Caminho_Screenshots}Fiscal/PIS/Tabela Tributária
+    Base_Desktop.Screenshot    Cadastro de Tabelas Tributárias do PIS (1)    ${Caminho_Screenshots}Fiscal/PIS/Tabela Tributária
     Fechar com Sim
 
 Fiscal > PIS > Situação Tributária
@@ -315,7 +315,7 @@ Fiscal > PIS > Situação Tributária
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Situação Tributária PIS (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Situação Tributária PIS (1)    ${Caminho_Screenshots}Fiscal/PIS/Situação Tributária
+    Base_Desktop.Screenshot    Cadastro de Situação Tributária PIS (1)    ${Caminho_Screenshots}Fiscal/PIS/Situação Tributária
     Fechar com Sim
 
 Fiscal > PIS > Detalhamento de Receitas
@@ -329,7 +329,7 @@ Fiscal > PIS > Detalhamento de Receitas
     repetidor de teclas       tab      4
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Cadastro de Receitas PIS e COFINS (1)    ${Caminho_Screenshots}Fiscal/PIS/Detalhamento de Receitas
+    Base_Desktop.Screenshot    Cadastro de Receitas PIS e COFINS (1)    ${Caminho_Screenshots}Fiscal/PIS/Detalhamento de Receitas
     RPA.Windows.Click         Confirmar
     Fechar com Sim
 
@@ -344,7 +344,7 @@ Fiscal > PIS > EFD Contribuições - Config. Receitas
     repetidor de teclas       tab      3
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    EFD Contribuições - Configuração de Receitas (1)    ${Caminho_Screenshots}Fiscal/PIS/EFD Contribuições - Config. Receitas
+    Base_Desktop.Screenshot    EFD Contribuições - Configuração de Receitas (1)    ${Caminho_Screenshots}Fiscal/PIS/EFD Contribuições - Config. Receitas
     RPA.Windows.Click         Confirmar
     Fechar com Sim
 
@@ -357,7 +357,7 @@ Fiscal > COFINS > Tabela Tributária
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do COFINS (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Tabelas Tributárias do COFINS (1)    ${Caminho_Screenshots}Fiscal/COFINS/Tabela Tributária
+    Base_Desktop.Screenshot    Cadastro de Tabelas Tributárias do COFINS (1)    ${Caminho_Screenshots}Fiscal/COFINS/Tabela Tributária
     Fechar com Sim
 
 Fiscal > COFINS > Situação Tributária
@@ -369,7 +369,7 @@ Fiscal > COFINS > Situação Tributária
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Situação Tributária COFINS (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Situação Tributária COFINS (1)    ${Caminho_Screenshots}Fiscal/COFINS/Situação Tributária
+    Base_Desktop.Screenshot    Cadastro de Situação Tributária COFINS (1)    ${Caminho_Screenshots}Fiscal/COFINS/Situação Tributária
     Fechar com Sim
 
 Fiscal > COFINS > Detalhamento de Receitas
@@ -383,7 +383,7 @@ Fiscal > COFINS > Detalhamento de Receitas
     repetidor de teclas       tab      4
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Cadastro de Receitas PIS e COFINS (1)    ${Caminho_Screenshots}Fiscal/PIS/Detalhamento de Receitas
+    Base_Desktop.Screenshot    Cadastro de Receitas PIS e COFINS (1)    ${Caminho_Screenshots}Fiscal/PIS/Detalhamento de Receitas
     RPA.Windows.Click         Confirmar
     Fechar com Sim
 
@@ -398,7 +398,7 @@ Fiscal > COFINS > EFD Contribuições - Config. Receitas
     repetidor de teclas       tab      3
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    EFD Contribuições - Configuração de Receitas (1)    ${Caminho_Screenshots}Fiscal/PIS/EFD Contribuições - Config. Receitas
+    Base_Desktop.Screenshot    EFD Contribuições - Configuração de Receitas (1)    ${Caminho_Screenshots}Fiscal/PIS/EFD Contribuições - Config. Receitas
     RPA.Windows.Click         Confirmar
     Fechar com Sim
 
@@ -411,7 +411,7 @@ Fiscal > CSLL > Tabela Tributária
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do CSLL (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Tabelas Tributárias do CSLL (1)    ${Caminho_Screenshots}Fiscal/CSLL/Tabela Tributária
+    Base_Desktop.Screenshot    Cadastro de Tabelas Tributárias do CSLL (1)    ${Caminho_Screenshots}Fiscal/CSLL/Tabela Tributária
     Fechar com Sim
 
 Fiscal > CSLL > Situação Tributária
@@ -423,7 +423,7 @@ Fiscal > CSLL > Situação Tributária
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Situação Tributária CSLL (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Situação Tributária CSLL (1)    ${Caminho_Screenshots}Fiscal/CSLL/Situação Tributária
+    Base_Desktop.Screenshot    Cadastro de Situação Tributária CSLL (1)    ${Caminho_Screenshots}Fiscal/CSLL/Situação Tributária
     Fechar com Sim
 
 Fiscal > IRPJ > Tabela Tributária
@@ -435,7 +435,7 @@ Fiscal > IRPJ > Tabela Tributária
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Cadastro de Tabelas Tributárias do IRPJ (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Tabelas Tributárias do IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Tabela Tributária
+    Base_Desktop.Screenshot    Cadastro de Tabelas Tributárias do IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Tabela Tributária
     Fechar com Sim
 
 Fiscal > IRPJ > Situação Tributária
@@ -447,7 +447,7 @@ Fiscal > IRPJ > Situação Tributária
     RPA.Desktop.Press Keys    S
     RPA.Windows.Get Text      Cadastro de Situação Tributária IRPJ (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Situação Tributária IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Situação Tributária
+    Base_Desktop.Screenshot    Cadastro de Situação Tributária IRPJ (1)    ${Caminho_Screenshots}Fiscal/IRPJ/Situação Tributária
     Fechar com Sim
 
 Fiscal > ISSQN > Tabela Tributária
@@ -459,7 +459,7 @@ Fiscal > ISSQN > Tabela Tributária
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Cadastro de Tabela Tributária ISSQN (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Tabela Tributária ISSQN (1)    ${Caminho_Screenshots}Fiscal/ISSQN/Tabela Tributária
+    Base_Desktop.Screenshot    Cadastro de Tabela Tributária ISSQN (1)    ${Caminho_Screenshots}Fiscal/ISSQN/Tabela Tributária
     Fechar com Sim
 
 Fiscal > Tabela de Alíquota Nacional de Impostos por NCM
@@ -470,7 +470,7 @@ Fiscal > Tabela de Alíquota Nacional de Impostos por NCM
     RPA.Desktop.Press Keys    T
     RPA.Windows.Get Text      Tabela de Alíquota Nacional de Impostos de Produtos/Serviços - Lei n° 12.741, de 8 de dezembro de 2012 (1)
     RPA.Windows.Click       Carregar
-    BaseKeywordsDesktop.Screenshot    Tabela de Alíquota Nacional de Impostos de Produtos/Serviços - Lei n° 12.741, de 8 de dezembro de 2012 (1)    ${Caminho_Screenshots}Fiscal/Tabela de Alíquota Nacional de Impostos por NCM
+    Base_Desktop.Screenshot    Tabela de Alíquota Nacional de Impostos de Produtos/Serviços - Lei n° 12.741, de 8 de dezembro de 2012 (1)    ${Caminho_Screenshots}Fiscal/Tabela de Alíquota Nacional de Impostos por NCM
     Fechar janela
 
 Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
@@ -483,7 +483,7 @@ Fiscal > Impostos Retidos > INSS > Cadastro de Serviços
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de Serviços para Retenção de INSSRF (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Serviços para Retenção de INSSRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/Cadastro de Serviços
+    Base_Desktop.Screenshot    Cadastro de Serviços para Retenção de INSSRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/INSS/Cadastro de Serviços
     Fechar com Sim
 
 Fiscal > Impostos Retidos > IR > Cadastro de Serviço
@@ -496,7 +496,7 @@ Fiscal > Impostos Retidos > IR > Cadastro de Serviço
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de Serviços para Retenção de IRRF (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Serviços para Retenção de IRRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/Cadastro de Serviço
+    Base_Desktop.Screenshot    Cadastro de Serviços para Retenção de IRRF (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/IR/Cadastro de Serviço
     Fechar com Sim
 
 Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
@@ -509,7 +509,7 @@ Fiscal > Impostos Retidos > CSRF > Cadastro de Serviços
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Cadastro de Serviços para Retenção de PIS/COFINS/CSLL (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Serviços para Retenção de PIS/COFINS/CSLL (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/Cadastro de Serviços
+    Base_Desktop.Screenshot    Cadastro de Serviços para Retenção de PIS/COFINS/CSLL (1)    ${Caminho_Screenshots}Fiscal/Impostos Retidos/CSRF/Cadastro de Serviços
     Fechar com Sim
 
 Fiscal > Classificações de Serviços Prestado - REINF
@@ -517,11 +517,11 @@ Fiscal > Classificações de Serviços Prestado - REINF
     [Tags]   SmokeERP    Fiscal    Cadastros   SmokeTest    
     Cadastros
     RPA.Windows.Click         Fiscal
-    RPA.Desktop.Press Keys    V
+    RPA.Desktop.Press Keys    A
     RPA.Windows.Get Text      Classificações de Serviços Prestados - REINF (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Classificações de Serviços Prestados - REINF (1)    ${Caminho_Screenshots}Fiscal/Classificações de Serviços Prestado - REINF
+    Base_Desktop.Screenshot    Classificações de Serviços Prestados - REINF (1)    ${Caminho_Screenshots}Fiscal/Classificações de Serviços Prestado - REINF
     RPA.Windows.Click         Confirmar
     Fechar Janela
 
@@ -532,7 +532,7 @@ Parâmetros > Empresas
     RPA.Desktop.Press Keys    E
     RPA.Windows.Get Text      Cadastro de Empresas (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
+    Base_Desktop.Screenshot    Cadastro de Empresas (1)    ${Caminho_Screenshots}Parâmetros/Empresas
     Fechar com Sim
 
 Parâmetros > Estabelecimentos
@@ -543,7 +543,7 @@ Parâmetros > Estabelecimentos
     RPA.Windows.Get Text      Cadastro de Estabelecimentos (1)
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
-    BaseKeywordsDesktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
+    Base_Desktop.Screenshot    Cadastro de Estabelecimentos (1)    ${Caminho_Screenshots}Parâmetros/Estabelecimentos
     RPA.Windows.Click         Confirmar
     Fechar janela
 
@@ -553,7 +553,7 @@ Parâmetros > Usuários
     Cadastro                  Parâmetros    
     RPA.Desktop.Press Keys    U
     RPA.Windows.Get Text      Cadastro de Usuários (1)
-    BaseKeywordsDesktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
+    Base_Desktop.Screenshot    Cadastro de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Usuários
     Fechar janela
 
 Parâmetros > Grupo de Usuários
@@ -563,7 +563,7 @@ Parâmetros > Grupo de Usuários
     RPA.Desktop.Press Keys    G
     RPA.Windows.Get Text      Cadastro de Grupos de Usuários (1)
     RPA.Windows.Click         Novo
-    BaseKeywordsDesktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
+    Base_Desktop.Screenshot    Cadastro de Grupos de Usuários (1)    ${Caminho_Screenshots}Parâmetros/Grupo de Usuários
     Fechar com Sim
 
 Parâmetros > Configurações da Estação
@@ -573,7 +573,7 @@ Parâmetros > Configurações da Estação
     RPA.Desktop.Press Keys    C
     RPA.Windows.Get Text      Configurações da Estação (1)
     RPA.Windows.Click         CDE-WIN-FIN
-    BaseKeywordsDesktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
+    Base_Desktop.Screenshot    Configurações da Estação (1)    ${Caminho_Screenshots}Parâmetros/Configurações da Estação
     Fechar janela
 
 Parâmetros > Quadro de Sócios
@@ -586,7 +586,7 @@ Parâmetros > Quadro de Sócios
     RPA.Desktop.Press Keys    0
     RPA.Desktop.Press Keys    Enter
     RPA.Windows.Click         Confirmar
-    BaseKeywordsDesktop.Screenshot    Quadro de Sócios (1)    ${Caminho_Screenshots}Parâmetros/Quadro de Sócios
+    Base_Desktop.Screenshot    Quadro de Sócios (1)    ${Caminho_Screenshots}Parâmetros/Quadro de Sócios
     RPA.Windows.Click         Fechar
 
 SPED ECF > Parte A e-Lalur
@@ -596,7 +596,7 @@ SPED ECF > Parte A e-Lalur
     RPA.Desktop.Press Keys  P
     RPA.Windows.Get Text    Lançamentos da Parte A do e-Lalur (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Lançamentos da Parte A do e-Lalur (1)    ${Caminho_Screenshots}SPED ECF/Parte A e-Lalur
+    Base_Desktop.Screenshot  Lançamentos da Parte A do e-Lalur (1)    ${Caminho_Screenshots}SPED ECF/Parte A e-Lalur
     Fechar com Sim
 
 SPED ECF > Parte B e-Lalur
@@ -606,7 +606,7 @@ SPED ECF > Parte B e-Lalur
     RPA.Desktop.Press Keys  A
     RPA.Windows.Get Text    Identificação da conta na parte B do e-Lalur (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Identificação da conta na parte B do e-Lalur (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lalur
+    Base_Desktop.Screenshot  Identificação da conta na parte B do e-Lalur (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lalur
     Fechar Janela
     RPA.Windows.Click       Sim
 
@@ -617,7 +617,7 @@ SPED ECF > Parte B e-Lalur (Sem Reflexo na Parte A)
     RPA.Desktop.Press Keys  R
     RPA.Windows.Get Text    Lançamentos na conta da parte B do e-Lalur sem reflexo na parte A (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Lançamentos na conta da parte B do e-Lalur sem reflexo na parte A (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lalur (Sem Reflexo na Parte A)
+    Base_Desktop.Screenshot  Lançamentos na conta da parte B do e-Lalur sem reflexo na parte A (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lalur (Sem Reflexo na Parte A)
     Fechar Janela
     RPA.Windows.Click       Sim
 
@@ -628,7 +628,7 @@ SPED ECF > Parte A e-Lacs
     RPA.Desktop.Press Keys  T
     RPA.Windows.Get Text    Lançamentos da Parte A do e-Lacs (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Lançamentos da Parte A do e-Lacs (1)    ${Caminho_Screenshots}SPED ECF/Parte A e-Lacs
+    Base_Desktop.Screenshot  Lançamentos da Parte A do e-Lacs (1)    ${Caminho_Screenshots}SPED ECF/Parte A e-Lacs
     Fechar Janela
     RPA.Windows.Click       Sim
 
@@ -639,7 +639,7 @@ SPED ECF > Parte B e-Lacs
     RPA.Desktop.Press Keys  E
     RPA.Windows.Get Text    Identificação da conta na parte B do e-Lacs (1)  
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Identificação da conta na parte B do e-Lacs (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lacs
+    Base_Desktop.Screenshot  Identificação da conta na parte B do e-Lacs (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lacs
     Fechar Janela
     RPA.Windows.Click       Sim
 
@@ -650,7 +650,7 @@ SPED ECF > Parte B e-Lacs (Sem Reflexo na Parte A)
     RPA.Desktop.Press Keys  B
     RPA.Windows.Get Text    Lançamentos na conta da parte B do e-Lacs sem reflexo na parte A (1)
     RPA.Windows.Click       Novo
-    BaseKeywordsDesktop.Screenshot  Lançamentos na conta da parte B do e-Lacs sem reflexo na parte A (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lacs (Sem Reflexo na Parte A)
+    Base_Desktop.Screenshot  Lançamentos na conta da parte B do e-Lacs sem reflexo na parte A (1)    ${Caminho_Screenshots}SPED ECF/Parte B e-Lacs (Sem Reflexo na Parte A)
     Fechar Janela
     RPA.Windows.Click       Sim
 

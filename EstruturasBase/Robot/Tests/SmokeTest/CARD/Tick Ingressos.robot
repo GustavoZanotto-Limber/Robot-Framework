@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation    Smoke Test: CARD
-Resource         ../../../Resources/Base/BaseKeywordsCARD.robot
-Resource         ../../../Resources/BDD/BDDKeywordsWeb.robot
-Resource         ../../../Resources/BDD/BDDSmokeCard.robot
+Resource         ../../../Resources/Base/Base_CARD.robot
+Resource         ../../../Resources/BDD/BDD_Web.robot
+Resource         ../../../Resources/BDD/BDD_SmokeCard.robot
 Suite Setup      Abrir CARD e logar 
 Suite Teardown   Fechar Navegador
 Test Teardown    Caso aconteca erro SmokeWeb  ${Caminho_Screenshots}Erros/    ${nome_print}    
