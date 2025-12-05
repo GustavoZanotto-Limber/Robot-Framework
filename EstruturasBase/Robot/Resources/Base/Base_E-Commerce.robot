@@ -237,13 +237,13 @@ Preencher dados de um novo cadastro no e-commerce
 Validar Telefone ja cadastrado e trocar errado
     [Arguments]    ${telefone}=+55 99999999999
     Sleep    2s
-    Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/ec-error/div/section/span    Já existe um usuário com telefone "${telefone}"
+    Conferir texto    xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/ec-error/div/section/span    Já existe um usuário com telefone "${telefone}"
     Inserir Texto             xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/form/div[2]/mat-form-field[1]/div[1]/div/div[2]/app-cellphone-input/div/input        5541998700213
 
 Validar Documento ja cadastrado e trocar errado
     [Arguments]    ${documento}=092.858.449-60
     Inserir Texto             xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/form/div[2]/mat-form-field[1]/div[1]/div/div[2]/app-cellphone-input/div/input        5599999999999
-    Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/ec-error/div/section/span    Já existe um usuário com documento "${documento}"
+    Conferir texto    xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/ec-error/div/section/span    Já existe um usuário com documento "${documento}"
     Inserir Texto             xpath:/html/body/app-root/app-home/div/main/app-create-account/ec-wrapper/form/div[2]/mat-form-field[3]/div[1]/div/div[2]/input                                02235161472
 
 Validar as informações do cadastro
@@ -343,7 +343,7 @@ Remarcar data do ingresso
     Sleep    1s
     Clicar no Botão    xpath:/html/body/app-root/app-home/div/main/app-alter-purchase/ec-wrapper/app-reschedule/div/div/section[2]/button
     Sleep    1s
-    Element Should Contain    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]     Ingressos remarcados com sucesso
+    Conferir texto    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]     Ingressos remarcados com sucesso
     Sleep    1s
 
 Alterar dados do visitante

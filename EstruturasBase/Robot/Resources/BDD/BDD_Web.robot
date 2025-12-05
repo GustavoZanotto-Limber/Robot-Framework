@@ -37,7 +37,7 @@ Dado que estou na tela de Exceções de Preço e Disponibilidade
 Dado que estou na tela de emissão de bilhetes
     [Arguments]    ${numero_bilhete}
     Mudar Página   https://testescard.limbersoftware.com.br/#/pages/calendarioPrecoDisp/config/tabelaPreco?bilhete=${numero_bilhete}
-    Criar tabela de preço               ${numero_bilhete}   tabela de preço     1000
+    Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada    1000
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
@@ -115,21 +115,21 @@ Quando adiciono o convênio no bilhete
     Adicionar categoria em bilhetes ja existente   Categoria Convênio    2    3752    ${numero_bilhete}
     Sleep    2s
     RPA.Desktop.Press Keys              F5
-    Criar tabela de preço               ${numero_bilhete}   Tabela de Preço com Convênio     500    0    2
+    Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada    500    0    2
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
 
 Quando cadastro a tabela de preço
     Sleep    2s
-    Criar tabela de preço               ${numero_bilhete}   Tabela de Preço com multiplas categorias     500    0    3
+    Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada     500    0    3
     Criar tabela de disponibilidade     6422    qtd_vagas=250
     @{ano_mes_dia}=  Get Time	year month day 
     Preencher dia do calendario    ${ano_mes_dia[1]}    ${ano_mes_dia[2]}
 
 Quando coloco as temporadas no calendario
     [Arguments]    ${numero_bilhete}
-    Criar tabela de preço               ${numero_bilhete}   tabela de preço     500
+    Criar tabela de preço               ${numero_bilhete}   Tabela de Preço Automatizada     500
     Criar tabela de disponibilidade     ${numero_bilhete}
     @{ano_mes_dia}=  Get Time	year month day 
     ${dia}=     Convert To Integer     ${ano_mes_dia[2]}    
@@ -270,8 +270,8 @@ Então valido as temporadas no E-Commerce
     Abro o E-commerce (Integrada)
     Pesquisar bilhete no e-commerce    LB-41 Programação de Preços
     Sleep                              3s
-    Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span       Temporada 1
-    Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div[2]/span    Temporada 2
+    Conferir texto    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div/span       Temporada 1
+    Conferir texto    xpath:/html/body/app-root/app-home/div/main/app-dashboard/app-product/div/div/div/div/div[2]/div/app-product-receita/app-title-with-edit[1]/section/div[3]/div/div/div[2]/span    Temporada 2
     
 Então valido se o preço foi salvo corretamente
     [Arguments]    ${numero_bilhete}   ${valor_cat1}=5,00      
