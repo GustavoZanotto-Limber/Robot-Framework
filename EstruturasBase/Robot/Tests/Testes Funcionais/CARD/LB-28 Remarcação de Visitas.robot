@@ -32,6 +32,6 @@ Cenário 3: Tentativa de remarcação após leitura ou confirmação
     ${nome_print}=    Set Variable    Remarcação via E-Commerce
     [Tags]    Testes_Funcionais    CARD    Regressivos_CARD    LB-28
     Dado que estou no e-commerce                                LB-28 Remarcação de Visitas
-    Quando faço a venda do bilhete com multiplas categorias                             1    1    2    1
+    Quando faço a venda do bilhete com multiplas categorias                             1    5    2    1
     E realizo a leitura ou confirmação do bilhete vendido
     Então tento realizar a remarcação via CARD e recebo a mensagem de erro apropriada
