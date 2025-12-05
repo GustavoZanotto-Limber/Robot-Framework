@@ -370,7 +370,7 @@ Limpar dia do calendário
 
 Criar exceção de disponibilidade
     [Arguments]    ${qtd_vagas}=5
-    ${validador}=              Run Keyword And Return Status     Element Should Contain                  xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button/span[2]    Configurar exceções e alta procura
+    ${validador}=              Run Keyword And Return Status     Conferir texto                  xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button/span[2]    Configurar exceções e alta procura
     Log    ${validador}
     Sleep    1s
     IF    ${validador}
@@ -387,7 +387,7 @@ Criar exceção de disponibilidade
     Clicar no Botão    xpath://button[normalize-space(text())="Salvar"]
 
 Criar bloqueio de disponibilidade
-    ${validador}=              Run Keyword And Return Status     Element Should Contain     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button/span[2]    Configurar exceções e alta procura
+    ${validador}=              Run Keyword And Return Status     Conferir texto     xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/calendario-temporadas/div/div[2]/section/mat-card[2]/footer/button/span[2]    Configurar exceções e alta procura
     Log    ${validador}
     Sleep    2s
     IF    ${validador}
@@ -536,6 +536,7 @@ Cadastrar nova categoria
         Clicar no Botão     xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/app-add-convenio/div[2]/button[2]
     END
     Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-categoria/div[3]/buttons/div/div/button[2]
+    Conferir Texto        xpath://div/simple-snack-bar/div[1]     Categoria editada com sucesso    10
     
 Adicionar categoria em bilhetes ja existente
     [Arguments]    ${categoria}    ${qtd_de_categorias}    ${receita}    ${numero_bilhete}
@@ -634,13 +635,13 @@ Configurar o Relatório
 Validar o titulo e clicar em novo
     [Arguments]    ${titulo_pagina}    ${rota_html}  
     Sleep                                     2s
-    Element Should Contain                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html}/lista-cadastros-com-busca/div/div/h1    ${titulo_pagina}                                               
+    Conferir texto                    xpath:/html/body/app-root/app-pages/div/div/div/${rota_html}/lista-cadastros-com-busca/div/div/h1    ${titulo_pagina}                                               
     Clicar no Botão                           xpath:/html/body/app-root/app-pages/div/div/div//${rota_html}/lista-cadastros-com-busca/div/div/h1/button
 
 Validar titulo de criar ou editar cadastros
         [Arguments]    ${tiulo_pagina_novo}    ${rota_html_novo}
         Wait Until Element Is Visible      xpath:/html/body/app-root/app-pages/div/div/div/${rota_html_novo}/div/div/h1
-        Element Should Contain             xpath:/html/body/app-root/app-pages/div/div/div/${rota_html_novo}/div/div/h1     ${tiulo_pagina_novo}   
+        Conferir texto             xpath:/html/body/app-root/app-pages/div/div/div/${rota_html_novo}/div/div/h1     ${tiulo_pagina_novo}   
         Sleep                                     2s
 
 Filtrar dropdown
@@ -690,11 +691,12 @@ Excluir tabela de preço e disponibilidade
     Clicar no Botão            xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[1]/div/table/tbody/tr/td[4]/div/button[1]
     Clicar no Botão            xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/lista-tabelas-preco/mat-tab-group/div/mat-tab-body[2]/div/tabela-preco/div[2]/buttons/div/div/button[1]
     Clicar no Botão            xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/confirm-dialog/div/div[3]/button[2]
-    Sleep                      2s
+    Conferir Texto             xpath://div/simple-snack-bar/div[1]     Tabela de Preço "Tabela de Preço Automatizada" excluída com sucesso!    10
     Clicar no Elemento         xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/div[2]/nav/div[2]/div/div/a[2]
     Clicar no Botão            xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[1]/div/table/tbody/tr/td[4]/div/button[1]
     Clicar no Botão            xpath:/html/body/app-root/app-pages/div/div/div/app-config-preco/mat-card/mat-tab-nav-panel/app-lista-tabelas-disp/mat-tab-group/div/mat-tab-body[2]/div/config-disp/div[2]/buttons/div/div/button[1]
     Clicar no Botão            xpath:/html/body/div[3]/div[3]/div/mat-dialog-container/div/div/confirm-dialog/div/div[3]/button[2]
+    Conferir Texto             xpath://div/simple-snack-bar/div[1]     Tabela de Preço "Tabela de Disponibilidade Automatizada" excluída com sucesso!    10
 
 Clicar no Botão
     [Arguments]    ${xpath_botão}    ${sleep}=5
@@ -714,7 +716,7 @@ Inserir Texto
 Conferir Texto
     [Arguments]    ${xpath_texto}    ${texto}    ${sleep}=5
     Wait Until Element Is Visible    ${xpath_texto}    ${sleep}s
-    Element Should Contain           ${xpath_texto}    ${texto}
+    Element Should Contain          ${xpath_texto}    ${texto}
 
 Pegar Texto
     [Arguments]    ${xpath_texto}    ${sleep}=5
@@ -885,14 +887,14 @@ Validar informações no gerenciamento de vendas
     # [Arguments]     ${nome}
     Clicar no Botão    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/div[1]/div[2]/button[2]
     Sleep    1s
-    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[5]    Automação de Teste remarcados
-    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[6]    OUTROS-987654321
-    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[7]    +55 46999999999
-    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[8]    01/01/2001
-    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[9]    Masculino
-    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[10]   Sem escolaridade
-    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[14]   Brasil
-    Element Should Contain    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[15]   PR
+    Conferir texto    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[5]    Automação de Teste remarcados
+    Conferir texto    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[6]    OUTROS-987654321
+    Conferir texto    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[7]    +55 46999999999
+    Conferir texto    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[8]    01/01/2001
+    Conferir texto    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[9]    Masculino
+    Conferir texto    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[10]   Sem escolaridade
+    Conferir texto    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[14]   Brasil
+    Conferir texto    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-vendas/div[1]/mat-card/mat-tab-group/div/mat-tab-body[1]/div/div/div[2]/div[2]/table/tbody/tr[1]/td[15]   PR
 
 Realizar a leitura ou confirmação do bilhete vendido 
     [Arguments]    ${LB}

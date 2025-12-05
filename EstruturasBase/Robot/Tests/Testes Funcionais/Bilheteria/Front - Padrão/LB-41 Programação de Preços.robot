@@ -43,7 +43,7 @@ Encerrar Cenário 4
 Cenário 1: Cadastro de uma nova tarifa
     ${nome_print}=    Set Variable     Cadastro de uma nova tarifa
     [Tags]    Testes_Funcionais    LB-41  Regressivos_BIL
-    Dado que estou na tela de preço e disponibilidade    ${numero_bilhete}    Tabela de Preço Automatizada (TAXA)    taxa=150
+    Dado que estou na tela de preço e disponibilidade    ${numero_bilhete}    Tabela de Preço Automatizada   taxa=150
     Quando ele insere a tabela com taxa no calendario    ${numero_bilhete}
     Então valido se a tarifa foi salva corretamente    
 

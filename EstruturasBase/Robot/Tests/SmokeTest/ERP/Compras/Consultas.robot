@@ -28,6 +28,7 @@ Estoque Atual
     RPA.Windows.Get Text    Consulta de Itens (1)
     RPA.Windows.Click       Carregar
     Base_Desktop.Screenshot  Consulta de Itens (1)    ${Caminho_Screenshots}Estoque Atual
+    Base_Desktop.Screenshot  Consulta de Itens (1)    ${Caminho_Screenshots}Estoque Atual
     Fechar janela
 
 Estoque Atual (Modelo 2)
@@ -55,9 +56,9 @@ Entrega de Pedidos de Compra
     [Tags]   SmokeERP    Compras    Consultas   SmokeTest
     Consultas
     RPA.Windows.Click       Entrega de Pedidos de Compra
-    RPA.Windows.Get Text    Controle de entrega de Pedido de Compras (1)
+    RPA.Windows.Get Text    Controle de Entrega de Pedido de Compras (1)
     RPA.Windows.Click       Carregar
-    Base_Desktop.Screenshot  Controle de entrega de Pedido de Compras (1)    ${Caminho_Screenshots}Entrega de Pedidos de Compra
+    Base_Desktop.Screenshot  Controle de Entrega de Pedido de Compras (1)    ${Caminho_Screenshots}Entrega de Pedidos de Compra
     Fechar janela
 
 Ficha Kardex de Produtos

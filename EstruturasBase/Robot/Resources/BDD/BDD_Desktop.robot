@@ -477,5 +477,3 @@ Então abro o financeiro e valido as informações
     RPA.Windows.Click                   Estornar
     Sleep                               1s
     RPA.Windows.Click                   Sim
-    
-    

@@ -46,7 +46,7 @@ Dado que o usuário acessa a opção de recuperação de e-mail ou senha
     Quando Preencho os dados corretamente e confirmar o cadastro
     Sleep    1s
     Element Should Be Visible    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]
-    Element Should Contain       xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]/label        Olá, Cadastro Automatizado
+    Conferir texto       xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]/label        Olá, Cadastro Automatizado
     Clicar no Botão              xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]
     Clicar no Botão              xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-my-account-menu/div/button
 
@@ -221,7 +221,7 @@ Então valido o layout da impressão
 
 Então valido se o cadastro foi realizado com sucesso
     Sleep    1s
-    Element Should Contain       xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]/label        Olá, Cadastro Automatizado
+    Conferir texto       xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]/label        Olá, Cadastro Automatizado
     Clicar no Botão              xpath:/html/body/app-root/app-home/app-header/mat-toolbar/div/div[2]/div[1]/button[2]
     Clicar no Botão              xpath:/html/body/div[3]/div[2]/div/mat-bottom-sheet-container/app-my-account-menu/div/button
     
@@ -234,7 +234,7 @@ Então o sistema deve exibir uma mensagem informando o documento ou telefone já
 
 Então ele deve receber um e-mail de verificação
     Wait Until Element Is Visible    xpath:/html/body/app-root/app-home/div/main/app-token/ec-wrapper/div/p
-    Element Should Contain           xpath:/html/body/app-root/app-home/div/main/app-token/ec-wrapper/div/p     Para garantir que esse e-mail é seu, enviamos um código de acesso a ele 
+    Conferir texto           xpath:/html/body/app-root/app-home/div/main/app-token/ec-wrapper/div/p     Para garantir que esse e-mail é seu, enviamos um código de acesso a ele 
     Mudar entre as janelas           0
     Wait Until Element Is Visible    xpath:/html/body/main/div[1]/div[3]/div[1]/table/tbody/tr[1]/td[1]    timeout=30s
     Clicar no Elemento               xpath:/html/body/main/div[1]/div[3]/div[1]/table/tbody/tr[1]
@@ -289,12 +289,12 @@ Então o sistema deve salvar as alterações corretamente
     Fechar Aba E Voltar Para Principal    1
     
 Então as perguntas configuradas devem aparecer corretamente na tela de FAQ
-    Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-faq/ec-wrapper/mat-accordion/mat-expansion-panel[1]/mat-expansion-panel-header/span[1]/mat-panel-title    Como faço para cancelar minha compra?
-    Element Should Contain    xpath:/html/body/app-root/app-home/div/main/app-faq/ec-wrapper/mat-accordion/mat-expansion-panel[2]/mat-expansion-panel-header/span[1]/mat-panel-title    Como visualizar meu ingresso?
+    Conferir texto    xpath:/html/body/app-root/app-home/div/main/app-faq/ec-wrapper/mat-accordion/mat-expansion-panel[1]/mat-expansion-panel-header/span[1]/mat-panel-title    Como faço para cancelar minha compra?
+    Conferir texto    xpath:/html/body/app-root/app-home/div/main/app-faq/ec-wrapper/mat-accordion/mat-expansion-panel[2]/mat-expansion-panel-header/span[1]/mat-panel-title    Como visualizar meu ingresso?
 
 E os campos de coleta de mensagem do consumidor devem coletar os dados e enviar ao Card
     Wait Until Element Is Visible    xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]
-    Element Should Contain           xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]    Mensagem enviada com sucesso!
+    Conferir texto           xpath:/html/body/div[3]/div/div/mat-snack-bar-container/div/div/div/div/simple-snack-bar/div[1]    Mensagem enviada com sucesso!
     Fechar Aba E Voltar Para Principal    0
 
 Então as perguntas configuradas devem aparecer corretamente na tela de FAQ e SAC
