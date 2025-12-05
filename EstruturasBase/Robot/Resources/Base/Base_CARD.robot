@@ -108,7 +108,8 @@ Criar Bilhete
     END
     Adicionar categoria                
     Adicionar receita                  1    3752
-    Navegar Configurações de venda > sessões    2    
+    Navegar Configurações de venda > sessões    2   
+    Sleep    1s 
     Clicar no Elemento        xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[2]/div/div/div[3]/block-with-title[1]/div/section/div/mat-form-field[1]/div[1]
     Clicar no Elemento        xpath:/html/body/div[3]/div[2]/div/div/mat-option[${controla_por:int}]
     Criar Temporada   
@@ -120,7 +121,7 @@ Colocar Imagem no bilhete
     Navegar configuração de bilhete    8
     Clicar no Elemento                 xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[8]/div/app-galeria-bilhete/div/div[2]/upload-files/div[1]
     Sleep    2s
-    RPA.Desktop.Type Text              C:\\Users\\gustavo.zanotto_limb\\Desktop\\Importante\\Imagens\\robot escuro.png
+    RPA.Desktop.Type Text              C:\\Users\\testes\\Pictures\\robot escuro.png
     Sleep    1s
     RPA.Desktop.Press Keys             Enter
     Clicar no Botão                    xpath:/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/ng-component/div[2]/buttons/div/div/button[2]
@@ -491,6 +492,7 @@ Retirar Categoria
     Mudar Página     https://testescard.limbersoftware.com.br/#/pages/cadastro/bilhete/${numero_bilhete}
     Navegar configuração de bilhete    2
     Navegar Configurações de venda > sessões    1
+    Sleep    1s
     Clicar no Elemento    xpath:/html/body/app-root/app-pages/div/div/div/new-or-edit-bilhete/div[1]/mat-card/mat-tab-group/div/mat-tab-body[2]/div/bilhete-configuracao-venda/div[2]/form/section[1]/div/div/div/mat-accordion/mat-expansion-panel[${numero_categoria}]/mat-expansion-panel-header/span[1]/mat-panel-description/button[2]
     Sleep            1s    
     RPA.Desktop.Press Keys    Tab

@@ -47,6 +47,7 @@ Então o sistema deve apresentar o Dashboard corretamente
     Clicar no Botão                xpath:/html/body/app-root/app-pages/div/div/div/dashboard/div/div[1]/button[3]
     Clicar no Elemento             xpath:/html/body/div[3]/div[2]/div/div/mat-form-field
     RPA.Desktop.Type Text          Automação
+    Sleep    1s
     Tentar Clicar Em Um Dos Elementos            xpath:/html/body/div[3]/div[4]/div/div/div/internal-limber-option[2]    xpath:/html/body/div[2]/div[4]/div/div/div/internal-limber-option[2]
     Clicar no Botão                xpath:/html/body/div[3]/div[2]/div/div/div/button[2]
     Sleep                          2s

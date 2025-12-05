@@ -290,7 +290,7 @@ Quando Fecho o caixa operador E pego o Resumo Geral
 
 #----------------------------------------ENTÃO----------------------------------------
 Então valido a venda foi realizada com sucesso
-    [Arguments]    @{Texto_Bilhete}    ${metodo}    ${valor}
+    [Arguments]    @{Texto_Bilhete}    ${metodo}    ${valor}    
     Consultas Front    Consulta de Vendas
     Carregar
     Rolar barra até o Final
@@ -366,7 +366,7 @@ Então valido se a impressão saiu corretamente 2
     [Arguments]       ${Caminho_impressão}        ${nome_do_arquivo}        ${Nome_da_tela}       ${Caminho_Screenshot}     ${Nome_da_screenshot}    @{texto_impressão}    ${texto_impressão2}=${None}
     Sleep                     1s
     Abrir arquivo             ${Caminho_impressão}  ${nome_do_arquivo} 
-    Sleep                     8s
+    Sleep                     3s
     RPA.Windows.Get Element   ${Nome_da_tela}
     Base_Desktop.Screenshot    ${Nome_da_tela}        ${Caminho_Screenshot}${Nome_da_screenshot}    
     ${texto}=                 Get Text From Pdf      ${Caminho_impressão}${nome_do_arquivo}  
@@ -383,7 +383,7 @@ Então valido se a impressão saiu corretamente 2
         Should Contain      ${pagina1}        ${element}
         END
     END
-    Sleep                     8s
+    Sleep                     3s
     RPA.Desktop.Press Keys    Alt    F4
     Sleep                     3s
     

@@ -42,7 +42,7 @@ Cenário 3: Realização de um lançamento de Sangria no caixa
     @{texto_bilhete}=   Create List     COMPROVANTE DE SANGRIA    PDV: 1 - BIL 01    CODIGO MOVIMENTO    MOTIVO: Sangria gerado a partir de testes  automatizados
     [Tags]    Testes_Funcionais    LB-44  Regressivos_BIL   
     Dado que realizei um novo cadastro de Sangria
-    Quando salvo o arquivo de Sangria
+    Quando salvo o arqu ivo de Sangria
     Então valido se a impressão saiu corretamente 2   ${Caminho_arquivos}   Sangria.pdf    Sangria.pdf - WPS Office    ${Caminho_Screenshots}        Sangria        @{texto_bilhete}
 
 Cenário 4: Verificação do histórico de operações no caixa  
